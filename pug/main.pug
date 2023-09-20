@@ -1,0 +1,34 @@
+-
+    function formatString(s) {
+        let asterisks = s.match(/\*/g) || []
+        if (asterisks.length > 0) {
+            if (asterisks.length % 2 != 0) {
+                console.log('Uneven number of asterisks')
+            }
+            let matches = s.match(/\*.*?\*/g)
+            matches.forEach((match) => {
+                s = s.replace(match, `<strong><em>${match.substring(1, match.length-1)}</em></strong>`)
+            })
+        }
+        return s.replaceAll('\n','<br>')
+                .replaceAll('\t','&emsp;')
+    }
+
+head
+    meta(charset="UTF-8")
+span Search
+input(type=text)
+button test
+
+each magazine, _ in dragonMagazines
+    p
+        | Issue #{magazine.issue_number}, #{magazine.publication_month} #{magazine.publication_year}
+        br
+        | !{formatString(magazine.foreword)}
+    each advice, index in magazine.sage_advice
+        p
+            | Page #{advice.page_number}, Question #{index+1}
+            br
+            strong !{formatString(advice.question)}
+            br
+            span &emsp; !{formatString(advice.answer)}

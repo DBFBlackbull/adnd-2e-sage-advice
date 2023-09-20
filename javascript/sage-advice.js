@@ -1,0 +1,195 @@
+const ATTRIBUTE_SPELL = 'spell';
+const ATTRIBUTE_RACE = 'race';
+const ATTRIBUTE_CLASS = 'class';
+
+const DRAGON_MAGAZINES = [];
+DRAGON_MAGAZINES.push({
+    publication_year: '1989',
+    publication_month: 'August',
+    issue_number: '148',
+    foreword: `And now, for a special edition of Sage Advice! The AD&D® 2nd Edition game has arrived, and the sage is here with an in-depth look at the 2nd Edition *Player's Handbook*. All page numbers herein refer to the 2nd Edition text alone, unless otherwise stated.`,
+    sage_advice: [
+        {
+            page_number: '10',
+            question: `How long does a *produce flame* spell last? How many flames can the caster hurl?`,
+            answer: `*Produce flame* lasts one round per caster level. The caster can throw a maximum of one flame per level, but no more than one flame per round.`,
+            comment: ``,
+            attributes: [ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '10',
+            question: `How do you determine how many square feet of *faerie fire* is required to cover a creature?`,
+            answer: `Just assume the caster can cover one man-size creature per level. Assume small creatures equal one-half a man, and large creatures equal one-and-a-half men.`,
+            comment: ``,
+            attributes: [ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '10',
+            question: `Can halflings become clerics? Also, where are the advancement limits for demihuman characters?`,
+            answer: `Yes, halflings can become clerics. See the upcoming 2nd Edition *Dungeon Master's Guide* (page 15) for advancement limits for halfling clerics and other demihuman characters.`,
+            comment: ``,
+            attributes: [ATTRIBUTE_RACE, ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '10',
+            question: `Can a thief character take the mountaineering proficiency and improve his climbing chance?`,
+            answer: `Yes, but the character's climbing chance cannot be made better than 95%.`,
+            comment: ``,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '10',
+            question: `Are you supposed to multiply strength bonuses to damage in a successful backstab, as described on page 40, or are you supposed to add strength bonuses after the multiplier, as explained on page 104?`,
+            answer: `The text on page 104 is correct.`,
+            comment: ``,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '10',
+            question: `What penalties does a bard suffer by using thief abilities when wearing normal chain mail?`,
+            answer: `Use the Elven Chain column in Table 29 but add another - 5% to the column's values.`,
+            comment: ``,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '10',
+            question: `Are multiclassed bards allowed? The text on page 45 mentions multi-classed bards, but the chart on page 44 does not.`,
+            answer: `Page 44 is correct; page 45 is wrong.`,
+            comment: ``,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '10',
+            question: `According to page 13, any warrior with a strength score of 16 or more gets a 10% bonus to experience. But later on, in the descriptions of the paladin and ranger, the rules say that members of these classes must have other high ability scores to get the bonus. Which is correct?`,
+            answer: `The text on page 13 is a misprint. Fighters get the 10% for a strength score of 16 or better; paladins and rangers must have additional high ability scores.`,
+            comment: ``,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '10',
+            question: `What happened to the fighter's ability to double specialize with a weapon?`,
+            answer: `It has been dropped.`,
+            comment: `Reintroduced by Player's Option: Combat & Tactics`,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '10',
+            question: `Can a fighter specialize with more than one weapon?`,
+            answer: `No, but he can "save" additional slots as he earns them and specialize with a weapon later in his career if he doesn't fill those slots at the start.`,
+            comment: `Added in The Complete Fighter's Handbook`,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '10',
+            question: `Do demihuman fighters get to roll for extraordinary strength?`,
+            answer: `Yes; all warrior characters are entitled to exceptional strength rolls if they have strength scores of 18.`,
+            comment: `Halflings to not roll for exceptional strength. Corrected in Sage Advice #`,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '10+12',
+            question: `Does armor interfere with the new ranger's *animal empathy* ability? What is that ability's range? Why don't druids have this ability?`,
+            answer: `A ranger can wear any type of armor and still use *animal empathy*. The ranger must be close enough to the animal to attract the animals undivided attention (about 10 yards in a wilderness setting less, if the setting is something like a crowded marketplace that provides distractions). Individual DMs may give druids *animal empathy* if they wish. The rules don't give the druid this ability because a druids focus is on nature as a whole, not just on animals.`,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '12',
+            question: `Isn't the new ranger too limited in spells? Can a ranger pick more than one type of creature for an enemy?`,
+            answer: `The ranger's two spheres give him plenty of spells. However, individual DMs might want to add a sphere or two; one campaign I am familiar with allows rangers to use healing spells. The DM has to decide what constitutes a valid enemy. Since the rules mention giants, it is probably acceptable to choose a class of creatures. Thus, a ranger from the FORGOTTEN REALMS™ setting might be allowed to choose the goblin races (see *Cyclopedia of the Realms*, page 46) as an enemy. A ranger can never choose two or more entirely different creatures as enemies.`,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '12',
+            question: `Can rangers wear elven chain mail and still use the special abilities described on page 28?`,
+            answer: `Elven chain mail interferes with a ranger's special abilities; refer to Table 29 (page 39) for a list of penalties. Elven chain mail also negates the ranger's ability to use two weapons without penalty.`,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '12',
+            question: `Does the ranger's + 4 attack bonus vs. a specific type of adversary apply to both attack and damage rolls?`,
+            answer: `The bonus applies only to attack rolls; see page 29.`,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '12',
+            question: `Can paladins become dual-classed characters?`,
+            answer: `As clearly stated on page 44, there are no restrictions on the class combinations allowed to dual-classed characters, provided that alignment restrictions are respected. Most DMs, however, do not allow characters to combine subclasses (e.g., no bard/thieves, paladin/rangers, etc.).`,
+            comment: `Revised Player's Handbook (black book) made it a hard rule that you cannot dual/multi-class in the same group. The Complete Bard's Handbook reintroduced it for bard multi-classes.`,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '12',
+            question: `With the large increase in the number of wizard spells, why wasn't there an increase in the minimum and maximum number of spells a wizard can learn? A wizard with an 18 intelligence can learn a maximum of 18 spells a level; that's less than half the number of first-level spells!`,
+            answer: `The AD&D® game is one of choices. The additional spells are intended to create a greater variety of mage characters, not more powerful mages.`,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '12',
+            question: `Table 22 (page 31) shows the minimum ability scores required for specialist wizards. What is the minimum intelligence score required for a specialist wizard?`,
+            answer: `Specialist wizards must have an intelligence score of at least 9, just like a normal wizard.`,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '12',
+            question: `What happened to the write spell?`,
+            answer: `It isn't needed anymore. The primary function of the write spell was to allow a mage to add a spell to his books after he had failed his chance to know roll for that spell. In the 2nd Edition game, a mage can attempt a new chance to know roll each time he gains a new level. (See "Spelling It Out," in DRAGON® issue #147, for more information.)`,
+            attributes: [ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '12',
+            question: `What is the material component for the *spectral hand* spell?`,
+            answer: `There is none. The "M" in the components' line is a typographical error.`,
+            attributes: [ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '12',
+            question: `Does casting the first version of a *flame arrow* spell break invisibility?`,
+            answer: `No, because this is not an attack.`,
+            attributes: [ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '12',
+            question: `Does the *delayed blast fireball* spell have a damage limit?`,
+            answer: `Yes. The limit is l0d6 + 10 hp damage.`,
+            attributes: [ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '12',
+            question: `Several spells are missing from Appendix 5.`,
+            answer: `Here are the schools for the omitted spells (at least the ones I know about): *irritation deafness*, *fabricate* and *slow* are alteration spells (*fabricate* is also an enchantment); *Melf's minute meteors*, evocation and alteration; *locate object* and *know alignment*, divination; *geas*, enchantment/charm.`,
+            attributes: [ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '12',
+            question: `In Table 22 (page 31), the races allowed entry for diviners is any. Does this mean that a character of any PC race can be a diviner?`,
+            answer: `No. Only races eligible for the mage class (humans, elves, and half elves) can become diviners.`,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '12',
+            question: `What happened to cantrips?`,
+            answer: `Cantrips are still in the game. Just use the first-level *cantrip* spell. If you need help figuring out what kind of cantrips to cast, use your copy of *Unearthed Arcana* as a guide. Actually, things are better now for cantrip-using mages because they no longer need to waste spell book space on cantrips, and they are no longer limited to the few cantrips in their books.`,
+            attributes: [ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '12',
+            question: `Since mages start the game with the ability to read spell books and to write in them, do they also have the ability to read and write their native languages?`,
+            answer: `No. Magic is written in a special language.`,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '12',
+            question: `The new rules mention the possibility of *fireballs* detonating early and *lightning bolts* rebounding because of hitting an obstruction. My group and I thought these spells always hit, just as a *magic missile* spell does. If these spell do not always hit, how does the mage hit his opponent?`,
+            answer: `The spells do always hit, after a fashion. In the case of a *fireball*, the missile bursts at the designated range unless it strikes an object before it gets there. Since the missile flies in a straight line between the caster and the target, it can be blocked by invisible barriers (such as *walls of force*) or by a bend in a passage obscured by an illusion or mirror.\n\tA *lightning bolt* is similar to a *fireball* in that the spell begins at a designated height and range, extending directly away from the caster. A *lightning bolt* is always either 40' or 80' long, and the caster must decide which when he casts the spell. If caster miscalculates and casts this spell into an area too small to contain it, the lightning bolt grows to its full length (as measured from the point where it strikes a barrier), heading back at the caster unless it smashes through the barrier (see page 151). Some readers have misread the example on page 151; *lightning bolts* do not bend or fold over when hitting a barrier. The 80' bolt in the example starts 40' away from the caster, travels 10', and strikes a barrier; the bolt must maintain its full length, however, so the opposite end of the bolt (starting from the point of origin) instantly grows out in the direction toward the spell-caster, extending 70' from its point of origin. Thus, the bolt's final length is SO'. A victim caught between the point of origin and the wall behind him is not struck twice by the bolt. The use of the word rebound in the spell's description seems to be the confusing element.`,
+            attributes: [ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '12',
+            question: `The text under the new *identify* spell says a fully charged *ring of three wishes* radiates only faint magic. Is this an error?`,
+            answer: `There is no error in the spell's description, but you have made an erroneous statement. The *identify* spell does not detect magic or its strength; it reveals an item's functions and charges. A *ring of three wishes* has only three charges, so it is faintly charged. Smart wizards use a *detect magic* spell, which can determine magical strength and type, before casting *identify*.`,
+            attributes: [ATTRIBUTE_CLASS],
+        },
+    ],
+});
+
+module.exports = DRAGON_MAGAZINES;
