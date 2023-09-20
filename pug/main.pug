@@ -1,17 +1,41 @@
 -
-    function formatString(s) {
+    function formatString(s, issue, question) {
         let asterisks = s.match(/\*/g) || []
         if (asterisks.length > 0) {
             if (asterisks.length % 2 != 0) {
-                console.log('Uneven number of asterisks')
+                console.log(`Uneven number of asterisks in #${issue}, Q:${question}`)
             }
-            let matches = s.match(/\*.*?\*/g)
-            matches.forEach((match) => {
-                s = s.replace(match, `<strong><em>${match.substring(1, match.length-1)}</em></strong>`)
+            let doubleAsterisks = s.match(/\*\*.*?\*\*/g) || []
+            doubleAsterisks.forEach((match) => {
+                s = s.replace(match, `<strong>${match.substring(2, match.length - 2)}</strong>`)
+            })
+            let singleAsterisk = s.match(/\*.*?\*/g) || []
+            singleAsterisk.forEach((match) => {
+                s = s.replace(match, `<strong><em>${match.substring(1, match.length - 1)}</em></strong>`)
             })
         }
-        return s.replaceAll('\n','<br>')
-                .replaceAll('\t','&emsp;')
+        return s.replaceAll('\n', '<br>&emsp;')
+    }
+
+style("text/css").
+    body {
+        margin: 0;
+    }
+    body div:nth-child(even) {
+        background: lightgray;
+    }
+    body div:nth-child(odd) {
+        background: darkgray;
+    }
+    div {
+        padding: 8px;
+    }
+    h2 {
+        margin-block-end: 0;
+    }
+    h3 {
+        font-weight: normal;
+        margin-block-start: 0.2em;
     }
 
 head
@@ -21,14 +45,13 @@ input(type=text)
 button test
 
 each magazine, _ in dragonMagazines
-    p
-        | Issue #{magazine.issue_number}, #{magazine.publication_month} #{magazine.publication_year}
-        br
-        | !{formatString(magazine.foreword)}
-    each advice, index in magazine.sage_advice
-        p
-            | Page #{advice.page_number}, Question #{index+1}
-            br
-            strong !{formatString(advice.question)}
-            br
-            span &emsp; !{formatString(advice.answer)}
+    div
+        h2 Issue ##{magazine.issue_number}, #{magazine.publication_month} #{magazine.publication_year}
+        h3 !{formatString(magazine.foreword, magazine.issue_number, 'foreword')}
+        each advice, index in magazine.sage_advice
+            p
+                strong Q#{index + 1}: !{formatString(advice.question, magazine.issue_number, index + 1)}
+                br
+                span &emsp;!{formatString(advice.answer, magazine.issue_number, index + 1)}
+                br
+                | &emsp;Page #{advice.page_number},
