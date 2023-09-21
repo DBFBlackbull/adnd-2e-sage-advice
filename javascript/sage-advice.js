@@ -528,7 +528,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '9',
-            question: `Can a character with a girdle of giant strength throw a halberd? When one of my players tried to do this I allowed it, but with a big to-hit penalty.`,
+            question: `Can a character with a *girdle of giant strength* throw a halberd? When one of my players tried to do this I allowed it, but with a big to-hit penalty.`,
             answer: `You were correct. Pole arms are not intended to be thrown, no matter what the thrower's strength. Anything, however, can be thrown with some chance of success. For throwing a pole arm, we suggest a to-hit penalty of -4 at short range (10' or less), -6 at medium range (11-20'), and -9 at long range (21-30'). We also suggest that you use these ranges outdoors where other missiles have ranges measured in yards. A pole arm is far too long for a human-sized creature to throw like a hand axe (so that the weapon spins or tumbles), no matter how much strength is available. Spear-type throws are possible, but hits can inflict damage only if the pole arm that is thrown has a spear point. Use spear damage (1-6) in this case, not pole-arm damage.`,
             attributes: [ATTRIBUTE_1E],
         },
