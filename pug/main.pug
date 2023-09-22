@@ -1,27 +1,36 @@
 -
+    function formatInput(input, issue, question) {
+        if (Array.isArray(input)) {
+            return input.map(s => formatString(s, issue, question))
+                    .join('<br>&emsp;')
+        }
+        return formatString(input, issue, question)
+    }
     function formatString(s, issue, question) {
         let asterisks = s.match(/(?<!")\*(?!")/g) || [] // Ignoring asterisk that are surrounded by quotes
-        if (asterisks.length > 0) {
-            if (asterisks.length % 2 !== 0) {
-                console.log(`Uneven number of asterisks in #${issue}, Q:${question}`)
-            }
-            let tripleAsterisk = s.match(/\*{3}.*?\*{3}/g) || []
-            tripleAsterisk.forEach((match) => {
-                s = s.replace(match, `<strong><em>${match.substring(3, match.length - 3)}</em></strong>`)
-            })
-            let doubleAsterisks = s.match(/\*{2}.*?\*{2}/g) || []
-            doubleAsterisks.forEach((match) => {
-                s = s.replace(match, `<strong>${match.substring(2, match.length - 2)}</strong>`)
-            })
-            let singleAsterisk = s.match(/\*{1}.*?\*{1}/g) || []
-            singleAsterisk.forEach((match) => {
-                s = s.replace(match, `<em>${match.substring(1, match.length - 1)}</em>`)
-            })
+        if (asterisks.length === 0) {
+            return s
         }
-        return s.replaceAll('\n', '<br>&emsp;')
+
+        if (asterisks.length % 2 !== 0) {
+            console.log(`Uneven number of asterisks in #${issue}, Q:${question}`)
+        }
+        let tripleAsterisk = s.match(/\*{3}.*?\*{3}/g) || []
+        tripleAsterisk.forEach((match) => {
+            s = s.replace(match, `<strong><em>${match.substring(3, match.length - 3)}</em></strong>`)
+        })
+        let doubleAsterisks = s.match(/\*{2}.*?\*{2}/g) || []
+        doubleAsterisks.forEach((match) => {
+            s = s.replace(match, `<strong>${match.substring(2, match.length - 2)}</strong>`)
+        })
+        let singleAsterisk = s.match(/\*{1}.*?\*{1}/g) || []
+        singleAsterisk.forEach((match) => {
+            s = s.replace(match, `<em>${match.substring(1, match.length - 1)}</em>`)
+        })
+        return s
     }
 
-style("text/css").
+style.
     body {
         margin: 0;
     }
@@ -51,12 +60,12 @@ button test
 each magazine, _ in dragonMagazines
     div
         h2 Issue ##{magazine.issue_number}, #{magazine.publication_month} #{magazine.publication_year}
-        h3 !{formatString(magazine.foreword, magazine.issue_number, 'foreword')}
+        h3 !{formatInput(magazine.foreword, magazine.issue_number, 'foreword')}
         each advice, index in magazine.sage_advice
             p
-                strong Q#{index + 1}: !{formatString(advice.question, magazine.issue_number, index + 1)}
+                strong Q#{index + 1}: !{formatInput(advice.question, magazine.issue_number, index + 1)}
                 br
-                span &emsp;!{formatString(advice.answer, magazine.issue_number, index + 1)}
+                span &emsp;!{formatInput(advice.answer, magazine.issue_number, index + 1)}
                 br
                 if advice.image
                     img(src="../img/"+advice.image)
