@@ -33,7 +33,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `***Produce flame*** lasts one round per caster level. The caster can throw a maximum of one flame per level, but no more than one flame per round.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '10',
@@ -41,7 +41,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Just assume the caster can cover one man-size creature per level. Assume small creatures equal one-half a man, and large creatures equal one-and-a-half men.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '10',
@@ -49,7 +49,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes, halflings can become clerics. See the upcoming 2nd Edition ***Dungeon Master's Guide*** (page 15) for advancement limits for halfling clerics and other demihuman characters.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_RACE, ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_RACE, ATTRIBUTE_CLASS],
         },
         {
             page_number: '10',
@@ -57,7 +57,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes, but the character's climbing chance cannot be made better than 95%.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '10',
@@ -65,7 +65,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The text on page 104 is correct.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '10',
@@ -73,7 +73,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Use the Elven Chain column in Table 29 but add another - 5% to the column's values.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '10',
@@ -81,7 +81,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Page 44 is correct; page 45 is wrong.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '10',
@@ -89,7 +89,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The text on page 13 is a misprint. Fighters get the 10% for a strength score of 16 or better; paladins and rangers must have additional high ability scores.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '10',
@@ -98,7 +98,7 @@ DRAGON_MAGAZINES.push({
                 `It has been dropped.`
             ],
             comment: `Reintroduced by Player's Option: Combat & Tactics`,
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '10',
@@ -107,7 +107,7 @@ DRAGON_MAGAZINES.push({
                 `No, but he can "save" additional slots as he earns them and specialize with a weapon later in his career if he doesn't fill those slots at the start.`
             ],
             comment: `Added in The Complete Fighter's Handbook`,
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '10',
@@ -116,7 +116,7 @@ DRAGON_MAGAZINES.push({
                 `Yes; all warrior characters are entitled to exceptional strength rolls if they have strength scores of 18.`
             ],
             comment: `Halflings to not roll for exceptional strength. Corrected in Sage Advice #`,
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '10+12',
@@ -124,7 +124,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A ranger can wear any type of armor and still use ***animal empathy***. The ranger must be close enough to the animal to attract the animals undivided attention (about 10 yards in a wilderness setting less, if the setting is something like a crowded marketplace that provides distractions). Individual DMs may give druids ***animal empathy*** if they wish. The rules don't give the druid this ability because a druids focus is on nature as a whole, not just on animals.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '12',
@@ -132,7 +132,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The ranger's two spheres give him plenty of spells. However, individual DMs might want to add a sphere or two; one campaign I am familiar with allows rangers to use healing spells. The DM has to decide what constitutes a valid enemy. Since the rules mention giants, it is probably acceptable to choose a class of creatures. Thus, a ranger from the FORGOTTEN REALMS™ setting might be allowed to choose the goblin races (see ***Cyclopedia of the Realms***, page 46) as an enemy. A ranger can never choose two or more entirely different creatures as enemies.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '12',
@@ -140,7 +140,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Elven chain mail interferes with a ranger's special abilities; refer to Table 29 (page 39) for a list of penalties. Elven chain mail also negates the ranger's ability to use two weapons without penalty.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '12',
@@ -148,7 +148,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The bonus applies only to attack rolls; see page 29.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '12',
@@ -157,7 +157,7 @@ DRAGON_MAGAZINES.push({
                 `As clearly stated on page 44, there are no restrictions on the class combinations allowed to dual-classed characters, provided that alignment restrictions are respected. Most DMs, however, do not allow characters to combine subclasses (e.g., no bard/thieves, paladin/rangers, etc.).`
             ],
             comment: `Revised Player's Handbook (black book) made it a hard rule that you cannot dual/multi-class in the same group. The Complete Bard's Handbook reintroduced it for bard multi-classes.`,
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '12',
@@ -165,7 +165,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The AD&D® game is one of choices. The additional spells are intended to create a greater variety of mage characters, not more powerful mages.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '12',
@@ -173,7 +173,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Specialist wizards must have an intelligence score of at least 9, just like a normal wizard.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '12',
@@ -181,7 +181,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `It isn't needed anymore. The primary function of the write spell was to allow a mage to add a spell to his books after he had failed his chance to know roll for that spell. In the 2nd Edition game, a mage can attempt a new chance to know roll each time he gains a new level. (See "Spelling It Out," in DRAGON® issue #147, for more information.)`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '12',
@@ -189,7 +189,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `There is none. The "M" in the components' line is a typographical error.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '12',
@@ -197,7 +197,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No, because this is not an attack.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '12',
@@ -205,7 +205,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes. The limit is l0d6 + 10 hp damage.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '12',
@@ -213,7 +213,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Here are the schools for the omitted spells (at least the ones I know about): ***irritation deafness***, ***fabricate*** and ***slow*** are alteration spells (***fabricate*** is also an enchantment); ***Melf's minute meteors***, evocation and alteration; ***locate object*** and ***know alignment***, divination; ***geas***, enchantment/charm.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '12',
@@ -221,7 +221,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No. Only races eligible for the mage class (humans, elves, and half elves) can become diviners.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '12',
@@ -229,7 +229,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Cantrips are still in the game. Just use the first-level ***cantrip*** spell. If you need help figuring out what kind of cantrips to cast, use your copy of ***Unearthed Arcana*** as a guide. Actually, things are better now for cantrip-using mages because they no longer need to waste spell book space on cantrips, and they are no longer limited to the few cantrips in their books.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '12',
@@ -237,7 +237,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No. Magic is written in a special language.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '12',
@@ -246,7 +246,7 @@ DRAGON_MAGAZINES.push({
                 `The spells do always hit, after a fashion. In the case of a ***fireball***, the missile bursts at the designated range unless it strikes an object before it gets there. Since the missile flies in a straight line between the caster and the target, it can be blocked by invisible barriers (such as ***walls of force***) or by a bend in a passage obscured by an illusion or mirror.`,
                 `A ***lightning bolt*** is similar to a ***fireball*** in that the spell begins at a designated height and range, extending directly away from the caster. A ***lightning bolt*** is always either 40' or 80' long, and the caster must decide which when he casts the spell. If caster miscalculates and casts this spell into an area too small to contain it, the lightning bolt grows to its full length (as measured from the point where it strikes a barrier), heading back at the caster unless it smashes through the barrier (see page 151). Some readers have misread the example on page 151; ***lightning bolts*** do not bend or fold over when hitting a barrier. The 80' bolt in the example starts 40' away from the caster, travels 10', and strikes a barrier; the bolt must maintain its full length, however, so the opposite end of the bolt (starting from the point of origin) instantly grows out in the direction toward the spell-caster, extending 70' from its point of origin. Thus, the bolt's final length is SO'. A victim caught between the point of origin and the wall behind him is not struck twice by the bolt. The use of the word rebound in the spell's description seems to be the confusing element.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '12',
@@ -254,7 +254,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `There is no error in the spell's description, but you have made an erroneous statement. The ***identify*** spell does not detect magic or its strength; it reveals an item's functions and charges. A ***ring of three wishes*** has only three charges, so it is faintly charged. Smart wizards use a ***detect magic*** spell, which can determine magical strength and type, before casting ***identify***.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
     ],
 });
@@ -271,7 +271,7 @@ DRAGON_MAGAZINES.push({
                 `This is up to the DM, but I suggest that two slots be required. One campaign I am familiar with allows characters with long sword or two-handed sword proficiency to use the bastard sword in its corresponding mode (in other words, a character who can use a long sword can use a bastard sword one-handed without penalty).`
             ],
             comment: `The Complete Fighter's Handbook suggest indicates that only 1 proficiency slot is needed`,
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '10',
@@ -279,7 +279,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Slings are very effective weapons and are often underrated. The bullets are heavy, have excellent aerodynamic qualities, and are hurled with a great deal of force. Why doesn't everybody use a sling? Well, try to swing a sling underwater, while hiding in dense undergrowth, or from around a corner. Also, bow and crossbow specialists get a point-blank range category and the ability to fire before the initiative roll in some cases.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '10',
@@ -287,7 +287,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `This is a typographical error. System shock rolls are made when characters are exposed to magical aging, polymorphing, or petrification. Resurrection survival rolls are used when bringing slain characters to life again.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '10',
@@ -295,7 +295,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Any character can cut and trim his own staff. Prepared staves cost 1 sp each.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '10',
@@ -303,7 +303,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Characters cannot aim and fire bows, use slings, or hurl hand-held weapons while in melee. Loaded and cocked crossbows can be fired in melee but cannot be reloaded. Since light and heavy crossbows are too large to be very handy, the DM might rule that they can be fired only when the user has initiative.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '10',
@@ -311,7 +311,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Short bow arrows do 1-6 hp damage to targets of all sizes. No matter what sort of arrow is fired from a short bow, it does damage as a flight arrow (1d6/1d6).`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '10',
@@ -319,7 +319,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Any weapon that can be set vs. a charge does double damage when so employed.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '10',
@@ -327,7 +327,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `This is up to the DM, but I suggest not. If you do allow fighting withdrawals, the character making the withdrawal should get an attack only if there is an opponent following him. Even then, the character should attack last and with a -2 penalty to his attack roll.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '10+12',
@@ -335,7 +335,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A maul is a warhammer; see the Weapons Table on pages 68-69. Lassos and nets are not part of the 2nd Edition game and were mentioned in error. However, a typical war net is made from woven hemp cords and has small lead weights sewn into the edges. It is 5' across, weighs 6 lbs., and costs 12 sp. It takes two hands and 6' of clear space to throw a net, and the effective range is 30'. Any target hit by the net must save vs. breath weapon or become entangled. Entangled victims cannot fight or move, and defend at -2. Entangled victims wriggle free if they make a successful wrestling attack vs. AC 2; they can make one attempt to get free each round. When used as a melee weapon, treat a net as a scourge. A lasso is simply a rope with an adjustable loop. A successful hit with a lasso puts the loop around part of the target creature's body, but this does not necessarily immobilize the creature; the DM has to decide where the loop is (around the neck, a limb, the upper body, etc.) and assess the appropriate penalty. Since the lasso's wielder can pull the loop tight, the only way to escape, short of killing the wielder or getting the rope away from him, is to cut or break the rope.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '12',
@@ -343,7 +343,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Use these statistics for that weapon: cost 10 gp; weight 4 lbs.; size M; type S; speed factor 5; damage 2d4 (S-M)/1d6 + 1 (L).`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '12',
@@ -351,7 +351,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The rate of fire for any missile weapon stays the same for all users regardless of level, except for specialized users (see Table 35, page 52).`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '12',
@@ -359,7 +359,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `This is up to the DM, but your suggestion regarding gunpowder supplies sounds reasonable because the character would have to practice with the weapon. Arquebus specialists rates of fire are: 1st-6th level, 1/3; 7th-12th level, 1⁄2; 13th level and up, 1/1.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '12',
@@ -368,7 +368,7 @@ DRAGON_MAGAZINES.push({
                 `No; two-weapon attacks are limited to one medium and one small weapon, or to two small weapons.`
             ],
             comment: `This was added in The Complete Fighter's Handbook with Two-weapon style specialization.`,
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '12',
@@ -376,7 +376,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Fighters can specialize with only one weapon. Any character attacking with two weapons gets one—and only one—extra attack per round; the character gets the full number of attacks for the primary weapon and one attack from the secondary weapon. The DM can allow strength bonuses for each hand, but I do not recommend it. Limit strength bonuses to one weapon or the other, or allow the character to split the bonus between weapons.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '12',
@@ -384,7 +384,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Light quarrels and short swords are small weapons. To preserve game balance, you might want to disallow the use of short swords as secondary weapons in two-handed attacks.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '12',
@@ -392,7 +392,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Space required for melee weapons can be inferred from their sizes and types. Bludgeoning or slashing weapons generally require as much clear space for use as their lengths. Piercing weapons and most missile weapons generally require 1' of clear space.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '12',
@@ -400,7 +400,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `As explained on page 98, a mace has no "flat" side that can be used at less than full effect. Still, since using a weapon in nonlethal combat carries a -4 attack roll penalty, you could assume that the mace wielder could "pull the blow" and inflict reduced, temporary damage.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
         },
         {
             page_number: '12',
@@ -440,7 +440,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes; see page 44.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '12',
@@ -1034,7 +1034,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The method described on page 25 is the same as the method described in the 1st Edition ***Players Handbook***, so there is no harm in using the ***Oriental Adventures*** explanation in non-Oriental campaigns based on the 1st Edition books. However, the 2nd Edition ***Player’s Handbook*** does not allow a chance-to-learn check for a spell until it is found (see page 16 of that volume).`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_2E],
         },
         {
             page_number: '8-9',
@@ -1042,7 +1042,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Oriental characters gain levels by accumulating experience and training. They must pay training costs (see page 86 of the 1st Edition ***DMG*** or page 49 of the 2nd Edition ***DMG***). Wu jen should gain new spells whenever they gain the ability to cast them and have access to such spells. For example, at 3rd level, a wu jen gains the ability to cast a second-level spell; he can do so if he finds a written copy of such a spell, learns it from someone else, or researches it himself *and* makes his chance-to-know roll (see page 25).`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_2E],
         },
         {
             page_number: '9',
@@ -1138,7 +1138,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The lengths of a turn, a melee round, and a segment are the same as in non-Oriental adventures; see the 1st Edition *Players Handbook* (page 31) or the 2nd Edition *Player’s Handbook* (page 91; note that segments are not used in the AD&D 2nd Edition rules).`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_2E],
         },
         {
             page_number: '9',
@@ -1354,7 +1354,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Offensive actions break the ***invisibility***. The wearer must remain visible at least until the beginning of the next melee round.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_INVISIBILITY],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_INVISIBILITY],
         },
         {
             page_number: '14',
@@ -1498,7 +1498,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes, the number of creatures effected by a ***hold person*** spell is under the caster's control.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '14',
@@ -1538,7 +1538,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes, but the creature' s wisdom adjustment (if any) applies to the save.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '59',
@@ -1562,7 +1562,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A ***tongues*** spell allows the caster to communicate only with creatures that have language. The reference to the ***tongues*** spell in the description of the ***animal growth*** spell is an error.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '59',
@@ -1578,10 +1578,10 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No, no, and no. A ***light*** spell illuminates a 20' radius. Casting it on an object simply makes the effect mobile. The spell has one and only one center of effect; if the object the spell has been cast upon is broken, spilled, or worn away, the spell stays with one portion of the object or becomes immobile, fixed in space. It might be possible to transfer the spell from one object to another by casting it on a mutable object. For example, if the spell is cast on an open vial of water, the spell will be transferred to the vial if the water is allowed to evaporate away.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
     ],
-})
+});
 DRAGON_MAGAZINES.push({
     issue_number: '153',
     publication_year: '1990',
@@ -1594,7 +1594,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A cleric always has access to the full list of clerical spells (limited, of course, by that character's level). Clerics have no spell books, and their spell lists are not limit as are magic-users'.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_CLASS],
         },
         {
             page_number: '6',
@@ -1602,7 +1602,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Here's what each spell does: A ***bless*** gives friendly creatures +1 on morale "to hit" rolls; if reversed (as a ***curse***), it gives enemies a -1 on those rolls. A ***chant*** spell gives friendly creatures +1 on "to hit," damage, and saving-throw rolls; at the same time, enemies receive a -1 on the same rolls. A ***prayer*** spell gives friendly creatures +1 on "to hit" and saving-throw rolls, and enemies -1 on the same rolls. ***Prayer*** does not affect damage, and neither ***prayer*** nor ***chant*** affect morale. The areas of effect for each spell are fixed and do not move with their casters. ***Bless*** affects creatures in its area of effect at the time of casting only; ***chant*** and ***prayer*** affect all creatures in the area of effect, even those who enter after the spells are completed. Damage modifiers from ***chant*** are per attack, not per die of damage.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '6',
@@ -1610,7 +1610,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No. The duration of a ***bless*** spell is six consecutive rounds from when it is cast.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '6',
@@ -1626,7 +1626,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `***Bless*** spells are cast on creatures, not objects, with the only exception being crossbow bolts that are used to slay rakshasas. In the latter case, the spell is cast directly upon a single bolt, and the effect lasts until the bolt is used (whether the bolt hits its target or misses).`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '6',
@@ -1635,7 +1635,7 @@ DRAGON_MAGAZINES.push({
                 `Blinded creatures are unable to cast any spell that requires a visible target (such as ***magic missile***). Spells that can be cast on an area (such as ***fireball***) or delivered by touch (such as ***cure light wounds***) are still usable.`,
                 `Deafness can cause spells with verbal components to be miscast and fail. The failure chance is up to the DM, but it shouldn't exceed 20% (less for spells with short casting times). A 2% cumulative failure chance per segment of spell-casting is suggested. The spell ***holy word*** has a deafening effect that causes spells to fail 50% of the time. This is due mostly to the extreme power of the ***holy word***, not merely the condition of deafness.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL,ATTRIBUTE_BLINDNESS,ATTRIBUTE_DEAFNESS],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL, ATTRIBUTE_BLINDNESS, ATTRIBUTE_DEAFNESS],
         },
         {
             page_number: '7',
@@ -1643,7 +1643,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `***Command*** is a spell; the cleric may not fire missiles, engage in melee, or turn undead in the same round as he casts a spell.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1651,7 +1651,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Death’ s door doesn't revive characters; it maintains characters at zero hit points until the spell wears off or until the character is revived with a cure wounds spell. Characters revived in this manner can resume activity immediately.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1659,7 +1659,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No. A ***glyph*** is a magical ward used to protect an object. A glyph can be cast upon a weapon, but it will be triggered only when a creature touches the weapon, not when the weapon strikes a creature.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1667,7 +1667,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `***Hold*** spells are similar to paralysis except that the effect is mental, not physical. A ***held*** creature cannot move, fight, or communicate in any way. The creature can, however, be moved by others.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1675,7 +1675,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes, on all counts. Each of these spells can negate darkness of any sort, though a ***light*** spell will "go out" immediately after negating such darkness, while the ***continual light*** spell will last. ***Light*** or ***continual light*** spell will negate only one darkness effect at a time; thus, if there are two darkness effects in the same area, the area remains dark until two light effects are used.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1683,7 +1683,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The area is measured in scale inches. One *scale* inch equals 10', and one scale square inch equals 100 square feet. Remember that the areas of spell effects never get larger outdoors, although ranges do get larger (see page 39 in the ***Players Handbook***).`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1691,7 +1691,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes, both versions of the ***protection from evil*** spell move with the caster.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1699,7 +1699,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `*Raised* characters must rest for the amount of time they have been dead. The minimum rest period is one day. *Raised* characters have from 3-17 hp (2d8 + 1), though this value is reduced if the PC's maximum number of hit points is less than the value rolled.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1707,7 +1707,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A 24-cubic-foot boulder has the following statistics: AC 0; MV 3"; HD 10; #AT 1; Dmg 5-30. The spell's effect is slightly better than the galeb duhr's ability. A statue of the same size with a human shape would have the same armor class and hit dice, but would move at 9" on its legs and strike twice per round for 2-16 hp damage per blow. Neither of the above "rocks" is as good offensively as the elemental a druid could get with a ***conjure earth elemental*** spell at the same level, but the animated rocks are not balked by water nor dismissed by a ***holy word*** spell.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1715,7 +1715,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The bolt from a ***call lightning*** spell ends at the water's surface, but its 1" radius of effect extends below the surface and has its full effect on any submerged creature therein.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1723,7 +1723,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `I recommend that you drop the disability effects of the ***heat metal*** spell and its reverse. The damage inflicted alone is sufficient for a 2nd-level spell.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1731,10 +1731,10 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes, it can.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
     ]
-})
+});
 DRAGON_MAGAZINES.push({
     issue_number: '154',
     publication_year: '1990',
@@ -1755,7 +1755,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A ***lightning bolt*** spell must be cast so that the bolt is in line with the caster and his target. The bolt may be cast in any direction, including straight up, as space permits.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '6',
@@ -1763,7 +1763,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A successful save vs. poison indicates that the creature moves out of the cloud immediately and is helpless for a full round afterward. A failed save indicates that the creature is helpless for 2-5 rounds before leaving the cloud, remaining helpless for one round after it emerges.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '6',
@@ -1771,7 +1771,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No. A closure to be sealed by a ***hold portal*** or ***wizard lock*** spell must be of wood, metal, or stone.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '6-7',
@@ -1779,7 +1779,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A ***dispel magic*** spell automatically works on the caster's own spells; a die roll is required to determine its success on all other magics. The two ***globe of invulnerability*** spells can be dispelled; note also that they are visible. If any ***globe of invulnerability*** is dispelled, then all other magical effects in the ***dispel magic*** spell's area of effect are subject to its effects. If a ***globe of invulnerability*** is not dispelled, it protects all magic effects within its area of effect. There are some spells that cannot be dispelled; ***anti-magic*** shell and ***wall of force*** are two examples.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1787,7 +1787,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The base area for a ***phantasmal force*** spell is four (scale) square inches, meaning 10' × 40' (400 square feet) or any set of dimensions not exceeding 400 square feet. The area increases by one (scale) square inch (100 square feet) per level.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1795,7 +1795,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The cone is ½" wide at its origin, 2" wide at its terminus, and ½" long per level of the caster. As noted in the previous question, these are scale inches, such that 1" = 10'. Thus, the cone is 5' wide at its origin, 20' wide at its terminus, and 5' long per level of its caster.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1803,7 +1803,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `***Unseen servants*** may move in all three dimensions at a rate of 12") subject to the spell's 3" radius. Thus a ***servant*** can move along with its caster at normal walking speeds.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1811,7 +1811,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes, probably. ***Polymorph self*** allows spell-casting if the new form has prehensile digits and is capable of speech. Note, however, that all equipment carried ***polymorphs*** with the caster, so spell components won't always be available. If a ***polymorph other*** spell was used, the victim might "lose" his components as above, and he will lose all memories and abilities if he assumes the mentality of his new form. What happens when a character is ***reincarnated*** is up to the DM. Generally, the character can still use his professional skills if his new form will physically allow it, although further advancement is not always possible.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1820,7 +1820,7 @@ DRAGON_MAGAZINES.push({
                 `Items in the possession of the spellcaster are immune to the spell's effects. Items in the possession of other creatures gain their possessors' saving throws vs. spells, with all adjustments. Items that are by themselves can be ***disjoined*** using the ***dispel magic*** spell's system (comparing the caster's level vs. the level at which the magical item was created). Potions and scrolls are treated as if created by 8th-level magic-users; permanent magical items are treated as if created by 12th-level magic-users.`,
                 `If any portion of a spell's area of effect overlaps the area of the ***disjunction***, the entire spell is ***disjoined***. A ***wall of force*** can be so ***disjoined***, and it will have no effect on the ***disjunction*** spell. Treat the chance for ***disjoining*** an ***anti-magic shell*** as that for an artifact, but with no chance for attracting the attention of a powerful being (see ***Unearthed Arcana***, page 65). If an ***anti-magic shell*** is unaffected, it protects all magic within its area; if the ***anti-magic shell*** is ***disjoined***, all magical spells, effects, and items within the area of the ***disjunction*** are subject to its effects.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1829,7 +1829,7 @@ DRAGON_MAGAZINES.push({
                 `This is up to the DM. He may rule that weaker creatures are affected first, or he may allow the caster to choose whether the more powerful creatures or the weaker creatures are affected first. He may also rule that creatures closest to the center of the spell's area of effect are affected first. The DM can choose any of these methods as long as he uses the same method all of the time.`,
                 `If weaker creatures are affected first, the DM should roll to see how many of them are put to sleep and apply the effects. If all of the weaker creatures were put to sleep by the spell, and if the number of potential victims rolled was greater than the number actually affected, the DM may then take half of that difference (dropping fractions) and apply that to the next most powerful group of victims. For example, a magic-user faces a group of six 1—1-HD creatures, two 1-HD creatures, and one 3-HD creature. The DM rolls 4d4 and gets a 10. The six 1—1-HD creatures fall asleep, leaving a difference of 4. Half of 4 is two, so the two 1-HD creatures fall asleep, leaving the 3-HD creature unaffected., In another example, the magic-user faces four 1-HD creatures and one 4 + 1-HD creature. The DM rolls 2d4 and gets a 5. Four 1-HD creatures fall asleep; the difference is 1, but nothing remains after 1 is reduced by half and all fractions are dropped. Even if the result of the 2d4 roll had been an 8, the 4 + 1-HD creature would not be affected (8 - 4 = 4, 1⁄2 x 4 = 2, but no monsters were present in the 2 + 1 to 3-HD category). The PC should not have everything his own way!`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1837,7 +1837,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `An ***anti-magic shell*** negates all magic within its area of effect. The caster's spells (which originate within the shell) are also negated, although they may remain after the shell's duration expires if their own durations are long enough. Note also that the shell causes magical items within its area of effect to cease functioning. In any case, the shell does not function like a ***dispel magic*** spell. Magical items are not destroyed by the shell; they merely cease to function while within it. If their duration permits, magical effects will still function when they are taken away from the shell or when the shell's duration expires. For example, a ***continual light*** spell cast upon a rock will be negated only as long as that rock is within the shell; the ***continual light*** spell functions normally afterward. If part of a magical effect's area extends into the shell, only the portion within the shell is negated; the effect functions normally outside the shell. However, if a spell with an instantaneous duration is cast so that its center is within the radius of the shell, the spell is *completely* negated. For example, if a ***fireball*** were cast so that it would detonate inside an ***anti-magic shell***, there would be no effect. If a ***fireball*** were cast so that it would detonate outside the ***shell***, however, only the portion of the ***fireball*** crossing into the shell would be negated.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1846,7 +1846,7 @@ DRAGON_MAGAZINES.push({
                 `***Haste*** spells do not increase the movement rate of a ***fly*** spell or of a conveyance, such as a ***broom*** or ***carpet of flying***. ***Haste*** will double the speed of other creature-affecting magics such as a ***potion of speed*** or ***boots of speed***. Two or more ***haste*** spells are not cumulative. Remember that ***haste*** and ***potions of speed*** cause magical aging.`
             ],
             comment: 'The last part of this answer is intended for 1E. In the 2E Dungeon Master Option: High-Level Campaigns p. 72, ***haste*** is clarified to not work with magical items, such as ***boots of speed*** or ***potion of speed***',
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1854,7 +1854,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `It is unlikely that Hades or Hastur will be conjured by a ***weird*** spell, as deities of this power are almost never the personal nemeses of mere mortals. (Of course, if the spell were cast at a deity-class creature, it might produce such opponents.) If the spell is cast against an orc, it's likely to produce a hobgoblin or a gnoll at most. It is up to the DM to adjudicate any use of this spell reasonably and fairly (see ***Unearthed Arcana***, page 71).`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7',
@@ -1862,7 +1862,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No; a ***magic missile*** always hit its target unless it is protected by certain magics (a ***shield*** spell or a ***brooch of shielding***, to name a few).`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '7+94',
@@ -1870,7 +1870,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `An ***ice storm*** will affect a creature protected by a ***stoneskin*** spell. Although the hailstones are projectiles of sorts, they are a magical attack just as are ***magic missiles***. An ***ice storm*** or other attack that damages the protected creature does not end the ***stoneskin*** spell, as the dweomer lasts until it foils a physical attack (see ***Unearthed Arcana*** page 57).`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '94',
@@ -1878,7 +1878,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The various ***cure wounds*** spells will not work on a ***simulacrum***; ***raise dead*** and ***resurrection*** will not work either, as the ***simulacrum*** was never alive. Whether or not a slain ***simulacrum*** crumbles into a pile of snow when killed is up to the DM—we recommend yes. Damage to a simulacrum might be repairable if the DM allows it. We suggest a new seventh-level spell for this purpose (or a recasting of the ***simulacrum*** spell strictly for purposes of repair) or perhaps a magical tome. The costs of repair should be from 300 to 500 gp per hit point in any case.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '94',
@@ -1886,7 +1886,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes, but only after the ***simulacrum*** has been given a vital force with a ***resurrection*** spell. The attempt at ***magic jar*** is then resolved normally.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '94',
@@ -1894,7 +1894,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No. All the components of any spell must be completed together; withholding or interrupting any of them ruins the spell. And, ***magic mouth*** cannot be used to cast any spell—not even a purely verbal one.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '94',
@@ -1902,7 +1902,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `There is no limit to the number of times that a creature can be ***charmed***. If multiple ***charms*** are cast upon the same creature, each caster will be able to influence the subject. The DM will have to decide what the creature will do in the face of conflicting instructions. It's likely that the ***charmed*** creature, being "best friends" with both casters, will try to reconcile any arguments between them.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '94',
@@ -1910,7 +1910,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The recipient of an ***invisibility*** spell is invisible even to himself. Any equipment carried by a creature at the time the spell is cast becomes invisible with the creature. If the creature puts an item down, the item becomes visible, but if an invisible creature picks up a visible object, the object stays visible. Nondamaging spells will not make the recipient visible, but any action intended to harm another creature will.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL, ATTRIBUTE_INVISIBILITY],
         },
         {
             page_number: '94',
@@ -1918,7 +1918,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The only limit is the spell's duration and 20'/round movement rate (or 10'/round if cast on another creature). Smart players will make sure that their PCs leave enough unused duration to get safely back to the ground.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
         },
         {
             page_number: '94',
@@ -1966,6 +1966,47 @@ DRAGON_MAGAZINES.push({
             attributes: [ATTRIBUTE_1E],
         },
     ]
-})
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '155',
+    publication_year: '1990',
+    publication_month: 'March',
+    foreword: `This month, "Sage Advice" looks at what ails the denizens of the AD&D® 2nd Edition Monstrous Compendium, then offers more advice on the AD&D 2nd (and 1st) Edition rules.`,
+    sage_advice: [
+        {
+            page_number: '6',
+            question: `After purchasing the first two volumes of the ***Monstrous Compendium***, I cannot help but have the sneaking suspicion that devils and demons are not going to appear in any of the new monster tomes. I, for one, would be disappointed if these most villainous of villains are to be excluded from the AD&D game. In short, are devils and demons going to appear in any AD&D 2nd Edition reference books, or has society reared its ugly head once more to thwart creativity and enjoyment?`,
+            answer: [
+                `The answer, in short, is at present there are no plans to include devils, demons, and similar creatures in the AD&D 2nd Edition game. Society has not reared its "ugly head." In fact, society is the source of creativity and enjoyment—gamers, game producers, and game columnists are part of society. Society as a whole is not down on gamers; some people I know who make it a hobby to study the anti-role-playing movement tell me the whole brouhaha is the work of less than a dozen people, most of them in the United States, who were well known for their questionable religious dogmas long before the D&D® and AD&D games came on the scene. No major religious sect or denomination officially opposes the D&D game or any other role-playing game. These few individuals have been able to fool a lot of people into believing their propaganda by pointing to a few items in the old AD&D game books and saying, "This is a satanic game." The unsuspecting public, being uninformed about role-playing and disinclined to actually read the books themselves, started buying this vituperation.`,
+                `The demons and devils in the old ***Monster Manuals*** were a prime weapon in the campaign of misinformation directed against gaming, so they were dropped from the new edition. It's possible that demons and devils will be revised into a format that preserves their usefulness in adventure design and does not give the game's detractors cheap ammunition, but that format hasn't been found yet. In the meantime, the revamped dragons and giants—which have been given a tremendous boost in the ***Monstrous Compendium***—should do a nice job of filling the role of ultimate adversary.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '6',
+            question: `Do monster shamans who cast clerical spells get bonus spells for high wisdom? How does one calculate a monster's wisdom score?`,
+            answer: [
+                `This answer is up to the DM, but only true clerics should get bonus spells. For example, creatures such as dragons that have the ability to cast clerical spells do not receive bonus spells due to high wisdom because they are not members of the cleric class. Generally, a creature's wisdom score falls into the same range as its intelligence score; see the introductory section of the ***Monstrous Compendium, Volume I***.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '6+86',
+            question: `May I have permission to photocopy the sheets in my ***Monstrous Compendium, volume I***, because they are badly misdrilled? Also, aren't there supposed to be two different pages in the vampire's description?`,
+            answer: [
+                `You can photocopy TSR's game products if you are doing it for your own use and not for sale. You can also get a replacement booklet by returning the misdrilled copy and requesting a new one. Send it to: The Mail Order Hobby Shop, c/o TSR, Inc., P.O. Box 756, Lake Geneva WI 53147, U.S.A. Put the words "defective product" somewhere on the package. Enclose a letter giving your name and address, and state where and when you bought the product. Note that a replacement "vampire" page was run in DRAGON issue #150; you can also get one by writing the address above.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '6+86',
+            question: `There seem to be several problems with the new dragon descriptions. Does the combat modifier really apply to both attack and damage rolls? If so, how can a really big dragon ever miss? How much damage do black dragons really do with their breath weapons? What does the "MT" column mean on the black dragon's statistics table? Why are separate body and tail lengths given for each dragon type? What is the correct tail length entry for great wyrm bronze dragons? How many times can a dragon use its breath weapon each day? The text on dragons seems to imply that dragons have no limit on how often they can use breath weapons, but the dragon turtle's description strongly implies that the limit is three times per day.`,
+            answer: [
+                `You can photocopy TSR's game products if you are doing it for your own use and not for sale. You can also get a replacement booklet by returning the misdrilled copy and requesting a new one. Send it to: The Mail Order Hobby Shop, c/o TSR, Inc., P.O. Box 756, Lake Geneva WI 53147, U.S.A. Put the words "defective product" somewhere on the package. Enclose a letter giving your name and address, and state where and when you bought the product. Note that a replacement "vampire" page was run in DRAGON issue #150; you can also get one by writing the address above.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
 
 module.exports = DRAGON_MAGAZINES;
