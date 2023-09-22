@@ -1,8 +1,8 @@
 -
     function formatString(s, issue, question) {
-        let asterisks = s.match(/\*/g) || []
+        let asterisks = s.match(/(?<!")\*(?!")/g) || [] // Ignoring asterisk that are surrounded by quotes
         if (asterisks.length > 0) {
-            if (asterisks.length % 2 != 0) {
+            if (asterisks.length % 2 !== 0) {
                 console.log(`Uneven number of asterisks in #${issue}, Q:${question}`)
             }
             let tripleAsterisk = s.match(/\*{3}.*?\*{3}/g) || []
@@ -58,4 +58,7 @@ each magazine, _ in dragonMagazines
                 br
                 span &emsp;!{formatString(advice.answer, magazine.issue_number, index + 1)}
                 br
+                if advice.image
+                    img(src="../img/"+advice.image)
+                    br
                 | &emsp;Page #{advice.page_number},
