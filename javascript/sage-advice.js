@@ -11,6 +11,8 @@ const ATTRIBUTE_BLINDNESS = 'blindness';
 const ATTRIBUTE_DEAFNESS = 'deafness';
 const ATTRIBUTE_DISPEL_MAGIC = 'dispel magic';
 
+const ATTRIBUTE_APRIL_FOOLS = 'april fools';
+
 const SUBSTITUDES = [
     ['elf', 'elves'],
     ['dwarf', 'dwarves'],
@@ -115,7 +117,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes; all warrior characters are entitled to exceptional strength rolls if they have strength scores of 18.`
             ],
-            comment: `Halflings to not roll for exceptional strength. Corrected in Sage Advice #`,
+            comment: `Halflings to not roll for exceptional strength. Corrected in Sage Advice #156 p. 57`,
             attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
         },
         {
@@ -1999,14 +2001,472 @@ DRAGON_MAGAZINES.push({
             attributes: [ATTRIBUTE_2E],
         },
         {
-            page_number: '6+86',
+            page_number: '86',
             question: `There seem to be several problems with the new dragon descriptions. Does the combat modifier really apply to both attack and damage rolls? If so, how can a really big dragon ever miss? How much damage do black dragons really do with their breath weapons? What does the "MT" column mean on the black dragon's statistics table? Why are separate body and tail lengths given for each dragon type? What is the correct tail length entry for great wyrm bronze dragons? How many times can a dragon use its breath weapon each day? The text on dragons seems to imply that dragons have no limit on how often they can use breath weapons, but the dragon turtle's description strongly implies that the limit is three times per day.`,
             answer: [
-                `You can photocopy TSR's game products if you are doing it for your own use and not for sale. You can also get a replacement booklet by returning the misdrilled copy and requesting a new one. Send it to: The Mail Order Hobby Shop, c/o TSR, Inc., P.O. Box 756, Lake Geneva WI 53147, U.S.A. Put the words "defective product" somewhere on the package. Enclose a letter giving your name and address, and state where and when you bought the product. Note that a replacement "vampire" page was run in DRAGON issue #150; you can also get one by writing the address above.`
+                `A dragon's combat modifier applies only to its damage rolls; the reference to attack rolls is left over from an earlier version of the manuscript. From age category five on, one digit has been dropped from the black dragon's breath weapon rating; starting from age category one, the column should read: 2d4+1, 4d4+2, 6d4+3, 8d4+4, 10d4+5, 12d4+6, 14d4+7, 16d4+8, 18d4+9, 20d4+10, 22d4+11, and 24d4+12. The "MT" is a typo; it should read "MR" for magic resistance. Only a dragon's body length is considered when calculating a dragon's size rating, since the tail is very thin. Also, damage to a dragon's tail does not really harm the dragon; only hits on the body and wings are telling enough to reduce the dragon's hit points. This makes dragons a little less vulnerable to mob tactics. A great wyrm bronze dragon's tail is 100-110' long. In the core AD&D 2nd Edition rules, a dragon can use its breath weapon three times a day, once every three rounds. To make fighting dragons less of a certain thing, however, I suggest you make the interval between breath weapons variable (roll 1d3 for the number of interval rounds). An alternate method for determining the number of a dragon's breath weapons used each day is discussed in "The New Ecology of the Dragons," in DRAGON issue #146.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `Will statistics for Tiamat and Baha- mut be given in future volumes?`,
+            answer: [
+                `To my knowledge, Tiamat and Bahamut, the Chromatic and Platinum dragons, are not scheduled to appear in any volumes of the ***Monstrous Compendium***. They might, however, appear in the revised ***Legends & Lore*** tome.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `What kinds of materials can a bur- rowing dragon dig through?`,
+            answer: [
+                `Generally, a burrowing dragon can burrow only through things found in its home terrain. Thus, a white dragon can burrow through ice and snow, and a brass dragon can burrow through sand. Note that all dragons can dig, but only burrowing dragons do it fast enough to be given a movement rating for doing so.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `How is the age category of a randomly encountered dragon generated?`,
+            answer: [
+                `I suggest rolling 2d4. This keeps hatchlings safely at home and restricts the really powerful older dragons to set encounters placed by the DM, probably close to their lairs, which they tend to guard jealously.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `How come dragons are allowed armor classes better than -10 when the ***DMG*** limits characters to -10?`,
+            answer: [
+                `Dragons aren't characters; they're among the most powerful beings on the Prime Material plane. If your campaign allows PCs to live and grow for more than a millennium, as dragons do, go ahead and let them break the AC -10 barrier after they've adventured for 1,000 years.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `What is the spell ***detect gems***, and why do gold dragons have it?`,
+            answer: [
+                `There is no such spell. The gold dragon's ability is explained in the monster's description. Precisely why gold dragons have this ability is unrevealed.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `What does an alignment of "nil" mean? Just neutral?`,
+            answer: [
+                `The "nil" alignment rating is a holdover from an early draft of the ***Monstrous Compendium*** material. Originally, a rating of "nil" indicated that a creature was not intelligent enough to have an alignment at all. However, the "nil" rating was dropped during rewriting and should have been replaced with the neutral alignment.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `Do ***fireballs*** or other heat-related attacks do any additional damage to creatures such as frost giants or white dragons?`,
+            answer: [
+                `No. Unless a creature's description lists a special vulnerability, or unless an attack form's description lists a special damage bonus, assume the target of any magical attack is affected normally.`
+            ],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '86',
+            question: `How can a fire giant be totally immune to red dragon breath, which can do up to 24d10+12 hp damage, and still be vulnerable to ***fireballs***, which do a relatively paltry maximum of 10d6 hp damage?`,
+            answer: [
+                `This was the subject of heated discussion during the game's production. Ultimately, the winning argument had two points. First, dragon breath is not magical fire; the flame produced inside a dragon is not the same as the fire in a ***fireball*** or ***wall of fire*** spell. Second, making fire giants immune to fire would imbalance the game because so many attack spells are based on fire. Still, there are plenty of nonfiery attack spells, so your campaign isn't likely to suffer if you decide to make your fire giants completely fire resistant.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `Will wolverines, whales, and sharks be included in future volumes of the ***Monstrous Compendium***?`,
+            answer: [
+                `Yes. Sharks and wolverines are included in volume 2 (TSR product #2103), which is available now. (Sharks and wolverines are not listed in volume 2's alphabetical index, but the information is there.) Whales are included in volume 3 (TSR product #2104), which is also available.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `What is a werebear's intelligence rating? The listing says exceptional, but the number rating is given as (11-12) while the introduction says the range for exceptional intelligence is 15-16.`,
+            answer: [
+                `The numbers in the werebear's statistics are wrong. Werebears are exceptionally intelligent (15-16).`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `What is the experience-point value for a noble genie? How are experience-point values figured, anyway?`,
+            answer: [
+                `A noble genie is worth 6,000 xp; the number is listed but in the wrong column. Complete experience-point tables are given in the 2nd Edition ***Dungeon Master’s Guide***, page 47.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `Shouldn't liches have 10 + HD now that wizards are limited to 10 HD? Isn't 7,000 xp a bit low for a high-level lich?`,
+            answer: [
+                `You can give a lich 10 hit dice, or you can assume it picks up an extra hit die in the process, of becoming a lich. According to my calculations, an 11-HD lich should be worth 12,000 xp (base 2,000; AC 0, +1; high intelligence, +1; immunity to any spell, +1; hit only by magical weapons, +1; level 3 or greater spells, +2; paralysis, +2; fear, +2). Liches that possess and use magical items against the party are worth an extra 1,000 xp, and high-level liches should be worth an extra 1,000 xp per level over 11th.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `Shouldn't soldiers have more than 1 hp? After all, farmers have 1-6 hp.`,
+            answer: [
+                `Common soldiers are usually militiamen or part-time soldiers, so they have 1-6 hp, just like the farmers they actually are when they aren't fighting. Professional and veteran soldiers have 1-10 hp per level.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86-87',
+            question: `Why was the huecuva renamed? Can creatures with infravision automatically recognize these creatures for what they are?`,
+            answer: [
+                `The creature was accidentally renamed "heucuva" while volume 2 was in production. Since it is impractical to reprint most of volume 2 to get the correctly spelled "huecuva" in proper alphabetical order, the creature has been officially renamed. Heucuva (the name is the same in singular and plural forms) appear to be common skeletons when viewed with infravision, no matter what guise they have adopted using ***polymorph***; a party using infravision will simply not be able to distinguish them from regular skeletons. Note that torch or lantern light, which is necessary for making maps, spoils infravision and keeps all characters with infravision from seeing a heucuva's skeletal form. (The shadow cast by a ***polymorphed*** heucuva will be that of the shape it has assumed, not that of a skeleton.)`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '87',
+            question: `How much damage does a korred do? The number range is given as 3-6 hp damage, while the damage-dice type is given as 1d2+4.`,
+            answer: [
+                `A melee hit from a korred does 5-6 (1d2+4) hp damage.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '87',
+            question: `There seem to be a few errors in the rear-claw damage ratings for the various great cats.`,
+            answer: [
+                `There are. The correct (single claw) ratings are: cheetah, 1-2; jaguar, 2-5, (1d4+1); leopard, 1-4; common lion, 2-7 (1d6+1); mountain lion, 1-4; spotted lion, 2-8 (2d4); giant lynx, 1-3; tiger 2-8 (2d4); smilodon 2-8 (2d4).`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '87',
+            question: `Aren't one leader and three assist- ants for every three orcs simply too many leaders and assistants?`,
+            answer: [
+                `Yes. The correct number is one leader and three assistants for every 30 orcs.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '87',
+            question: `Can a ***rope trick*** spell be cast downward or sideways, so that the caster has to climb down or across to get into the extradimensional space? How big is the extradimensional space? Can the spell be cast underwater to form an air pocket?`,
+            answer: [
+                `The rope must always be cast upward. The extradimensional space is big enough to hold eight man-size creatures and is about 10' high, 10' long, and 20' wide. The spell can be cast anywhere there is enough space to allow the rope to rise the required 5-30'. However, if the spell is cast underwater, the extradimensional space will fill with water.`
+            ],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '87',
+            question: `How many pinches of ***dust of disappearance*** are commonly found at one time?`,
+            answer: [
+                `Five to 50 (5d10), just like ***dust of appearance***.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '87',
+            question: `Will a wish to increase an ability score subject the wizard casting the spell to a three-point penalty to strength even if he is increasing his strength by one point?`,
+            answer: [
+                `Yes. The wizard suffers the penalty if he raises an ability score (his own or anybody else's). In the unusual case you pose, the temporary subtraction comes from the wizards new strength score.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '87',
+            question: `How does spell-casting affect melee? Is there a bonus for attacking a spell-caster while he is casting a spell?`,
+            answer: [
+                `A spell-caster may not attack during any round in which he casts a spell, and he may not use his dexterity bonus to benefit his armor class in order to avoid an attack while casting that spell (he'll ruin his spell if he does so). The spell-caster is not otherwise impaired, however, and attacks against him are made normally.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '87-88',
+            question: `Can a spell-caster use the same spell more than once per day by memorizing it more than once?`,
+            answer: [
+                `Yes, but each spell memorized fills one "slot." For example, a wizard who can memorize three first-level spells could memorize a ***magic missile*** spell three times, but could take no other first-level spells.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `I understand that a magic-user can cast only the spells in his book, but how often can a spell in a book be cast? A friend told me that a 1st-level magic-user can cast only one spell per day, but the ***DMG*** says that a 1st-level magic-user has a book of four spells.`,
+            answer: [
+                `You seem to be confused by the difference between the number of spells a magic-user can have memorized at any given time and the number of spells that he can have written in his spell book.`,
+                `The number of spells that any magic-user can have memorized at any one time is given on the Spells Usable By Class And Level chart in the ***PHB*** (page 26). To use the chart, find the level of the spell-caster (first column). The total number of spells his brain can hold is given to the right of his level. For example, the "Magic-users Spell Level" line for a 4th-level magic-user reads: 3 2. This means that a 4th-level magic-user can memorize up to three first-level spells and two second-level spells.`,
+                `When a magic-user prepares for an adventure, he studies his books and commits spells to memory, up to his "full load." When he casts one of these spells, the memory of it goes away (as explained on page 40 of the ***PHB***), and he must memorize it again before he can cast it again. The number of spells a magic-user can have in his spell book is determined by his intelligence score.`,
+                `There are two ways, however, that the magic-user could cast a spell without memorizing it first. The first is by using a scroll—a temporary magical writing. Any time after a magic-user has studied a scroll while using a ***read magic*** spell, he can read that scroll aloud and cast the spell written on it, whether or not he has that spell memorized. A spell written on a scroll can be cast once only; the writing disappears when the spell is cast. (See pages 100-101 of the 1st Edition ***PHB*** and pages 127-128 of the 1st Edition ***DMG*** for more information on the use of scrolls.) The second is to read the spell directly out of the spell book. This causes the spell to disappear from the book (so that the magic-user cannot memorize it again until he can write it into the book again) and may also cause other spells to disappear from the book (see page 80 of ***Unearthed Arcana*** for more details on casting spells directly from books).`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '88',
+            question: `The information on spell books on page 79 of ***Unearthed Arcana*** does not match the information as originally presented in DRAGON issue #62. Is this an error or an editorial change?`,
+            answer: [
+                `The information in ***Unearthed Arcana*** is correct and applies to ***all*** spell books. This was an editorial change based on playtesting results.`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '156',
+    publication_year: '1990',
+    publication_month: 'April',
+    foreword: [
+        `This month, "Sage Advice" considers AD&D® game queries that most readers probably haven't considered before, then reconsiders some old advice.`,
+        ``,
+        `"Unusual stuff"`,
+        `Sheesh! What kind of games do you people play, anyhow? Do you really encounter these problems in play, or do you just sit around thinking of strange questions to send me? Here we go:`
+    ],
+    sage_advice: [
+        {
+            page_number: '55',
+            question: `If a wizard cast an ***anti-magic shell*** spell on himself at the same time a beholder aimed its ***anti-magic ray*** at him, which effect would prevail?`,
+            answer: [
+                `**Anti-anti-magic:** The question is moot since both effects produce the same results: the temporary suppression (not dispelling) of all magic. (Artifacts function, but any spell-like effects they produce are suppressed.) Both effects work normally, even in the area of overlap.`
+            ],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_APRIL_FOOLS],
+        },
+        {
+            page_number: '55-56',
+            question: `My 9th-level ranger was changed into a glass of water by a powerful mage using a ***wish*** spell. After killing the rest of the party, the mage drank my character. The DM said my character is dead, but I say my character's essence has mingled with the mage's. Who is right?`,
+            answer: [
+                `**Watery ranger:** I have my doubts about the validity of the wish. Since it was used against a character directly, I'd treat it as a permanent ***polymorph any object*** spell. Such a wish could be dispelled so long as the water-character stayed intact. Once the water is spilled, evaporated, or consumed, the character's "essence" is scattered or destroyed, and only another ***wish*** will restore the character.`
+            ],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_APRIL_FOOLS],
+        },
+        {
+            page_number: '55-56',
+            question: `Can a human be cleanly killed, ***enlarged***, have ***permanency*** cast on him, then be ***raised*** or ***animated*** without the caster of the ***permanency*** losing a constitution point? How about ***animating*** the corpse, then ***enlarging*** it and making it permanent—would the caster of the ***permanency*** spell lose a constitution point then?`,
+            answer: [
+                `**Enlarged corpse:** A corpse is an object. Use the rules for non-living objects when adjudicating the results of ***enlarge*** or ***permanency*** spells. A zombie, however, is a creature (even if it is biologically dead). In the AD&D® 1st Edition rules, a mage who ***enlarged*** a corpse and cast ***permanency*** on it would have only a 5% chance to lose point of constitution (see the 1st Edition ***DMG***, page 46), because he was working with an object. The AD&D 2nd Edition game does not make a distinction between permanent effects on objects or creatures, but I think it's safe to assume this is an oversight. In either game, the ***enlarged*** corpse could be animated as a huge, 1-HD zombie.`
+            ],
+            comment: '2nd Edition ***permanency*** on objects costing 1 constitution, is not an oversight. It is clarified in Sage Advice #273 p. 114-115',
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_2E, ATTRIBUTE_APRIL_FOOLS],
+        },
+        {
+            page_number: '55-56',
+            question: `How far can three bozak draconians (which are described in the ***DRAGONLANCE® Adventures*** book) be hurled from a catapult if they were bound together and had their wings amputated? What would be the range if they were launched singly? Would the ranges for other draconians be similar?`,
+            answer: [
+                `**Catapulted draconians:** Light catapults hurl rocks that weigh 8-10 lbs. Heavy catapults hurl rocks that weigh 20-25 lbs. Even a single draconian of any species placed on a catapult would overload the machine so much that the catapult wouldn't fire at all. Trebuchets, however, have a much larger load capacity, hurling rocks that weigh about 500 lbs., which is probably about right for three draconians. Rocks, however, are a bit more aerodynamic than any three wingless draconians tied together, so a draconian-firing trebuchet's range should be halved, for a maxi- mum range of 240 yards and a minimum of 120 yards.`,
+                `A single draconian fired from a trebuchet is grossly underweight as well as unaerodynamic, producing an effect akin to trying to hurl a slightly underinflated beach ball. Use the scatter diagram on page 63 of the 2nd Edition ***DMG***. Treat the point labeled "intended target" as the trebuchet; a roll of 1 indicates that the draconian is hurled straight up into the air and lands right on the trebuchet (or on top of its operators, at the DM's option). Any other roll indicates that the draconian flies wildly off in the given direction. Roll 8d4 × 10 for the total distance in yards that the draconian "flies."`,
+            ],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_2E, ATTRIBUTE_APRIL_FOOLS],
+        },
+        {
+            page_number: '55-56',
+            question: `My character was recently ***polymorphed*** into a worm. Another character cut my character in half. If the two halves were allowed to grow into two worms, would I have two characters if the ***polymorph*** spell was dispelled? Wouldn't the two characters be identical and friendly toward each other (not prone to kill each other as two clones would)?`,
+            answer: [
+                `**Wormy PC:** Characters retain their hit points and intellect when subjected to ***polymorphing***, so your character should have been the worlds smartest and toughest worm, at least until he failed an intelligence check and assumed a worm's mentality (if a worm can be said to have a mentality). Your character would be dead if chopped in half while still mentally a "person" If the character reverted to worm mentality before being cut in half, it still would be one tough worm (having your PC's hit points), but it might very well survive being chopped in half if anyone were persistent enough to actually do it. Many DMs, however, would rule that the ***polymorph*** spell could no longer be dispelled once the change in personality took place. If the magic on either or both halves of the worm were dispelled, you'd have one or two halves of a dead character. Each "new" worm still is only half a character, even if allowed to grow into a whole worm.`
+            ],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_APRIL_FOOLS],
+        },
+        {
+            page_number: '55-56',
+            question: `My deep gnome character lost both his legs on an adventure. The party's paladin graciously carried my gnome in a jury-rigged papoose-type backpack. Could the paladin or my character engage in melee using this arrangement? How much would a legless gnome weigh?`,
+            answer: [
+                `**Legless gnome:** The character carrying the gnome is going to be encumbered, even if he can handle the weight, because of the gnome's bulk. This means he'll suffer at least a -1 penalty to his to-hit rolls (see the 2nd Edition ***Player's Handbook***, page 79); the penalty will be worse if the gnome weighs enough to reduce the carrier's movement. The DM might also add an initiative penalty equal to the combat penalty. The gnome could fight if his arms were free. I suggest a -4 penalty to his to-hit roll and a +3 penalty to his initiative.`,
+                `Human, elf, half-elf, and halfling anatomy generally follows the so-called Rule of Nines: The head takes up 9% of the body's weight, each arm 9%, the chest 18%, the abdomen 18%, and each leg 18%. The missing 1% is ignored. Gnomes and dwarves are stocky and carry less mass in their limbs. The distribution of their weight might be: head 9%; each arm 8%, chest 21%, abdomen 21%, and each leg 16%.`,
+            ],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_2E, ATTRIBUTE_APRIL_FOOLS],
+        },
+        {
+            page_number: '55-56',
+            question: `If a ***bastard sword +6***, defender was trampled by a triceratops, and the roll on the item saving-throw table was a 1 on 1d20, would the item fail because the roll was a 1 or would it make the save because it needs a 6 to save and its pluses make up the difference? If the sword did break, could it be remade with all its pluses? Would a ***wish*** completely restore the broken sword?`,
+            answer: [
+                `**Dinosaur vs. magical item:** In either edition of the AD&D game, a roll of 1 always fails a saving throw, weapons' bonuses notwithstanding. Someone is bound to write to me and point out that the item saving-throw table in the 1st Edition ***DMG***, page 80, lists the numbers 1 and 0 in several places. When an item has a saving throw of 1, a roll of 1 still fails; however, if the DM assigns a circumstantial penalty, any adjusted roll of 1 or more is a successful save. For example, a book falling 15' onto a hard surface has a modifier of -2 (-1 for every 5' beyond the first 5'1; if a 3 were rolled as a save, the save would be successful (3 - 2 = 1, still good). Items that have a save of 0 are immune to the listed attack form; for example, liquids are immune to blows, even if their containers are not.`,
+                `A ***wish*** certainly could restore the sword if all its pieces were present. Whether or not the sword could simply be remade is up to the DM. I suggest that most enchanted items be rendered nonmagical if broken, though I can think of one or two classic fantasy stories in which broken magical items were remade. If the item is very powerful (with a bonus of +4 or better), it might be remade if it is simply broken—not ***disintegrated*** or reduced to ash or slag—and if it rolls a second save of 20. The item should get a bonus of +1 for every two magical bonuses the item has (artifacts receive a +4 bonus to their saves). If the item fails the second save, it no longer radiates magic; characters smart enough to use ***detect magic*** will know an attempt to repair the item is a waste of time. If the save is successful, the repair should be made using the best possible materials and a master craftsman of unequaled skill; finding either of these should be an adventure in itself. If the DM really wants to prolong the player's agony, he can require the being who will repair the item to make a successful proficiency check and maybe even make a save vs. spells to be successful.`,
+            ],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_2E, ATTRIBUTE_APRIL_FOOLS],
+        },
+        {
+            page_number: '55-57',
+            question: `The rules say a ***fireball*** detonates at a point designated by the caster or when it strikes a solid object. What is the chance of an archer hitting the ***fireball*** with an arrow and causing it to detonate while in flight?`,
+            answer: [
+                `**Shooting down a *fireball*:** I repeated this question to one of my regular playing groups and got in return five bemused grins and the following straight-faced comment: "Gee, you'll also need rules for [shooting down ***fireballs*** with] ***magic missiles*** and things like that, too." For the record, hitting a ***fireball*** or similar missile with another missile, magical or not, is about as likely as every creature on a world taking a step at the same instant, thereby creating cataclysmic vibrations that shake the planet apart. That is, it's possible in theory but gosh darn well near impossible in practice.`
+            ],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_APRIL_FOOLS],
+        },
+        {
+            page_number: '55-57',
+            question: `Can a ***ring of regeneration*** restore a female character's maidenhood? Could this be done well enough to fool a unicorn?`,
+            answer: [
+                `** *Regenerating* maidenhood:** Sorry, unicorns know their maidens too well to be fooled. Under certain circumstances, a ***ring of regeneration*** can restore the—ahem—physical aspects of a lady's maidenhood. A ***ring of regeneration*** can restore any damage or appendage loss if it occurs while the ring is worn. For example, if a character wearing a ***ring of regeneration*** loses a finger, the ring will eventually restore the finger. However, if the character loses the finger and then dons the ring, the finger isn't regrown. In a similar vein, a ***ring of regeneration*** can't be passed from character to character to provide a party with cheap healing. Damage that exists before the ring is put on is not restored. Note that a clerical ***regenerate*** spell can restore a lost limb at any time. In any case, maidenhood is a state of being. Once it is lost, it is lost forever, ***regeneration*** notwithstanding.`
+            ],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_2E, ATTRIBUTE_APRIL_FOOLS],
+        },
+        {
+            page_number: '57',
+            question: `In DRAGON issue #148, you said elven chain mail negates a ranger's ability to fight two-handed without penalty. Why is this? Armor made from elven steel has one-half the normal encumbrance value, according to the 2nd Edition ***DMG***. So elven chain mail weighs 20 lbs., or 5 lbs. less than studded leather, which is the "heaviest" armor a ranger can wear and still avoid the penalty.`,
+            answer: [
+                `Chain mail armor isn't all metal. Chain mail is a shirt of metal links worn over a padded garment; this is necessary to keep the links from being driven into the wearer's body when a blow strikes. The padding weighs about 10 lbs., giving elven chain mail a weight of 25 lbs., the same as studded leather. Second, weight alone is not the only factor. The armor's thickness, stiffness, weight distribution, and general protective value also must be considered. While elven chain mail weighs about as much as studded leather, it is still "heavier." Generally, any armor type whose base armor class (before magical or dexterity adjustments) is AC 6 or better is "heavier" than studded leather, even if it actually weighs less than 25 lbs. due to materials or enchantments, or both.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '57',
+            question: `In issue #138, you said that ***protection from evil*** effects do not keep undead at bay, except for ghouls. Come on! Since all undead are magically created, they're all enchanted monsters and all are thwarted by ***protection from evil***. While we're at it, you also said that banshees turn as specials, if they can be turned at all. Come on again! The rules say that clerics have power over the undead, not some undead.`,
+            answer: [
+                `Chain mail armor isn't all metal. Chain mail is a shirt of metal links worn over a padded garment; this is necessary to keep the links from being driven into the wearer's body when a blow strikes. The padding weighs about 10 lbs., giving elven chain mail a weight of 25 lbs., the same as studded leather. Second, weight alone is not the only factor. The armor's thickness, stiffness, weight distribution, and general protective value also must be considered. While elven chain mail weighs about as much as studded leather, it is still "heavier." Generally, any armor type whose base armor class (before magical or dexterity adjustments) is AC 6 or better is "heavier" than studded leather, even if it actually weighs less than 25 lbs. due to materials or enchantments, or both.`,
+                `The only undead that are magically created are skeletons and zombies, which are created with the ***animate dead*** spell. However, enchanted monsters are those brought into being with conjuration/ summoning spells, and ***animate dead*** is necromantic. Ghouls are hedged out because their descriptions in the 1st Edition ***Monster Manual*** and 2nd Edition ***Monstrous Compendium*** say they are. Still, the DM could rule that the normal undead-creation process (in which a being killed by certain undead beings becomes an undead creature, too) is magical. Expanding the list in this fashion logically would include lycanthropes (which suffer from a quasi-magical curse), golems (which are ritually created), creatures such as owlbears and bulettes (commonly known to be magical crossbreeds), and gargoyles (which have "magical natures")—and the list goes on. It's much better to draw the line early on.`,
+                `The rules don't say that clerics have power over *all* undead. Banshees were left off the clerics vs. undead table in the AD&D 1st Edition ***DMG*** because they couldn't be turned in those rules (see the 1st Edition ***Monster Manual***, "Groaning Spirit"). Currently, banshees can be turned as "special" undead (see "Groaning Spirit," ***Monstrous Compendium***, Volume 2).`
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '57',
+            question: `In issue #148, you said all warrior characters are entitled to exceptional strength scores, but a footnote on page 20 of the 2nd Edition ***Player's Handbook*** says halfling fighters do not roll for exceptional strength.`,
+            answer: [
+                `You are correct. Score one for footnotes and for people who read them.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '57',
+            question: `In an earlier issue, you said a paladin's ***detect evil*** ability works just like a ***detect evil*** spell, and that it could detect evil characters. Isn't there a section in the rules that says ***detect evil*** spells don't work on evil characters?`,
+            answer: [
+                `There sure is. Check out the 1st Edition ***DMG***, page 60. Evil characters don't always radiate evil. Just for the record, I didn't actually say that; one of my editors did *[It was me.—Roger]*. While my editors are fine people whose timely interventions have more than once caught my errors before I embarrassed myself in print, the shoe was on the other foot this time.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '57',
+            question: `Why does a paladin's immunity to disease protect him from attack by green slime, violet fungi, and other plant monsters?`,
+            answer: [
+                `In my opinion, it doesn't. My editor *[me again]* assumed that since green slime can be killed with a ***cure disease*** spell, paladins must be immune to its effects. However, green slime is a monster with the ability to destroy flesh, wood, and metal. A disease is a malady caused by a pathogenic organism; a paladin's immunity to disease does not protect him or his equipment from a green slime's attack, its susceptibility to ***cure disease*** spells notwithstanding. Similarly, a violet fungi's flesh-destroying attack works on paladins, even though ***cure disease*** spells halt its effects. Furthermore, paladins can get infected wounds (if your campaign considers them), as these are not diseases per se; ***cure disease*** spells also remove such infections.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '57',
+            question: `In issue #146, you discussed the ***enchant an item*** spell and said that a magical weapon's bonus was not a spell effect. What about the ***enchanted weapon*** spell?`,
+            answer: [
+                `As described in the AD&D 1st Edition game, the fourth-level spell ***enchanted weapon*** did not produce a true "plus." The spell allowed the recipient weapon to harm creatures hit only by magical weapons, but it did not bestow any bonuses whatsoever. Consequently, I tread lightly around the subject in the column. The new ***enchanted weapon*** spell, however, does bestow a true bonus and is useful for enchanting most weapons, as described in the 2nd Edition ***PHB***, page 157.`
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+    ],
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '157',
+    publication_year: '1990',
+    publication_month: 'May',
+    foreword: `This month, the sage continues his tour of the AD&D® 2nd Edition game, with special attention on the 2nd Edition ***Player's Handbook (PHB)***.`,
+    sage_advice: [
+        {
+            page_number: '24',
+            question: `Can a ***simulacrum*** be healed with a ***cure light wounds*** spell? How would a spell such as ***enlarge*** affect a ***simulacrum***? Can a character detect a ***simulacrum*** just by talking to it awhile? How do spells like ***dispel magic*** and ***anti-magic shell*** affect ***simulacrums***? Since ***simulacrums*** are made of snow, are they especially susceptible to fire or heat?`,
+            answer: [
+                `A ***simulacrum***, once completed, is a creature—not an object—made of nonliving matter; it's a construct something like a golem. Most spells that affect creatures also affect ***simulacrums***. Spells like ***magic missile, ray of enfeeblement, haste***, and ***protection from normal missiles***, which affect only creatures, also work on ***simulacrums***. So do spells like ***charms*** and ***holds***, if the creature that the ***simulacrum*** duplicates can be affected by those spells.`,
+                `A ***simulacrum*** is composed entirely of nonliving matter and is not truly alive. Consequently, curative spells do not work on ***simulacrums***, and repairing damage done to them is a difficult and costly process (see the ***PHB***, page 186). (In the AD&D 1st Edition game, a ***simulacrum*** could be ***enlarged*** or ***reduced*** at the lower, nonliving matter rate.) ***Simulacrums*** do not need to breathe or eat, through they usually do so to avoid detection.`,
+                `Once completed, a ***simulacrum*** cannot be ***dispelled*** or rendered nonfunctional by a ***dispel magic*** spell. ***Anti-magic shells*** keep ***simulacrums*** and other magically created creatures at bay (see the ***PHB***, page 173), but ***protection from evil*** in any form does not. A ***Mordenkainen's disjunction*** spell can destroy ***simulacrums*** just as it can destroy magical items; the creature's chance to resist the ***disjunction*** is based on its creator's level (or on level 14, if the creator's level is unknown).`,
+                `***Simulacrums*** usually cannot be detected by nonmagical means, since each one is a functioning replica of some creature; however, the replica's degree of accuracy is variable (see the ***PHB***, page 186), and the DM might give players subtle clues as to the creature's actual nature. Very poor ***simulacrums*** (having less than 55% of the original's hit points and knowledge) probably shy away from flame or intense heat, and they might speak in monotones. Characters who are quite familiar with the original creature should have no problem finding gaps in the ***simulacrum's*** knowledge, as even the best ***simulacrum*** has only 65% of the copied creature's knowledge and personality, but all such clues to the creature's true nature should be provided through role-playing. For example, a ***simulacrum*** of a character might lack the original's zest for apple cider, lack an unusual nonweapon proficiency, and lack the original's distaste for undercooked meat. Only very perceptive players should be able to detect a ***simulacrum*** in this manner.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '24',
+            question: `On the Thieving Skill Armor Adjustments table in the ***PHB*** (table 29, page 39), is the "Elven Chain" column for magical or nonmagical elven chain mail?`,
+            answer: [
+                `The information in the "Elven Chain" column applies to both magical and nonmagical armor. Though enchanted armor is easier to wear than nonmagical armor (see the encumbrance rules, ***PHB***, page 79), enchantment doesn't reduce the armor's effect on thieving abilities.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '24',
+            question: `Does a spell-caster who is casting a spell in melee have to concentrate so hard that he loses his dexterity bonus to armor class? Do attackers get a to-hit bonus vs. a spell-caster who is casting a spell? Can a mage cast more than one spell in a melee round?`,
+            answer: [
+                `Spell-casting requires considerable—but not total—concentration. Spell-casting negates dexterity bonuses to armor class, but does not otherwise make the caster easier to hit. Most DMs allow spell-casters to defend normally after a spell is completed, so that the caster can use his dexterity bonus (if any) against any attacks made then. It usually isn't possible for any kind of spell-caster to cast two or more spells in the same melee round, even if the caster is using a ***haste*** spell or ***potion of speed***.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '24-25',
+            question: `If a mage gets a magical item, such as an ***ioun stone*** that increases his intelligence, does his chance to learn new spells and maximum number of spells per level increase? Does he immediately get to try learning spells he has "missed" before? What happens to his spell books if he loses the item? Does a mage have to delete spells from his book if an item, creature, or curse lowers his intelligence score?`,
+            answer: [
+                `Even temporary increases in a magic user's intelligence score increase the character's chance to learn spells. (The increase provided by an ***ioun stone*** is temporary because it lasts only as long as the character keeps and uses the item.) The character cannot immediately try to relearn spells he has failed to learn before, but he can try them again at his increased success chance when he gains a new experience level (see the ***PHB***, page 16). The maximum spells per level rule is optional. If your campaign uses it, the character's spell limit increases along with his intelligence. If the character manages to learn a new spell and write it into his book while his intelligence score is temporarily raised, it stays there even if his intelligence subsequently drops. Intelligence losses of any kind do not affect spell books. However, the DM could rule that not every spell could be replaced if the character's spell book is lost or destroyed and had to be reconstructed.`,
+            ],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '25',
+            question: `Can thieves use shields? Bards are specifically prohibited from using shields on page 41 of the ***PHB***, but no such restriction is listed with the thief armor information on page 38. I notice that table 38, Thieving Skill Armor Adjustments, has no entry for shields.`,
+            answer: [
+                `Thieves cannot use shields; only leather, studded leather, padded leather, or elven chain armor is acceptable.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '25',
+            question: `If a spell-caster decides to cast a spell, but then loses initiative and is hit in combat, his spell fizzles. Are such spells lost until the caster can memorize them again? What if the caster is using a magical item? Can spell-casters who have their spells ruined attack the same round as the spells were lost?`,
+            answer: [
+                `Spells and scrolls are used up and lost if they are disrupted during casting. Some magical items require a "casting" procedure that can also be disrupted; these include wands, staves, and rods if the command word optional rule is in effect. (This assumes that the "command word" is actually a phrase or rhyme; perhaps the wielder must actually accompany the speaking of the phrase or rhyme with some kind of somatic gestures.) If wand, stave, or rod use is disrupted, the appropriate charges are expended and lost. Rings, weapons, armor, and miscellaneous magical items generally have very short command words or sequences (if they have any at all) and usually cannot be disrupted. Some wands, staves, and rods that are usable by non-spell-casters, such as the ***rod of lordly might*** and ***wand of secret door and trap location***, tend to have very simple command words or sequences and also cannot be disrupted. Spell-casting and magical-item use count as actions. A character cannot perform a second action in the same round even if the spell or item's effect is disrupted.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '25',
+            question: `The rules in both editions of the AD&D game say that paladin must give 10% of his income to a charitable institution. What defines income? My DM says income is all money and wealth the paladin has, so my paladin tithes part of the same money again and again. Would nonmonetary wealth (such as a mount, property, or armor) be included in income?`,
+            answer: [
+                `Income is, literally, incoming or "new" wealth. Savings, equipment, and property are not income. As explained in the AD&D 2nd Edition rules, however, tithing is not the limit of a paladin's largess (see the ***PHB***, page 28). The 10% tithe is paid immediately before the paladin does *anything* else with his income. After his tithes and expenses are paid, a paladin is obligated to donate the rest to a worthy cause.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '25',
+            question: `Can the armor class bestowed by a ***shield*** spell be enhanced with ***rings of protection***, ***bracers of defense***, or other protective items?`,
+            answer: [
+                `No. The caster gets the armor class bestowed by the spell, or his own current armor class as modified by magic and dexterity, whichever is better vs. any given attack. However, the spell's saving-throw bonus is cumulative with dexterity and magic.`,
+            ],
+            comment: `This is contradicted / redefined in Sage Advice #193 where it is said that items that give an additive bonus, such as ***ring of protection*** does stack, while items that give a flat base AC such as ***bracers of defense*** does not stack.`,
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '25',
+            question: `Can a mage use a ***teleport*** spell to travel into and out of a castle built on a drifting cloud? Or would the cloud's motion make ***teleporting*** impossible?`,
+            answer: [
+                `Unless there is some outside force preventing it (see the ***PHB***, page 172), a character can ***teleport*** from anywhere. Particularly strict DMs might rule that any momentum the ***teleporting*** character has will carry over after the ***teleport*** is complete. For example, if a wizard ***teleports*** out of a runaway mine car, he still might be in for a whopping impact at his destination. Unless the DM decides that the magic needed to keep a cloud castle aloft blocks ***teleportation***, it is possible to ***teleport*** to that castle. Motion is not a factor in determining what constitutes a viable destination for a teleport spell. In a sun-centered solar system, every piece of a planet's surface constantly undergoes complex motions as the planet rotates, revolves around its star, and hurtles through space with the rest of the system (not to mention any tectonic motions in the planet's crust). Nevertheless, one can ***teleport*** to any place on the planet. The key word is "place." A piece of ground, an asteroid, and a castle are all places and thus can be the destinations of a ***teleport*** spell even if they are in motion. Any other place that can provide a substantial surface as required in the spell description will also serve. Stability goes hand in hand with substance in this case; a constantly changing surface such as a flowing stream, patch of quicksand, or heaving ship's deck cannot be a destination for a ***teleport*** spell. Note that carts, wagons, ships, and other conveyances are objects, not "places." A character can ***teleport*** from such locations, but not to them.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '25',
+            question: `Can normal aging raise a character's ability scorse above the character's racial maximum? Can it raise a score from 18 to 19?`,
+            answer: [
+                `The rules on ability-score minimums and maximums (see the ***PHB***, page 20) make it clear that the limits apply only to characters when they are being created. So if a character actually lives long enough to get an intelligence or wisdom boost (these are the only ability scores that *increase* with age), I see no reason why he shouldn't get the full benefit. Note that magical aging does not improve intelligence and wisdom; only actual life experience does that.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '25',
+            question: `What is the use of taking two or more days to write a scroll into a spellbook when a wizard can just memorize the spell from the scroll?`,
+            answer: [
+                `Scrolls are temporary magical writings good for one—and only one—use. I suppose a wizard could memorize a spell from a scroll, but doing so would use up the scroll, as would writing the scrolls spell into a book. This being the case, I should think the advantage of taking the time to make a permanent record of the spell in a book is obvious.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '25',
+            question: `How much water is created by a reversed ***transmute water to dust*** spell?`,
+            answer: [
+                `The reversed spell changes dust, dirt, or mud into water. A wizard can create a 10' cube of water per caster level, provided that enough material is on hand to be transmuted. A priest converts one cubic yard (a cube 3' across each side) per caster level.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '25',
+            question: `Can the caster of the fifth-level priest spell ***rainbow*** choose a specific arrow even if it is not the "next" in order? What is the order?`,
+            answer: [
+                `Yes, the caster can always choose which arrow to fire, provided it hasn't already been used. The "next" arrow appears automatically only when the caster fails to request a specific color or when he requests a color that has been already used. The arrow-color order is just as listed in the spell description: red, orange, yellow, green, blue, indigo, and violet.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '25',
+            question: `Is magic resistance in the AD&D 2nd Edition game affected at all by the spell-caster's level?`,
+            answer: [
+                `No, not anymore.`,
             ],
             attributes: [ATTRIBUTE_2E],
         },
     ]
-});
+})
 
 module.exports = DRAGON_MAGAZINES;
