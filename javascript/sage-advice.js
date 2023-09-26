@@ -2468,5 +2468,114 @@ DRAGON_MAGAZINES.push({
         },
     ]
 })
+DRAGON_MAGAZINES.push({
+    issue_number: '158',
+    publication_year: '1990',
+    publication_month: 'June',
+    foreword: `This month, the sage continues his tour of the AD&D® 2nd Edition game. ***DMG*** is the 2nd Edition ***Dungeon Master’s Guide***, and ***PHB*** is the 2nd Edition ***Player’s Handbook (PHB)***.`,
+    sage_advice: [
+        {
+            page_number: '71',
+            question: `What are-the size, speed factor, and other statistics for the scythe wielded by the minor death produced by a deck of many things (see the ***DMG***, page 166-167)?`,
+            answer: [
+                `Speed factor is irrelevant in the case of the minor death; it always strikes first. In a character's hands, a scythe makes a cumbersome weapon at best. I suggest the following statistics: cost 5 gp; weight 7 lbs.; size L; type P/S (the blade has both a curved cutting edge and a sharp point); speed factor 10; damage 2d4 (S-M)/1dG (L).`,
+            ],
+            comment: `1dG is clearly wrong and maybe should be 1d10. Size L contradicts Priest's, Druid's, Ranger's Handbook. Combat & Tactics agree on the size.`,
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '71',
+            question: `Where is the table for determining what kind of coins can be found in a ***Bucknard's everful purse****? How long can the purse be empty before it becomes nonmagical? I know the book says "a few minutes," but what does that really mean?`,
+            answer: [
+                `The table was accidentally printed on page 160 of the ***DMG***, under the heading ***"BAG OF TRANSMUTING."*** Individual DMs are free to define "a few minutes," but I suppose 2-5 minutes is a good base value. The real intent behind the "few minutes" comment is to say that a character is free to empty the purse and get his daily crop of coins, but must put at least one coin back in before he goes off and does anything else. Most DMs rule that a coin of each type must be present to get the full effect; for example, if a purse could produce silver, electrum, and gold, then leaving just one silver piece inside would keep it functioning—but the next day it would produce only silver pieces.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '71',
+            question: `How come chain mail costs less than armor that doesn't protect as the wearer well? Chain mail, for instance, costs 75 gp, vs. 120 gp for scale mail. This is a misprint, right?`,
+            answer: [
+                `No misprint. Scale mail costs more to make than chain mail, but its older, less efficient design makes it inferior to chain mail. The same goes for ring mail (cost 100 gp). People who know how to make chain mail needn't bother with scale or ring mail. What kind of armor is available in any given campaign depends on the time period in which the game is set (see the ***DMG***, page 35).`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '71',
+            question: `Can a ***ring of spell storing*** containing a ***find familiar*** spell enable a nonwizard character to summon a familiar? How long would it take to cast ***find familiar*** from a ***ring of spell storing***? How does the "one attempt per year" rule apply to characters using a ***ring of spell storing***?`,
+            answer: [
+                `It is perfectly reasonable to say that only wizards have the mental training to maintain the empathic link between master and familiar. It also is perfectly reasonable to say that a ***ring of spell storing*** is powerful enough to make any spell stored within it work for the ring's owner. Individual DMs must decide on their own which is the case. Any spell cast from a ***ring of spell storing*** has a casting time of five. The character who puts the spell into the ring, however, must go through the spell's normal casting procedure. In this case, the wizard must fire up the brazier full of incense and spend up to 24 hours casting. Note that this makes it very unlikely that ***find familiar*** will be found in a ***ring of spell storing*** and even more unlikely that NPC spell-casters can be hired to restore it to the ring. The "one attempt per year" limit applies to both the ring and the owner; that is, only one attempt can be made each year with any given ring, and a character who has two rings cannot try to summon a familiar twice in the same year by using each ring once.`,
+            ],
+            comment: `Rings have a general initiative modifier of +3. ***Ring of spell storing*** is specifically mentions a cast time of 5. From the description it sounds like the spells cast via the ring can be interrupted.`,
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '71',
+            question: `My wife and I have a continuing argument over the properties of the ***vorpal blade***. She insists that strength bonuses are considered when determining whether the weapon severs a victim's neck. I point out that the footnote on page 186 of the ***DMG*** says only the sword's +3 bonus affects the score required to sever.`,
+            answer: [
+                `This is probably the first time I've been asked to settle a domestic argument. Bonuses for strength, specialization, spells (such as ***bless*** or ***prayer***), situation (opponent surprised, prone, etc.), or the like do not affect the score needed to sever. Thus, it is quite possible to solidly hit an opponent, due to a good roll and high bonuses, but not sever his neck. In fact, the table could—and probably should—read as follows (the same table can be used for the ***sword of sharpness***):`,
+            ],
+            image: 'sage_advice_158_q05.png',
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '71',
+            question: `The ***PHB*** says that rogues can have a maximum score of 95% in each of their special abilities, but the ***DMG*** has a table on page 23 that shows scores of 99%. However, the same table in the ***Dungeon Master's Screen*** shows no score above 95%.`,
+            answer: [
+                `The maximum score is 95%. The table in the ***Dungeon Master’s Screen*** corrects Table 19 in the ***DMG***.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '71',
+            question: `Will a ***girdle of dwarvenkind*** allow a nondwarf to get full benefits from a ***hammer, +3 dwarven thrower***?`,
+            answer: [
+                `No; nor will the wearer suffer magical item malfunctions as dwarves do (see the ***PHB***, page 21).`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '71',
+            question: `What is the correct formula for a fighter's individual experience awards, as listed in the ***DMG***, page 48? Does the fighter's level change the award? Is the award given for every monster the party defeats?`,
+            answer: [
+                `The formula is the monster's hit dice multiplied by 10. The word "level" is a misprint. All individual awards are just that; they are awarded to characters who do things without help from other characters. For fighters, the individual award for defeating a monster is made after a one-on-one contest.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '71+74',
+            question: `How come red dragons in the ***Monstrous Compendium*** have fewer hit dice than blue dragons and no more hit dice than green dragons? What does the red dragon's THAC0 entry, "7 (at 9 HD)," mean? Also, the example in the general information section says that a black dragon's base hit dice is 10, but the black dragon's description says the base is 12 HD.`,
+            answer: [
+                `There is a typo in the red dragon's statistics. A red dragon's base hit dice is 15; a black dragon's base hit dice is 12 (the example is wrong). All dragons' THAC0s are determined by their adjusted hit dice, so a hatchling red dragon (9 HD) has a THAC0 of 11.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '74',
+            question: `Is there some mistake in the horse listing in the ***Monstrous Compendium***? I mean, simple riding horses have more hit dice and a better THAC0 than light or medium war horses, and they move a lot faster than medium war horses.`,
+            answer: [
+                `There sure seems to be an error. If you want to cut riding horses down to size, just treat them as light war horses with one attack (a bite) for 1-2 hp damage. Regardless of statistics, non-war horses are nervous creatures that are more likely to flee than to fight.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '74',
+            question: `What do the "juvenile" entries in the ***Monstrous Compendium's*** giant experience-point value entries mean? Why are young giants treated like adult giants of different species? Shouldn't young giants have abilities that reflect those of adults of their own race? If young giants are treated as adult members of other races, shouldn't you use those races' experience values? Just how tall are young giants?`,
+            answer: [
+                `Those mysterious experience-point values are part of an aborted attempt to do just what you suggest—extrapolate juvenile abilities from adult abilities. However, this was dropped during the editing process to keep things simple and to keep the revised giants more compatible with the ones in the AD&D 1st Edition game. The juvenile experience-point values were printed in error and should be ignored; use the experience values from the appropriate race when making experience awards for juvenile giants.`,
+                `If you want to derive young giants' abilities from adult members of the race, here's the discarded system: To determine an immature giant's age randomly, roll 1d4 A roll of 4 indicates an infant with no combat abilities and -4 hit points per die (minimum 1 hp/HD). Other rolls indicate juveniles with penalties to hit points, attack rolls, and damage done equal to the die roll. Juveniles in the -3 category also do one less die of damage per blow. For example, a -1 hill giant juvenile would have -1 hp/HD (with a minimum of 1 hp/ HD) and a THAC0 of 10, and would do 1d6 - 1 hp damage with its fists or 2d6 + 6 with a club. A -3 hill giant has -3 hp/HD, a THAC0 of 12, does 1d6 -3 hp damage with its fist or 1d6 +4 with a club. Juveniles can hurl rocks; their minimum range is the same as an adult's, and the maximum range is equal to the adult maximum minus a value equal to 10 yards times the juvenile's combat penalty; the combat penalty also is subtracted from each die of damage that the rock does (minimum of 1 hp/damage die). For example, a -1 juvenile hill giant can hurl a rock from three to 190 yards for 2d8 - 2 hp damage.`,
+                `Infant giants are less than one-quarter the height of an adult, but are usually not less than one-sixth adult height. Juveniles are anywhere from one-quarter adult height to full adult height; a -3 juvenile would be from one-quarter to one-half adult height, a -2 juvenile would be from one-half to three-quarters adult height, and so on.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '74',
+            question: `Can you play the FRE-series Avatar modules alter reading the books?`,
+            answer: [
+                `According to Avatar project coordinator Jim Lowder, the story as told in the three, Avatar books—***Shadowdale***, ***Tantras***, and ***Waterdeep***—does not compromise play of the modules at all. The books tell the story of a group of fallen deities struggling to regain their powers. The modules deal with the mortals who help them.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+})
 
 module.exports = DRAGON_MAGAZINES;
