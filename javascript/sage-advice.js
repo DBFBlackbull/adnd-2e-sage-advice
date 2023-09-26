@@ -21,6 +21,7 @@ const SUBSTITUDES = [
     ['dualclass', 'dual-class'],
     ['player\'s handbook', 'players handbook', 'phb'],
     ['dungeon master\'s guide', 'dungeon master guide', 'dmg'],
+    ['system shock', 'system-shock'],
 ];
 
 const DRAGON_MAGAZINES = [];
@@ -2007,6 +2008,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A dragon's combat modifier applies only to its damage rolls; the reference to attack rolls is left over from an earlier version of the manuscript. From age category five on, one digit has been dropped from the black dragon's breath weapon rating; starting from age category one, the column should read: 2d4+1, 4d4+2, 6d4+3, 8d4+4, 10d4+5, 12d4+6, 14d4+7, 16d4+8, 18d4+9, 20d4+10, 22d4+11, and 24d4+12. The "MT" is a typo; it should read "MR" for magic resistance. Only a dragon's body length is considered when calculating a dragon's size rating, since the tail is very thin. Also, damage to a dragon's tail does not really harm the dragon; only hits on the body and wings are telling enough to reduce the dragon's hit points. This makes dragons a little less vulnerable to mob tactics. A great wyrm bronze dragon's tail is 100-110' long. In the core AD&D 2nd Edition rules, a dragon can use its breath weapon three times a day, once every three rounds. To make fighting dragons less of a certain thing, however, I suggest you make the interval between breath weapons variable (roll 1d3 for the number of interval rounds). An alternate method for determining the number of a dragon's breath weapons used each day is discussed in "The New Ecology of the Dragons," in DRAGON issue #146.`
             ],
+            comment: 'Dragons do not have a 3 breaths per day limit, only once per 3 rounds. This is corrected in #162',
             attributes: [ATTRIBUTE_2E],
         },
         {
@@ -2486,7 +2488,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '71',
-            question: `Where is the table for determining what kind of coins can be found in a ***Bucknard's everful purse****? How long can the purse be empty before it becomes nonmagical? I know the book says "a few minutes," but what does that really mean?`,
+            question: `Where is the table for determining what kind of coins can be found in a ***Bucknard's everful purse***? How long can the purse be empty before it becomes nonmagical? I know the book says "a few minutes," but what does that really mean?`,
             answer: [
                 `The table was accidentally printed on page 160 of the ***DMG***, under the heading ***"BAG OF TRANSMUTING."*** Individual DMs are free to define "a few minutes," but I suppose 2-5 minutes is a good base value. The real intent behind the "few minutes" comment is to say that a character is free to empty the purse and get his daily crop of coins, but must put at least one coin back in before he goes off and does anything else. Most DMs rule that a coin of each type must be present to get the full effect; for example, if a purse could produce silver, electrum, and gold, then leaving just one silver piece inside would keep it functioning—but the next day it would produce only silver pieces.`,
             ],
@@ -3032,4 +3034,129 @@ DRAGON_MAGAZINES.push({
         },
     ]
 });
+DRAGON_MAGAZINES.push({
+    issue_number: '162',
+    publication_year: '1990',
+    publication_month: 'October',
+    foreword: `Once again, the sage looks back to re- consider some old advice. Page numbers refer to rulebooks for the AD&D® 2nd Edition game.`,
+    sage_advice: [
+        {
+            page_number: '32',
+            question: `I could not believe my eyes when I read your answer to the question about the cost of chain mail in issue #158. I, too, thought the prices had been misprinted. Your response that scale mail costs more to make than chain mail is idiotic and grossly unhistorical. Chain mail is made of wire (itself difficult and expensive to make) that is formed into links that are interlocked, then soldered or welded together. In the fourth and fifth centuries A.D., a Roman armorer, using techniques that remained essentially unchanged throughout the Middle Ages, could make four or five suits of chain mail a year. By contrast, scale mail uses metal plates—not wire—that are simply sewn onto a leather shirt.`,
+            answer: [
+                `To reiterate, the base cost of chain mail in the AD&D 2nd Edition game is 75 gp, and the base cost of scale mail is 120 gp. Itemized breakdowns of the costs of manufacture for each type of armor are given on page 6 of the ***Complete Fighter's Handbook***. Your estimate of the construction time for chain mail agrees with the table in the ***Complete Fighter's Handbook***, where an unsupervised apprentice working in a properly equipped shop can make a suit of chain mail in 10 weeks (5.2 suits a year). However, *two* apprentices working under the same conditions take eight weeks to make a suit of scale mail (16 man-weeks in all). Scale mail requires more raw materials (60 gp worth) than does chain mail (38 gp worth); chain mail's rings require less labor and metal than scale mail's plates.`,
+                `Note, however, that chain mail and scale mail come from two different historical periods. (See the ***Dungeon Master's Guide***, page 35, for a discussion of time periods in the AD&D game and their associated technology.) Scale mail, an ancient armor type, had all but disappeared by the time chain mail came into common use during the Middle Ages. Obviously, if you have a campaign set right on the borderline between the end of the Ancient period (when the ***DMG*** says chain mail doesn't exist at all) and the beginnings of the Dark Ages, about 1100 A.D. or so, chain mail is going to be very expensive. There are several reasons for this. First, chain mail would represent the newest and best concept in body armor—keeping up with the latest developments is always costly. Second, the manufacturing techniques and advanced metallurgy that made chain mail economical to manufacture during the Middle Ages would not yet have been invented. Third, from a campaign standpoint, chain mail *should* be more expensive than scale mail; you can kiss your play balance goodbye if the best armor available isn't also the most costly. You are free to set your own cost for chain mail in such a setting, but I recommend at least double (150 gp) and triple (225 gp) normal prices would not be unreasonable. Furthermore, chain mail in this setting probably would be made of iron, not steel, as the equipment list in the ***Player's Handbook*** assumes. Such chain mail would weigh 50 lbs. instead of the listed 40 lbs., or 25% more (see ***DMG***, page 38).`,
+                `Speaking of the "unhistorical": One does not have to have wire to make chain mail. The Romans used rings cut, punched, or drilled from sheets of metal. The Romans and ancient Chinese probably also had access to cast rings. Wire was pretty rare in medieval Europe, and most wire was gold, silver, or copper for use in jewelry and adornments. Medieval armorers almost certainly made their chain mail from rods that they forged themselves from ingots or bars; this is not as difficult as it sounds, especially when the armorer knew what he was doing and had his whole life to practice the skill. (Note that making a rod from a chunk of raw metal takes a lot less hammering than what would be required to make a flat plate out of the same piece of metal.) Furthermore, the chain mail currently preserved in museums and private collections is not soldered or welded, but riveted; in most cases, however, the rivets were hammered so carefully that the links *appear* to be welded. Finally, not all chain mail had its links fastened. Ancient armorers often simply linked the rings, as did their successors when they were in a hurry or wanted to cut costs. This generally made inferior armor, but Oriental armorers often made very good unriveted chain mail (as good as riveted mail) by using a superior alloy and by making each ring from two or three coils of rod.`,
+                `For readers who are interested in learning more about the manufacture of chain mail and other types of armor, I recommend ***A Glossary of the Construction, Decoration, and Use of Arms and Armor***, by George Cameron Stone. The book is uncommon but is available at better used book stores and at large libraries.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '32',
+            question: `I really enjoyed your "April Fools" column back in issue #156. Did anybody help you think up the questions?`,
+            answer: [
+                `The questions in #156 were real; readers really sent them in. I am not clever enough to think up questions like that. I suppose I could get together with a few colleagues and think up a few questions that would be pretty wild, but that would be a waste considering what the mailbag holds every month.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_APRIL_FOOLS],
+        },
+        {
+            page_number: '32-33',
+            question: `To answer your question in issue #156 (page 55, third column): Yes, those questions do arise during play. Now that you know this, perhaps you'd reconsider your answer to the "watery ranger" question. Where I'm from, characters get wished into glasses of water all the time (the idea originated in a fanzine), and your suggestion that such characters can be killed simply by drinking them is tough on PCs.`,
+            answer: [
+                `First, if ***wishes*** are so common in your campaigns that they are used for anything "all the time," you've got too many ***wishes*** floating around; cut back. Note that a ***wish*** is the only magic in the core AD&D rules that can turn a character into a glass of water. ***Polymorph any object*** can turn organic matter into inorganic matter, but into only one kind of matter at a time; a successful spell could turn a character into a glass, or into water, but not both.`,
+                `Second, ***wishes*** are *not* intended to be used as direct attacks on creatures. Such ***wishes*** fall into the grossly unfair category (see ***PHB***, page 197), and the DM should actively subvert the intent of such spells whenever they are used, even when they are used by NPCs. Thus, if an evil wizard ***wishes*** a PC "into a glass of water." a huge glass containing the PC and many gallons of water should appear; rest assured that at least one novel twist exists for each possible wording of this ***wish***.`,
+                `Third, this ***wish*** should allow a saving throw, since it is being used as a high-powered ***polymorph any object*** spell.`,
+                `Fourth, any ***polymorphed*** character retains his hit points. Drinking the character will cause harm just as surely as eating the character would, but if the character has 100 hp, drinking the character is going to be a long and difficult process. Water in a glass has no armor class (it just sits there), but the most damage a human can do by drinking is 1-2 hp per round. Note that big, nasty teeth have no real effect on water, but a large tongue does, so a dragon or cow might be able to "drink" 1-12 hp each round. Also, as TSR editor Jon Pickens points out, if a character is turned into a *glass* of water, a few of his hit points will be held in the glass (say 10-20% of the total), and the glass must be smashed before the character can be killed; this, too, is easier said than done if the victim has a lot of hit points.`,
+                `Finally, although evaporation or spillage can "kill" the character, death won't be instantaneous. An evaporated character is effectively in gaseous form until his molecules are thoroughly dispersed in the atmosphere; a kind DM might rule that the gaseous state lasts indefinitely. Similarly, a watery character poured into the dirt and allowed to soak in can be considered melded into stone and not truly dead.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_APRIL_FOOLS],
+        },
+        {
+            page_number: '33',
+            question: `Back in issue #121, you said that non-yakuza ninja do not have the ability to pick pockets. However, the same issue of DRAGON® Magazine contained a new Oriental character class, the geisya. This class is sup- posed to have a pick pockets ability that is the same as a ninja of the same level. Furthermore, ***Oriental Adventures*** itself says that a yakuza has a chance to pick pockets equal to that of a ninja of the same level. What gives?`,
+            answer: [
+                `This column was right; ninja do not have a pick pockets ability unless they are ninja-yakuza. Until an official correction comes along, assume a 1st-level yakuza has a 30% chance to pick pockets. This ability increases by 5% per level to a maximum of 99% at level 15. Allow the geisya to pick pockets as a yakuza (not a ninja) of equal level.`,
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '33',
+            question: `A couple of issues ago, you said that the new dragons can breathe only three times a day. What's wrong with allowing them to breathe once every three rounds with no limit on the number of times per day?`,
+            answer: [
+                `Nothing's wrong with that. In fact, that's the way dragon breath is supposed to work with the new dragons (my error).`,
+            ],
+            comment: 'Corrects #155 regarding dragon breath weapons',
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '163',
+    publication_year: '1990',
+    publication_month: 'November',
+    foreword: `This month, the sage considers a few magical enigmas. Page numbers refer to the AD&D® 2nd Edition game books unless otherwise stated (one question refers to the D&D® Immortals set).`,
+    sage_advice: [
+        {
+            page_number: '104',
+            question: `One of my characters was recently tricked into donning a ***girdle of femininity/masculinity***. What options do I have for getting the character back to normal? If the character finds another such girdle and puts it on, will this change him back? My DM says this won't work because the item's description says a ***wish*** has only a 50% chance of restoring the character's original sex. Obviously, a ***polymorph other*** spell could restore the character, but I'm leery of ***dispel magic*** and ***anti-magic shell*** spells.`,
+            answer: [
+                `It isn't often that I get a question with so many ... possibilities.`,
+                `What a ***wish*** will do is irrelevant in this case; the ***girdle’s*** absolute power to change the character's gender is stronger than the ***wish’s*** general power to remove misfortune. (Several powerful miscellaneous magical items are more potent within their limited portfolios than ***wishes*** are.) If the character dons a second girdle, he might have his gender restored, or he might lose all gender—and your DM might rule that this is more likely than the standard 10% chance (***DMG***, page 170), since the character is fiddling around with things best left alone. But your character's gender *will* be altered if he puts on a second ***girdle***, as these items are quite potent.`,
+                `There is nothing in the ***polymorph other*** spell listing to suggest that secondary characteristics like age or gender can be altered by the spell. Individual DMs are free to include the ability to change gender along with form, but players shouldn't count on it without consulting the DM. Furthermore, assuming that your DM does allow ***polymorph other*** to change gender, there would be at least a 50% chance that the attempt would fail. A ***wish*** certainly is more powerful than the 4th-level ***polymorph other***. If the character was ***polymorphed*** back to his original gender, a system-shock roll would be required. A successful ***dispel magic*** would change the character back to the "wrong" gender and would require another system-shock roll.`,
+                `You are quite right to be worried about ***anti-magic shells***, but note that an ***anti-magic shell*** cannot permanently dispel a long-term effect such as ***polymorph other***. The effect temporarily dampens magic, it does not dispel it. If the ***polymorphed*** character entered an ***anti-magic shell***, he would be forced back into the "wrong" form, and this would require a system-shock roll. Upon leaving the ***anti-magic shell***, the character immediately would resume the "correct" form, and another system-shock roll would be in order.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '104',
+            question: `How is each spell's school chosen? Also please explain how the various pairs of opposing schools of magic were chosen. What is the nature of the opposition? Why do illusionists have to contend with an extra opposition school?`,
+            answer: [
+                `Generally, spells are grouped into schools according to the types of effects they produce and, by extension, the type of power used to produce their effects. Abjuration blocks, dispels, or protects; alteration produces changes in its target; conjuration/summoning brings material from some other place; enchantment/ charm grants its users or targets special abilities; greater divination reveals information; illusion/phantasm causes perceived changes that are not real; invocation/evocation creates matter or energy; and necromancy provides or removes the energy of life. See ***The Complete Wizard’s Handbook*** for detailed explanations of each school.`,
+                `No two schools of magic are mutually hostile due to their natures; opposition arises from how the spells are learned and used. Specialist wizards employ methods of study and mental discipline that enhance their abilities to use certain types of magic and erode their aptitudes for others. This is why generalists can freely use magic from opposing schools while specialists cannot. Specific pairs of opposed schools were selected according to common sense and game balance. For example, if invokers spend a lot of time learning how to bring things into being from nothing, they probably neglect to learn how to call things from one place to another. Illusionists, who spend their time trying to create believable unrealities, have a hard time casting magic that produces and channels real energies; there are three such schools: invocation/evocation, necromancy, and abjuration.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '104',
+            question: `I've noticed that a few spells are parts of two opposing schools of magic. For example, the ***limited wish*** spell is both conjuration/ summoning and invocation/evocation. Can specialist wizards from either school use such spells? That is, can conjurers or invokers use ***limited wish***? How is it that a spell can be from two opposing schools anyway?`,
+            answer: [
+                `A specialist wizard can use any spell that falls within the schools allowed to him, even if the spell in question also falls under an opposing school. Certain effects, such as ***limited wishes***, can be produced in more than one way; in this case, what is ***wished*** for can be plucked from some other place and delivered, or it can simply be created to order.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '104-105',
+            question: `How do you calculate a multi-classed or dual-classed character's personality score or chance to detect scrying?`,
+            answer: [
+                `For a multiclassed character, use either the character's highest level or the level of the pertinent class. For example, a fighter/ wizard would use his fighter level when calculating his personality score in a conflict with an egotistical magical weapon, but would use his wizard level to determine his chance to detect scrying. The DM should decide which method to use, then use it consistently. Dual-classed characters use the level of the class in which they are currently active. If the character has more experience in the previous class, he can use the higher level but must pay the experience penalty for reverting to that class (***PHB***, page 45).`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '105',
+            question: `Will a ***spider climb*** spell negate the effects of a ***grease*** spell?`,
+            answer: [
+                `This is up to the DM, but I suggest not. The coating from the ***grease*** spell would keep a ***spider climbing*** creature from adhering to a surface if that creature failed a save vs. spells, as per the ***grease*** spell description. A ***spider climbing*** creature (or any other creature normally able to climb sheer surfaces or ceilings) can still traverse ***greased*** surfaces; however, if they fail their saves, they fall.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '105',
+            question: `There is a contradiction in the ***D&D® Immortals*** rules regarding the effects of mortal magic on Immortals. Page 6 of the ***Players' Guide to Immortals*** says that Immortal minds are immune to mortal magic, but their corporeal forms are not. But page 16 says mortal magic is ineffective against Immortals in any form.`,
+            answer: [
+                `Page 6 is right. The second sentence under the heading "Limits on Use" on page 16 should be deleted.`,
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '105',
+            question: `I'm confused by the castle construction section of ***The Castle Guide***. When using smaller work forces (page 60), is the savings calculated once per project, or more often? The "Larger Work Forces" section on the same page suggests that the savings be calculated per week, but if that's the case a character could get a castle for free just by cutting the work force in half and waiting patiently through the increased construction time. Also, if a character is feeling frugal but still is in a hurry, what's to keep him from reducing the work force but keeping it above 75% of normal, thus gaining substantial savings and not extending construction time?`,
+            answer: [
+                `The savings from reduced work forces is calculated per week, so dropping one worker saves 520 gp each year. However, ***The Castle Guide*** editor Bill Connors says there is some dropped copy in the "Smaller Work Forces" section. The last sentence in the second paragraph should read: "No reduction below 50% in the work force or cost is possible." While a castle builder can reduce labor and administration costs, he can't get them for free and must still pay for materials. Smart castle builders will adjust their work forces to get some savings, but I can think of two ways to discourage this if the referee thinks the practice is getting out of hand. First, an accident or misfortune (such as a raid or marauding monster) might deplete a reduced work force even further and cause a construction delay. Second, morale in the reduced work force might deteriorate. Workers who believe they are being asked to do the impossible tend to be resentful. This might prompt the referee to recalculate the Production Modifier in mid-project and declare a "cost overrun" for the castle.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+    ]
+});
+
 module.exports = DRAGON_MAGAZINES;
