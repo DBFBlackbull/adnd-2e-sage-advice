@@ -2468,7 +2468,7 @@ DRAGON_MAGAZINES.push({
             attributes: [ATTRIBUTE_2E],
         },
     ]
-})
+});
 DRAGON_MAGAZINES.push({
     issue_number: '158',
     publication_year: '1990',
@@ -2577,7 +2577,7 @@ DRAGON_MAGAZINES.push({
             attributes: [ATTRIBUTE_2E],
         },
     ]
-})
+});
 DRAGON_MAGAZINES.push({
     issue_number: '159',
     publication_year: '1990',
@@ -2645,6 +2645,391 @@ DRAGON_MAGAZINES.push({
             attributes: [ATTRIBUTE_2E],
         },
     ]
-})
-
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '160',
+    publication_year: '1990',
+    publication_month: 'August',
+    foreword: `This edition of "Sage Advice" looks at the major fantasy settings for the AD&D® game. Note that some of the older materials for these settings were designed for the AD&D 1st Edition game (e.g., ***DRAGONLANCE® Adventures***, herein known as ***DLA***).`,
+    sage_advice: [
+        {
+            page_number: '32',
+            question: `In issue 143, you said that Raistlin Majere's vision shows the effects of time only on living things. But in "Raistlin's Daughter," (in *Love and War*, page 286), Raistlin sees rocks crumbling to dust.`,
+            answer: [
+                `First, there are subtle differences between Krynn as described in the novels and Krynn as described in the game products. This is inevitable, since game materials have to be both self-consistent ***and*** playable. So, when you're playing a game set in Krynn, Abeir-Toril, or Oerth, follow the details given in the game products—if they differ from the books, it's probably for a good reason.`,
+                `Second, if you reread that page carefully, you'll find that Raistlin isn't actually seeing rocks crumble; he just says he sees rocks crumble. Raistlin wouldn't be above bending the truth now and again if it suited his purposes.`
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '32',
+            question: `"Love and War" also includes a brief encounter with a half-orc. Are there orcs on Krynn?`,
+            answer: [
+                `Krynn has no orcs. The reference is due to an error in the narrative; the character in question probably had some ogre or goblin blood.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '32',
+            question: `Please give the height, weight, average lifespan, and base movement rate for each of the 13 major races on Krynn, including the irda and the minotaurs.`,
+            answer: [
+                `Complete information on each race is given in the DRAGONLANCE Appendix to the ***Monstrous Compendium*** (MC4, volume 4, TSR product #2105). To randomly generate height, weight, and maximum age, use the information given on page 24 of the 2nd Edition ***Players Handbook*** unless MC4 directly contradicts it. For irda, I suggest the following: base height 62", variable 2d10"; base weight 120 lbs., variable 6d10 lbs.; base starting age 100 years, variable 3d12 years; base maximum age 400 years, variable 2d100 years. For minotaurs, I suggest: base height 74", variable 2d10"; base weight 300 lbs., variable 8d10 lbs.; base starting age 18 years, variable 1d4 years; base maximum age 105 years, variable 2d20 years.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '32',
+            question: `I'm having trouble the Character Racial Minimum & Maximum Table on page 117 of ***DLA***. In the "Accepted Classes" column, what do the letters mean?`,
+            answer: [
+                `These are abbreviations for character-class names. The abbreviations and their meanings are from the Character Class Master Statistics Range Table, also on page 117. Note that the barbarian and acrobat classes have been removed from the AD&D 2nd Edition game; if you want them, either use the rules from the 1st Edition game or assign the character the appropriate kit from the ***Complete Fighter’s Handbook*** or ***Complete Thief’s Handbook***.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '32',
+            question: `Which class's combat chart do tinker gnomes use? How quickly do tinker gnomes gain proficiencies? ***DLA*** contradicts itself on this point. Also, do tinker gnomes have any alignment restrictions?`,
+            answer: [
+                `A tinker gnome with enough common sense to fight with a simple weapon in- stead of an outrageous gnomish device uses the magic-user THAC0 chart (see the Rule Book of Taladas, pages 3-4, from the ***Time of the Dragon*** boxed set). Tinker gnomes gain one weapon and two non- weapon proficiencies every three levels, as indicated in ***DLA***, page 117. Most tinker gnomes are lawful good or neutral good, though any nonevil, nonchaotic alignment is acceptable.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '32',
+            question: `Which weapons, armor, and magical items can tinker gnomes use? Can they use proficiencies from the AD&D 2nd Edition game? If so, which ones?`,
+            answer: [
+                `Tinker gnomes can become proficient in any weapon that creatures their size could use, but they wear no armor. Generally they disdain magic, but PC tinkers can use any magical item except those usable only by bards, wizards, clerics, or their sub-classes. When using proficiencies from the AD&D 2nd Edition game, tinkers can choose proficiencies from the following groups: general, priest, and wizard. Rogue and warrior skills can be selected at double-normal cost.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '32',
+            question: `How many draconians can be produced from a single dragon's egg? Is there a process that produces different kinds of draconians from evil dragon eggs?`,
+            answer: [
+                `One egg produces multiple draconians (***DLA***, page 73). DL9 ***Dragons of Deceit***, page 41, area L23, includes a scene in which 4d12 sivak draconians are hatched from a single silver dragon egg. It might be possible to produce new races of draconians from evil dragon eggs, but neither the good nor the evil dragons, nor their deities or servants, have been inclined to look for such a way.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '32',
+            question: `***DLA*** says that Krynn has no assassins or monks, yet the deity Majere is said to be a patron of monks. Also, kender are specifically prohibited from being assassins; why would a prohibition be necessary unless there was an assassin class?`,
+            answer: [
+                `There are no monk or assassin character classes on Krynn. However there are cloistered religious orders of clerics dedicated to the gods, and these clerics may be labeled "monks" in the historical sense of the word. Beings who kill other beings for pay are generally known as assassins; note also that the assassin kit from the ***Complete Thief’s Handbook*** is available for Krynn campaigns.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '32-33',
+            question: `I've noticed that although wizards of the Red Robes are allowed to cast invocation spells, the rule books list no wizard spells of this type; its use seems to be restricted to clerical spells. Also, the spell ***kiss of night's guardian*** is listed as an evocation spell; does this mean that only wizards of the White Robes can cast it?`,
+            answer: [
+                `As shown in the Krynn spell summary (see ***DLA***, page 126), invocation and evocation spells are part of the same group. Spells that create something out of virtually nothing or that release raw power fall into this category. Generally, "invocation" implies that the effect comes as the result of a petition to a greater power, while "evocation" implies the effect was compelled. This is why most clerical invocation/evocations are listed as invocations. The fact that the order of the Red Robes calls its invocation/evocation spells "invocations" could give a clue to its basic approach to magic, or it could be just a clever use of names.`,
+                `Exactly who can cast ***kiss of night’s guardian*** is unrevealed. It seems to be the personal prerogative of the master of the Tower of High Sorcery at Palanthus.`
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '33',
+            question: `Do the minotaur and irda races get racial modifiers for thieving skills? Do the other races on Krynn get such modifiers for their corresponding races?`,
+            answer: [
+                `Minotaurs cannot become thieves. Irda have no racial adjustments to thieving skills. The other races and their subraces get the standard racial modifiers as described in the 2nd Edition ***Players’Handbook***, page 39; kender use the halfling modifiers, all subraces of elves use the elf modifiers, and so on.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '33',
+            question: `Please give the weapon statistics for the kender hoopak.`,
+            answer: [
+                `A hoopak is a cross between a bo staff and a staff sling. When used as a staff, its statistics are: type B; speed factor 4; damage 1d6/1d4. As a sling, the statistics are: type B; speed factor 11; damage 1d4 + 1/ 1d6 + 1; rate of fire 2/1; range 3-6 (medium), 6-9 (long). (The hoopak has no short-range category and cannot be used against targets closer than 30 yards.) Hoopaks weigh two pounds. They usually cannot be purchased; a relative or friend gives an adventuring kender his first hoopak. If found and sold, a hoopak might bring as much a one steel piece; kender themselves are not prone to purchase hoopaks from nonkender, and they always arrange to "pick up" any hoopak they see in nonkender hands.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '33',
+            question: `Isn't there an error in the River of Time section on pages 86-87 of ***DLA***? According to this chronology, Huma defeated the evil dragons in 2645 PC, but the Knights of Solamnia weren't founded until 1225 PC. Since Huma was a Knight of Solamnia, wasn't he 1,400 years too early?`,
+            answer: [
+                `Actually, the River of time puts Vinas Solamnus, founder of the Knights of So- lamnia, 1,400 years too late. The order was founded in 2692 PC. The year 1225 PC is erroneously reported as the year of founding probably because the order's oath and measure were either written or extensively revised that year.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '33',
+            question: `Do clerics of the Holy Orders of the Stars get bonus spells for high wisdom scores? Do clerics of Solinari, Lunitari, and Nuitari get bo- nus spells? Do they also get magic-user spells?`,
+            answer: [
+                `Clerics of the Holy Orders of the Stars do get bonus spells for high wisdom scores. Solinari, Lunitari, and Nuitari have no clerics.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '33',
+            question: `Where can I get detailed information about the Valley of the Mage?`,
+            answer: [
+                `The last word on the Valley of the Mage can be found in module WG12 ***Vale of the Mage*** (TSR Product #9270).`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '33',
+            question: `Can zero-level characters, as described in Appendix 1 of the book ***GREYHAWK® Adventures***, retain and use abilities from other classes once they choose a class? Once they pick a class, can they use unspent attribute points for additional abilities?`,
+            answer: [
+                `Once a zero-level character chooses a class, he can keep abilities from other classes only so long as he pays the experience penalty from the table on page 125, ***and*** so long as he practices the skill between levels. If the character gains a new level for ***any*** reason without practicing the skill at least once, the skill is lost. All unspent attribute points are immediately converted to experience points, at the rate of 10 xp per ap, when the character chooses a class. Once these remaining attribute points are converted, the character cannot gain new skills from other character classes.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '33',
+            question: `How can zero-level characters accumulate so many hit points, then abruptly lose them when advancing to first level? Are the experience penalties on page 125 cumulative? If so, what happens to a character who has penalties totalling more than 100%? What constitutes practicing a skill?`,
+            answer: [
+                `Zero-level characters are untried, enthusiastic, and flexible; this gives them leave to obtain a whole range of abilities that less callow adventurers can't get (as explained on pages 117-118). However, the shortcuts, blind stabs, and side explorations beginners make ***must*** be abandoned if they are ever to become really skilled at anything. Thus characters have to do a little backstepping when they reach first level. The experience penalties ***are*** cumulative, but optional. A character can drop a skill and avoid the experience penalty at any time. In the case of penalties totalling more than 100%, the character ***must*** abandon skills until the penalties total 100% or less. DMs are free to set their own standards for skill practice. I suggest the characters practice their skills during nonadventuring time according to the rules on page 119. The character must accumulate as many study points as originally required to learn the skill, and retains the knowledge for three months per study point earned. If a character successfully uses a skill one or more times during an adventure, extend his knowledge one month.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '33',
+            question: `The beginning of the deities section in ***GREYHAWK Adventures*** says that clerics get their special powers "during times of special need." What defines a time of special need?`,
+            answer: [
+                `Clerics of Greyhawk deities get their special abilities when they fulfil the requirements for getting them as described in the section on each deity. However, the ***head*** cleric at a temple always can, in time of need, call on spell-like powers granted by the deity—even if the cleric is of insufficient level to have the ability and even if the cleric has "used up" his daily allotment of the ability. The DM must decide what events are times of special need as they arise, but they always should include times when the temple is being invaded and any time the deity's power is in question and the cleric must—or should— demonstrate it.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '33',
+            question: `What deity or deities are venerated by the elves in Celene (including Enstad) and in the Duchy of Ulek?`,
+            answer: [
+                `Ehlonna is the primary deity among the elves in Ulek and Celene, and she has a strong following among elves everywhere else on Oerth.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '33',
+            question: `Who allies with Celene and Ulek against the humanoids in the Pomarj?`,
+            answer: [
+                `Usually Veluna and Furyondy do so.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '33',
+            question: `Are the population figures given for Duchy of Ulek and its capital, Tringlee, for humans or elves?`,
+            answer: [
+                `In any entry, the figure given for population is the area's ***human*** population. When actual numbers are given for demihumans or humanoids, these are in addition to the human population. Numbers given for city populations are the total number of beings (human, demihuman, etc.) living there; unless noted otherwise, the distribution of races is the same for the country as a whole. In the case of Tringlee, the population is about 55% elvish and 45% human with a smattering of gnomes.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '33',
+            question: `What race is Lewenn, Count Palatine of Ulek?`,
+            answer: [
+                `Lewenn is probably human. Generally it is safe to assume that a country's ruler is human unless his description says otherwise.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '161',
+    publication_year: '1990',
+    publication_month: 'September',
+    foreword: `This edition of "Sage Advice" continues to examine the major fantasy settings for the AD&D® game. Krynn and Oerth were covered last month; this month we visit Abeir-Toril.`,
+    sage_advice: [
+        {
+            page_number: '88',
+            question: `Which of TSR's modules are set in the FORGOTTEN REALMS setting?`,
+            answer: [
+                `Only products with the FORGOTTEN REALMS banner on the front cover are actually intended for use in this setting. A complete product bibliography (good up to March 1990) appears on page 154 of the AD&D 2nd Edition hardbound volume ***FORGOTTEN REALMS Adventures***. Of course, a clever DM could place almost any adventure in one of the many unexplored corners of the Realms.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `Where is the game information on the magical book, ***The Tome of the Unicorn***, described? The table at the back of FR4 ***The Magister*** says information is given on page 41 of the DM's ***Sourcebook of the Realms***, but the information given there is pretty spotty.`,
+            answer: [
+                `Full details on ***The Tome of the Unicorn*** are given in the DM's ***Sourcebook of the Realms***, pages 92-93.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `Where can I find a full description of the ***greenstone amulets*** worn by the Flaming Fist mercenary com- pany? I understand these items can recharge themselves; how often can they do this?`,
+            answer: [
+                `A description of the ***greenstone amulet*** is included in FR4 ***The Magister*** (TSR product #9229). A ***greenstone amulet*** automatically begins recharging itself whenever its charges drop to zero. The amulet spends 1d4 x 11 turns recharging itself, gaining one charge each turn. It remains nonfunctional during recharging.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `There are several wands and staves described in FR4 that can explode if broken accidentally. Will they also explode if broken deliberately, even by nonwizards?`,
+            answer: [
+                `These items are *extremely* unstable and will indeed explode if broken deliberately, even by nonwizards. Note that this is not the case with normal items. Most wands and staves do not explode when broken in any fashion. The more powerful items, such as the ***staff of the magi***, explode only when held and broken by a wizard who deliberately calls for a retributive strike.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `Volume 1 of the ***Kara-Tur*** boxed set mentions a new scholar character class (on page 18). Where can I find information on this class?`,
+            answer: [
+                `The "class" mentioned on page 18 is that of the mandarins, which is a *social* class in Shou Lung, not a character class. Check out the section on the mandarinate on page 7 for details.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `There is at least one character in the FORGOTTEN REALMS novels who fights with a scimitar in each hand. How is this possible, since a scimitar is a size M weapon?`,
+            answer: [
+                `The character you are thinking of is Drizzt, from the Icewind Dale trilogy. In this particular case, there is a game rule that covers the use of a medium-size weapon in each hand. See the notes on the two-weapon style in the fighting styles section of the ***Complete Fighter’ s Handbook***, pages 61-64.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `Will there be a FORGOTTEN REALMS atlas?`,
+            answer: [
+                `*Yes*. The ***FORGOTTEN REALMS Atlas*** (TSR product #8442) is due for release this August and will cost $15.95/£10.95.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `We all know that Elminster does a lot of traveling. Has he ever been to Oerth or Krynn?`,
+            answer: [
+                `Perhaps, but he's not saying.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `When reading the sourcebook FR1 ***Waterdeep and the North***, I had trouble finding some of the features mentioned in chapter one on the maps provided with the boxed set.`,
+            answer: [
+                `Check out TM4 ***City of Waterdeep Trail Map*** (TSR Product #9401) or the map showing Waterdeep in FR5 ***The Savage Frontier*** (TSR Product #9233). Also see "Welcome to Waterdeep," in DRAGON issue #128, which has a map and other materials that were dropped from FR1.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `Exactly what kind of landscape is indicated by "clear" terrain areas on the various Realms maps?`,
+            answer: [
+                `Clear terrain is rolling and open, and generally free from major obstacles such as impenetrable forests, mountains, etc. Most clear terrain is plains or farmland, but there also can be low hills, solitary trees, clumps of woodland, and gullies.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `To what scale are the various city maps found in the ***Cyclopedia of the Realms*** (from the ***FORGOTTEN REALMS*** boxed set) drawn?`,
+            answer: [
+                `The scales vary from map to map because cities of different sizes were presented in the same-size spaces. You can get a rough idea of the scale for each map by looking at the narrow sides of the buildings shown; most are about 20' long.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `What are the scales of the various FORGOTTEN REALMS maps sup- posed to be? I have them all, and some of the scales seem to be at odds with the others.`,
+            answer: [
+                `The two continental maps in the boxed campaign set are drawn at 1" = 90 miles. The area detail maps in the boxed set and in the modules are 1" = 30 miles. The keys on the trail maps show the scale as 1" = 90 miles, but this is a misprint. The scale-of-miles bar at the upper right-hand corner indicates that 1" = about 142 miles, a scale that works quite well when you compare distances between major landmarks shown on both the trail maps and the continental maps.
+`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88-89',
+            question: `When will the replacement maps for the boxed campaign set be available?`,
+            answer: [
+                `New maps are already available. However, the only difference between them and the maps in the early print runs of the boxed set are the colors. The current maps have colors that match the map colors in the modules and in the ***Kara-Tur*** boxed set. If you have older maps (ones with pale blue oceans and light beige clear areas), you can get color-corrected maps by sending $5.00 to the Mail Order Hobby Shop and requesting replacement maps for product number TSR1031. The address is:`,
+                `The Mail Order Hobby Shop`,
+                `P.O. Box 756`,
+                `Lake Geneva WI 53147`,
+                `U.S.A.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '89',
+            question: `I'm having a lot of trouble fitting the ***City of Waterdeep Trail Map*** with the ***Kara-Tur Trail Map***. The closest match I can get leaves a big gap near the Great Sea and a rather abrupt end to the Dust Desert.`,
+            answer: [
+                `Here's how things were explained to me: The Waterdeep map is drawn from a western perspective. The farther east you go, the less accurate it gets because westerners don't know a lot about the East. Likewise, the Kara-Tur map is drawn from an eastern perspective and gets less accurate the farther west you go. In any event, remember that the boxed sets are meant to be campaign settings. Each DM's campaign is going to be a little different. An area where even the published information is uncertain provides the DM with at least one mysterious place where only he knows what's going on (at least until PCs actually explore it).`,
+                `It sounds to me like you're going about fitting the maps together in the right way. The maps match pretty well if you just line up the borders, but you have to adjust a little to match the city of Solon (which is shown on both maps) and the southern and northern coastlines. When overlapping the maps, I suggest putting the ***Kara-Tur*** map on top, as the mountains east of Solon really are there. Individual DMs will have to decide where the Dust Desert really ends—the edges would vary with the annual weather anyhow. The empty gap in the south is unexplored territory, but there has been some discussion of filling it in with an Arabian land.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '89',
+            question: `What is the polar circumference of Abeir-Toril?`,
+            answer: [
+                `Abeir-Toril's exact dimensions are unrevealed, but the planet is roughly Earth's size. This would make its equatorial circumference about 25,000 miles. The polar circumference would be slightly less, about 24,900 miles.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '89',
+            question: `How can a PC become a Red Wizard of Thay?`,
+            answer: [
+                `The Red Wizards are nasty, reprehensible, and generally subject to the whims of their superiors. This makes them unsuitable for use as PCs in most campaigns. However, ***FORGOTTEN REALMS Adventures*** (TSR product #2106) contains basic information on the Red Wizards, including how to get in (see page 127).`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '89',
+            question: `Would it be accurate to assume Chult is an African setting?`,
+            answer: [
+                `No. Chult is more akin to Conan Doyle's ***Lost World***, complete with dinosaurs, lost tribes, etc.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '89',
+            question: `Can PCs who travel from Faerun to Kara-Tur learn martial arts or other Oriental proficiencies? Can western races adopt Oriental classes? For example, can there be elven samurai?`,
+            answer: [
+                `Western (gajin) characters can learn Oriental proficiencies if they can find Oriental masters to teach them. Finding such masters should require lots of good fortune, skillful role-playing or both. Since there are spirit folk samurai, I see no reason why elves couldn't also become samurai (maximum level 12) with proper sponsorship. However, the samurai are a social class as well as a character class, and first-generation gajin samurai of any race would be rare indeed.
+`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '89',
+            question: `The maps to module N5 ***Under Illefarn*** have many numbered rooms that aren't described anywhere in the text. Is there dropped text, or are these rooms simply empty? Where do the stairways on maps 14 and 15 (areas G and H) lead?`,
+            answer: [
+                `The undocumented areas have no fixed contents. There can be random encounters, such as patrols, in these rooms, or individual DMs can populate them as they see fit. The westernmost stairway in map 14 (room 113) leads up to map 16, room 121. The north stairway (off the central corridor) leads up to map 15, room 114. The south stairway leads up to map 17, room 124. The central stairway on map 15 leads down to map 14, as already described. The eastern stairway leads up to map 16, room 118.
+`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '89',
+            question: `What lies on the other side of The Spine of the World mountains? A friend told me it's the WORLD OF GREYHAWK® setting.`,
+            answer: [
+                `All of what lies to the north of The Spine of the World is unrevealed, though the ***City of Waterdeep Trail Map*** indicates that the southern edge of the Endless Ice Sea begins there. However, the WORLD OF GREYHAWK setting lies on another planet, Oerth. The SPELLJAMMER™ supplement contains rules for traveling between Oerth, Abeir-Toril, and other fantasy worlds. Of course, DMs are free to construct their campaigns as they see fit, and there's nothing wrong with lumping the two settings together on one world.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '89',
+            question: `I remember seeing something about flying ships in the Realms. Are these spelljammers?`,
+            answer: [
+                `No, they are not, though many of the rules governing spelljammers also would apply to them. The only details ever re- vealed about these ships were published in the article "Sailors on the Sea of Air," in DRAGON issue #124.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '89',
+            question: `It seems to me that there are no libraries in the Realms. Candlekeep charges an outrageous fee just to browse, but shouldn't there be some place where a character can go to improve his knowledge?`,
+            answer: [
+                `Modern-style libraries where visitors have free access to the books are unknown in the Realms. There are, however, plenty of libraries. Sages, guilds, and governments keep extensive collections of books and scrolls, but access to them is on a need-to-know basis (or pay-as-you-go, in the case of sages). For example, any large and prosperous shipwrights' guild would have a library with volumes on ship design and construction, carpentry, forestry, logging, blacksmithing, rope making, weaving, sewing, and a host of other subjects, both practical and esoteric, related to shipbuilding. Members would use the library as a resource for training new members and for answering difficult or unforeseen questions that might come up during day-to-day business. The guild also would jealously guard its library to prevent competitors in other cities from learning its professional secrets and to prevent those people who are not guild members—like adventurers—from learning how to build their own ships and putting dues-paying guild members out of work. Though literacy is more common in the Realms than it was in the historical medieval world, the people of the Realms understand that knowledge is power and they do not share it readily.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '89',
+            question: `I would like to use the rental villas in Waterdeep (as described in the ***City System*** boxed set) in my campaign. How big are they and how much do they cost to rent?`,
+            answer: [
+                `According to Jeff Grubb, each villa has 9 to 12 rooms on two or three floors, plus a basement. The cost to rent one depends on the building's size and condition; 400-600 gp per month is a good range.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '89',
+            question: `Some of the Street Scenes tables in the ***City System*** set are missing the numbers 81-88. Other tables have two entries numbered 105. How do you get around those flaws when using the tables in play? Also, each table goes up to number 120. This is fine, but the instructions on page 15 say to roll percentile dice and add or subtract one or more modifiers also given on page 15. The highest total modifier is +6, so how can you get a total of 120? What do you do if a negative modifier gives you a result of less than one?`,
+            answer: [
+                `The missing and duplicated numbers are probably typos. Treat a result of 81-88 as either an 80 or an 89, as you wish. Likewise, just pick one of the two listed entries on a result of 105. The text on page 15 says to add +20 to the roll for all encounters that take place after dark, though this is not shown on the table. (The correct modifier for Night scenes is +20. The modifier for Witching Hour scenes is +19). Treat any negative result as a 1, and treat any result of 121 or more as 120.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+    ]
+});
 module.exports = DRAGON_MAGAZINES;
