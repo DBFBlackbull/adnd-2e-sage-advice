@@ -16,6 +16,7 @@ const ATTRIBUTE_APRIL_FOOLS = 'april fools';
 const SUBSTITUDES = [
     ['elf', 'elves'],
     ['dwarf', 'dwarves'],
+    ['demihuman', 'demi-human'],
     ['multiclass', 'multi-class'],
     ['dualclass', 'dual-class'],
     ['player\'s handbook', 'players handbook', 'phb'],
@@ -2572,6 +2573,74 @@ DRAGON_MAGAZINES.push({
             question: `Can you play the FRE-series Avatar modules alter reading the books?`,
             answer: [
                 `According to Avatar project coordinator Jim Lowder, the story as told in the three, Avatar books—***Shadowdale***, ***Tantras***, and ***Waterdeep***—does not compromise play of the modules at all. The books tell the story of a group of fallen deities struggling to regain their powers. The modules deal with the mortals who help them.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+})
+DRAGON_MAGAZINES.push({
+    issue_number: '159',
+    publication_year: '1990',
+    publication_month: 'July',
+    foreword: `Once again, the sage tours the AD&D® 2nd Edition game, with some scenic stops in unusual areas. ***DMG*** is the 2nd Edition ***Dungeon Master's Guide***.`,
+    sage_advice: [
+        {
+            page_number: '39',
+            question: `The description of the troll in the ***Monstrous Compendium*** says that any hit with a "natural" 20 severs a limb. Does this apply to attacks against other creatures? If not, why does the game have the seventh- level priest spell ***regenerate***?`,
+            answer: [
+                `Trolls are thin and rubbery, and are prone to being hacked apart, although hacking apart a troll doesn't do much good. Unless the DM creates his own critical-hit system, it's not possible to hack limbs off other creatures in combat. However, ***swords of sharpness***, monsters such as green slime, crude forms of medieval justice, and many other hazards in the game can lead to the loss of limbs—hence the ***regenerate*** spell.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '39',
+            question: `The ***Monstrous Compendium***, Volume One lists statistics for greater rakshasas, but gives no experience-point values for them.`,
+            answer: [
+                `Greater rakshasas are the Rhuks, Rajahs, and Maharajahs.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '39',
+            question: `One of my players wants to run an ultimist character from POLYHEDRON™ Newszine issue #23. This is a powerful class. Is it intended for PC use or just for NPCs?`,
+            answer: [
+                `Neither. The ultimist is a piece of satire. In this case, the mockery is directed at players who insist on having characters who can do anything and everything. Try not to laugh too hard if you player asks about playing an ultimist again.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '39',
+            question: `When can we expect to see rules for psionics in the AD&D 2nd Edition game?`,
+            answer: [
+                `A handbook on psionics is tentatively scheduled for release in early 1991. Stay tuned for further developments.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '39',
+            question: `How much does it cost to build a castle, tower, or other fortification? I couldn't find this information in the ***DMG***.`,
+            answer: [
+                `This information is presented in DMGR2 ***The Castle Guide*** (TSR Product #2114), available now.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '39',
+            question: `Can a ***spellfire*** wielder (from FR7 ***Hall of Heroes***, pages 49-50) ever return to his original class? Can a ***spellfire*** wielder absorb clerical spell energy? If so, is this voluntary or involuntary? What happens to ***spellfire*** wielders who absorb more energy than their limit? How do you determine if a character can have ***spellfire*** ability?`,
+            answer: [
+                `A character with ***spellfire*** powers never actually leaves his original class. However, to gain experience in his original class, the character must refrain from using any ***spellfire*** abilities during an adventure. If the character does use a ***spellfire*** ability, all experience earned during that adven- ture goes toward the character's ***spellfire*** level, except for individual experience awards for the character's original class (see the ***DMG***, page 48), which are lost.`,
+                `***Spellfire*** wielders can absorb magical energy from almost any source: spells of all types, breath weapons, gaze attacks, and just about anything else. At the 1st level of ***spellfire*** ability, absorption is involuntary; the character drains any magic with which he comes in contact, including useful magical items and healing spells (only rest or nonmagical healing can heal damage to the character). Absorption is strictly voluntary at 2nd level and above.`,
+                `Exactly what happens if the character exceeds his limit is unrevealed. I suggest that either the character becomes unable to absorb more energy once he reaches the limit and consequentially is affected normally by any magic with which he comes in contact while "full," or he absorbs the excess and automatically releases one level of energy each segment (10 times per round), suffering 1-6 hp damage each time, until his total energy falls back into the "10 x constitution" category.`,
+                `***Spellfire*** is a variant type of magic created by Ed Greenwood in his novel of the same name. Only the DM can decide if a particular character can have the ability. It seems likely that only one ***spellfire*** wielder can be alive at a time on any given world, and that the ability is hereditary.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '39',
+            question: `Why can't halflings be rangers? Halflings can be clerics, and rangers have a few clerical spells. Why can't gnomes be bards? Gnomes are known for their sense of humor and should have access to some kind of jester-type abilities. Why can't [my favorite race] become [my favorite class], since [several dozen good reasons why this race/class combination is justified exist]?`,
+            answer: [
+                `Game logic and game balance require that demihumans have limited character-class options. According to game logic, halflings don't become rangers because they aren't inclined to be. Halflings who really like the outdoors and nature become druids. Halflings who are nimble and good at hiding become thieves; that's just the way halflings are. Gnomes who feel roguish become thieves themselves. Those who tend toward flashy expositions become illusionists. (Illusionists, by the way, have an almost infinite capacity for vivid storytelling and practical jokes, as even a quick look at the spells in the illusion/ phantasm spell school will show.)`,
+                `Only humans have the ability to become any class they want to be (ability scores permitting), and they can advance all the way to level 20. That's what makes humans unique. Demihumans have completely different psychological, physical, and spiritual makeups from humans; that's what makes each demihuman race unique. Overall, demihumans are not nearly so versatile or adaptable as are humans, because all have special skills and limitations derived from their heredity and culture that simply close some doors to them when they seek professions. Game balance requires that each race in the game be equally playable. If demihumans—with their infravision, special resistances, and special abilities—could freely choose from every character class in the game, there wouldn't be much reason to play a human character. As I've said before, the D&D® and AD&D games are games of choices; to get something, you've got to give up something else. Good players make the right choices most of the time and know how to capitalize on their characters' strengths while finding ways to circumvent their weaknesses. While changing the rules to eliminate character weaknesses is one way to circumvent them, it isn't a clever or heroic one.`
             ],
             attributes: [ATTRIBUTE_2E],
         },
