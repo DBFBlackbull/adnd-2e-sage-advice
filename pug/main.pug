@@ -30,6 +30,12 @@
         return s
     }
 
+    function anchorLink(id) {
+        const preview = 'https://htmlpreview.github.io/'
+        const github = 'https://github.com/DBFBlackbull/adnd-2e-sage-advice/blob/master/html/index.html\n'
+        return `${preview}?${github}#${id}`
+    }
+
 style.
     body {
         margin: 0;
@@ -51,6 +57,22 @@ style.
         margin-block-start: 0.2em;
     }
 
+script.
+    function copyToClipboard(id) {
+        console.log(id);
+
+        // Get the text field
+        let element = document.getElementById(id);
+        let innerHTML = element.innerHTML;
+        innerHTML = innerHTML.replaceAll(/<button.*<\/button>/g, '')
+            .replaceAll(/<br><img.*>/g, '');
+
+        // Copy the text inside the text field
+        const blob = new Blob([innerHTML], {type: 'text/html'});
+        const clipboardItem = new window.ClipboardItem({'text/html': blob});
+        navigator.clipboard.write([clipboardItem]);
+    }
+
 head
     meta(charset="UTF-8")
 span Search
@@ -59,15 +81,20 @@ button test
 
 each magazine, _ in dragonMagazines
     div
-        h2 Issue ##{magazine.issue_number}, #{magazine.publication_month} #{magazine.publication_year}
+        h2 Sage Advice ##{magazine.issue_number}, #{magazine.publication_month} #{magazine.publication_year}
         h3 !{formatInput(magazine.foreword, magazine.issue_number, 'foreword')}
         each advice, index in magazine.sage_advice
-            p
-                strong Q#{index + 1}: !{formatInput(advice.question, magazine.issue_number, index + 1)}
+            - let questionNumber = index + 1
+            - let id = `${magazine.issue_number}-${questionNumber}`
+            p(id=id)
+                | Sage Advice ##{magazine.issue_number} (#{magazine.publication_month} #{magazine.publication_year}) p. #{advice.page_number}, Question:#{questionNumber}
+                button(onclick=`copyToClipboard('${id}')` title="Copy to clipboard") 📋
+                | &ensp;
+                a(href=anchorLink(id)) 🔗
                 br
-                span &emsp;!{formatInput(advice.answer, magazine.issue_number, index + 1)}
+                strong !{formatInput(advice.question, magazine.issue_number, questionNumber)}
                 br
+                span &emsp;!{formatInput(advice.answer, magazine.issue_number, questionNumber)}
                 if advice.image
-                    img(src="../img/"+advice.image)
                     br
-                | &emsp;Page #{advice.page_number},
+                    img(src="../img/"+advice.image)

@@ -10,6 +10,8 @@ const ATTRIBUTE_INVISIBILITY = 'invisibility';
 const ATTRIBUTE_BLINDNESS = 'blindness';
 const ATTRIBUTE_DEAFNESS = 'deafness';
 const ATTRIBUTE_DISPEL_MAGIC = 'dispel magic';
+const ATTRIBUTE_STONESKIN = "stoneskin";
+const ATTRBUTE_DOT = "continuing damage"
 
 const ATTRIBUTE_APRIL_FOOLS = 'april fools';
 
@@ -3155,6 +3157,381 @@ DRAGON_MAGAZINES.push({
                 `The savings from reduced work forces is calculated per week, so dropping one worker saves 520 gp each year. However, ***The Castle Guide*** editor Bill Connors says there is some dropped copy in the "Smaller Work Forces" section. The last sentence in the second paragraph should read: "No reduction below 50% in the work force or cost is possible." While a castle builder can reduce labor and administration costs, he can't get them for free and must still pay for materials. Smart castle builders will adjust their work forces to get some savings, but I can think of two ways to discourage this if the referee thinks the practice is getting out of hand. First, an accident or misfortune (such as a raid or marauding monster) might deplete a reduced work force even further and cause a construction delay. Second, morale in the reduced work force might deteriorate. Workers who believe they are being asked to do the impossible tend to be resentful. This might prompt the referee to recalculate the Production Modifier in mid-project and declare a "cost overrun" for the castle.`,
             ],
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '164',
+    publication_year: '1990',
+    publication_month: 'December',
+    foreword: `This month, the sage takes another quick spin around the AD&D® 2nd Edition game. All rule book references are taken from the 2nd Edition versions.`,
+    sage_advice: [
+        {
+            page_number: '32',
+            question: `Will magic resistance stop gaze attacks? Can magic resistance stop ***protection from evil*** spells? How would magic resistance affect a paladin's ***protection from evil*** ability?`,
+            answer: [
+                `Magic resistance applies only to spells and spell-like powers that directly affect the magic-resistant creature. Consequential effects, such as collapsing masonry resulting from an earthquake spell, ignore magic resistance. Magic resistance applies to any effect created through the memorization and casting of a spell, and to spell-like effects from wands, staves, rods, rings, and miscellaneous magical items. It does *not* apply to breath weapons, gaze attacks, energy draining, psionic abilities, and similar special attack forms; nor does it apply to effects that are intrinsic to an item, such as the magical "pluses" on an enchanted weapon or piece of armor. There are many cases where effects fall into a gray area, and the DM must rule on these as they come up. When in doubt, treat any effect that behaves like a spell (i.e., that operates when the user does something special to create it—concentrates, expends a charge from an item, etc.) as a spell.`,
+                `Magic resistance can work against ***protection from evil*** spells; see the section on "in place" spells in the ***DMG***, page 67, and in the ***PHB***, page 102. However, many DMs rule that ***protection from evil*** is a special case, especially in campaigns where ***protection from evil*** is the only readily available defense against magic-resistant creatures. This is perfectly acceptable, since the power of ***protection from evil*** can be considered a consequential effect of a spell. A paladin's ***protection from evil*** power probably should be considered a special ability not subject to magic resistance, but it could be treated as a permanent magical effect (also see the ***DMG***, page 67, and the ***PHB***, page 102).`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '32',
+            question: `If the last charge in a ***staff of the magi*** is used, are those powers that don't require charges still operative?`,
+            answer: [
+                `No, the staff becomes completely nonfunctional. If you interpret the rules governing magical staves (see the ***DMG***, page 153) strictly, once a staff is drained of charges it becomes permanently nonmagical. However, some DMs allow even totally drained ***staves of the magi*** to regain charges by absorbing spells.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '32',
+            question: `The rules on scrolls in the ***DMG*** (page 145) say that a ***read magic*** spell must be used to discover a scroll's contents. According to this rule, even a map is unintelligible until a ***comprehend languages*** spell is used to decipher it. Since priests have neither ***read magic*** nor ***comprehend languages*** in their spell lists, how do priests discover what's on a scroll?`,
+            answer: [
+                `You seem to have found a genuine "hole" in the rules. The DM can handle it in several ways:`,
+                `1. Assume that the ***read magic*** and ***comprehend languages*** spells can be bestowed upon the item itself. The caster touches the writing, and any single creature who can read (in the case of maps) or cast the type of spell written on the scroll can decipher the writing. Alternately, the caster can copy the map or simply explain the spell to another caster, who can then read the writing himself.`,
+                `2. Assume that a ***tongues*** spell can be used by priests to decipher scrolls, one scroll per spell.`,
+                `3. Introduce clerical versions of ***read magic*** and ***comprehend languages*** spells into your campaign. I recommend that you make them both first-level spells in the All sphere.`,
+                `4. Assume that all priests have a limited ability to decipher priestly scrolls on their own. A priest who does nothing else during a day might have a chance to petition his deity for help in deciphering one or more scrolls, provided he can read and write.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '32',
+            question: `Where can I get information on herbs for the herbalism proficiency? Just what can a character do with this proficiency? How strong are the poisons and medicines the herbalist makes?`,
+            answer: [
+                `Check out the article "Wounds and Weeds" in DRAGON issue #82 for a quick description of several herbs with fantasygame applications. The reference section of your local library should also help. Herbalism mainly is used to identify plants and fungi. A successful proficiency check might reveal a plant's most common names and whether or not it is edible, poisonous, or medicinal. A successful proficiency check might also allow the herbalist to know where a certain plant grows and to find it if any are growing nearby. The DM must decide how powerful an herbal concoction is. In normal circumstances, I suggest that the herbalist be limited to mild poisons and weak healing balms. Mild poisons include types A, G, K, and O (see the ***DMG***, page 73). Herbal healing balms might include poultices that heal 1 hp damage when applied to wounds, salves that allow a resting character to gain one extra hit point each day, and the like; characters with the healing proficiency might be able to use these products with greater effect, say to heal 1-4 hp damage or gain an extra 1-4 hp per day of rest. Of course, if the herbalist has access to extraordinary plants (such as those found in rain forests), he would be able to produce more potent concoctions.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '32+34',
+            question: `There is a player character in my campaign who has spent several years of game time and thousands of gold pieces learning everything there is to know about poisons. What skills would he have? How many proficiency slots would he have to use? (I don't think the character should have to give up all his nonweapon proficiency slots after all that effort.) How would you simulate this skill in a game where the original AD&D game rules are used?`,
+            answer: [
+                `The DM should have been thinking about this while the PC was busy doing all his research. Since the game does not contain a poison-manufacturing proficiency *per se* (herbalism gives an incidental understanding of plant poisons, but many poisons are derived from animals or minerals), you'd have to create a new proficiency.`,
+                `Such a proficiency might require two proficiency slots and be based on Intelligence -2. Depending on the campaign, this proficiency would fall under one or more of the following categories: wizard, priest, rogue. The character would have to expend at least two slots to get the skill; the time and effort the character is devoting to learning all about poisons is not going to be available for learning languages or other skills. However, you might allow the character to purchase extra slots for improving the proficiency once it has been bought, but only if the character has no other slots available and the proficiency score is not raised above 16. The proficiency might allow the character to do one or more of the following, at the DM's option: concoct any poison on the DMG's poison table (see previous question); create entirely new poisons; prepare poison antidotes; recognize the "poison potential" in any plant, animal, or mineral encountered; recognize a poison by its effect on a victim.`,
+                `The DM must control such a proficiency very carefully to maintain play balance. Manufacturing poisons should be a long and difficult process (check the section on potion manufacture in the ***DMG***, page 87). Making poison under field conditions should require a substantial penalty, and failure under any circumstances should result in at least a chance for the poison maker to poison himself ("Ouch! I've just nicked myself with the knife I used to skin that tree frog."). Many poisons, particularly the very potent ones, should have a "shelf life" and would thus lose potency over time. They also might be destroyed when exposed to heat, cold, light, or electricity. Note that poisons are very dangerous to store ("Fine, your thief is carrying that batch of puffer-fish venom in a leather bladder on his belt. But did he remember to wash his hands before eating?").`,
+                `The current proficiency system works fine with the original AD&D game rules. You can use this new proficiency, and any other one, with no modifications at all.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '34',
+            question: `What abilities does the caster of a ***polymorph self*** spell gain when he assumes a new form? I understand that the spell-caster gets the new form's movement but not its attacks. What about extraordinary movement such as tunneling or phasing? What about types of movement that might double as attacks? For instance, can a wizard ***polymorphed*** into a giant frog leap onto an opponent?`,
+            answer: [
+                `Basically, the ***polymorph self*** spell grants the caster the adopted form's shape an ordinary locomotion. The spell does not grant the adopted form's special attacks, senses, or magical abilities. The caster is not granted enough strength to perform extraordinary maneuvers, and the DM must decide where to draw the line when deciding what abilities the caster does get. In your example, a caster who assumed the form of a giant frog would be able to swim and hop about, but would not have a frog's all-around vision or full use of the creature's remarkable tongue. It is reasonable to deny the caster the ability to make spectacular leaps, as the spell description specifically limits the caster to "normal" movement. However, a frog's form is well suited to jumping, and the occasional long hop isn't out of the ordinary for a frog. The caster could jump, but he probably wouldn't have the strength or coordination to make very long jumps (a reduction of one-half or one-third would be about right—60-90' for a person ***polymorphed*** into a 50-lb. giant frog) or to make several leaps in succession. The caster certainly can belly flop onto opponents; resolve such attacks using the wrestling table (see the ***DMG***, page 59). Similarly, a caster who changed into an umber hulk would have a very limited ability to burrow through solid rock. A caster who took the form of a phase spider would get the ability to crawl along webs, but not the ability to shift phase or to spin webs of his own.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '165',
+    publication_year: '1991',
+    publication_month: 'January',
+    foreword: `This month, "Sage Advice" splits some hairs regarding spell-casting and combat in the 2nd Edition AD&D® game and examines a few other fantastic mysteries.`,
+    sage_advice: [
+        {
+            page_number: '91',
+            question: `If a wizard casts a ***stoneskin*** spell on himself, then is struck in melee while casting another spell, is the second spell disrupted or is the wizard able to maintain concentration because the ***stoneskin's*** protection negates damage?`,
+            answer: [
+                `The second spell is disrupted, as a successful hit ruins a spell in progress (***Player's Handbook***, page 85). Note that a successful attack—not damage—is the critical factor here. Game logic assumes that even a nondamaging hit can disrupt concentration. It's tough to keep your mind focused on something as complex as a spell when someone's using your head for batting practice, even if the blows aren't hurting you. Many kinds of nondamaging hits can disrupt spell-casting: a hand clamped over the mouth, an armlock, or just being knocked down. However, damage always breaks concentration. If, for example, a spell-caster takes damage from a ***fireball*** or breath weapon, any spell in progress is lost even if the caster made his saving throw and took only half damage.`,
+                `These distinctions also are important to game balance. Spell-casters are *intended* to be vulnerable to physical attacks during spell-casting, and their opponents *must* be given a chance to anticipate the spell and disrupt it before it goes off. Spell-casters can't get around this limitation by using spells such as ***stoneskin***. Likewise, spell-casting monsters that are immune to normal weapons (such as liches and vampires with character abilities) can have their spells ruined by any successful attacker. Some DMs even allow "attack" bonuses when characters make attacks specifically to disrupt a spell. The reasoning here is that a nondamaging jostle or cross block is easier to make than a potentially lethal blow. While this sort of ruling tends to be an equalizer when the target spell-caster is a high-level evil patriarch with an armor class in the negative numbers, it can be unreasonably tough on a 1st-level wizard with AC 10. Apply such bonuses carefully, if at all. I suggest that bonuses be limited to +4 or less, and you might consider applying them to the target's armor class rather than to the "to hit" roll. If you use the armor-class adjustment method, do not allow an armor class to be adjusted to worse than 10.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_STONESKIN],
+        },
+        {
+            page_number: '91',
+            question: `Will the damage inflicted from round to round by a ***Melf's acid arrow*** spell prevent spell-casting?`,
+            answer: [
+                `Yes. Damage makes the concentration required for spell-casting impossible. This is one thing that makes ***Melf's acid arrow*** a useful spell. However, the acid can be washed off before the duration expires.`,
+            ],
+            comment: [
+                `Matches how the spell was originally intended. https://youtu.be/tenOqLK2sEw?t=275.`,
+                `This ruling is loosened a bit in #198 and reiterated in #206`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRBUTE_DOT],
+        },
+        {
+            page_number: '91',
+            question: `How are infravision and ultravision supposed to work? Do they work like infrared goggles that detect heat, or like "starlight" optics that simply gather large amounts of light?`,
+            answer: [
+                `Strictly speaking, infravision is the ability to "see" infrared light or heat. The exact game effects of infravision depend on the rules your DM is using; see pages 118 and 119 of the ***Dungeon Master's Guide*** for the rules governing this kind of vision. Ultravision is a bit harder to describe, but generally it is considered to be quite a bit like "starlight" optics. Creatures with ultravision have eyes that can gather large amounts of-light and can also detect ultraviolet light and use it to enhance the available normal light. Ultravision generally is useful only outdoors at night.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '91',
+            question: `What happened to psionic abilities? I seem to remember reading something about an upcoming psionic rules supplement.`,
+            answer: [
+                `A new rule book, ***The Complete Psionicist*** is due in early 1991, This book will feature a boatload of new psionic abilities, a detailed combat system, a new psionicist character class, and other goodies.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '91',
+            question: `How many attacks would a specialist with a two-weapon fighting style (from ***The Complete Fighter's Handbook***) get each round?`,
+            answer: [
+                `The specialist gets the one or more attacks each round with the weapon in his "good" hand; this varies with his class, level, and weapon specialization. The specialist gets *one* attack each round with the weapon in his "off" hand, regardless of level, class, or specialization.`,
+                `Game logic assumes that no one is coordinated enough to launch multiple attacks with each hand; there's a limit to how much activity a person's brain can direct in a single round of melee. Game balance also requires such a limitation, as warriors are not intended to be walking *blade barriers*.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '91',
+            question: `Specialization in the two-weapon fighting style from ***The Complete Fighter's Handbook*** reduces the penalty for attacking with two weapons. Can the specialist further reduce the penalty to nothing if he has a high dexterity score?`,
+            answer: [
+                `Yes. The rules on page 96 of the ***PHB*** apply to the character, except where modified on page ***64*** of ***The Complete Fighter's Handbook***. Note that high dexterity scores cannot turn the penalty into a bonus, no matter which rules you are using.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '91-92',
+            question: `How many punches can a character throw in one melee round? Does fist fighting require a weapon proficiency?`,
+            answer: [
+                `This is entirely up to the DM. Contrary to popular belief, fist fighting is not universal and was unknown in several pregunpowder cultures; American Indians, for example, generally resorted to wrestling in unarmed combat, so DMs have great latitude here.`,
+                `I suggest allowing any character to make one attack on the punching/wrestling table (***PHB***, page 91; or ***DMG***, page 59) without penalty each round. Since the punching/ wrestling table allows for single-blow knockouts, I suggest that this kind of combat be treated as a special case that falls outside the normal weapons rules. However, fist fighting and wrestling *can* be treated just like any other weapons that require proficiencies. If this is the case, the proficiency should be available to any character class. If a character spends a weapon proficiency on punching, he should get the extra melee attacks listed on Table 15, ***PHB***, page 26, if he is a high-level warrior. Punching specialists would use Table 35, ***PHB***, page 52.) Any character (under any punching system) attacking with both fists would use the attacking with two-weapons rule (***PHB***, page 96). Note that wrestling generally requires two hands.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '92',
+            question: `The punching/wrestling table allows for results on an attack roll of 1. Don't 1s always miss?`,
+            answer: [
+                `A roll of 1 always misses in normal combat. However, punching and wrestling are not normal combat, and 1s can hit. This is an exception to the general rule.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '92',
+            question: `Is it acceptable for a character to ***wish*** for special abilities, such as thieving or spell-casting abilities? If granted, would these abilities be permanent or temporary? Would such a ***wish*** turn the character into something that had the desired power?`,
+            answer: [
+                `This is entirely up to the DM. You've listed a couple of reasonable approaches to the problem. If wishes are fairly are in the campaign, and the DM feels that the need is justified, a special ability such as lock picking might be granted for a limited time, say as much as a month (but more likely a few turns or hours). If ***wishes*** are true rarities or if the DM really approves of high-powered player characters, it's fine to make the ability permanent, but I suggest that the ability be low powered, about one-third to one-half of what the average player character in the campaign might have. It's also a good idea to make the level of power fixed, not subject to improvement though experience. It certainly is acceptable to twist such wishes by changing the character into some creature that has the desired ability; such changes might be permanent or temporary. It also is fine to have a creature possessing the desired ability appear and serve the character for a short time.`,
+                `"Sage Advice" has discussed ***wishes*** before; check out this column in issues #133 and #162 for general information.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '92',
+            question: `What armor class do the various ***Bigby's Hand*** spells have?`,
+            answer: [
+                `Each "hand" has AC 0, in either version of the AD&D game.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '92',
+            question: `How can a ***necklace of adaptation*** allow a character to exist in airless space? Wouldn't a character in a vacuum just explode?`,
+            answer: [
+                `In a fantasy game, being thrust into a vacuum does not necessarily cause catastrophic decompression. The AD&D SPELLJAMMER™ rules, for example, assume that anything in space carries its own atmosphere. In any case, the necklace has the power to sustain the character in airless space for as much as seven days. What happens to the character at seven days plus one second is up to the DM.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '92',
+            question: `Can a wizard with a ***Zagyg's spell component case*** (from the ***Unearthed Arcana*** tome) pull components for nonwizard spells from it?`,
+            answer: [
+                `The wizard can get the components for any spell he knows from the case. If he is a multi- or dual-classed character, he can get nonwizard spell components. If the wizard does not know a certain spell, he cannot "think of" the proper components and cannot get them from the case.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '166',
+    publication_year: '1991',
+    publication_month: 'February',
+    foreword: `This month, the sage considers a few problems that have stymied AD&D® game referees and players. All page references herein refer to the AD&D 2nd Edition volumes.`,
+    sage_advice: [
+        {
+            page_number: '72',
+            question: `In what order do the volume of the ***Monstrous Compendium*** go?`,
+            answer: [
+                `In any order you want. Volumes I and II contain "basic" monsters, ones you'd find in just about any campaign. The remaining volumes contain creatures that are primarily associated with specific settings, such as the WORLD OF GREYHAWK® campaign or the ***Oriental Adventures*** lands. Some or all the monsters in these volumes might be found in other settings. The ***Monstrous Compendium's*** loose-leaf format is intended to allow DMs to organize the creatures in any way they see fit.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '72',
+            question: `What happens to characters who are thrown into a state of shock because of some ghastly happening? How would you use ability checks or saving throws to determine if a character would be subject to such a state in the first place?`,
+            answer: [
+                `This is up to the DM. The simplest way to handle this would be to have the affected character save vs. paralyzation, adjusted for wisdom. The effects of a failed save would vary with the situation, but the morale rules in the ***Dungeon Master's Guide*** (pages 69-72) should give you a few ideas. The RAVENLOFT™ boxed set (TSR product #1053) contains complete rules for dealing with fear and horror; see chapter 4 of the RAVENLOFT booklet.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '72',
+            question: `In the RAVENLOFT adventure RA1 ***Feast of Goblyns***, the scale on the Harmonia map is listed as 1" equals 250 miles, making a trip from one side of town to the other a long jour- ney indeed. Likewise, the detail maps of Homlack and Skald are scaled at 125 miles per inch and 300 miles per inch, respectively. What are the real scales?`,
+            answer: [
+                `The scales for each map should be measured in *feet*, not miles.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '72',
+            question: `Would a ***ring of free action*** negate thieving penalties for wearing heavy armor? Would it allow a wizard to cast spells while wearing armor? Would it allow an armored character to move at full (12) rate? Can the wearer swim?`,
+            answer: [
+                `A ***ring of free action*** protects its wearer from magical effects that hinder or immobilize, and allows the wearer to function underwater without hindrance due to water resistance. It does not negate encumbrance penalties, nor does it allow characters to ignore armor restrictions due to character class (not even thieves). It is important to note that magic in the AD&D game is specific and specialized; collateral effects, even those suggested by logic, usually do not occur. While a character wearing a ***ring of free action*** can ignore the effects of an ***entangle*** spell, the wearer is not granted the ability to freely move through underbrush as can a druid. Likewise, there is no reason to assume that the wearer cannot float or swim in water. (On the other hand, individual DMs might rule that this is the case, and thus give the character a new problem to think about while adventuring in or near the water.) The wearer of a ***ring of free action*** would be immune to attacks from a ***rope of entanglement***, but could be physically restrained and bound with any normal rope. Note that the ring also does not empower the wearer to ignore barriers such as normal walls or a ***forcecage*** spell.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '72',
+            question: `Is there a limit to the thickness and strength of the welds or rivets a ***knock*** spell can break? Could the spell break a welded link of a massive chain holding up a bridge? Could it pop a rivet out of a battleship?`,
+            answer: [
+                `A ***knock*** spell cannot do either of the things you have described. The spell opens closures; it does not destroy structures. If a closure that can be opened by a ***knock*** spell (doors, lids; shackles, etc.) is sealed with a weld or rivet, the spell will break the weld or rivet, provided that the closure is not larger than the spells area of effect. For example, a pair of handcuffs riveted shut *will* pop open when ***knocked***. Note that the spell description (see the ***Player's Handbook***, page 143) does not specifically mention rivets, but these should not be allowed to provide an easy way around ***knock*** spells. However, a single rivet is one "means of preventing egress." A single ***knock*** spell pops two rivets sealing an opening.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '72',
+            question: `Does a dual-classed character receive a new set of initial proficiencies when switching to a new class?`,
+            answer: [
+                `This is up to the DM, but I suggest not. A character's initial proficiencies reflect what he has learned during his nonadventuring career. Switching to a new class does not bring about a fresh wave of knowledge. Also, since the rules allow a character to switch classes multiple times if he qualifies (see the ***PHB***, page 45), you will begin to encounter game balance problems as characters gain multiple "loads" of initial proficiencies. Dual-classed characters do, however, have to learn a new way of doing things when embarking on a new class, and should be given at least one new weapon proficiency (and one nonweapon proficiency if the campaign uses them) when starting the new class. Otherwise, the character is quite likely to be miserably unprepared to pursue his new vocation.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '72',
+            question: `I've heard rumors of a Harpers Trilogy as part of the FORGOTTEN REALMS™ book series. What do you know about it?`,
+            answer: [
+                `There will indeed be a Harpers series, with at least three books. The first book, *Parched Sea* by Troy Denning, will be released in July 1991; the second book, *Elf Shadow* by Elaine Cunningham, is scheduled for October 1991; and the third book, *Red Magic* by Jean Rabe, is scheduled for November 1991.`,
+            ],
+            attributes: [],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '167',
+    publication_year: '1991',
+    publication_month: 'March',
+    foreword: `This month, the sage considers a few problems that have stymied AD&D® game referees and players. All page references herein *refer* to the AD&D 2nd Edition volumes.`,
+    sage_advice: [
+        {
+            page_number: '56',
+            question: `Are creatures that are immune to normal weapons also immune to "natural" damage such as falling? If not, how much damage equals one "plus"? Is a creature that is immune to normal weapons also immune to normal fire?`,
+            answer: [
+                `Table 48 in the ***Dungeon Master's Guide*** (page 69) implies that weapon immunities are not absolute. Until official word comes along, you have several options:`,
+                `1. You might apply Table 48 directly. That is, a fall of 50' or more can hurt a creature hit by only +1 or better weapons because it inflicts five dice of damage, and such creature can be harmed by any creature with 4 + 1 or more hit dice.`,
+                `2. You can assume that gravity and im- pact with the unforgiving earth are more powerful than any weapon, and allow falls of any length to harm any creature.`,
+                `Although some DMs rule otherwise, immunity to normal fire is a special defense all by itself. Unless a creature's description specifically lists an immunity to fire or other form of energy, it is safe to assume that the creature is vulnerable to various energy attacks, magical or not.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '56',
+            question: `Can a ***vorpal weapon*** sever the neck even if the attack cannot reach the neck? For instance, can a dwarf with a ***vorpal short sword*** sever a storm giant's neck? What happens if the attacker gets a roll good enough to sever hut not good enough attack the target's armor class?`,
+            answer: [
+                `If the DM rules that an attack cannot reach the neck, then the neck cannot be severed. However, there is no reason to assume that a foe's neck always is out of reach just because he is taller than the weapon wielder. During the course of a melee round, a very tall opponent might bend over to get a good swipe at his shorter opponent. Individual DMs must adjudicate these situations as they arise. A ***vorpal weapon*** or a ***weapon of sharpness*** must score a hit to sever anything. If the die roll is high enough to sever but not high enough to hit, the attack fails and nothing is severed.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '56',
+            question: `According to the ***Monstrous Compendium***, Volume II, a shambling mound grows by 1 HD every time it is subjected to a lightning attack. A wizard in my campaign has just ***charmed*** a shambling mound and has been busy dumping ***lightning bolts*** into it. When I wrote this letter, the shambling mound was up to 30 HD, and it probably will be up to 100 HD by the time you publish this. What should I do?`,
+            answer: [
+                `Gamesmanship such as you have described is fine in small doses; however, the DM must intervene when rules-bending threatens to send the campaign out of control. What should you do? Get creative.`,
+                `A shambling mound gains 1 HD and grows 1' with every lightning attack. Ever hear of growing pains? Anything that causes pain can be construed as a hostile act (the wizard in your example hardly has the shambler's best interests in mind), and attacks on the subject of a ***charm*** by the caster break the effect. Or, assume that the growth effect is only temporary—perhaps the shambler can maintain the extra growth for only a few turns or hours. Afterward, the shambler might shrink or the new growth might just die off. If you're feeling especially cruel, you might rule that once the shambler reaches 16 dice, it splits off and forms two 8-HD shamblers. Of course, the new shamblers wouldn't be ***charmed***. Note that unless the wizard in your example is using the ***charm plants*** spell, communication with the ***charmed*** shambler isn't possible without a ***speak with plants*** spell.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '56',
+            question: `If a specialist wizard loses enough ability-score points to put him below the minimums for his specialty, what happens? Does he simply become a generalist or is his loss more catastrophic?`,
+            answer: [
+                `The specialist suffers no ill effects at all; ability score reductions of any kind are painful enough. As this column has explained before. ability-score requirements for class and race are *initial* requirements only! Once a character becomes a member of a certain class or specialty, he stays a member unless he violates an alignment requirement or similar restriction placed on the class.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '56',
+            question: `A couple of issues ago, you said that spells from a combined school are available to any specialist who has access to at least one of the schools. Therefore, a conjurer can cast evocation spells, because he is barred only from greater divinations and invocations. Right?`,
+            answer: [
+                `Wrong. Invocation/Evocation is a single school; the "Invocation" entry in the conjurer's opposition school list is a typo. Note also that the proper name for the Greater Divination school is Lesser/Greater Divination. Conjurers are barred from learning divination spells of all kinds, not (as one reader suggested) just divination spells of 4th level and above.`,
+            ],
+            comment: [
+                `This was corrected in #182. Conjuration/Summoning specialists have minor access to Divination. The same is also written in The Complete Wizard's Handbook.`,
+                `This makes absolutely no sense, as it blocks them from learning Read Magic, Detect Magic, which is needed to read scrolls! This has to be wrong and contradicts the PHB that says that lesser divination is available to ALL wizards`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '56',
+            question: `How can I find a gaming club?`,
+            answer: [
+                `Many local game stores sponsor clubs. If the store doesn't have a club, the management probably will let you post a notice asking about clubs. When looking for a club, be ready to form your own if there isn't one in your area; it's quite likely that other gamers in your area also would like to join a club.`,
+                `The worlds largest role-playing club, the RPGA™ Network, has members in every region in the United States and in about 17 other countries. For more information about the RPGA Network, write: RPGA Network, P.O. Box 515, Lake Geneva WI 53147, U.S.A. Although the RPGA Network is a large, centralized organization, it currently has about 40 smaller, local game clubs affiliated with it, and it is getting ready to accept game retailers as members. RPGA Network members have access to a staff of volunteers who help members locate individual gamers or clubs in their local areas. Members can place free classified advertisements in POLYHEDRON™ Newszine, the Networks bimonthly newsletter, which is scheduled to become monthly in May 1991.`
+            ],
+            attributes: [],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '168',
+    publication_year: '1991',
+    publication_month: 'April',
+    foreword: `This issue, the Sage continues his look at spells in the AD&D® 2nd Edition game, then turns his attention to the often sticky subject of character alignment.`,
+    sage_advice: [
+        {
+            page_number: '56',
+            question: `How much weight can a wizard carry when using a ***fly*** spell?`,
+            answer: [
+                `This is up to the DM. Most campaigns allow the recipient to ***fly*** with as much weight as he normally could carry. Some campaigns apply the standard encumbrance rules (see the ***PHB***, page 76-79) and cut flying speed according to the weight carried. Other campaigns allow flying only when the recipient is lightly encumbered.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '56',
+            question: `What's all this about copying a spell into a spell book from a scroll (from DRAGON issue #157, page 25)? According the ***DMG***, page 41, spells can be researched using scrolls, but not just copied.`,
+            answer: [
+                `Page 41 gives the specific time requirements and costs for getting a spell found on a scroll into a spell book. Technically, the wizard does not copy the spell but reinvents it, using the scroll as a guide, then records the "invention" into his book. It amounts to the same thing.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '56',
+            question: `How does the ***invisibility*** spell work? Does it make the recipient transparent? If so, why isn't it an alteration spell? If ***invisibility*** is illusory, who decides what a creature sees when looking through an ***invisible*** creature? (Since the subject is "removed" from the scene, something's got to replace it.) Why does attacking make the subject visible? Why doesn't the spell make objects the subject picks up disappear?`,
+            answer: [
+                `***Invisibility*** is illusory, and no one decides what a creature sees when gazing through an ***invisible*** creature. The recipient isn't removed; it is rendered visually undetectable. In campaigns in Lake Geneva, most people assume the spell bends light so it passes around the recipient rather than bouncing off the recipient or being blocked altogether. "Bent" light affects a creature's eyes in exactly the same way unbent light does, though very intelligent or powerful creatures have a chance to notice the bent light and get a saving throw against the effect (see the ***PHB***, page 142). There probably are many other workable explanations of the spells mechanics; for example, the retinas of a viewing creature's eyes might be rendered completely insensitive to the recipient's image. In any case, the spells effect is strictly limited to a live recipient (the spell description lists "creature touched" as the area of effect), and the spell has absolutely no power to change the way the subject's surroundings look.`,
+                `If you take another look at the spell description, you'll see that items the subject picks up do become ***invisible***. For the purposes of this spell, anything the recipient can tuck into his clothing is considered part of the recipient. Attacks break the spell because the dweomer isn't powerful enough to continue hiding the recipient from creatures under attack. The instinct for self preservation sharpens the victims' perceptions, and the spell unravels.`,
+                `Apparently, quite a few folks think ***invisibility*** ought to fall into the alteration school; if you are one of them, by all means go ahead and run it that way. However, one also can argue that ***invisibility*** is an enchantment because it grants the recipient the "power" to disappear—and to make objects disappear, too. ***Invisibility*** is called as an illusion because the spells primary effect is to change the way other creatures perceive the recipient (i.e., they have no visual perception of the recipient at all). As such, the spell is more akin to other perception-altering spells such as ***phantasmal force*** and ***blindness*** than to any other class of spell. (One also could argue that ***blindness*** is an alteration, since it "removes" sight, but the loss of sight is a change in the way the recipient perceives things, so the spell is classed as an illusion.)`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY],
+        },
+        {
+            page_number: '56',
+            question: `Why can't psionicists be chaotic? After all, chaotic creatures tend to be self centered, and self knowledge is important to psionicists. Can chaotic characters have wild talents? Can a psionicist who has lost his abilities because he has become chaotic develop a wild talent?`,
+            answer: [
+                `It is very hard to answer this question any better than ***The Complete Psionics Handbook*** already does (see page 10), but here it goes: A broad range of psionic powers can be developed only through long hours of patient and intense meditation conducted according to strict rules. Chaotic characters are too impatient to meditate and too free thinking to accept the rules; therefore they cannot become psionicists. Many chaotic creatures have natural psionic abilities, but these creatures are not psionicists *per se*. Only chaotic-evil characters are terribly self centered; chaotic neutrals tend not to care about much of anything except for spreading chaos, and chaotic-good characters generally are concerned about other individuals' basic well being and freedom from oppression. In any event, to be self centered is not the same thing as being self aware or having true self knowledge.`,
+                `Any character can manifest a wild talent—even a "fallen" psionicist.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '56',
+            question: `The ***PHB*** says druids must be "neutral." Does this mean druids have to be true neutral, or do they just have to have an alignment with a neutral component?`,
+            answer: [
+                `Druids must be true neutral, as defined in the ***PHB***, page 47.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '56-57',
+            question: [
+                `Would a true-neutral druid be obligated to do something to balance out everything his party does? If a true-neutral druid does something that promotes one alignment, does he have to perform actions that promote each of the other major alignments? Would a druid who finds himself in a party of lawfulgood characters be obligated to work at cross purposes with his companions?`,
+                `Can a thief who is lawful good pick pockets?`,
+                `Could a paladin intimidate or harm a prisoner to get information? Does the prisoner's own alignment make a difference in this case?`,
+                `Why does the AD&D game have alignments? Why can't players just decide how their characters act rather then trying to force them into a prefabricated mold?`
+            ],
+            answer: [
+                `The people asking these questions all seem to share the same misconceptions about alignment. If questions similar to these have occurred to you, I suggest you carefully reread the section on alignments in the ***PHB***, starting on page 46. Pay special attention to the second paragraph on page 46, particularly the last sentence.`,
+                `Alignments in the AD&D game are the cornerstones of characters' personalities. They help each player decide what a character's attitudes and values are, but they are guidelines, not absolute rules. The game's designers and editors do not assume that the entire spectrum of morality, ethics, and philosophy can neatly be categorized into nine strict divisions, and you shouldn't either. When picking an alignment for a player character, I suggest you spend some time thinking about what the character's disposition, principles, and sentiments are; then choose an alignment that fits the character.`,
+                `Alignment is not defined by a single act. A good thief might indeed pick a pocket, and he might do so for any of many different reasons. He could lift a few coppers from an ostentatious fop to help feed a starving waif; he could filch the spell components from an opposing wizard during a combat encounter; or he might steal something outright, temporarily succumbing to greed (any character is entitled to commit the occasional slip). Note that, in the core AD&D 2nd Edition game, there are no lawful-good thieves (see ***PHB***, page 38).`,
+                `I occasionally see a letter from a person who thinks of lawful-good characters as ruthless, heartless folk who relentlessly impress their own views on others, but that's the lawful-evil formula for living. "Good" implies altruism, kindness, and the ability to see that serving the welfare of others can promote one's own self interests. On the other hand, I get too many letters from people who think good characters, and lawful-good characters particularly, are doormats who'll always allow evil creatures take advantage of their nobler instincts. Not so. Lawful-good characters, especially paladins, usually have very definite ideas about what has to be done to promote goodness, and they are free to try all manner of things to achieve their goals. Torture usually is considered evil because helpless people are capriciously harmed; however, a lawful-good creature might very well use bluff, intimidation, or even stronger measures to get vital information from a captive in order to better protect the innocent or confound a great evil. One severe interrogation, administered at the right time and for the right reason, does not make an inquisition.`,
+                `I get a lot of letters from people having trouble with the druidical ethos. Druids in the AD&D game believe in a "natural order" in which good, evil, law, and chaos play equally important roles. The first two paragraphs under the "ethos" heading on page 37 of the ***PHB*** explain the major elements of druidical doctrine.`,
+                `Contrary to popular belief, maintaining "balance," especially on a personal scale, is not a druidical priority. According to the druidical view, there is a universal cycle that constantly shifts the cosmic balance between the eight "extreme" alignments. Even major shifts in the balance don't bother druids, since any one alignment's ascendancy is as temporary as fine summer weather. Druids are, however, on the lookout for anything that might cause the balance to "stick." In the druidical view, a universe permanently turned good or evil would either be unproductive, like a world caught in eternal summer where the harvest never comes, or sterile, like a world gripped by endless winter. However, most parties' actions are insignificant when measured on a universal scale. Even heroic adventurers don't often get the chance the affect the whole cosmos, and very few mortals ever get the opportunity to affect the balance in a way that would concern a druid.`,
+                `Druids do not deliberately change their actions to reflect first one alignment, then another. Such shifts would make a druid's actions totally unpredictable, which in turn would tend to promote chaos. Druids believe that each of the eight alignments is equally valid, so it doesn't much matter to a druid which alignment his recent behavior tends to favor; any alignment will do over the short run. Druids do tend to be nonjudgemental about good, evil, law, and chaos; and they try to remain flexible and uncommitted to any single moral, legal, or philosophical system. However, druids regard interalignment struggles as part of nature, and druids serve nature. Since druids regard conflict between alignments as necessary, they do not seek to prevent their parties from continuing the struggle, nor do they resent being pulled into it themselves. Staying completely aloof or blocking their companions involvement would be as "unnatural" as trying to keep the leaves from falling in the autumn. Also, druids aren't stupid. Most parties won't take kindly to having their efforts continually stymied by a contrary druid (remember, alignment does not make characters into doormats). Being nonjudgmental, druids tend to go along with whatever their party chooses to do unless the party's actions threaten trees, crops, wild plants, and other things the druid is pledged to protect.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
         },
     ]
 });
