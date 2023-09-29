@@ -678,7 +678,7 @@ DRAGON_MAGAZINES.push({
             page_number: '9',
             question: `What is the significance of weapon speed factors?`,
             answer: [
-                `Weapon speed factors allow for comparison among weapons. The lower the speed factor, the quicker the weapon. Their most common use (and the only use mentioned in the rules) is for breaking ties on initiative. When a tie occurs, compare weapon speed factors; the lowest factor goes first. However, on the first round of a melee, when the opponents are closing, the longer weapons have the advantage. The advantage is also with mounted opponents attacking or defending against unmounted opponents and with characters who are defending or attacking from above. Spellcasting time is equivalent to the weapon speed factor. That is, a weapon with a speed factor of 3 is as slow as a three- segment spell for purposes of tie breaking.`
+                `Weapon speed factors allow for comparison among weapons. The lower the speed factor, the quicker the weapon. Their most common use (and the only use mentioned in the rules) is for breaking ties on initiative. When a tie occurs, compare weapon speed factors; the lowest factor goes first. However, on the first round of a melee, when the opponents are closing, the longer weapons have the advantage. The advantage is also with mounted opponents attacking or defending against unmounted opponents and with characters who are defending or attacking from above. Spellcasting time is equivalent to the weapon speed factor. That is, a weapon with a speed factor of 3 is as slow as a three-segment spell for purposes of tie breaking.`
             ],
             attributes: [ATTRIBUTE_1E],
         },
@@ -3532,6 +3532,146 @@ DRAGON_MAGAZINES.push({
                 `Druids do not deliberately change their actions to reflect first one alignment, then another. Such shifts would make a druid's actions totally unpredictable, which in turn would tend to promote chaos. Druids believe that each of the eight alignments is equally valid, so it doesn't much matter to a druid which alignment his recent behavior tends to favor; any alignment will do over the short run. Druids do tend to be nonjudgemental about good, evil, law, and chaos; and they try to remain flexible and uncommitted to any single moral, legal, or philosophical system. However, druids regard interalignment struggles as part of nature, and druids serve nature. Since druids regard conflict between alignments as necessary, they do not seek to prevent their parties from continuing the struggle, nor do they resent being pulled into it themselves. Staying completely aloof or blocking their companions involvement would be as "unnatural" as trying to keep the leaves from falling in the autumn. Also, druids aren't stupid. Most parties won't take kindly to having their efforts continually stymied by a contrary druid (remember, alignment does not make characters into doormats). Being nonjudgmental, druids tend to go along with whatever their party chooses to do unless the party's actions threaten trees, crops, wild plants, and other things the druid is pledged to protect.`,
             ],
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '169',
+    publication_year: '1991',
+    publication_month: 'May',
+    foreword: `This month, the sage looks at the theory and practice behind the skills, spells, and equipment in the AD&D® 2nd Edition game.`,
+    sage_advice: [
+        {
+            page_number: '98',
+            question: `Is the survival nonweapon proficiency useful only for extreme climates such as tundra or tropical jungle, or can it also be used for the temperate forests where most AD&D game campaigns are set?`,
+            answer: [
+                `The survival proficiency can be applied to any combination of terrain and climate. It is entirely possible for a ranger or druid to starve in the woods if the character is lost in unfamiliar terrain at the wrong time of the year. For example, food and water can be pretty tough to find in a deep forest in high summer when very few nuts and berries are ripe. On the other hand, even an unskilled character could do very well at the right time in familiar terrain.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '98',
+            question: `Is a character illiterate in his native tongue if he does not have the reading/writing proficiency? If this is so, isn't reading/writing absolutely required for wizards and priests?`,
+            answer: [
+                `If you're following the rules strictly, one proficiency "slot" must be spent for every language to be read or written. All wizards learn how to read magical notation, which is a highly specialized symbolic language, something like musical notation. This does not necessarily mean the character can read and write in other languages. Likewise, priests learn to recite prayers, catechisms, and the like; they might never learn to read anything. Individual DMs may hand out a few free reading/writing proficiencies to characters who might need them.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '98',
+            question: `Is the seamanship proficiency required to operate a small boat such as a canoe or kayak? How much do kayaks cost, anyway?`,
+            answer: [
+                `Seamanship includes the ability to handle small boats and serve as a crewman on larger craft. Whether or not seamanship is absolutely required to use a small boat is up to the DM (see the next question). The DM might also choose to limit seamanship to large craft and create a new proficiency, boating, to cover small craft. Kayaks, when available at all, cost about the same as canoes of similar size, 30-50 gp.`,
+            ],
+            comment: `A *Boating* proficiency is introduced in The Complete Thief's, Ranger's, Barbarian's, and Dwarves Handbook`,
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '98',
+            question: `Isn't it silly to require a proficiency check every time a character wants to do something unusual or complex? Doesn't everybody have at least a slight chance to succeed at anything? How would such chances be calculated?`,
+            answer: [
+                `It would indeed be silly to roll the dice every time a character attempts a task. However, nobody can try to do everything and succeed all the time. To stay between these two extremes, the DM must decide how difficult a task is and decide what skills are necessary to complete it. There are some things just about anybody could do; for example, it doesn't take the rope use skill to tie one's shoes, nor does it take the carpentry skill to nail two boards together. However, some skills *look* a lot easier than they really are. Canoes, for example, have a nasty habit of moving in circles when improperly paddled. Likewise, rowboats also are fond of orbiting or not moving at all when an inexperienced oarsman tries his hand. While a character with seamanship probably shouldn't have to roll to control a boat or canoe on a calm lake, unskilled characters are in for a hard time even under such favorable conditions. Also, there are some tasks that unskilled characters cannot complete. Only a carpenter has enough knowledge to build an entire house, and only a seaman can hope to control a boat or canoe through a dangerous rapids or during a windstorm.`,
+                `When adjudicating attempts that fall into the middle ground, the DM should decide how difficult the task is and how much specialized knowledge is needed for success. A skilled character probably can automatically complete an absurdly simple task even under poor conditions (perhaps failing only on a roll of 20), while an unskilled character might have to try harder. For example, a character with rope use might be able to tie his shoes with one hand or while hopping on one foot, while an unskilled character might have to make a roll. A good rule of thumb in such cases is to use the normal proficiency score reduced to one half or one quarter (round fractions down); the more difficult the task, the less chance there is for success. Consider the circumstances carefully. The world-record long jump currently is 29'2½", but this does not mean that every adventurer can leap a 10' pit with ease; encumbrance, damage, footing, lighting, even ceiling height will affect any attempt to jump. The DM should decide on a case-by-case basis using common sense. The DM should try to avoid making the campaign a slave to the proficiency system, but making the players *think* their characters out of a predicament is better than allowing them to extricate themselves by calling on skills the characters don't have.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '98',
+            question: `I have a dual-classed fighter/thief whose thief level finally has exceed- ed his fighter level. If he uses two weapons, can he still get weapon specialization bonuses? Can he use weapon specialization bonuses while backstabbing? Which saving throw chart does he use?`,
+            answer: [
+                `A character can use a specialized weapon with another weapon; see the "twoweapon style" question in "Sage Advice," issue #165, page 91 for details. Neither dual-classed nor multiclassed characters can combine class abilities. If your fighter/thief backstabs, he must use his rogue THAC0 and must forgo specialization bonuses; he can, however, use his warrior strength bonuses. Strength and magical bonuses to a thief's damage are applied *after* the backstab multiplier. A multiclassed character (and a dual-classed character whose active class level has surpassed his original class level) uses the best applicable saving throw.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '98',
+            question: `Can a spell caster have two ***mirror image*** spells running at the same time? If so, is there a limit to the total number of images the caster can have at one time?`,
+            answer: [
+                `I can't think of a reason why multiple ***mirror image*** spells cannot be used, but note that each additional spell creates 2-8 additional images of the caster, not of the caster and all previously existing images. I strongly suggest that you limit the total number of images to eight. If an additional spell would bring the total to nine or more ***images***, the excess ***images*** from the new spell are lost.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '98-99',
+            question: `According to the ***magic jar*** spell description, the host life force is held captive in the receptacle if the spell caster gains possession of a body. What happens to the host life force if the receptacle is destroyed while the caster is still in the host body?`,
+            answer: [
+                `***Magic jar*** creates all kinds difficulties for DMs. Here's an answer to tide you over until something official comes along: Any life force held in a ***magic jar*** receptacle is slain if the receptacle is destroyed (see the ***Player's Handbook***, page 170). However, unwilling victims of ***magic jar*** spells are not irrevocably slain as the caster would be if the receptacle is destroyed, as the captive life force is not an integral part of the spell as the caster's is. Note that the caster's life force must return to the receptacle before returning to his own body. If the DM feels the need to discourage player characters from using ***magic jar*** as a cheap way to slay opponents, it's fine to set a high value on the crystal or gem required for the receptacle, to prohibit the caster from replacing receptacles when they are destroyed (thus trapping the caster in the host body), or both.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '99',
+            question: `How are the fiery bolts created by the second version of the third-level ***flame arrow*** spell used? Can the caster hurl them all at once? Does he have to roll to hit his targets? Will the bolts affect creatures harmed only by magic weapons?`,
+            answer: [
+                `The caster need not hurl all the bolts on the round of casting, but unused bolts are lost when the spell's duration expires at the end of the round. The caster must make a to-hit roll for each bolt; range modifiers do not apply to the roll, but dexterity adjustments do. The DM might wish to allow an additional +2 to-hit bonus as in the ***Melf's minute meteors*** spell. The fiery bolts are a magical attack and can affect just about any creature. Note that the bolts inflict minor piercing damage (1d6) and fire damage (4d6, save for half); creatures that are immune to only one of these forms of damage still suffer the other form of damage if struck. If the caster directs one or more bolts at a magic-resistant creature, the creature makes one magic resistance roll for the volley; if it succeeds, the entire volley is negated. Bolts from multiple casters constitute separate volleys.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '99',
+            question: `What happens to creatures that are partially or completely submerged in mud when a ***mud to rock*** spell is cast in the vicinity?`,
+            answer: [
+                `A creature completely submerged in mud will be trapped in the resulting rock. Creatures walking or wallowing on the surface might escape entrapment if they save vs. breath weapon.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '99',
+            question: `Will a ***wall of iron*** stand up on its own, or does it always tip one way or another? Will it tip if placed directly against an existing wall, or will it insert itself into the wall and reinforce that wall?`,
+            answer: [
+                `An unsupported ***wall of iron*** will fall over unless it can insert itself into adjacent nonliving material. The wall can be placed face-to-face with another nonliving surface to reinforce it. Note that a ***wall of iron*** is always created vertical. Also, a ***wall of iron*** is very heavy, and the DM might rule that even a supported ***wall*** will tip if the adjoining material is very weak (such as a thin wooden or plaster wall). In such cases the magical wall probably will bring the supporting material tumbling down with it.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '99-100',
+            question: `Are undead, constructed beings, or plants affected by the ***polymorph other*** spell or a ***wand of polymorphing***? Why or why not?`,
+            answer: [
+                `Most creatures, including undead and simulacra, can be ***polymorphed*** with the fourth-level ***polymorph other*** spell or a ***wand of polymorphing***. (As a side note, golems are creatures, but all of them are immune to ***polymorph*** spells.) Generally speaking, a creature is an entity that can move and react without outside aid. A creature need not be alive. On the other hand, magically controlled creatures still are creatures even when not acting independently. Animated nonliving objects (excluding skeletons and zombies) are not creatures, whether magically or mechanically animated. If the DM uses science-fiction monsters such as sentient robots or androids, he should decide when they are introduced whether to treat such entities as objects or creatures. Nonsentient plants probably should not be considered creatures for purposes of low-level ***polymorph*** magicks. Note that animals cannot be turned into plants by ***polymorph other*** spells or a ***wand of polymorphing***; the eight-level ***polymorph any object*** spell is required for such transformations.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '100',
+            question: `Why do the potions of ***heroism*** and ***super heroism*** work only on warriors?`,
+            answer: [
+                `There are several magical items that work only for specific classes. In each case, game logic and game balance play a role. Game logic in this case is unclear, but it probably goes something like this: The potions enhance, not create, the warrior potential in a character. Zero-level characters and warriors have the potential to be enhanced, but members of other classes do not. The latter have abandoned or suppressed any warrior potential while training to become members of their own classes. Game balance demands that there be distinct differences between classes. Class specialization in the AD&D game helps to insure that all characters are not near-clones trying to achieve the same menu of skills and abilities. Clearly defined character classes also make teamwork necessary, since one or two characters cannot do everything that might be required for successful adventures. This also promotes role-playing and campaign longevity. Most magical items that duplicate class abilities are class specific. Otherwise, class distinctions would disappear and a typical party would become a homogeneous mix of wizards turned healers, wand-toting fighters, sword-swinging priests, and scrying rogues.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '100',
+            question: `When using Table 8 (on exceeding level limits) from the ***DMG***, which ability score is the prime requisite for a ranger?`,
+            answer: [
+                `The prime requisites for a ranger are strength, dexterity, and wisdom. The prime requisite for each character class is listed at the beginning of the class description in the ***PHB***, immediately after the class's ability requirements.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '100',
+            question: `How should ability score checks be handled for monsters with no defined abilities? For example, how do I determine the dexterity score for a horse or a hill giant?`,
+            answer: [
+                `If the question comes up during play, it's best to decide quickly. Keeping the game moving is more important than making a precise calculation. I suggest that you assume that any monster has average ability scores (about 10). Just roll a 1d20 for ability checks; if the result is 10 or less, assume the creature passes the check.`,
+                `If the roll is higher, start figuring: Roll 1d3 to get the base ability score. In the case of dexterity, add one or two to the base score if the creature is described as agile, quick, or sure footed (subtract one or two for clumsy creatures). You might add a point for a high movement rate and one point for every multiple of three that the land or water movement rate rises above 12 or every multiple of six for air movement above 18 (you can subtract points at the same rate for exceptionally slow creatures). Generally, creatures with multiple legs are more sure footed than bipedal creatures, allowing one point for each pair of legs after the first two. The situation will exclude some modifiers; a horse might get modifiers for speed and legs when determining if it can jump a fence, but it might get none for deciding if it slides down a rocky slope. On the other hand, a basilisk probably couldn't jump over a matchbox but would get credit for its eight legs when negotiating slopes. Giants are notoriously clumsy, but their sheer size allows them to simply ignore most obstacles.`,
+                `When calculating other ability scores, consider the following: Strength generally equates to size; tiny creatures might receive a -2, small creatures a -1, man-sized creatures no modifier, large creatures a +1, and so on. Creatures especially noted for strength, such as draft horses, might get an extra point or two. If a creature has any damage modifiers from strength, use Table 1 in the ***PHB*** to estimate its strength score. Wisdom generally equates to intelligence, with an extra point or two if the creature has priest spells or is noted for its cunning or guile. Most monsters have higher than normal constitutions (say 11-13), modified for size as per strength. Most monsters have low charismas (say 8-10) with extra points added for high intelligence and times when a creature deals with other monsters of the same alignment. Needless to say, it's always better to go through this process *before* play begins when possible.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '100',
+            question: `The description for the wall of sand spell in ***FORGOTTEN REALMS® Adventures*** implies that the wall is always 12' high, no matter what the caster's level. Is this the case?`,
+            answer: [
+                `Judging from the descriptions of other ***wall*** spells, I suggest that a ***wall of sand*** be no thicker than 4' per caster level, up to 12' high per caster level, and up to 4' long per caster level.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '100',
+            question: `The ***spectral wings*** spell from ***FORGOTTEN REALMS Adventures*** creates two 12' wings with a wingspan of 26'. Doesn't 12+12 = 24? Also, the ***spectral wing's*** will follow their last instruction if the caster is slain. How aggressively will they follow an order such as "kill those creatures that are attacking me"?`,
+            answer: [
+                `The spell creates a ghostly steed with 12' wings; the extra 2' come from the thickness of the mount itself. the steed has no intelligence and acts only at the caster's command. It is utterly incapable of following complex orders. The DM might allow the steed to make overbearing or pummeling attacks, but the caster must think out such attacks action by action, as though performing the attack himself. If, for example, the caster orders the steed to swoop own and attack a foe, but the caster is slain before he gets there, the steed follows the last command—to swoop—and probably will smack the ground at a high rate of speed as there is nobody to stop its dive. In this case, the steed tries hard to drive itself right into the earth until its duration expires.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
         },
     ]
 });
