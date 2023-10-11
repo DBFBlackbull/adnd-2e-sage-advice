@@ -7,6 +7,11 @@
         return formatString(input, issue, question)
     }
     function formatString(s, issue, question) {
+        s = handleAsterisks(s, issue, question)
+        return s
+    }
+
+    function handleAsterisks(s, issue, question) {
         let asterisks = s.match(/(?<!")\*(?!")/g) || [] // Ignoring asterisk that are surrounded by quotes
         if (asterisks.length === 0) {
             return s
@@ -64,8 +69,7 @@ script.
         // Get the text field
         let element = document.getElementById(id);
         let innerHTML = element.innerHTML;
-        innerHTML = innerHTML.replaceAll(/<button.*<\/button>/g, '')
-            .replaceAll(/<br><img.*>/g, '');
+        innerHTML = innerHTML.replaceAll(/<span class="no-copy">(.|\n)*?<\/span>/g, '');
 
         // Copy the text inside the text field
         const blob = new Blob([innerHTML], {type: 'text/html'});
@@ -88,13 +92,15 @@ each magazine, _ in dragonMagazines
             - let id = `${magazine.issue_number}-${questionNumber}`
             p(id=id)
                 | Sage Advice ##{magazine.issue_number} (#{magazine.publication_month} #{magazine.publication_year}) p. #{advice.page_number}, Question:#{questionNumber}
-                button(onclick=`copyToClipboard('${id}')` title="Copy to clipboard") 📋
-                | &ensp;
-                a(href=anchorLink(id)) 🔗
+                span(class="no-copy")
+                    button(onclick=`copyToClipboard('${id}')` title="Copy to clipboard") 📋
+                    | &ensp;
+                    a(href=anchorLink(id)) 🔗
                 br
                 strong !{formatInput(advice.question, magazine.issue_number, questionNumber)}
                 br
                 span &emsp;!{formatInput(advice.answer, magazine.issue_number, questionNumber)}
                 if advice.image
-                    br
-                    img(src="../img/"+advice.image)
+                    span(class="no-copy")
+                        br
+                        img(src="../img/"+advice.image)

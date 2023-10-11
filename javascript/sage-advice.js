@@ -29,6 +29,7 @@ const SYNONYMS = [
     ['spellbook', 'spell book'],
     ['levitate', 'levitation', 'levitating'],
     ['magic-resistance', 'magic resistance', 'magic-resistant', 'magic resistant'],
+    ['hit point', 'hit-point']
 ];
 
 const DRAGON_MAGAZINES = [];
@@ -4095,7 +4096,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '14',
-            question: `Can a portable hole be draped across a character's back to prevent him from being back-stabbed?`,
+            question: `Can a ***portable hole*** be draped across a character's back to prevent him from being back-stabbed?`,
             answer: [
                 `While a ***portable hole*** can be spread out over any surface to form its extra-dimensional space, a creature is not a surface. Creatures cannot make themselves insubstantial—and therefore immune to attack—by wrapping themselves in ***portable holes***.`,
             ],
@@ -5243,6 +5244,675 @@ DRAGON_MAGAZINES.push({
                 `Regarding the tarrasque's ***teeth of sharpness***: There are two things you obviously haven't seen: the size and sharpness of a large rabbit's front incisors, which can do nasty things to errant fingers, and the movie *Monty Python and the Holy Grail*, in which a vorpal bunny wreaks havoc on King Arthur and his knights. The movie isn't part of the game, but I couldn't help thinking of the vorpal bunny scene when I was writing the column. You have a good point in that bunny teeth really aren't the limb-severing type. Still, the tarrasque is a power unto itself. I encourage DMs to ride herd on any group of PCs foolish enough to tackle the tarrasque, and limb-severing tarrasque/bunny bites are fine with me so long as they are fine with the DM.`,
             ],
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '184',
+    publication_year: '1992',
+    publication_month: 'August',
+    foreword: `This month, the sage clarifies a few items before venturing into the untold reaches of optional material for the AD&D® 2nd Edition game.`,
+    sage_advice: [
+        {
+            page_number: '52',
+            question: `Does the wizard spell ***project image*** allow the caster to extend the range of his spells? If not, what good is it? What happens when the caster wants to change a ***projected image's*** relation to himself? In other words, if the image is facing in the same direction as the caster, what does the caster have to do to make the image face to his left? What happens to the image after the relationship shifts?`,
+            answer: [
+                `The text in the spell description (***Player's Handbook***, pages 180-181) does say that the image duplicates all the caster's actions, including spell-casting. That doesn't really make the spell's effect on spell-casting very clear, but the spells description in the 1st Edition ***PH*** (page 85) includes this line: "A special channel exists between the image of the magic-user and the actual magic-user, so spells cast actually originate from the image." I dont' think the 2nd Edition team left out that line to strip the ***project image*** spell of this property. As people on the GEnie computer network have pointed out, the spell does very little to deserve its sixth-level power ranking without this ability.`,
+                `Running the spell this way does, however, force the DM™ to consider what happens to touch-delivered spells and spells that affect only the caster. I suggest that touch-delivered spells originate at the image, which the caster can then use to "attack" targets within his own movement limits. I also suggest that all spells with a purely personal effect (range 0, or area of effect limited to the caster) take effect only upon the caster; assume that such effects stay with the caster and don't "flow" through the channel. Note that ***project image*** extends a spell's range only indirectly by virtue of the fact that most spells originate from the image and not from the caster. Likewise, clever casters might use ***project image*** to cast spells around corners or into areas where they'd rather not be.`,
+                `The caster is free to change the image's facing relative to himself just by concentrating for one round, which limits the caster to half movement and no attacks. Once the relationship changes, the image goes right on duplicating all the caster's actions, all the way down to spell-casting.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '52',
+            question: `My friends and I have been trying to find the rules for adjusting initiative rolls in the AD&D 2nd Edition game according to the character's dexterity score (reaction adjustment). However, there is no mention of dexterity in the Standard Modifiers to Initiative table or in any of the optional initiative rules.`,
+            answer: [
+                `You can't find any mention of the effects of dexterity on initiative in the AD&D 2nd Edition game because there isn't any, and there weren't any in the AD&D 1st Edition game either. Raw reflexes can affect surprise, but their only effect on combat is to adjust armor class. The AD&D game's one-minute combat rounds make individual quickness much less important than the character's defensive value and general class of actions; that's why things like weapon speed factors and spell-casting times do affect initiative. Of course, DMs are free to add their own house rules incorporating reaction modifiers. The simplest way is to just subtract the modifier from the die roll. If you do this, I strongly suggest the DM take a long look at the monsters that populate the campaign and assign a reaction modifiers to some of the quicker beasts; otherwise, the PCs are going to win initiative far too often.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '52',
+            question: `Many of the thief kits in ***The Complete Thief's Handbook*** require or recommend the Gather Intelligence nonweapon proficiency. I cannot find this skill listed anywhere.`,
+            answer: [
+                `"Gather Intelligence" is a typo. The proficiency's real name is "Information Gathering."`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '52-53',
+            question: `It's raining monsters in my campaign! It seems that anyone with the Dimensional Door devotion can place a dimensional door under any poor, unsuspecting fool and watch him fall 60 yards or more to his death. Unless my DM and I are misreading the description (***The Complete Psionics Handbook***, page 69), anyone with this power can kill anything that can't fly or slow its fall.`,
+            answer: [
+                `Boy, are you ever misreading this devotion's description! First, while it's fine to assume that a creature automatically steps into a door created beneath it, it doesn't have to be so. The DM is free to allow the creature a save to avoid "falling in," or the DM can decide that a creature never falls in and is just displaced onto safe ground instead.`,
+                `Second, there's nothing in the description that suggests creatures passing through the door suffer damage of any kind, Any creature entering one door automatically appears at the other one, and vice versa. This movement is instantaneous and interdimensional. This is not the same as falling or running an equivalent distance; the creature does not gain any velocity or kinetic energy, it appears at the other door just as if it used a ***teleport*** or ***dimension door*** spell to go from one door to the other. Note that a creature falling 60' into one door probably will suffer 6d6 hp damage when coming out the other door, as the dimension between the doors doesn't reduce kinetic energy or velocity any more that it increases it.`,
+                `Note also that one of the two doors the psionicist creates appears *in front of the psionicist* (the description does not say how close, but I suggest from 1" to 5' at the psionicist's option), and one pretty much wherever the psionicist wants it. This means that if the psionicist wants to create a door immediately underneath a foe, he'd better be ready for a fight.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '53',
+            question: `Psychokinetic devotions seem impossible to get. Every psycho- kinetic devotion has Telekinesis as a prerequisite, which is a science. You must have twice as many devotions in a discipline as you have sciences, so to add a psychokinetic devotion to your repertoire you'd have to add Telekinesis and two devotions. The only time you get to add a science and two devotions (according to the table in the ***CPH***, page 12) is when you go from 2nd to 3rd level. However, you also are not allowed to have as many sciences or devotions in a discipline as you have in your primary discipline, and at 3rd level you only get two sciences. You can't just pick up Telekinesis alone, then add devotions later, because you must always have at least twice as many devotions in a discipline as you have sciences. Am I misunderstanding something, or is there a problem here? The difficulty could be solved by adding a psychokinetic devotion or two that does not have Telekinesis as a prerequisite.`,
+            answer: [
+                `Actually, there are several psychokinetic powers that don't require Telekinesis: Animate Shadow, Control Light, Control Sound, Molecular Agitation, Soften, and, of course, Telekinesis. This is an official piece of errata that was included with the DARK SUN™ boxed set. (For a free copy of the ***CPH*** errata sheet, send a self-addressed, stamped envelope to: Steve Winter, c/o TSR, Inc., P.O. Box 756, Lake Geneva WI 53147, U.S.A.)`,
+                `Even so, if psychokinesis isn't your character's primary discipline, it's pretty rough to add Telekinesis to your psionicist's bag of tricks. This difficulty is not limited to psychokinesis. Since you can never have as many sciences or devotions in a secondary discipline as in the primary discipline, the additional science earned at 3rd level *must* be in the primary discipline, no matter what the primary is. This is deliberate. Learning psionic powers is an orderly process that does not allow the character to jump willy-nilly between disciplines. That's why psionicists must be lawful. No psionicist has the mental wherewithal to become a dilettante. Psionicists aren't meant to plunge headlong into new devotions—they explore them slowly and deliberately.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '53',
+            question: `What happens if a character with a wild talent decides to become a psionicist? Does he add all his PSPs together? Do his wild talents count as prerequisites for new powers? Do wild talents count toward the characters limits on disciplines, devotions, and sciences?`,
+            answer: [
+                `All the rules on dual-classed characters in the ***PH***, page 45, apply. The character temporarily sets aside his wild talents and sets out to study how psychic powers really work. (Note that most DMs probably wouldn't make a character set aside wild talents if the dual-classed character was picking up any other class except psionicist, since wild talents have nothing to do with any character class, but this is a special case.) The character gains a separate pool of wild-talent PSPs and powers, and he cannot use powers or PSPs from this pool without giving up experience as described in the ***PH***. The wild talents do not affect the types of psionic powers the character can learn; they are locked away in a separate part of the character's mind, just like all the other class abilities the character has chosen to ignore for the moment.`,
+                `As soon as the character's psionicist level exceeds his old character-class level, he theoretically has access to his old character abilities and wild talents. However, he also still must abide by all the restrictions of the psionicist class. The simplest way to handle this is just to assume that the character has a few rogue powers and a pool of PSPs to support them. Such powers would never count against the numerical limits on the psionicist's powers or be used as prerequisites for other powers. However, the DM might allow the character to integrate his wild talents into his list of psionicist powers. This should not be a problem if the character does not exceed the number of disciplines he normally is allowed, and if he does not exceed the number of different kinds of sciences and devotions he can have within those disciplines. That is, the character can have "bonus" sciences and devotions but not extra disciplines, and the total number of devotions and sciences he has in his primary discipline still sets a limit on the number of sciences and devotions he can have outside the primary discipline (the primary discipline is the first discipline chosen when the character is a 1st-level psionicist). Proper play balance requires that the character's total number of disciplines remain unchanged and that the ratio between powers inside and outside the primary discipline be maintained. The effects of lifting these limits would be something like letting wizards and priests choose their daily spells as they need them instead of studying or praying for them in advance.`,
+                `The character should be able to make free use (for purposes of prerequisites, PSP expenditure, and otherwise) of any power that does not violate the limits. For example, a character with a Mind Bar wild talent could choose telepathy as his primary discipline and have free access to the power, since Mind Bar is a telepathic devotion. (The total number of devotions within a primary discipline is limited only by the psionicist's level. In this case, Mind Bar is a "bonus" power.) Powers that exceed the limits must remain separate; for example, a character whose primary discipline is psychometabolism might not have "room" for Mind Bar, since the number of nonpsychometabolic devotions he can have is limited to at least one less than the number of psychometabolic devotions he has. So long as the character has even one excess power, his wild talent PSPs can be expended only to establish and maintain wild talents (and PSPs gained from the character's psionicist level cannot be spent on such rogue powers). If the character has a power both as a wild talent and as a psionicist's power, he should be allowed to merge the two and gain a point on his power score. Likewise, if the character manages to fit all his wild talents into his limits, he should be allowed to add his wild-talent PSPs to his psionicist total. The easiest way for the character to do this would be to choose a primary discipline that includes his wild-talent powers.`
+            ],
+            comment: `Psionicist + Wild talent is explored further in ***The Will and the Way***,`,
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '53-54',
+            question: `The text and illustrations in ***The Arms and Equipment Guide*** identify a morning star as a kind of club with a spiked head. I always thought a morning star was one or more balls attached to a short handle by a chain or chains, but ***The Arms and Equipment Guide*** describes that kind of weapon as a flail. Also, where is the mace entry on the Master Weapons Chart?`,
+            answer: [
+                `In both versions of the AD&D game, a morning star is a big club with a spiked or ridged head, something like a hardwood baseball bat with a lot of large nails driven into the business end. That also is the definition given in every reputable treatise on medieval weapons I've ever read.`,
+                `A flail, in the AD&D game and anywhere else where an accurate nomenclature of medieval weapons is used, is a weapon with the business end separated from the handle by a chain or other flexible joint. The ball, chain, and short-handle version is called a horseman's flail in the AD&D game. Another common form of flail is a long handle with a big club attached to the end by a very short length of chain; this is called a footman's flail in the ADD game. Flails of all kinds are the direct descendants of agricultural flails used to thresh grain; before the Industrial Revolution, the only way to separate grains of wheat, oats, rice, etc. from their stalks was to pile up the harvested plants and literally beat (thresh) them. The extra "snap" provided by the flails jointed head allowed the farmer to hit the pile of grain with more force and get the job done faster.`,
+                `Both morning stars and flails were mainstays of the common folks weaponry because they were easy to make and use. No commoner—certainly no farmer—would ever mistake one for the other. I personally have never seen a flail improperly identified as a morning star in print, but I have met a lot of people who apparently have. I've also met people who confuse flails for maces, probably because they both can have round heads studded with spikes. If using an alternate nomenclature for medieval weapons makes you happy, fine, but when you're playing the AD&D game use the game nomenclature to avoid confusion.`,
+                `[Webster's Third New International Dictionary *(Unabridged, 1986) describes a morning star as "a weapon consisting of a heavy ball set with spikes and either attached to a staff or suspended from one by a chain-called also holy-water sprinkler" (page 1471). "Holy water sprinkler" is used as an alternate name for the morning star in both the 1st Edition **PH** (page 37) and **AEG** (pages 82-83). Obviously, some confusion on this matter exists even among authorities. — Editor]*`,
+                `[Don't depend on the dictionary for definitive information on game topics. Dictionaries and encyclopedias are fine places to start looking, but the people who compile them are unlikely to be experts on medieval weapons, and they certainly aren't experts on the AD&D game. — Sage]`,
+                `The two forms of mace, horseman's and footman's, don't appear on the ***AEG's*** Master Weapons Chart (page 108). The typo monster strikes again. The statistics for the two types of maces presented in the ***PH***, page 68, are correct.`
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '54',
+            question: `In the RAVENLOFT® setting, will a paladin or good cleric lose his special class abilities if he fails a Ravenloft powers check? If a ***resurrection*** or ***raise dead*** spell fails and instead turns the target into an undead, would the spell-caster have to make a powers check? If so, why? Isn't casting one of these spells a good act? Is there any way to remove the stages and effects of failed powers checks?`,
+            answer: [
+                `First, take another look at the altered spell descriptions for ***raise dead*** (***Realm of Terror***, page 44) and ***resurrection*** (***RT***, page 45), and you'll find that each of these spells requires a powers check if they succeed or not. Bringing the dead back to life sends ripples through the Demi-plane of Dread. No matter what the spell-caster's intention, plucking a being out of the afterlife and returning him to the lands of the living is an event that the powers of Ravenloft always find interesting. It is true that powers checks are intended to start evil PCs down the road to ruin, but anyone who tampers with fate or with other basic forces in the multiverse while adventuring in Ravenloft takes the same risk.`,
+                `When a character first fails a powers check, the powers of Ravenloft essentially invite the PC to become one of their own "part of the furniture," as TSR's Jon Pickens puts it. A stage-one failure is a subtle enticement that shouldn't give the PC any obvious clues about what's really going on. When paladin or cleric abilities disappear, the character is getting a strong clue that he's started down the wrong path. Also, as you point out, you can fail a powers check by doing things that would be considered good deeds anywhere else. Since powers checks are intended to punish players who wander off the straight-and-narrow path of heroic fantasy, play balance and overall campaign health dictates that the DM allow characters to redeem themselves once they've gone astray. For the moment, DMs are on their own when deciding how and when a character properly atones. However the upcoming ***Forbidden Lore*** boxed set, available in November and previewed in POLYHEDRON® Newszine issue #74, has extensive new material on powers checks.`,
+                `Here are some suggestions until something better comes along: At the minimum, a character who wishes to reverse the results of a failed check should act scrupulously good. If the character has taken any special vows or represents a particular system of beliefs (a paladin, for example), his new behavior must absolutely embody the tenets of his sect or order. Furthermore, the character should avoid making use of the rewards and enticements a failed check brings. It might be hard to avoid using a +1 saving-throw bonus, but in such cases I suggest the DM allow it, especially if the character role-plays the attempt to give up the bonus ("Yeah, I know Bruce Bonecruncher gained a +1 bonus on fear checks after wrecking that altar, but he really looks long and hard at the swarm of killer bees just to be sure he has the gumption to stand up to them."). Of course, an ***atonement*** and a suitable quest should reduce or remove the effects of a failed powers check. So might a simple ***remove curse***, especially if the character has left the demi-plane or has spent some time actively resisting the powers. For a stage one failure, I suggest one month as the minimum period of atonement.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '54',
+            question: `Page 46 of ***The Complete Wizard's Handbook*** says a starting witch character has 1,500 gp worth of magical items, but the rules don't give gold-piece equivalents for magical items. Is it supposed to say 1,500 xp? Even if it does, you can't choose from many items, as most rods, staves, wands, and miscellaneous magical items are worth more than 1,500 xp.`,
+            answer: [
+                `This is a design/editorial error, as the core rules for the AD&D 2nd Edition game don't list any monetary values for magical items. The upcoming ***Magical Encyclopedia*** does list a gold-piece value for just about every item ever created in the AD&D game (volume one, of two, will be available this fall). Gold-piece values, however, are even higher than experience values, and a starting witch probably could afford to "buy" only a single cursed item or a useful potion or two. This is because the witch is supposed to have an old item or two just left laying around from the old days, not so that she can have a leg up on everybody else in the magical-treasure department. As a rule of thumb, an item's monetary value is three to seven times its xp value (usually five times), and most cursed items usually are worth 100 gp (for potions) to 1,000 gp (for miscellaneous magic).`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '54',
+            question: `The descriptions of both the Dwarf Runes and Endurance non- weapon proficiencies in ***The Complete Book of Dwarves*** say that all dwarf characters get them at no cost. Yet the Nonweapon Proficiency Groups section on page 39 lists the cost of both as one slot. Which is correct?`,
+            answer: [
+                `Both are. Dwarves get these nonweapon proficiencies for free but must "spend" a slot to improve them (***PH***, page 55); non-dwarves can obtain both these proficiencies at the listed cost of one slot each.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '54',
+            question: `While reading the ***Tome of Magic***, this question occurred to me: If wild mages cannot specialize in any school except wild magic, and if only wild mages can cast wild-magic spells, why are all the wild-magic spells put into schools other than wild magic?`,
+            answer: [
+                `First, wild magic is not a school; it is a chaotic magical force and a method of studying magic that capitalizes on that chaos. As the ***TOM*** points out (page 5), wild mages are not true specialist wizards, but their unusual approach to magic gives them many of the same benefits that specialist wizards get.`,
+                `As unpredictable as wild magic is, it still functions within the school framework. That is, wild-magic spells serve to alter, summon, block, etc. just like other spells in the game do. Note that priest spells aren't arranged into schools, either, but each spell still is assigned a school that helps define how and why it works. Various game mechanics that make use of spell schools work normally in regard to priest and wild-magic spells. For example, a ***detect magic*** spell can be used to determine a spell's school, which in turn reveals clues about what the spell is doing and how it might affect an adventure. Likewise, a specialist wizard who receives a bonus or penalty to saving throws against spells of a particular school gets that bonus or penalty even if the spell in question is a wild magic spell or priest spell.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '185',
+    publication_year: '1992',
+    publication_month: 'September',
+    foreword: `This month, the sage continues exploring the untold reaches of optional material for the AD&D® 2nd Edition game.`,
+    sage_advice: [
+        {
+            page_number: '76',
+            question: `The Alertness proficiency from ***The Complete Thief's Handbook*** reduces the chance of being surprised by "1-in-6," but the rules in the ***Players Handbook*** use a 10-sided die for initiative and surprise. Also, when do you check this proficiency?`,
+            answer: [
+                `The AD&D 2nd Edition game does use a ten-sided die for initiative and surprise. The "1-in-6" reference is an error. As I understand it, ***The Complete Thief's Handbook*** and other early books in the Complete Handbook series were written before the new ***PHB*** was released, so it was very hard for the authors and editors not to think in AD&D 1st Edition game terms while doing their work.`,
+                `Alertness grants the character a +1 bonus on surprise rolls (in the current game, an adjusted roll of 1-3 on a 1d10 indicates surprise). ***The Complete Thief's Handbook*** leaves the DM™ on his own when it comes to deciding when to make Alertness proficiency checks. I think the most sensible method is to have the character make the check immediately before any surprise roll. Another workable method would be to allow a character to check once every turn (10 minutes) or hour. The +1 bonus for a successful proficiency check would apply to all surprise rolls made within that time.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '76',
+            question: `Pages 77-78 of ***The Complete Fighter's Handbook*** state that only single-classed warriors can specialize in punching, wrestling, and martial arts at the same time. However, an earlier "Sage Advice" column said that warriors can specialize only once ever, changing the rule in the ***Player's Handbook***, page 52. What gives?`,
+            answer: [
+                `"Sage Advice" does not change the rules. The text in the ***PHB***, page 52, has been changed so that single-classed warriors can get only one weapon specialization. "Sage Advice" just passed along the errata to you, the reader. If you reread the rules on punching, wrestling, and martial arts specialization in ***The Complete Fighter's Handbook***, you'll find that these "specializations" do not count as weapon specializations. Single-classed warriors are free to take as many of them as they have nonweapon proficiency slots to spend on them. Dual- or multiclassed warriors can choose one style specialization and one unarmed specialization: punching, wrestling, or martial arts, assuming they have the proficiency slots to spend on them. The terminology is confusing, but these four types of "specializations" are not weapon specializations, per se.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '76',
+            question: `Page 12 of ***The Complete Bard's Handbook*** says bards receive lesser penalties for wearing heavy armor because they are accustomed to wearing such armor while thieves are not. I must take exception to this. To my mind, multiclassed fighter/thieves are just as "accustomed" to heavy armor as are bards. The reduced penalties should apply to both types of characters or to neither. I would say to neither, since only dexterity should mitigate the noise, stiffness, and bulk of these types of armor and the ***PHB*** already allows for dexterity adjustments.`,
+            answer: [
+                `As "Sage Advice" has pointed out before, the Complete Handbooks contain *optional* rules for altering your campaign's scope and focus. Don't waste time taking exception to anything you find in them—just don't use the rules you dislike. As always, you'll have to use common sense when picking and choosing rules, but you never have to use all the rules in a "Complete Handbook!' I think you can still get pretty good use out of ***The Complete Bard's Handbook*** even if you don't allow bards reduced penalties for wearing armor.`,
+                `I think you've really opened a can of worms by suggesting that fighter/thieves might be entitled to the reduced armor penalties in the ***The Complete Bard's Handbook***, even if you immediately reject the idea yourself. I suppose that it isn't much of a leap to extend this benefit to multiclassed fighter/thieves once a DM decides his campaign's play balance isn't going to fly out the window if he allows bards the reduced penalties. Why stop at just multiclassed fighter/thieves? After all, dual-classed fighter/thieves know even more about armor and how to function when wearing it than any other kind of thief—they've had training as pure fighters. Then again, what about thief kits like the adventurer, bandit, bounty hunter, scout, and thug? Thieves with these kits—especially thugs-can expect combat and probably learn something about armor, too. There are two big reasons ***The Complete Bard's Handbook*** suggests reduced thieving penalties for heavy armor.`,
+                `First, bards in the AD&D 2nd Edition game are true dilettantes, jacks of all trades. This generalization goes beyond what multi- and dual-classed characters do. Bards don't learn a whole lot about anything, but they learn a little bit about everything, and this makes them intrinsically more adaptable than dual- or multi-classed characters.`,
+                `Second, ***The Complete Bard's Handbook*** is specifically designed to give bards a boost. It's for DMs who want to run all-bard campaigns or at least want to encourage more players to choose bards. Many bard advocates complain, perhaps rightly, that the core rules for bards in the AD&D 2nd Edition game produce weak, unplayable characters. Certainly, a multi-classed fighter/thief has access to more thief skills and fighter weapons than a bard has. The fighter/thief probably also has a better THAC0 as well. Many people think that a bards few spells and special abilities hardly make up for all this. The reduced armor penalties attempt to redress this.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '76',
+            question: `Can the Psychometabolic science Energy Containment be maintained? If not, doesn't this mean the wielder must not only anticipate an energy attack but also win initiative so the power is "up" when the attack arrives?`,
+            answer: [
+                `The power can't be maintained. The psionicist gets to use this power whenever he is subjected to an energy attack, as long as he hasn't already used his one power for that round. This is true even if the psionicist is ambushed, surprised, or loses initiative. However, if the psionicist initiates this power he can't use other powers that round, and if an enemy sneaks in an energy attack during a round when the psionicist has initiated another power the psionicist will be vulnerable.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '76+78',
+            question: `If the Telepathic devotion Id Insinuation is used against a contacted mind, the victim can do nothing for 1d4 rounds. Does the victim get a saving throw? If the power works, how passive is the victim? Will he let somebody walk up and cut his throat?`,
+            answer: [
+                `A successful attack with Id Insinuation makes the victim completely helpless, but not passive, for 1d4 rounds. The victim is in turmoil—thrashing about, foaming at the mouth, snarling, writhing, but unable to take any conscious action. A successful attack roll is required to attack a victim of an Id Insinuation attack. There is no saving throw vs. Id Insinuation, though the DM can assign one if he wishes. Note also that a mind must be open to contact before Id Insinuation can work. If the target is a psionicist, the attacker must first establish three tangents through psionic combat (see ***CPHB***, chapter two).`,
+                `Although Contact is not listed as the initial cost for Id Insinuation, a psionicist attacking a nonpsionicist must first successfully use Contact against the target. So, attacking a nonpsionicist with Id Insinuation requires two rounds and enough extra PSPs to use Contact at least once and to maintain it during the round when the Id Insinuation is used. Note that none of the five attack modes (Id Insinuation, Ego Whip, Psychic Crush, Mind Thrust, and Psionic Blast) list Contact as their initial cost. Nevertheless, the psionicist must establish contact though psychic combat or the Contact power before they can be used.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '78',
+            question: `Can psionicists create new sciences or devotions? If so, how?`,
+            answer: [
+                `DMs should feel free to create new psionic powers and to allow their players to do the same. However, any DM brave enough to do this is on his own.`,
+                `I'd suggest studying the rules for creating new spells in the ***DMG*** (pages 43-44). I suggest you allow only psionicists to research new powers; characters with wild talents have insufficient knowledge even to attempt research. The psionicist needs a laboratory just as a wizard or priest does. The actual cost of developing a new power probably should range from 100 gp to 9,000 gp, just as it does for a spell, but the DM will have to set the cost. Beyond this, deciding what to accept as a new psionic power involves the same process of analysis and individual judgment that introducing a new spell does.`,
+                `When working with spells, you limit power and player abuse by assigning spell levels, components, and sometimes side effects to the caster. When dealing with psionic powers, you assign PSP costs for establishment and maintenance, prerequisites, power scores, possibly limitations on the number of times the power can be used, and the possibility of catastrophic failure (those neat things that plague the character when the power check roll is a natural 20).`,
+                `Generally, it's best to decide what discipline the proposed power will fall under, then compare its suggested effects with other powers in the discipline to decide whether it will be a devotion or a science-more potent powers should be classed as sciences. Likewise, the more "oomph" the power has, the worse (lower) its power score should be. Again, use other powers as a guideline. In the end, the DM must use his own judgment; pay particular attention to the "Analyzing a Spell" section on page 43 of the ***DMG***, and be prepared to do some troubleshooting.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '78',
+            question: `Are the psionic powers listed in ***The Complete Psionics Handbook's*** "Monstrous Update" section in addition to the abilities listed in the various creatures' ***Monstrous Compendium*** entries, or do they replace those powers?`,
+            answer: [
+                `These are additional psionic powers that are to be added for psionic campaigns.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '78',
+            question: `I have a PC psionicist in my campaign who uses Ectoplasmic Form whenever things start going wrong for him in a battle. He boasts he can just walk away from the fight. He says if he can't hit anything, then nothing can hit him! Can't some magical weapons or creatures hit him?`,
+            answer: [
+                `The DM has to decide what can hit characters in ectoplasmic form. The DM could say that all attacks can hit the character—just because ectoplasmic characters can pass through walls doesn't necessarily mean that physical attacks can't disrupt the form and inflict damage; there's a big difference between passing through a stationary object and having somebody wiggle a sword around inside your ribs. However, this is an extreme view.`,
+                `The intent of this power was to be the same as the ethereality of a ghost—complete intangibility to the material world. The ectoplasmic character is immune to physical attacks by normal weapons and creatures. Enchanted weapons, ethereal creatures, or creatures who themselves are hit only by +1 or better magical weapons might be able to hit the creature if the DM so rules. I'd allow +1 weapons and creatures hit only by magical weapons to do half damage, and enchanted weapons with a +2 bonus or higher and ethereal creatures to do full damage. Energy attacks (particularly cold-based attacks), gaze weapons ("Oh, there's a medusa, I wonder what ectoplasmic stone looks like?"), and spells and psionic attacks that affect the mind still pose a danger to the ectoplasmic character. Also remember that a full round of uninterrupted preparation is necessary to use this power. The character's fellow PCs also can deal with the character when he finally assumes normal form ("Darn it! George went ectoplasmic in the middle of battle and left us again. No treasure for him this trip!"`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '78',
+            question: `Can a multiclassed mage/psionicist or cleric/psionicist (from the DARK SUN™ setting) spend PSPs to maintain a psionic power during a round when he casts a spell? Can a psionic power be maintained or initiated while a spell-caster is maintaining a spell that requires concentration?`,
+            answer: [
+                `A psionicist can maintain a previously initiated power no matter what else he does in a round, provided that he has the PSPs to pay the maintenance cost, and provided that the power in question can be maintained. Once a power is "switched on," maintaining that power does not require concentration and does not count as an action for the psionicist. Maintaining a power does not interfere with combat, spell-casting, initiating a new psionic power, or other activities. Of course, if the psionicist loses consciousness or dies, he cannot continue to maintain a power.`,
+                `Spell-casting and initiating a new power are mutually exclusive—a character can do one or the other, not both, in a single round—except that the psionicist always can initiate a defense mode *and* use another psionic power or cast a spell.`,
+                `Concentrating on a spell to extend its duration counts as an action. Psionic powers can be maintained while concentrating on a spell, but new powers cannot be initiated. Obviously, some maintained powers *do* require concentration as well as PSP expenditure. For example, the Telepathic devotion ESP allows the user to read minds. While the rules (***CPHB***, page 14) allow the power to be maintained without effort, common sense suggests that actually reading a mind would keep the psionicist occupied. If he does something else (such as launch an attack), he still can maintain the power but reads no thoughts that round.`,
+                `It might be helpful to think of psionic powers that can be maintained as long-lasting or slow-acting effects. Powers such as Mind Over Body last a long time, just as a ***shield*** spell does; once activated, this power works on its own, so long as PSPs are expended to keep it running. Powers such as Molecular Manipulation are slow acting, like a ***heat metal*** spell; once initiated this power takes time before it finally works, but it requires nothing of the user except PSP expenditure.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '78+80',
+            question: `When a character fails a system-shock roll in a campaign that uses the "Hovering on Death's Door" optional rule (***DMG***, page 75), do his hit points fall to zero? Do they fall to -10? Or, do they fall somewhere between? What happens when a regenerating creature fails a system-shock roll? Do regenerating creatures have to make system-shock rolls? By the way, is regeneration a magical ability? Can an ***anti-magic shell*** cancel it?`,
+            answer: [
+                `System-shock failure means *death*, whatever that means in the campaign. If you use the "Deaths Door" optional rule, system shock failure places the victim at -10 hit points (or lower, at the DM's option).`,
+                `Generally, only attacks that destroy all the cells in a creature's body (such as fire, acid, or disintegration) can prevent regeneration. While a regenerating creature is subject to system-shock rolls, regeneration will eventually rebuild the "shocked" system and restore the creature. A regenerating creature also eventually will recover from the effects of disease and poison. In all these cases, the DM should assign a hit-point value to the condition to see how long it takes the creature to regenerate back to full health and vigor.`,
+                `"Natural" regeneration, such as that found in trolls, is not magical and is not subject to ***dispel magic*** or ***anti-magic shells***. It is, however, innate and independent of the creature's form. Magical regeneration, such as from a ***ring of regeneration***, is affected by ***dispel magic*** or ***anti-magic shells***. The DM will have to decide exactly what the results are when this happens. For example, a successful ***dispel magic*** can shut down an item like a ***ring of regeneration*** for 1d4 rounds. Since the ring restores one hit point every turn (10 rounds), the DM will have to decide what effect this interruption will have on the ring-bearing creature. The simplest solution is to delay the regenerated hit point until the ring actually has operated a full, uninterrupted 10 rounds.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '80',
+            question: `Couldn't an adventuring party with both a ***portable hole*** and a ***bag of holding*** escape from the RAVENLOFT® setting? According to the ***DMG***, page 177, if the bag is placed inside the hole, a rift to the Astral plane is opened. If the hole is placed in the bag, a portal opens that sucks the items and anything inside them into another plane. A clever party should be able to arrange things so that they pass through the rift or portal when it opens. Likewise, a ***prismatic sphere*** or ***prismatic wall*** also could provide an exit from the Demiplane of Dread. All you'd have to do is cast it and negate the first six layers. The seventh layer, violet, sends you to another plane if you fail a save. What's to keep characters from voluntarily failing a save and escaping, albeit to a random location?`,
+            answer: [
+                `Involuntary or consequential plane shifts in the RAVENLOFT setting do not allow escape; they just *teleport* the subject to a random location in the RAVENLOFT world. The creature is flung into the mists, and re-enters the Demiplane of Dread when it emerges. This is similar to what happens when a ***holy word*** or ***dismissal*** spell is used on a nonresident. If a ***portable hole*** interacts with a ***bag of holding***, both items are lost; they are sucked into the mists and disappear forever, or they are destroyed outright.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '80',
+            question: `If two astral travelers from different Prime Material planes encounter a color pool (from ***The Manual of the Planes***) to an alternate Prime Material plane do they perceive it as the same color? If the color pool leads to one traveler's home plane, how does each character perceive it? A pool leading to a home plane would have the traveler's silver cord coming out of it, but what if there is no cord present? If a character arrived on the Astral plane via a rift created by a ***portable hole*** and a ***bag of holding***, what is the chance that there is a color pool nearby?`,
+            answer: [
+                `Judging from the material on pages 62 and 63 of the ***MP***, each astral color pool has a distinct color depending on where it leads. However, when a pool leads to a character's home Prime Material plane, it always looks silvery no matter what its "normal" color is. When two characters from different Prime Material planes view a pool leading to a third Prime Material plane, they both see the same color. If one traveler is from the pool's plane and the other is not, the first traveler sees a silver pool and the second traveler sees another color. This is true if there are silver cords present or not.`,
+                `The DM must decide when and where color pools appear. Controlled magicks, such as ***astral spells***, always bring a character onto the Astral plane via a color pool. Uncontrolled entries into the Astral plane might not put travelers next to a pool, or they might place the travelers next to a pool that is rapidly shrinking, as might be the case when a rift created by a ***portable hole*** and a ***bag of holding*** opens and closes. Such rifts are interplanar anomalies and are very unpredictable.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '80',
+            question: `Please explain the dragon of Tyr's -3 THAC0. Is it possible for PCs to have THAC0s in the negative numbers?`,
+            answer: [
+                `THAC0 is explained in depth in the ***Player's Handbook***, pages 89-91. The dragon's THAC0 works just like any other, except that it's so low that it is virtually guaranteed to hit opponents with armor classes of -4 or worse (a roll of "1" always misses in the AD&D 2nd Edition game; see ***PHB***, page 91). The dragon gets its THAC0 from its sheer size, strength, and cunning. Player characters can achieve similar "to hit" chances by virtue of level, combat bonuses, and magical weapons.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '80',
+            question: `Most psionic powers have a preparation time of zero. When running a psionicist in a campaign that uses segments, wizards and priests use casting times that take segments, rounds, or turns. This means a psionicist can call upon multiple powers in a single round and destroy several PCs or monsters before anyone else can even blink. What limits are there on psionics in campaigns that use segments?`,
+            answer: [
+                `Even in the original AD&D game, the basic unit of time is the one-minute melee round, not the six-second segment. During one round, a character can take one basic action. Spell-casting times and weapon speed factors affect initiative—they do not allow for multiple actions. That is, a wizard cannot cast 10 one-segment spells, and a fighter cannot attack 10 times with a weapon that has a speed factor of one. Multiple actions or attacks are possible under a variety of different circumstances, but never just by virtue of the segment system.`,
+                `If you are playing a variant game that uses segments instead of rounds, you're on your own. The easiest fix would be to assign all psionic powers a "casting time" of at least one segment and use whatever rules you've cooked up to govern spell-casting to govern psionic power use as well. Note that the AD&D 2nd Edition game dispenses with the concept of segments altogether. Even when using the most complex optional initiative rules, things like casting times equate to a simple initiative modifier, which was the real intent behind the original game's segment system in the first place.`
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '80',
+            question: `Where can I find a list of the armor and weapons available to Viking characters from ***The Vikings Campaign Sourcebook***?`,
+            answer: [
+                `The basic equipment list for Viking campaigns is in the ***Player's Handbook***, pages 66-69. As page 58 of the ***The Vikings Campaign Sourcebook*** explains, certain items from the ***PHB*** list are unavailable. These are listed in the tables on pages 59 and 60, and they are marked "N/A." Some items are marked "N/A*" and can't be found in Scandinavia, but they are available elsewhere in the Vikings' world. Additional equipment not found in the ***PHB*** list but available in Viking campaigns is listed in the ***VCS***, table 7, page 60.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '80',
+            question: `In the SPELLJAMMER® setting, do vampires and powerful undead retain their ability to drain life energy if they enter the flow? Or are they cut off from the Negative Material plane?`,
+            answer: [
+                `Undead are notorious for retaining their level-draining abilities no matter where they go. While this ability does depend on a connection to the Negative Material plane, this link is maintained in the phlogiston and everywhere else you find undead, unless the rules governing extraplanar contact for the location in question specifically say otherwise.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '80',
+            question: `Can psionicists or characters with wild talents use illithid series helms to power spelljamming ships?`,
+            answer: [
+                `Series helms create motive power from innate magical abilities, not psionics (the passing reference to psionics and illithid series helms in the ***Lorebook of the Void*** notwithstanding). Magic powers spelljamming helms, not psionics. Furthermore, a series helm is designed to work for creatures of only one race. An ogre magi, for example, cannot use an illithid series helm.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '186',
+    publication_year: '1992',
+    publication_month: 'October',
+    foreword: `The sage continues exploring the untold reaches of optional material for the AD&D® 2nd Edition game. This month, we have a short look at psionic powers. Unless otherwise stated, page numbers refer to ***The Complete Psionics Handbook***.`,
+    sage_advice: [
+        {
+            page_number: '52',
+            question: `Does the initial cost of a psionic power cover the maintenance cost of the power for the first round? How about the first turn or hour, for powers with maintenance costs measured in turns or hours?`,
+            answer: [
+                `A character never has to pay both a power's initial and maintenance cost; it's one or the other. Although the rules are not completely clear on the point, the text on page 14 that details maintaining powers leads me to believe that any power that is maintained turn by turn or hour by hour requires PSP expenditure by the turn or hour rather than by the round. In these cases, the initial PSP expenditure keeps the power going for the first turn or hour. However, the DM™ is free to assume that the initial cost can sustain the power for only the first round, and can require that maintenance costs be paid starting the next round. The former interpretation requires fewer PSPs than the latter, but since maintenance costs by the turn or hour are fairly low, it doesn't make much difference which way you decide to do things as long you treat all powers the same way.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '52',
+            question: `Can a character using Clairaudience or Clairvoyance scry a place not personally known to him?`,
+            answer: [
+                `Yes, he can. The only limitations on these powers are the PSPs available to the character and the power check, which gets more difficult as the distance to the location to be scryed increases. The DM should use some common sense when allowing the character to choose an area to be scryed. For example, the character cannot just declare he is eavesdropping on the wizard Drawmij's library unless he actually knows where that library is, either through personal knowledge or by making an educated guess. On the other hand, the character can monitor an area just by describing it in general terms. For example, the character can declare that he is scrying the spot exactly 10 miles to his west, or the topmost room in a tower he has seen.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '52',
+            question: `Does a three-pound weapon suffer a -1 penalty to THAC0 when used with Telekinesis?`,
+            answer: [
+                `No. Although the formula for calculating a character's THAC0 when attacking with a telekinetically controlled weapon is equal to the weapon's power-score penalty (weight in pounds divided by three), objects weighing three pounds or less have no power-score penalty and therefore no THAC0 penalty.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '52',
+            question: `Is the modifier for Animate Object subtracted from the psionicist's Intelligence score, as listed in the power description, or from the power score?`,
+            answer: [
+                `The modifier is made to the power score, The "Ability Score Modifier" heading in the power's description is a typo.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '52',
+            question: `Is Control Body a science? It is listed as a devotion, but its description says it's a science. Life Draining is listed as a science, but its text describes it as a devotion.`,
+            answer: [
+                `Control Body is a Psychokinetic devotion. Life Draining is a Psychometabolic science.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '52',
+            question: `How tall can a fire animated with the Control Flames devotion be? For example, since the area of effect is 10 square feet, can a character create a mock fire elemental 2' wide, 2' long, and 24' high?`,
+            answer: [
+                `If you follow the description to the letter, area of effect for Control Flames refers to the two-dimensional area covered by the fire's fuel. The mock fire elemental in your example would be possible only if the fuel covered 10 square feet or less and the flames were 24' high, which might be possible if there were some sort of forced draft fanning the fire. When faced with a very large fire, say a multifloor building aflame, the psionicist can control only the flames erupting from a 10-square foot area. Note that 10 square feet is not a very big area—it's 5' by 2' or 21⁄2' by 4', or some combination of dimensions that can be multiplied together to equal 10'. Compare this with a standard 10'x10' square on a dungeon map, which is 100 square feet. To make this devotion more useful, you might want to increase its area or give it a cubic area, say anything from 25 cubic feet (5'x5'x1') to 100 cubic feet (10'x10'x1').`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '52',
+            question: `Is the power score for the Create Sound devotion Intelligence -7, as stated in the description, or is it Intelligence -2, as stated in the summary on page 125?`,
+            answer: [
+                `It is Intelligence -7. The -2 modifier in the summary is an obvious typo when you consider that the power score for the very similar Control Sound Psychokinetic devotion is Intelligence -5.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '52+54',
+            question: `According to the description of the Disintegrate science on page 40, an Inertial Barrier protects against psionic disintegration. Does an Inertial Barrier also protect against magical disintegration? Does an Inertial Barrier protect against ***magic missile*** spells, fire, or breath weapons?`,
+            answer: [
+                `An Inertial Barrier protects the user against disintegration from any source. The rules don't explain why, but here's my best guess: Disintegration destroys matter by setting up a vibration that causes objects and creatures to break into microscopic pieces and fly apart; an Inertial Barrier dampens the vibration and disrupts the effect.`,
+                `The "missiles" created by a ***magic missile*** spells are purely magical and are not affected by Inertial Barriers. While an Inertial Barrier does not confer fire resistance, it can foil most fire-based attacks by keeping flames from reaching the user. That is, the user is protected against ***fireball*** spells, but still can get burned if he walks into a burning building or pool of molten lava. As explained in the devotion's description (see page 46), Inertial Barriers can be effective against *some* breath weapons, but not all. Breath weapons that are composed of pure heat, light, cold, electricity, or other forms of energy are not affected. Gas, acid, or flame breath weapons and any breath weapon that involves hurling or projecting some kind of matter are affected. When dealing with very powerful breath weapons, such as dragon breath weapons, I suggest that you allow the Inertial Barrier user to roll only the basic dice, not dice plus bonuses. For example, if an adult red dragon breathes through an Inertial Barrier, the defender rolls 12d10 vs. the dragon's 12d10+6. Assume that the plus represents the intrinsic power (heat, acidic potency, etc.) of what part of the breath does penetrate the Inertial Barrier.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '54',
+            question: `Why would anyone bother to learn the Absorb Disease devotion when Cell Adjustment can cure diseases more quickly, with lower PSP expenditure, and without recourse to the Complete Healing science? Why would anyone absorb a magical disease when Complete Healing cures only normal diseases?`,
+            answer: [
+                `It is true that Cell Adjustment cures diseases faster and "cheaper" than the Absorb Disease/Complete Healing combination. However, sometimes a character isn't free to choose his psionic powers. Characters with wild talents, for example, have to take what they get. Also, even though the Complete Healing description mentions only "normal diseases" (see page 50), the text in the Absorb Disease description on page 54 strongly implies that Complete Healing should handle any malady that can be absorbed; this includes magical diseases such as mummy rot but not lycanthropy (which also is a curse).`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '54',
+            question: `Does the Cell Adjustment devotion cure one point of damage when initiated if there is no disease to cure? Can the psionicist immediately spend 20 PSPs to cure four points of damage during the first round he uses the power if there is no disease to cure?`,
+            answer: [
+                `The psionicist can use the initial five PSPs to cure one point of damage if the Cell Adjustment recipient doesn't have a disease. However, the psionicist must spend one round getting the power established before he can start healing a lot of damage. Basically, the psionicist needs a minute or so to assess the patient's condition before he can start making extensive repairs.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '54',
+            question: `Can a character use Body Equilibrium to keep from sinking once he has fallen into water or quicksand? It is possible for a character to use Body Equilibrium along with Control Wind to levitate or fly?`,
+            answer: [
+                `Since Body Equilibrium can be activated while the psionicist is falling (see the devotion's description on pages 55-56), I don't see any reason not to allow its use while sinking. The DM might choose to impose a power-score penalty, since it might be difficult to focus one's inner energies with a nose and mouth full of quicksand; I suggest an additional -1 to -4. In this case, the character will simply bob to the surface of the water or quicksand, where he probably can swim or slither to safety. Actually regaining one's feet and walking on the surface after being submerged and popping up like a cork would require considerable luck and dexterity.`,
+                `A falling character using Body Equilibrium certainly could use Control Wind to influence where he lands. However, it would be quite difficult to slow a fall or to lift a grounded character using Control Wind, as the character must have an updraft to lift him. This would be impossible in still air. If the character found a strong thermal—on a sunlit hillside, for example—he might be able to increase and control the naturally occurring updraft enough to lift him, then glide to a landing some distance away. Note that such a feat would require ideal conditions; the character probably would have to be outside during a sunny day and on terrain that can create rising currents of warm air—open fields, rocky areas, and the like. Bodies of water don't generate thermals at all, and forests create very weak ones. This feat might also be possible indoors in chimneys, ventilation shafts, and other places where there is a lot of rising air.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '187',
+    publication_year: '1992',
+    publication_month: 'November',
+    foreword: `The sage ponders more psychic conundrums this month. Unless otherwise stated, all page references refer to the AD&D® ***Complete Psionics Handbook***.`,
+    sage_advice: [
+        {
+            page_number: '29',
+            question: `Can a ***wish*** be used to enhance a character's psionic abilities or to acquire psionic abilities? Or does the fact that a ***wish*** is magical and psionics is not prevent this?`,
+            answer: [
+                `Although the DM™ has final say on any ***wish***, there is no game reason that a character cannot use one to gain or augment psionic abilities. A ***wish*** *changes* "reality" and can accomplish all manner of things that lesser magics cannot.`,
+                `All this however, begs a whole raft of other questions, such as how much psionics can be gained, and what kind.`,
+                `The "best" way to use a ***wish*** to increase a character's psionic powers is to improve the character's ability scores (***DMG***, page 11), which in turn can improve some or all the character's power scores. Increasing the character's wisdom score also will increase the character's inherent potential (***CPH***, page 13). Generous referees will make such an increase retroactive. A ***wish*** also might allow a character to increase his total PSPs, from two to 10 points. A ***wish*** certainly could allow a character to "forget" one discipline, science, devotion, or defense mode and replace it with a power more to the character's liking. If ***wishes*** are very rare in your campaign, it also might allow a character to pick up an extra devotion either inside or outside the primary discipline, but I don't recommend that you allow characters to acquire extra sciences or disciplines this way. Likewise, it's probably okay to let characters ***wish*** for a wild talent, though stern referees will make such characters roll to test for wild talents when making the ***wish***. DMs who do this should feel free to chuckle evilly if the percentile roll is low enough to have revealed a wild talent without ***wishing*** and should feel free to apply the normal consequences if the roll is 97 or higher. I do not recommend that you allow characters with wild talents to ***wish*** for additional powers, but it should be okay to let them ***wish*** for more PSPs.`,
+                `Of course, characters can attempt to exceed these limits, but when they do so the DM should either declare that the ***wish*** does not work, or should impose some sort of penalty on the character. "Okay, Hurd the Magnificent, you can have the Mass Domination science. Of course, you are now a 5th-level human psionicist, not a l0th-level elven wizard!"`,
+                `As always, game-logic and game balance reasons exist for these limitations. From the standpoint of game logic, the mortal brain can harbor only so many psychic powers before it turns to mush. High-level psionicists can command a wide variety of powers only by virtue of long experience and training. In terms of game balance, ***wishes*** should be introduced into a campaign only to let the players make minor adjustments to their characters' fates. If the DM allows characters to use ***wishes*** to get cheap power, the challenge and fun of adventuring quickly wear off.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '29',
+            question: `At what level does a multiclassed character with psionics get his powers?`,
+            answer: [
+                `A multiclassed psionicist gains new psionic powers and PSPs each time he gains a level as a psionicist. The character's other class or classes do not affect his psionic powers, except insofar as the character's experience points are divided equally among all the character's classes.`,
+                `A multiclassed character with a wild talent gets four PSPs for every level gained in *each* class. Multiclassed characters do not divide new PSPs between classes as they do with hit points.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '29',
+            question: `Can a psionicist using the Detonate science choose not to attack friendly creatures within 10' of the detonation so that they don't take damage? In other words, can a psionicist detonate an ogre's club, but choose not to damage a fighter in melee with the ogre?`,
+            answer: [
+                `The Detonate description on page 38 certainly seems to imply that the psionicist can decide which creatures within the 10' detonation radius will be attacked. It is possible that the detonation will damage nothing—except the object that is detonated—if the user declines to attack creatures that might be in the radius.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '29-30',
+            question: `Can the Soften devotion be used against a character employing the Body Weaponry devotion? Are the effects of the Soften devotion permanent? How large an object can be Softened? Can a Softened object be repaired?`,
+            answer: [
+                `According to the Body Weaponry description on page 57, an arm converted into a weapon actually becomes wood or metal or both. The DM has the final say, but I suggest that the arm/weapon be subject to all effects that can alter or destroy the material including the Soften devotion, rust monsters, ***warp wood*** spells, and so on.`,
+                `Since Soften has a maintenance cost, Softening lasts only while the power is maintained. Note that if the DM is willing to spend the time, you could stage a psychic contest between the two characters, with the Body Weaponry user striving to maintain the weapon while the attacker tries to Soften it. This is playing fast and loose with the psychic contest rules (see pages 22-24), but it fits with the spirit of the game.`,
+                `As the description says, Soften can affect objects that weigh 10 lbs. or less. The DM might allow characters to Soften small pieces of larger objects, but I don't recommend it.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '30',
+            question: `What are the statistics for the animals listed for the Animal Affinity science?`,
+            answer: [
+                `Statistics can be found in the various ***Monstrous Compendium*** volumes, as follows, MC1: bull (cattle or buffalo subtypes in the herd animal entry), boar (any of the three subtypes will do, but I suggest the wild boar), elephant (I suggest the African elephant subtype), grizzly bear (brown bear subtype), lion (great cat entry), panther (leopard subtype in the great cat entry), rattlesnake (normal poisonous snake subtype in the snake entry), giant scorpion (scorpion entry), tiger (great cat entry), percheron (draft horse subtype in the horse entry), and wolf. MC2: ape, barracuda, crocodile (common crocodile subtype), giant eagle (eagle entry) falcon (small hawk subtype in the hawk entry), griffon, peregrine falcon (large hawk subtype in the hawk entry), and shark (any version of the common shark subtype). MC4: stag (wild stag subtype).`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '30',
+            question: `Can a character using the Metamorphosis science move at the new form's movement rate? Does the user have any senses when Metamorphosed into an inanimate object? If not, can the user change into an object that is equipped with sense organs? Can the user physically turn into a powerful creature such as a margoyle or hatchling dragon? Can the user turn into something fanciful such as an animated chair?`,
+            answer: [
+                `I suggest you treat Metamorphosis as a slightly altered version of the ***polymorph self*** spell (see ***PHB***, page 161); unlike a *polymorphing* spellcaster, the Metamorphosis user is limited to forms that have the same mass as his own body, and he must make a system shock roll when he changes form. However, the Metamorphosis user is not limited to the forms of creatures, and can maintain an assumed form so long as he has PSPs to maintain the power. The Metamorphosis user gets the assumed form's movement rate and armor class, along with its physical attacks. He does not get special abilities such as gaze weapons, breath weapons, weapon immunities, and so on. On the other hand, the character does gain certain vulnerabilities and immunities that are intrinsic to the assumed form. Common sense must rule here. For example, while a character Metamorphosed into a werewolf cannot shift shapes (and thus avoid further system shock rolls) and is not immune to normal weapons, a character Metamorphosed into a brick is immune to normal fire simply because bricks don't burn.`,
+                `The power's description goes out of its way to say that the user can change into *anything*, so I'd be inclined to let PCs go wild when picking forms into which they can Metamorphose. Nevertheless, some limitations are in order, or PCs will abuse the power. I suggest that you assume that simple forms, such as bricks, have no senses except a faint sense of touch and pain. A character Metamorphosed into a brick cannot see, taste, hear, or smell. He can feel vibrations, however—even faint ones from a man-sized creature walking nearby—and he knows when somebody tries to break him. The DM could allow the character to turn into a brick with eyes, ears, and nose so the character could get more sensory input, but enemies will more easily spot the character. That character also will have some vulnerabilities a normal brick might not, such as susceptibility to ***stinking cloud*** spells and harpy songs. Likewise, a character Metamorphosed into a walking chair would have visible joints and muscles.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '188',
+    publication_year: '1992',
+    publication_month: 'December',
+    foreword: `The sage temporarily concludes his exploration of psychic mysteries this month. Unless otherwise stated, all page references refer to ***The Complete Psionics Handbook***.`,
+    sage_advice: [
+        {
+            page_number: '92',
+            question: `Is the armor class gained through the Flesh Armor devotion cumulative with the armor class gained from normal armor or magical protections?`,
+            answer: [
+                `Generally, Flesh Armor is not cumulative with actual armor—except that an armored character who has no shield can use the "shield" created if the power check result is a 1. Treat Flesh Armor as non-magical armor when determining how it works with various magical protection items. Generally, this means that Flesh Armor is cumulative with ***rings of protection***, but not with ***cloaks of protection***. Flesh Armor also is not cumulative with ***bracers of defense*** or with other items that provide a fixed armor class, such as ***robes of the archmagi***.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '92',
+            question: `Can the Prolong devotion make a Ballistic Attack more powerful?`,
+            answer: [
+                `No. The Ballistic Attack devotion is a "single item" effect, which cannot be Prolonged (see Prolong power description, page 100).`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '92',
+            question: `The initial cost for the Teleport science is listed as "10 + ." However, there is no "10" cost on the teleport table.`,
+            answer: [
+                `The first "20" in the table is a typo; Teleports of 10 yards or less cost 10 PSPs. Note that this change also applies to the Teleport Other science, whose initial cost should be listed as "10 +" as well.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '92',
+            question: `Can the Prolong devotion make a Ballistic Attack more powerful?`,
+            answer: [
+                `No. The Ballistic Attack devotion is a "single item" effect, which cannot be Prolonged (see Prolong power description, page 100).`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '92',
+            question: `Can the Molecular Manipulation devotion be used against a character using the Body Weaponry devotion? If so, what happens to a character who has a Body Weapon broken?`,
+            answer: [
+                `Molecular Manipulation can weaken or break a Body Weapon (see the question on the Soften devotion vs. Body Weaponry in last month's column). If the Molecular Manipulation power check succeeds, the Body Weaponry user can feel the weak- ness in his arm. If the Body Weaponry user stops maintaining the power and allows the Body Weapon to change back into an arm, the weakness disappears because the arm is part of a creature—no longer an object and no longer subject to Molecular Manipulation. If a Body Weapon breaks—because of Molecular Manipulation or any other cause—the Body Weaponry user loses that chunk of body mass, as though the affected limb were severed. The broken piece immediately changes back to flesh (it is cut off from the flow of psychic power that kept it in weapon form), and the DM might rule that the Body Weaponry user must immediately drop the power, although there is no game-logic reason that he couldn't go on spending PSPs to maintain the broken stump. In any case, I don't recommend any spectacular or gory effects when the Body Weaponry user does drop the power—he should just have a healed-over stump. Any means that can restore a severed limb, such as a ***regeneration*** spell or magical items, can restore the lost limb.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '92',
+            question: `When using the Control Body devotion, exactly how do you hold a psychic contest between the attacker's power score and the victim's strength score? Does the psionic character make a regular power score check at all?`,
+            answer: [
+                `Yes, the psionic character makes a standard power check when using Control Body.`,
+                `If the power check fails, the character pays four PSPs (see page 11) and he does not gain control of the victim's body.`,
+                `If the campaign uses the optional "skill score" rule (see page 11) and the attacker's roll equals his power score, then he automatically gains control (although he can lose control by forcing the victim into a suicidal action and losing the resulting psychic contest).`,
+                `If the power check roll is lower than the power score, there is a psychic contest. You hold this contest in exactly the same way you hold any other psychic contest (see page 22), except that the victim uses his strength score and the attacker uses his power score. This is because Control Body is psychokinetic; the attacker actually generates a physical force that can seize control of a victim's body. The victim however, can overcome this force by sheer physical strength.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '92',
+            question: `Does a weapon moved by the Telekinesis science or Ballistic Attack devotion inflict normal damage?`,
+            answer: [
+                `Ballistic Attack can only move objects that weigh one pound or less; this excludes just about anything larger than a dagger. Any item used in a Ballistic Attack inflicts 1d6 points of damage regardless of its "normal" damage rating; this is due to the tremendous velocity the devotion generates. I suppose a sheaf arrow used in a Ballistic Attack could do 1d8 points of damage if the DM so desires, but there's no guarantee the arrow will hit the target point first, so I suggest sticking with the standard 1d6. Using Telekinesis to wield a weapon is more like normal melee, and a hit inflicts the weapon's normal damage rating. Unless you allow items such as arrows and quarrels to be used as stabbing weapons in melee, I don't recommend you allow them to be used Telekinetically either. (I know some campaigns allow characters to make stabbing attacks with arrows when there's no other weapon available. A typical "house rule" governing such attacks sets the damage at 1d2 and the arrow usually breaks when it hits.)`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '92-93',
+            question: `Does the errata on psionics supplied with the DARK SUN™ boxed set apply to all campaigns or just to DARK SUN games?`,
+            answer: [
+                `The errata sheet supplied with the DARK SUN boxed set is a general set of corrections that applies to psionics in general, not just to DARK SUN campaigns. If you don't have a DARK SUN boxed set, you can get the errata free by sending an SASE to: TSR Inc., c/o Steve Winter, PO. Box 756, Lake Geneva WI 53147 U.S.A. Write a note saying that you'd like the errata for ***The Complete Psionics Handbook***, TSR product #2117. Feel free to include any comments you may have.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '93',
+            question: `If a psionic character uses the Animal Affinity science to gain the hit points of the creature he is attuned to, does any damage suffered carry over to the character's true form when the character drops the power? Do such hit points always start at the maximum when the power is first activated?`,
+            answer: [
+                `Any ability bestowed onto the character by Animal Affinity is strictly temporary, and it completely disappears when the power is dropped or when the character chooses to assume a different animal attribute. If the character chooses to assume an animal's hit points, he in effect gets a whole new set of hit points that have nothing whatsoever to do with the hit points he has as a character. When he drops the power, his hit points immediately revert to whatever total the character had when he activated the power. If the character uses the power to assume animal hit points again, he immediately has whatever total his animalistic alter-ego had when he last used the power.`,
+                `Adjudicating hit-point recovery for characters with this power can be tricky. For playability, I suggest that "artificial" healing from first aid, magical items, healing spells, or psionics apply only to the hit-point total the character is presently using. That is, a ***cure light wounds*** spell cast on a character who is using an animal's hit points improves only the animal's hit point total. Since the unused hit point total cannot be damaged, it cannot be healed either. However, "natural" healing from rest should apply to both totals. In effect, both aspects of the character's hit points can be assumed to be at rest whenever the character is completely inactive.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '93',
+            question: `Does the Reduction devotion affect a character's equipment and clothing? What happens to equipment and clothing if the character rolls a 20 on the power check and doubles in size?`,
+            answer: [
+                `According to the power description, Reduction is the opposite of Expansion. Since Expansion does not affect clothing or equipment (see page 60), it's clear to me that Reduction doesn't affect clothing or equipment either. If a Reduction user rolls a 20 on a power check, he should "pop" right out of his clothes. A DM might rule that the character suffers some damage in the process, say 1d4 to 1d8 points of damage. A strict DM will make the character roll item saving throws for anything the character was wearing; the magical fire category (see the item saving throw table in the ***DMG***, page 39) seems to offer the most reasonable set of numbers for making such saving throws.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '93',
+            question: `Does the Dream Travel devotion induce sleep in willing subjects? That is, can it work if the subjects aren't sleepy?`,
+            answer: [
+                `The power description plainly requires that the psionic character fashioning the dreamscape where travel will take place must be asleep and so must any passengers he takes with him. If the DM rules that sleep isn't possible because the surroundings are too noisy or too uncomfortable, then no Dream Travel can take place. On the other hand, there is no reason to assume that characters who can make themselves somewhat comfortable and relaxed can't will themselves to drift off far enough to allow the power to work. Generally, if the characters involved are reasonably warm and dry, can sit or lie down without discomfort, and have no overt reason to feel anxious, they can be sleepy enough for Dream Travel. An unwilling victim who can force himself to stay awake cannot be compelled to Dream Travel.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '93',
+            question: `Are the effects of the Psychic Drain devotion permanent? Can this power be used on nonhumanoids?`,
+            answer: [
+                `Ability score losses from Psychic Drain can be permanent only if the character employing the Psychic Drain siphons away more than half of the host's psychic potential, and even then the exact effect depends on the degree of depletion (see power description, page 102). Hosts who are not depleted regain "lost" ability points when they awaken from the trance. (It's fine to assume that hosts who are prematurely awakened suffer from reduced ability scores, if any, until their hour of grogginess passes.)`,
+                `The power description specifically states that "people" must serve as hosts. In this case, it is entirely within the spirit and intent of the rules to define "people" as creatures of greater than animal intelligence. However, the DM is on his own when it comes to determining the psychic potential of a nonhumanoid creature without defined ability scores.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '93',
+            question: `If the Wrench devotion is successfully used on a creature that can be hit only by + 1 or better weapons, does the creature become vulnerable to normal weapons?`,
+            answer: [
+                `Yes, it does. Wrenching completely strips the creature of its weapon immunity for as long as the power remains in effect. Note, however, that Wrench does not work on every creature that is immune to normal weapons. Lycanthropes, for example, don't have a dual, extraplanar existence and cannot be Wrenched.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '189',
+    publication_year: '193',
+    publication_month: 'January',
+    foreword: `This month, the sage answers your questions about one of TSR, Inc.'s newer products, the ***Dragon Kings*** rules supplement for the DARK SUN™ campaign setting, plus one bonus question on world-specific vs. generic adventures.`,
+    sage_advice: [
+        {
+            page_number: '98',
+            question: `In the Dragon Kings hardbound for the DARK SUN setting, it is said that dual-classed clerics cannot become elementals. Does this mean that cleric/psionicists or any other class combined with a cleric/psionicist cannot become an elemental? Do the same rules apply to preservers and defilers metamorphosing?`,
+            answer: [
+                `I looked very carefully through ***Dragon Kings*** looking for whatever passage you're asking about. I'm not sure I found it, and neither is Tim Brown, ***Dragon Kings*** author. Do yourself a favor and include a page number whenever you ask for a rules clarification. It's the only way I can be sure I'm clarifying the rule you're actually asking about.`,
+                `I assume you're referring to the text on page 56, which says a character elemental must be a human cleric/psionicist, level 20/20 (see the Prerequisites section). The character must commit to becoming an elemental immediately upon reaching 20th level as a cleric (2,700,000 xp), and cannot have any other classes. If the character quits the cleric class to follow a class other than psionicist, or takes up the psionicist class before reaching 20th level as a cleric, he cannot become an elemental. This is the intent behind the line: "No multi- or dual-classed cleric can opt to become an elemental." on page 56. (The cleric must be single classed and 20th level, then he can opt to become an advanced being by declaring his intention and switching to the psionicist class.) Note that a character cannot return to his old class once he switches (see ***PH***, page 45). No multi-classed character of any type can become an elemental.`,
+                `Character dragons and avangions have similar requirements, except that they have to be defiler/psionicists or preserver/ psionicists, respectively.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '98',
+            question: `In DRAGON® issue #177, "Sage Advice" said that details on how the Dragon of Tyr stores magical energy would be included in ***Dragon Kings***, but I can't seem to find it anywhere. You also said that details on how the Dragon's defiler magic affects animals would be included in the book, but I can't find that either.`,
+            answer: [
+                `When I was writing the column for issue #177, there were plans to describe the Dragon's ability to store magic, but that changed and the details remain unrevealed. It is even possible that the Dragon has no such power at all—it could be just a myth that has sprung up to help explain the Dragon's massive power.`,
+                `Check out rules on defiling psionic enchantments on page 44; this is how the Dragon's spells kill people and animals. Tim Brown also has hinted that the Dragon might have a special life-sucking spell or psionic ability that simply produces defiling damage over wide areas. The details of this spell—if it exists at all—are unrevealed.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '98',
+            question: `Do character dragons and avangions take damage from defiling psionic enchantments? Is there any defense from these attacks?`,
+            answer: [
+                `According to the rules on page 44, every living creature—except the caster—within 30 yards of a defiling psionic enchantment takes the listed damage. Dragons and avangions are powerful, but they are alive and are subject to this kind of defiling damage.`,
+                `Since psionic enchantments have a magical component, there are all sorts of ways to get protection from this effect, and two such ways follow. A ***scarab of protection*** grants the wearer a saving throw, and the wearer takes no damage if the save succeeds (see ***DMG***, page 179). An ***anti-magic shell*** hedges out the effect, though it also shuts down all other magical items and effects within the spell's radius.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '98-99',
+            question: `The statistics for character drag ons in ***Dragon Kings***, pages 37-39, don't match the summary information at the back of the book, nor does it match the description in the DARK SUN boxed set. Specifically, the summary information does not mention the psionic abilities listed on page 39—which give a 30th-level dragon 20 sciences and 35 devotions. Meanwhile, the boxed set gives the Dragon of Tyr a psionicist level of 20 (or 25, depending on which section you read), the ability to cast spells and use psionics simultaneously, and regeneration at 10 hp a round. Also, the hit-dice listings are widely different in all three places, and the burrowing movement rate of 6 listed in the boxed set is not mentioned in either section of ***Dragon Kings***. Finally, the footnote on the jumping movement rating in the supplement reads: "now has a 'jumping' movement rate of 5 (should be 6)". What does this mean? Is the jumping rate 5 or 6?`,
+            answer: [
+                `The mismatch within the ***Dragon Kings*** book is an editorial error. The text on dragons got changed in one section of the book, but not in the other—this kind of thing happens more often than anyone would like. Here are my unofficial suggestions for resolving the contradictions:`,
+                `Use the psionic powers listed on page 39; this gives the Dragon of Tyr six disciplines, 20 sciences, 35 devotions, and five defense modes. Use the powers listed in the boxed set (see the "Monsters of Athas" section in the ***Wanderer's Journal***). Pick the additional 10 sciences and 11 devotions yourself, and assume that the powers listed in the ***Wanderer's Journal*** are the ones the Dragon uses the most. Note that the five defense modes listed in the ***Wanderer's Journal*** under the Telepathy discipline do not count toward the Dragon's total number of powers (see the ***Complete Psionics Handbook***, page 14).`,
+                `Use the hit-dice listings from the supplement at the back of ***Dragon Kings***. This matches the table on page 37 at every level except 21, where the dragon should get +20d4, not + 10d4. Note that the Dragon of Tyr has nearly maximum hit points for a 30th-level dragon (250 out of a possible 254, assuming no Constitution bonuses).`,
+                `The burrowing movement rate seems to have been dropped by mistake; I'd add it at 27th level.`,
+                `The parenthetical note about increasing the jumping movement rate to 6 probably was an editor's note that accidentally found its way into the book. Since most movement rates in the AD&D® game are evenly divisible by three, somebody probably wanted the listing changed. I don't see any reason not to leave the jump rating at 5, which is how it is listed in the ***Wanderer's Journal***, but go ahead and increase it to 6 if it makes you happy.`,
+                `The Dragon of Tyr's regeneration power and ability to use spells and psionics simultaneously are unique to it—it's a special beast, even as fully matured Athasian dragons go. The exact reasons this dragon is so special are unrevealed, but they might be uncovered in an upcoming DARK SUN game product or novel.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '99',
+            question: `The statistics for character avangions in ***Dragon Kings***, pages 42-44, don't match the summary information at the back of the book. Are the various effects of the avangion's aura cumulative or do the various powers replace each other? If they replace each other, can an advancing avangion opt to forego a higherlevel effect to keep a lower-level one? Do avangions have psionics?`,
+            answer: [
+                `Except for the hit-dice column, the summary section is correct. The hit dice column should read: 21st-level 20d4 + 10; 22nd-level 25d4 + 10; 23rd-level 29d4 + 10; 24th-level 32d4 + 10; 25th-level 35d4 + 10; 26th-level 39d4 + 10; 27th-level 44d4 + 10; 28th-level 50d4 + 10; 29th-level 58d4 + 10; 30th-level 68d4 + 10. Avangions gain new movement rates, and other powers as shown in the summary, not as described in the text on pages 42-44.`,
+                `Avangions are preserver/psionicists. They retain the psionic powers they had as 20th-level psionicists and gain one additional science and one additional devotion at each level, just as dragons do.`,
+                `Each new property of an avangion's aura is cumulative, as described on page 44.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '99',
+            question: `Can avangions and dragons hurt each other with physical attacks? Or does their immunity to weapons—considerable immunity in the case of avangions—prevent this? Can a dragon's breath weapons hurt an avangion?`,
+            answer: [
+                `Although avangions and dragons are characters, their status as advanced beings allows them to use table 48 on page 69 of the ***DMG***. Any dragon or avangion counts as a +4 weapon simply by virtue of its hit dice. Avangions of 28th level and above are immune to a dragon's physical attacks, since the equivalent of a +4 weapon is the limit for creatures. However, a dragon's breath weapon inflicts both fire and abra- sion damage; avangions of any level are not immune to either attack form and can be affected.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '99-100',
+            question: `Can dragons use the various forms of dragons' special attacks as listed in the ***Monstrous Compendiums*** such as snatches, plummets, and wing buffets? Do dragons and avangions use special spells that have no material components the way ***Monstrous Compendium*** dragons do? This would seem essential for high-level avangions, who have no appendages.`,
+            answer: [
+                `The DM, of course, has the final say, but I suggest that any dragon that can fly be allowed to make snatches and plummets. Just apply the MC formulas to the ***Dragon Kings*** claw and bite ratings. Use the tail—attack ratings from ***Dragon Kings***. I'm inclined to think that Athasian dragons are not built in quite the same way as dragons are on other worlds, and I suggest that you disallow wing buffets. Likewise, I don't think Athasian dragons should kick.`,
+                `Dragons and avangions use the same rules for spell-casting as other characters do, including casting times, and various components. It is unclear exactly how they accomplish this, especially in the case of high-level avangions. Note that while an advanced being can't launch spells any more quickly that any other spell-caster can, the DM should assume that they always have *some* way to complete any other requirements. Avangions, for example, can be assumed to flutter their wingtips to complete somatic components. Both dragons and avangions can be assumed to have some way to get at material components if that optional rule is in effect. Material components might be manipulated psionically, plucked from a pocket dimension, regurgitated from the gut, or whatever. Advanced beings are powerful enough to bend the rules a little bit when necessary.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '100',
+            question: `The descriptions of two of the new psionic powers in ***Dragon Kings*** seem a little odd to me. The Teleport Object power on page 142 is listed as a Psychokinetic devotion, but shouldn't it be Psychoportive since it has Teleport as a prerequisite? Also, Return Flight on page 146 is listed as a Psychometabolic devotion, but wouldn't it be better as a Psychokinetic devotion?`,
+            answer: [
+                `Although it is not common for a power to have a prerequisite from another discipline, there are several precedents in the Metapsionic discipline. Teleport Object was placed in the Psychokinetic discipline because it involves manipulating objects; Psychoportation involves personal movement by the power's user. If that doesn't satisfy you, change the Teleport Object prerequisite to Telekinesis.`,
+                `You have a better case with the Return Flight devotion. Since the user is manipulating an object, it sure seems to belong in the Psychokinetic discipline. I suspect it was placed within Psychometabolism to maintain game balance and because the user isn't just hurling objects around (as in the Ballistic Attack power); instead, he "programs" a missile to return to him if it misses. As such, it augments the user's ability in using missiles rather than granting the user a wholly new ability.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '100',
+            question: `In DRAGON issue #178, you said gladiators use the paladin/ranger advancement table, but page 14 of ***Dragon Kings*** says gladiators reach 20th level when they earn 3,000,000 xp, and that's what fighters need for 20th level.`,
+            answer: [
+                `Gladiators *do* use the paladin/ranger table. The figure in ***Dragon Kings*** should be 3,600,000. This is official and came straight from Tim Brown, ***Dragon Kings*** author and director of product research and development at TSR, Inc.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '100',
+            question: `What do you do with an Athasian wizard's or cleric's wild talent if he opts to become an advanced being and quits his original class to be- come a psionicist? Does he keep the power? What happens to the character's PSPs?`,
+            answer: [
+                `The easiest way to handle this is to let the character keep the wild talent and PSPs in a separate pool. "Sage Advice" discussed the details in DRAGON issue #184.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '100',
+            question: `Page 36 of the DARK SUN boxed set's ***Rules Book*** says Athasian bards don't learn wizard spells, but the Ranis Inika character on page eight of the ***Dune Trader*** sourcebook does have spells. I don't get it.`,
+            answer: [
+                `You are the victim of a gross error. Ranis Inika has no spell list, but she can manufacture any of the poisons shown on the table on page 36 of the DARK SUN ***Rules Book*** and has the following thief abilities: PP 65; OL 55; FT 65; MS 70; HS 70; DN 45; CW 90; RL 20.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '100',
+            question: `Why does TSR, Inc. spend so much time and energy producing so darn many game worlds? There must be at least 10 of them if you count the softcover books. Why don't you concentrate on something for those of us who play on our own game worlds—like a good old-fashioned adventure or two?`,
+            answer: [
+                `With something like 3,000,000 + AD&D game players out there, variety is a must. That's why TSR, Inc. cranks out so many game worlds. One or two of them might be allowed to retire gracefully, but each of them has a cadre of dedicated fans who scream very loudly when their favorite world gets ignored. (Here's good news for readers who fall into this category: TSR, Inc. soon will start a "Classics" line that will feature a product for each world once a year.)`,
+                `Actually, there have been plenty of pure adventures published in the last two years. Here's some examples right off the top of my file cabinet: ***Wizard's Challenge*** (TSR product #9359), ***Haunted Halls of Eveningstar*** (#9354), ***Treasures of Greyhawk*** (#9360), and ***Rary the Traitor*** (#9386). ***Wizard's Challenge*** has the virtue of being generic—the set-up does not depend on any particular AD&D game setting, but it is designed for one-on-one or small-group play. The other products are designed for normal groups, but are set on particular worlds. This shouldn't be an impediment to DMs who have developed their own worlds, however. Any commercial scenario can be dovetailed into a homespun campaign. The premises behind some of these scenarios might not fit your particular campaign, but not every generic adventure will either. You shouldn't ignore a packaged adventure just because you're not interested in the world logo on the front cover. Smart game shoppers read the back-cover copy, or ask another gamer or a store employee about what's inside before deciding what to buy.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
         },
     ]
 });
