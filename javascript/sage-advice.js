@@ -6900,5 +6900,186 @@ DRAGON_MAGAZINES.push({
         },
     ]
 });
+DRAGON_MAGAZINES.push({
+    issue_number: '200',
+    publication_year: '1993',
+    publication_month: 'December',
+    foreword: `This month, the sage takes a long look at magic, magical items, and spell-casters in the AD&D® game. In addition, one question and the "Pantheon of the Month" that was cut for space reasons from "Sage Advice" in DRAGON issue #199 are also presented here.`,
+    sage_advice: [
+        {
+            page_number: '104',
+            question: `A character in my campaign has been forcibly sent to the Astral plane after a ***dimension door*** spell failed. Can the character survive on the plane? Can he escape from the plane? If so, how long will it take for him to get back?`,
+            answer: [
+                `The Astral plane is not a toxic or inherently hostile environment, so getting sent there is not fatal in and of itself. On the other hand, there are plenty of astral monsters and other hazards, so your errant traveler still could be in trouble.`,
+                `Whether the character can return to the Prime Material plane is up to the DM. Generally, travel between planes is not possible except by magical means. If the character has no such means at hand, the DM can construct an adventure for the character that allows for some chance of escape; perhaps the character can find a natural portal between the planes or strike a deal with a passing creature that has planar-traveling abilities. You can get more detailed information on the Astral plane in the PLANESCAPE™ *Adventures* boxed set, which will be released in April, 1994.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '104',
+            question: `What happens to a dual-classed character if the level of his original class is suddenly boosted so that it matches or exceeds the level in his current class? For example, a 6th-level fighter/7th-level mage would normally be free to use his warrior and wizard abilities without penalty because his mage level exceeds his fighter level. If the character reads a ***manual of puissant skill at arms*** and becomes a 7th-level fighter, what happens? Does the character have to go back to choosing which class he will use for each adventure until he reaches 8th level as a mage?`,
+            answer: [
+                `Judging from the text on page 45 of the ***PH***, it's pretty clear to me that the character has to go back to choosing which class to use again, just as he would if he were to lose a level to an energy drain and became a 6th-level mage.`,
+                `It would be entirely reasonable for the DM to rule that the character cannot benefit from the manual at all. The text on page 45 says that a dual-classed character never can gain experience in a class once it has been abandoned in favor of another class. The only exception to this is that a character can replace levels that are lost somehow.`,
+                `Considering the rarity and power of magical books, I don't think the campaign would suffer if the manual worked; the character is not actually devoting any time or energy to studying the old class—he's just the recipient of a big power dump. The DM, however, would not be violating the spirit of the rules by not allowing it; there's no compelling reason to automatically assume the character can retain or utilize what the book grants.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '104',
+            question: `Can characters carrying around a ***mirror of retention*** use it to "film" their adventures? Can the mirror be used to capture short "takes" as long as the total recording time doesn't exceed the ***mirror's*** capacity of 24 hours? Can the ***mirror*** be used to capture sunlight to provide illumination and confound undead? Can the ***mirror*** be used to copy maps or scrolls?`,
+            answer: [
+                `A ***mirror of retention*** (from the ***Tome of Magic***, page 140) must be hung in a room no larger than 50' square and commanded before it will function. If the ***mirror*** is removed from the wall, it stops recording. It can be played back anywhere, however. I suppose a party could carry a ***mirror of retention*** from place to place in a dungeon or large building, and use it to take snapshots, but remember that it doesn't work unless it is hung in a room that does not exceed the size limit. The party could hang it on a wall and use it to record an encounter in a chamber, but if the PCs are carrying the ***mirror*** during an encounter it records nothing.`,
+                `A ***mirror of retention*** can record sunlight streaming into a room, but the image played back on the ***mirror*** is just that, an image. The recorded sunlight has no affect on undead and the light the mirror sheds during playback is very faint, no brighter than a television screen in a dark room. The playback could be used as a weak light source in a pinch, but a character couldn't see very much with it.`,
+                `If the ***mirror*** is properly hung and operated, it could record a map or other piece of mundane writing—provided the room where the ***mirror*** is hung has sufficient light for reading at the time of recording. The ***mirror*** also could record a superficial image of a magical scroll, but such images are useless; they cannot be used to cast any spells inscribed on the scroll or to add the spells to a spell book; it takes the original scroll—in its entirety—to produce its magical effects. Note that if the image in the ***mirror*** were usable, then the writing on the scroll would fade as soon as it was recorded. Subsequently, if the image is read or copied from the ***mirror*** it fades away, too. A scroll can be used only once, and player characters cannot get around this limitation easily, and certainly not through a ***mirror of retention***.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '104',
+            question: `What happens when a ***mirror image*** spell is cast in very close quarters; that is, when a six-foot radius is not available for the extra images to shift around in? Will a fireball, dragon breath, or other area effect dispel a ***mirror image***?`,
+            answer: [
+                `Nothing special happens when the spell is cast in close quarters. A ***mirror image*** spell not only creates multiple images, but considerable distortion as well. In this case, the distortion is probably just a little stronger than normal. Provided the caster is free to move, attacks against the caster still have a chance to be misdirected. On the other hand, if the caster has his head on a chopping block, a ***mirror image*** spell isn't going to make the headsman miss. Barring this kind of situation—one where it is clear to the DM that the attacker knows exactly where the caster is—a ***mirror image*** works normally.`,
+                `***Mirror images*** are dispelled only by melee or missile attacks, or by a ***dispel magic*** effect. Other kinds of magical effects do nothing to a ***mirror image***. Note that an ***anti-magic shell*** would cause every ***mirror image*** in its area of effect to wink out, but only for as long as the images remain within the area of effect.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '104-105',
+            question: `Exactly how many spells does a dragon know at each age level? Can they change their spells each day like a wizard or a priest can? Can a dragon acquire new spells like a wizard can?`,
+            answer: [
+                `The table included with each dragon's description gives the number of spells a dragon can know. This number varies with the type of dragon and its age category. A dragon's repertoire of spells is fixed and cannot be changed or expanded. Gold dragons are the sole exception to this in the core AD&D game rules—they actually keep spell books. The DM is free to decide how gold dragons go about getting new spells, but I suggest you use the normal spell acquisition and research rules for wizards. The ***Council of Wyrms*** boxed set, which will be released in June, 1994 will contain lots of new material on dragons, including dragon spell-casters.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '105',
+            question: `What happens when a character wears two items that bestow magic resistance, say an ***amulet of magic resistance*** and a ***robe of the archmagi***?`,
+            answer: [
+                `This is up to the DM, but I strongly recommend that only the most powerful item functions. In other words, if the character in your example had an ***amulet of magic resistance***, 20% along with the ***robe of the archmagi***, which grants 5% magic resistance, the character still would have only a 20% magic resistance (from the ring). I recommend that you apply this rule even for naturally magic resistant creatures such as drow or tanar'ri. Magic resistance in the AD&D 2nd Edition game is a powerful ability, and once the DM lets it get out of hand, your game balance probably will go right out the window.`,
+                `If you're playing the AD&D 1st Edition game, where magic resistance is adjusted according to the level of the caster and a magic-resistant creature can't necessarily walk around causing magical effects to collapse, you can afford to be a little more lenient. Even then, be careful. High-level games give you a little more breathing room; at low level, magic resistance in the original game is even more formidable that it is in the current game. If you decide to make magic resistance cumulative in your original AD&D campaign, you still should not allow magic resistance to accumulate if it comes from similar sources. A drow wearing a ***robe of the archmagi*** could add the 5% to her natural magic resistance, and wizard could add the values of a ***robe of the archmagi*** and an ***amulet of magic resistance***. No character, however should be able to wear two ***amulets of magic resistance*** and add their effects together, only the most powerful amulet should function.`
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '105',
+            question: `How is the wizard's chance to hit an opponent determined when he casts a ***fireball*** or a ***lightning bolt***? What about things like dragon breath?`,
+            answer: [
+                `Unless the spells description says otherwise, all area effects hit automatically. The spell-caster decides where the effect will originate (within the limits of the spell) and the DM decides who or what is within the area of effect. Other area effects, such as dragon breath, work exactly the same way. In the case of dragon breath, the dragon "aims" the breath weapon as it wishes and anything caught in it must save vs. the effect. There are several other forms of attack that don't require attack rolls, such as gaze weapons and mental attacks. Note that while such attacks always "hit" they don't always work; most of these attacks allow a saving throw that negates or reduces the effect.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '105',
+            question: `How does a priest or cleric character create holy water?`,
+            answer: [
+                `According to ***The Complete Priests Handbook***, three priests (or clerics) of the same faith of at least 2nd level must get together in a temple dedicated to their deity and pray for a full hour. At the end of the hour, they must cast ***create water***, ***protection from evil***, and ***purify food and drink***. This process creates a half gallon of holy water (16 four-ounce vials). Any extra water from the ***create water*** spell must be channeled off before the ritual is complete, or the DM can assume that the extra water simply disappears during the ritual. For every two priests added to the group, an additional half gallon of holy water can be created, up to a maximum of four gallons of holy water at one time. I strongly suggest that you require holy water to be held in specially ***blessed*** vials (cost 2-5 gp each). You might also require an expensive font and basin (value 100-10,000 gp, depending on capacity) to hold the holy water while it's being created and dispensed into vials. If the DM wants more control over who creates holy water and when, it wouldn't be unreasonable to add extra spells to the ritual. I'd suggest ***chant***, (to be maintained the whole time) ***bless***, ***prayer*** and possibly ***combine***. The required vials can be ***blessed*** in a similar ritual, which is required to make the ***blessing*** permanent.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '105',
+            question: `Does a character lose a point of Constitution if he dies while wearing a ***ring of regeneration***? Does the "Hovering on Death's Door" optional rule affect this situation?`,
+            answer: [
+                `This is entirely up to the DM. I suggest that regeneration not reduce Constitution or require a resurrection-survival roll. A regenerating creature never truly dies, though it can be incapacitated by a grievous injury. Once the character drops to zero or fewer hit points, however, the character is unconscious or incapacitated even if the "Hovering on Deaths Door" rule is in use. Note that a character hovering on deaths door does not actually die until he reaches -10 hit points; if the DM has decided that regenerating back from death would reduce the character's Constitution score, the point is not lost unless death actually occurs.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '105',
+            question: `Do clerics and priests automatically know how to pray for all their spells, or do they have to learn how to pray for certain spells?`,
+            answer: [
+                `Any priest, including clerics and druids, knows how to pray for spells—this inherent knowledge is part of what makes the character a priest. The priest might have to undergo training as she advances in levels, but this is an optional rule (see ***DMG***, page 49) and should apply to all classes if a campaign uses it. Note that priests can invent or acquire entirely new spells in much the same way as wizards can. In this case, the priest must spend time and money discovering and learning the new prayers.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '105',
+            question: `How long do the various ***prismatic wall*** effects produced by a ***wand of conjuration*** last? How can these walls be dispelled? How long does the ***curtain of blackness*** effect last?`,
+            answer: [
+                `The ***prismatic wall*** lasts six turns, just as though created by a 6th-level caster. These walls can be negated only by the appropriate counter spell, see the ***prismatic wall*** description in the ***PH***, pages 191-192. I suggest you give the ***curtain of blackness*** a duration of six turns.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '105',
+            question: `What kind of barriers can stop a ***wall of fire*** spell? For example, if a ring-shaped wall is cast next to a tower, will the ring pass through the tower? If not, will the whole spell collapse?`,
+            answer: [
+                `Unless the DM wants to encourage some truly egregious abuse of this spell, I suggest that any solid barrier stops a ***wall of fire*** or similar spell. In this case, unless the tower wall as an opening at least 20' tall to admit the ***wall of fire***, the effect stops when it encounters the tower. I don't think it's reasonable to have the whole spell collapse, but the DM might force to spell-caster to reduce the radius until the ***wall of fire*** fits in the space available, or to use the sheet version of the spell arranged in a ring; this version has a total area that is less than one tenth of the ring's area. Or, the DM can just rule that there is a gap in the ring where it intersects the tower.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '105-106',
+            question: `Can a ***flaming sphere*** be cast in the air above a creature? Since the ***sphere*** is soft and spongy, how fast would it fall? If the ***sphere*** encounters a magic-resistant creature, what happens if the creature makes its magic-resistance roll? How big an area does the ***sphere*** illuminate?`,
+            answer: [
+                `There's nothing in the spell description that leads me to believe that a ***flaming sphere*** has to be cast on the ground. If cast in the air, it would fall straight down at its normal movement rate (30' a round) until it strikes the ground; if the ***sphere's*** duration hasn't expired before it hits the ground, it begins rolling in the direction the caster was pointing at the time of casting.`,
+                `Treat the ***sphere*** as an in-place effect when adjudicating magic resistance. That is, the ***sphere*** collapses if the magic-resistance roll succeeds. Note that there are several in-place spells that actually are mobile, including ***protection from evil***, which moves with the recipient, and some of the ***wall*** spells, which can be pushed over or dropped on creatures.`,
+                `The DM has to decide theatrical details such as how much light a ***flaming sphere*** sheds. The impression I get from the description is that the ball looks a lot like a big, glowing coal. It shows up pretty well in the dark—and really screws up infravision—but it doesn't shed much light at all, maybe enough to show vague detail within about six inches of the sphere.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '106',
+            question: `In WGR5 ***Iuz the Evil***, the words "celbit" and "jebli" are applied to tribes of orcs in the land of Iuz, but didn't an earlier WORLD OF GREYHAWK® products use these names in a different manner?`,
+            answer: [
+                `Actually, there are no authoritative definitions for either of these names in print anywhere (at least none I know about). Nevertheless, these words are Flan names for two humanoid races: "Celbit" is the Flan word for kobold and "jebli" is the Flan word for goblin. Here is a more com- plete list of Flan names, courtesy of reader Gene Weigel of Albany, N.Y.:`,
+                ``,
+                `**Orc**: Euroz`,
+                `**Goblin**: Jebli`,
+                `**Ogre**: Eiger`,
+                `**Gnoll**: Kell`,
+                `**Kobold**: Celbit`,
+                `**Hobgoblin**: High Jebli`,
+                `**Elf**: Olve`,
+                `**Dwarf**: Dwur`,
+                `**Halfling**: Hobniz`,
+                `**Gnome**: Noniz`
+                ``,
+                `Gene gleaned these names from the original ***WORLD OF GREYHAWK*** boxed set (TSR product #1015).`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '106',
+            question: `Pantheons of the Month`,
+            answer: [
+                `These are unofficial suggestions for using the optional spheres of priest spells from the ***Tome of Magic*** with the deities of the Celtic and the Chinese pantheons in ***Legends & Lore***:`,
+                ``,
+                `**Celtic pantheon**`,
+                `**Lugh**: *Major*: War, Travelers; *Minor*: None.`,
+                `**Oghma**: *Major*: Wards; *Minor*: Time, Thought.`,
+                `**Goibhniu**: *Major*: Time; *Minor*: Wards.`,
+                `**Daghdha**: *Major*: Time; *Minor*: Thought, Wards.`,
+                `**Manannan** mac Lir: *Major*: Time; *Minor*: Travelers.`,
+                `**Arawn**: *Major*: Time; *Minor*: Chaos.`,
+                `**Morrigan**: *Major*: War; *Minor*: Chaos.`,
+                `**Diancecht**: *Major*: Wards; *Minor*: Travelers.`,
+                `**Math** Mathonwy: *Major*: Thought; *Minor*: Time.`,
+                `**Belenus**: *Major*: Time; *Minor*: Travelers.`,
+                `**Brigantia**: *Major*: Time; *Minor*: Wards.`,
+                ``,
+                `**Chinese pantheon**`,
+                `**Shang-ti**: *Major*: Law, Thought; *Minor*: War, Wards.`,
+                `**Kuan-ti**: *Major*: War, Wards; *Minor*: Time, Thought.`,
+                `**Yen-Wang-Yeh**: *Major*: Law; *Minor*: Time, Wards.`,
+                `**Fu Hsing**: *Major*: Chaos; *Minor*: Time, Travelers.`,
+                `**Chung Kuel**: *Major*: Numbers; *Minor*: Thought, Time.`,
+                `**Liu**: *Major*: Time; *Minor*: Wards.`,
+                `**Lu Hsing**: *Major*: Law; *Minor*: Wards.`,
+                `**Shou Hsing**: *Major*: Time; *Minor*: Chaos.`,
+                `**Kuan Yin**: *Major*: Wards; *Minor*: Travelers.`,
+                `**Chih-Nii**: *Major*: Numbers; *Minor*: Thought.`,
+                `**Lei Kung**: *Major*: Law; *Minor*: War.`,
+                `**Sung Chiang**: *Major*: Time; *Minor*: Wards.`,
+                `**Lao Tzu**: *Major*: Thought; *Minor*: None.`,
+                `**K'ung Fu-tzu**: *Major*: Law; *Minor*: None.`,
+                `**The Dragon Kings**: These deities grant no spells.`,
+                `**Ch'eng Huang**: These local deities might grant minor access to any one of the following spheres: Time, Travelers, or Wards.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
 
 module.exports = DRAGON_MAGAZINES;
