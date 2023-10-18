@@ -102,5 +102,10 @@ each magazine, _ in dragonMagazines
                 span &emsp;!{formatInput(advice.answer, magazine.issue_number, questionNumber)}
                 if advice.image
                     span(class="no-copy")
-                        br
-                        img(src="../img/"+advice.image)
+                        if Array.isArray(advice.image)
+                            each img, _ in advice.image
+                                br
+                                img(src="../img/" + img)
+                        else
+                            br
+                            img(src="../img/" + advice.image)
