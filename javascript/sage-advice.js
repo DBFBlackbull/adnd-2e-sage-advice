@@ -7081,5 +7081,148 @@ DRAGON_MAGAZINES.push({
         },
     ]
 });
+DRAGON_MAGAZINES.push({
+    issue_number: '201',
+    publication_year: '1994',
+    publication_month: 'January',
+    foreword: `This month, the sage continues his look at magic in the AD&D® and D&D® games.`,
+    sage_advice: [
+        {
+            page_number: '44',
+            question: `Is it possible for a character using the third-level wizard spell ***wraithform*** to use nonoffensive spells or psionic abilities such as clairvoyance? Can a character using ***invisibility*** use nonoffensive spells or psionics?`,
+            answer: [
+                `***Wraithform*** does not prevent spellcasting or psionics of any kind, nor does it prevent attacks. All the caster's attacks, however, must be directed at targets on the Ethereal plane. Personal spells such as ***fly*** or ***infravision*** work normally on the caster. Attack spells such as ***magic missile*** or ***fireball*** work, too, but, only when cast at ethereal targets. The DM must decide about spells and psionic disciplines that fall in between. ***Clairvoyance***, for example, cannot cross planer boundaries and I'm inclined to suggest that a caster in ***wraithform*** can scry only ethereal locations. Likewise, ***fly*** spells can be cast, by touch, on creatures other than the caster, but the DM might rule that only ethereal creatures can be touched. (After all, a touch-delivered attack spell would have to be used against an ethereal target.)`,
+                `As "Sage Advice" has pointed out before, invisibility does not prohibit all spellcasting, only offensive spells.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY],
+        },
+        {
+            page_number: '44',
+            question: `A character affected by an ***Otto's irresistible dance*** spell must roll a 20 to make any saving throw. Do saving-throw bonuses from high ability scores or magical items apply, or does the character have to roll a "natural" 20?`,
+            answer: [
+                `Judging from the spell description's wording (***PH***, page 190), I'd say the victim actually has to roll a 20 on the saving throw die, ability score and magical bonuses notwithstanding. I can think of one exception: if the victim has a ***scarab of protection*** (see ***DMG***, page 179). I'd allow magical bonuses to apply to all saves while the victim is dancing. Note that the scarab has no effect on saving throw bonuses from ability scores.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '44',
+            question: `Exactly how much damage does the ***defiling regeneration*** spell (from the DARK SUN® setting's ***Dragon Kings*** book) inflict on attackers? For example, if a 30th-level defiler is battling a druid, how much damage does the druid suffer for each point of damage inflicted on the defiler?`,
+            answer: [
+                `You seem to be confusing the damage caused by casting a defiling spell with the hit points the defiler *regenerates* as result of casting the spell. The druid in your example suffers no damage at all. Creatures protected by ***defiling regeneration*** draw energy at the expense of the land, not their opponents. They *regenerate* at a flat rate of 2 hit points per round if damaged but still above 0 hit points, and 1 point per round if reduced to 0 hit points or less. Note that when the recipient reaches full hit points she is no longer damaged and stops *regenerating*.`,
+                `The ***defiling regeneration*** spell produces a minor defiling effect similar to what a normal defiler spell produces, but the area is very small-no larger than the protected creature's feet. This is why a battlefield where ***defiling regeneration*** has been used is littered with ashen footprints instead of great circles of ash. An opponent engaged in combat with a protected creature does not suffer any pain or initiative penalties as she would if caught in the area of destruction created when a defiler casts a normal spell. I suppose an opponent could be hurt if a creature protected by this spell was *regenerating* while in flesh-to-flesh contact (as might be the case during wrestling or overbearing combat), but the only effect would be non-damaging pain and the accompanying initiative penalty.`,
+                `***Defiling regeneration*** is a defiling magic, however. The act of casting this spell kills all plants within 3-30 yards (depending on the terrain, see ***Rules Book***, page 601, leaving an area of lifeless ash in their place. Living animals, monsters, and people within 30 yards suffer 1d6 points of damage for every experience level the caster has gained over 20 (see ***DK***, page 44). The caster might inadvertently kill the creatures he is trying to protect with this spell unless he is careful to place them outside this damage radius.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '44',
+            question: `What happens when the owner of a ***pouch of security*** (from the D&D game) dies? Does the pouch scream if someone picks it up, or does the next person to pick up the pouch become the owner?`,
+            answer: [
+                `Based on the item description (***Rules Cyclopedia***, page 241), I'd suggest that a ***pouch of security*** becomes unattached to any character after lying unattended for more than one hour. The pouch can be considered unattended if the owner is dead or more than 120' away.`,
+            ],
+            attributes: [],
+        },
+        {
+            page_number: '44',
+            question: `I've noticed that all the goblinoid deities in the ***Monster Mythology*** book are evil. Can goblin PC shamans and witch doctors worship human or demihuman deities instead?`,
+            answer: [
+                `Of course they can! Most deities are picky about their priests' and worshippers' alignments, but very few are concerned with race. If the deity's description doesn't specifically mention a racial requirement for priests or worshippers, there isn't one. Note that the priest in question must meet the racial and ability-score requirements for the priest class. Your goblin has to have a Wisdom score of at least 9 to be a priest of any deity.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '44',
+            question: `Would it be possible for two small creatures to tear a magical cloak in half so each could benefit from it?`,
+            answer: [
+                `Generally speaking, breaking or tearing a magical item destroys the item. The DM might allow a tailor to carefully cut a magical robe or cloak in half and use the material to make two garments, but there should be a chance that the magic will fail during the alteration. I suggest a base roll of 12 or better, modified for the item's enchantment (see ***DMG***, page 38), I suggest a +2 or +3 for a ***cloak of displacement***, for example. If your campaign uses nonweapon proficiencies, the tailor should make a proficiency check, too. If the check fails, the ***cloak*** is ruined. If the proficiency check is very good, say the exact number required, the ***cloak*** might get an additional saving throw bonus.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '44-45',
+            question: `I've been busy compiling a list of spells from various AD&D game products, and I've hit a snag. In several places, different books give different levels for the same spell, for example, ***dispel illusion*** is listed at third level in the original ***Player's Handbook*** and fourth level in ***Oriental Adventures***. Which should I use? Also there are a few spells that are so similar that I don't know which to use, for example ***mummy rot*** from ***The Complete Wizard's Handbook*** and ***mummy's touch*** from the FORGOTTEN REALMS® ***Adventures*** book.`,
+            answer: [
+                `Generally speaking, you should go with the most recently published material. Other considerations sometimes take precedence, however. In the case of ***dispel illusion***, for example, you're dealing with a spell that has been written out of the current game. Illusionists in the original game got this spell as a third-level spell, and wu jen (who are generalists) got it as a fourth-level spell. In the current game, illusionists don't get Abjurations at all, so I recommend pegging ***dispel illusion*** at fourth level.`,
+                `If you're playing a FORGOTTEN REALMS campaign, you probably ought to use ***mummy's touch*** because it was created for FR campaigns. If you use another world, your decision depends on how nice you want to be to spell-casters. ***Mummy's touch*** is generally more powerful than ***mummy rot***, and is two levels lower to boot (magic on Toril tends to be potent). On the other hand, mummy' s touch has a save, and ***mummy rot*** does not (at least when the spell is used against a human, demihuman, or humanoid). You might want to compromise and use one spell or the other as a fourth-level spell.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '45',
+            question: `Can a character who is illiterate fall victim to a ***glyph of warding***, ***explosive runes***, or ***symbol*** spell? What if the character is blind or his vision is obscured by magical darkness?`,
+            answer: [
+                `When dealing with a ***glyph of warding***, ignorance is not bliss. A ***glyph*** is a magical ward that fires whenever the condition the caster imposes comes to pass. It doesn't necessarily have to be read, in fact, it is seldom even seen.`,
+                `***Explosive runes*** are another case entirely. They are not triggered until the writing they protect is read; a character who cannot see or cannot read cannot trigger the ***runes***.`,
+                `A ***symbol*** need not be read to take effect, but it must be seen. Illiterate characters viewing the ***symbol*** are subject to its full effects. Creatures that cannot see the ***symbol*** are never affected, no matter why they can't see it: blindness, darkness (magical or normal if the creature does not have infravision), and something as simple as a blindfold all prevent a ***symbol*** from taking affect. The ***illusory script*** spell also falls into this category; the script need not be read, but it doesn't work unless it is seen.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_BLINDNESS],
+        },
+        {
+            page_number: '45',
+            question: `Is it possible for cities and towns in Faerun to have community deities as described on pages 46-47 of ***The Complete Priest's Handbook***? I'd like to run a priest character who worships such a deity, but my DM won't let me because there are no community deities mentioned in the ***Running the Realms*** book (from the new FR boxed set).`,
+            answer: [
+                `There are numerous local deities throughout the Realms (see ***Running the Realms***, page 45, first paragraph). These deities probably qualify as quasi-powers and the civic-deity rules from the ***CPH*** would fit them nicely. Nevertheless, your DM might not want to mess around with such deities, as the ***CPH*** itself points out. Talk this over with your DM again; if the DM still nixes your proposal, pick a mainline deity for your character.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '45',
+            question: `Were rules for half-giant clerics left out of ***Earth, Air, Fire, and Water*** on purpose? My group and I assume this is a mistake, because of the line on page 20 that says any Athasian race can become clerics.`,
+            answer: [
+                `This was an editorial oversight. Half- giants have no particular affinity for any one element and have an advancement limit of 12th level regardless of the type of cleric they become.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '45',
+            question: `Is there any limit to the number of ***stoneskin*** spells that can be cast on a single character? Our PC group was recently set upon by a horde of foes, each protected by more than 100 ***stoneskins***. Will ***stoneskin*** protect a character from falling damage? How may "attacks" will a protected character lose if an opponent hurls a handful of small objects (rocks or gems) at her from close range?`,
+            answer: [
+                `The spell description doesn't give any limit to the number of ***stoneskin*** spells a creature can enjoy at once. This, however, can lead to tremendous abuse. (One hundred ***stoneskins*** each? Give me a break!) I strongly suggest that you roll only once for the number of attacks a ***stoneskin*** spell negates and that this number applies no matter how many spells subsequently are cast on the recipient. For example, if a 20th-level wizard casts three ***stoneskin*** spells on a fighter, roll 1d4 + 10 for the number of attacks negated. If the roll is a "2" the fighter is protected from 12 and only 12 attacks. Once 12 attacks negate the spell the fighter can receive a fourth spell and can make a new roll. I also recommend that you give ***stoneskin*** a maximum duration of one day. This prevents a wizard with time on her hands from casting ***stoneskin*** on every soldier in an army.`,
+                `***Stoneskin*** protects against physical attacks in which something is hurled or struck against the victim: cuts, slashes, blows, bites, claws, tail slaps, etc. Magical and energy attacks are not negated. One could make a case for treating a fall as a blow, but I recommend against it. The recipient becomes something like a big statue, which is generally immune to blows, but it still can shatter if it's pushed`,
+                `out a window and falls to the ground. Note that the character is protected from caveins and avalanches, as these are situations where objects are hitting the character. Note also that magical attacks work against the character no matter how the spell delivers damage; ***magic missiles***, ***lightning bolts***, ***ice storms***, and the various ***Bigby' s hand*** spells go right through ***stoneskins***.`,
+                `Generally speaking, one of a ***stoneskin's*** protections is negated for each attack roll made against the character. A reasonable DM is going to call for one roll if a handful of pebbles is thrown at a target because all the pebbles are released at about the same time and all hit at about the same time, so this kind of attack should count against a ***stoneskin*** spell only once. Otherwise, a character could blow down a ***stoneskin*** by hurling handfuls of sand or dust. Likewise, an avalanche or cave-in negates one attack. Arrows, on other hand, come at their targets one at a time.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_STONESKIN],
+        },
+        {
+            page_number: '45',
+            question: `You forgot to include Sune's spheres in your list of ***Tome of Magic*** spells for FORGOTTEN REALMS deities in issue #192.`,
+            answer: [
+                `Oops, here they are: *Major*: Time, Thought; *Minor*: None.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '45',
+            question: `What ***Tome of Magic*** spells can druids cast? Your lists of spells for various specialty priests includes some deities that grant spells to druids, but the lists are never the same!`,
+            answer: [
+                `The lists vary because each set of spells is tailored to the deity and its portfolio, not to druids in general. A druid who worships a particular deity gets access to whatever ***TOM*** spheres are listed for the deity. For druids not dedicated to a specific deity I'd suggest the following: *Major*: Time, Wards; *Minor*: Travelers.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '45',
+            question: `Pantheon of the month`,
+            answer: [
+                `These are unofficial suggestions for using the optional spheres of priest spells from the Tome of Magic with the deities of the Egyptian pantheon in Legends & Lore:`,
+                `**Ra**: *Major*: Law, Thought; *Minor*: Time, Wards.`,
+                `**Geb**: *Major*: Time; *Minor*: Wards.`,
+                `**Nut**: *Major*: Time; *Minor*: Wards.`,
+                `**Shu**: *Major*: Time; *Minor*: Wards.`,
+                `**Tefnut**: *Major*: Time; *Minor*: Wards.`,
+                `**Osiris**: *Major*: Wards; *Minor*: Thought.`,
+                `**Isis**: *Major*: Numbers; *Minor*: Time.`,
+                `**Set**: *Major*: Chaos; *Minor*: Time.`,
+                `**Nephythys**: *Major*: Numbers; *Minor*: Wards.`,
+                `**Thoth**: *Major*: Numbers; *Minor*: Thought.`,
+                `**Ptah**: *Major*: Travelers; *Minor*: Time.`,
+                `**Horus**: *Major*: War; *Minor*: Wards.`,
+                `**Anhur**: *Major*: War; *Minor*: Time.`,
+                `**Bast**: *Major*: Time; *Minor*: Travelers.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
 
 module.exports = DRAGON_MAGAZINES;
