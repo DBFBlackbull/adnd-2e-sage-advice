@@ -6297,7 +6297,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A small creature wielding a bastard sword in two hands has to use the weapon's one-handed damage and speed factor. The character just can't manage the sword's full length. It's up to the DM to decide if a Large creature can get the benefits of two-handed use with only one hand. Since a 5' or 6' human can get the two-handed benefit by shifting his grip on sword's long hilt down toward the pommel, I suppose a nine-foot ogre could do the same thing with only one hand. In this case, the ogre has to use the two-handed speed factor. Note that a giant cannot get its extra damage dice unless it uses a weapon of proportionate size in the proper manner. That is, a hill giant might be able to use a bastard sword with one hand and inflict 2d4 points of damage (plus a strength bonus of +7); however, the giant has to use a giant-sized bastard sword in two hands if he wants to inflict 4d4 + 7 points of damage.`,
             ],
-            comment: 'Changed in #213 where a gnome is allowed to use a bastard sword i either mode.',
+            comment: `Continued in #213, where it is put in the DM's hand if they can use the two-handed statistics and in #214 where it can be used in either way, unless the DM disagree, moving it more in the hands of the player.`,
             attributes: [ATTRIBUTE_2E],
         },
         {
@@ -8253,7 +8253,7 @@ DRAGON_MAGAZINES.push({
     ]
 });
 DRAGON_MAGAZINES.push({
-    issue_number: '201',
+    issue_number: '210',
     publication_year: '1994',
     publication_month: 'October',
     foreword: `This month, the sage considers particular spells and character abilities in the AD&D® game, gives similar consideration to the PLANESCAPE™ setting, and continues his look at the SPELLFIRE™ game.`,
@@ -8346,6 +8346,428 @@ DRAGON_MAGAZINES.push({
             question: `What are the effects of the cranium rat's mind blast power?`,
             answer: [
                 `It works just like a mind flayer's mind blast. That is, the pack generates a cone of mental force 60' long, 5' wide at the base, and 20' wide at the far end. Creatures within the cone must save vs. wands, and failure leaves the victim reeling and unable to act for 3d4 rounds. The blast can originate from anywhere within the pack of cranium rats.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '211',
+    publication_year: '1994',
+    publication_month: 'November',
+    foreword: `This month, the sage visits battlefields and the COUNCIL OF WYRMS™ setting. The sage also continues his look at the SPELLFIRE™ game.`,
+    sage_advice: [
+        {
+            page_number: '95',
+            question: `Where can I find rules for mass combat in the AD&D® game? I have seen the BATTLESYSTEM® supplement, but I don't have any figures.`,
+            answer: [
+                `The ***Castle Guide*** (TSR product #2114) contains two mass combat systems, one for resolving sieges and one for resolving open field battles. Both systems employ material from the BATTLESYSTEM game. The upcoming ***PLAYER'S OPTION™ Combat & Tactics*** book (due out next summer) will contain a system for handling skirmishes involving a few dozen to a few hundred creatures, but it also could be used for larger battles. The system is loosely based on the boarding action system from ***The War Captain's Companion*** for the SPELLJAMMER® setting (TSR product #1072). TSR also is planning a hardcover book on high-level campaigns (also due next summer), which will contain a system for conducting mass combat.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '95',
+            question: `What happens to sha'irs (from the AL-QADIM® setting) when they venture into the PLANESCAPE™ setting? Can their gens still get them spells? Is the time required to fetch a spell increased or reduced?`,
+            answer: [
+                `Generally, a gen can go fetch spells for its master from any place in the multiverse. The gen's starting location has no measurable effect on how long it takes to fetch a spell, because most of the gen's time is spent locating and negotiating for the spell, not actually traveling from place to place. The DM can rule that local conditions prevent the gen from leaving the plane, but this should be very rare. If the plane the gen is on allows access to the Ethereal or Astral Planes, it always can fetch spells. Even when it cannot directly enter the Astral or Ethereal, the gen probably can find a conduit or gate that will get it where it needs to go. Note that a gen's ability to go plane hopping does not apply to the sha'ir or to the sha'ir's companions.`,
+                `Otherwise, a sha'ir's spells work the same way as any other wizard's. Any local conditions that affect the spell still apply even if the gen successfully delivers it. For example, a gen could deliver a ***fireball*** spell to its master, who is adventuring on the Elemental Plane of Water. The spell, however, still fails when the sha'ir tries to cast it because fire spells are ineffective on the Elemental Plane of Water.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '95',
+            question: `Do dragon mages and clerics from the COUNCIL OF WYRMS setting acquire and cast their spells the way other dragons do (learning them randomly and casting them with only a verbal component)? Or do they acquire and cast spells the way other spell-casters do?`,
+            answer: [
+                `Dragon mages and clerics function just like any other player character spell-caster. In learning "real" wizard or priest magic, they suppress their innate ability to learn spells randomly in favor of the regular method, which allows them to know and memorize many more spells. The dragon spell-caster must meet all the requirements for casting any particular spell, including casting time, and verbal, somatic, and material components. Note that the dragon's innate spell-like abilities are unaffected.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '95-96',
+            question: `The core AD&D rules clearly state that a dragon can use its breath weapon only three times a day. However, the COUNCIL OF WYRMS rules imply otherwise (unless you're using the optional on page 40 of the rules book). How many times can a dragon use its breath weapon in a COUNCIL OF WYRMS campaign and should the rule for dragon breath weapons be the same in all worlds?`,
+            answer: [
+                `The current core rules say nothing of the sort (though the original AD&D game's ***Monster Manual*** did limit dragons to three breaths a day). In the AD&D 2nd Edition game, a dragon can use its breath weapon once every three rounds (see the ***MONSTROUS MANUAL™*** book, page 64). As always, the DM has final say about how dragon breath weapons work, but breath weapons should work the same way throughout the campaign, regardless of which world the PCs are visiting.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '96',
+            question: `It is possible to use a dragon character from the COUNCIL OF WYRMS setting in another setting if the dragon were in humanoid form?`,
+            answer: [
+                `Not really. A dragon requires a great deal of time and treasure to advance a level, and most campaign settings do not have enough of either.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '96',
+            question: `What spheres of spells do dragon priests from the COUNCIL OF WYRMS setting cast? Which if the optional spheres from the ***Tome of Magic*** can they cast? Do the various dragon deities have specialty priests? If so, what spheres do they have access to?`,
+            answer: [
+                `All dragon clerics get the same spheres of spell, regardless of who their patron deities are. Worship in the Io's Blood Isles is not yet organized or developed enough to allow for specialty priests. Also, it is unclear whether Io would ever allow specialty priests to develop.`,
+                `COUNCIL OF WYRMS creator Bill Slavicsek and I discussed the question of spheres for dragon clerics and here's what we came up with. Spheres marked with an asterisk are from the ***Tome of Magic***:`,
+                `*Major*: All, Astral, Charm, Combat, Divination, Elemental, Guardian, Healing, Necromantic, Protection, Summoning, Chaos*, Law*, Thought*, and Wards*; *Minor*: None.`,
+                `Note that dragon clerics get both Law and Chaos spells regardless of alignments.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '96',
+            question: `What ***Tome of Magic*** spheres to specialty priests of Eilistraee and Lolth (from ***Drow of the Underdark***) cast?`,
+            answer: [
+                `Here you go:`,
+                `**Lolth**: *Major*: Chaos; *Minor*: Time.`,
+                `**Eilistraee**: *Major*: Wards; *Minor*: Travelers.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '212',
+    publication_year: '1994',
+    publication_month: 'December',
+    foreword: `This month, the sage examines a few spells, magical items, and psionic powers from the AD&D® 2nd Edition game and continues his look at the SPELLFIRE™ game.`,
+    sage_advice: [
+        {
+            page_number: '84',
+            question: `Recently, one of my players had his character cast the fourth-level wizard spell ***polymorph self***. The character changed into a quickling and the player announced that the character could now move a rate of 96 and make three attacks each round. Is that correct?`,
+            answer: [
+                `Not if you, the DM, don't think it is. A quickling's speed comes from its magically accelerated metabolism, and is not derived purely from its physical form; therefore, it can be considered a form of special movement, which ***polymorph self*** does not bestow (see the spell description, ***PHB*** page 161). While ***polymorph self*** bestows the assumed form's attack mode, a quickling's multiple attacks also stem from its incredible metabolism. A character who has assumed quickling form can use a quickling's attack modes (weapon attacks or unarmed combat), but only at the rate normally allowed to the character.`,
+                `In general, the DM should look askance (consider special) at any nonflying movement rate of greater than 24 or flying movement rate of greater than 36. Likewise, the ability to attack more than once each round with the same limb is a special ability and not a normal attack mode.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '84',
+            question: `Is it possible to use a ***ring of shocking grasp*** to give a metal weapon an electrical charge (by running a wire from the ring to the weapon) and inflict extra damage with the weapon?`,
+            answer: [
+                `Although this trick has been used in at least one published adventure, there is no reason why the DM has to allow it. The ring's magic works when the character wearing it touches an opponent with the hand that the ring is on (the ring literally creates a magical joy-buzzer in the wear- er's palm). Hitting an opponent with a weapon linked to the ring by a wire is not the same as touching the opponent with the hand wearing the ring. Remember that magic does not work according to scien- tific principles such as those that govern the flow of electricity from a charged object to grounded one.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '84',
+            question: `The psionic power Time/Space Anchor is supposed to prevent the user from being teleported against her will unless the opponent wins a psychic contest. How do you conduct a psychic contest if the opponent is not also a psionicist? Also, the way I read the Teleportation power, a psionicist can't teleport another character by force. What's up? Also, can Time/Space Anchor defeat the Banishment power? Can it prevent something from teleporting into an area?`,
+            answer: [
+                `Conduct the psychic contest between the psionicist's Time/Space Anchor power score and the opponent's power score. If the opponent has no power score, use the opponent's Intelligence score instead. If the opponent is a magical device (such as a ***teleportation chamber***) the DM must assign a value (12 is a good base value for most devices).`,
+                `You are correct that the power Teleport Other does not affect unwilling targets, but the Teleport power allows the psionicist to teleport other creatures within her grasp if she spends enough PSPs. If the creatures don't want to go, they can use Time/Space Anchor to stay behind. Time/ Space Anchor works against Banishment and any other effect that is described as a teleportation, check the power, spell, or item description to be sure. Time/Space Anchor does not prevent teleportation into an area.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '84',
+            question: `Some of the half-dragons mentioned back in DRAGON® issue #206 (for the COUNCIL OF WYRMS™ setting) can have the dragon fear power. Is this the same as a full dragon's fear power? If so, how strong is it?`,
+            answer: [
+                `Half-dragon fear is just like dragon fear except that it has a limited number of uses each day, as noted in issue #206. Otherwise, the power is based on the half-dragon's age category. The power's radius and strength is the same as the values given in COUNCIL OF WYRMS Book One, table 4, page 15.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '84-85',
+            question: `Over the years I've seen unique magical weapons and spell effects that are supposed to be treated as magical weapons for determining what types of creatures they can harm, but that have no actual bonuses. Does this mean that the items and spell effects in question are +0 weapons? I have never seen a creature that is effected only by +0 or better weapons. Are these weapons and spells effective against all creatures?`,
+            answer: [
+                `Generally, an item that is equivalent to a magical weapon is treated as + 1 even though it grants no bonuses. However, you should check the item or spell description for exceptions; the ***flame blade*** spell, for example, is not treated as a magical weapon, but affects all forms of undead.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '85',
+            question: `Do spells such as ***energy drain*** from the ***PHB*** and ***rift*** (from the ***Dragon Kings*** book, page 110) affect mummies? I know that mummies are undead creatures, but they have a connection to the Positive Material Plane instead of the Negative Materi- al Plane. How about psionic powers such as Death Field and Life Draining?`,
+            answer: [
+                `Mummies are dead and cannot be drained of life energy (lose levels or hit dice) by any means.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '85',
+            question: `A ***frost brand*** sword has a 50% chance to extinguish any fire its blade is thrust into, but the ability has a 10' radius. Does this mean a character holding the sword can try to extinguish a flame just by getting within 10' of it? Does this mean that there is a chance that every candle, torch, and lantern within 10' of the sword will go out when this power is used? What happens if the sword is simply carried through a fire without being thrust into it?`,
+            answer: [
+                `The item description (***DMG***, page 185) says the sword has a chance to extinguish any flame into which the blade is thrust. That leads me to suggest that the blade must at least touch a fire before it can be extinguished. The DM probably should require the wielder to deliberately stick the sword into a flame and activate the power, which is usable once a round.`,
+                `The 10' radius defines exactly how big a fire the sword can quench at once. If there are a dozen small fires in the radius, only one can be extinguished each round. If the fire is bigger than a 10' radius it might spread right back into the area, depending on how combustible the material in the area is. I strongly suggest that you define an individual fire as one that has a fuel source not shared by any other fire. So, for example, a pile of seven logs burning in a fireplace counts as one fire, but seven candles all set in a row are seven different fires.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '85',
+            question: `How much weight can a pair of ***winged boots*** lift?`,
+            answer: [
+                `I suggest 294 to 560 lbs. (280 + 1d20 × 14), just like ***boots of levitation***.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '213',
+    publication_year: '1995',
+    publication_month: 'January',
+    foreword: `This month, the sage looks at more magical enigmas in the AD&D® game and continues his examination of the SPELLFIRE game.`,
+    sage_advice: [
+        {
+            page_number: '85',
+            question: `Just how complete is the protection provided by an ***amulet of proof against detection and location***? Does it protect the wearer and his clothing and gear from ***detect magic*** spells? Is the wearer and his gear protected from spells such as ***detect invisibility*** and ***true seeing***? Suppose the wearer stole an item from a spell-caster, would the item be shielded from ***locate object*** spells? Does the amulet protect the wearer from psionic detection? Is the amulet itself resistant to spells such as ***detect magic*** and ***identify***?`,
+            answer: [
+                `The letter of the rules will support you if you decide that an ***amulet of proof against detection and location*** defeats all divination spells (that is, spells of the Divination school) and psionic powers that mimic those spells. However, I suggest a few exceptions in keeping with the spirit of the rules: First, the item description says that some information about the amulet's wearer is revealed if a powerful being is consulted. In game terms, I'd suggest that the priest spell ***commune*** provides access to suitably powerful beings; so does the wizard spell ***contact other plane***, but only if the being contacted resides on an outer plane and has an intelligence of at least 22 (see spell description, ***PHB***, page 167). I also suggest that you allow ***true seeing*** to reveal the wearer if he is invisible and to reveal the wearer's true form if it is altered or disguised in any way. Note that the amulet suppresses the wearer's aura, and a priest's true seeing spell cannot reveal the wearer's alignment.`,
+                `In any case, an ***amulet of proof against detection and location*** also protects the wearer's clothing and equipment, and it defeats spells such as ***locate object*** if targeted on items the wearer has on his person. The amulet only functions when worn by a creature, however, and it can be magically detected or identified if it is unattended or if it is carried, but not worn.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '85',
+            question: `Can a ***detect magic*** spell detect a magical aura on an invisible creature? If so, would this reveal exactly where the invisible creature was?`,
+            answer: [
+                `Yes, ***detect magic*** can detect an invisible creature's magical aura. No, this does not pinpoint the invisible creature's exact location. See page 120 of the ***DMG*** for details.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY],
+        },
+        {
+            page_number: '85-86',
+            question: `Creatures can use weapons one size larger than themselves if the use two hands (***PHB***, page 73). If a gnome were using a bastard sword in two hands, what would its damage and speed factor be?`,
+            answer: [
+                `That depends on how the gnome decides to use the sword and what the DM will allow the gnome to get away with. A bastard sword is a size M weapon no matter how it is used, so a gnome always has to use two hands. There's nothing in the rules that says a gnome, with his two-handed grip, can't use a bastard sword in "one-handed mode" (speed 6, damage ld8/ ld12) or in "two-handed mode" (speed 8, damage 2d4/2d8) just by shifting his grip. Most DMs I know would treat a bastard sword in two-handed mode as a large weapon, however, owing to the fact that the wielder is putting more of the weapon's overall length to use. This would prevent gnomes and other small creatures from using the sword in two-handed mode.`,
+            ],
+            comment: 'A soft change from #192, putting it in the hands of the DM. Continued in #214',
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `Can ***shadow magic*** affect objects? For example, how much effect would a shadow ***fireball*** have on a ship's sails?`,
+            answer: [
+                `Shadow magic has a real component, and it can harm objects. If the object in question has hit points, a ***shadow magic*** spell inflicts 20% of its normal damage (see spell description, ***PHB***, page 171). If the target item has no hit points, make a normal roll for the item on the item saving throw table, using whatever attack form the ***shadow magic*** was mimicking—the spell's real component, however weak, is potent enough to cause regular saving throws.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '86',
+            question: `When a magical weapon loses its enchantment due to planar travel (a ***sword +2*** from the Prime Material plane is taken to Limbo, for example) does it lose its ability to harm creatures struck only by magical weapons?`,
+            answer: [
+                `Yes, as an item's power fades, so does its ability to overcome special defenses.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86',
+            question: `Would a character wearing a ***cloak of displacement*** lose the cloak's benefits if she became invisible?`,
+            answer: [
+                `Yes, displacement fools viewers by making the displaced creature appear to be somewhere it is not. The effect is lost when the displaced creature becomes invisible.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_INVISIBILITY],
+        },
+        {
+            page_number: '86',
+            question: `The various descriptions of golems say that golems are immune to all spells except the ones specifically listed in the creature's description. Does this mean that a golem can ignore spells such as ***prismatic sphere***? What about spells with mostly physical effects such as the ***Bigby's hand*** spells and ***Mordenkainen's sword***?`,
+            answer: [
+                `Golems are impervious to most spells, but they are not anti-magical. Spells that do not change or damage the recipient generally work in a golem's presence just fine. Taking the items from your example: a golem can walk through most layers of a ***prismatic sphere*** and suffer no damage or special effects, but the violet (force field) layer stops the golem. The ***Bigby's hand*** spells cannot damage golems, but they can slow them or move them around if the golem falls within the spells weight limits. ***Mordenkainen's sword*** is ineffective against golems. Note that other spells might have strange effects when golems are involved. For example, a ***transmute rock to mud*** spell cast under a golem's feet probably will cause the golem to sink into the mud, The golem, however, will not drown. Instead it sinks to the bottom and keeps right on moving, eventually climbing out. If the spell is dispelled or reversed, the golem eventually will smash its way out of the resulting rock.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '86',
+            question: `Can a wizard memorize an extra spell of lower level in lieu of a higher-level one?`,
+            answer: [
+                `No. At least not without aid from a spell such as ***Rary's mnemonic enhancer*** or ***Mordenkainen's lucubration***.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '86',
+            question: `What, exactly, is required for a wizard to copy a spell from one spell book to another?`,
+            answer: [
+                `All that is required is a suitable spell book with space to receive the spell to be copied (see ***DMG***, page 42), adequate light, suitable ink and quills (the DM is free to determine what is suitable, but the requirements for writing in spell books are ***much*** less rigorous than for writing scrolls, see ***DMG***, page 85), and a reasonable amount of uninterrupted study time, say one hour per spell level.`,
+            ],
+            comment: `***DMG*** p. 62 says 1-2 days of work per spell level. There might be a difference in making copies of your own spell book and writing from another wizards book`,
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '214',
+    publication_year: '1995',
+    publication_month: 'February',
+    foreword: `This month, the sage examines a few particulars about the AD&D® 2nd Edition game, including initiative rules, backstabs, and spells. The sage also fields more SPELLFIRE™ game questions.`,
+    sage_advice: [
+        {
+            page_number: '78',
+            question: `Why do innate abilities have initiative modifiers (+3 according to page 55 of the ***DMG***) when innate abilities are not like spells and do not require casting times (***DMG***, page 64)? Can an innate ability be disrupted as a spell can?`,
+            answer: [
+                `Although an innate ability requires only a brief mental command from the user, they don't take effect instantaneously when triggered. It often is possible for an opponent to complete an action before an innate power comes into play. An innate power, however, does not require a casting time and cannot be disrupted as a spell can be.`,
+            ],
+            comment: 'Matches what is described in issue #170',
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_DISPEL_MAGIC],
+        },
+        {
+            page_number: '78',
+            question: `Magical devices such as rods, staves, and wands have initiative modifiers of up to +3; can they be disrupted as spells can? What about rings and potions?`,
+            answer: [
+                `If your game is not using the optional command word rule (see ***DMG***, page 156) rod, staff, or wand use cannot be disrupted, although the initiative modifier still applies. If you are using the command word rule, I recommend that you allow the process of activating any of these devices to be disrupted, but the DM must make the final decision.`,
+                `Rings (and miscellaneous magical items) generally do not require command words and they usually work just like innate abilities. That is, all they require is a mental command which cannot be disrupted, though there is an initiative modifier.`,
+                `A potion cannot be disrupted once imbibed. However, the DM might decide that the container holding the potion is smashed or lost before the user can drink it. Drinking a potion has an initiative modifier of +1, but there is an additional modifier of 1d4+1 until the potion actually takes effect. Note that the +4 modifier listed on table 41 in the ***DMG*** is just an average figure.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_DISPEL_MAGIC],
+        },
+        {
+            page_number: '78',
+            question: `Where is the information on alignment tongues in the current editions of the ***Player's Handbook*** and ***DUNGEON MASTER® Guide***?`,
+            answer: [
+                `Alignment languages are not part of the AD&D® 2nd Edition game.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '78',
+            question: `Would a thief's backstabbing attack always qualify as an ambush as defined on page 111 of the ***Player's Handbook***? What about surprise? Would the thief automatically gain surprise if she wasn't seen and made a successful move silently roll?`,
+            answer: [
+                `The penalties for being ambushed (no chance for a return attack *and* roll for surprise to see if the ambusher gets a another free round of attacks with surprise) do not always apply to the victim of a thief's backstab attack. To qualify as an ambush, the ambusher must be aware of her victim and prepare her attack ahead of time. In addition, the target must be unable to detect the foe prior to the attack. For example, a thief who hears a monster approaching, successfully hides in shadows until the monster passes, then successfully moves silently and closes to the attack probably deserves to be credited with an ambush. On the other hand, a thief who turns a corner and finds herself facing an opponent's unguarded back should be allowed to make a backstab attack, but cannot stage an ambush.`,
+                `Technically, a thief must surprise an opponent before she can claim any backstab bonuses (see ***PHB***, page 40); that is, the backstab *requires* surprise, it does not guarantee it. Note that an unseen thief who makes a successful move silently roll has an extra chance to achieve surprise, see ***DMG***, table 57, page 102; the target should suffer a -2 penalty for the thief's silent movement and very likely an additional -2 for not seeing the thief lurking behind.`,
+                `In any case, most DMs I know dispense with the surprise roll and allow a backstab anytime a thief makes an attack from behind against an opponent who is unaware of the thief and has no compelling reason to suspect a rear attack. In such cases, I still recommend a normal surprise roll. If the victim is surprised, the thief gets two attacks before there is an initiative roll. The thief's first attack gains the backstab bonuses and the second attack is a normal rear attack. If the surprise roll fails, the thief is assumed to win initiative and gets the backstab bonuses for the first attack and the victim and turn around and return the attack if she survives.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '78',
+            question: `The third-level priest spell ***protection from fire*** negates 12 points of fire damage per caster level if the caster uses it on himself. If an incoming fire attack allows a saving throw for half damage, does the character get to attempt a saving throw to reduce the damage subtracted from the spell's total? What if the character also is wearing a ***ring of fire resistance***? What of the caster also has magic resistance?`,
+            answer: [
+                `A ***protection from fire*** spell negates fire damage that the protected creature actually suffers. If the character can avoid damage altogether courtesy of a magic resistance roll, then no damage is subtracted from the spell's total. If the actual damage inflicted is reduced due to a successful saving throw or a protective device, then only the reduced damage is subtracted from the spell's total.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '78',
+            question: `Does a ***symbol*** spell fade after taking effect or does it remain and possibly affect several creatures?`,
+            answer: [
+                `A wizard's ***symbol*** spell remains until triggered, then fades. It is entirely possible for entire groups of creatures to be affected by a ***symbol*** however; as several creatures might read or otherwise trigger it simultaneously.`,
+                `A priest's ***symbol*** spell lasts for one turn per level of the caster and can affect any number of creatures who are exposed to it within that time.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '78-79',
+            question: `Because there is a second-level priest spell ***detect charm***, I think that a ***detect magic*** spell, which is first level for wizards and priests, cannot detect spells such as charm person. Am I right?`,
+            answer: [
+                `I don't know. If you're the DM, you're right.`,
+                `On the other hand, ***detect magic*** reveals magical emanations within the area of effect. Now, I don't find anything in the ***charm person***, ***charm person or mammal***, ***suggestion***, ***mass charm***, ***fire charm***, or ***charm monster*** spell descriptions implying that any of these spells do not produce magical emanations just like any other spell does.`,
+                `Let's pause for a moment, however, and examine what ***detect magic*** can and can- not do. ***Detect magic*** can detect magical emanations from a charmed creature. If a priest casts the spell, all it reveals is the approximate strength magic, weak to overwhelming; the priest who cast the spell learns nothing else. If a wizard casts the ***detect magic*** spell, there is a 10% chance per caster level of identifying the exact type of magic; in this case, Enchantment/Charm magic, not ***charm person*** or any other specific effect. Note that this kind of accuracy is not always possible. The percentile roll to determine the type of magic can fail and the DM can rule that there are so many conflicting types of magic present that no one of them can be singled out. This might very well be the case if the charmed character also is carrying several magical items, has consumed a potion, and has also has received some other type of spell.`,
+                `***Detect charm*** exists as a separate spell for two reasons. First, it allows priests to identify magical charms when they find them; something that their version of ***detect magic*** cannot do. Second, it allows a magical charm to be identified exactly, right down to the specific type—it can distinguish a ***charm person*** effect from a ***rod of beguiling*** effect even when there are several different types of magic affecting the creature being examined; something that not even the wizard's version of ***detect magic*** can do. Note, however, that if the creature being examined has been subjected to several different charm effects all at once not even ***detect charm*** can distinguish between them.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '79',
+            question: `How many missiles can a character wearing ***gloves of missile snaring*** catch in a single round? Is the number reduced if the characters wears only one glove?`,
+            answer: [
+                `Generally speaking, a character must wear both items in a pair of magical items before getting any benefit. One cannot, for example, wear one ***boot of speed*** and expect to go hopping off at a brisk pace. A character wearing ***gloves of missile snaring*** can grab one or two missiles each round. To grab two missiles, both hands must be free, that is, not holding weapons, shields, or other equipment.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '79',
+            question: `What kinds of magic can a ***rod of cancellation*** actually destroy? The item description seems to imply that the rod only works on magical items, but there are some spell effects, such as ***walls of force*** whose descriptions say that the rod destroys them.`,
+            answer: [
+                `A ***rod of cancellation*** can drain any magical item according to the rules given in its description (***DMG*** page 152), and some spell effects. If a spell is subject to cancellation, its description will say so.`,
+                `Some DMs I know also allow ***rods of cancellation*** to drain spell effects that can be touched and that operate continuously. Such effects include the various ***wall*** and ***Bigby's hand*** spells, ***prismatic sphere*** (one layer only), and ***unseen servant***, but not spells that summon creatures or animate plants or objects. If you use this variant, you'll have to decide what can be canceled on a case-by-case basis.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '79-80',
+            question: `How is a ***wand of negation*** supposed to work? Does it act like a ***dispel magic*** spell, negating effects that already are in place, or does it prevent the target device from working in the future? If the latter is true, how long does the negation last? The wand is supposed to be 100% effective against other wands, but only 75% effective against other devices. Is a spell a device? What about wands with multiple functions; is a ***wand of negation*** 100% effective against the wand's primary function (or the first one targeted) and only 75% effective against other functions? What is a spell-like effect?`,
+            answer: [
+                `A ***wand of negation*** prevents wands and other magical devices from producing spells or spell-like effects during the round in which the ***wand of negation*** is used. It does not affect spells in any way. A ***wand of negation*** does not affect spells or spell-like effects that are already up and running, so the wielder must win initiative to be effective. The negation lasts one round and effects wands 100% of the time, even multi-function wands. A ***wand of negation*** also effects (75% of the time) any non-artifact magical device that produces spells or spell-like effects including rods, staves, rings, unusual weapons, and miscellaneous magical items.`,
+                `A spell-like effect is anything that the user can invoke at his own discretion. Effects that operate continuously are not spell-like effects. For example, the defensive bonuses provided by ***rings of protection***, ***bracers of defense***, or magical armor are not spell-like functions. The attack and damage bonuses from a magical sword are not spell-like, but any extra, non-combat powers that the sword has, such as flight or trap detection, are.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '80',
+            question: `In the original ***Player's Handbook***, there is a +4 bonus for attacking motionless opponents, but the modifier is not included in the current ***PHB***. Under what circumstances does the modifier apply? For instance, does it apply when attacking a sentry standing at his post? Why has the modifier been dropped from the current rules?`,
+            answer: [
+                `The +4 modifier applies when the opponent is incapable of moving or capable of only very limited movement, see the original ***DUNGEON MASTER Guide***, page 70. The unmoving sentry in your example could be attacked with a +2 modifier for a rear attack (if the attacker were behind the sentry), but not the +4 for being motionless (because he is capable of moving freely). If the sentry were asleep at his post, however, the +4 modifier would apply. The current rules still contain the +4 modifier (see ***PHB***, page 90), but the term "motionless" has been dropped to help avoid confusion.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '80',
+            question: `Page 73 if the ***Player's Handbook*** says creatures can use weapons one size larger than themselves if they use two hands. What happens when a gnome uses two hands to wield a bastard sword? Does the gnome use the two-handed statistics or the one-handed statistics?`,
+            answer: [
+                `A bastard sword is a size M weapon no matter how it is wielded. So, your gnome could use either set of statistics, it all depends on where the character grips the sword. Note that the sword has a slower speed factor when used two-handed.`,
+                `DMs who don't care for this idea should feel free to treat a bastard sword used two-handed as a large weapon. The sword doesn't actually get any bigger when used with two hands, but the wielder is employing more of the sword's overall length and mass. (See "Sage Advice" in DRAGON issue #213 for more on gnomes using bastard swords.)`
+            ],
+            comment: `Final comment on the subject, overruling / clarifying #192 and #213`,
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '215',
+    publication_year: '1995',
+    publication_month: 'March',
+    foreword: `This month, the sage considers a mix of questions straight out of the mailbag.`,
+    sage_advice: [
+        {
+            page_number: '88',
+            question: `Exactly what is meant by the phrase "magical creatures and spell-casters"; my question relates to the ***vortex*** spell from the ***Tome of Magic***, page 36, but a general definition would be useful for other purposes as well.`,
+            answer: [
+                `In this particular case, a spell-caster is any creature capable of casting spells or using spell-like abilities, including high-level paladins and rangers. A magical creature, for purposes of the ***vortex*** spell is anything that has been conjured, summoned, animated, or has its origin on another plane. Golems, creatures carrying magical items, and creatures that are enjoying the effects of beneficial spells are not magical unless they also fall into one the aforementioned categories. You may indeed find this definition useful in other circumstances, but use your common sense when applying it.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '88',
+            question: `I'm having difficulties with the ***charm person*** spell. How should the spell work during a combat with several creatures on both sides? Will a *charmed* creature immediately switch sides? Does a *charmed* creature believe everything the caster says? Will a *charmed* creature follow the caster around, effectively become the caster's henchman? Is there a limit to the number of *charmed* creatures a character can control at once?`,
+            answer: [
+                `A *charmed* creature regards the spell-caster as a valued friend who will never harm it or tell it a lie. The creature also loses all sense of personal initiative and does nothing unless the caster tells it to do something (see DMG, pages 63-64). It is possible for the caster to persuade the *charmed* creature to attack former comrades, but the caster's intention must be clear and the caster might need to be very insistent if the *charmed* creature is lawful or good and is loyal to its original group. Such communication is seldom possible in the midst of combat, though the caster can draw the *charmed* creature aside for a chat. Note that if the *charmed* creature's associates try to prevent the creature from leaving the group, it becomes much easier for the caster to convince the creature that the former allies are enemies.`,
+                `A *charmed* creature doesn't necessarily believe everything the caster says, but it is always certain the caster isn't really trying to lie.`,
+                `A *charmed* creature will do pretty much anything the caster asks it to do, short of obviously suicidal actions and actions completely contrary to the creature's ethos or alignment. For example, no druid is going to set fire to a forest (though a *charmed* druid might be convinced to leave a campfire unattended). If the caster tells the creature to follow, the creature will tag along while the spell lasts. Note that hostile actions on the caster's part merit a new saving throw for the creature, as does too much abuse or interference from the caster's companions.`,
+                `A caster can keep any number of *charmed* creatures under his thumb at once, but there are practical limitations to how many creatures he can control at once; under most conditions, the caster might issues brief commands to four or five *charmed* creatures in a single round. If a *charmed* creature cannot see, hear, and understand the caster, it probably won't heed his commands.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '88',
+            question: `The material for the elven archer kit in ***The Complete Book of Elves*** recommends continued specialization with bow. How is this accomplished? Are the long sword, short sword, and dagger the only melee weapons an elven archer can ever use?`,
+            answer: [
+                `The reference to continued specialization is an error, though the upcoming ***PLAYERS OPTION™ Combat and Tactics*** book (due out in July) includes rules for weapon mastery, which an elven archer certainly could use.`,
+                `When spending her initial weapon proficiency slots, the only melee weapons an elven archer can choose are the long sword, short sword, and dagger. The character can choose other melee weapons as she gains new weapon proficiencies. An elven archer never gains any attack roll bonuses with melee weapons of any kind.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '88',
+            question: `The PLANESCAPE™ box set says priests whose deities reside on the Inner Planes lose three levels of experience when adventuring on the Outer Planes because there are three planes between them and their deities. The example (***DM™ Guide to the Planes***, page 14) lists the three planes as the Ethereal, Prime Material, and Astral Planes. Why are the Ethereal and Astral counted when they don't interfere with priests on the Prime?`,
+            answer: [
+                `Because that's the way the deities want things to work. As my colleague David Wise once put it, there are no laws of planar physics that cause priests to lose levels when they visit the Outer Planes, there are just the rules that the powers have laid down. Note that in general no priest loses levels on any Inner Plane or on the Astral or Ethereal plane no matter where the character's deity resides. Of course, there might be places in the multi- verse where the powers have decided otherwise, but that's up to the DM or scenario designer.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `In the PLANESCAPE setting, can priests in Sigil receive spells? If so, what is the level cost?`,
+            answer: [
+                `Yes they can. Sigil is part of the Plane of Concordant Opposition and is adjacent to every Outer Plane. Priests whose deities reside on the Outer Planes lose no levels. Priests whose deities reside on Inner Planes lose three levels.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88+90',
+            question: `The ***Manual of the Planes*** says that poisons don't work on the Astral Plane because characters' metabolic rates are slowed. The material on the Astral Plane in the PLANESCAPE setting doesn't mention slowed meta- bolic rates at all. Is this an official change, or just an oversight? Do magical potions work on the Astral Plane?`,
+            answer: [
+                `The exact magical properties of the Astral Plane in the PLANESCAPE setting are currently unrevealed. Until updated material for the PLANESCAPE setting comes out, I'd suggest you go by what's in ***Manual of the Planes***. According to that book, potions not only work on the Astral Plane, they can last indefinitely and their durations only begin to run out when the character leaves the plane.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '90',
+            question: `In the PLANESCAPE MONSTROUS COMPENDIUM® accessory, the general entry for tanar'ri says they all have a ***gate*** spell-like ability. However, the individual entries for the alu-fiend, cambion, manes, and wastrilith don't give any details on *gating*. Do these creates have the ***gate*** ability?`,
+            answer: [
+                `No, these creatures have no *gating* ability. The manes is a kind of sub-tanar'ri, the cambion and alu-fiends are tanar'ri crossbreeds, and the wastrilith is an elemental creature not known for its ability to influence other denizens of the Abyss; none of these creatures enjoy the full slate of tanar'ri powers.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '90',
+            question: `In the PLANESCAPE MONSTROUS COMPENDIUM accessory, the entries for the abishai, lemure, and nupperibo baatezu are confusing. Under what conditions will each of these fiends regenerate hit points? Also, how do the terms "holy magical weapon," "holy sword," "holy item," and "sanctified weapon" really mean in this context?`,
+            answer: [
+                `In all three cases, the creatures will not regenerate back to life if killed by a holy sword or holy water, or if doused with holy water after death.`,
+                `The terms in your list collectively describe holy water and the ***+5 holy avenger sword***. In some campaigns there might be magical holy avenger *weapons* that are not +5 or that are not swords—they qualify as holy or sanctified weapons. Some campaigns also might have holy items that are not holy water, such as holy wafers, which can be stuffed into creature’s body to keep if from regenerating. DMs also might allow good holy symbols to prevent regeneration if placed upon the body.`
             ],
             attributes: [ATTRIBUTE_2E],
         },
