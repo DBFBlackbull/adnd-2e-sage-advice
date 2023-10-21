@@ -34,6 +34,9 @@ const SYNONYMS = [
     ['hit point', 'hit-point'],
     ['demiplane', 'demi-plane'],
     ['the complete psionics handbook', 'complete psionics handbook', 'the complete book of psionics','tcph', 'cph', 'cphb'],
+    ['Complete Sha\'ir\'s Handbook', 'CSH'],
+    ['combat & tactics', 'combat and tactics', 'c&t'],
+    ['skills & powers', 'skills and powers', 's&p']
     ['tome of magic', 'tom'],
     ['L&L', 'Legends & Lore'],
 ];
@@ -1041,9 +1044,29 @@ DRAGON_MAGAZINES.push({
             page_number: '8',
             question: `How many proficiencies do monks and yakuza get?`,
             answer: [
-                `The following additions/changes apply to table 56 (page 51):`
+                `The following additions/changes apply to table 56 (page 51):`,
+                `
+<table style="text-align: center">
+<tr style="vertical-align: bottom">
+    <td><strong><em>Class</em></strong></td>
+    <td><strong><em>Initial #<br>of Prof.</em></strong></td>
+    <td><strong><em>Add Prof.<br>per level</em></strong></td>
+    <td><strong><em>WNPP</em></strong></td>
+</tr>
+<tr>
+    <td>Monk</td>
+    <td>5</td>
+    <td>1/2</td>
+    <td>- 3</td>
+</tr>
+<tr>
+    <td>Yakuza</td>
+    <td>3</td>
+    <td>1/3</td>
+    <td>- 3</td>
+</tr>
+</table>`
             ],
-            image: 'sage_advice_150_q10.png',
             attributes: [ATTRIBUTE_1E],
         },
         {
@@ -2530,8 +2553,26 @@ DRAGON_MAGAZINES.push({
             question: `My wife and I have a continuing argument over the properties of the ***vorpal blade***. She insists that strength bonuses are considered when determining whether the weapon severs a victim's neck. I point out that the footnote on page 186 of the ***DMG*** says only the sword's +3 bonus affects the score required to sever.`,
             answer: [
                 `This is probably the first time I've been asked to settle a domestic argument. Bonuses for strength, specialization, spells (such as ***bless*** or ***prayer***), situation (opponent surprised, prone, etc.), or the like do not affect the score needed to sever. Thus, it is quite possible to solidly hit an opponent, due to a good roll and high bonuses, but not sever his neck. In fact, the table could—and probably should—read as follows (the same table can be used for the ***sword of sharpness***):`,
+                `
+<table>
+<tr>
+    <td style="vertical-align: bottom"><strong><em>Opponent</em></strong></td>
+    <td style="text-align: center"><strong><em>Unmodified<br>to-hit roll<br>needed to sever<br>head/neck</em></strong></td>
+</tr>
+<tr>
+    <td>Normal/armored</td>
+    <td style="text-align: center">17-20</td>
+</tr>
+<tr>
+    <td>Larger than man-size</td>
+    <td style="text-align: center">18-20</td>
+</tr>
+<tr>
+    <td>Solid metal or stone</td>
+    <td style="text-align: center">19-20</td>
+</tr>
+</table>`
             ],
-            image: 'sage_advice_158_q05.png',
             attributes: [ATTRIBUTE_2E],
         },
         {
@@ -3796,8 +3837,62 @@ DRAGON_MAGAZINES.push({
             question: `How much do siege engines cost? ***The Castle Guide*** gives rules for their use, but not their costs.`,
             answer: [
                 `Here's an unofficial price list to hold you until something better comes along:`,
+                `
+<table>
+<tr>
+    <td><strong>Item</strong></td>
+    <td><strong>Cost</strong></td>
+</tr>
+<tr>
+    <td>Ballista</td>
+    <td>200 gp</td>
+</tr>
+<tr>
+    <td>Bombard</td>
+    <td>20,000 gp</td>
+</tr>
+<tr>
+    <td>Bore</td>
+    <td>800 gp</td>
+</tr>
+<tr>
+    <td>Cannon, heavy</td>
+    <td>10,000 gp</td>
+</tr>
+<tr>
+    <td>Cannon, light</td>
+    <td>6,000 gp</td>
+</tr>
+<tr>
+    <td>Catapult, arrow</td>
+    <td>300 gp</td>
+</tr>
+<tr>
+    <td>Catapult, heavy</td>
+    <td>540 gp</td>
+</tr>
+<tr>
+    <td>Catapult, light</td>
+    <td>400 gp</td>
+</tr>
+<tr>
+    <td>Gallery</td>
+    <td>600 gp</td>
+</tr>
+<tr>
+    <td>Ram</td>
+    <td>500 gp</td>
+</tr>
+<tr>
+    <td>Siege tower</td>
+    <td>1,000 gp</td>
+</tr>
+<tr>
+    <td>Trebuchet</td>
+    <td>800 gp</td>
+</tr>
+</table>`
             ],
-            image: 'sage_advice_171_q06.png',
             attributes: [ATTRIBUTE_2E],
         },
         {
@@ -9470,6 +9565,588 @@ DRAGON_MAGAZINES.push({
                 `The channel between a character and a ***projected image*** is broken by anything that blocks the character's sight or that prevents the character from casting a spell into the location where the image is. This includes barriers such as walls of force and the two ***Otiluke's sphere*** spells.`
             ],
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '221',
+    publication_year: '1995',
+    publication_month: 'September',
+    foreword: `This month, "Sage Advice" considers armor for rogues, samovars, and a few magical mysteries. Unless otherwise stated, page references are for AD&D® game rulebooks printed after April, 1995.`,
+    sage_advice: [
+        {
+            page_number: '100',
+            question: `The footnote to Table 29: Thieving Skill Armor Adjustments in the ***PHB*** says that bards (only) suffer an additional -5% penalty when wearing non-elven chain mail. Does this mean that a bard in normal chain mail suffers a -5% penalty to his read languages ability? What about other types of armor allowed to bards, such as hide or ring mail?`,
+            answer: [
+                `A rogue's read languages ability is never affected by the armor the player character (PC) is wearing. For bards, I suggest amending table 29 to read as follows:`,
+                `
+<table>
+<tr>
+    <td></td>
+    <td style="vertical-align: bottom; text-align: center">None</td>
+    <td style="vertical-align: bottom; text-align: center;">Elven<br>Chain</td>
+    <td style="vertical-align: bottom; text-align: center;">Padded,<br>Hide,<br>Studded</td>
+    <td style="vertical-align: bottom; text-align: center;">Chain,<br>Ring</td>
+</tr>
+<tr>
+    <td>Pick Pockets</td>
+    <td style="text-align: center">+5%</td>
+    <td style="text-align: center;">-20%</td>
+    <td style="text-align: center;">-30%</td>
+    <td style="text-align: center;">-25%</td>
+</tr>
+<tr>
+    <td>Open Locks</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center;">-5%</td>
+    <td style="text-align: center;">-10%</td>
+    <td style="text-align: center;">-10%</td>
+</tr>
+<tr>
+    <td>Find/Remove Traps</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center;">-5%</td>
+    <td style="text-align: center;">-10%</td>
+    <td style="text-align: center;">-10%</td>
+</tr>
+<tr>
+    <td>Move Silently</td>
+    <td style="text-align: center">+10%</td>
+    <td style="text-align: center;">-10%</td>
+    <td style="text-align: center;">-20%</td>
+    <td style="text-align: center;">-15%</td>
+</tr>
+<tr>
+    <td>Hide in Shadows</td>
+    <td style="text-align: center">+5%</td>
+    <td style="text-align: center;">-10%</td>
+    <td style="text-align: center;">-20%</td>
+    <td style="text-align: center;">-15%</td>
+</tr>
+<tr>
+    <td>Detect Noise</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center;">-5%</td>
+    <td style="text-align: center;">-10%</td>
+    <td style="text-align: center;">-10%</td>
+</tr>
+<tr>
+    <td>Climb Walls</td>
+    <td style="text-align: center">+10%</td>
+    <td style="text-align: center;">-20%</td>
+    <td style="text-align: center;">-30%</td>
+    <td style="text-align: center;">-25%</td>
+</tr>
+<tr>
+    <td>Read Languages</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+</tr>
+</table>`,
+                `In the core AD&D rules, thieves are limited to the armor types shown on the original table (PHB, page 56).`
+            ],
+            comment: `***The Complete Bard's Handbook*** only have a 5% penalty for Detect Noise using Hide Armor, making Hide Armor better objectively better than both Padded and Studded leather in every way.`,
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '100',
+            question: `What are the effects of armor on a ranger's ability to move silently and hide in shadows?`,
+            answer: [
+                `You can use the table given in the last question for rangers, too. Armor heavier than chain mail (AC 5) prevents the ranger from using these skills. Note that this is a change for the text on page 40 in the ***PHB***. If you *own* a copy of the ***The Complete Ranger's Handbook***, use the tables on page 11 instead of the one given here.`,
+            ],
+            comment: `***The Complete Ranger's Handbook*** have completely different stats for Hide Armor and Chain Mail. The stats used for Rangers are the same as those given in ***The Complete Thief's Handbook*** about illegal armor, as Rangers generally are not allowed to use such heavy armor and still use their abilities.`,
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '100',
+            question: `Are armor adjustments to thief skills different if the armor is magical. That is, does a character wearing ***studded leather +2*** have a lower penalty?`,
+            answer: [
+                `No, only the armor type counts.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '100',
+            question: `Is it true that druids can wear only leather armor?`,
+            answer: [
+                `The text on page 51 of the ***PHB*** certainly implies that leather armor and wooden shields are the only kinds of armor a druid can use. A druid, however, can use any "natural" armor, which includes padded, leather, or hide armor. Likewise, a druid can use any shield made from wood, bone, shell, or similar nonmetal substance.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '100',
+            question: `Why does magic resistance work against a defensive spell such as ***protection from evil*** when it doesn't work against a defensive spell such as ***stoneskin***?`,
+            answer: [
+                `As "Sage Advice" (and the article on magic resistance in issue #218) has explained before, magic resistance applies only when the creature with magic resistance is directly affected by the spell. A spell such as ***stoneskin***, which protects the recipient from physical attacks, is never subject to magic resistance. ***Protection from evil*** is sometimes subject to magic resistance. Only when the spell's third effect (which forms a barrier against planar and conjured creatures and forces such creatures to recoil) comes into play does magic resistance have any affect on the spell. The spell's other two effects, which make the spell's recipient harder to hurt, are not subject to magic resistance (though if a magic resistence roll suceeds against the the third effect the whole spell collapses). For example, a leprechaun has a formidable magic resistance, but because a leprechaun is not hedged out by the spell (because it is not a conjured or planar creature), its magic resistance does not affect ***protection from evil*** spells.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_STONESKIN],
+        },
+        {
+            page_number: '100',
+            question: `When a wizard with the jackal kit (from ***The Complete Sha'ir's Handbook***) tries to steal spells from another wizard, the attempt has a pretty good chance to be noticed—all the victim has to do is pass an Intelligence check (and wizards tend to have high Intelligence scores). Does a wizard who has detected spells being stolen automatically know who the jackal is? How often can a jackal steal spells?`,
+            answer: [
+                `Judging from the kit description, I suggest that a wizard who detects a jackal's spell theft can look at the jackal and know that character has stolen spells. This ability should last as long as the jackal is actually stealing spells and for one round thereafter per level of the victim. For example, an 11th-level victim could recognize a jackal who stole his spells for as long as the spell stealing went on and for 11 rounds thereafter. The wizard can study one other character each round when attempting to detect a jackal who has stolen his spells. Spell stealing requires concentration, which probably makes a jackal stand out in a crowd. Also, a jackal might notice when a victim begins searching. In any case, it is not necessary for a victim to know who the jackal is before attempting to overload the jackal (see ***CSH***, page 63).`,
+                `A jackal can steal spells as often as necessary to get his daily allotment of spells, but he can only drain spells from any particular individual once a day.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '100',
+            question: `Is it possible for a wizard or priest to begin casting a spell, but then stop at the last phrase or gesture and finish the spell at a more opportune time?`,
+            answer: [
+                `No. Once a spell is begun, any delay or interruption ruins the spell.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '100',
+            question: `What is the purpose of a weapon's speed factor? How is it used in play?`,
+            answer: [
+                `In the core AD&D game, weapon speed factors are used with the optional group initiative and optional individual initiative rules (see Chapter 9 in the ***PHB*** and table 56). In the ***PLAYER'S OPTION:™ Combat & Tactics*** rulebook, a weapon's speed factor determines the base initiative phase for a PC attacking with the weapon.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '101',
+            question: `I play the AL-QADIM® setting and I would like to know what a samovar is. Is this piece of equipment is listed anywhere?`,
+            answer: [
+                `A samovar is a device for serving tea. It consists of a big metal urn fitted with a spigot and filled with boiling water. A tube of burning charcoal in the center of the urn keeps the water hot and ready to make tea anytime. Some versions of the device have a place to keep a pot of strong tea on top of the urn. When someone wants tea, all he has to do is put a little tea in a cup and fill it the rest of the way with water from the urn. In Zakhara, a samovar might very well be used this way to serve coffee.`,
+                `Samovars are listed under the Miscellaneous Equipment heading on page 89 of ***Arabian Adventures***.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '101',
+            question: `What kind of elemental spells can the wizards who use the various kits in Chapter 2 of ***The Complete Sha'ir's Handbook*** cast? Can a Zakharan sorcerer, elementalist, or sha'ir use one of these kits?`,
+            answer: [
+                `I don't recommend that you allow sorcerers, elementalists, or sha'irs to use the kits presented in the ***CSH*** because if you did you'd have player characters using two kits. I suggest that you allow PCs with these kits access to any two elemental provinces, like sorcerers. Unlike sorcerers, these wizards do not gain the 20% bonus to learn their elemental spells.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '101',
+            question: `Is there any official ruling on firearms in PLANESCAPE™ campaigns?`,
+            answer: [
+                `No. If the Dungeon Master (DM) and players want firearms in a PLANESCAPE campaign, then go for it (you'll find the updated firearms rules in the recently released ***PLAYER'S OPTION: Combat & Tactics*** book quite helpful if you choose this option). That said, however, I heartily recommend that gunpowder be unavailable or inert on the planes. PCs who wish to use firearms have to charge their weapons with magical smoke powder. Note that smoke powder is a magical item that involves both fire and evocation magic, and it is prone to mishaps when taken into locales where those two forms of magic are altered. It's also a very good bet that the Lady of Pain does not allow firearms in Sigil.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '101',
+            question: `What happens to wild mages who cast spells in wild magic zones?`,
+            answer: [
+                `Wild mages have no special ability to control or compensate for wild magic areas. The DM might consider ignoring the modifier for the spell's level (see FORGOTTEN REALMS® ***Adventures***, page 10, or ***Tome of Magic***, page 6) if the wild mage casts a wild magic spell.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '101',
+            question: `Say a 7th-level human fighter is slain and then receives a ***reincarnate*** spell from a wizard. The wizard rolls the dice and the result is a half-elf: will the character still be a 7th-level fighter? If the wizard is wearing a ***stone of good luck*** can she use it to affect the roll?`,
+            answer: [
+                `When a PC is reincarnated, the DM is free to assign whatever character class seems appropriate for the new form. For many forms, such as normal animals, no class is appropriate. If the new form is a PC race that normally could achieve the PC's former class and level, the DM should allow the character to retain that class and level unless there is a very good reason to do otherwise. ***The Complete Book of Humanoids*** can be very helpful in deciding what kinds of character classes various creatures can aspire to.`,
+                `A ***stone of good luck*** helps the wearer, not creatures who receive the wearer's spells. If the PC in your example were wearing the ***stone of good luck***, he could use the stone's power to affect the spell's result.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '222',
+    publication_year: '1995',
+    publication_month: 'October',
+    foreword: `This month, the sage armors up and takes a crack at question about the new ***PLAYER's OPTION™: Combat and Tactics*** book. All page references are for the ***Combat and Tactics*** book (***C&T***).`,
+    sage_advice: [
+        {
+            page_number: '35',
+            question: `The various attack options listed in Chapter 2 don't allow penalties or bonuses based upon the sizes of the combatants. Is it really as easy to block the club of a halfling as it is to block a giant's club? Could a pixie character disarm an ogre? Given the emphasis ***C&T*** has placed upon size, this rather surprised me. Shouldn't the opposed roll of the attacker be penalized/increased by +4 or so per size difference? Say a human fighter is attempting to block an attack from another human fighter, the former must make an attack roll against AC 4. Say this same fighter attempts to block the attack of an ogre, shouldn't this be penalized, say to roll against AC 0? Against a giant, perhaps against AC -4? Why were such penalties applied toward overbearing and tripping but not the rest?`,
+            answer: [
+                `The attack options you seem to be asking about (block, disarm, grab, and trap) are more a matter of skill and timing than brute strength. If you don't like the idea of a pixie blocking a giant's weapon, apply a -2 modifier to the acting character's roll for each size difference. For example, a pixie trying to disarm a giant would have to win an opposed roll against AC 0 with a penalty of -8 while the giant rolls to hit armor class 4 with no modifier.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '35',
+            question: `What are the statistics for shield punches and shield rushes? They seem to be missing from Chapter 7.`,
+            answer: [
+                `They *are* missing from Chapter 7. Here is the missing material:`,
+                `
+<table>
+<tr>
+    <td colspan="6"><strong>Shield Punch</strong></td>
+</tr>
+<tr style="vertical-align: top;">
+    <td>Shield</td>
+    <td>Size</td>
+    <td>Speed</td>
+    <td style="text-align: center;">Melee<br>Reach</td>
+    <td>Damage</td>
+    <td>Knockdown</td>
+</tr>
+<tr>
+    <td>Small</td>
+    <td style="text-align: center;">S</td>
+    <td>Fa (2)</td>
+    <td style="text-align: center;">1</td>
+    <td style="text-align: center;">1d3</td>
+    <td style="text-align: center;">d6</td>
+</tr>
+<tr>
+    <td>Medium</td>
+    <td style="text-align: center;">M</td>
+    <td>Av (6)</td>
+    <td style="text-align: center;">1</td>
+    <td style="text-align: center;">1d4</td>
+    <td style="text-align: center;">d8</td>
+</tr>
+<tr>
+    <td>Large</td>
+    <td style="text-align: center;">L</td>
+    <td>Sl (8)</td>
+    <td style="text-align: center;">1</td>
+    <td style="text-align: center;">1d6</td>
+    <td style="text-align: center;">d10</td>
+</tr>
+</table>
+`,
+                `
+<table>
+<tr>
+    <td colspan="6"><strong>Shield Rush</strong></td>
+</tr>
+<tr style="vertical-align: top;">
+    <td>Shield</td>
+    <td style="text-align: center;">Size</td>
+    <td>Speed</td>
+    <td style="text-align: center;">Melee<br>Reach</td>
+    <td style="text-align: center;">Damage</td>
+    <td style="text-align: center;">Knockdown&ast;&ast;</td>
+</tr>
+<tr>
+    <td>Small</td>
+    <td style="text-align: center;">S</td>
+    <td>Base&ast;</td>
+    <td style="text-align: center;">1</td>
+    <td style="text-align: center;">1d3</td>
+    <td style="text-align: center;">0</td>
+</tr>
+<tr>
+    <td>Medium</td>
+    <td style="text-align: center;">M</td>
+    <td>Base&ast;</td>
+    <td style="text-align: center;">1</td>
+    <td style="text-align: center;">1d4</td>
+    <td style="text-align: center;">+1</td>
+</tr>
+<tr>
+    <td>Large</td>
+    <td style="text-align: center;">L</td>
+    <td>Base&ast;</td>
+    <td style="text-align: center;">1</td>
+    <td style="text-align: center;">1d6</td>
+    <td style="text-align: center;">+3</td>
+</tr>
+</table>`,
+                `&ast; A shield rush is performed in the attacker's base initiative phase.`,
+                ``,
+                `&ast;&ast; The bonus is used during the opposed Strength check that takes place if the attack hits (see Chapter 2, page 46). If the character's Strength check succeeds, add the listed number to the roll before the two rolls are compared. For example, Rikard uses his large shield to rush Jon. Rikard's Strength score is 16 and Jon's is 17. If Rikard hits, there is an opposed Strength roll to see if a knockdown occurs. Rikard rolls an 8, a success; Jon rolls a 10, also a success. Normally Jon would win the roll because he succeeded with a roll higher than his opponents. Rikard's large shield, however, gives him a +3 to his check, so his roll is effectively an 11, which is high enough to win. Note that if Rikard had rolled a 16, he still would have succeeded with his Strength check and his effective score would be a 19 for purposes of resolving the opposed Strength check. If Rikard had rolled a 17 or higher, he would have failed his Strength check and would have fallen down himself.`
+            ],
+            comment: `The missing table was added in the 2nd printing of ***C&T***`,
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '35',
+            question: `Shouldn't the light and medium lances inflict double damage if used from a charging mount? What happens if a rider scores a critical hit when charging with a lance?`,
+            answer: [
+                `Yes, footnote "m" (page 133) applies to all the lances listed on the master weap- ons table in Chapter 7. The rider must be using stirrups to get the extra damage.`,
+                `In all cases where a weapon that is inflicting multiplied damage (a lance from a charging mount, a thief's backstab, a "slayer" sword, etc.), add only one extra damage die (or group of damage dice if the weapon's base damage is more than one die). For example, a warrior charging a giant with a light lance inflicts 3d8 hp damage on a critical hit, not 4d8. Note that if the critical is severe enough (triple damage), two dice are added.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '35',
+            question: `Don't lanterns weigh more than 1/10th of a pound?`,
+            answer: [
+                `Yes. A lantern weighs two or three pounds depending on the type. A lantern should be marked with footnote "d" instead of an asterisk.`,
+            ],
+            comment: 'Lanterns are updated to have a "d" in the 2nd printing of ***C&T***',
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '36',
+            question: `Shouldn't the staff sling be size L?`,
+            answer: [
+                `No. The staff portion of the sling is pretty short.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '36',
+            question: `Is there a natural armor class below which a creature becomes immune to damage from whips? The whip entry on page 145 doesn't list one.`,
+            answer: [
+                `A whip can make almost any creature smart if it hits a soft spot, and not all creatures that have great armor classes are thick skinned. A good house rule might be to say that whips don't damage creatures with natural armor classes of 2 or better if the creature actually has a carapace or a thick skin. It's reasonable to say that a dragon turtle can shrug off stings from whips, but a will-o'-the-wisp that gets tagged with a whip should suffer damage. The DM will have to decide which creatures are immune on a case-by-case basis.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '36',
+            question: `Isn't the direct fire example on page 161 wrong? To agree with the text, the yellow area and some of the markings need to be moved on the diagram. The text says the cannon's area of effect strikes the umber hulk, but the yellow area of effect doesn't include the umber hulk.`,
+            answer: [
+                `Look again more carefully. The umber hulk is in the area of effect. Cannon shots have little "tails" that represent the cannonball bouncing around. (The place where the area effect overlaps the figure is marked with a little cross.). The text and the diagram don't exactly match however, because the text says a medium cannon is firing and the diagram shows a light's area of effect.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '36',
+            question: `On page 131, the weapon table doesn't list any damage for a gaff/hook.`,
+            answer: [
+                `In the ***Complete Fighter's Handbook*** the damage is listed as 1d4 (Sm-Med) 1d3 (large), which should work fine in a ***C&T*** game.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '36',
+            question: `I have two character kits from the ***Complete Book of Elves*** and the ***Complete Book of Dwarves*** that have been completely befouled by the new ***Combat and Tactics*** book. The elven archer fires at a rate of 5/2 moving or 3/1 standing still. Since the new specialization rules came out, how is the archer to be modified to reflect the rules change (since bow specialists now get an increased rate of fire?) Also, the dwarven sharpshooter used to have an improved rate of fire and extra damage due to training and custom equipment. What are the new damage and rate of fire ratings for crossbows fired by the sharpshooter? Is any of this going to be cleared up in the ***Skills and Powers*** book?`,
+            answer: [
+                `The ***Skills and Powers*** book won't solve this one for you. Its approach to kits is very different from the one in the soft-backed rule books.`,
+                `You have two choices when trying to fit elven archers and dwarven sharpshooters into a game that uses the PLAYER'S OPTION combat system. You can ignore the ***C***&T rules and use the rules that go with the kit instead (which is a pretty bad deal for the sharpshooter) or you can drop the kit rules in favor of the ***C&T*** rules. If you choose the latter, assume that both characters start out as specialists with their chosen weapons and then spend their proficiency slots (or character points) on weapon mastery. In both cases, adhering to the kit restrictions is a good way to justify acquiring advanced levels of mastery. Remember that becoming a grand master takes some special effort.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '36+38',
+            question: `Do any of the kits in any of the books automatically start with any mastery above specialist? (The elven bladesinger maybe?) Would bard blades be allowed to become experts automatically?`,
+            answer: [
+                `Specialization is the highest level of mastery anyone gets for free, and then only single classed fighters get it. Elven bladesingers and bard blades receive no free levels of mastery. If you're going to use the PLAYER'S OPTION rules in your campaign, you should stick to the kits presented in the ***Skills and Powers*** book. If you're using the character point system from the ***Skills and Powers*** book, both blades and bladesingers could achieve mastery in their chosen weapons. They should however, also have to pay a hefty character point cost for their kits; the DM should set a cost based on the special abilities presented in ***S&P's*** character creation chapter.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '38',
+            question: [
+                `What's going on with the initiative system? Under the rules in Chapter 1, a giant is always going to lose initiative against man-sized characters.`,
+                `Hey, what's going on here? Chapter 1 says a character with a dagger always strikes before a character with a long sword.`
+            ],
+            answer: [
+                `Both of these statements are false. First, everyone rolls initiative normally, and the side with the lowest roll wins. It is possible, however, to win initiative and still not strike first. For example, a hill giant armed with a club has a base initiative of slow and has a weapon speed of fast. Any creature's attack, however, comes during its base phase or its weapon's phase, whichever is *worse*. So, will a giant always strike after a human, whose base initiative is fast? Not necessarily. A human armed with a fast weapon, such as a dagger, usually will strike before a giant. The human also would go first if armed with an average weapon, such as a long sword. If the human has a slow weapon, however, such as a two-handed sword, he is as slow as the giant, and the initiative roll determines who goes first when two opponents act in the same phase. Even if the human has a fast or average weapon, the giant still won't always strike second. Its superior reach allows it to guard or charge and automatically strike first, no matter what its initiative roll is. If the human gets in nice and close so the giant can't guard or charge, the giant can always overrun the human (and maybe half the human's party in the process) and move off someplace where it can guard or charge the next round.`,
+                `A human armed with a dagger usually will strike before a human armed with a long sword (a fast character with a fast weapon strikes before a fast character with an average weapon) unless the character armed with a long sword is charging or guarding. Before you decide that daggers are the weapon of choice, take another look at the weapons' damage ratings and knockdown numbers and at the critical hit rules. The swordsman is going to win over the long run. Note that if you interpret the rules strictly, a character armed with a dagger always strikes first when charging or guarding against a character of the same size armed with a long sword, because both weapons have the same melee reach. Use some common sense and let the swordsman go first.`,
+                `In discussing this last point with ***C&T*** co-author Rich Baker, we came up the following general rule, which we both agreed should have been in the book in the first place: In a situation where a character is charging or guarding against an opponent with a weapon that has the same reach, the figure with the large weapon (or the larger creature) goes first. For example, a human swordsman guarding against a human attacker armed with a dagger goes first. A troll guarding against a human attacker with a dagger also goes first because it is a large creature guarding against a small weapon.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '38',
+            question: `What's the deal with guarding? A hill giant with a club has a reach of 3. Does this mean that if the giant guards it will get three attacks of opportunity before a human charging in with a long sword can make an attack?`,
+            answer: [
+                `No. The giant gets one attack when the human first enters the group of squares the giant threatens. This is the giant's normal attack, not an attack of opportunity. If the human bores straight in and swings at the giant, the giant doesn't get any more attacks. If however, the human changes course and leaves the area the giant threatens, or turns his back on the giant, the giant would get an attack of opportunity.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '38',
+            question: `So how come psionic creatures have to wait until their base initiative phase before using their abilities?`,
+            answer: [
+                `One of the general premises of the ***Combat and Tactics*** book is that creatures have certain characteristics derived from their size. Smaller creatures generally are quicker to react than bigger ones are, even when what they're doing is purely mental. Besides, if a baku really gets annoyed with a brain mole that keeps beating him to the punch, the baku can always overrun the brain mole and stomp it into the dirt. Note that many psionic abilities don't happen until a round's resolution phase. If a power has a preparation time of a round or more, it's among the last things to take effect. If you don't want to stick psionicists with acting on their base initiative phase all the time, you can make psionic powers with preparation times of fast or very fast. Or, you can roll 1d10 to determine the power's base phase. This reflects the ever changing state of the psionicist's mind and helps keep the players guessing about what's going to happen from phase to phase.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '222',
+    publication_year: '1995',
+    publication_month: 'November',
+    foreword: `Join the sage in a look at the new ***Player's Option™: Skills and Powers*** book. unless otherwise noted, page and table references are for the ***Skills and Powers*** book (***S&P***). The sage also examines a few other issues straight from the mailbag.`,
+    sage_advice: [
+        {
+            page_number: '77',
+            question: `I have noticed that in almost every AD&D® book, the infravision ranges for the various races are different, the Skills & Powers book seems to be no exception. What are the correct ranges?`,
+            answer: [
+                `Here are infravision ranges for all the major races (and their subraces) presented in the ***Skills & Powers*** book. The ***MONSTROUS MANUAL™*** tome and its predecessors served as the primary sources for the numbers.`,
+                ``,
+                `**Dwarves (60'):** Deep 90'; Gray 120'; Hill 60'; Mountain 60'.`,
+                `**Elves (60'):** Aquatic 120'; Dark 120'; Gray 60'; High 60'; Sylvan 60'.`,
+                `**Gnomes (60'):** Deep 120'; Forest Nil; Rock 60'.`,
+                `**Halflings (30'):** Hairfoot Nil; Stout 60'; Tallfellow Nil.`,
+                `**Half-elves (60')**`,
+                `**Half Orcs (60')**`,
+                `**Half Ogres (60')**`,
+                `**Humans (Nil)**`,
+                ``,
+                `The number in parentheses after the main race name is the infravision range for characters who purchase infravision from the race's ability list.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '77',
+            question: `Traditionally, dark elves who live on the surface are not allowed to keep their innate spellcasting abilities or their superior magic resistance. In the ***Skills & Powers*** book it seems that they are allowed to keep their innate magic, but not their superior magic resistance. Is this correct?`,
+            answer: [
+                `Yes it is. If the campaign is using the ***Skills & Powers*** rules, drow (dark elves) get the abilities listed on page 28 and explained on pages 29-30.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '77',
+            question: `When a paladin spends character points on the priest spells ability, he is supposed to get spells beginning at 4th level. The spell progression chart, however shows that a paladin begins getting spells at 5th level. Which is correct? If a paladin does not pur- chase the priest spells ability, does the character still get spells at 9th level?`,
+            answer: [
+                `Table 20 (page 49), which gives paladins their first spells at 5th level, is incorrect. It should read as follows:`,
+                `
+<table style="text-align: center">
+<tr>
+    <td><strong>Paladin</strong></td>
+    <td><strong>Casting</strong></td>
+    <td colspan="4"><strong>Spell Level</strong></td>
+</tr>
+<tr>
+    <td><strong>Level</strong></td>
+    <td><strong>Level</strong></td>
+    <td><strong>1</strong></td>
+    <td><strong>2</strong></td>
+    <td><strong>3</strong></td>
+    <td><strong>4</strong></td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>1</td>
+    <td>1</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>1</td>
+    <td>1</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td>6</td>
+    <td>2</td>
+    <td>2</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td>7</td>
+    <td>2</td>
+    <td>2</td>
+    <td>1</td>
+    <td>—</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td>8</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>—</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td>9</td>
+    <td>4</td>
+    <td>2</td>
+    <td>2</td>
+    <td>—</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td>10</td>
+    <td>4</td>
+    <td>2</td>
+    <td>2</td>
+    <td>1</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td>11</td>
+    <td>4</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td>12</td>
+    <td>5</td>
+    <td>3</td>
+    <td>2</td>
+    <td>2</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td>13</td>
+    <td>5</td>
+    <td>3</td>
+    <td>2</td>
+    <td>2</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td>14</td>
+    <td>6</td>
+    <td>3</td>
+    <td>2</td>
+    <td>2</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>15</td>
+    <td>7</td>
+    <td>3</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>16</td>
+    <td>8</td>
+    <td>3</td>
+    <td>3</td>
+    <td>3</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>17</td>
+    <td>9*</td>
+    <td>3</td>
+    <td>3</td>
+    <td>3</td>
+    <td>1</td>
+</tr>
+<tr>
+    <td>18</td>
+    <td>9*</td>
+    <td>3</td>
+    <td>3</td>
+    <td>3</td>
+    <td>2</td>
+</tr>
+<tr>
+    <td>19</td>
+    <td>9*</td>
+    <td>3</td>
+    <td>3</td>
+    <td>3</td>
+    <td>3</td>
+</tr>
+<tr>
+    <td>20</td>
+    <td>9*</td>
+    <td>4</td>
+    <td>3</td>
+    <td>3</td>
+    <td>3</td>
+</tr>
+</table>
+`,
+                `Paladins who do not purchase the priest spells ability still get spells starting at 9th level (see ***PHB*** table 17), but fewer than those who purchase the priest spell ability.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
         },
     ]
 });
