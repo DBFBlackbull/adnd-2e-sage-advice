@@ -3174,7 +3174,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '104',
-            question: `I've noticed that a few spells are parts of two opposing schools of magic. For example, the ***limited wish*** spell is both conjuration/ summoning and invocation/evocation. Can specialist wizards from either school use such spells? That is, can conjurers or invokers use ***limited wish***? How is it that a spell can be from two opposing schools anyway?`,
+            question: `I've noticed that a few spells are parts of two opposing schools of magic. For example, the ***limited wish*** spell is both conjuration/summoning and invocation/evocation. Can specialist wizards from either school use such spells? That is, can conjurers or invokers use ***limited wish***? How is it that a spell can be from two opposing schools anyway?`,
             answer: [
                 `A specialist wizard can use any spell that falls within the schools allowed to him, even if the spell in question also falls under an opposing school. Certain effects, such as ***limited wishes***, can be produced in more than one way; in this case, what is ***wished*** for can be plucked from some other place and delivered, or it can simply be created to order.`,
             ],
@@ -5363,6 +5363,7 @@ DRAGON_MAGAZINES.push({
                 `Running the spell this way does, however, force the DM™ to consider what happens to touch-delivered spells and spells that affect only the caster. I suggest that touch-delivered spells originate at the image, which the caster can then use to "attack" targets within his own movement limits. I also suggest that all spells with a purely personal effect (range 0, or area of effect limited to the caster) take effect only upon the caster; assume that such effects stay with the caster and don't "flow" through the channel. Note that ***project image*** extends a spell's range only indirectly by virtue of the fact that most spells originate from the image and not from the caster. Likewise, clever casters might use ***project image*** to cast spells around corners or into areas where they'd rather not be.`,
                 `The caster is free to change the image's facing relative to himself just by concentrating for one round, which limits the caster to half movement and no attacks. Once the relationship changes, the image goes right on duplicating all the caster's actions, all the way down to spell-casting.`
             ],
+            comment: 'The same answer is repeated in #227',
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
         },
         {
@@ -9102,6 +9103,7 @@ DRAGON_MAGAZINES.push({
                 `Any wizard character can read any wizard spell from a scroll (although there might be a chance for failure if the character reading the scroll isn't of sufficient level to cast the spell).`,
                 `I recommend that you allow specialist wizards to use freely any items that can be used by all character classes, even when they duplicate effects from their opposition schools. This includes the majority of potions, and most rings and miscellaneous magical items. Any item, however, that can be used only by wizards, or only by wizards and priests, is off-limits to a specialist if it duplicates an effect from the character's opposition schools. Any character, for example, can use a ***potion of healing***, even an illusionist. An illusionist also can use a ***wand of magic missiles***, but the character must make attack rolls when firing the missiles, just as a non-wizard does.`
             ],
+            comment: `The same answer is given again in issue #227.`,
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
         },
         {
@@ -10484,7 +10486,7 @@ DRAGON_MAGAZINES.push({
 DRAGON_MAGAZINES.push({
     issue_number: '224',
     publication_year: '1995',
-    publication_month: 'October',
+    publication_month: 'December',
     foreword: `This month the sage pays a brief visit to Krynn, explores optional material for the AD&D® game, and stops to offer advice to a player who's encountered the worst monsters of all.`,
     sage_advice: [
         {
@@ -10630,8 +10632,8 @@ DRAGON_MAGAZINES.push({
 });
 DRAGON_MAGAZINES.push({
     issue_number: '225',
-    publication_year: '1995',
-    publication_month: 'October',
+    publication_year: '1996',
+    publication_month: 'January',
     foreword: `This month, the Sage considers the powers and limitations of a few spells from the AD&D® 2nd Edition game.`,
     sage_advice: [
         {
@@ -10666,7 +10668,7 @@ DRAGON_MAGAZINES.push({
             page_number: '81-82',
             question: `Do the images created by a ***mirror image*** spell make sound? If not, one could avoid the spell's effect entirely by simply closing one's eyes and taking the -4 attack penalty for being unable to see the target. The penalty would be even less if you had the blindfighting skill.`,
             answer: [
-                `The spell description says ***mirror image*** creates exact duplicates of the caster. Considering the spell's short duration and purely defensive nature, I don't think it's unreasonable to assume that the images include sound and smell as well as sight. On the other hand, ***mirror image*** is only a 2nd-level spell, and “Sage Advice” has previously suggested that invisibility foils displacement. I suggest you go ahead and allow characters to ignore ***mirror images*** if they can't see them. Remember, however, that fighting blind is just like fighting in total darkness, which carries more than just an attack penalty (see Table 72 in the ***DMG***). The blindfighting proficiency reduces or eliminates some of these penalties, but not all them.`,
+                `The spell description says ***mirror image*** creates exact duplicates of the caster. Considering the spell's short duration and purely defensive nature, I don't think it's unreasonable to assume that the images include sound and smell as well as sight. On the other hand, ***mirror image*** is only a 2nd-level spell, and "Sage Advice" has previously suggested that invisibility foils displacement. I suggest you go ahead and allow characters to ignore ***mirror images*** if they can't see them. Remember, however, that fighting blind is just like fighting in total darkness, which carries more than just an attack penalty (see Table 72 in the ***DMG***). The blindfighting proficiency reduces or eliminates some of these penalties, but not all them.`,
             ],
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
         },
@@ -10690,7 +10692,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '82-83',
-            question: `***The Complete Paladin's Handbook*** has lots of good information about what holy swords can do, but can you explain the meaning of the swords ability to dispel hostile magic? When is magic “hostile” and when is it not?`,
+            question: `***The Complete Paladin's Handbook*** has lots of good information about what holy swords can do, but can you explain the meaning of the swords ability to dispel hostile magic? When is magic "hostile" and when is it not?`,
             answer: [
                 `In this case, magic is hostile when it is potentially harmful to the paladin or his allies and directed either at the paladin or placed so that this its area of effect overlaps the circle of power the holy sword generates.`,
             ],
@@ -10713,11 +10715,11 @@ DRAGON_MAGAZINES.push({
                 `
 <table>
 <tr>
-    <td>Skill</td>
-    <td style="text-align: center;">No Armor</td>
-    <td style="text-align: center;">Elven Chain</td>
-    <td style="text-align: center;">Padded,<br>Hide or<br>Studded Leather</td>
-    <td style="text-align: center;">Chain Mail or<br>Ring Mail</td>
+    <td style="vertical-align: top;">Skill</td>
+    <td style="text-align: center; vertical-align: top;">No Armor</td>
+    <td style="text-align: center; vertical-align: top;">Elven Chain</td>
+    <td style="text-align: center; vertical-align: top;">Padded,<br>Hide or<br>Studded Leather</td>
+    <td style="text-align: center; vertical-align: top;">Chain Mail or<br>Ring Mail</td>
 </tr>
 <tr>
     <td>Bribe</td>
@@ -10765,6 +10767,637 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A knockdown die of 1d12 increases to 1d20. I don't recommend allowing any knockdown die to increase beyond 1d20. (As it is, rolling 1d20 will give a knockdown chance about half the time against huge opponents and even more often against smaller opponents.) I also don't recommend increasing any knockdown die more than three places. For example, a creature armed with a dagger never gets a knockdown die bigger than 1d10, no matter how big or skilled it is.`,
                 `If you don't like the foregoing advice, the steps beyond 1d20 are: 1d30, 1d40, 1d50, and so on. The best way to generate these numbers is with 1d10 and some kind of a control die. For example, you can roll 1d30 by rolling a 10-sided die and a six-sided die. If the six-sided die comes up a 1 or 2, read the lo-sided die as it is. If the six-sided die rolls a 3 or 4, add 10 to the number on the 10-sided die, and if the six-sided die comes up a 5 or 6 add 20 to the number on the 10-sided die.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '226',
+    publication_year: '1996',
+    publication_month: 'February',
+    foreword: `This month, the Sage visits the newly revised DARK SUN® setting and considers some optional rules and spells, including yet another look at the dreaded ***stoneskin*** spell.`,
+    sage_advice: [
+        {
+            page_number: '89',
+            question: `***The Way of the Psionicist*** book in the revised DARK SUN boxed set (and the psionics section in the ***PLAYER'S OPTION™: Skills & Powers*** book) says that characters with chaotic alignments cannot become psionicists. This is incorrect, at least on Athas. ***The Will and the Way*** reference lists several chaotic psionicists. Are chaotic psionicists no longer allowed on Athas?`,
+            answer: [
+                `Chaotic psionicists have never been allowed on Athas (or anywhere else for that matter; see ***The Complete Psionics Handbook***, page 10); at least not as player characters. Pages 37 and 38 of the ***Rules Book*** from the original DARK SUN boxed set contain several Athas-specific changes to the psionics rules, but refer readers back to the ***CPH*** for anything not covered there. Changes to the alignment requirement for psionicists are not included in the ***Rules Book***. The chaotic psionicists from ***The Will and the Way*** are anomalies; exactly how they managed to become psionicists and retain their chaotic alignments is unrevealed.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '89',
+            question: `The ***Age of Heroes*** book in the revised DARK SUN boxed set gives individual experience awards based on character race, but there are no entries for the new PC races of aarakocra and pterrans. Is this an omission? Or are there no bonuses for these two races?`,
+            answer: [
+                `Here are individual experience awards for the two races:`,
+                ``,
+                `*Aarakocra:*`,
+                `Demonstrate deep and abiding respect for nature: 20 xp/day`,
+                `Abuse nature: -50 xp`,
+                ``,
+                `*Pterran:*`,
+                `Pursue life path: 20 xp/day`,
+                `Revere Earth Mother: 30 xp/day`,
+                `Provide specific, meaningful service to Earth Mother: 50 xp`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '89',
+            question: `Page 26 of the ***Age of Heroes*** book says defilers destroy the environment when they cast their spells, which is how defilers were originally handled. Page 67, however, says defilers cause destruction when they memorize their spells. Which is correct? If the latter is true, how should DMs of ongoing campaigns explain the change?`,
+            answer: [
+                `The text on page 67 is correct. Note that in addition to causing damage when memorizing spells, defilers also must make Intelligence checks to see how successful they are (see Table XVII on page 28) in acquiring the spells. Defiling is no longer a sure thing.`,
+                `How you should implement the new defiling rules into an established campaign is a problem you must solve on your own. The simplest way is to ignore them and stick with the old rules. For most campaigns, you can just announce that reality has changed and that things will be different from now on. To add a little mystery, you might want to explain that no one, not even the PCs, remembers any other kind of defiling. If you're feeling a bit cruel, you might rule that the PCs remember the old way of doing things, but no one else does.`,
+                `If you favor a more dramatic approach, you can introduce some spectacular or cataclysmic event (the appearance of a hitherto unknown comet would do nicely) that causes the change. In either case, you might introduce the change gradually. For example, perhaps defilers only have to make Intelligence checks when memorizing spells after sunrise, and the defiling effect of memorization might be minimal, a radius of inches. Over the next few weeks or months, gradually increase both the radius of the defiling effect and decrease the number of hours in a day that the effect can be avoided. You might even want to design a series of adventures that would allow your PCs to prevent the change — if they want to.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '89',
+            question: `Can the undead trolls, kobolds, ogres, orcs, lizard men, pixies, gnomes, and goblins that roam the Dead Land, Small Home and the City of a Thousand Dead be ***raised***, ***resurrected***, or ***reincarnated***? Since these races actually continue to exist on Athas, why wouldn't a ***reincarnate*** spell be able to *reincarnate* a character as one of these "dead" races?`,
+            answer: [
+                `According to my colleague Bill Slavicsek, the creatures you're asking about have been dead since the Cleaning Wars 3,500 years ago. That puts them well beyond the reach of any ***raise dead***, ***resurrection***, or ***reincarnate*** spell.`,
+                `Generally speaking, a ***reincarnate*** spell transforms a recipient into some creature that is more or less characteristic of the world where it is cast. Trolls, kobolds, ogres, orcs, lizard men, pixies, gnomes, and goblins are not typical of Athas, even though there are sizable populations of undead specimens on the planet. Even if there were hidden populations of living trolls, kobolds, ogres, orcs, lizard men, pixies, gnomes, and goblins (and by all accounts there are not), they still would not be representative enough to appear on the creature list for ***reincarnate*** spells.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '89',
+            question: `What are the thief ability adjustments for Athasian races that can't become thieves but can become rangers or convict gladiators?`,
+            answer: [
+                `Here are the adjustments:`,
+                `
+<table>
+<tr>
+    <td><strong>Race</strong></td>
+    <td><strong>Hide in</strong></td>
+    <td style="text-align: center;"><strong>Move</strong></td>
+    <td style="text-align: center;"><strong>All</strong></td>
+</tr>
+<tr>
+    <td></td>
+    <td style="vertical-align: bottom;"><strong>Shadows</strong></td>
+    <td style="vertical-align: bottom; text-align: center;"><strong>Silently</strong></td>
+    <td style="text-align: center;"><strong>others<sup>1</sup></strong></td>
+</tr>
+<tr>
+    <td>Half-Giant</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">-10%</td>
+    <td style="text-align: center;">-10%</td>
+</tr>
+<tr>
+    <td>Thri-kreen</td>
+    <td style="text-align: center;">+5%</td>
+    <td style="text-align: center;">+5%</td>
+    <td style="text-align: center;">-15%<sup>2</sup></td>
+</tr>
+</table>`,
+                `1. For Convict gladiators only`,
+                `2. Thri-kreen never gain the ability to climb walls`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '89-90',
+            question: `If someone punches a person who is protected by a ***stoneskin*** spell, does the attacker suffer damage? Does the recipient of a ***stoneskin*** spell look different in any way? The ***Player's Handbook*** seems to suggest that a charge of a ***stoneskin*** is lost even if an attacker rolls a miss when fighting, is this so? If this is so, what is the reasoning behind it?`,
+            answer: [
+                `A ***stoneskin*** spell never damages an attacker. The spell description does not specify any change in appearance for the recipient of a ***stoneskin*** spell, but that doesn't mean the DM can't specify one.`,
+                `A spell loses one "charge" each time the recipient is subjected to an attack, that's just the way the spell works. Note that an attack roll usually isn't necessary, just mark off a charge from the spell. The only time you need to make a roll is when the attack can damage the recipient in spite of the ***stoneskin*** spell. Note also that an attack that bypasses the spell and damages the ***stoneskin*** recipient still negates a charge.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_STONESKIN],
+        },
+        {
+            page_number: '90',
+            question: `If a clay golem hits a character, will a successful ***dispel magic*** allow a priest of less than 17th level to heal the character?`,
+            answer: [
+                `No.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_DISPEL_MAGIC],
+        },
+        {
+            page_number: '90',
+            question: `Table 29 in the ***PLAYER's OPTION: Skills & Powers*** book shows adjustments to thieving abilities for high Dexterity scores, but they are different from the adjustments shown on Tables 4 and 5. What are the correct adjustments?`,
+            answer: [
+                `Tables 4 and 5 are only for use with the new rules for subabilities in Chapter Two. If you're not using subabilities, skip Table 29 and use either table 28 from The ***Player's Handbook*** or Table XXI from the ***Age of Heroes*** book in the revised DARK SUN boxed set. If you are using subabilities, I recommend the adjustments on the tables below.`,
+                `
+<table>
+<tr>
+    <td colspan="7"><strong>Aim</strong></td>
+</tr>
+<tr>
+    <td style="vertical-align: top;"><strong>Subability<br>Score</strong></td>
+    <td style="vertical-align: top; text-align: center"><strong>Pick<br>Pockets</strong></td>
+    <td style="vertical-align: top; text-align: center"><strong>Open<br>Locks</strong></td>
+    <td style="vertical-align: top; text-align: center"><strong>Find/<br>Remove<br>Traps</strong></td>
+    <td style="vertical-align: top; text-align: center"><strong>Escape<br>bonds</strong></td>
+    <td style="vertical-align: top; text-align: center"><strong>Forge<br>Documents</strong></td>
+    <td style="vertical-align: top; text-align: center"><strong>Tunneling</strong></td>
+</tr>
+<tr>
+    <td>3</td>
+    <td style="text-align: center">-30%</td>
+    <td style="text-align: center">-30%</td>
+    <td style="text-align: center">-30%</td>
+    <td style="text-align: center">-30%</td>
+    <td style="text-align: center">-30%</td>
+    <td style="text-align: center">-30%</td>
+</tr>
+<tr>
+    <td>4</td>
+    <td style="text-align: center">-25%</td>
+    <td style="text-align: center">-25%</td>
+    <td style="text-align: center">-25%</td>
+    <td style="text-align: center">-25%</td>
+    <td style="text-align: center">-25%</td>
+    <td style="text-align: center">-25%</td>
+</tr>
+<tr>
+    <td>5</td>
+    <td style="text-align: center">-25%</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-25%</td>
+    <td style="text-align: center">-25%</td>
+    <td style="text-align: center">-20%</td>
+</tr>
+<tr>
+    <td>6</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-15%</td>
+</tr>
+<tr>
+    <td>7</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-15%</td>
+    <td style="text-align: center">-15%</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-15%</td>
+</tr>
+<tr>
+    <td>8</td>
+    <td style="text-align: center">-15%</td>
+    <td style="text-align: center">-15%</td>
+    <td style="text-align: center">-15%</td>
+    <td style="text-align: center">-15%</td>
+    <td style="text-align: center">-15%</td>
+    <td style="text-align: center">-10%</td>
+</tr>
+<tr>
+    <td>9</td>
+    <td style="text-align: center">-15%</td>
+    <td style="text-align: center">-10%</td>
+    <td style="text-align: center">-10%</td>
+    <td style="text-align: center">-15%</td>
+    <td style="text-align: center">-15%</td>
+    <td style="text-align: center">-10%</td>
+</tr>
+<tr>
+    <td>10</td>
+    <td style="text-align: center">-10%</td>
+    <td style="text-align: center">-5%</td>
+    <td style="text-align: center">-10%</td>
+    <td style="text-align: center">-10%</td>
+    <td style="text-align: center">-10%</td>
+    <td style="text-align: center">-5%</td>
+</tr>
+<tr>
+    <td>11</td>
+    <td style="text-align: center">-5%</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">-5%</td>
+    <td style="text-align: center">-5%</td>
+    <td style="text-align: center">-5%</td>
+    <td style="text-align: center">—</td>
+</tr>
+<tr>
+    <td>12-15</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">—</td>
+</tr>
+<tr>
+    <td>16</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">+5%</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">+5%</td>
+    <td style="text-align: center">—</td>
+</tr>
+<tr>
+    <td>17</td>
+    <td style="text-align: center">+5%</td>
+    <td style="text-align: center">+10%</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">+5%</td>
+    <td style="text-align: center">+7%</td>
+    <td style="text-align: center">—</td>
+</tr>
+<tr>
+    <td>18</td>
+    <td style="text-align: center">+10%</td>
+    <td style="text-align: center">+15%</td>
+    <td style="text-align: center">+5%</td>
+    <td style="text-align: center">+10%</td>
+    <td style="text-align: center">+10%</td>
+    <td style="text-align: center">+5%</td>
+</tr>
+<tr>
+    <td>19</td>
+    <td style="text-align: center">+15%</td>
+    <td style="text-align: center">+20%</td>
+    <td style="text-align: center">+10%</td>
+    <td style="text-align: center">+12%</td>
+    <td style="text-align: center">+15%</td>
+    <td style="text-align: center">+10%</td>
+</tr>
+<tr>
+    <td>20</td>
+    <td style="text-align: center">+20%</td>
+    <td style="text-align: center">+25%</td>
+    <td style="text-align: center">+12%</td>
+    <td style="text-align: center">+15%</td>
+    <td style="text-align: center">+17%</td>
+    <td style="text-align: center">+15%</td>
+</tr>
+<tr>
+    <td>21</td>
+    <td style="text-align: center">+25%</td>
+    <td style="text-align: center">+27%</td>
+    <td style="text-align: center">+15%</td>
+    <td style="text-align: center">+17%</td>
+    <td style="text-align: center">+20%</td>
+    <td style="text-align: center">+20%</td>
+</tr>
+<tr>
+    <td>22</td>
+    <td style="text-align: center">+27%</td>
+    <td style="text-align: center">+30%</td>
+    <td style="text-align: center">+17%</td>
+    <td style="text-align: center">+20%</td>
+    <td style="text-align: center">+22%</td>
+    <td style="text-align: center">+25%</td>
+</tr>
+<tr>
+    <td>23</td>
+    <td style="text-align: center">+30%</td>
+    <td style="text-align: center">+33%</td>
+    <td style="text-align: center">+20%</td>
+    <td style="text-align: center">+22%</td>
+    <td style="text-align: center">+24%</td>
+    <td style="text-align: center">+30%</td>
+</tr>
+<tr>
+    <td>24</td>
+    <td style="text-align: center">+33%</td>
+    <td style="text-align: center">+35%</td>
+    <td style="text-align: center">+22%</td>
+    <td style="text-align: center">+24%</td>
+    <td style="text-align: center">+27%</td>
+    <td style="text-align: center">+35%</td>
+</tr>
+<tr>
+    <td>25</td>
+    <td style="text-align: center">+35%</td>
+    <td style="text-align: center">+35%</td>
+    <td style="text-align: center">+25%</td>
+    <td style="text-align: center">+30%</td>
+    <td style="text-align: center">+30%</td>
+    <td style="text-align: center">+35%</td>
+</tr>
+</table>`,
+                `
+<table>
+<tr>
+    <td colspan="7"><strong>Balance</strong></td>
+</tr>
+<tr>
+    <td style="vertical-align: top;"><strong>Subability<br>Score</strong></td>
+    <td style="vertical-align: top; text-align: center"><strong>Move<br>Silently</strong></td>
+    <td style="vertical-align: top; text-align: center"><strong>Hide in<br>Shadows</strong></td>
+    <td style="vertical-align: top; text-align: center"><strong>Climb<br>Walls</strong></td>
+</tr>
+<tr>
+    <td>3</td>
+    <td style="text-align: center">-30%</td>
+    <td style="text-align: center">-30%</td>
+    <td style="text-align: center">-30%</td>
+</tr>
+<tr>
+    <td>4</td>
+    <td style="text-align: center">-30%</td>
+    <td style="text-align: center">-25%</td>
+    <td style="text-align: center">-25%</td>
+</tr>
+<tr>
+    <td>5</td>
+    <td style="text-align: center">-30%</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-20%</td>
+</tr>
+<tr>
+    <td>6</td>
+    <td style="text-align: center">-25%</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-20%</td>
+</tr>
+<tr>
+    <td>7</td>
+    <td style="text-align: center">-25%</td>
+    <td style="text-align: center">-15%</td>
+    <td style="text-align: center">-15%</td>
+</tr>
+<tr>
+    <td>8</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-15%</td>
+    <td style="text-align: center">-15%</td>
+</tr>
+<tr>
+    <td>9</td>
+    <td style="text-align: center">-20%</td>
+    <td style="text-align: center">-10%</td>
+    <td style="text-align: center">-10%</td>
+</tr>
+<tr>
+    <td>10</td>
+    <td style="text-align: center">-15%</td>
+    <td style="text-align: center">-5%</td>
+    <td style="text-align: center">-5%</td>
+</tr>
+<tr>
+    <td>11</td>
+    <td style="text-align: center">-10%</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">—</td>
+</tr>
+<tr>
+    <td>12</td>
+    <td style="text-align: center">-5%</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">—</td>
+</tr>
+<tr>
+    <td>13-16</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">—</td>
+    <td style="text-align: center">—</td>
+</tr>
+<tr>
+    <td>17</td>
+    <td style="text-align: center">+5%</td>
+    <td style="text-align: center">+5%</td>
+    <td style="text-align: center">+5%</td>
+</tr>
+<tr>
+    <td>18</td>
+    <td style="text-align: center">+10%</td>
+    <td style="text-align: center">+10%</td>
+    <td style="text-align: center">+10%</td>
+</tr>
+<tr>
+    <td>19</td>
+    <td style="text-align: center">+15%</td>
+    <td style="text-align: center">+15%</td>
+    <td style="text-align: center">+15%</td>
+</tr>
+<tr>
+    <td>20</td>
+    <td style="text-align: center">+20%</td>
+    <td style="text-align: center">+17%</td>
+    <td style="text-align: center">+20%</td>
+</tr>
+<tr>
+    <td>21</td>
+    <td style="text-align: center">+25%</td>
+    <td style="text-align: center">+20%</td>
+    <td style="text-align: center">+22%</td>
+</tr>
+<tr>
+    <td>22</td>
+    <td style="text-align: center">+30%</td>
+    <td style="text-align: center">+22%</td>
+    <td style="text-align: center">+25%</td>
+</tr>
+<tr>
+    <td>23</td>
+    <td style="text-align: center">+33%</td>
+    <td style="text-align: center">+24%</td>
+    <td style="text-align: center">+27%</td>
+</tr>
+<tr>
+    <td>24</td>
+    <td style="text-align: center">+35%</td>
+    <td style="text-align: center">+27%</td>
+    <td style="text-align: center">+30%</td>
+</tr>
+<tr>
+    <td>25</td>
+    <td style="text-align: center">+35%</td>
+    <td style="text-align: center">+30%</td>
+    <td style="text-align: center">+33%</td>
+</tr>
+</table>`
+            ],
+            comment: 'These tables are wrong and should not be used. The 2nd printing of ***Skills & Powers*** cleared up the confusion and fixed the tables. Use the second printing instead!',
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '227',
+    publication_year: '1996',
+    publication_month: 'MARCH',
+    foreword: `This month, the Sage handles a variety of questions straight out of the mailbag. The sage reveals how wererats pass on lycanthropy, re-examines a question from previous column, and offers a few suggestions about character aging.`,
+    sage_advice: [
+        {
+            page_number: '46',
+            question: `The damage listed for wererats in the ***MONSTROUS COMPENDIUM®*** accessory is "by weapon"; how does a wererat infect victims with lycanthropy? Do wererats have a bite attack? If so, how much damage does it inflict?`,
+            answer: [
+                `Yes, wererats using weapons can inflict lycanthropy, but only when in their ratman form. Note that the ability to inflict lycanthropy through weapon attacks is (thus far) unique to wererats. Wererats have no bite when in ratman or human forms. When in giant rat form, however, a wererat's bite inflicts 1d3 points of damage, and bite attacks can inflict lycanthropy.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '46',
+            question: `If a slain character is brought back to life with a priest's ***resurrection*** spell, does the character lose a point of Constitution? The description for the ***raise dead*** spell explicitly says the recipient loses the point of Constitution, but the ***resurrection*** description doesn't mention anything about Constitution loss.`,
+            answer: [
+                `A character must make a resurrection survival check if *raised* or *resurrected*, and the character loses a point of Constitution if the check succeeds (see the ***DUNGEON MASTER® Guide***, page 104).`,
+                `In the original D&D® campaigns played in the Lake Geneva area in the 1970s, characters who received ***resurrection*** spells did not have to make resurrection survival rolls. The ***resurrection*** spell still has a saving throw listing of "none," which is an erroneous holdover from the original version of the spell. If your campaign is particularly challenging, you might want to consider waiving the survival check for characters who receive ***resurrection*** spells. Considering the drain a ***resurrection*** spell puts of the caster (temporary incapacitation and three years of unnatural aging), you might want to waive the Constitution loss, too. If you do so, a character's initial Constitution score should still also be the maximum number of times a the character can be *raised* or *resurrected*.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '46',
+            question: `At one time, a character using the 6th-level wizard spell ***project image*** could cast spells through the image. That doesn't seem to be the case now. What gives?`,
+            answer: [
+                `A key sentence was inadvertently dropped from the spell's description. The sentence reads: "A special channel exists between the image of the caster and the caster, so spells cast actually originate from the image." Note that certain barriers, such as ***walls of force*** and ***anti-magic shells*** can block the channel even if the caster can see the image.`,
+            ],
+            comment: 'Same answer as was given in #184',
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '46',
+            question: `I am having a difficult time trying to find the difference between the new AD&D® products and AD&D 2nd Edition rules. Do the newer, thicker books contain a new edition of the rules?`,
+            answer: [
+                `The "new" AD&D game books released in 1995 are a repackaging of the AD&D 2nd Edition game, intended merely to upgrade the game's graphic look. The new books do not contain a new edition of the rules. Check out the Forward in the new ***Player's Handbook*** (page 3) for details.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '46',
+            question: [
+                `In issue #224, you said that there are no bards native to Krynn. However, according to the tables on page 81 of the ***World Book of Ansalon*** from the ***Tales of the Lance*** boxed set, there are bards (with included level limits for the various races of Ansalon). What's up?`,
+                `How come kender can't become wizards when they can become bards?`
+            ],
+            answer: [
+                `I am guilty of a misstatement. What I should have said in issue #224 was that Krynn has no native bards as the ***Player's Handbook*** describes them. In the AD&D core rules, a "bard" is a rogue character who can cast some wizard spells. Krynn has no such characters.`,
+                `According to Harold Johnson, TSR, Inc.‘s resident DRAGONLANCE® setting guru, anyone with a talent for singing can be properly called a bard on Ansalon. Goldmoon, for example, is famous bard as well as a renowned cleric. As a few readers have pointed out, there is a bard profession available to Krynn residents. These characters, however, are thief characters who can sing and play musical instruments (see page 80 of the ***World Book of Ansalon***. A Krynn bard functions as a regular thief but starts play with the ability to sing and play a portable musical instrument. Krynn bards do not cast wizard spells, which is why a kender can be a bard but not wizard.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '46',
+            question: `If a fighter character used 10 ***wishes*** to raise his Strength score from 17 to 18, would he immediately roll for exceptional Strength? The ***PHB*** says any warrior with a Strength score is entitled to an exceptional Strength roll. However, the section on wishes in the ***DMG*** makes no mention of this at all.`,
+            answer: [
+                `The DM has final say on the results of *wishes*. There's is nothing wrong with granting exceptional Strength rolls to warriors who obtain Strength scores of 18 through *wishing* (unless they are halflings; see ***PHB***, page 27) but the DM is not obligated to do so. If the DM decides not to allow an immediate roll for exceptional Strength, the warrior in question can either be assumed to have a normal (unexceptional) Strength rating of 18 or an exceptional Strength rating of 18/01 at the DM's option.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '46',
+            question: `The damage listed for wererats in the ***MONSTROUS COMPENDIUM®*** accessory is "by weapon"; how does a wererat infect victims with lycanthropy? Do wererats have a bite attack? If so, how much damage does it inflict?`,
+            answer: [
+                `Yes, wererats using weapons can inflict lycanthropy, but only when in their ratman form. Note that the ability to inflict lycanthropy through weapon attacks is (thus far) unique to wererats. Wererats have no bite when in ratman or human forms. When in giant rat form, however, a wererat's bite inflicts 1d3 points of damage, and bite attacks can inflict lycanthropy.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '46-47',
+            question: `Page 86 of the ***Ruins of Undermountain II*** adventure makes a passing mention of rangers casting wizard spells, and in the book ***Shadows of Doom*** the ranger Sharantyr uses one of Elminster's wands. The ***PHB***, however, says rangers get priest spells. Which spells do rangers get?`,
+            answer: [
+                `The reference to rangers casting wizard spells in ***Ruins of Undermountain II*** is an erroneous throwback to the original AD&D game, which granted some wizard spells to high-level rangers. Any number of things could account for the wand-wielding ranger from ***Shadows of Doom***: there could have been a error in the narrative, the wand in question could be a special item, the character in question could have a special ability, and so on.`,
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '47',
+            question: `Let's say a wizard casts a ***magic missile*** spell at an enemy fighter. At the time the wizard casts the spell, an invisible thief is in the direct line of fire between the wizard and the fighter. Does the ***magic missile*** strike the thief because he is in the way? Or do the missiles from the spell, which strike their targets unerringly, zip around the thief and strike the fighter, thus revealing the thief‘s presence?`,
+            answer: [
+                `The *missile* or *missiles* from the ***magic missile*** spell in your example would strike the fighter, because the fighter is the spell's target. Whether the invisible thief is revealed is entirely up to the DM. The missiles might streak directly toward the fighter and turn abruptly to avoid the thief, or they might curve so gradually that nobody notices. Even in the first instance, the *missiles* might move so fast that an observer wouldn't notice them changing course.`,
+                `In any case, the thief is not rendered visible, there is simply a vague indication that there is something invisible in the *missiles'* path. This situation is similar to what would happen if the thief jostled a piece of furniture or a curtain. If the DM decides the *missiles'* erratic course could betray the thief's presence, any observers should attempt saving throws vs. spells. Observers making successful saving throws would detect the thief and know his approximate location, while observers failing their saving throws would notice nothing.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '47',
+            question: `According to what I have read, when a human and a half-elf mate, the offspring is considered a human; I've also read that, when an elf and a half-elf mate, the offspring is considered an elf. So what happens when two half-elves (or half-ogres or half-orcs, etc.) mate?`,
+            answer: [
+                `The FORGOTTEN REALMS® Campaign Setting contains just such a rule about half-elven heredity. When two FR half-elves mate, their offspring also is a half-elf (see ***A Grand Tour of the Realms***, page 12). The ***Player's Handbook***, however, says that anyone with both human and elven ancestors is either a human or a half-elf (see ***PHB***, page 30). If the character has more human ancestors than elven ancestors, he's human. If there are equal or larger numbers of elven ancestors, the character is a half-elf.`,
+                `Unless your campaign has a rule that says otherwise, I recommend that you use the ***PHB*** rule for half-elves and all other crossbreeds. If you're playing a FORGOTTEN REALMS campaign, for example, use the rule from ***Grand Tour of the Realms*** when dealing with half-elves and the ***PHB*** rule for half-orcs and other crossbreeds.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '47',
+            question: `The description of the Charge option in the first chapter of the ***PLAYER'S OPTION™: Combat & Tactics*** book says it's a full-move action: however, the Charge option also is included in the list of half-move actions on page 20. Which is it?`,
+            answer: [
+                `Charging is a full-move action, but it's included on the half-move list for two reasons. First, it is possible that a charging character might enter melee range with the enemy during the first half of his movement. In such a case, the character stops moving and makes his attack; once he stops to attack, his movement is over (though he still can make the standard one-square adjustment after the attack). Second, its okay to let a character who already has made a half move to charge during the second half of his movement. Players often wish their characters to make delayed charges in response to unexpected moves from the enemy, when their comrades suffer knockdowns, and in many other situations. A character making a "half charge" is subject to all the bonuses and penalties associated with charging (see ***Combat & Tactics***, page 25).`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '47',
+            question: `If you're using the fatigue rules from the ***Combat & Tactics*** book do undead creatures have to keep track of fatigue?`,
+            answer: [
+                `No, they don't. This isn't mentioned in Chapter Nine of the ***C&T*** book, but it should be. Golems don't become fatigued either.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '47',
+            question: `Exactly how far does a character go when charging running, or sprinting? For example, Motar the mage has a base move of 12. That means he normally goes 12 spaces on a half move. He goes 36 spaces if he runs (12 plus 24) or 48 spaces if the sprints (12 plus 36). Right?`,
+            answer: [
+                `Motar the mage, who has a movement rating of 12, normally moves 12 squares in a combat round, not 24 (see ***C&T*** page 13).`,
+                `If he charges, his movement rate increases by 1 ½ to 18. Motar can move up to nine spaces during his base initiative phase and up to nine more during a later phase (usually the very next phase).`,
+                `If he runs, Motar's movement rate doubles and he can move 24 spaces (but no more than 12 during in base phase and up to 12 more on a later phase).`,
+                `If Motar sprints, he triples his movement to 36 (up to 18 spaces in his base phase and up to 18 more later). Note that characters have only two phases of movement during a combat round and that leftover movement from a previous phase cannot be saved and used in a later phase.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '47',
+            question: `There is a contradiction between the descriptions for caps and mail coifs in the ***Combat & Tactics*** book. Page 147 says the two provide Armor Class 3 for the head and neck when worn together, but page 149 says the combination provides Armor Class 4. Which is correct?`,
+            answer: [
+                `A cap and mail coif worn together provide an AC of 4 to the head and neck.`,
+            ],
+            comment: '**Not** fixed in the 2nd printing of ***C&T***',
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '47',
+            question: `What kinds of things can affect a weapon's speed factor? Do you include things such as an elf's or a specialist's attack bonus? Can a speed factor be a negative number?`,
+            answer: [
+                `The only thing that affects a weapon's speed factor is its magical enchantment. In core AD&D 2nd Edition rules, each point of enchantment reduces the weapon's speed factor by one point (see ***PHB***, page 127). If you're using the initiative system form ***Combat & Tactics***, see page 18 of ***C&T***: A weapon's speed factor can never be less than zero.`,
+            ],
+            comment: `The Sage is correct here that speed can never be less than 0. In issue #245 the Sage will incorrectly say that speed factor can never be less than 1.`,
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '47-48',
+            question: `The rules for critical hits in Chapter Six of the ***Combat & Tactics*** book say that armor damage can be avoided if the piece of armor in question makes a saving throw vs. normal blow or vs. a crushing blow if the attacker's weapon is larger than the defender. What are the saving throw numbers for a normal blow?`,
+            answer: [
+                `There is no "normal blow" category for item saving throws in the AD&D 2nd Edition game. For purposes of critical hits, I recommend a saving throw number of 2 for normal blows no matter what type of armor is involved. For crushing blows arising from critical hits, I recommend a saving throw number of 6 for all types of armor rather than the numbers given for crushing blows on Table 29 in the ***DMG***. Don't forget that the damage inflicted by the hit (before any multipliers for the critical hit) applies as a penalty to the armor's saving throw roll.`,
+            ],
+            comment: `A good clarification for how to handle an obscure reference.`,
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '48',
+            question: `Is there a system for determining character point costs and initial ratings for nonweapon proficiencies that were included in the various "complete" handbooks but not included in the ***PLAYER'S OPTION™: Skills & Powers*** book?`,
+            answer: [
+                `No, there isn't, but here are a few basic rules of thumb for you: A one-slot proficiency should cost three character points. If a one-slot proficiency allows add-ons (such as the ancient languages proficiency, which allows the character to learn additional languages for a minimal character-point cost) or is something particularly difficult to learn (such as mountaineering or tracking), it should cost four character points. Fairly common or simple one-slot proficiencies should cost only two character points. Two-slot proficiencies should cost five character points.`,
+                `Initial ratings should range from 5 to 9; compare the proficiency in question to the proficiencies already included in the ***Skill & Powers*** book and assign one that seems appropriate.`,
+                `In any case, the task of converting an old proficiency to the ***S&P*** system is a job for the DM, who has final say on the process.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '48',
+            question: `How many spellbook pages are required to include the reversed form of a spell?`,
+            answer: [
+                `It depends on the spell. Reversible spells, such as ***knock***, ***locate object***, and ***stone to flesh*** require no extra spellbook space at all. A single spell entry does double duty, though the wizard still must decide which version he will memorize when studying spells for the day. Separate spells that are essentially reversed versions of each other, such as ***haste*** and ***slow***, must be recorded separately. In either case, a single spell requires a number of spellbook pages equal to the spell's level plus 0-5 (1d6-1) pages (see ***PHB***, page 63).`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '48',
+            question: `If a specialist wizard uses a magical item from an opposition school, such as a transmuter using an ***amulet of proof against detection and location*** (abjuration magic) what happens? Can the transmuter use this device at all? Is there a penalty?`,
+            answer: [
+                `As "Sage Advice" has suggested before, specialist wizards should be free to use all magical items that can be used by any character class, even when they involve magic from their opposition schools. The specialist wizard magical item limitations are intended to apply solely to wizard-only items.`,
+            ],
+            comment: 'Same as given in issue #217.',
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '48',
+            question: `How many years does a character age per level of experience gained? I hardly think that a truly seasoned warrior (20th level or higher) would be only 25 to 30 years old. After all, the true greats, such as the wizard Elminster are depicted as elderly.`,
+            answer: [
+                `The first step in determining any character's age is to generate a starting age from Table 11 in the ***PHB***. Now, divide that value by the absolute maximum age for the character's race (also determined from Table 11). Multiply the quotient by the character's actual maximum age (again from Table 11). This is the character's “geezer factor.” If person playing the character is past middle age himself, double the geezer factor (everyone knows time passes faster for older people). If the person playing the character is a game advice columnist who has begun to ponder just how many people there are out there who just have to have a rule for everything, triple the geezer factor (because thoughts of this kind will make you old in a real hurry). In any case, for every 50,000 experience points the character earns he ages one geezer factor.`,
+                `There you go, simple. Go try the formula on a couple of sample characters to see how it works. I'll wait....`,
+                `Have you done that? I hope not, because the Sage was just pulling your leg.`,
+                `How about this as an alternate method: Determine the character's starting age (Table 11 again), and then figure out how much time has gone by in the campaign since the character started play. (Pretty clever, huh? That's why I get the big bucks.) If you need help with campaign time, check out Chapter 14 in the ***Player's Handbook*** and Chapter 14 in the ***DUNGEON MASTER® Guide***. Of course, if you asked your question because you're creating a new character at level 20 or higher, just make him whatever age you want him to be. If you think 25 to 30 years old is too young, you're probably right. To set the character's age, start by thinking about how much game time it might take to gain 20 or more levels (if you haven't any idea, you probably shouldn't be creating characters of that level). Now consider any notable events from the character's past (you weren't really going to create a brand-new character of level 20+ without giving him a history were you?). For example, if a 20th-level warrior's claim to fame was that he lead the imperial army to victory 50 years ago, he's almost certainly going to be considerably more than 50 years old; after all, babes in diapers usually don't command imperial armies, but then again anything's possible in a fantasy game and there's always the chance the character has been subjected to some kind of magical age adjustment.`,
+                `In short, there is no hard-and-fast rule governing how fast characters age once they start play, its all a matter of judgment (and perhaps a little bookkeeping) on the part of the Player and the DM.`
             ],
             attributes: [ATTRIBUTE_2E],
         },
