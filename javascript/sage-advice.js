@@ -1329,7 +1329,7 @@ DRAGON_MAGAZINES.push({
             page_number: '8',
             question: `The rules on page 97 of the ***PHB*** say that polearms and spears do double damage vs. charging opponents, but the tables on pages 68 and 69 say only a few polearms can do this. Which is correct?`,
             answer: [
-                `Those polearms marked with a "#" and all spears do double damage when set vs. a charge. Polearms marked with a "*" do double damage vs. charging opponents that are larger than man size.`
+                `Those polearms marked with a "#" and all spears do double damage when set vs. a charge. Polearms marked with a "&ast;" do double damage vs. charging opponents that are larger than man size.`
             ],
             attributes: [ATTRIBUTE_2E],
         },
@@ -1539,6 +1539,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes, the number of creatures effected by a ***hold person*** spell is under the caster's control.`
             ],
+            comment: 'Same question and answer is repeated in #223',
             attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
         },
         {
@@ -5598,7 +5599,7 @@ DRAGON_MAGAZINES.push({
             page_number: '80',
             question: `Where can I find a list of the armor and weapons available to Viking characters from ***The Vikings Campaign Sourcebook***?`,
             answer: [
-                `The basic equipment list for Viking campaigns is in the ***Player's Handbook***, pages 66-69. As page 58 of the ***The Vikings Campaign Sourcebook*** explains, certain items from the ***PHB*** list are unavailable. These are listed in the tables on pages 59 and 60, and they are marked "N/A." Some items are marked "N/A*" and can't be found in Scandinavia, but they are available elsewhere in the Vikings' world. Additional equipment not found in the ***PHB*** list but available in Viking campaigns is listed in the ***VCS***, table 7, page 60.`,
+                `The basic equipment list for Viking campaigns is in the ***Player's Handbook***, pages 66-69. As page 58 of the ***The Vikings Campaign Sourcebook*** explains, certain items from the ***PHB*** list are unavailable. These are listed in the tables on pages 59 and 60, and they are marked "N/A." Some items are marked "N/A&ast;" and can't be found in Scandinavia, but they are available elsewhere in the Vikings' world. Additional equipment not found in the ***PHB*** list but available in Viking campaigns is listed in the ***VCS***, table 7, page 60.`,
             ],
             attributes: [ATTRIBUTE_2E],
         },
@@ -7900,6 +7901,7 @@ DRAGON_MAGAZINES.push({
                 `The ***invisibility*** spell is an illusion; as such, creatures with 20 + Intelligence scores are immune to it. Such creatures also are immune to spells such as ***mirror image***, ***blindness***. This does not, however, mean that these creatures automatically see every *invisible* creature in the AD&D universe. Naturally invisible creatures such as invisible stalkers, aerial servants, and pixies are still hidden from supra-genius creatures. The DM also might rule that magical ***invisibility*** bestowed by items such as ***dust of disappearance***, ***cloaks of elvenkind***, and maybe even ***rings of invisibility*** also work in the face of supra-genius intelligence by virtue of the magical power invested in them.`,
                 `When a character becomes *invisible*, all her equipment becomes invisible with her The character could read a scroll, however by putting down the scroll and allow ing it to become visible (see the ***invisibility*** spell description in the ***PH***, page 142). The character can pick up the visible scroll and read it normally, and can make the scroll *invisible* again by tucking it into her clothing. I strongly suggest that you assume nonmagical invisibility detection merely reveals an invisible creature's outline and position. The viewer has a good idea of the creature's size and shape, and the viewer knows exactly where the creature is—well enough to attack the creature with spells and to make physical attacks without the usual -4 penalty.`
             ],
+            comment: `A different answer in given in #224 where it is stated that 20+ Intelligence creatures cannot look through a ***mirror image*** spell.`,
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY],
         },
         {
@@ -9954,7 +9956,7 @@ DRAGON_MAGAZINES.push({
     ]
 });
 DRAGON_MAGAZINES.push({
-    issue_number: '222',
+    issue_number: '223',
     publication_year: '1995',
     publication_month: 'November',
     foreword: `Join the sage in a look at the new ***Player's Option™: Skills and Powers*** book. unless otherwise noted, page and table references are for the ***Skills and Powers*** book (***S&P***). The sage also examines a few other issues straight from the mailbag.`,
@@ -10147,6 +10149,624 @@ DRAGON_MAGAZINES.push({
                 `Paladins who do not purchase the priest spells ability still get spells starting at 9th level (see ***PHB*** table 17), but fewer than those who purchase the priest spell ability.`
             ],
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '77',
+            question: `On Table 46: Traits, shouldn't the Initial Rating column read Character Point Cost?`,
+            answer: [
+                `Yes it should. If a trait has a base score it is listed in the trait description.`,
+            ],
+            comment: `The column heading is wrong as stated on page 92. The correct heading, showing Character Point Cost, is present in the Compiled Tables Appendix on page 186. In the 2nd printing both page 92 and page 186 shows the correct heading.`,
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '77',
+            question: `The weapons table indicates that light and heavy crossbow quarrels inflict considerably more damage than they used to. Is that correct?`,
+            answer: [
+                `Yes it is, but the increased damage is only half the story. The ***Combat & Tactics*** books gives crossbows a special ability to penetrate armor as well.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '77',
+            question: `How does one determine a monster's Mental Armor Class (for the new psionics system)?`,
+            answer: [
+                `Here's something to tide you over until something better comes along: Assume that the creature's Wisdom score is about equal to its Intelligence score. To determine the creature's scores, look up the monster's entry in the ***MONSTROUS MANUAL*** tome or the ***MONSTROUS COMPENDIUM®*** tome and note its general intelligence rating. A parenthetical note right next to the rating tells give you a range of mental ability scores. For example, a ki-rin has an intelligence rating of supra-genius, giving in a rating of 19-20 in both Wisdom and Intelligence. You can roll 1d6 to determine the exact score (1-3= 19, 4-6=20). Once you have the scores, calculate its MAC using table 74 (***S&P***, page 144) just like you would for a character. If a particular ki-rin has a Wisdom of 19 and an Intelligence of 20, its MAC would be 3. If you want a wider range of scores for the creature, you'll find tables for generating creature's ability scores in Chapter 2 of the ***DUNGEON MASTER™ Option: High-Level Campaigns*** book, pages 58-61. Creatures with racial psionic abilities, such as su-monsters and mind flayers, should get an additional bonus of +1 to +3.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '77',
+            question: `The weapon specialization rule in the ***Combat & Tactics*** book says characters can specialize in only one weapon at a time. What happens to characters who must specialize in multiple weapons; for example, the samurai and the swashbuckler?`,
+            answer: [
+                `They have to give up their extra weapons of specialization, although the DM could allow them to have expertise in the extra weapons.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '77-78',
+            question: `How do you decide if a grenade-like missile strikes its target? I've looked in both the ***PHB*** and the ***DMG*** and I could find nothing that says what attack number a grenade-like missile uses.`,
+            answer: [
+                `A grenade-like missile's actual attack number varies according to the circumstances. If a creature is not the target and the character is within short range (10' for a flask of oil or other lightweight object) of the target point, a hit should be automatic. For example, if a character wants to smash a flask of oil at the top of a staircase the party has just ascended, the flask should land where the character wants it to as long as the target point is within 10' of the character. If the character is rushed, or the target point is farther way than 10', treat the target point as Armor Class 10 and apply the appropriate range modifier. (In the core rules, a thrown oil flask has a medium range of 20' and a long range of 30'.)`,
+                `If the grenade-like missile target is a creature, the attack number depends on what the missile is. If the missile is something like a boulder or a container holding a fairly small amount of liquid that has to make direct contact with the target creature to have any effect (such as a vial of acid or holy water), then just use the creature's armor class and resolve the grenade toss as you would any other missile attack (except that you would roll for scatter if the attack misses).`,
+                `If the grenade-like missile holds a fairly hefty amount of material, such as a flask of oil, I suggest rolling an attack vs. armor class 7, adjusted for the target's Dexterity score and movement rate; I suggest +3 for stationary targets, -3 for targets moving a rate faster than 3 but slower than 12, and -6 for targets moving at a rate of 12 or greater. Normal range adjustments apply in any case.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '78',
+            question: `What are the character point costs and base scores for the fighting proficiencies presented in the ***Combat & Tactics*** book and the psionic proficiencies presented in Chapter 9 of the ***Skills & Powers*** book?`,
+            answer: [
+                `Here are the numbers for use with the ***Skills & Powers*** rules:`,
+                `
+<table>
+<tr>
+    <td><strong>Special Talents</strong></td>
+    <td colspan="3">(<em>C&T</em>), pages 78-80</td>
+</tr>
+<tr>
+    <td style="vertical-align: bottom;"><strong>Skill</strong></td>
+    <td style="text-align: center;"><strong>CP<br>Cost</strong></td>
+    <td style="text-align: center;"><strong>Initial<br>Rating</strong></td>
+    <td style="text-align: center;"><strong>Relevant<br>Ability</strong></td>
+</tr>
+<tr>
+    <td>Alertness<sup>T1</sup></td>
+    <td style="text-align: center;">6</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+</tr>
+<tr>
+    <td>Ambidexterity<sup>T</sup></td>
+    <td style="text-align: center;">4</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+</tr>
+<tr>
+    <td>Ambush</td>
+    <td style="text-align: center;">4</td>
+    <td style="text-align: center;">5</td>
+    <td style="text-align: center;">Int./Rea.</td>
+</tr>
+<tr>
+    <td>Camouflage</td>
+    <td style="text-align: center;">4</td>
+    <td style="text-align: center;">5</td>
+    <td style="text-align: center;">Int./Lea.</td>
+</tr>
+<tr>
+    <td>Dirty Fighting</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">5</td>
+    <td style="text-align: center;">Int./Lea.</td>
+</tr>
+<tr>
+    <td>Endurance<sup>2</sup></td>
+    <td style="text-align: center;">2</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">—</td>
+</tr>
+<tr>
+    <td>Fine Balance<sup>T</sup></td>
+    <td style="text-align: center;">5</td>
+    <td style="text-align: center;">7</td>
+    <td style="text-align: center;">Dex./Agi.</td>
+</tr>
+<tr>
+    <td>Iron Will<sup>T</sup></td>
+    <td style="text-align: center;">6</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">Wis./Wil.</td>
+</tr>
+<tr>
+    <td>Leadership</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">5</td>
+    <td style="text-align: center;">Cha./Lea.</td>
+</tr>
+<tr>
+    <td>Quickness<sup>T3</sup></td>
+    <td style="text-align: center;">6</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">Dex./Aim</td>
+</tr>
+<tr>
+    <td>Steady Hand<sup>T</sup></td>
+    <td style="text-align: center;">5</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+</tr>
+<tr>
+    <td>Trouble Sense</td>
+    <td style="text-align: center;">4</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">Wis./Int.</td>
+</tr>
+</table>`,
+                `
+<table>
+<tr>
+    <td><strong>Martial Arts Talents<sup>4</sup></strong></td>
+    <td colspan="3">(<em>C&T</em>), page 98</td>
+</tr>
+<tr>
+    <td style="vertical-align: bottom;"><strong>Skill</strong></td>
+    <td style="text-align: center;"><strong>CP<br>Cost</strong></td>
+    <td style="text-align: center;"><strong>Initial<br>Rating</strong></td>
+    <td style="text-align: center;"><strong>Relevant<br>Ability</strong></td>
+</tr>
+<tr>
+    <td>Backward Kick</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+</tr>
+<tr>
+    <td>Crushing Blow</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+</tr>
+<tr>
+    <td>Flying Kick</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">5</td>
+    <td style="text-align: center;">Str./Muc.</td>
+</tr>
+<tr>
+    <td>Instant Stand</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">7</td>
+    <td style="text-align: center;">Dex./Aim</td>
+</tr>
+<tr>
+    <td>Missile Deflection</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+</tr>
+</table>`,
+                `
+<table>
+<tr>
+    <td><strong>Psionic Proficiencies</strong></td>
+    <td colspan="3">(<em>S&P</em>), page 155</td>
+</tr>
+<tr>
+    <td style="vertical-align: bottom;"><strong>Skill</strong></td>
+    <td style="text-align: center;"><strong>CP<br>Cost</strong></td>
+    <td style="text-align: center;"><strong>Initial<br>Rating</strong></td>
+    <td style="text-align: center;"><strong>Relevant<br>Ability</strong></td>
+</tr>
+<tr>
+    <td>Contact</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">Wis./Wil.</td>
+</tr>
+<tr>
+    <td>Mental Armor</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">Wis./Wil.</td>
+</tr>
+<tr>
+    <td>Gem Cutting</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">6</td>
+    <td style="text-align: center;">Dex./Aim</td>
+</tr>
+<tr>
+    <td>Harness Subconscious</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">6</td>
+    <td style="text-align: center;">Wis./Wil.</td>
+</tr>
+<tr>
+    <td>Meditative Focus</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">6</td>
+    <td style="text-align: center;">Wis./Int.</td>
+</tr>
+<tr>
+    <td>Musical Instrument</td>
+    <td style="text-align: center;">2</td>
+    <td style="text-align: center;">4</td>
+    <td style="text-align: center;">Cha./Lea.</td>
+</tr>
+<tr>
+    <td>Reading/Writing</td>
+    <td style="text-align: center;">2</td>
+    <td style="text-align: center;">8</td>
+    <td style="text-align: center;">Int./Kno.</td>
+</tr>
+<tr>
+    <td>Rejuvenation</td>
+    <td style="text-align: center;">3</td>
+    <td style="text-align: center;">6</td>
+    <td style="text-align: center;">Wis./Int.</td>
+</tr>
+<tr>
+    <td>Religion</td>
+    <td style="text-align: center;">2</td>
+    <td style="text-align: center;">6</td>
+    <td style="text-align: center;">Wis./Int.</td>
+</tr>
+</table>`,
+                `T. Under the Skills & Powers character creation system, this skill must be selected as a trait.`,
+                ``,
+                `1. This is the value for the alertness trait as described in the Skills & Powers book. The version described in the Combat & Tactics book is slightly weaker. The C&T version has a character point cost of 4 and a base score of 5. The relevant ability is Wisdom/Intuition.`,
+                ``,
+                `2. If the ***Combat & Tactics*** fatigue rules are in play, the character point cost is 4.`,
+                ``,
+                `3. The version of this talent described in the ***Combat & Tactics*** book works best with the optional rule for individual intitiative in the ***Player's Handbook***. If you are using the ***C&T*** intitiative system, the quickness trait does not affect the character's initiative rolls. Instead, the character can use the skill only during the first round of a combat. A successful skill roll accelerates all the character's actions by one phase, just as if the character had an initiative roll of 1. If the character uses quickness successfully and rolls a 1 for initiative, the character's actions are accelerated by two phases; however, no action can ever be quicker than very fast. If the character successfully uses quickness and rolls a 10 for initiative, the bonus from the trait and the penalty from the initiative roll (see ***C&T***, page 18) cancel each other out.`,
+                ``,
+                `4. Any character proficient in a martial art can choose a martial arts talent as a general proficiency.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '78',
+            question: `When a dual-classed character uses a pale ***green ioun stone***, are both classes raised one level or just the active class? What happens when a multi-classed character uses the stone?`,
+            answer: [
+                `The stone grants only a single level. A dual-classed character using the stone receives the boost to his active class. A multi-classed character receives the boost to the class in which he has the highest level. Note that the level boost is temporary; if the stone is not circling the character the extra level is lost.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '78',
+            question: `Exactly which spells are subject to elven and half-elven magic resistance?`,
+            answer: [
+                `The question is an old one, but I received several letters on the topic this month. I would prefer to avoid giving an actual list, because new spells are being added to the game all the time. Elven and half-elven resistance to sleep and charm spells applies to most spells, and spell-like effects that cause the subject to fall asleep or fall under another character's continuing influence. Such effects include: ***charm monster***, ***charm person***, ***charm person or mammal***, ***domination***, ***eyebite*** (charm effect only, the sleep effect works normally on elves and half-elves, as do the fear and sicken effects), ***fire charm***, ***mass charm***, and ***sleep***. Magical devices and creature special attacks that duplicate these spells, such as ***eyes of charming***, the beholder's charm rays, and the vampire's charm gaze also are subject to elven and half-elven resistance. Sleep-inducing breath weapons, such as the brass dragon's sleep gas, are not. Neither are the ***rod of beguiling*** or the ***rod of rulership***; charm effects from a ***staff of commanding*** are.`,
+                `Spells and other effects that merely incapacitate the subjects or that allow only limited control, such as ***hold*** spells, ***hypnosis***, ***suggestion***, ***quest***, and ***geas*** are not subject the eleven or half-eleven resistance. When there is a reasonable doubt, the DM must decide.`
+            ],
+            comment: 'This question is repeated in #242 and #271',
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '78',
+            question: `How do you roll an ability check for a character with an exceptional Strength score?`,
+            answer: [
+                `Usually on 1d20, just like any other ability check. An exceptional Strength score grants a character extra combat abilities, but little else. For many feats of sheer strength, a bend bars/lift gates roll is often more appropriate than a Strength ability check. If two character with exceptional Strength scores are making opposed Strength rolls, you might allow the characters to succeed with their Strength rolls on rolls of 19 if they roll less than their exceptional ratings on percentile dice.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '78',
+            question: `Can a ***cloud of purification*** spell destroy a character who has been reduced to an extremely small height by a ***reduce*** spell or a powerful curse? The spell melts any creature up to the size of a normal rat and turns it to water. Can a character who has been turned to water be raised, resurrected, or restored with a ***wish***?`,
+            answer: [
+                `You shouldn't allow a ***cloud of purification*** to affect any creature with a full hit die or more. If a level-0 character or creature with less than one hit die has been shrunk, then turned to water by a ***cloud of purification*** it cannot be raised or reincarnated; however, I would allow a ***resurrection*** spell to work if the creature's remains haven't been mixed in with a whole lot of water from other creatures. Even so, a substantial penalty to the resurrection survival roll, say 30%, would be in order. A ***wish*** could bring back the creature in any case.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '78-79',
+            question: `Just how freely can priest characters choose their spells? Does a priest choose spells one a day? Once a level? As the character needs them? How does a priest go about learning a newly invented spell?`,
+            answer: [
+                `Generally, a priest can freely choose his spells from the spheres and spell levels available to him about once a day. All the character needs is a good night's sleep and time for prayers. The priest requires no spell book and is not in any way hindered by the spells he may have chosen previously. Nevertheless, the priest must memorize his spells ahead of time, he can't simply choose them as needed.`,
+                `In the case of spells that have been newly introduced into the campaign, the DM is free to decide how priests can get them. If a priest character spends the time and money to research an entirely new spell, no other priest should be able to get it unless the inventor teaches him the spell or he finds the spell on a scroll. Teaching another priest a new spell should take about a day per spell level. Learning a new priest spell from a scroll also should take a day per spell level and the process should consume the scroll (it goes blank when the priest finishes dissecting it). In either case, the priest learning the spell understands it automatically so long as he is of a level sufficient to cast the spell and the spell is included in a sphere the priest has access to.`,
+                `If a priest finds a written description of a new spell (as opposed to a magical scroll), the priest should have to research the spell (see ***DMG***, Chapter 7, page 64), but the cost should be minimal (100 gp per spell level).`,
+                `In some very rare cases, the DM might decide to make a new priest spell available to all priests in the campaign. When this happens, the deities who grant the spells simply add them the lists of spells they offer and any priest who has access to the spell's sphere and is high enough level to cast the spells learns it automatically through divine inspiration.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '79',
+            question: `What happens to a character who tries to use a ***dimension door*** or ***teleport spell*** and he is carrying too much weight? Does the character still wink out, leaving the excess behind or does the spell fail outright? Can characters prevent an enemy from teleporting away by grappling the opponent and pushing him over the weight limit?`,
+            answer: [
+                `For purposes of game balance, I heartily recommend that any teleportation spell fail outright if the caster is carrying too much weight. Likewise, I suggest that any creature touching the caster count toward the weight the caster is carrying, even if the caster is unwilling. Characters who are quick-witted enough to grab a teleporting creature before it can wink out should be rewarded for their foresight.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '79',
+            question: `Isn't the 4th-level wizard spell ***polymorph other*** too powerful? What's to prevent a 7th-level transmuter from building two great wyrm dragons a day out of the local rat population? If ***polymorph other*** were cast on a rat to change it into a gold dragon, there would be more than a 200% chance that the rat would permanently become a dragon, complete with all the dragon's magical and special abilities. Aside from the system shock rolls, saving throws, and the ***dispel magic*** spell, there seems to be no limit on what a measly 7th-level wizard can do, and the spell is permanent!`,
+            answer: [
+                `It is true that ***dispel magic*** and system shock rolls are the only limits the rules place on the spell. Other limits come from the DM. It is also true that turning a creature with animal intelligence, such as a rat, into something as smart as a gold dragon makes the creature assuming the mind and abilities of its assumed form inevitable. The ***polymorph other*** spell, however, is not too powerful at all if the DM is clever.`,
+                `First, there's nothing in the spell that says the caster gets to pick the transformed creature's age. That's for the DM to decide. You might want to apply the subject creature's age to the lifespan of the assumed form to determine the assumed form's maturity. In the case of a rat, the resulting dragon is always going to be a hatchling because rats just don't live that long. Or perhaps the subject's level of maturity translates directly into the assumed form's maturity. So if a caster wants a great wyrm dragon he has to find a really old and decrepit rat.`,
+                `You could really have some fun with a greedy player of you choose the latter option. If the caster picks a young and healthy rat (with a reasonable chance to survive a system shock roll), he should get a hatchling gold dragon. Being young, the dragon is hungry. Being violently thrust into dragonhood, the dragon is shy and insecure. The dragon might follow the character around, eating the character's treasure (gold dragons eat gems), occasionally cutting loose with its breath weapon because it is scared (maybe it saw a cat), and making a general nuisance of itself. Imagine the scene if the dragon visits a jewelry shop for a snack. Being lawful good, the dragon surely will tell the irate jeweler and the town guard where "mom" is.`,
+                `If the caster chooses a venerable old rat, the creature's system shock percentage should be very low (35% or less); let's face it, old rats aren't going to have really high Constitution scores. If the caster does manage to create a venerable, wyrm, or great wyrm gold dragon, the creature probably is going to take charge. Gold dragons are lawful good, but no creature with 22 or more hit dice is going to take orders from a measly 7th-level wizard. The dragon might help the character in some small way, but the character probably will find himself embarked on some series of adventures of the dragon's choosing before long. Woe to the character when an errant ***dispel magic*** spell ends the enchantment and the poor fool is left stranded somewhere with only a mangy rat for company.`,
+                `Many spells in the game are prone to abuse, but only if the DM lets players get away with it. Greedy NPCs, of course, usually get their comeuppance out offstage. It might be amusing to stage an encounter with an enchanted gold dragon and its unwilling wizard servant as a cautionary tale to the players.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_DISPEL_MAGIC],
+        },
+        {
+            page_number: '79',
+            question: `How many people are affected by a ***hold person*** spell? The earlier part of the spell description says that 1d4 people are affected, which suggest that there is a random die roll. Later, however, the spell description says that the caster chooses which creatures in the area of effect are affected. Which is correct?`,
+            answer: [
+                `The spell affects 1 to 4 creatures at the caster's option. The references to 1d4 creatures are errors.`,
+            ],
+            comment: 'Same as what is written in issue #152',
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '224',
+    publication_year: '1995',
+    publication_month: 'October',
+    foreword: `This month the sage pays a brief visit to Krynn, explores optional material for the AD&D® game, and stops to offer advice to a player who's encountered the worst monsters of all.`,
+    sage_advice: [
+        {
+            page_number: '100',
+            question: `Are bards on Krynn (the DRAGONLANCE® world) required to take the test of high sorcery? If a the test is required and a bard decides not to take it, how long will it be before the character is considered a renegade? Do bards have to choose an order of high sorcery?`,
+            answer: [
+                `Krynn has **no** native bards at all, so the question of a test is moot. Bards from other worlds need not take a test, but once the native wizards discover that a visiting bard can cast wizard spells they **will** offer the bard membership in one of the orders. If the bard refuses, he becomes a renegade immediately. A bard who joins an order recives no bonuses or penalties from Krynn's moons, but must abide by his order's spell limitations.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '100',
+            question: `The shield proficiency table on page 72 of the ***PLAYER'S OPTION™: Combat & Tactics*** book shows the bonuses for a normal shield user and a proficient user. However, page 115 of the ***PLAYER'S OPTION: Skills & Powers*** book says the proficiency bonus is added to the normal bonus. Which is correct? For example, if a character with shield proficiency is wearing chain mail and carrying a small shield, is his Armor Class 1 or 2?`,
+            answer: [
+                `No matter which set of rules you use, you apply the proficiency bonus to the character's normal (unshielded) Armor Class. The character in your example would have an Armor Class of 3 (AC 5 chain mail and an additional +2 for proficient use of a small shield). Note that a bonus from a small shield can be used against only two opponents at a time. If the character faces three opponents, one of them gets to attack AC 5. Of course, opponents attacking from the character's rear or unshielded flank always ignore the shield.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '100',
+            question: `Exactly when are the sprinting checks described on page 13 of the ***Skills & Powers*** book required?`,
+            answer: [
+                `Whenever a character tries to sprint, of course. The reference on page 13 refers to the Jogging and Running optional rule in Chapter 14 of the ***Player's Handbook***. If a character has a Stamina score, you check that rather than making Strength checks when a character tries to move faster than normal.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '100',
+            question: `Although both the ***Combat & Tactics*** and ***Skills & Powers*** books have rules for weapon mastery, ***C&T*** has two extra levels, high mastery and grand mastery. What are the character point costs for these two levels of mastery. What are the costs for martial arts high mastery and grand mastery?`,
+            answer: [
+                `A level of weapon mastery costs the same number of character points. For example, each level of mastery costs a single-classed fighter 2 character points. That is, once a fighter is a specialist, it costs 2 character points to become a master, 2 more to become a high master, and another 2 to become a grand master. Note that mastery isn't something that just happens, the character has to make a special effort in addition to spending the points. Unarmed and martial arts mastery works the same way. If you're using the optional rule from the ***Skills & Powers*** book that allows multi-classed fighters, paladins, and rangers to become weapon specialists, these characters have to spend 8 character points on each level of mastery.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '100',
+            question: `Page 21 of the ***Skills & Powers*** book allows wizards to purchase a combat bonus for 10 character points; however, a mage only gets to use a rogue's THAC0. On the very next page, specialist wizards can gain a priest's THAC0 for the same measly 10 points. Is this is mistake?`,
+            answer: [
+                `Yes it is a mistake. Any wizard who purchases a combat bonus gains a priest's THAC0.`,
+            ],
+            comment: [
+                `TSR editing at its finest. The error is on page 61, not 21. The 2nd printing of ***Skills & Powers*** uses the rogue's THAC0 chart for both Mages and Speciality Wizards. This is further confirmed by the official errata for the 1st printing which states:`,
+                `Page 62, col. 1, paragraph 7: Change "priest THAC0 chart" to "rogue THAC0 chart."`,
+                `It seems like the Sage is in the wrong here.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '100',
+            question: `Just how does a ***polymorph other*** spell take effect? Does the change in form take place in a puff of smoke? Or does the subject change more gradually, sprouting wings or scales or whatever? If the latter case is true, will a ***dispel magic*** cast before the change is complete strand the subject in some intermediate form?`,
+            answer: [
+                `The answer to this one is entirely up to the DM. There could be a puff of smoke, a twinkle, or the subject could simply begin growing new body parts, as you suggest. In any case, the change is complete by the end of the round in which the spell is cast. Once the spell takes effect, the subject cannot do anything that isn't possible in the assumed form. That is, a griffon that fails its saving throw and is turned into a goldfish loses its ability to fly the instant the spell strikes. A successful ***dispel magic*** that takes effect before the change is finished instantly returns the subject back to its original form.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_DISPEL_MAGIC],
+        },
+        {
+            page_number: '100',
+            question: `Isn't the long spear a little too potent? ***The Complete Fighter's Handbook***, The ***Arms and Equipment Guide***, and ***Combat & Tactics*** all make this weapon better against man-sized opponents (2d6 points of damage) than the two-handed sword or any pole arm.`,
+            answer: [
+                `I'm inclined to agree that the long spear is a little over rated. I suggest you treat this weapon as just a longer version of the two-handed spear: damage 1d6 + 1/2d6, type p, speed 8 (slow). That's still a little better than an awl pike, but in the ***Combat & Tactics*** system the awl pike has a reach of 3 and the long spear has a reach of only 2. Pole arms don't inflict much more damage than the revised long spear, but if you're using the ***Combat & Tactics*** rules most polearms either have better speed factors or better knockdown dice.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '100',
+            question: `What happens when a wand or staff breaks? In our group, we had always assume that these items went boom. Not long ago, one of our characters snapped a ***wand of lightning*** an NPC was holding. As the rest of the party cowered, the DM frantically turned pages in the rulebook, looking for the section on exploding wands. We couldn't find any such rule.`,
+            answer: [
+                `When a wand, staff, or rod breaks, you have a broken and useless magical item; that's all. Your group probably was think- ing of the retributive strike power of the ***staff of the magi***, and ***staff of power***. A wizard using either of these two staffs can produce a blast of energy by breaking the staff. This is a special power that must be deliberately invoked. If the staff is broken normally there is no special effect.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '100-101',
+            question: `If a character is fighting a monster that has poison, paralyzation, or a similar special attack, does the character have to attempt a saving throw each time the monster hits, or just the first time?`,
+            answer: [
+                `If a monster has a special attack that works automatically when the monster scores a hit in combat, the opponent must roll a saving throw each time he is hit. For example, a character fighting a ghast must roll a saving throw vs. paralyzation each time the ghast hits. Every time the ghast gets its teeth or claws into the character, there is a chance the graveyard filth on them will get into the wound and affect the character. Note that the character only has to save once against the ghast's stench.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '101',
+            question: `In the new psionics system presented in the ***Skills & Powers*** book, what happens if a character involved in psionic combat chooses not to defend? For instance, suppose the attacker uses *mind thrust*. The defender might inadvertently give the attacker a +5 attack bonus if he chooses the wrong defense. If, however, the defender opts for no defense at all he forces the attacker to roll against the defender's base Mental Armor Class, right? What happens if the attacker rolls and succeeds? Is the defender's mind automatically forced open? Or would he just lose PSPs as in normal psionic combat?`,
+            answer: [
+                `Technically, a psionicist or wild talent doesn't have the option to present no defense if he has PSPs remaining. The character *must* choose a defense from the list of from the list of defenses he knows and he must spend the PSPs required to mount that defense. If the character's PSP total is so low that there aren't enough PSPs available to power the defense desired, I recommend allowing the character to choose a defense normally; just give the attacker a +2 attack bonus to reflect the feeble defense.`,
+                `If a psionicist really doesn't want to mount a defense, you might decide to let him so chose. In that case, give the attacker a +2 attack bonus. If the attack is successful, the defender's mind is forced open and remains open for 1d4 + 1 rounds.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '101',
+            question: `What, exactly, happens when a character with a high Intelligence score encounters an illusion? The section on Intelligence in the ***Player's Handbook*** says the character notices some inconsistency in the illusion that automatically allows the character to make his saving throw. Does this mean the character always makes his saving throw when there is one? Or does it mean that the character automatically disbelieves the illusion?`,
+            answer: [
+                `If you follow the rules to the letter, creatures with Intelligence scores of 19 or higher automatically make successful saving throws against low-level illusions, as shown on Table 4 in the ***PHB***. If the illusion in question does not allow a saving throw, then the character is still affected. For example, a character with an Intelligence score of 20 is automatically unaffected by any illusion/phantasm spells of 1st or 2nd level, provided they allow saving throws. The character could ignore an ***improved phantasmal force*** spell, which allows a saving throw, but is affected normally by a ***mirror image*** spell, which does not allow a saving throw. When in doubt, check the spell description. If the saving throw entry at the beginning of the spell says "None" the spell has no saving throw. Note that for classic illusions such as ***phantasmal force***, ***improved phantasmal force***, ***spectral force***, and the like, a saving throw and disbelief are one in the same. That's why these spells have saving throws listed as "Special." Normally, characters have to do something (state disbelief) before they roll saving throws against these spells. Creatures with very high Intelligence scores get to disbelieve land save) automatically.`,
+                `All of the foregoing aside, the original AD&D game gave creatures with very high Intelligence scores complete immunity to *all* illusion/phantasm spells of a certain level or below. (as shown in the current ***PHB***). Using this approach is completely within the spirit of the rules, it won't affect game balance in your game very much, and it keeps arguments to a minimum.`
+            ],
+            comment: [
+                `The note here about ***mirror image*** still working completely contradicts issue #206 where it was stated that creatures with 20+ Intelligence were immune to ***mirror image*** and ***invisibility***. It appears that the Sage, in #206, was referencing the rules from the "original AD&D", and here the Sage is referencing the "current" rules.`,
+                `All of this highlights ambiguity with the word "immunity". Many players understand it as being completely unaffected, but in reality *immunity* means to **always make your saving throw**, when you would normally make one, so this updated answer seems correct. These are the sources:`,
+                `***PHB*** page 23: * **Spell Immunity** is gained by those with exceptionally high Intelligence scores. Those with the immunity notice some inconsistency or inexactness in the illusion or phantasm, **automatically allowing them to make their saving throws.** *`,
+                `***The Complete Priest's Handbook*** page 23: * **Immunities** This power gives the priest an **automatically-successful saving throw** against certain types of damage, attacks, or broad classes of spells... Certain types of priest might have automatically successful saves against all Evocation spells... (**Those spells which don't allow a saving throw are not stopped or affected by this immunity**)*`
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY],
+        },
+        {
+            page_number: '101-102',
+            question: `A rakshasa is immune to spells lower than 8th level. Does this apply to priest spells? Is a rakshasa also immune to spell-like effects from wands, staves, and rods? What about other magical items?`,
+            answer: [
+                `Yes, rakshasas are immune to priest spells of level 7 or less, which is all priest spells except quest spells (from the ***Tome of Magic***) and true dweomers (from ***PLAYER'S OPTION: High-Level Campaigns***). Generally, any immunity or limitation based on a spell's level applies equally to priest and wizard spells.`,
+                `Level-based spell immunity protects against spell-like effects from magical items if the spells they mimic are of levels low enough to be defeated themselves. A rakshasa, for example, is unaffected by ***fireballs*** or ***lightning bolts*** from any source, be they spells, wands, staffs, or other magical items. A character with an Intelligence score of 20 is immune ***audible glamer*** and ***phantasmal force*** effects from a ***wand of illusion***.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '102',
+            question: `If a character who is unconscious—not dead—receives a ***resurrection*** or ***raise dead*** spell, does the character still have to attempt a resurrection survival roll to stay alive?`,
+            answer: [
+                `Neither of these spells have any effect on living creatures (though their reversed forms do). No living creature, unconscious or otherwise, has to make a resurrection survival check when subjected to one of these spells.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '102',
+            question: `A character using the psionic devotion *time shift* cannot affect anything while shifted. But what happens if the character positions himself for an instant kill? Say the character throws an arm around an enemy's neck and puts the point of a knife at the base of the enemy's skull and applies a little pressure so that the minute time catches up to the time-shifted character the point goes right in? The power description says the user gets a +4 attack bonus, but I'm having a hard time coming up with a logical reason why that kind of maneuver won't work.`,
+            answer: [
+                `The absolute best offensive advantage *time shift* can provide is a +4 attack bonus; instant kills are beyond the power's capabilities. The reason the time shifter can't achieve an instant kill is that the power shunts the character into an alternate reality all his own. The character can view future events in the main time line, but what he sees isn't exactly what happens. He can grab an opponent by the neck and stick a knife in a vital spot, but when he returns to the main time line neither he nor his opponent are exactly where the time shifter saw them while in the alternate reality.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '102-103',
+            question: `A little less than a year ago, my boyfriend introduced me to the AD&D game, and I enjoy it very much. I'm also pretty good at it, and the local players quickly dropped their reservations about having a newbie in the group and invited me into the campaign. I have several characters who have become important in the campaign, and I've kept a detailed journal of all my character's adventures. Not long ago, my boyfriend and I had a private (not game related) disagreement, and the gaming group decided to take his side. Now, I'm barred from the campaign, and the DM says I can't play my characters anywhere else. (One of my characters started out as an NPC that the DM gave me to play.) Someone in the group even walked into my house while I was away and took my characters and my dice. It was probably the DM; he often uses the game to get his own way. If a player doesn't do what he wants, the player's character gets killed in the next game. I'm really mad because the DM won't give my characters back. My boyfriend and I aren't playing anymore, but I still want my characters back. Can a DM tell a player not to use a character anymore? As a capable female player I used to be pretty hot commodity, but now I'm barred from the game. What should I do? The only thing I can think of now is to sock the DM in the gut until he gives me my stuff (and believe me, I have some friends who would be delighted to do just that). I just want to play AD&D.`,
+            answer: [
+                `The first thing you should do is step back and take a few deep breaths. If you're involved in a campaign where people carry grudges from real life into the game, and also take them back to real life again, it's high time you found a new campaign. If you can walk away from it after losing only a few characters and a bag of dice, you should feel lucky. Take a little time away from the game; judging from the full text of your letter (six pages), I'd say your gaming has put you under entirely too much emotional stress. Gaming is supposed to be *fun*.`,
+                `To answer your rules question, no, there's nothing in the books that says DMs can tell their players what characters to use in other campaigns. If you've got a character you like—even a dead character—from an old campaign and you think it would be fun to play it somewhere else, go right ahead. You should explain to the new DM, however, that you've played the character before. Some DMs don't like to accept recycled characters.`,
+                `As far as your future involvement in the campaign and any further attempts to get your property (dice and characters) back, here are my suggestions:`,
+                `First, find another campaign to play in. There are literally millions of AD&D players out there, so your entire AD&D game experience does not depend on this one group. Better yet, start a campaign of your own. Stop being flattered that a group of veterans took you in and start showing a group of newbies how to play the game right—you've certainly got plenty of experience with a game that is played wrong. Your journal should give you plenty of ideas for a campaign of your own.`,
+                `Second, give up on the NPC you adopted. It's churlish of the DM who gave you the character to ask you not to play it anymore, but the character is not worth the struggle, no matter how much you love it. If you're as good at the game as you say you are, you'll have no trouble creating another great character on your own. Besides, if the DM is on a power trip you'll deny him the satisfaction he gets from withholding the character from you. If you're really fond of the character, create a new character based on the one you lost. Perhaps the new character is the original character's twin, who has gone out adventuring to find out why the original character mysteriously disappeared.`,
+                `Third, either take legal action to get your stolen property back or let it go. Do not under any circumstance "sock" the DM in the gut or send your friends to snatch your property back. If your former gaming comrades took your property without your permission they're guilty of theft, pure and simple. That is a matter for the police, not for you or for your friends. On the other hand, you can always create new characters and buy new dice. Doing so probably will take less time, effort and anguish than wresting with the legal system, especially since your case probably isn't going to enjoy a very high priority with the local police and district attorney. It's up to you.`
+            ],
+            attributes: [],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '225',
+    publication_year: '1995',
+    publication_month: 'October',
+    foreword: `This month, the Sage considers the powers and limitations of a few spells from the AD&D® 2nd Edition game.`,
+    sage_advice: [
+        {
+            page_number: '81',
+            question: `Is it possible for a large object, such as a ***Daern's instant fortress***, to penetrate a ***prismatic sphere*** and crush the people inside? Would the object have to make a saving throw against each layer? How would saving throws and damage from each layer affect the object?`,
+            answer: [
+                `Objects cannot penetrate intact ***prismatic spheres*** at all unless carried by a creature that makes all the required saving throws. If a ***Daern's instant fortress*** were activated so as to crush creatures protected by a ***prismatic sphere***, the sphere's 7th (violet) layer would completely protect the creatures and the fortress would be destroyed. Any unattended object that enters a ***prismatic sphere*** is destroyed unless it is an artifact or relic.`,
+                `If an object, or group of objects, is sufficiently large, it might bury a ***prismatic sphere*** instead of being utterly destroyed. For example, a party caught in a avalanche cannot hastily create a ***prismatic sphere*** and then just blithely walk away when the dust settles, nor can a party inadvertently (or deliberately) drain the ocean if they erect a ***prismatic sphere*** underwater.`,
+                `Note that it is not possible to use a ***prismatic sphere*** offensively; if created so that the sphere overlapped a wall of a ***Daern's instant fortress*** or other construction, the sphere would harmlessly pass through the wall, leaving the structure undamaged.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '81',
+            question: `***Chain lightning*** is a 6th-level spell, so wizards have to be at least 12th level to cast it. The spell description says ***chain lightning*** inflicts 1d6 points of damage per level, to a maximum of 12d6, so what's the point of giving damage dice per level?`,
+            answer: [
+                `Here's the point: A spell's effective "casting level" can vary. Magical items that produce spell-like effects are the most common examples. Wands, for instance, can be enchanted to duplicate spells of any level, but any spell-like effects they produce function at 6th-level for purposes of range, damage, duration, and any other spell variable that depends on the caster's level. A ***wand of chain lightning*** could only produce a bolt of lighting with a maximum damage rating of 6d6 and a maximum range of 70 yards. It makes no difference that ***chain lighting*** requires a 12th-level caster; the best the wand can do is 6d6 points of damage. Any number of other conditions also can change a spell's casting level; planar effects and wild magic head the list.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '81',
+            question: `The player characters in my campaign once found a big gold statue that was much too heavy for them to carry away. Rather than hacking the thing to bits and hauling away the pieces, the party cleric cast a ***frisky chest*** spell on the statue. The rest of the party lined up at strategic positions along the route back to the entrance and herded the statue all the way outside, where they had a chariot waiting. Is this feat really possible, I did I give my players an undeserved gift?`,
+            answer: [
+                `A ***frisky chest*** spell can affect any object small enough to fit inside a 10' cube. If the statue wasn't too big, you and your players did things according to the rules.`,
+                `Now, ***frisky chest*** is a spell designed to help priests protect their stuff, it's not for extracting treasure from dungeons. So, your players were abusing the spell and you might indeed have given them and undeserved gift. Because ***frisky chest*** is suppose to foil thieves, the statue's movements should have been contrary to what the players wanted at every possible opportunity. Now consider how much noise a walking statue might make. Were there any denizens of the dungeon within earshot? A surprise attack by a group of monsters might have really wrecked the party's day, especially if they were separated and concentrating on the statue when the attack came. Also think about how much the statue weighed. Could the chariot hold all that weight when the party finally herded the statue aboard? Could the dungeon floor hold the statue as the it ambled along? Note that the spell allows the animated object to sprout whatever appendages are most appropriate. Did the statue sprout wings and fly away when the PCs finally got it outside? Note also that any restraint place on the object breaks a ***frisky chest*** spell. So, the party might have caught the statue as it flew away, but the minute they got hold of it they would have been holding dead weight. That might be inconvenient if anyone was standing under it at the time.`,
+                `Keep all of the foregoing in mind if your players try the same trick again. You also might want to put a weight limit on the ***frisky chest*** spell to discourage really egregious abuse. I suggest 100 pounds per caster level.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '81-82',
+            question: `Do the images created by a ***mirror image*** spell make sound? If not, one could avoid the spell's effect entirely by simply closing one's eyes and taking the -4 attack penalty for being unable to see the target. The penalty would be even less if you had the blindfighting skill.`,
+            answer: [
+                `The spell description says ***mirror image*** creates exact duplicates of the caster. Considering the spell's short duration and purely defensive nature, I don't think it's unreasonable to assume that the images include sound and smell as well as sight. On the other hand, ***mirror image*** is only a 2nd-level spell, and “Sage Advice” has previously suggested that invisibility foils displacement. I suggest you go ahead and allow characters to ignore ***mirror images*** if they can't see them. Remember, however, that fighting blind is just like fighting in total darkness, which carries more than just an attack penalty (see Table 72 in the ***DMG***). The blindfighting proficiency reduces or eliminates some of these penalties, but not all them.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '82',
+            question: `At what point do player characters under the effects of ***enlarge*** spells start getting bigger knockdown dice? Large creatures also extend weapon reach. At what point do *enlarged* characters get extra reach?`,
+            answer: [
+                `To get an *enlarged* character's size class, just note the character's new height and use the size categories from the ***MONTROUS MANUAL™*** tome. The sizes are: tiny (up to 2' tall); small (2'+ to 4'); man- sized (4'+ to 7') large (7'+ to 12'), +1 melee reach and knockdown; huge (12'+ to 25'), +2 melee reach and knockdown; and gargantuan 25'+), +3 melee reach and knockdown. Remember to increase the enlarged character's base initiative as his size class increases.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '82',
+            question: `How much should characters know about magical items when they find them? ***Detect magic*** spells can reveal that an item is enchanted, but what about specific powers?`,
+            answer: [
+                `Generally, characters should know very little about the magical items they find. Divination spells such as ***identify***, ***commune***, ***contact other plane***, and ***legend lore*** can reveal or at least hint at specific powers. Otherwise, characters just have to experiment with newly acquired items and try to puzzle them out. Even a small sip of a potion for example, produces a minor effect that hints at the potion's enchantment. A sip of a growth potion, for instance, might make a character's clothing or armor feel tight. Items that produce continual effects are fairly easy to test. A character who has just donned a ***ring of water walking***, for example, will have a pretty good idea what he has after a trip to the local pond or fountain.`,
+                `Items with specific triggers or command words are trickier. Usually, the owner will have to visit the local sage, bard, or high-level spellcaster to get some clue about how to start experimenting with the item. Some DMs devise intricate puzzles their players must solve before their characters can use their items. It all depends on how rare and wonderful the DM wants to make magic. If players have to work hard for their magic they tend to appreciate it more.`,
+                `Note that intelligent items such as swords might be able to tell their owners what their powers are (though they don't always do so). Also, nothing beats instructions from the previous owner when trying to figure out a magical item's properties. Taking a few prisoners and negotiating with them carefully can be well worth the effort.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '82-83',
+            question: `***The Complete Paladin's Handbook*** has lots of good information about what holy swords can do, but can you explain the meaning of the swords ability to dispel hostile magic? When is magic “hostile” and when is it not?`,
+            answer: [
+                `In this case, magic is hostile when it is potentially harmful to the paladin or his allies and directed either at the paladin or placed so that this its area of effect overlaps the circle of power the holy sword generates.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '83',
+            question: `What happens to a paladin when he encounters a creature that cannot enter the circle of protection surrounding the paladin, but really wants to hurt the paladin? If the creature pushes hard against the circle, can it make the paladin move? What happens when the paladin gets forced into an obstacle?`,
+            answer: [
+                `You're confusing the aura of protection that surrounds a paladin with a ***protection from evil*** spell. In the AD&D 2nd Edition game, the two are similar, but not the same. A paladin's aura of protection doesn't hedge out anything. Evil, conjured, or enchanted creatures within 10' of the paladin suffer a -1 attack penalty, but the aura doesn't keep them out. The aura, like a ***protection from evil*** spell, also prevents any form magical control from being exerted across the barrier.`,
+                `Note that it is not possible to exert force across the barrier formed by ***protection from evil*** or a ***protection from evil 10' radius*** spell. Neither version of the spell creates a giant hamster ball like an ***Ottiluke's resilient sphere*** does. If a creature that normally would be hedged out by the spell, nothing happens if it pushes against the barrier. The creature cannot cross the barrier, but it also cannot make the character at the center of the spell move, not even by a micron. On the other hand, if a character protected by the spell forces the barrier against a creature that normally would be hedged out, the barrier collapses, ending the spell.`
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '83',
+            question: `***The Complete Thief's Handbook*** allows thieves to wear armor heavier than leather and still use their thieving skills at a penalty. What are the effects of armor on the new thief skills given in the ***Skills & Powers*** book?`,
+            answer: [
+                `Okay, here are my suggestions:`,
+                `
+<table>
+<tr>
+    <td>Skill</td>
+    <td style="text-align: center;">No Armor</td>
+    <td style="text-align: center;">Elven Chain</td>
+    <td style="text-align: center;">Padded,<br>Hide or<br>Studded Leather</td>
+    <td style="text-align: center;">Chain Mail or<br>Ring Mail</td>
+</tr>
+<tr>
+    <td>Bribe</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+</tr>
+<tr>
+    <td>Detect Illusion</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">-5%</td>
+    <td style="text-align: center;">-10%</td>
+    <td style="text-align: center;">-10%</td>
+</tr>
+<tr>
+    <td>Detect Magic</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">-5%</td>
+    <td style="text-align: center;">-10%</td>
+    <td style="text-align: center;">-10%</td>
+</tr>
+<tr>
+    <td>Escape Bonds</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">-5%</td>
+    <td style="text-align: center;">-10%</td>
+    <td style="text-align: center;">-10%</td>
+</tr>
+<tr>
+    <td>Tunneling</td>
+    <td style="text-align: center;">+5%</td>
+    <td style="text-align: center;">-20%</td>
+    <td style="text-align: center;">-30%</td>
+    <td style="text-align: center;">-25%</td>
+</tr>
+</table>`
+            ],
+            comment: `The question and answer does not make sense, as the ***Skills & Powers*** book already have a table that includes  Bribe, Tunneling, and Escape Bonds. Furthermore the table given here by the Sage does not match the table from the book, so it will leave players at a complete loss.`,
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '83',
+            question: `How do you assign knockdown dice to large creatures using weapons? Page 32 of the ***PLAYER'S OPTION™: Combat & Tactics*** book says large monsters bump the weapon's knockdown die up to the next size. Does this mean that a centaur with a two-handed sword rolls 1d20 for knockdowns? If the centaur also is a grand master with a two-handed sword does he roll 1d1OO for knockdowns?`,
+            answer: [
+                `A knockdown die of 1d12 increases to 1d20. I don't recommend allowing any knockdown die to increase beyond 1d20. (As it is, rolling 1d20 will give a knockdown chance about half the time against huge opponents and even more often against smaller opponents.) I also don't recommend increasing any knockdown die more than three places. For example, a creature armed with a dagger never gets a knockdown die bigger than 1d10, no matter how big or skilled it is.`,
+                `If you don't like the foregoing advice, the steps beyond 1d20 are: 1d30, 1d40, 1d50, and so on. The best way to generate these numbers is with 1d10 and some kind of a control die. For example, you can roll 1d30 by rolling a 10-sided die and a six-sided die. If the six-sided die comes up a 1 or 2, read the lo-sided die as it is. If the six-sided die rolls a 3 or 4, add 10 to the number on the 10-sided die, and if the six-sided die comes up a 5 or 6 add 20 to the number on the 10-sided die.`
+            ],
+            attributes: [ATTRIBUTE_2E],
         },
     ]
 });

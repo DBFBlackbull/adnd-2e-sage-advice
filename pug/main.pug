@@ -12,7 +12,7 @@
     }
 
     function handleAsterisks(s, issue, question) {
-        let asterisks = s.match(/(?<!")\*(?!")/g) || [] // Ignoring asterisk that are surrounded by quotes
+        let asterisks = s.match(/\*/g) || [] // Ignoring asterisk that are surrounded by quotes
         if (asterisks.length === 0) {
             return s
         }
