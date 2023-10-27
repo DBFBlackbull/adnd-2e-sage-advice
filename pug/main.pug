@@ -63,9 +63,23 @@ style.
     }
 
 script.
-    function copyToClipboard(id) {
-        console.log(id);
+    function copyPlainText(id) {
+        // Get the text field
+        let element = document.getElementById(id);
+        let innerHTML = element.innerHTML;
+        innerHTML = innerHTML.replaceAll(/<span class="no-copy">(.|\n)*?<\/span>/g, '')
+            .replaceAll(/<br>/g, '\n');
 
+        // Get rid of the rest of the HTML tags
+        let tempElement = document.createElement('div');
+        tempElement.innerHTML = innerHTML;
+        let text = tempElement.innerText;
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(text);
+    }
+
+    function copyRichText(id) {
         // Get the text field
         let element = document.getElementById(id);
         let innerHTML = element.innerHTML;
@@ -75,6 +89,53 @@ script.
         const blob = new Blob([innerHTML], {type: 'text/html'});
         const clipboardItem = new window.ClipboardItem({'text/html': blob});
         navigator.clipboard.write([clipboardItem]);
+    }
+
+    function copyDiscordText(id) {
+        // Get the text field
+        let element = document.getElementById(id);
+        let innerHTML = element.innerHTML;
+        innerHTML = innerHTML.replaceAll(/<span class="no-copy">(.|\n)*?<\/span>/g, '')
+            .replaceAll(/<br>/g, '\n')
+            .replaceAll(/<\/?strong>/g,'**')
+            .replaceAll(/<\/?em>/g,'*');
+
+
+        // Get rid of the rest of the HTML tags
+        let tempElement = document.createElement('div');
+        tempElement.innerHTML = innerHTML;
+        let text = tempElement.innerText;
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(text);
+    }
+
+    function copyRedditText(id) {
+        // Get the text field
+        let element = document.getElementById(id);
+        let innerHTML = element.innerHTML;
+        innerHTML = innerHTML.replaceAll(/<span class="no-copy">(.|\n)*?<\/span>/g, '')
+            .replaceAll(/<br>/g, '  \n')
+            .replaceAll(/<\/?strong>/g, '**')
+            .replaceAll(/<\/?em>/g, '*');
+
+        // Get rid of the rest of the HTML tags
+        let tempElement = document.createElement('div');
+        tempElement.innerHTML = innerHTML;
+        let text = tempElement.innerText;
+
+        let index = text.indexOf('\n');
+        let title = text.slice(0, index);
+        let rest = text.slice(index+1);
+        console.log(index);
+        console.log(title);
+        console.log("fisk");
+        console.log(rest);
+
+        let finalText = title + '\n\n>' + rest + '\n\n&#x200B;';
+
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(finalText);
     }
 
 head
@@ -93,7 +154,12 @@ each magazine, _ in dragonMagazines
             p(id=id)
                 | Sage Advice ##{magazine.issue_number} (#{magazine.publication_month} #{magazine.publication_year}) p. #{advice.page_number}, Question:#{questionNumber}
                 span(class="no-copy")
-                    button(onclick=`copyToClipboard('${id}')` title="Copy to clipboard") 📋
+                    button(onclick=`copyPlainText('${id}')` title="Copy plain text") 📄
+                    button(onclick=`copyRichText('${id}')` title="Copy rich text") 📋
+                    button(onclick=`copyDiscordText('${id}')` title="Copy discord text")
+                        image(src="../img/icons8-discord-16.png")
+                    button(onclick=`copyRedditText('${id}')` title="Copy reddit text")
+                        image(src="../img/icons8-reddit-16.png")
                     | &ensp;
                     a(href=anchorLink(id)) 🔗
                 br

@@ -11825,7 +11825,7 @@ DRAGON_MAGAZINES.push({
                 `If the party took along an extra ***frisky chest*** spell, they'd have no need for spells like ***Tenser's floating disk***; they need only take any old dungeon door off its hinges and apply ***frisky chest***. The door will galumph along carrying anything the PCs strap or nail onto it.`,
                 `Even if the party only used ***frisky chest*** to turn a statue into a trap springer, they still would be getting more mileage out of this 2nd-level spell that they could get out of the 6th-level priest spell ***animate object*** (which has a shorter duration and produces considerable slower movement rates for large objects) or the 5th-level wizard spell ***avoidance*** (which affects only objects with volumes of 27 cubic feet or less). That alone should set alarm bells ringing in any sensible DM's head.`
             ],
-            comment: `This answer from #228 seems to be an error. `,
+            comment: `This answer from #228 seems to be an error. Continued in #238`,
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
         },
         {
@@ -12770,7 +12770,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '92',
-            question: `Would a ***wall of force*** stop infravision? Will it defeat ***clairvoyance*** or a ***wizard eye** spell? What about divinations such as ***detect evil***, ***detect magic***, ***find traps***, or ***detect lie***?`,
+            question: `Would a ***wall of force*** stop infravision? Will it defeat ***clairvoyance*** or a ***wizard eye*** spell? What about divinations such as ***detect evil***, ***detect magic***, ***find traps***, or ***detect lie***?`,
             answer: [
                 `A ***wall of force*** does not block vision of any kind. ***Clairvoyance*** spells ignore ***walls of force*** because they are visual effects and because there's no direct channel between the caster and the sensor the spell creates. Certain conditions can block ***clairvoyance*** spells, but ***walls of force*** aren't included on the list. A ***wizard eye's*** mobile sensor cannot pass though a ***wall of force***, but the caster can see through the wall via the sensor just as if he were standing at the wall himself.`,
                 `Physical barriers block most divination spells. As the ultimate physical barrier, ***wall of force*** blocks most such spells. Divinations that simply render things visible, however, such as ***detect invisibility*** and ***true seeing***, work through ***walls of force***.`
@@ -12862,6 +12862,7 @@ DRAGON_MAGAZINES.push({
     publication_year: '1997',
     publication_month: 'August',
     foreword: `Join the Sage for his traditional April look at the year's most unusual questions. All questions were submitted on paper or e-mail by readers. No gamers were harmed during the production of this month's column.`,
+    epilogue: `Skip Williams notes, with hand clamped to forehead, that the annual April Fool's column generates more responses than any other column. He stands prepared for this year's reaction, computer and aspirin at the ready.`,
     sage_advice: [
         {
             page_number: '80',
@@ -12947,6 +12948,644 @@ DRAGON_MAGAZINES.push({
             question: `I have been reading "Sage Advice" for some time now. And I wish you to keep up the good work I would like to give my own interpretation on the ***frisky Chest*** spell as discussed in issue #225. The problem was that the DM thought the spell would have to cause the object to run from the players who were trying to get it out of the dungeon. Think on this, the spell was made to stop people from stealing the object it is cast on, so the only thing that should cause the statue to move is a titan or large dragon. I mean, what character, or even group of 10 characters, is able to steal a statue that weighs several tons? Try this next time the players use that ploy. When they go up to "spook" the statue into moving, have it just stay there. If you really want to be cruel have the statue scare them into backing off. What player wouldn't have his character run from a giant statue of gold that could squish him like a bug. I would not let the players use this to create golems, but it will stop them from stealing the statue.`,
             answer: [
                 `I think players who cast ***frisky chest*** on a statue might have reason to gripe if the statue moves toward them. On the other hand, the deity granting the spell might object to the spell's misuse and decide to play with the characters' minds a little.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '82',
+            question: `If you ever feel stressed with all the questions you get, stuff 29 tiny marshmallows up your nose and try to sneeze them out. Wouldn't that make things easier for you?`,
+            answer: [
+                `Nah, deciding which nostril gets the odd marshmallow would cause too much stress.`,
+            ],
+            attributes: [ATTRIBUTE_APRIL_FOOLS],
+        },
+        {
+            page_number: '82',
+            question: `What does a DM do when he has a 10-year-old player who has a character with high Intelligence and Wisdom scores and the player can't answer a riddle which the character most likely would be able to figure out?`,
+            answer: [
+                `Believe me, its not only 10-year-olds that can have characters smarter than they are (see next question). If a player becomes frustrated with a riddle or puzzle and suggests that his character could solve it, its okay to allow a Wisdom or Intelligence check to determine whether the character figures it out. The DM also can suggest an ability check if a the party's failure to solve a riddle or puzzle threatens to derail the adventure. The DM should decide how difficult the solution is and assign an appropriate modifier to the ability check. It usually best to allow the party only one roll to find the solution, though if several characters are working on the problem, you can allow the character making the check a bonus, say +1, for each helper. As an alternative, you could allow each character involved with the riddle a roll but require a certain number of successes for the party to solve the riddle as a group. In any case, if the roll fails the group should have to wait at least a day before attempting another roll. Particularly difficult riddles or puzzles might, allow a roll only once a week, once a month, or even longer.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '82-83',
+            question: `What happens if someone is foolish enough to swallow an entire vial of ***sovereign glue***? I killed the genius mage who did it with no saving throw.`,
+            answer: [
+                `Here's another case of the character probably being smarter than the player (see previous question). No matter how foolish the player is, the character is pretty much bound to notice that the viscous liquid sliding over his lips and tongue isn't drinkable. I suggest a saving throw vs. poison to determine whether the character has the presence of mind to spit out the stuff. If the player was dopey enough to say his character was slamming down the glue, you might want to assign a penalty to the saving throw, say -4.`,
+                `If the character spat out the glue, he probably should suffer no lasting consequences, as the ***glue*** takes a full round to set (see item description in the ***DMG***), though the DM is fully justified in assessing some temporary penalty, such as the character's lips being glued together until the character spends a round prying them apart. Alternatively, the container of ***glue*** could wind up stuck to the character's lower lip.`,
+                `If the saving throw failed, the character might die, or he might be rendered unable to speak (tongue glued to the roof of the mouth or tongue glued to the glue bottle) until he can arrange to have the glue dissolved with ***universal solvent*** or ***oil of etherealness***.`,
+                `Note that even a casual inspection should reveal that ***sovereign glue*** isn't drinkable.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '83',
+            question: `The description of the priest spell ***cure disease*** says: "Note that the spell does not prevent reoccurrence of a disease if the recipient is again exposed." Third level is a little low to expect the spell to create permanent disease immunity, but if the spell is cast later in the course of the disease, wouldn't the recipients immune system have developed at least some antibodies (if it's a normal disease), or does the spell supersede this?`,
+            answer: [
+                `Receiving a ***cure disease*** spell does not automatically make the recipient permanently resistant to whatever ailment laid him low. On the other hand, the spell also does not necessarily prevent the recipient from developing resistance or immunity to the disease either (but the DM can play it that way if he wants to). I recommend that if a creature gets a disease and receives a ***cure disease*** spell before the symptoms fully manifest themselves, the creature's system has no time to develop any special resistance to the disease. If a character with a full-blown disease receives a ***cure disease*** spell, the DM might grant the character resistance to or immunity to the disease if the DM also determines that the creature would have recovered without the spell.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '83',
+            question: `Can a paladin still *lay on hands* if his hands are cut off?`,
+            answer: [
+                `Yes. The paladin need only touch someone to heal damage or cure disease. Many DMs might wish to require the paladin actually to use his hands (as opposed to his nose, his feet, or whatever) to prevent abuse of the power. In the case of a paladin who has lost his hands, the stumps or even prosthetic hands — provided they are no larger than a normal hand — count has "hands" for purposes of using the paladin's healing powers.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '83',
+            question: `You have answered past questions on character hit point increases according their level advancement with the statement that characters learn to "roll with the blows" etc. rather than having an overall tolerance of more wounds. If this is the case, why don't priest healing spells work more effectively with higher level characters and why don't higher level characters heal naturally faster?`,
+            answer: [
+                `A healing spell repairs the same amount of "damage" no matter who receives it.`,
+                `It's true that hit points a character gains as he rises in level do not represent the character's slow transformation into a mass of indomitable flesh. Instead, the characters resistance to damage comes from an increasing ability to avoid fatal injury through skill or just plain luck. A high-level character who has endured a series of blows still collects his share of cuts and bruises, but the blows that delivered those cuts and bruises would have slain a lesser mortal. Consider two characters, one with 10 hit points and one with 110 hit points. If the first character suffers two hits that each inflict five hp damage, he has one or two very large wounds and the damage to his body is either mortal or life threatening (depending on what optional rules the campaign uses). If the character with 110 hit points suffers 20 five-point hits, he has around 20 minor cuts, scrapes, and bruises, but remains otherwise healthy. Some of the characters "wounds" might not be visible at all — the character might simply have strained himself a bit while getting out of harm's way. The situation is similar to what happens to you when you overdo some physical activity and wake up with aches and pains the next morning.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '83',
+            question: `Can you bring back a character from negative hit points with a ***shocking grasp*** spell? If so, what are the rules and where is it written?`,
+            answer: [
+                `No, a ***shocking grasp*** spell won't work as a fantasy defibrillator.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_APRIL_FOOLS],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '239',
+    publication_year: '1997',
+    publication_month: 'September',
+    foreword: `This month, the Sage considers optional abilities for PCs in the AD&D® game.`,
+    epilogue: `Skip Williams has created scores of player characters for the AD&D game, everything from a druid with a pet potted plant to an illusionist with a penchant for knitting. None, Skip reports, has ever used a kit.`,
+    sage_advice: [
+        {
+            page_number: '86',
+            question: `Page 5 of ***Warriors and Priests of the Realms*** says geographical kits are usable by any warrior class and can be combined with kits found in the ***Complete Fighter's Handbook***. Does the same thing apply to the deity-specific priest kits listed in ***Warriors and Priests of the Realms***? Can deity-specific kits be used in conjunction with kits found in the ***Complete Priest's Handbook***? Can you make Fighting Monk Greenlords? Or Darkcloak Prophet Priests? Such allowances seem to be an abuse of the spirit intended for the rules. Can geographical kits be used in conjunction with the kits outlined in the ***PLAYER'S OPTION™: Skills & Powers*** book? Such as Teziirian Rogue Pugilists? Or Waterdhavian Enchanter Nobles? Can the geographical kits be used in conjunction with the kits from the ***Planewalkers Handbook***? Or is this a benefit that only Toril's primes are privy to? The possibility of planewalker scouts, explorers, or even diplomats sounds tantalizing.`,
+            answer: [
+                `I strongly recommend that you allow the geographical kits to be combined only with kits from the ***Complete Fighter's Handbook***. Kits presented in other books are constructed in such a way that they make the geographical kits moot. The priest kits from ***Warriors and Priests of the Realms*** cannot be combined with any other kits regardless of the source.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '86',
+            question: `What Hit Die does a character with the crusader kit from the ***Spells & Magic*** book use?`,
+            answer: [
+                `Crusaders roil eight-sided dice for hit points.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '86',
+            question: `A paladin in my game lost his special warhorse. One of his fellow paladins, however, decided to breed his own warhorse and give the first paladin the foal. When will the foal be suitable for use as a mount?`,
+            answer: [
+                `Given proper training (which starts at birth) most horses become ready to carry riders at about age three. Once the horse has been broken to the saddle, it needs two more years of training to serve as a war mount (it's ready by age 5). Once trained for war, the horse probably would remain serviceable until age 24 or 25, at which point it would be too old for any heavy work.`,
+                `Note that a mount acquired in this manner probably could not serve as the paladin's special mount. However, if the DM decides the horse is an exceptional specimen, he could devise an adventure in which the paladin discovers the animals special qualities and creates a bond with it.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '86',
+            question: `When using the channeling and fatigue rules from the ***Spells & Magic*** book, how are Quest spells (clerics) and True Dweomers (wizards and clerics) handled? Does the use of a priests spell-like granted power cause a cleric to become fatigued? If so, what level of fatigue does the priest suffer? Do creatures who have innate spell-like abilities suffer from fatigue when they use these powers? If so, what level of fatigue do they suffer?`,
+            answer: [
+                `True Dweomers never become available through the expenditure of spell points or the use of channeling. That is, characters of less than 20th level and 18 Intelligence (or Wisdom) cannot use spell points to cast True Dweomers. Neither can a character normally allowed to cast True Dweomers increase the number of True Dweomers available on a given day through the use of channeling or spell points. Preparing or casting a True Dweomer does not cause a channeler fatigue, but the channeler must be fresh (suffering from no fatigue penalties at all) to prepare or cast a True Dweomer.`,
+                `Quest spells are similar to True Dweomers in that characters cannot acquire them through channeling or the expenditure of spell points—Quest spells only come as a direct favor from a priests deity. Generally, deities will grant Quest spells only to fresh (not fatigued) channelers, but once granted a channeler can cast a Quest spell so long as he is alive, conscious, and not mortally fatigued.`,
+                `Likewise, a priests granted powers and the innate spell-like abilities of certain creatures function independently of spell points or channeling. So long as the user has not expended his normal allotment of granted or innate powers, they remain available provided the user also is not dead, unconscious, or mortally fatigued.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '86-87',
+            question: `Page 28 of the ***Complete Book of Humanoids*** says that Firbolgs inflict double damage when using weapons of their own make, provided they wield them in both hands. Now, Table 7 (from the back of the book) lists the giant-kin mace at 1d8 x 2/1d6 x 2 and the giant- kin two-handed sword at 1d10 x 2/3d6 x 2. Are these damage amounts doubled because of the Firbolg's special ability or because they are double sized versions of human-sized weapons? if it is the lat- ter, then why aren't the giant-kin halberd and dagger listed as "x 2" instead of raising the damage die (which is how they appear on Table 7). if the former, does the damage get doubled again if Firbolgs use them two-handed?`,
+            answer: [
+                `There doesn't seem to be a consistent pattern to the damage ratings given on Table 7. As you point out, the damage ratings for maces and two-handed swords seem to reflect the Firbolg racial ability to cause double damage; but, the arrow, dagger, and halberd seem to have been "upgunned" to reflect their larger size.`,
+                `To make the Firbolg special ability more consistent with the descriptions for the various races of giants presented in the ***MONSTROUS MANUALS*** tome, I recommend that you use the regular damage ratings from the ***Player's Handbook*** for the halberd, mace, and two-handed sword. If a Firbolg character wants to claim his racial damage bonus, he can double only the man-sized damage rating for these weapons. See the answer to the next question for details.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '87',
+            question: `The ***Complete Book of Humanoids*** lists all giant-kin weapons as size G—even the dagger. Is this correct? My group uses the critical hit tables from the ***PLAYER'S OPTION: Combat & Tactics*** book, so we need to know.`,
+            answer: [
+                `I recommend the statistics in the chart on this page for all the weapons included on Table 7 in the ***Complete Book of Humanoids***.`,
+               `
+<table style="text-align: center;">
+<tr>
+    <td style="text-align: left;" colspan="8">Humanoid Weapon Statistics</td>
+</tr>
+<tr>
+    <td style="text-align: left; vertical-align: top;"><strong>Weapon</strong></td>
+    <td><strong>Weight<br>(Lbs.)</strong></td>
+    <td style="vertical-align: bottom;"><strong>Size</strong></td>
+    <td style="vertical-align: bottom;"><strong>Type</strong></td>
+    <td style="vertical-align: bottom;"><strong>Speed</strong></td>
+    <td><strong>Melee<br>Reach</strong></td>
+    <td><strong>Damage<br>S-M/L</strong></td>
+    <td style="vertical-align: bottom;"><strong>Knockdown</strong></td>
+</tr>
+<tr>
+    <td style="text-align: left;">Club, great</td>
+    <td>15</td>
+    <td>L</td>
+    <td>B</td>
+    <td>Sl (9)</td>
+    <td>1</td>
+    <td>2d4/1d6+1</td>
+    <td>d12</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Dart, barbed</td>
+    <td>5</td>
+    <td>S</td>
+    <td>P</td>
+    <td>Fa (3)</td>
+    <td>—</td>
+    <td>1d4/1d4</td>
+    <td>d8</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Flindbar</td>
+    <td>6</td>
+    <td>M</td>
+    <td>B</td>
+    <td>Fa (4)</td>
+    <td>1</td>
+    <td>1d4/1d4</td>
+    <td>d8</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Goblin Stick</td>
+    <td>5</td>
+    <td>L</td>
+    <td>P</td>
+    <td>Av (7)</td>
+    <td>2</td>
+    <td>1d4/1d6</td>
+    <td>d6</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Lance, flight<sup>1</sup></td>
+    <td>6</td>
+    <td>L</td>
+    <td>P</td>
+    <td>Av (6)</td>
+    <td>2</td>
+    <td>1d6+1/2d6</td>
+    <td>d10</td>
+</tr>
+<tr>
+    <td style="text-align: left;" colspan="8"><br><strong>Close quarter weapons</strong></td>
+</tr>
+<tr>
+    <td style="text-align: left;">Body spikes</td>
+    <td>Var.<sup>2</sup></td>
+    <td>S</td>
+    <td>P</td>
+    <td>Fa (2)</td>
+    <td>1</td>
+    <td>Var.<sup>2</sup></td>
+    <td></td>
+</tr>
+<tr>
+    <td style="text-align: left;">Kick Slasher</td>
+    <td>3</td>
+    <td>S</td>
+    <td>S</td>
+    <td>Fa (2)</td>
+    <td>1</td>
+    <td>1d4+1/1d6+1</td>
+    <td>d6</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Punch Cutter</td>
+    <td>1</td>
+    <td>S</td>
+    <td>S</td>
+    <td>Fa (2)</td>
+    <td>1</td>
+    <td>1d4/1d3</td>
+    <td>d6</td>
+</tr>
+<tr>
+    <td style="text-align: left;" colspan="8"><br><strong>Giant-kin weapons<sup>3</sup></strong></td>
+</tr>
+<tr>
+    <td style="text-align: left;">Bow, long</td>
+    <td>8</td>
+    <td>H</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td style="text-align: left;">&emsp;Arrow<sup>4,5</sup></td>
+    <td>1/5</td>
+    <td>M</td>
+    <td>P</td>
+    <td>Av (7)</td>
+    <td>—</td>
+    <td>1d8/1d8</td>
+    <td>d8</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Dagger<sup>5</sup></td>
+    <td>3</td>
+    <td>M</td>
+    <td>P</td>
+    <td>Fa (3)</td>
+    <td>2</td>
+    <td>1d6/1d8</td>
+    <td>d6</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Halbard</td>
+    <td>35</td>
+    <td>L</td>
+    <td>P/S</td>
+    <td>Sl (9)</td>
+    <td>3</td>
+    <td>1d10/1d10</td>
+    <td>d10</td>
+</tr>
+<tr>
+    <td style="text-align: left;">&emsp;w/2h</td>
+    <td>35</td>
+    <td>H</td>
+    <td>P/S</td>
+    <td>Sl (9)</td>
+    <td>3</td>
+    <td>2d10/2d10</td>
+    <td>d12</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Mace</td>
+    <td>12</td>
+    <td>L</td>
+    <td>B</td>
+    <td>Av (7)</td>
+    <td>2</td>
+    <td>1d6+1/1d6</td>
+    <td>d12</td>
+</tr>
+<tr>
+    <td style="text-align: left;">&emsp;w/2h</td>
+    <td>12</td>
+    <td>H</td>
+    <td>B</td>
+    <td>Av (7)</td>
+    <td>2</td>
+    <td>2d6+2/2d6+2</td>
+    <td>d16&ast;</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Two-handed Sword</td>
+    <td>35</td>
+    <td>L</td>
+    <td>S</td>
+    <td>Sl (10)</td>
+    <td>2</td>
+    <td>1d10/3d6</td>
+    <td>d20</td>
+</tr>
+<tr>
+    <td style="text-align: left;">&emsp;w/2h</td>
+    <td>35</td>
+    <td>H</td>
+    <td>S</td>
+    <td>Sl (10)</td>
+    <td>2</td>
+    <td>2d10/2d10</td>
+    <td>d30&ast;</td>
+</tr>
+<tr>
+    <td style="text-align: left;" colspan="8"><br><strong>Oriental weapons<sup>6</sup></strong></td>
+</tr>
+<tr>
+    <td style="text-align: left;">Daikyu</td>
+    <td>4</td>
+    <td>L</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td style="text-align: left;">&emsp;Arrow, leaf head</td>
+    <td>1/10</td>
+    <td>S</td>
+    <td>P</td>
+    <td>Av (7)</td>
+    <td>—</td>
+    <td>1d8/1d6</td>
+    <td>d8</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Katana</td>
+    <td>6</td>
+    <td>M</td>
+    <td>S/P</td>
+    <td>Fa (4)</td>
+    <td>2</td>
+    <td>1d10/1d12</td>
+    <td>d8</td>
+</tr>
+<tr>
+    <td style="text-align: left;">&emsp; Two-handed</td>
+    <td>6</td>
+    <td>M</td>
+    <td>S/P</td>
+    <td>Fa (4)</td>
+    <td>2</td>
+    <td>2d6/2d6</td>
+    <td>d10</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Naginata</td>
+    <td>10</td>
+    <td>L</td>
+    <td>S</td>
+    <td>Av (7)</td>
+    <td>2</td>
+    <td>1d8/1d10</td>
+    <td>d10</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Tetsubo</td>
+    <td>8</td>
+    <td>L</td>
+    <td>B</td>
+    <td>Av (7)</td>
+    <td>2</td>
+    <td>1d8/1d8</td>
+    <td>d16&ast;</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Wakizashi</td>
+    <td>3</td>
+    <td>S</td>
+    <td>S</td>
+    <td>Fa (4)</td>
+    <td>2</td>
+    <td>1d8/1d8</td>
+    <td>d8</td>
+</tr>
+<tr>
+    <td style="text-align: left;" colspan="8"><br><strong>Pixie weapons</strong></td>
+</tr>
+<tr>
+    <td style="text-align: left;">Pixie Bow</td>
+    <td>1</td>
+    <td>T</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td style="text-align: left;">&emsp;forget arrow</td>
+    <td>1/100</td>
+    <td>T</td>
+    <td>P</td>
+    <td>Fa (4)</td>
+    <td>—</td>
+    <td>forget</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td style="text-align: left;">&emsp;sleep arrow</td>
+    <td>1/100</td>
+    <td>T</td>
+    <td>P</td>
+    <td>Fa (4)</td>
+    <td>—</td>
+    <td>sleep</td>
+    <td>—</td>
+</tr>
+<tr>
+    <td style="text-align: left;">&emsp;war arrow</td>
+    <td>1/100</td>
+    <td>T</td>
+    <td>P</td>
+    <td>Fa (4)</td>
+    <td>—</td>
+    <td>1d4+1/1d4+1</td>
+    <td>d3</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Pixie Sword</td>
+    <td>1</td>
+    <td>T</td>
+    <td>S</td>
+    <td>Fa (4)</td>
+    <td>1</td>
+    <td>1d4/1d3</td>
+    <td>d4</td>
+</tr>
+<tr>
+    <td style="text-align: left;" colspan="8"><br><strong>Saurial weapons<sup>7</sup></strong></td>
+</tr>
+<tr>
+    <td style="text-align: left;">Bladeback flail</td>
+    <td>25</td>
+    <td>L</td>
+    <td>B</td>
+    <td>Sl (9)</td>
+    <td>2</td>
+    <td>1d8+1/2d6</td>
+    <td>d12</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Bladeback mace</td>
+    <td>16</td>
+    <td>L</td>
+    <td>B</td>
+    <td>Sl (9)</td>
+    <td>2</td>
+    <td>1d8+1/1d8</td>
+    <td>d12</td>
+</tr>
+<tr>
+    <td style="text-align: left;">Hornhead Staff</td>
+    <td>20</td>
+    <td>L</td>
+    <td>B</td>
+    <td>Av (6)</td>
+    <td>2</td>
+    <td>2d6/2d6</td>
+    <td>d12</td>
+</tr>
+</table>`,
+                `&ast; To roll a d16 with regular polyhedral dice, roll 1d6 and 1d8 together. Read the d8 normally if the num- ber on the d6 is a 1, 2, or 3. Add 8 to whatever number you roll on the d8 if the number on the d6 is a 4, 5, or 6.`,
+                `To roll a d30 with regular polyhedral dice, roll 1d6 and 1d10 together. Read the d10 normally if the number on the d6 is a 1 or 2. Add 10 to whatever number you roll on the d10 if the number on the d6 is a 3 or 4. Add 20 to whatever number you roll on the d10 if the number on the d6 is 5 or 6.`,
+                `1. This weapon inflicts double damage if wielded in a mounted charge.`,
+                `2. Body spikes are short blades attached to the wielder's armor. Armor fitted with body spikes weighs 25% more than normal. Body spikes inflict damage according to the wielder's size: T/S=1d2, M=1d3, L or large=1d4.`,
+                `3. The values for melee reach and knockdown assume a firbolg (size large) wields the weapons. The abbreviation w/2h refers only to the larger firbolg version of a weapon, which must be wielded with two hands.`,
+                `4. This is the equivalent of a flight arrow.`,
+                `5. These larger versions of normal weapons inflict more damage than their human-sized counterparts, but never qualify for the firbolg damage bonus.`,
+                `6. The values for melee reach and knockdown assume an ogre magi (size large) wields the weapons.`,
+                `7. The values for melee reach and knockdown assume a bladeback or hornhead (size large) wields the weapons.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '87',
+            question: `What experience point progression chart do shamans and witch doctors use? Please don't tell me to use the wizard or priest charts in the ***Player's Handbook*** these classes are extremely limited and weaker than their human counterparts. What are the numbers of initial weapon and nonweapon proficiencies for a shaman? At what levels do shamans receive more proficiencies? Likewise, what is the number of initial weapon and nonweapon proficiencies for a witch doctor? What levels do witch doctors get more proficiencies? Shouldn't all this information be included in the ***Complete Book of Humanoids***?`,
+            answer: [
+                `Sorry to disappoint you, but shamans and witch doctors are priests. That's why these two classes always appear in the Priest section of each race's Class Restrictions table in the ***Complete Book of Humanoids***. The opening paragraphs of the shaman and witch doctor descriptions (see ***CBH***, pages 78 and 79) also make it pretty clear that these characters are types of priests.`,
+                `I recommend using the cleric experience table for shamans and the druid experience table of witch doctors. It may seem unfair to put these characters, with their meager spell selections, on the same experience tables with their human and demihuman counterparts, but life can be tough when you're a humanoid.`,
+                `Both shamans and witch doctors gain proficiencies at the normal rate for priests.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '87-88',
+            question: `Witch doctors can select only one school of magic for mage spells. Can they select one of the elemental schools or the wild magic school from the ***Tome of Magic***? The ***Player's Handbook*** says the minor divination school is available to all wizards. Is this lesser school available to witch doctors in addition to their main school of study? If not, how do witch doctors obtain the spell read magic to translate new spells for their spell books?`,
+            answer: [
+                `A witch doctor's school of wizard spells can be anything the DM thinks suitable for the character's tribe. The traditional schools of magic from the ***Player's Handbook*** and the elemental schools from the ***Tome of Magic*** should work fine. The schools of metalism, and shadow (schools of effect from the ***Spells & Magic*** book) and the schools of geometry and song (schools of thaumaturgy from the ***Spells & Magic*** book) also might fit witch doctors well. The school of wild magic is the product of a long academic effort and I don't recommend it for witch doctors.`,
+                `Witch doctors are priests, not wizards, and don't gain automatic access to the school of lesser divination (or to the school of universal magic from the ***Skills & Powers*** book). There's no reason to assume witch doctors use spellbooks. As unusual priests, they might receive their spells after meditation, consultation with spirits, or any other manner suitable for their tribes. Even if they use spellbooks, it's a good bet they don't look anything like a traditional wizard spellbook does. A witch doctor's spellbook might be a collection of fetishes, a set of runes, a collection of oddly shaped pebbles, or anything else the player and DM can dream up. Likewise, a witch doctor could gain new wizard spells through direct insight (much as priests do) or through some other non literary means—the ***read magic*** spell is not a necessity for witch doctors. Note that a witch doctor who does not have access to the ***read magic spell*** cannot employ scrolls.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '88',
+            question: `The ***DM™ Option:High-level Campaigns*** book says very specifically that the highest level of experience a PC can obtain is 30 and that THAC0 doesn't advance after 20th level. The FORGOTTEN REALMS setting is obviously a exception to these great rules, but one of my players keeps on banging me on the head with the FORGOTTEN REALMS ***Faiths & Avatars*** book (I run a FORGOTTEN REALMS campaign), which specifically states that maximum level of advancement for PCs is 40 and THAC0 continues to improve till that very level. I don't know how to keep up ruling against such a mighty power as a FORGOTTEN REALMS rulebook with only a simple advanced general rulebook to shield me. Help!`,
+            answer: [
+                `The FORGOTTEN REALMS setting is a place with rules of its own. The tables on page 22 of ***Faiths & Avatars*** are intended to supersede ***High-level Campaigns*** for FORGOTTEN REALMS campaigns. For example, level 40 is the limit for mortal advancement in FORGOTTEN REALMS campaigns. On the other hand, you're the DM. If you like the rules in the ***High-level Campaigns*** book use them. Being the DM is all the armor you need.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '88',
+            question: `The blind-fighting proficiency is listed in ***Skills & Powers*** with no success rating. The description of the skill in the text states that a successful proficiency check allows the character to move at a normal rate through the dark, but how can one make a proficiency check for a skill with no success rating?`,
+            answer: [
+                `The base score for blind fighting is 9, but remember that a proficiency check isn't necessary to fight, just to move normally through darkness for one round. A failed proficiency check imposes no penalties on the character.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '240',
+    publication_year: '1997',
+    publication_month: 'October',
+    foreword: `The Sage takes a brief look at abilities for AD&D game rogues before delving into the game particulars of various magical effects.`,
+    epilogue: `Skip Williams has been killing player characters with kindness since 1975 in a campaign world of his own devising and in convention scenarios too numerous to count.`,
+    sage_advice: [
+        {
+            page_number: '12',
+            question: `The Complete Bard's Handbook lists thief/gypsy-bard as an allowable multi-class combination. What thief skills do these characters have, and how do you calculate the skill scores? If two skills are the same, do you just use the higher one?`,
+            answer: [
+                `A thief/gypsy-bard would have the eight basic thief skills from Table 26 in the ***Player's Handbook*** (***PHB***). To determine the base score for each skill, compare Table 26 in the ***PHB*** to Table 7 in the ***Complete Bards Handbook***; take the higher of the two base scores if both tables show the same skill. Give the thief/gypsy-bard 40 discretionary points to round out his skills, then adjust all skills for race, Dexterity, and kit. As the character increases in level, add further discretionary points as the character earns them. That is, the character adds 30 points each time he gains a level as a thief and 15 points each time he gains a level as a bard.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '12',
+            question: `Thieves can speak Thieves Cant. Do they gain it without spending any proficiency or intelligence slots, or do they have to spend a slot?`,
+            answer: [
+                `No, it's free.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '12',
+            question: `Some spells listed in the ***PHB*** and *DRAGON® Magazine* are capable of being (and are supposed to be) cast for persons other than the caster. Others are somewhat ambiguous as to whether they can work for someone other than the caster, ***find familiar*** being one of them. Can ***find familiar*** be cast for someone other than the caster (such as a master wizard on behalf of an apprentice)? What if the spell recipient is not a spellcaster (or at least not a wizard spellcaster)? What kind of benefits (if any) would he or she receive? And what about other spells, such as the ***animal companion*** spell? The description infers that the spell is for the caster, but the information in the "statistics" portion says that the area of affect is the creature summoned. Which takes precedence? The text of the description or the stats?`,
+            answer: [
+                `A ***find familiar*** spell allows the caster to summon a familiar and bind the creature to himself. The caster cannot assign the familiar to anyone else.`,
+                `Neither a spell's statistics nor its description "take precedence" when trying to decide whether a spell can be cast on another's behalf. One must use common sense. In most cases, the spell's description is far more useful than its statistics because the text tells you what the spell does. For example, ***dispel magic*** cancels other magic within its area of effect. It makes no difference who casts the spell. On the other hand, ***charm person*** makes the recipient loyal to the caster. A character might wish to *charm* someone on another character's behalf, but the recipient feels loyal to the caster, not to some third person the caster designates.`,
+                `Sometimes, however, a spell's statistics can settle the issue pretty well. Any spell with a range of "touch" can be cast for another's benefit. On the other hand, a spell with a range of "0" always affects the caster, and any powers the spell grants cannot be transferred elsewhere no matter what the spell's description might imply; the spell's area of effect might be large enough to affect multiple creatures, but if the range is 0 the spell always must be centered on the caster.`,
+                `Perhaps the statistics for the ***find familiar*** spell should read: Range: 0; Area of Effect: 1 creature within a radius of 1 mile per caster level.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_DISPEL_MAGIC],
+        },
+        {
+            page_number: '12+14',
+            question: `Your recent attention to ***frisky chest*** and similar spells has suggested a possible flaw in the ***Tenser's floating disc*** spell to me: What sort of surface do you recommend for the floor that the disk needs to be above? It would seem to be incredibly easy for someone simply to throw a weighted rock across a chasm and use the disk to ferry people across without causing the disk to disappear due to the lack of floor, simply by using a thick rope. This would seem to reduce the use of ***telekinesis*** or ***fly*** as a lot of the effects that these are commonly used for are superseded by the increased duration of the ***disk*** and the fact that it can be used on inanimate objects such as burning flasks of oil, as long as they are within the spell range. Images of hoards of low-level mages arriving in town sitting on disks, and of sneaky mages getting the disks to carry caltrops and acid into dangerous areas and then causing the disk to disappear by causing it to rise more than three feet from the ground come to mind.`,
+            answer: [
+                `If you want to restrict abuse of ***Tenser's floating disc*** heavily, you can simply rule that the disc winks out unless the surface beneath it is capable of supporting a normal human walking at a normal pace. This rules out not only ropes but also water, quicksand, lava, and all sorts of surfaces the caster might encounter while using the spell. For most campaigns, however, a more reasonable ruling might require a surface that could conceivably support the empty disc itself assuming it were a physical object. Tightropes would still be out, but water (at least calm water), mud, quicksand, and the like would be okay.`,
+                `As a method for scattering items on the ground, a ***Tenser's floating disc*** would be useful in some cases, but not in others. The caster himself, for example, could strew caltrops much more efficiently than the disc could because the disc would drop the whole load in the same small (about three feet wide) area. Anyone encountering the resulting pile of caltrops probably would see them and easily avoid them.`,
+                `Flaming oil won't work particularly well with the disc either. One flask of oil makes a puddle three feet wide (see Table 45 in the ***DUNGEON MASTER® Guide***), which is exactly the width of the disc. The disc is slightly concave, so it should carry the oil along without sloshing. A second flask, however, would overflow the disc—it's *slightly* concave. Further, lighting the oil and moving it into position will cause only minimal damage to whatever happens to be underneath when the ***disc*** vanishes—very little will actually be under the ***disc***, as it never floats more than three feet off the ground. Also, remember that a direct hit from burning oil inflicts 2d6 hp damage on the first round. If a party fills a disc with oil, lights it, then drops it somewhere, the best they should get is a splash hit (1d3 hp damage). Since the oil is splashing, I'd make every creature within five feet of the point of impact attempt a saving throw vs. paralysis to avoid the damage. It's possible that a tiny creature—or an immobilized one—could suffer a direct hit, but if the party lights the oil before moving the ***disc***, then the damage still should be only 1d6. If the party dumps the oil from the disc, then lights it, they could inflict the full 2d6 hp damage, provided the target is small enough and slow enough to be under the disc when it vanishes.`,
+                `The ***disc*** could carry quite a lot of acid or holy water, say five vials worth. Still, the disc floats only three feet off the ground and moves at a fairly poky movement rate of 6. Again, the best the party can hope for is a splash. In this case, I'd recommend a saving throw vs. paralyzation for every creature within five feet of the point of impact, with failure resulting in 1d3 splash hits (1 hp damage each). Of course, an immobile creature caught under the disc would suffer five hits (2d4 hp damage each).`,
+                `All the foregoing might seem stingy, but there may very well be cases where the party is better off forcing the opposition to attempt saving throws rather than trying to score missile hits, and there's no chance of the containers failing to break. Also, opponents with no room to move out of the ***disc's*** way would just be splashed, no saving throws.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '14',
+            question: `Will a ***stoneskin*** spell protect the recipient from the effects of non-spell critical hits?`,
+            answer: [
+                `Yes. If the spell negates the basic damage from a hit, it negates any additional physical effects involving cuts, pokes, or impact from that hit. Touch-delivered spells are not negated, nor are magical effects, such as the electrical damage from a ***javelin of lightning*** (though the 1d6 hp physical damage from the javelin is). ***Stoneskin*** never negates damage that does not involve cutting, piercing, or striking. Damage from a flask of burning oil or damage from acid harms creatures protected by ***stoneskin***.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_STONESKIN],
+        },
+        {
+            page_number: '14',
+            question: `What happens when the recipient of a ***stoneskin*** spell also uses a ***fire shield*** spell? How much damage would an assailant suffer if the ***stoneskin*** spell negated all the damage from his attack?`,
+            answer: [
+                `If the ***stoneskin*** spell negates the dam- age from a blow, the attacker who delivered the blow suffers no damage at all. Note that the ***fire shield*** spell still makes the recipient more susceptible to certain forms of attacks (see spell description).`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_STONESKIN],
+        },
+        {
+            page_number: '14',
+            question: `The ***PLAYER's OPTION™: Spells & Magic*** book allows wizards to choose priest spell spheres as schools. If a wizard chooses the priest sphere of necromancy as a school of magic, does he receive ***animate dead*** as a third-level spell or a fifth-level one? Also, is the limit of hit dice that can be animated the number that may be animated at one casting or the total number that the mage can have animated at one time?`,
+            answer: [
+                `The wizard gains the priest version of ***animate dead*** as a third-level spell. If the wizard also has access to the wizardly school of necromancy, he also can learn ***animate dead*** as a fifth-level spell. The limits given in the spell descriptions are for each casting of the spell, not for the total number of creatures the character can have animated at once. (DMs usually find various clever ways of making players regret collecting too many animated allies for their characters). Finally, both the priest and wizard versions of the spell use total hit dice of the animated creatures to determine how many creatures one spell can animate. In both cases, the caster can animate one hit die worth of skeletons or zombies per caster level. The description for the priest version implies that priests can animate one zombie per caster level, but that's an error. Both versions of the spell work just as described under the wizard version.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '14',
+            question: `What would a dragon do if affected by the fourth-level priest spell ***inverted ethics***? Would the dragon freely hand out its treasure, slaughtering those who donated to the hoard, or merely permit adventurers to rob it blind?`,
+            answer: [
+                `A dragon under the effects of an ***inverted ethics*** spell would temporarily lose its desire to hoard treasure and probably would become less jealous of what it had. Unlike the shopkeeper used as an example in the spell description, a dragon wouldn't allow people just to take treasure from its horde, because it's not in the habit of letting treasure leave the hoard. On the other hand, an ***inverted ethics*** spell also would temporarily transform an evil dragon from a suspicious, haughty, and violent creature into a trusting, humble, and mild one. The transformation might just allow a party to exchange a few pleasantries with the dragon and hit the road with their skins still intact. If anyone was foolish enough to take an item from the hoard while the dragon wasn't itself is most likely in for a heap of trouble when the spell wears off and the dragon comes looking for its missing trinkets.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '14+16',
+            question: `The description of the ***delayed magic missile*** spell seems to contradict itself. First, it says "The missile causes 1d6 hp damage for every three levels of the caster." The next paragraph, however, says that "the initial impact deals 1d6 hp damage to the target." What amount of damage does the first blow actually cause? Also, please clarify the line, "the staggered attacks prevent a targeted spellcaster from concentrating on a spell." Does the continued attack interfere with spellcasting even if the target makes his or her save and takes no damage?`,
+            answer: [
+                `No contradiction. The spell deals 1d6 hp damage per three levels of the caster, but no more than 1d6 hp damage each round. Although the description in the ***Wizard's Spell Compendium***, Volume 1 lists the duration as 1 round per caster level, the spell ends out when it delivers its full allotment of damage or when its duration expires, whichever comes first. If the target is a spellcaster, any spell he attempts is ruined if he fails his saving throw during a round when ***delayed magic missile*** is in effect, but the spell works if the target makes his saving throw (provided nothing else distracts him).`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRBUTE_DOT],
+        },
+        {
+            page_number: '16',
+            question: `The ***Complete Book of Humanoids*** lists all giant-kin weapons as size G—even the dagger. Is this correct? My group uses the critical hit tables from the ***PLAYER'S OPTION: Combat & Tactics*** book, so we need to know.`,
+            answer: [
+                `I recommend the statistics in the chart on this page for all the weapons included on Table 7 in the ***Complete Book of Humanoids***.`,
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '16',
+            question: `Can a priest ***resurrect*** a character even if his head is missing?`,
+            answer: [
+                `I'd say a priest would have a hard time casting any spells at all without his head, much less ***raise dead*** or ***resurrection***. If the spell recipient is missing his head, ***raise dead*** won't help, but ***resurrection*** works fine.`,
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '16',
+            question: `I am playing an inquisitor paladin from ***The Complete Paladin's Handbook***. My question pertains to two of the kit's special benefits, namely the ability to detect evil magic and dispel evil magic. What, exactly, is evil magic? Is any magic cast by an evil character "evil?" Does that mean that if my character encounters a ***long sword +1***, he can destroy the sword if an evil wizard created it? What about other types of spells? The inquisitor's dispel evil magic ability has a base success chance of 100% making it very potent indeed.`,
+            answer: [
+                `In this case "evil magic" is any magic cast by an evil creature. However, the magic must be a spell or spell-like ability still operating. For example, an inquisitor cannot detect or dispel a ***cure light wounds*** spell an evil character has cast because the magic is only fleeting; only its effects are permanent. Nor could an inquisitor dispel a ***flesh to stone*** spell an evil creature has cast. (Exactly which spells have instantaneous durations but permanent effects is subject to some debate, and any listing of such spells can vary from campaign to campaign.) The inquisitor could detect and dispel an evil caster's ***charm person*** or ***curse*** spell, however.`,
+                `Certain spells, such as ***permanency***, ***quest***, and ***geas*** either cannot be dispelled at all or can be dispelled only by characters of higher level than the original caster—check the individual spell descriptions to be sure.`,
+                `Magical items don't qualify, as they are not spells or spell-like effects. However, if an evil creature uses a magical item to create a spell-like effect, an inquisitor can detect and dispel it. Likewise, magically created or animated creatures, such as zombies and golems, cannot simply be dispelled.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '16',
+            question: `The description for the sixth-level wizard spell ***death spell*** gives a chart which indicates that the maximum number of hit dice for affected creatures is 8+3. Can we assume from the foregoing that characters and NPCs of 9th level and higher are totally unaffected by the ***death spell***? Does the death ray of a beholder have the same limitation on hit dice (understanding that it only affects just one creature per round, assuming the beholder can keep using the eye that produces the death ray)?`,
+            answer: [
+                `Level equals hit dice in this case, so characters of 9th level or higher needn't fear ***death spells***. Technically, the beholder eye ability duplicates a ***death spell*** except that it affects only one creature at a time, just as you point out. If you're following the rules to the letter, that means a beholder's death ray slays creatures of 8+3 hit dice or less without a saving throw. Such creatures cannot be raised or resurrected (see the opening lines of the spell description). I have always preferred to treat the beholder death ray as a ranged ***slay living*** effect (reverse of the fifth-level priest spell ***raise dead***), which allows a saving throw vs. death magic but also inflicts 2d8+1 hp damage if the saving throw succeeds.`,
             ],
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
         },
