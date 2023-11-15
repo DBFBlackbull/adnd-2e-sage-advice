@@ -95,19 +95,22 @@ script.
         // Get the text field
         let element = document.getElementById(id);
         let innerHTML = element.innerHTML;
-        innerHTML = innerHTML.replaceAll(/<span class="no-copy">(.|\n)*?<\/span>/g, '')
-            .replaceAll(/<br>/g, '\n')
+        innerHTML = innerHTML.replaceAll(/<br>/g, '\n')
             .replaceAll(/<\/?strong>/g,'**')
             .replaceAll(/<\/?em>/g,'*');
 
-
-        // Get rid of the rest of the HTML tags
         let tempElement = document.createElement('div');
         tempElement.innerHTML = innerHTML;
-        let text = tempElement.innerText;
 
+        // Get rid of the rest of the HTML tags
+        let title = tempElement.getElementsByClassName('title')[0].innerText;
+        let question = tempElement.getElementsByClassName('question')[0].innerText
+            .replaceAll(/\*\*\*/g, '*');
+        let answer = tempElement.getElementsByClassName('answer')[0].innerText;
+
+        let formattedText = `${title}\n>${question}\n${answer}`;
         // Copy the text inside the text field
-        navigator.clipboard.writeText(text);
+        navigator.clipboard.writeText(formattedText);
     }
 
     function copyRedditText(id) {
@@ -148,7 +151,7 @@ each magazine, _ in dragonMagazines
             - let questionNumber = index + 1
             - let id = `${magazine.issue_number}-${questionNumber}`
             p(id=id)
-                | Sage Advice ##{magazine.issue_number} (#{magazine.publication_month} #{magazine.publication_year}) p. #{advice.page_number}, Question:#{questionNumber}
+                span(class='title') Sage Advice ##{magazine.issue_number} (#{magazine.publication_month} #{magazine.publication_year}) p. #{advice.page_number}, Question:#{questionNumber}
                 span(class="no-copy")
                     button(onclick=`copyPlainText('${id}')` title="Copy plain text") 📄
                     button(onclick=`copyRichText('${id}')` title="Copy rich text") 📋
@@ -159,9 +162,10 @@ each magazine, _ in dragonMagazines
                     | &ensp;
                     a(href=anchorLink(id)) 🔗
                 br
-                strong !{formatInput(advice.question, magazine.issue_number, questionNumber)}
+                span(class="question")
+                    strong !{formatInput(advice.question, magazine.issue_number, questionNumber)}
                 br
-                span &emsp;!{formatInput(advice.answer, magazine.issue_number, questionNumber)}
+                span(class="answer") &emsp;!{formatInput(advice.answer, magazine.issue_number, questionNumber)}
                 if advice.image
                     span(class="no-copy")
                         if Array.isArray(advice.image)
