@@ -108,7 +108,7 @@ script.
             .replaceAll(/\*\*\*/g, '*');
         let answer = tempElement.getElementsByClassName('answer')[0].innerText;
 
-        let formattedText = `${title}\n>${question}\n${answer}`;
+        let formattedText = `${title}\n> ${question}\n> ${answer}`;
         // Copy the text inside the text field
         navigator.clipboard.writeText(formattedText);
     }

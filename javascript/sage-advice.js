@@ -26,6 +26,9 @@ const ATTRIBUTE_DOT = "continuing damage"
 // multi-class mages and elven chain mail
 // specialist mages and magical items
 // haste / magical aging
+// vorpal blade / sword of sharpness
+// Pantheon of the month
+// humanoid / animal / monster definitions
 // other stuff where I have added a comment
 
 const ATTRIBUTE_APRIL_FOOLS = 'april fools';
@@ -489,14 +492,6 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '12',
-            question: `What happened to weapons' space requirements?`,
-            answer: [
-                `Space required for melee weapons can be inferred from their sizes and types. Bludgeoning or slashing weapons generally require as much clear space for use as their lengths. Piercing weapons and most missile weapons generally require 1' of clear space.`
-            ],
-            attributes: [ATTRIBUTE_2E],
-        },
-        {
-            page_number: '12',
             question: `Are alignment languages used?`,
             answer: [
                 `Alignment languages are not part of the 2nd Edition game.`
@@ -518,14 +513,6 @@ DRAGON_MAGAZINES.push({
                 `Halflings, dwarves, and gnomes are small creatures. Humans, half-elves, and elves are medium (man-size) creatures.`
             ],
             comment: `Dwarves are suggested to be considered man-sized when handling weapons, i.e. a dwarf can carry a M-sized weapon in 1 hand. This is suggested in Sage Advice #174. Dwarves being size M for all purposes is said in #235`,
-            attributes: [ATTRIBUTE_2E],
-        },
-        {
-            page_number: '12',
-            question: `What happened to weapons' space requirements?`,
-            answer: [
-                `Space required for melee weapons can be inferred from their sizes and types. Bludgeoning or slashing weapons generally require as much clear space for use as their lengths. Piercing weapons and most missile weapons generally require 1' of clear space.`
-            ],
             attributes: [ATTRIBUTE_2E],
         },
         {
@@ -7906,9 +7893,9 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '89',
-            question: `When fighter/mages are casting spells that requires touching the target (making an attack roll), can they use their fighter THACOs?`,
+            question: `When fighter/mages are casting spells that requires touching the target (making an attack roll), can they use their fighter THAC0s?`,
             answer: [
-                `There's nothing mysterious or magical about touching a creature to deliver a spell, the caster completes the spell, then touches the target. A multi-classed caster is allowed to use the best available THACO.`,
+                `There's nothing mysterious or magical about touching a creature to deliver a spell, the caster completes the spell, then touches the target. A multi-classed caster is allowed to use the best available THAC0.`,
             ],
             attributes: [ATTRIBUTE_2E],
         },
@@ -17137,6 +17124,601 @@ Casting Time: 2 rounds<br>
 Area of Effect: Special<br>
 Saving Throw: Special`,
                 `This spell causes a *rune of power* (see above) to form anywhere in range, even in midair. The *rune* takes effect immediately. A *rune* that does not have a specific area of effect fills a 20'-radius area when cast via this spell.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '261',
+    publication_year: '1999',
+    publication_month: 'July',
+    foreword: `This month, the Sage looks into spells and magical effects from the AD&D® game.`,
+    epilogue: `Skip Williams is looking forward to a large supply of goodberries of a sort after laboring long and hard on beds of strawberries and raspberries at his Seattle area home.`,
+    sage_advice: [
+        {
+            page_number: '8',
+            question: `According to ***The Complete Fighter's Handbook***, a set of high-quality halfling leather armor counts as "no armor" when making adjustments for thieving skills. What does this mean, exactly? Can spellcasters wear this armor and still cast spells?`,
+            answer: [
+                `It means that when a thief, bard, or ranger wears the armor, the character can claim the bonuses to thieving skills listed in the No Armor column of Table 29: Thieving Skill Armor Adjustments in the ***Player's Handbook***.`,
+                `The armor is still armor, though. Wizards cannot wear the armor, nor can bards if they intend to use their spells. (See "Sage Advice" in issue #246 for a discussion of armor and its effects on casting wizard spells.) Clerics, who have no armor restrictions in the first place, can wear the armor.`,
+            ],
+            comment: `Soft repeat of #205 and #246`,
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '8',
+            question: `Can you cast a ***web*** spell in a forest? Do you need a 10'-wide tree for the spell?`,
+            answer: [
+                `***Web*** spells work fine in forests. The webbing can be anchored to a few big trees or a group of little ones (provided that the trees are tall enough to accommodate the full height of the area of effect).`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '8',
+            question: `Does a ***shield*** spell completely negate ***magic missile*** spells, or does it negate only ***magic missiles*** that hit the shielded character from the front?`,
+            answer: [
+                `A ***shield*** spell negates ***magic missiles*** launched only from the shielded character's front. (See the Facing section of Chapter 9 in the ***DUNGEON MASTER® Guide***.)`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '8',
+            question: `My friends and I have a campaign with an Arabian setting. We use the character classes from the AL-QADIM® books. One of the players has a sha'ir character and is trying to use the rules in ***The Complete Sha'ir's Handbook*** to improve his gen (giving it better eyesight, hearing, and the like). The instructions are vague on how to get through the ritual and fasting period required to gain the genies' favor. On page 26 under Rituals, the book indicates that each ritual requires a variable period of time, depending upon the ability to be added or improved. The text also says the rituals require 9 to 16 hours to perform. This implies that each ritual requires a randomly determined amount of time. However, the ritual descriptions beginning on page 28 include a fixed time requirement for each ritual.`,
+            answer: [
+                `The time requirements vary from ritual to ritual, but their lengths are fixed, not determined randomly. Why the text says they last from 9 to 16 hours when the shortest one in ***The Complete Sha'ir's Handbook*** lasts 12 hours is a mystery to me. Perhaps the author anticipated DMs making up rituals of their own.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '8-9',
+            question: `How does a sha'ir, particularly one below 12th level, survive the ritual required to improve a gen? When my group tackled this problem, our first thought was that casting the 1st-level spell ***protection from hunger and thirst*** (originally from ***The Complete Wizard's Handbook***) would be a good start. The ***Wizard's Spell Compendium, Volume Three*** now lists this spell as lost knowledge, however, and the spell has been rewritten as a 7th-level spell. This leaves a low-level sha'ir with only two spells that can help him survive a ritual. One is the 1st-level spell ***cool strength***, which protects against dehydration for 12 hours per level. The other is the 1st-level spell ***ritual strength***, which lasts only 1 hour per level. This does not help when the minimum ritual length given in ***The Complete Sha'ir's Handbook*** is 12 hours.`,
+            answer: [
+                `It's tough for sha'irs to survive any ritual. Note that a ***protection from hunger and thirst*** spell does not completely negate the dangers of a ritual, as the sha'ir must still chant and withstand considerable elemental forces. At best, ***protection from hunger and thirst*** negates the penalties to Constitution checks the sha'ir makes during the ritual.`,
+                `I suggest that you don't count any time spent under a ***ritual strength*** spell as "elapsed time" for purposes of calculating when the sha'ir must make a Constitution check during the ritual nor when assessing penalties to those checks. For example, a 5th-level sha'ir uses a ***ritual strength*** spell to perform the increased damage ritual (16 hours). The character starts making checks after hour 13 (instead of hour 8) and doesn't suffer a check penalty until hour 15.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '9',
+            question: `While reading through the description of the 4th-level wizard spell ***dimension door***, I noticed that casters who materialize inside a solid object become trapped on the Astral Plane. So, what would happen to a character casting this spell in Sigil, where one can leave only through a portal, or on the Inner Planes, which have no direct access to the Astral Plane?`,
+            answer: [
+                `This particular aspect of the ***dimension door*** spell never allows a character to circumvent any special restrictions a particular locale imposes on planar travel. Here are a few examples: A ***dimension door*** attempt gone awry in Sigil would mean the unfortunate traveler vanishes into nothingness, just like stepping off Sigil's ring. A ***dimension door*** mishap on the Inner Planes probably strands the caster on the Astral Plane. There's nothing "special" about the Inner Planes; they're just not "adjacent" to the Astral. A DM who's a stickler for planar details might decide the caster is thrown into the Deep Ethereal instead. A mishap on the Demiplane of Dread would dump the caster somewhere in the mists, unless the local domain lord has sealed the borders; in that case, the traveler winds up in some random location within the domain.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '9',
+            question: `After a character attacks while using a ***ring of invisibility***, when does he turn invisible again? Is it in the next round? Immediately after his attack? Some later time in the same round?`,
+            answer: [
+                `Once the invisible character attacks, he's used up his action for the round. The character stays visible until he can use the ***ring*** to become invisible again. To do so, he must wait until the next round, when he can take an action to activate the ***ring***. Note that using a magical item counts as a character's sole action for the round (unless *hasted*).`
+            ],
+            comment: `Matches the answer to a similar question in #237`,
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY,ATTRIBUTE_HASTE],
+        },
+        {
+            page_number: '9',
+            question: `What would happen if a wizard cast a ***there/not there*** spell on an object and then cast an ***invisibility*** spell on the same object. Will the object be "not there" as long as the ***invisibility*** duration lasts?`,
+            answer: [
+                `The ***invisibility*** spell doesn't work on objects. There are ways to render objects invisible, however: ***dust of disappearance***, for example. If an invisible object receives a ***there/not there*** spell, it still vacillates between "there" and "not there," but observers who rely on sight have a hard time telling when it is "there" and when it is not. The same effect applies if an object becomes invisible after receiving a ***there/not there*** spell.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY],
+        },
+        {
+            page_number: '9',
+            question: `What if a ***there/not there*** spell were cast on an object, and a viewer were to close his or her eyes? Would it the object be "not there" for the viewer? Or would it remain the way it was before the viewer's eyes were closed?`,
+            answer: [
+                `As noted in the previous question, when the object is "there" it is "there" whether one can see it or not. Likewise, if it is "not there" it is "not there" whether one can see it or not. Note that any event that might cause a creature to perceive the object counts as a "viewing" and requires a new check to determine the object's status. For example, if a closed door receives a ***there/not there*** spell and someone closes her eyes and tries to walk through the door, the DM should roll the dice to determine whether the door is "there" (bump) or not.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '9',
+            question: `What if a ***there/not there*** spell were cast on a person? Could affected individuals be "not there" for themselves? If so, what do they see? If they are not there for another person, does that mean that others can pass through the affected people as if they weren't there?`,
+            answer: [
+                `***There/not there*** does not work on creatures. If you decide to ignore this limitation on the spell, you're on your own.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '9',
+            question: `Suppose a boulder receives a ***there/not there*** spell. Now suppose the giant perceives the boulder as "there" and throws it at a dwarf who perceives the same boulder as "not there." The boulder lands directly where the dwarf is. The dwarf blinks, and now perceives the boulder as "there". Since now the dwarf and the boulder are occupying the exact same space, what happens?`,
+            answer: [
+                `Nothing special happens, because the situation you describe would not arise. The boulder's behavior will always be explicable from the giant's point of view. If the boulder is "not there" for the dwarf, it cannot harm the dwarf. There-fore, the giant "sees" the boulder bounce harmlessly off the dwarf, or miss the dwarf entirely, or some other series of events in which the boulder does not harm the dwarf. The boulder winds up someplace where the dwarf isn't.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '9-10',
+            question: `Will a ***rope of entanglement*** function on any huge or gargantuan creature? In a past issue, you said a ***vorpal blade*** would function against a creature of any size, even a huge dragon, even though a 4' long ***blade*** isn't large enough to cut through the entire diameter of the dragon's neck, all thanks to the item's magic. Wouldn't this also apply to the ***rope***? Note that the actual length of the rope isn't given.) Also, is a saving throw allowed against either a ***rope of entanglement*** or a ***vorpal blade***? It seems a little unfair to be able to kill a creature just because you rolled a 17.`,
+            answer: [
+                `According to the rules, a ***vorpal blade*** severs a dragon's neck on a good attack roll even if the wielder attacks the dragon's tail. Magic defies rational explanation; that's what makes it magic. DMs who prefer to run a more empirical world are free to adjust their house rules accordingly.`,
+                `Assume a ***rope of entanglement*** is about 50 feet long. Treat the thing as a portable ***entangle*** spell. A saving throw and magic resistance both apply. A *free action* effect negates the ***rope's*** power, and incorporeal creatures cannot be entangled.`,
+                `It's reasonable to exempt really big creatures from the ***rope's*** effects, or to limit the effect to only one part of the creature's body. If you go this route, an entangled creature can attack the rope, just not with the entangled body part. For example, a clever PC uses the rope to tie a dragon's mouth shut. The dragon, thanks to its great size, can claw at the rope. Note that it's also reasonable not to exempt very large creatures—perhaps the ***rope*** grows to entangle really big targets. It all depends on how wild and wonky the DM wants magic to be.`,
+                `No matter what a DM decides about magic overall, a ***vorpal blade*** allows no saving throw.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '10',
+            question: `Will a ***rope of entanglement*** function on any huge or gargantuan creature? In a past issue, you said a ***vorpal blade*** would function `,
+            answer: [
+                `According to the rules, a ***vorpal blade*** severs a dragon's neck on a good attack roll even if the wielder attacks the dragon's tail. Magic defies rational explanation; that's what makes it magic. DMs who `
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '10',
+            question: `Is it possible to recharge ***Nidus' wand of endless repetition*** (from FR4: ***The Magister***)? What level spell would be needed to recharge the ***wand***?`,
+            answer: [
+                `Wands, in general, are rechargeable. Since the item description does not say this ***wand*** is not rechargeable, it is safe to assume that it is. Still, the ***wand*** should be difficult to recharge. I suggest ***ray of Ondovir*** (from ***Wizard's Spell Compendium***, Volume Three) and ***time stop***.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '10',
+            question: `Can a ghost use its aging attack from the Astral Plane? What is the range of the attack? When a ghost attempts to take over the character's body from the Astral Plane, where does the life essence of the target go if she fails her saving throw and the ghost takes over her body? To the Astral Plane? And if so, how can the essence be recovered? If the ghost fails to take over a body, does it have to assume its semimaterial form? Or can it assume semimaterial form at will? If the ghost does not materialize, can it be attacked?`,
+            answer: [
+                `Ghosts roam the Ethereal Plane, not the Astral. Should a ghost find its way onto the Astral Plane, it cannot affect creatures on any other plane.`,
+                `Aging (and fear) from a ghost occurs whenever a living creature sees one; creatures on the Prime can see Ethereal ghosts (but not Astral ghosts). There's no real range limit, but the creature must be close enough for a good look. (See Table 62 in the ***Player's Handbook***.)`,
+                `A ghost need not semi-materialize to deliver its ***magic jar*** attack, but it must materialize to use its touch attack.`,
+                `If a victim fails his or her saving throw vs. a ghost's ***magic jar*** attack, the victim's life force is not displaced from the body—it is merely shunted aside as the ghost takes control. If a ghost's ***magic jar*** attack fails, it is not compelled to materialize and use its touch attack, but most ghosts usually do so.`,
+                `Ethereal ghosts are effectively unassailable when their opponents have no access to the Ethereal Plane. PCs who meet a ghost they cannot attack would do well to beat a hasty retreat.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '10',
+            question: `When a ***staff of the magi*** overloads, it explodes and deals damage. How do I calculate the damage?`,
+            answer: [
+                `When a ***staff of the magi*** explodes (either in a retributive strike or from overloading), the resulting blast has a base value of 8 points of damage times the number of charges in the ***staff*** (200 points for an overloaded or fully charged ***staff***). This falls to 6 points per charge against creatures that are more than 10 feet but fewer than 20 feet away from the staff (150 points for an overloaded or fully charged ***staff***). The damage falls to 4 points per charge against creatures that are more than 20 feet but fewer than 30 feet away from the ***staff*** (100 points for an overloaded or fully charged ***staff***). Creatures more than 30 feet away suffer no damage. A saving throw vs. spell applies; success reduces damage by half.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '10',
+            question: `What is an ***unseen servant's*** movement rate? Could an ***unseen servant*** wear clothing, such as a cloak?`,
+            answer: [
+                `I suggest a movement rate of 6. An ***unseen servant*** is just a force; it has no body and cannot wear anything. It could carry a cloak or carry a frame that supports a cloak.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '10',
+            question: `Can a wizard or priest memorize the same spell more than once? I ask because I have a silly rules lawyer in my campaign who insists that because a spell is wiped from a character's mind when cast, all "copies" of the spell would be wiped away, too. Weird, huh?`,
+            answer: [
+                `Yup, that's weird. A character certainly can prepare (memorize) a spell more than once. Each spell memorized counts against the character's daily limit. When the character casts a spell, that spell and only that spell vanishes from the character's mind, leaving all other spells (even "copies" of the cast spell) intact.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '10',
+            question: `Is there such a thing as a circlet or crown that allows ***ioun stones*** to be set into it? If such an item exists, how many stones can it hold and where is it listed?`,
+            answer: [
+                `I'm not familiar with any such item. In any case, ***ioun stones*** must trail and circle the user to be effective, so placing a stone into a setting would render it ineffective. Note that there is no limit on the number of ***ioun stones*** a character can use at once (though the DM could set one).`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '10',
+            question: `If a character is slain while using a ***hat of disguise***, does the wearer retain his original form? Or does he remain in his altered form even after being slain? If the latter is true, what would happen to the corpse when it decomposes? Will the skeleton reflect the altered form?`,
+            answer: [
+                `As general rule in the AD&D game, a creature that dies when in an assumed form reverts to its natural form upon death. In any case, the effect from a ***hat of disguise*** ends the instant the wearer dies.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '11',
+            question: `Tanar'ri suffer only half damage from gases. What would the effects of petrification gas be in that instance? Also, if the tanar'ri suffer no damage from poisons, then why would they need to worry about taking half damage from poisonous gases when they already suffer no damage from them?`,
+            answer: [
+                `Gases that don't inflict damage have their normal effect on tanar'ri. A petrification gas petrifies a tanar'ri.`,
+                `Tanar'ri suffer no damage from poisonous gases (such as ***cloudkill***) and half damage from corrosive or purely damage-inflicting gases (such as green dragon breath).`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '11',
+            question: `When the Hovering At Death's Door optional rule is in play, can you use a ***goodberry*** to help a character who has negative hit points but who is still alive? I have been told by players that reflex actions would cause someone to swallow a berry placed in a character's mouth. How is beyond me. I would think that the berry would get stuck and have to be forced back out just as someone choking on something would need the Heimlich maneuver. What would stop the berry from getting stuck in the wind pipe or throat?`,
+            answer: [
+                `Your doubts are reasonable. In spite of what many roleplayers believe, unconscious people cannot chew or swallow. Gagging is a reflex; swallowing is not.`,
+                `On the other hand, most DMs allow things like healing potions to work if someone just puts some in a character's mouth or trickles some down the throat. ***Goodberries*** could be used in the same way.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '11',
+            question: `How long does a ***goodberry*** last anyway?`,
+            answer: [
+                `Goodberries last 1 day + 1 day per level (the spell duration).`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '262',
+    publication_year: '1999',
+    publication_month: 'August',
+    foreword: `This month, the Sage ponders sundry AD&D® game questions straight from the mailbag and makes a side trip into the universe of the ALTERNITY® game.`,
+    epilogue: `Skip Williams notes that it is bad form to tease your group's paladin when he or she has been turned by an evil priest, though Skip also admits that it's fun.`,
+    sage_advice: [
+        {
+            page_number: '22',
+            question: `I am a little confused about reaction adjustments for Charisma. Is there a chart showing how NPCs react? I have found a chart in the ***DUNGEON MASTER® Guide*** for creature reactions, but I don't think it applies to NPCs.`,
+            answer: [
+                `Use Table 59 in the ***DUNGEON MASTER Guide***. The chart works for monsters and NPCs. Positive Charisma adjustments (reaction bonuses) are subtracted from the 2d10 roll. Negative Charisma adjustments (reaction penalties) are added to the 2d10 roll.`,
+                `It takes some common sense and improvisation to use the table. For example, if PCs try ot bluff their way past a group of guards by posing as entertainers, you might use the first column on the chart (for a friendly approach). No matter what the PCs' Charisma scores are, they probably won't succeed unless at least one of them has a decent entertainment proficiency (Singing, Dancing, Tumbling, or the like). If the PCs put on a good performance, you might allow them a normal roll on Table 59; if they blew the performance, they should suffer a penalty.`,
+                `If the PCs roll low on Table 59, the guards will be friendly toward them, but that doesn't mean the guards look the other way while the PCs sneak past them. Unless the guards are really stupid or exceedingly disloyal to their employers, they'll probably just smile and offer the PCs a few coins for a good performance. If the PCs push their luck, the friendly guards might conclude that the PCs are crazy (or drunk) and might try ot capture the PCs in as gentle a manner as they can manage. Even if the guards agree to admit the PCs, they might insist on giving them an escort.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '22',
+            question: `The ***Complete Sha'ir's Handbook*** says a spellslayer must perform an attack roll to use the special power of disconnecting an enemy wizard from his or her spells. Can the spellslayer use this power only in melee? What AC must the spellslayer hit? Which magical protections apply?`,
+            answer: [
+                `Spellslaying is strictly a melee attack. The spellslayer has to hit the target's regular Armor Class. If the spellslayer hits, the target is allowed a saving throw vs. death magic to avoid the effect. Any defensive magical item that provides a general bonus to saving throws (as opposed to a bonus vs. a specific attack form) applies to the death save. Ability bonuses, racial bonuses, and magic resistance do not apply.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '22',
+            question: `The description for the 2nd-level ***rain of blood*** spell from the ***Complete Sha'ir's Handbook*** says that each target in the area of effect loses hit points equivalent to their Armor Class every round. What happens to targets that have negative Armor Classes? Surely they aren't healed!`,
+            answer: [
+                `The spell has no effect, or you can assume there is a minimum loss of 1 hit point around. I recommend the latter.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '22',
+            question: `Will a character who has been shot with an arrow suffer additional damage if he or she continues to fight, move, or take other strenuous action before pulling out the arrow?`,
+            answer: [
+                `A hit from an arrow inflicts damage only once (barring some special magical property the arrow might have). Note that in the AD&D game's abstract combat system, any nonfatal "hit" from an arrow probably represents the arrow just scratching the target or perhaps bouncing of the target's armor.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '22-23',
+            question: `My character found avery unstable bridge that spanned a chasm. I decided to send the character across, and my DM informed me that my character had to make six Dexterity checks. Do you think six Dexterity checks is too much? By the way, I failed one of the checks, and the character fell to his death.`,
+            answer: [
+                `If your DM didn't think six Dexterity checks were too many, I sure don't. Perhaps your DM made an error, or perhaps you did. The next time you're faced with a similar situation, be sure you understand what your character is facing. Ask how long the bridge is. Ask how hard the wind is blowing. Have your character look at and feel the bridge's surface to find out if it's slippery. Have your character put a foot on the bridge to see if it sways or bounces easily. Finally, when it comes time to make that first Dexterity check, ask how far your character has gone—the first check might be a sign that it's time to turn around and go back ot solid ground.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '23',
+            question: `The priest spell ***stone shape*** has a casting time of 1 round. Does this mean that the stone being shaped slowly flows into its new shape as the spell progresses? Or is the stone shaped instantly when the spell is finished? Is it possible to use a ***stone shape*** spell to make an area of stone swallow up a foe and crush him?`,
+            answer: [
+                `Exactly how stone shaped with a ***stone shape*** spell acts is up to the DM. Each use of the spell, however, can make the stone take only one new shape. It would take two spells (and thus 2 rounds of spellcasting) to make a pit and then close it up. Creatures caught in such a pit are expelled from the pit, not crushed.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '23',
+            question: `Is it possible to use a ***cloak of displacement*** and a ***ring of blinking*** together? If so, what would the effect be?`,
+            answer: [
+                `Yes, characters can wear magical cloaks and magical rings together, even these two.`,
+                `When the character is attacked, first check to see if the ***ring of blinking*** foils the attack. If the ***ring*** does not foil the attack, resolve the attacks exactly as you would against any other person wearing a ***cloak of displacement***. That is, the first attack against the ***cloak*** wearer during the encounter fails. If this is not the, first attack against the ***cloak*** wearer this encounter, the ***cloak*** wearer receives a -2 Armor Class bonus. This is true even if the ***cloak*** wearer has evaded an earlier attack through blinking.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '23',
+            question: `The Morale section in the ***DUNGEON MASTER Guide*** says the base morale rating for henchmen is 12 and that hirelings have a base morale of 10. Table 49, however gives the ratings as 15 for henchmen and 12 for hirelings. Which is correct?`,
+            answer: [
+                `Use the values from Table 49.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '23',
+            question: `According to the ***College of Wizardry*** accessory, the skill score for the Aleph I proficiency is level minus 4, adjusted for Wisdom. Which Wisdom modifier applies? If the subability rules from ***Skills & Powers*** are in play, which Wisdom subability applies?
+`,
+            answer: [
+                `Use the character's magical defense adjustment from Wisdom. The Wisdom/Willpower subability determines a character's magical defense adjustment.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '23',
+            question: `What does a person *charmed* with the 1st-level ***charm person*** spell feel once the spell is finally broken? Does the subject know he or she was tricked? Or does the subject simply lose the attraction to the spellcaster? If a *charmed* person is treated well while the spell is in effect, could the character actually choose to become a henchman? What happens if a character is *charmed* and then the *charm* caster dies?`,
+            answer: [
+                `There's nothing in the ***charm person*** spell description that implies the subject can feel the spell taking effect or wearing off. The spellcaster also does not necessarily know whether the spell works or when it has ended. When a ***charm person*** spell wears off, the subject simply no longer finds the caster so trustworthy and companionable. Particularly sharp characters probably suspect a magical influence.`,
+                `***Charm person*** subjects also do not automatically feel hostility toward the spell caster when the effect wears off, though any hostility they might have felt before receiving the spell remains (perhaps amplified by the caster's actions while the spell was running). If a subject was not inclined to dislike the spellcaster before receiving the spell and nothing has happened that would sour the subject's opinion of the caster, there is no reason why the subject and the caster could not interact normally from then on. In such a case, the subject is just as likely to become the caster's henchman as any other NPC.`,
+                `If a ***charm person*** caster dies before the spell's effect on a subject wears of, nothing special happens. The spell runs its course and can be detected or dispelled. However, only the caster can exercise control over the subject. Since the caster is dead, the lingering spell has no further effect on the subject, though the subject might feel some regret over the passing of his or her "friend."`
+            ],
+            comment: `Soft follow up to #215 about and what can be done with ***charm person***`,
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '23',
+            question: `If a target has both cover and concealment, how is the modifier calculated? For example, a bandit is standing halfway behind a tree (50% cover, or 4 to Armor Class), and the surrounding undergrowth provides 25% concealment (-1 to Armor Class). What is the resulting modifier? Technically, you can't just add them together, because concealment is more effective when there is less to conceal.`,
+            answer: [
+                `In general, do not add similar modifiers together. In this case, you could assume the character is 75% concealed (50% hard cover implies 50% concealment, plus the additional 25% from the undergrowth). This grants only a -3 Armor Class bonus, which is still not as good as the -4 Armor Bonus from 50% cover, so just use the better bonus.`
+            ],
+            comment: `Similar to #193`,
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '23',
+            question: `Is the table of movement rates for the ***cube of force*** correct? Why would the effect of the first face, which only keeps out gases, impose the slowest movement rate?`,
+            answer: [
+                `The movement rate for the first face should be 10, not .1`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '23-24',
+            question: `The spell ***darkning bolt*** is listed as a 4th-level spell in the ***Wizard's Spell Compendium***, Volume 1. However, some of the spell lists in Volume 4 list ***darkning bolt*** as a 3rd-level spell. Which is correct? (There is something of a revolt brewing among the wizards in my campaign.)`,
+            answer: [
+                `Better man the barricades. ***Darkning bolt*** is a 4th-level spell. Its presence on 3rd-level spell lists is an editorial error.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '24',
+            question: `If a specialty priest has access to a sphere, but the sphere has the notation "(rev)," is the character limited only to the reverse versions of spells within that sphere?`,
+            answer: [
+                `Any book that contains priest listings wil include a section (usually in the front) on how to read the listings; check there to find out what "(rev)" means in a particular book. If the book offers no explanation, assume that "(rev)" means the priest must use a spell's reverse—and only the reverse—if it has one.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '24',
+            question: `I have a priest in the party who wants to use the ***dimensional folding*** spell as a banishment tool. He casts the spell below a target he wishes to do away with and sends the victim to a point 10 feet above a volcano that the character spent a reasonable amount of time locating and viewing. Is it OK to allow the target a saving throw?`,
+            answer: [
+                `The gate this spell creates is always vertical (or parallel to the caster in locales that lack any definite "up" or "down"). The gate cannot be placed on or beneath a creature. If the gate is placed so that a creature might blunder into it by accident, the creature receives a saving throw vs. spell, adjusted for race, Dexterity, and magical defenses. Note that it might be possible for one of the caster's enemies to push the caster through the gate.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '24',
+            question: `Can spells such as ***power word, stun*** and ***power word, kill*** be successfully cast on creatures without minds, such as undead or golems?`,
+            answer: [
+                `The presence or absence of a mind has no effect on the workings of a ***power word*** spell. Golems, however, cannot be affected by ***power word*** spells—or most other spells for that matter. (See the golem descriptions in the ***MONSTROUS MANUAL™*** tome.)`,
+                `Only living creatures can be killed by death effects, which lets undead creatures of the hook for ***power word, kill***. I recommend that you allow only living creatures to be stunned, as well.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '26',
+            question: `Would an earth elemental be turned to stone if hit by a ***petrification*** spell or gaze attack? I assume that, being earth- and stone-based, it would be immune or possibly slowed by such attacks, but not petrified.`,
+            answer: [
+                `Earth elementals have no immunity to petrification attacks (though giving them such an immunity would be OK as a house rule). If they fail their saving throws against petrification effects, they become lumps of inert stone, just as other creatures do.`
+            ],
+            comment: `Possible candidate for a petrification attribute.`,
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '26',
+            question: `When using the fatigue rules in the ***Combat & Tactics*** book, do you deduct 2 fatigue points from a character who makes 2 attacks in one round? What about spellcasters? Do they lose fatigue points from casting spells? What about missile attacks and hurled weapons? Is it 1 fatigue point per missile? Do you also deduct for special attacks like disarming, parrying, overbearing, and grabbing?`,
+            answer: [
+                `Yes to all of these. Note that characters are supposed to gain 1 fatigue point per level, plus the base value for their hit dice, not just the base value of their hit dice. (This is an official correction to the fatigue rules on page 28.)`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '26',
+            question: `Exactly what does it mean when an evil priest gets a "T" or "D" result when turning a paladin? Is the paladin turned or commanded? Does a successful turn allow an evil priest to turn 2d6 paladins or just one?`,
+            answer: [
+                `A successful turning attempt against a paladin is always a turn result; paladins are never controlled or destroyed.`,
+                `A successful turn attempt affects 2d6 paladins unless the chart shows a D&ast;, in which case the priest turns 2d6 + 2d4 paladins. Note that priests turn paladins as through the priests were three levels lower than they actually are.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_TURN_UNDEAD],
+        },
+    ]
+});
+DRAGON_MAGAZINES.push({
+    issue_number: '263',
+    publication_year: '1999',
+    publication_month: 'September',
+    foreword: `This month, hte Sage examines a potpourri of questions about the AD&D® game, including a string of queries about specialty priests from hte FORGOTTEN REALMs® setting.`,
+    sage_advice: [
+        {
+            page_number: '22',
+            question: `Does afire elemental have any weight? Other elementals clearly do, or at least they can supply force. If a character were immune to fire, could the elemental cause harm beyond smothering? Can a character lift afire elemental with telekinesis? Do they leave footprints in mud?`,
+            answer: [
+                `Fire elementals are corporeal creatures; their bodies have mass, meaning they have weight if there is gravity. So, the short answer to all your questions is, "yes."`,
+                `Opponents immune to fire (such as red dragons and fire giants) suffer damage from a fire elemental's attacks. Reduce the damage by one point per die, but never reduce damage below one point per die. A fire elemental cannot set a fire-resistant opponent aflame.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '22',
+            question: `The Skills & Powers book introduces subabilities. Which of the two Dexterity subabilities (Balance or Aim) affects the penalties for fighting with two weapons?`,
+            answer: [
+                `Aim.`
+            ],
+            comment: `This makes little sense. According to the ***PHB*** the penalty for attacking with two weapons is reduced by the Reaction Adjustment column. Aim only has Missile Adjustments. The Reaction Adjustment column is tied to the Balance subability score.`,
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '22',
+            question: `Some kits from the ***Complete Barbarian's Handbook*** allow a character to improve Armor Class through levels. Is this Armor Class based on Dexterity?`,
+            answer: [
+                `No, it's based on levels. Perhaps you are wondering whether some of the same things that negate Dexterity-based Armor Class bonuses also negate these class-based bonuses? It depends on the ability. The ravager, for example, has "natural armor," which works like armor, not like Dexterity. The brushrunner, on the other hand, gains an Armor Class bonus from the battle frenzy ability; this works like a Dexterity bonus. DMs must examine each kit and decide how any Armor Class bonus the kit grants is achieved.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '22',
+            question: `Will a ***stoneskin*** spell make a difference in the recipient's appearance?`,
+            answer: [
+                `According to the spell description, no. Nevertheless, having a ***stoneskin*** recipient's skin take on a stony color, texture, or both wouldn't be a bad house rule.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_STONESKIN],
+        },
+        {
+            page_number: '22',
+            question: `What would happen if a character with a *free action* effect were to fall from a great height into a body of water? If the character can move through the water like air, would he or she simply fall the extra distance and take the additional damage at the bottom of the sea floor?`,
+            answer: [
+                `A *free action* effect does not allow the recipient to pass through barriers, nor does it keep the recipient from floating or swimming. The character in your example suffers normal falling damage for the distance fallen to the water. Once in the water, the character has to find a way to leave without drowning.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '22',
+            question: `Sorcerers from the AL-QADIM® setting specialize in two elements, and elemental mages learn one. If the spellpoint rules from the ***Spells & Magic*** book are in play, do both types of character receive extra spell points for being specialists?`,
+            answer: [
+                `The sorcerers of Zakhara are generalists and cannot claim extra spell points for specialization. The elemental mages of Zakhara are specialists, and they gain bonus spell points to spend on spells from the province in which they specialize.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '22',
+            question: `I am confused about how paladins and rangers can spend their spell points under the ***Spells & Magic*** spell point system. The tables imply that members of the two classes receive orisons, which are from the All sphere. As far as I know, neither class gains access to that sphere.`,
+            answer: [
+                `Paladins and rangers do not have access to the All sphere; however, orisons are shown on Table 34 because customized paladin or ranger characters (see Chapter 3) can choose access to the Al. sphere.`
+            ],
+            comment: `Suggestion in #237 to give paladins and rangers access to the All sphere.`,
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '23',
+            question: `Does a ***glassteel*** spell transform glass into transparent metal, or does the spell just make glass very hard? The distinction is important because of item saving throws. For example, suppose a character pokes a ***glassteel*** sword into a black pudding: does the sword save vs. the acid effect like glass (saves on 4) or like metal (saves on a 13)? If the same sword is struck by lightning, wil it save like glass (saves on a 17) or like metal (saves on a 12)?`,
+            answer: [
+                `The ***glassteel*** spell makes glass or crystal as strong and tough as steel, but it does not transform the material into metal. A ***glassteel*** item makes item saving throws as glass or metal, whichever is better.
+`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '23',
+            question: `Warriors with the swashbuckler kit (from the ***Skills & Powers*** book) get an armor bonus when wearing armor no heavier than studded leather. Is this weight- or performance-related?`,
+            answer: [
+                `Performance related. The armor's base Armor Class (AC value before Dexterity or shields) can't be better than Armor Class 7. If the limit were based on weight, a weight limit would have been given.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '23',
+            question: `If an arm is mostly eaten away by green slime, can you use a pearly white spindle ***ioun stone*** to regenerate it, or do you need a ***ring of regeneration***? If you can regenerate it, how long does it take?`,
+            answer: [
+                `A pearly white spindle ***ioun stone*** works just as a ***ring of regeneration***, which can restore lost limbs. (The manner of loss is seldom relevant.) Just like the ***ring***, the ***stone*** can repair only damage that the user has suffered while using the ***stone***. That is, the ***stone*** must be active and circling the character at the time the limb is lost.`,
+                `Here are some sample regeneration times, updated from a much older "Sage Advice" column:`,
+                `
+<table>
+<tr>
+    <td><strong>Appendage Lost</strong></td>
+    <td><strong>Time</strong></td>
+</tr>
+<tr>
+    <td>Finger/Toe</td>
+    <td>30 Minutes</td>
+</tr>
+<tr>
+    <td>Hand/Food</td>
+    <td>1 Hour</td>
+</tr>
+<tr>
+    <td>Forearm</td>
+    <td>2 Hours</td>
+</tr>
+<tr>
+    <td>Arm</td>
+    <td>4 Hours</td>
+</tr>
+<tr>
+    <td>Leg</td>
+    <td>8 Hours</td>
+</tr>
+<tr>
+    <td>Head</td>
+    <td>1 Day</td>
+</tr>
+</table>`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '23',
+            question: `Are ghouls and ghasts affected by holy water? The ***MONSTROUS MANUAL***™ tome does not mention if they are affected.`,
+            answer: [
+                `Yes, undead creatures are susceptible ot holy water unless their descriptions specifically say they are not. If no damage figures for holy water are given, then a direct hit with a vial of holy water inflicts 1d6+1 points of damage, and a splash inflicts 2 points.`
+            ],
+            comment: `This explains why skeletons takes more damage. They are more susceptible to holy water`,
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '23',
+            question: `A heated argument has broken out in my campaign over the definition of a humanoid and what races do and do not fall into that category. A player used a *wish* so that his character could change into any humanoid form of his choosing three times a day. Now, does this just mean humanoids under the definition presented in the table included in the ***potion of human control*** description? Or is a humanoid any creature with two arms, two legs, and a head?`,
+            answer: [
+                `In the 2nd-Edition AD&D game, a "humanoid" is a bipedal, generally human-shaped creature (two arms, two legs, and one head, tail optional) of human size or smaller. Creatures such as ogres and giants may fit the biological or science-fiction definition of humanoid, but these creatures are not humanoids according ot the AD&D game definition of the term.`,
+                `Older versions of the game used a slightly different definition of the term humanoid. For example, in the original AD&D game, humanoids were bipedal, human-shaped creatures of approximately human size that were not humans or demihumans. The category included kobolds, goblins, hobgoblins, orcs, and gnolls. Gnomes, elves, and dwarves were not included because they are demihumans, and neither were humans. You can see traces of the old human/demihuman/humanoid split in the ***potion of human control*** table.`
+            ],
+            comment: `Candidate for human/animal/monster definition`,
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+        },
+        {
+            page_number: '23',
+            question: `The ***College of Wizardry*** supplement has a section about the Language Primeval, which allows certain bonuses to wizards when they cast spells. How would this language impact 10th-level spells?`,
+            answer: [
+                `Characters gain a -5 bonus to the base difficulty when preparing and casting true dweomers with the Language Primeval, The difficulty modifier for being a specialist (see Table 34) is cumulative with this modifier.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS,ATTRIBUTE_SPELL],
+        },
+        {
+            page_number: '23',
+            question: `The penalties for paladins, rangers, and druids who do not act according to their allowed alignments are clear. But what about thieves? If a thief is "saved" by a lawful good character and turns over a new leaf, changing alignment to lawful good, can the character still use thief skills? Obviously, the skills wouldn't be used to commit a crime, but is there anything stopping a thief who becomes lawful good from, for example, finding traps in a dungeon?`,
+            answer: [
+                `Under the current rules, thieves cannot begin play with a lawful good alignment, but there's no reason to assume they could not switch alignments during play (given the proper sequence of campaign events). I don't recommend giving such characters any special penalties.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '23',
+            question: `I picked up the ***Scarlet Brotherhood*** expansion and have some questions about the revised monk. What THAC0 table do they use? What saving throw category do they use? Do they qualify for exceptional Strength? Are they able to use "cleric only" items?`,
+            answer: [
+                `Monks use priest THAC0 and saving throws. They are not eligible for exceptional Strength. They can use thief-only magical items and items not restricted by class.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '23-24',
+            question: `s a living wall an undead creature? Can it be turned? Does it suffer the same damage from a ***wand of illumination*** as an undead creature?`,
+            answer: [
+                `Living walls are not undead per se; they're constructs, somewhat like flesh golems. It's fine, however, to assume that they are "unclean" and to make them susceptible to damage (just like undead creatures) from a ***wand of illumination***.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '24',
+            question: `What is the effect on an individual who is caught inside ***Daern's instant fortress*** when it shrinks back to its compact size? Is the creature trapped in an extra-dimensional space, crushed in the shrinking, or what?`,
+            answer: [
+                `The individual will be physically expelled from the ***fortress*** in a random (and potentially painful) direction. If there is no room to eject the individual, the ***fortress*** cannot shrink.`
+            ],
+            attributes: [ATTRIBUTE_2E],
+        },
+        {
+            page_number: '24',
+            question: `Since half-elves are allowed to be specialty priests of Mystra (dweomerkeepers), are they allowed to retain the ability to multiclass? For example, can half-elves be dweomerkeeper/mages?`,
+            answer: [
+                `Mystra is primarily a human deity and her specialty priests—even the occasional elf or half-elf—are single classed. In general, once a character becomes a specialty priest, the character must obey all requirements and restrictions that come with the priesthood, no matter what options might otherwise be open to members of the character's race.
+`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '24',
+            question: `I was wondering whether priests of Yondalla (from the ***Demihuman Deities*** book) can use the spells of Arvoreen's priests, and vice versa? Are the spells of other deities open to their fellow pantheon members? I can see how that would be difficult considering the numerous deities of the human pantheon, but ***Demihuman Deities*** specifically talks about how the elven and halfling pantheons are close and very familial.`,
+            answer: [
+                `According to page 21 of ***Faiths & Avatars***, the spells of any particular priesthood are available only to that priesthood. In makes no difference how chummy the deity might be with another deity. Note that some spells are specific to more than one priesthood; if this is the case, however, it will be so noted in the description of each priesthood.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '24',
+            question: `Can a dweomerkeeper (or any other priest for that matter) research a priestly version of a wizard spell? How about a spell belonging to specialty priests of another deity? It seems that, if Mystra can cast these spells, her specialty priests should at least have a chance to research a version of them.`,
+            answer: [
+                `There's no rule against priests researching wizard spells, but I don't recommend it. If you allow it as a DM, all priests should be able to do so, not just dweomerkeepers. No priest can successfully research spells that are exclusive ot another religion (see previous question). It's true that Mystra, as the goddess of magic in the FORGOTTEN REALMS setting, has considerable personal spellcasting power. She does not (or perhaps cannot) share that ability with her priests.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '24',
+            question: `Why, oh why, do dwarves now stink at turning undead? In the ***Demihuman Deities*** book, the priests of dwarven gods cannot turn undead until 7th level, and then only at four levels lower than their actual level. I cannot think of any reason for this. What was the reason?`,
+            answer: [
+                `Actually, dwarves have not suddenly gotten worse at turning undead, at least not in the FORGOTTEN REALMs campaign. The ***Demihuman Deities*** rules give dwarven priests better turning abilities than those presented in ***Dwarves Deep*** (the previous definitive text on dwarves in the Realms).`,
+                `Dwarven deities just aren't terribly concerned about granting the turn undead ability. Note that many dwarven specialty priests don't have any undead turning ability at all. (Check each specialty priest description for details.) Dwarven clerics have the 7th-level limitation as you noted but also gain a +2 attack and damage bonus when fighting undead. (See the Dwarven Priests section on page 185 of ***Demihuman Deities***.)`
             ],
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
         },
