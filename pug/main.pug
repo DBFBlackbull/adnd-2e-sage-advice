@@ -60,9 +60,13 @@ style.
         padding: 0 40px;
     }
 
-    .attributes {
+    .content-attributes {
         display: block;
         padding-top: 5px;
+    }
+
+    .hidden {
+        display: none;
     }
 
     div {
@@ -74,9 +78,55 @@ style.
     h3 {
         font-weight: normal;
         margin-block-start: 0.2em;
+        font-style: italic;
     }
 
 script.
+    function hideForeword() {
+        let main = document.getElementById('main');
+        let headings = main.querySelectorAll('h2,h3');
+        for (heading of headings) {
+            heading.classList.toggle('hidden');
+        }
+    }
+
+    function filterAttributes() {
+        let elements = document.getElementsByClassName('attribute');
+        let activeAttributes = []
+        for (let item of elements) {
+            if (item.checked) {
+                activeAttributes.push(item.value);
+            }
+        }
+
+        let contentSections = document.getElementsByClassName('sage-advice');
+        for (let contentSection of contentSections) {
+            let allHidden = true;
+            let contentElements = contentSection.querySelectorAll('p');
+            for (let contentElement of contentElements) {
+                if (activeAttributes.length === 0) {
+                    contentElement.classList.remove('hidden');
+                    allHidden = false;
+                    continue;
+                }
+
+                let contentAttributes = contentElement.querySelector('.content-attributes');
+                if (activeAttributes.some(a => contentAttributes.innerText.includes(a))) {
+                    contentElement.classList.remove('hidden');
+                    allHidden = false;
+                } else {
+                    contentElement.classList.add('hidden');
+                }
+            }
+
+            if (allHidden) {
+                contentSection.classList.add('hidden');
+            } else {
+                contentSection.classList.remove('hidden');
+            }
+        }
+    }
+
     function copyPlainText(id) {
         // Get the text field
         let element = document.getElementById(id);
@@ -156,21 +206,25 @@ head
 
 h1(style="text-align: center;") AD&D 2nd Edition Corrections, Errata, and Suggestions
 // Sidebar
-div(class="sidebar")
+div(id="sidebar" class="sidebar")
+    h2 Visual settings
+    div
+        input(id="hide-foreword" type="checkbox" onchange="hideForeword()")
+        | Hide foreword and epilogue
     h2 Attributes
     each attribute, _ in attributes
         div
-            input(type="checkbox")
+            input(type="checkbox" class="attribute" value=attribute onchange="filterAttributes()")
             | !{attribute}
 
-div(class="main")
+div(id="main" class="main")
     div(style="text-align: center;")
         | Search
         input(type="text")
         button test
 
     each magazine, _ in dragonMagazines
-        div
+        div(class="sage-advice")
             h2 Sage Advice ##{magazine.issue_number}, #{magazine.publication_month} #{magazine.publication_year}
             h3 !{formatInput(magazine.foreword, magazine.issue_number, 'foreword')}
             each advice, index in magazine.sage_advice
@@ -202,4 +256,6 @@ div(class="main")
                                 br
                                 img(src="../img/" + advice.image)
                     br
-                    span(class="attributes") Attributes: !{advice.attributes.join(", ")}
+                    span(class="content-attributes") Attributes: !{advice.attributes.join(", ")}
+            if magazine.epilogue
+                h3 !{formatInput(magazine.epilogue, magazine.issue_number, 'epilogue')}

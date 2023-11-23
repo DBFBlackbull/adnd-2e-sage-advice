@@ -1533,7 +1533,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Generally, assuming a new form counts as an action and takes three segments (+ 3 initiative modifier). The first change in form is usually considered part of the casting time for ***polymorph self*** and ***shape change*** spells. Most DMs allow protective devices to work even on ***polymorphed*** or ***shape changed*** creatures, and most DMs I know ignore the clothing-and-two-items restriction for druids and allow all the druids equipment to change with him.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_TURN_UNDEAD],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_TURN_UNDEAD],
         },
         {
             page_number: '14',
