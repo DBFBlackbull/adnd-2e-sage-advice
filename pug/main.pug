@@ -131,7 +131,7 @@ script.
         let title = text.slice(0, index);
         let rest = text.slice(index+1);
 
-        let finalText = title + '\n\n>' + rest + '\n\n&#x200B;';
+        let finalText = `${title}\n\n>${rest}`;
 
         // Copy the text inside the text field
         navigator.clipboard.writeText(finalText);
