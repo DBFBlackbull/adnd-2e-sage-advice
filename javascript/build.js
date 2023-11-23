@@ -6,7 +6,7 @@ const jsFolder = path.join(sourceFolder, 'javascript');
 const htmlFolder = path.join(sourceFolder, 'html');
 const pugFolder = path.join(sourceFolder, 'pug');
 
-const dragonMagazines = require(path.join(jsFolder, 'sage-advice.js'));
+const content = require(path.join(jsFolder, 'sage-advice.js'));
 
-let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {pretty: true, dragonMagazines: dragonMagazines});
+let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {pretty: true, dragonMagazines: content.dragonMagazines, attributes: content.attributes, synonyms: content.synonyms});
 fs.writeFileSync(path.join(htmlFolder,'index.html'), html);

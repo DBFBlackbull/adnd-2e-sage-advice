@@ -1,19 +1,40 @@
 const ATTRIBUTE_1E = '1E';
 const ATTRIBUTE_2E = '2E';
-const ATTRIBUTE_SPELL = 'spell';
-const ATTRIBUTE_RACE = 'race';
-const ATTRIBUTE_CLASS = 'class';
-const ATTRIBUTE_WEAPON = 'weapon';
+const ATTRIBUTE_SPELL = 'Spell';
+const ATTRIBUTE_RACE = 'Race';
+const ATTRIBUTE_CLASS = 'Class';
+const ATTRIBUTE_WEAPON = 'Weapon';
 
-const ATTRIBUTE_TURN_UNDEAD = 'turn undead';
-const ATTRIBUTE_INVISIBILITY = 'invisibility';
-const ATTRIBUTE_BLINDNESS = 'blindness';
-const ATTRIBUTE_DEAFNESS = 'deafness';
-const ATTRIBUTE_SILENCE = 'silence';
-const ATTRIBUTE_DISPEL_MAGIC = 'dispel magic';
-const ATTRIBUTE_STONESKIN = "stoneskin";
-const ATTRIBUTE_HASTE = "haste";
-const ATTRIBUTE_DOT = "continuing damage"
+const ATTRIBUTE_TURN_UNDEAD = 'Turn Undead';
+const ATTRIBUTE_INVISIBILITY = 'Invisibility';
+const ATTRIBUTE_BLINDNESS = 'Blindness';
+const ATTRIBUTE_DEAFNESS = 'Deafness';
+const ATTRIBUTE_SILENCE = 'Silence';
+const ATTRIBUTE_DISPEL_MAGIC = 'Dispel Magic';
+const ATTRIBUTE_STONESKIN = "Stoneskin";
+const ATTRIBUTE_HASTE = "Haste";
+const ATTRIBUTE_DOT = "Continuing Damage"
+
+const ATTRIBUTE_APRIL_FOOLS = 'April Fools';
+
+const ATTRIBUTES = [
+    ATTRIBUTE_1E,
+    ATTRIBUTE_2E,
+    ATTRIBUTE_SPELL,
+    ATTRIBUTE_RACE,
+    ATTRIBUTE_CLASS,
+    ATTRIBUTE_WEAPON,
+    ATTRIBUTE_TURN_UNDEAD,
+    ATTRIBUTE_INVISIBILITY,
+    ATTRIBUTE_BLINDNESS,
+    ATTRIBUTE_DEAFNESS,
+    ATTRIBUTE_SILENCE,
+    ATTRIBUTE_DISPEL_MAGIC,
+    ATTRIBUTE_STONESKIN,
+    ATTRIBUTE_HASTE,
+    ATTRIBUTE_DOT,
+    ATTRIBUTE_APRIL_FOOLS,
+];
 
 // threads / attributes:
 // ranged weapons in melee
@@ -36,8 +57,6 @@ const ATTRIBUTE_DOT = "continuing damage"
 // What is a morning star?
 // Next die after a d20
 // other stuff where I have added a comment
-
-const ATTRIBUTE_APRIL_FOOLS = 'april fools';
 
 const SYNONYMS = [
     ['elf', 'elves'],
@@ -19898,4 +19917,4 @@ DRAGON_MAGAZINES.push({
     ]
 });
 
-module.exports = DRAGON_MAGAZINES;
+module.exports = {dragonMagazines: DRAGON_MAGAZINES, attributes: ATTRIBUTES, synonyms: SYNONYMS};
