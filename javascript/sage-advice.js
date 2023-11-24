@@ -14,6 +14,7 @@ const ATTRIBUTE_DISPEL_MAGIC = 'Dispel Magic';
 const ATTRIBUTE_STONESKIN = "Stoneskin";
 const ATTRIBUTE_HASTE = "Haste";
 const ATTRIBUTE_DOT = "Continuing Damage"
+const ATTRIBUTE_ELVEN_RESISTANCE = "Elven resistance to Sleep and Charm"
 
 const ATTRIBUTE_APRIL_FOOLS = 'April Fools';
 
@@ -21,15 +22,16 @@ const ATTRIBUTES = [
     ATTRIBUTE_1E,
     ATTRIBUTE_2E,
     ATTRIBUTE_SPELL,
-    ATTRIBUTE_RACE,
     ATTRIBUTE_CLASS,
-    ATTRIBUTE_WEAPON,
+    // ATTRIBUTE_RACE,
+    // ATTRIBUTE_WEAPON,
+    ATTRIBUTE_ELVEN_RESISTANCE,
+    ATTRIBUTE_DISPEL_MAGIC,
     ATTRIBUTE_TURN_UNDEAD,
     ATTRIBUTE_INVISIBILITY,
     ATTRIBUTE_BLINDNESS,
     ATTRIBUTE_DEAFNESS,
     ATTRIBUTE_SILENCE,
-    ATTRIBUTE_DISPEL_MAGIC,
     ATTRIBUTE_STONESKIN,
     ATTRIBUTE_HASTE,
     ATTRIBUTE_DOT,
@@ -10426,8 +10428,7 @@ DRAGON_MAGAZINES.push({
                 `The question is an old one, but I received several letters on the topic this month. I would prefer to avoid giving an actual list, because new spells are being added to the game all the time. Elven and half-elven resistance to sleep and charm spells applies to most spells, and spell-like effects that cause the subject to fall asleep or fall under another character's continuing influence. Such effects include: ***charm monster***, ***charm person***, ***charm person or mammal***, ***domination***, ***eyebite*** (charm effect only, the sleep effect works normally on elves and half-elves, as do the fear and sicken effects), ***fire charm***, ***mass charm***, and ***sleep***. Magical devices and creature special attacks that duplicate these spells, such as ***eyes of charming***, the beholder's charm rays, and the vampire's charm gaze also are subject to elven and half-elven resistance. Sleep-inducing breath weapons, such as the brass dragon's sleep gas, are not. Neither are the ***rod of beguiling*** or the ***rod of rulership***; charm effects from a ***staff of commanding*** are.`,
                 `Spells and other effects that merely incapacitate the subjects or that allow only limited control, such as ***hold*** spells, ***hypnosis***, ***suggestion***, ***quest***, and ***geas*** are not subject the eleven or half-eleven resistance. When there is a reasonable doubt, the DM must decide.`
             ],
-            comment: 'This question is repeated in #242 and #271',
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_RACE,ATTRIBUTE_ELVEN_RESISTANCE],
         },
         {
             page_number: '78',
@@ -13719,8 +13720,7 @@ DRAGON_MAGAZINES.push({
                 `Yeah, its an old question, one the Sage has answered before, but here's a better answer: An elf's resistance applies to spells and spell-like effects that allow continuing control over the recipient. These include ***charm person***, ***charm monster***, ***domination***, ***fire charm***, a vampire's charm gaze, a harpy's song, and many others. An elf's resistance does not apply to effects that allow limited control or impose a disability, such as ***command***, ***hold person***, ***suggestion***, ***quest***, or ***geas***. Nor does an elf's resistance prevent outside influences from usurping control of the body, such as ***magic jar***.`,
                 `Any effect that causes the recipient to fall into an enchanted slumber, such as the ***sleep*** spell or the sleep effect of the ***eyebite*** spell, is subject to elven resistance. If an opponent uses a ***command*** or ***suggestion*** spell to induce an elf to fall asleep, the elf does not gain the benefit of his resistance, but the resulting sleep is not "magical" sleep, and the elf can awaken in response to loud noise, general discomfort, or the like.`
             ],
-            comment: `Follow up on #223. Now eyebite sleep is included in the liset`,
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_RACE,ATTRIBUTE_ELVEN_RESISTANCE],
         },
         {
             page_number: '18',
@@ -19509,8 +19509,7 @@ DRAGON_MAGAZINES.push({
                 `As "Sage Advice" has said before, an elf's or half-elf's resistance applies to effects that make the recipient sleep or charm the recipient. In this case, a "charm" is an effect that establishes some sort of continuing control over the recipient, not just a compulsion; ***charm person*** is a charm effect, ***hold person*** and ***suggestion*** are not.`,
                 `Unlike magic resistance, an elf's or half-elf's resistance can apply ot breath weapons and other non spell-like effects.`
             ],
-            comment: `Just like issue #223 and #242`,
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_RACE,ATTRIBUTE_ELVEN_RESISTANCE],
         },
         {
             page_number: '116',
