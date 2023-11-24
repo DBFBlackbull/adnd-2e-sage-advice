@@ -69,10 +69,12 @@ body
             button(onclick="search()") Search
             span(id="results" style="margin-left: 10px;")
             br
+            span(style="font-style: italic;") Use the pipe character "|" to search for multiple terms
+            br
             input(id="radio-any-search-term" type="radio" name="search-type" value="any-search-term" checked)
-            label(for="radio-any-search-term") Match any search-terms
+            label(for="radio-any-search-term") Match any search term
             input(id="radio-all-search-terms" type="radio" name="search-type" value="all-search-terms")
-            label(for="radio-all-search-terms") Match all search-terms
+            label(for="radio-all-search-terms") Match all search terms
 
         each magazine, _ in dragonMagazines
             div(class="sage-advice")

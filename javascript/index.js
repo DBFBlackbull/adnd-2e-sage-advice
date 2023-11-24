@@ -54,7 +54,7 @@ function hideForeword() {
 function getSearchTerms() {
     let query = document.getElementById('search').value;
     if (query.replaceAll(/[- ]/g,'') === '')
-        return [];
+        return null;
 
     let searchTerms = query
         .split('|')
@@ -64,7 +64,7 @@ function getSearchTerms() {
             .replaceAll(/\./g,''))
         .filter(Boolean);
 
-    return searchTerms.map(s => {
+    let expandedSearchTerms = searchTerms.map(s => {
         let set = new Set();
         set.add(s);
         set.add(s.replaceAll(/-/g, ''))
@@ -80,8 +80,17 @@ function getSearchTerms() {
             })
         })
 
-        return Array.from(set);
-    }).flat();
+        return Array.from(set).map(s => `\\W${s}`);
+    });
+
+    if (document.getElementById('radio-any-search-term').checked) {
+        let allTerms = expandedSearchTerms.flat().join('|');
+        return [new RegExp(`(${allTerms})`, 'gi')];
+    }
+
+    return expandedSearchTerms.map(array => {
+        return new RegExp(`(${array.join('|')})`, 'gi')
+    })
 }
 
 function getAttributes() {
@@ -97,13 +106,10 @@ function getAttributes() {
 }
 
 function search() {
-    let searchTerms = getSearchTerms();
+    let searchRegexes = getSearchTerms();
     let activeAttributes = getAttributes();
 
-    let searchRegex;
-    if (searchTerms.length > 0) {
-        searchRegex = new RegExp(`(${searchTerms.join('|')})`,'gi');
-    }
+    console.log(searchRegexes);
 
     let attributeRegex;
     if (activeAttributes.length > 0) {
@@ -117,7 +123,7 @@ function search() {
         let hiddenCounter = 0;
         let paragraphs = sageAdvice.querySelectorAll('p');
         for (let paragraph of paragraphs) {
-            if (!attributeRegex && !searchRegex) {
+            if (!attributeRegex && !searchRegexes) {
                 paragraph.classList.remove('hidden');
                 continue;
             }
@@ -131,12 +137,12 @@ function search() {
             paragraph.classList.remove('hidden');
             results++;
 
-            if (searchRegex) {
+            if (searchRegexes) {
                 let searchMatch = false;
 
                 let contentTexts = paragraph.querySelectorAll('.question,.answer');
                 for (let text of contentTexts) {
-                    searchMatch = searchMatch || text.innerText.match(searchRegex);
+                    searchMatch = searchMatch || searchRegexes.every(reg => text.innerText.match(reg));
                 }
 
                 if (searchMatch) {
@@ -156,10 +162,10 @@ function search() {
         }
     }
 
-    if (results > 0) {
-        document.getElementById('results').innerText = `${results} match${results === 1 ? '' : 'es'}`;
-    } else {
+    if (!attributeRegex && !searchRegexes) {
         document.getElementById('results').innerText = '';
+    } else {
+        document.getElementById('results').innerText = `${results} match${results === 1 ? '' : 'es'}`;
     }
 }
 
