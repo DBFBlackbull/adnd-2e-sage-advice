@@ -41,221 +41,71 @@
         return `${preview}?${github}#${id}`
     }
 
-style.
-    body {
-        margin: 0;
-    }
-    .sidebar {
-        height: 100%; /* Full-height: remove this if you want "auto" height */
-        width: 200px; /* Set the width of the sidebar */
-        position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-        z-index: 1; /* Stay on top */
-        top: 0; /* Stay at the top */
-        left: 0;
-        overflow-x: hidden; /* Disable horizontal scroll */
-        background: lightgray;
-    }
-    .main{
-        margin-left: 200px; /* Same as the width of the sidebar */
-        padding: 0 40px;
-    }
-
-    .content-attributes {
-        display: block;
-        padding-top: 5px;
-    }
-
-    .hidden {
-        display: none;
-    }
-
-    div {
-        padding: 8px;
-    }
-    h2 {
-        margin-block-end: 0;
-    }
-    h3 {
-        font-weight: normal;
-        margin-block-start: 0.2em;
-        font-style: italic;
-    }
-
-script.
-    function hideForeword() {
-        let main = document.getElementById('main');
-        let headings = main.querySelectorAll('h2,h3');
-        for (heading of headings) {
-            heading.classList.toggle('hidden');
-        }
-    }
-
-    function filterAttributes() {
-        let elements = document.getElementsByClassName('attribute');
-        let activeAttributes = []
-        for (let item of elements) {
-            if (item.checked) {
-                activeAttributes.push(item.value);
-            }
-        }
-
-        let contentSections = document.getElementsByClassName('sage-advice');
-        for (let contentSection of contentSections) {
-            let allHidden = true;
-            let contentElements = contentSection.querySelectorAll('p');
-            for (let contentElement of contentElements) {
-                if (activeAttributes.length === 0) {
-                    contentElement.classList.remove('hidden');
-                    allHidden = false;
-                    continue;
-                }
-
-                let contentAttributes = contentElement.querySelector('.content-attributes');
-                if (activeAttributes.some(a => contentAttributes.innerText.includes(a))) {
-                    contentElement.classList.remove('hidden');
-                    allHidden = false;
-                } else {
-                    contentElement.classList.add('hidden');
-                }
-            }
-
-            if (allHidden) {
-                contentSection.classList.add('hidden');
-            } else {
-                contentSection.classList.remove('hidden');
-            }
-        }
-    }
-
-    function copyPlainText(id) {
-        // Get the text field
-        let element = document.getElementById(id);
-        let innerHTML = element.innerHTML;
-        innerHTML = innerHTML.replaceAll(/<span class="no-copy">(.|\n)*?<\/span>/g, '')
-            .replaceAll(/<br>/g, '\n');
-
-        // Get rid of the rest of the HTML tags
-        let tempElement = document.createElement('div');
-        tempElement.innerHTML = innerHTML;
-        let text = tempElement.innerText;
-
-        // Copy the text inside the text field
-        navigator.clipboard.writeText(text);
-    }
-
-    function copyRichText(id) {
-        // Get the text field
-        let element = document.getElementById(id);
-        let innerHTML = element.innerHTML;
-        innerHTML = innerHTML.replaceAll(/<span class="no-copy">(.|\n)*?<\/span>/g, '');
-
-        // Copy the text inside the text field
-        const blob = new Blob([innerHTML], {type: 'text/html'});
-        const clipboardItem = new window.ClipboardItem({'text/html': blob});
-        navigator.clipboard.write([clipboardItem]);
-    }
-
-    function copyDiscordText(id) {
-        // Get the text field
-        let element = document.getElementById(id);
-        let innerHTML = element.innerHTML;
-        innerHTML = innerHTML.replaceAll(/<br>/g, '\n')
-            .replaceAll(/<\/?strong>/g,'**')
-            .replaceAll(/<\/?em>/g,'*');
-
-        let tempElement = document.createElement('div');
-        tempElement.innerHTML = innerHTML;
-
-        // Get rid of the rest of the HTML tags
-        let title = tempElement.getElementsByClassName('title')[0].innerText;
-        let question = tempElement.getElementsByClassName('question')[0].innerText
-            .replaceAll(/\*\*\*/g, '*');
-        let answer = tempElement.getElementsByClassName('answer')[0].innerText;
-
-        let formattedText = `${title}\n> ${question}\n> ${answer}`;
-        // Copy the text inside the text field
-        navigator.clipboard.writeText(formattedText);
-    }
-
-    function copyRedditText(id) {
-        // Get the text field
-        let element = document.getElementById(id);
-        let innerHTML = element.innerHTML;
-        innerHTML = innerHTML.replaceAll(/<span class="no-copy">(.|\n)*?<\/span>/g, '')
-            .replaceAll(/<br>/g, '  \n')
-            .replaceAll(/<\/?strong>/g, '**')
-            .replaceAll(/<\/?em>/g, '*');
-
-        // Get rid of the rest of the HTML tags
-        let tempElement = document.createElement('div');
-        tempElement.innerHTML = innerHTML;
-        let text = tempElement.innerText;
-
-        let index = text.indexOf('\n');
-        let title = text.slice(0, index);
-        let rest = text.slice(index+1);
-
-        let finalText = `${title}\n\n>${rest}`;
-
-        // Copy the text inside the text field
-        navigator.clipboard.writeText(finalText);
-    }
+link(rel="stylesheet" href="../style/index.css")
+script(src="../javascript/index.js")
 
 head
     meta(charset="UTF-8")
-
-h1(style="text-align: center;") AD&D 2nd Edition Corrections, Errata, and Suggestions
-// Sidebar
-div(id="sidebar" class="sidebar")
-    h2 Visual settings
-    div
-        input(id="hide-foreword" type="checkbox" onchange="hideForeword()")
-        | Hide foreword and epilogue
-    h2 Attributes
-    each attribute, _ in attributes
+body
+    // Sidebar
+    div(id="sidebar" class="sidebar")
+        h2 Visual settings
         div
-            input(type="checkbox" class="attribute" value=attribute onchange="filterAttributes()")
-            | !{attribute}
+            input(id="hide-foreword" type="checkbox" onchange="hideForeword()")
+            | Hide foreword and epilogue
+        h2 Attributes
+        each attribute, _ in attributes
+            div
+                input(type="checkbox" class="attribute" value=attribute onchange="search()")
+                | !{attribute}
 
-div(id="main" class="main")
-    div(style="text-align: center;")
-        | Search
-        input(type="text")
-        button test
+    div(id="main" class="main")
+        h1(style="text-align: center;")
+            | AD&D 2nd Edition
+            br
+            | Corrections, Errata, and Suggestions
+        div(style="text-align: center;")
+            input(id="search" type="text")
+            button(onclick="search()") Search
+            span(id="results" style="margin-left: 10px;")
+            br
+            input(id="radio-any-search-term" type="radio" name="search-type" value="any-search-term" checked)
+            label(for="radio-any-search-term") Match any search-terms
+            input(id="radio-all-search-terms" type="radio" name="search-type" value="all-search-terms")
+            label(for="radio-all-search-terms") Match all search-terms
 
-    each magazine, _ in dragonMagazines
-        div(class="sage-advice")
-            h2 Sage Advice ##{magazine.issue_number}, #{magazine.publication_month} #{magazine.publication_year}
-            h3 !{formatInput(magazine.foreword, magazine.issue_number, 'foreword')}
-            each advice, index in magazine.sage_advice
-                - let questionNumber = index + 1
-                - let id = `${magazine.issue_number}-${questionNumber}`
-                p(id=id)
-                    span(class='title') Sage Advice ##{magazine.issue_number} (#{magazine.publication_month} #{magazine.publication_year}) p. #{advice.page_number}, Question:#{questionNumber}
-                    span(class="no-copy")
-                        button(onclick=`copyPlainText('${id}')` title="Copy plain text") 📄
-                        button(onclick=`copyRichText('${id}')` title="Copy rich text") 📋
-                        button(onclick=`copyDiscordText('${id}')` title="Copy discord text")
-                            image(src="../img/icons8-discord-16.png")
-                        button(onclick=`copyRedditText('${id}')` title="Copy reddit text")
-                            image(src="../img/icons8-reddit-16.png")
-                        | &ensp;
-                        a(href=anchorLink(id)) 🔗
-                    br
-                    span(class="question")
-                        strong !{formatInput(advice.question, magazine.issue_number, questionNumber)}
-                    br
-                    span(class="answer") &emsp;!{formatInput(advice.answer, magazine.issue_number, questionNumber)}
-                    if advice.image
+        each magazine, _ in dragonMagazines
+            div(class="sage-advice")
+                h2 Sage Advice ##{magazine.issue_number}, #{magazine.publication_month} #{magazine.publication_year}
+                h3 !{formatInput(magazine.foreword, magazine.issue_number, 'foreword')}
+                each advice, index in magazine.sage_advice
+                    - let questionNumber = index + 1
+                    - let id = `${magazine.issue_number}-${questionNumber}`
+                    p(id=id)
+                        span(class='title') Sage Advice ##{magazine.issue_number} (#{magazine.publication_month} #{magazine.publication_year}) p. #{advice.page_number}, Question:#{questionNumber}
                         span(class="no-copy")
-                            if Array.isArray(advice.image)
-                                each img, _ in advice.image
+                            button(onclick=`copyPlainText('${id}')` title="Copy plain text") 📄
+                            button(onclick=`copyRichText('${id}')` title="Copy rich text") 📋
+                            button(onclick=`copyDiscordText('${id}')` title="Copy discord text")
+                                image(src="../img/icons8-discord-16.png")
+                            button(onclick=`copyRedditText('${id}')` title="Copy reddit text")
+                                image(src="../img/icons8-reddit-16.png")
+                            | &ensp;
+                            a(href=anchorLink(id)) 🔗
+                        br
+                        span(class="question")
+                            strong !{formatInput(advice.question, magazine.issue_number, questionNumber)}
+                        br
+                        span(class="answer") &emsp;!{formatInput(advice.answer, magazine.issue_number, questionNumber)}
+                        if advice.image
+                            span(class="no-copy")
+                                if Array.isArray(advice.image)
+                                    each img, _ in advice.image
+                                        br
+                                        img(src="../img/" + img)
+                                else
                                     br
-                                    img(src="../img/" + img)
-                            else
-                                br
-                                img(src="../img/" + advice.image)
-                    br
-                    span(class="content-attributes") Attributes: !{advice.attributes.join(", ")}
-            if magazine.epilogue
-                h3 !{formatInput(magazine.epilogue, magazine.issue_number, 'epilogue')}
+                                    img(src="../img/" + advice.image)
+                        span(class="content-attributes no-copy") Attributes: !{advice.attributes.join(", ")}
+                if magazine.epilogue
+                    h3 !{formatInput(magazine.epilogue, magazine.issue_number, 'epilogue')}

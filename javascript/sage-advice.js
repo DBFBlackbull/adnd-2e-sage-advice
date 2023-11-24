@@ -58,38 +58,6 @@ const ATTRIBUTES = [
 // Next die after a d20
 // other stuff where I have added a comment
 
-const SYNONYMS = [
-    ['elf', 'elves'],
-    ['dwarf', 'dwarves'],
-    ['demihuman', 'demi-human'],
-    ['multiclass', 'multi-class'],
-    ['dualclass', 'dual-class'],
-    ['player\'s handbook', 'players handbook', 'phb', 'ph'],
-    ['dungeon master\'s guide', 'dungeon master guide', 'dmg'],
-    ['system shock', 'system-shock'],
-    ['at-will', 'at will'],
-    ['saving throw', 'saving-throw'],
-    ['spellbook', 'spell-book', 'spell book'],
-    ['spellcasting', 'spell-casting', 'spell casting'],
-    ['extradimentional','extra-dimentional'],
-    ['levitate', 'levitation', 'levitating'],
-    ['magic-resistance', 'magic resistance', 'magic-resistant', 'magic resistant'],
-    ['hit point', 'hit-point'],
-    ['demiplane', 'demi-plane'],
-    ['the complete psionics handbook', 'complete psionics handbook', 'the complete book of psionics', 'Complete Psionicist Handbook', 'Complete Psionicist\'s Handbook','tcph', 'cph', 'cphb'],
-    ['Complete Sha\'ir\'s Handbook', 'CSH'],
-    ['combat & tactics', 'combat and tactics', 'c&t'],
-    ['skills & powers', 'skills and powers', 's&p'],
-    ['antimagic', 'anti-magic'],
-    ['tome of magic', 'tom'],
-    ['L&L', 'Legends & Lore'],
-    ['chainmail', 'chain mail'],
-    ['morningstar', 'morning star'],
-    ['smokepowder', 'smoke powder'],
-    ['longbow', 'long bow'],
-    ['shortbow', 'short bow'],
-];
-
 const DRAGON_MAGAZINES = [];
 DRAGON_MAGAZINES.push({
     issue_number: '148',
@@ -1946,7 +1914,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `An ***ice storm*** will affect a creature protected by a ***stoneskin*** spell. Although the hailstones are projectiles of sorts, they are a magical attack just as are ***magic missiles***. An ***ice storm*** or other attack that damages the protected creature does not end the ***stoneskin*** spell, as the dweomer lasts until it foils a physical attack (see ***Unearthed Arcana*** page 57).`
             ],
-            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_1E, ATTRIBUTE_SPELL,ATTRIBUTE_STONESKIN],
         },
         {
             page_number: '94',
@@ -19917,4 +19885,4 @@ DRAGON_MAGAZINES.push({
     ]
 });
 
-module.exports = {dragonMagazines: DRAGON_MAGAZINES, attributes: ATTRIBUTES, synonyms: SYNONYMS};
+module.exports = {dragonMagazines: DRAGON_MAGAZINES, attributes: ATTRIBUTES};
