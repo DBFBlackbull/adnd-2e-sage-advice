@@ -21,6 +21,9 @@ const ATTRIBUTE_MONSTER_ABILITY_SCORES = "Monster Ability Scores"
 const ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS = "High Intelligence illusion immunity"
 const ATTRIBUTE_MORNING_STAR = "What is a morning star?"
 const ATTRIBUTE_D30 = "What comes after a d20?"
+const ATTRIBUTE_BOWS_AND_STRENGTH = "Bows and Strength bonus"
+const ATTRIBUTE_PRONOUNCE_DROW = 'Pronouncing "drow"'
+const ATTRIBUTE_PRONOUNCE_FLIND = 'Pronouncing "flind"'
 
 const ATTRIBUTE_APRIL_FOOLS = 'April Fools';
 
@@ -34,8 +37,9 @@ const ATTRIBUTES = [
     ATTRIBUTE_ELVEN_RESISTANCE,
     ATTRIBUTE_GNOME_BASTARD_SWORD,
     ATTRIBUTE_RANGED_IN_MELEE,
-    ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS,
+    ATTRIBUTE_BOWS_AND_STRENGTH,
     ATTRIBUTE_MORNING_STAR,
+    ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS,
     ATTRIBUTE_D30,
     ATTRIBUTE_DISPEL_MAGIC,
     ATTRIBUTE_TURN_UNDEAD,
@@ -46,11 +50,12 @@ const ATTRIBUTES = [
     ATTRIBUTE_STONESKIN,
     ATTRIBUTE_HASTE,
     ATTRIBUTE_DOT,
+    ATTRIBUTE_PRONOUNCE_DROW,
+    ATTRIBUTE_PRONOUNCE_FLIND,
     ATTRIBUTE_APRIL_FOOLS,
 ];
 
 // threads / attributes:
-// bows and strength
 // thief backstab
 // dual class in the same group
 // scroll limitations,
@@ -64,10 +69,186 @@ const ATTRIBUTES = [
 // Pantheon of the month
 // humanoid / animal / monster definitions
 // polymorph possibilities
-// Next die after a d20
 // other stuff where I have added a comment
 
 const DRAGON_MAGAZINES = [];
+DRAGON_MAGAZINES.push({
+    issue_number: '142',
+    publication_year: '1989',
+    publication_month: 'February',
+    foreword: `This month, "Sage Advice" covers a potpourri of questions on various exotic topics related to the AD&D® game — from tarrasques to spaceships, and from psionics to the sizes of bags and boxes.`,
+    sage_advice: [
+        {
+            page_number: '10',
+            question: `How long will a dragon stay subdued?`,
+            answer: [
+                `A dragon remains subdued indefinitely, as long as the subduing party clearly has the upper hand. An unintelligent dragon whose alignment is not diametrically opposed to its captor's alignment and which is weaker than its captor is unlikely to attempt escape as long as it is treated well (given its own treasure hoard, fed well, disciplined firmly and frequently, and allowed a small measure of freedom). Intelligent, spell-using dragons are disloyal even if relatively weak and dangerous if they believe they are as strong or stronger than their captors. Such a dragon spends every moment scheming to escape or to slay its captor and usurp his holdings.`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '10',
+            question: `Is a *wish* necessary to kill a tarrasque? Is it necessary to reduce it to -30 hp? If the *wish* is necessary, does the creature get a saving throw? Does the user get moved to a time when the tarrasque is dead or nonexistent (as suggested in the ***Players Handbook***)? The tarrasque's attacks are listed as 1-12/1-2/2-24/5-50/1-10/10; isn't the 1-2 attack a bit weak for this monster? The description states that the creature can rush only once per turn; does this prevent the thrusting attack of its horns?`,
+            answer: [
+                `The tarrasque is not slain until it is reduced to -30 hp and a wish is used. The wisher suffers no ill effects, and there is no saving throw given to the tarrasque. The "1-2". attack is a misprint; it should read 1-12 (the two 1-12 attacks are from the creature's forelimbs). The creature can attack with its horns at any time; the only rush effect is an extra 6" of movement.`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '10',
+            question: `Is the hit-point rating for the hang man tree correct? At 61 hp a year, a 151-year-old tree would have 9,211 hp and a one-year-old tree would have a minimum of 69 hp.`,
+            answer: [
+                `This is a misprint; the hit-dice rating is 6, + 1 hp per year. A 151-year-old tree would have 6 HD + 151 hp.`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '10',
+            question: `What does the beholder's anti-magic ray do?`,
+            answer: [
+                `It functions as an ***anti-magic shell*** in ray form. That is, all magic, from spells or magical items, ceases to function while within the ray.`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '10',
+            question: `Why do demon princes hide their amulets on the Prime Material plane where PCs can find them? Why don't they keep them on the Abyss, out of a PC's reach?`,
+            answer: [
+                `Demon princes hide their amulets all over the multiverse, not just on the Prime Material, since they are as much at risk in the Abyss as anywhere else from both plane-traveling adventurers and other demons.`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '10',
+            question: `I believe there is an AD&D module that takes place aboard a spaceship. Which one is it?`,
+            answer: [
+                `The module is entitled ***S3 Expedition to the Barrier Peaks***. It has been out of print for some time but might still be available through your local retailer. This module was reprinted with three others as part of S1-4 ***Realms of Horror***, now in print.`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '10',
+            question: `Is the Temple of Elemental Evil bigger than the ***Players Handbook***?`,
+            answer: [
+                `Maybe. The entire Temple of Elemental Evil, with its attached dungeons and outerworks, is considerably larger than a whole case of ***Players Handbooks***. On the other hand, T1-4 ***The Temple of Elemental Evil*** is 128 pages long, but so is the ***Players Handbook***. While the latter sports a hard cover, the former comes with a booklet of maps; neither feature increases the page count, and the two product's shipping weights are about the same.
+`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '10',
+            question: `How are psionic strength, psionic points, defense points, and attack points related? How does the expenditure of attack and defense points reduce psionic strength?`,
+            answer: [
+                `Psionic strength is determined when a character is created. A character has a maximum of one attack and one defense point per point of psionic strength. Psionic strength is a constant, representing the character's maximum psychic potential and his relative power in psionic combat; it is never reduced except through the reduction of ability scores or similar mishaps. Attack and defense points represent the finite amount of psychic energy available to the character at any given time. Note that the use of psionic abilities require both attack and defense points (see the ***Players Handbook***, page 111).
+`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '10',
+            question: `When a character acquires a psionic discipline that uses a level of mastery, is the effective level of mastery equal to the character's current level?`,
+            answer: [
+                `No. When a character first acquires a discipline, the level of mastery is level one, the character's experience level notwithstanding. Thereafter, the level of mastery increases each time the character gains a new level.`
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '10',
+            question: `Is the thief's *hear noise* ability continuous, or does it require concentration? Is the ability strictly limited to listening at doorways?`,
+            answer: [
+                `The *hear noise* ability is neither automatic nor continuous. The thief must quietly concentrate on hearing noise; if he is wearing a helmet, he must take it off. A thief is not limited to listening at doors; he can hear faint sounds from any source.`
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_CLASS],
+        },
+        {
+            page_number: '10',
+            question: `Where are the weapon proficiency rules in the AD&D game? The index in the ***Dungeon Masters Guide*** is wrong.`,
+            answer: [
+                `The index is right. The page numbers in the index are printed in two type faces (as explained on page 228); the boldface entries refer to ***DMG*** page numbers, and the regular entries refer to ***Players Handbook*** page numbers. The entry for "Weapons, Proficiency" is given as pages 36-37 (note the regular type, indicating the ***Players Handbook***). Additional proficiency rules can be found in ***Unearthed Arcana***, pages 18 and 26.`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '10',
+            question: `What does "c" mean? It's most often used in front of a weapon's length in the ***Players Handbook*** (page 39).`,
+            answer: [
+                `This an abbreviation for the Latin word *circa*, or "about." This is used to indicate that a number or date is approximate.`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '10',
+            question: `How do you pronounce "drow"?`,
+            answer: [
+                `It rhymes with "cow."`
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_PRONOUNCE_DROW],
+        },
+        {
+            page_number: '10+71',
+            question: `In the AD&D game, do gems and jewelry have to be sold before a character can get experience for them? The ***DMG*** seems to indicate that they must be converted into gold pieces first. The ***DMG*** also refers to conversion into a transportable medium before experience is awarded. What constitutes a transportable medium? Do magical items have to be retained and used before experience is awarded for them?`,
+            answer: [
+                `Gems and jewels don't have to be sold, but the experience value of these items is equal to their sale value in gold pieces. The ***DMG*** says treasure must be removed from the dungeon and converted into a transportable medium (i.e., carried on the character's person) or stored in a character's stronghold (residence). That is, treasure must be taken to a safe place, appraised, and assigned to PCs before any experience is awarded for it. A transportable medium can be anything the PC finds convenient. Likewise, experience is awarded for items that are added to a character's hoard, use notwithstanding. No experience is awarded for an item sold for cash or traded for goods or services.`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '71',
+            question: `How many gold pieces can the various containers listed in the AD&D game rules hold?`,
+            answer: [
+                `The following unofficial capacities have been extrapolated from the ***DMG*** encumbrance list. They will give you something to work with for the time being:`,
+                ``,
+                `Backpack: 400 gp`,
+                `Belt pouch, large: 200 gp`,
+                `Belt pouch, small: 100 gp`,
+                `Boat: See the ***Wilderness Survival Guide***, page 44`,
+                `Box, large: 200 gp`,
+                `Box, small: 50 gp`,
+                `Chest, wooden: 15 gp per gp of encumbrance (see the ***DMG***, page 225)`,
+                `Chest, iron: 3 gp per gp of encumbrance (see the ***DMG***, page 225)`,
+                `Land vehicles: See the ***WSG***, page 33`,
+                `Sack, large: 400 gp`,
+                `Sack, small: 100 gp`,
+                `Saddlebag, large: 1,000 gp`,
+                `Saddlebag, small: 250 gp`,
+                `Ship: 900 gp/hull point (see the ***DMG***, page 54)`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '71',
+            question: `What happens when a character is reduced to 1 hp?`,
+            answer: [
+                `Nothing. Characters in the D&D and AD&D games don't have to worry until they are reduced to zero hit points (or less in the AD&D game; see the ***DMG***, page 82).`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '71',
+            question: `What does a one-way door look like when viewed from the wrong side?`,
+            answer: [
+                `This is up the DM. In many campaigns, the "wrong" side of a one-way door looks like a normal door. In other campaigns, they can't be detected at all. In still others, they can't been seen, but they can be located by touch or tapping`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+        {
+            page_number: '71',
+            question: `What exactly is a composite bow? Why should a character buy one? In the AD&D game, a long bow costs less and shoots farther than even a long composite bow.`,
+            answer: [
+                `A composite bow is made up of layers or wood, bone, and sinew (this is the "composite"). They are more difficult to make than a one-piece bow (often called a self bow), hence the greater cost. Composite bows offer two advantages over self bows: They are more powerful for their size; a long self bow is longer than a man is tall; a long composite bow has about the same range but is only about 4' long. Composite bows can be specially built to allow for strength bonuses. One local campaign figures the cost of such special bows as equal to the base cost for the bow plus an equal amount per bonus point of damage, so that a bow allowing + 1 hp damage for a 16 or 17 strength is twice normal cost, a bow allowing +2 hp damage (18 strength) is triple the cost, etc.`
+            ],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_BOWS_AND_STRENGTH],
+        },
+        {
+            page_number: '71',
+            question: `What is the creature pictured on the cover of the ***Manual of the Planes***?`,
+            answer: [
+                `The creature is an astral dreadnaught, as as-yet undescribed monster that inhabits the Astral plane. Its game statistics may appear in a future DRAGON Magazine.`
+            ],
+            attributes: [ATTRIBUTE_1E],
+        },
+    ]
+});
 DRAGON_MAGAZINES.push({
     issue_number: '148',
     publication_year: '1989',
@@ -7560,7 +7741,7 @@ DRAGON_MAGAZINES.push({
                 `The strength bonus to attack and damage rolls do apply to thrown missiles. A rock dropped or pushed off a ledge, however, is not a thrown missile, no matter how big or small the rock is. To qualify for the bonus, a missile must be propelled solely by a character's muscle power, or by a specially constructed bow. "Sage Advice" previously has recommended that only composite bows should be allowed to grant strength bonuses to missile attacks, but this is not official.`,
             ],
             comment: `The previous Sage Advice referenced here is #142 p. 71 (February 1989), which is just 1 month after the release of the 2E Player's Handbook. The #142 issue clearly tried to help with the 1E version of the rules, so this on is crossing a gab.`,
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON,ATTRIBUTE_BOWS_AND_STRENGTH],
         },
         {
             page_number: '81',
@@ -15010,7 +15191,7 @@ DRAGON_MAGAZINES.push({
     publication_year: '1998',
     publication_month: 'August',
     foreword: `This month, the Sage ponders questions about spells and magical items from the AD&D® game, including the ever irksome ***stoneskin*** spell.`,
-    epilogue: `Skip Williams reports that he wrote the bulk of this months column after helping some friends move into a new home. He imagines that a pair of tentacles might have made the task go faster, especially when wrestling queen-size mattress up and down staircases.`,
+    epilogue: `Skip Williams reports that he wrote the bulk of this month's column after helping some friends move into a new home. He imagines that a pair of tentacles might have made the task go faster, especially when wrestling queen-size mattress up and down staircases.`,
     sage_advice: [
         {
             page_number: '18',
@@ -19183,8 +19364,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Everyone I know pronounces it so that it rhymes with "wind."`
             ],
-            comment: `Is it wind or wind?`,
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PRONOUNCE_FLIND],
         },
         {
             page_number: '115',
@@ -19302,7 +19482,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `It's pronounced like "cow" as in: "How, now, dark drow?" As it happens, the esteemed editor of this fine publication, Dave Gross, insists that any being whose name rhymes with "cow" cannot possibly be as formidable or scary as the drow are, and prefers the "row" pronunciation. I don't find anything particularly scary about a couple of drow out rowing, but there's no accounting for taste (mine or Dave's).`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PRONOUNCE_DROW],
         },
         {
             page_number: '114',
@@ -19596,8 +19776,12 @@ DRAGON_MAGAZINES.push({
                 ` Bonuses or penalties from Strength do not apply to crossbows; note that a crossbow is not a "bow" for the purposes fo this discussion.`,
                 `Penalties from low Strength apply to bows. Characters with Strength scores of 16 to 18 can use any bow and get their Strength bonuses. For Strength scores of 18/01 or higher, a special bow is required. The rules in the ***Player's Handbook*** do not require a composite bow to use the higher Strength bonus, but there is a clarification in the ***Arms & Equipment Guide*** that does require a composite bow. However, the rules in the ***Arms & Equipment Guide*** seem to overlook the rule that says you don't need a special bow to get bonuses for a non-exceptional Strength score. I recommend that you require a composite bow for Strengths of 18/01 or higher. Use the damage bonus as a multiplier for the price. For example, a Strength score of 18/01 allows a damage bonus of +3, so a composite bow for a character that strong would cost triple the normal price. Note that characters with lower Strength scores could still use the bow, but they would not be able to string the bow, and they would have to apply whatever Strength adjustments they would normally be allowed, not what the bow allows.`
             ],
-            comment: `Consistent with issue #204.`,
-            attributes: [ATTRIBUTE_2E],
+            comment: [
+                `The Sage is a bit off here. The ***Arms & Equipment*** placed the text about strength and bows under the heading **Composite Bows**, but the example in the text clearly states a regular long bow, base cost 75 gp (compared to a composite long bow base cost 100 gp) can be made to receive the strength bonus.`,
+                `Furthermore, the fact that the ***A&E Guide*** states you need to add the base price per bonus to damage further indicates that it follows the same outline, made in #142, that follows the same pricing scheme.`,
+                `In the end it is up to the DM on how to handle specially constructed bows.`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON,ATTRIBUTE_BOWS_AND_STRENGTH],
         },
         {
             page_number: '116',
@@ -19672,7 +19856,7 @@ DRAGON_MAGAZINES.push({
                 `The really correct way to pronounce "flind" is "gnoll" (rhymes with roll or role). Too many designers insist on creating new monsters when variants on existing monsters will do.`,
                 `For the record, the name "flind" rhymes with wind (air movement outdoors) and grinned (a smile in the past tense).`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PRONOUNCE_FLIND],
         },
     ]
 });
