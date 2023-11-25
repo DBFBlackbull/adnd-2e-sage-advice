@@ -19,6 +19,7 @@ const ATTRIBUTE_GNOME_BASTARD_SWORD = "Gnomes with Bastard sword"
 const ATTRIBUTE_RANGED_IN_MELEE = "Ranged weapons in melee combat"
 const ATTRIBUTE_MONSTER_ABILITY_SCORES = "Monster Ability Scores"
 const ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS = "High Intelligence illusion immunity"
+const ATTRIBUTE_MORNING_STAR = "What is a morning star?"
 
 const ATTRIBUTE_APRIL_FOOLS = 'April Fools';
 
@@ -33,6 +34,7 @@ const ATTRIBUTES = [
     ATTRIBUTE_GNOME_BASTARD_SWORD,
     ATTRIBUTE_RANGED_IN_MELEE,
     ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS,
+    ATTRIBUTE_MORNING_STAR,
     ATTRIBUTE_DISPEL_MAGIC,
     ATTRIBUTE_TURN_UNDEAD,
     ATTRIBUTE_INVISIBILITY,
@@ -48,7 +50,6 @@ const ATTRIBUTES = [
 // threads / attributes:
 // bows and strength
 // thief backstab
-// 19+ int and illusions
 // dual class in the same group
 // scroll limitations,
 // wall of force
@@ -728,7 +729,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A morning star looks like a long, thin club with spikes or flanges at the business end. The morning star in the AD&D game is similar to a mace but is longer and heavier. Some books on weapons identify a ball and chain as a morning star, but this combination is considered to be a flail in the AD&D game.`
             ],
-            attributes: [ATTRIBUTE_1E],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_WEAPON,ATTRIBUTE_MORNING_STAR],
         },
         {
             page_number: '9',
@@ -5432,7 +5433,7 @@ DRAGON_MAGAZINES.push({
                 `[Don't depend on the dictionary for definitive information on game topics. Dictionaries and encyclopedias are fine places to start looking, but the people who compile them are unlikely to be experts on medieval weapons, and they certainly aren't experts on the AD&D game. — Sage]`,
                 `The two forms of mace, horseman's and footman's, don't appear on the ***AEG's*** Master Weapons Chart (page 108). The typo monster strikes again. The statistics for the two types of maces presented in the ***PH***, page 68, are correct.`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E,ATTRIBUTE_WEAPON,ATTRIBUTE_MORNING_STAR],
         },
         {
             page_number: '54',
@@ -18669,8 +18670,7 @@ DRAGON_MAGAZINES.push({
                 `A morningstar is not simply a spiked mace; it is a much larger weapon that resembles a baseball bat with rows of spikes set in the business end.`,
                 `You might come across books that identify maces or flails with heads consisting of round balls set with sharp spikes as morningstars, but this does not reflect the nomenclature of the D&D game.`
             ],
-            comment: `Threat potential with #150 and #184`,
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON,ATTRIBUTE_MORNING_STAR],
         },
         {
             page_number: '100',
