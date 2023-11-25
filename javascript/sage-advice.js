@@ -20,6 +20,7 @@ const ATTRIBUTE_RANGED_IN_MELEE = "Ranged weapons in melee combat"
 const ATTRIBUTE_MONSTER_ABILITY_SCORES = "Monster Ability Scores"
 const ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS = "High Intelligence illusion immunity"
 const ATTRIBUTE_MORNING_STAR = "What is a morning star?"
+const ATTRIBUTE_D30 = "What comes after a d20?"
 
 const ATTRIBUTE_APRIL_FOOLS = 'April Fools';
 
@@ -35,6 +36,7 @@ const ATTRIBUTES = [
     ATTRIBUTE_RANGED_IN_MELEE,
     ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS,
     ATTRIBUTE_MORNING_STAR,
+    ATTRIBUTE_D30,
     ATTRIBUTE_DISPEL_MAGIC,
     ATTRIBUTE_TURN_UNDEAD,
     ATTRIBUTE_INVISIBILITY,
@@ -62,7 +64,6 @@ const ATTRIBUTES = [
 // Pantheon of the month
 // humanoid / animal / monster definitions
 // polymorph possibilities
-// What is a morning star?
 // Next die after a d20
 // other stuff where I have added a comment
 
@@ -10773,12 +10774,12 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '83',
-            question: `How do you assign knockdown dice to large creatures using weapons? Page 32 of the ***PLAYER'S OPTION™: Combat & Tactics*** book says large monsters bump the weapon's knockdown die up to the next size. Does this mean that a centaur with a two-handed sword rolls 1d20 for knockdowns? If the centaur also is a grand master with a two-handed sword does he roll 1d1OO for knockdowns?`,
+            question: `How do you assign knockdown dice to large creatures using weapons? Page 32 of the ***PLAYER'S OPTION™: Combat & Tactics*** book says large monsters bump the weapon's knockdown die up to the next size. Does this mean that a centaur with a two-handed sword rolls 1d20 for knockdowns? If the centaur also is a grand master with a two-handed sword does he roll 1d100 for knockdowns?`,
             answer: [
                 `A knockdown die of 1d12 increases to 1d20. I don't recommend allowing any knockdown die to increase beyond 1d20. (As it is, rolling 1d20 will give a knockdown chance about half the time against huge opponents and even more often against smaller opponents.) I also don't recommend increasing any knockdown die more than three places. For example, a creature armed with a dagger never gets a knockdown die bigger than 1d10, no matter how big or skilled it is.`,
-                `If you don't like the foregoing advice, the steps beyond 1d20 are: 1d30, 1d40, 1d50, and so on. The best way to generate these numbers is with 1d10 and some kind of a control die. For example, you can roll 1d30 by rolling a 10-sided die and a six-sided die. If the six-sided die comes up a 1 or 2, read the lo-sided die as it is. If the six-sided die rolls a 3 or 4, add 10 to the number on the 10-sided die, and if the six-sided die comes up a 5 or 6 add 20 to the number on the 10-sided die.`
+                `If you don't like the foregoing advice, the steps beyond 1d20 are: 1d30, 1d40, 1d50, and so on. The best way to generate these numbers is with 1d10 and some kind of a control die. For example, you can roll 1d30 by rolling a 10-sided die and a six-sided die. If the six-sided die comes up a 1 or 2, read the 10-sided die as it is. If the six-sided die rolls a 3 or 4, add 10 to the number on the 10-sided die, and if the six-sided die comes up a 5 or 6 add 20 to the number on the 10-sided die.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_D30],
         },
     ]
 });
@@ -13438,7 +13439,7 @@ DRAGON_MAGAZINES.push({
                 `6. The values for melee reach and knockdown assume an ogre magi (size large) wields the weapons.`,
                 `7. The values for melee reach and knockdown assume a bladeback or hornhead (size large) wields the weapons.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON,ATTRIBUTE_D30],
         },
         {
             page_number: '87',
@@ -13906,8 +13907,7 @@ DRAGON_MAGAZINES.push({
                 `On a roll of 3-4, add 10 to whatever comes up on the d10.`,
                 `On a roll of 5-6, add 20 to whatever comes up on the d10.`
             ],
-            comment: `Consistent with #225 and #239`,
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_WEAPON,ATTRIBUTE_D30],
         },
         {
             page_number: '22',
