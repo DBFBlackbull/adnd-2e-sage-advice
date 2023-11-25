@@ -51,6 +51,13 @@ function hideForeword() {
     }
 }
 
+function hideComments() {
+    let comments = document.querySelectorAll('.comment');
+    for (comment of comments) {
+        comment.classList.toggle('hidden');
+    }
+}
+
 function getSearchTerms() {
     let query = document.getElementById('search').value;
     if (query.replaceAll(/[- ]/g,'') === '')

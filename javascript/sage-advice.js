@@ -17,6 +17,8 @@ const ATTRIBUTE_DOT = "Continuing Damage"
 const ATTRIBUTE_ELVEN_RESISTANCE = "Elven resistance to Sleep and Charm"
 const ATTRIBUTE_GNOME_BASTARD_SWORD = "Gnomes with Bastard sword"
 const ATTRIBUTE_RANGED_IN_MELEE = "Ranged weapons in melee combat"
+const ATTRIBUTE_MONSTER_ABILITY_SCORES = "Monster Ability Scores"
+const ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS = "High Intelligence illusion immunity"
 
 const ATTRIBUTE_APRIL_FOOLS = 'April Fools';
 
@@ -30,6 +32,7 @@ const ATTRIBUTES = [
     ATTRIBUTE_ELVEN_RESISTANCE,
     ATTRIBUTE_GNOME_BASTARD_SWORD,
     ATTRIBUTE_RANGED_IN_MELEE,
+    ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS,
     ATTRIBUTE_DISPEL_MAGIC,
     ATTRIBUTE_TURN_UNDEAD,
     ATTRIBUTE_INVISIBILITY,
@@ -4777,7 +4780,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `They can't because these spells accidentally were assigned to only one sphere each. At least as far as druids are concerned, ***call woodland beings*** should be included in the Animal sphere and ***commune with nature*** should be included in the Elemental sphere. TSR's Steve Winter pointed out this bit of official errata way back in POLYHEDRON™ Newszine #49 (September 1989), but various mishaps and oversights have kept it from appearing elsewhere until now.`,
             ],
-            comment: `***Commune with nature*** is included in the Elemental sphere in the Revised (black) ***Player's Handbook***. ****Call woodland beings*** is included in the Animal sphere by using the optional sphere extension from ***The Complete Druid's Handbook***.`,
+            comment: `***Commune with nature*** is included in the Elemental sphere in the Revised (black) ***Player's Handbook***. ***Call woodland beings*** is included in the Animal sphere by using the optional sphere extension from ***The Complete Druid's Handbook***.`,
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_CLASS],
         },
         {
@@ -7909,8 +7912,7 @@ DRAGON_MAGAZINES.push({
                 `The ***invisibility*** spell is an illusion; as such, creatures with 20 + Intelligence scores are immune to it. Such creatures also are immune to spells such as ***mirror image***, ***blindness***. This does not, however, mean that these creatures automatically see every *invisible* creature in the AD&D universe. Naturally invisible creatures such as invisible stalkers, aerial servants, and pixies are still hidden from supra-genius creatures. The DM also might rule that magical ***invisibility*** bestowed by items such as ***dust of disappearance***, ***cloaks of elvenkind***, and maybe even ***rings of invisibility*** also work in the face of supra-genius intelligence by virtue of the magical power invested in them.`,
                 `When a character becomes *invisible*, all her equipment becomes invisible with her The character could read a scroll, however by putting down the scroll and allow ing it to become visible (see the ***invisibility*** spell description in the ***PH***, page 142). The character can pick up the visible scroll and read it normally, and can make the scroll *invisible* again by tucking it into her clothing. I strongly suggest that you assume nonmagical invisibility detection merely reveals an invisible creature's outline and position. The viewer has a good idea of the creature's size and shape, and the viewer knows exactly where the creature is—well enough to attack the creature with spells and to make physical attacks without the usual -4 penalty.`
             ],
-            comment: `A different answer in given in #224 where it is stated that 20+ Intelligence creatures cannot look through a ***mirror image*** spell.`,
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY,ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS],
         },
         {
             page_number: '89',
@@ -10589,12 +10591,12 @@ DRAGON_MAGAZINES.push({
                 `All of the foregoing aside, the original AD&D game gave creatures with very high Intelligence scores complete immunity to *all* illusion/phantasm spells of a certain level or below. (as shown in the current ***PHB***). Using this approach is completely within the spirit of the rules, it won't affect game balance in your game very much, and it keeps arguments to a minimum.`
             ],
             comment: [
-                `The note here about ***mirror image*** still working completely contradicts issue #206 where it was stated that creatures with 20+ Intelligence were immune to ***mirror image*** and ***invisibility***. It appears that the Sage, in #206, was referencing the rules from the "original AD&D", and here the Sage is referencing the "current" rules.`,
+                `The note here about ***mirror image*** still working completely contradicts issue #206 where it was stated that creatures with 20+ Intelligence were immune to ***mirror image*** and ***invisibility***. It appears that the Sage, in #206, was referencing the rules from the 1E AD&D, and here the Sage is referencing the 2E rules.`,
                 `All of this highlights ambiguity with the word "immunity". Many players understand it as being completely unaffected, but in reality *immunity* means to **always make your saving throw**, when you would normally make one, so this updated answer seems correct. These are the sources:`,
                 `***PHB*** page 23: * **Spell Immunity** is gained by those with exceptionally high Intelligence scores. Those with the immunity notice some inconsistency or inexactness in the illusion or phantasm, **automatically allowing them to make their saving throws.** *`,
                 `***The Complete Priest's Handbook*** page 23: * **Immunities** This power gives the priest an **automatically-successful saving throw** against certain types of damage, attacks, or broad classes of spells... Certain types of priest might have automatically successful saves against all Evocation spells... (**Those spells which don't allow a saving throw are not stopped or affected by this immunity**)*`
             ],
-            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY],
+            attributes: [ATTRIBUTE_1E,ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY,ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS],
         },
         {
             page_number: '101-102',

@@ -21,6 +21,11 @@ body {
     padding-top: 5px;
 }
 
+.comment {
+    display: block;
+    padding-top: 5px;
+}
+
 .hidden {
     display: none;
 }

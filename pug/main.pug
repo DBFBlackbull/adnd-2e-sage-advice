@@ -53,6 +53,9 @@ body
         div
             input(id="hide-foreword" type="checkbox" onchange="hideForeword()")
             | Hide foreword and epilogue
+        div
+            input(id="hide-comments" type="checkbox" onchange="hideComments()")
+            | Hide editor's comments
         h2 Attributes
         each attribute, _ in attributes
             div
@@ -109,6 +112,11 @@ body
                                 else
                                     br
                                     img(src="../img/" + advice.image)
-                        span(class="content-attributes no-copy") Attributes: !{advice.attributes.join(", ")}
+                        if advice.comment
+                            span(class="comment")
+                                strong
+                                    em Comment:
+                                |  !{formatInput(advice.comment, magazine.issue_number, questionNumber)}
+                        span(class="content-attributes") Attributes: #{advice.attributes.join(", ")}
                 if magazine.epilogue
                     h3 !{formatInput(magazine.epilogue, magazine.issue_number, 'epilogue')}
