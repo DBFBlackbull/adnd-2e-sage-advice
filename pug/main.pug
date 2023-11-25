@@ -83,8 +83,9 @@ body
                 each advice, index in magazine.sage_advice
                     - let questionNumber = index + 1
                     - let id = `${magazine.issue_number}-${questionNumber}`
+                    // - console.log(`Sage Advice #${magazine.issue_number} p. ${advice.page_number}, Question: ${questionNumber}`)
                     p(id=id)
-                        span(class='title') Sage Advice ##{magazine.issue_number} (#{magazine.publication_month} #{magazine.publication_year}) p. #{advice.page_number}, Question:#{questionNumber}
+                        span(class='title') Sage Advice ##{magazine.issue_number} (#{magazine.publication_month} #{magazine.publication_year}) p. #{advice.page_number}, Question: #{questionNumber}
                         span(class="no-copy")
                             button(onclick=`copyPlainText('${id}')` title="Copy plain text") 📄
                             button(onclick=`copyRichText('${id}')` title="Copy rich text") 📋
