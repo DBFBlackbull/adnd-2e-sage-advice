@@ -15,17 +15,18 @@ const ATTRIBUTE_STONESKIN = "Stoneskin";
 const ATTRIBUTE_MAGICAL_AGING = "Magical aging";
 const ATTRIBUTE_DOT = "Continuing Damage"
 const ATTRIBUTE_ELVEN_RESISTANCE = "Elven resistance"
-const ATTRIBUTE_GNOME_BASTARD_SWORD = "Gnomes with Bastard sword"
-const ATTRIBUTE_RANGED_IN_MELEE = "Ranged weapons in melee combat"
+const ATTRIBUTE_GNOME_BASTARD_SWORD = "Gnomes+Bastard sword"
+const ATTRIBUTE_RANGED_IN_MELEE = "Ranged in melee"
 const ATTRIBUTE_MONSTER_ABILITY_SCORES = "Monster Ability Scores"
 const ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS = "Int vs illusion"
-const ATTRIBUTE_PANTHEON = "Pantheon of the Month"
+const ATTRIBUTE_PANTHEON = "Pantheon"
+const ATTRIBUTE_MAGIC_ITEM_SIZE = "Magic item size"
 const ATTRIBUTE_SCROLL = "Scroll"
 const ATTRIBUTE_MORNING_STAR = "Morningstar"
 const ATTRIBUTE_D30 = "d30"
 const ATTRIBUTE_BOWS_AND_STRENGTH = "Bows and Strength"
-const ATTRIBUTE_PRONOUNCE_DROW = 'Pronounce "drow"'
-const ATTRIBUTE_PRONOUNCE_FLIND = 'Pronounce "flind"'
+const ATTRIBUTE_PRONOUNCE_DROW = 'Pronounce drow'
+const ATTRIBUTE_PRONOUNCE_FLIND = 'Pronounce flind'
 
 const ATTRIBUTE_APRIL_FOOLS = 'April Fools';
 
@@ -37,11 +38,12 @@ const ATTRIBUTES = [
     {id: ATTRIBUTE_ELVEN_RESISTANCE, title: "Elven resistance to Sleep and Charm"},
     {id: ATTRIBUTE_GNOME_BASTARD_SWORD},
     {id: ATTRIBUTE_RANGED_IN_MELEE, title: "Ranged weapons in melee combat"},
-    {id: ATTRIBUTE_BOWS_AND_STRENGTH},
+    {id: ATTRIBUTE_BOWS_AND_STRENGTH, title: "Bows and Strength bonus"},
     {id: ATTRIBUTE_MORNING_STAR, title: "What is a morning star?"},
     {id: ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS, title: "High Intelligence illusion immunity"},
     {id: ATTRIBUTE_D30, title: "What comes after a d20?"},
     {id: ATTRIBUTE_SCROLL, title: "Scroll rules and limitations"},
+    {id: ATTRIBUTE_MAGIC_ITEM_SIZE, title: "Who fit magic items?"},
     {id: ATTRIBUTE_PANTHEON},
     {id: ATTRIBUTE_DISPEL_MAGIC},
     {id: ATTRIBUTE_TURN_UNDEAD},
@@ -58,6 +60,7 @@ const ATTRIBUTES = [
 ];
 
 // threads / attributes:
+// magical item fitting - DMG 240, Fighters Handbook 109
 // thief backstab
 // dual class in the same group
 // wall of force
@@ -5240,7 +5243,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Thri-kreen can wear rings, cloaks, boots, and gauntlets, but only if the items are made to fit thri-kreen; see the *Rules Book*, page 16. Items made for humans or demihumans just don't fit thri-kreen, as such items either are too small or are entirely the wrong shape.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_MAGIC_ITEM_SIZE],
         },
         {
             page_number: '29',
@@ -14033,7 +14036,161 @@ DRAGON_MAGAZINES.push({
                 `The ***DMG*** contains a table for determining what size armor is (in Appendix 3); use that table for defensive items such as bracers. Sizes are assigned by race, and elven chain mail has its own table. There is no six-inch adjustment. If the armor fits a character's race, it fits the character. Of course, if your character is unusually large or unusually small for her race, the character might have a hard time finding any kind of armor that fits.`,
                 `Some magical items do change size to fit the wearer. ***Gauntlets of ogre power***, for example, grow or shrink to fit halfling- to human-sized hands. All magical boots expand or shrink to fit wearers from halfling to giant size (see the notes on categories of miscellaneous magical items in the ***DMG***). Beyond these specific examples, there is no general rule for item sizes. Your DM can decide that on his or her own. In campaigns where magic is rare, its best to allow considerable latitude in this matter; otherwise, the PCs won't be able to use what little magic they find. In some cases, an item will fit a large range of creatures without altering its size at all. For example, a ring that a gnome or halfling character might have to wear on her thumb might fit on an ogre's pinkie.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            comment: [
+                `***DMG*** p. 240 about magical armor in general:`,
+                `65% of all armor (except elven chain mail) is man-sized.`,
+                `20% is elf-sized.`,
+                `10% is dwarf-sized`,
+                `5% gnome- or halfling-sized.`,
+                `
+<table>
+<tr>
+    <td colspan="2">***DMG*** p. 241 about Elven Chain Mail:</td>
+</tr>
+<tr>
+    <td style="text-align: center;"><strong>D100 Roll</strong></td>
+    <td><strong>Size of Elven Chain Mail</strong></td>
+</tr>
+<tr>
+    <td style="text-align: center;">01–10</td>
+    <td>gnome/halfling (hairfoot)</td>
+</tr>
+<tr>
+    <td style="text-align: center;">11–15</td>
+    <td>dwarf/halfling (Stout or Tallfellow)</td>
+</tr>
+<tr>
+    <td style="text-align: center;">16–80</td>
+    <td>gnome/halfling (hairfoot)</td>
+</tr>
+<tr>
+    <td style="text-align: center;">81–95</td>
+    <td>man-sized, normal (up to 6 feet, 200 lbs.)</td>
+</tr>
+<tr>
+    <td style="text-align: center;">96–100</td>
+    <td>man-sized, large (up to 61⁄2 feet, 250 lbs.)</td>
+</tr>
+</table>`,
+                `***The Complete Fighter's Handbook*** p. 109 **Armor Fitting**:`,
+                `Armor made for one race rarely fits another: it may be too big, too small, or proportioned too strangely.`,
+                `Below is a chart. The column to the left shows the type of demihuman trying to wear the armor. The rows along the top show what species the armor was made for. The percentage chances shown are the chances that the person can wear the armor, and the "+" and "–" symbols show whether the armor is more likely to be too big or too small for the wearer. (If there is no such symbol, it means that odds are even, 50% that it will be too big, 50% that it will be too small.) "Too large" could mean that it is so baggy or empty that it hinders the wearer and does not protect him well enough, or that it is so long on him that it interferes with his walking. "Too small" could mean that it is not broad enough to accommodate the wearer's chest, or that it is so short that it looks ridiculous and docs not sufficiently protect the wearer.`,
+                `Now, at the DM's discretion, many things can affect these percentage chances.`,
+                `If a character of one sex is trying to put on armor built for another sex, chances go down that it will fit. The chance is reduced 10% (but never goes below 5%). If a fit fails because of that modifier. It's because the woman found the man's armor too big. or the man found the woman's too small.`,
+                `However, the DM may allow the difference in sex to help sometimes—in cases where the armor is not likely to fit a male human because it is too small in the shoulders and chest. A human woman trying to put on a male half-elf's armor might be at no modifier, and find herself at a + 10% modifier to wear a male elf's armor.`,
+                `Remember that full plate has its own modifiers for chances to fit: it has only a 20% chance to fit another member of the same race (10% ff the new wearer is of the other sex). A character *cannot* wear full plate made for a character of another race, period.`,
+                `The DM can allow previously role-played determinations of a character's height and build to affect the chances from the chart below. For instance, if one player has always said that his human character was short and stocky. say 5'4" and powerfully built, so that many people joked about him having a dwarvish ancestor, the DM can give him a + 15% chance to wear dwarvish armor: this raises his chance from 50% to 65%, as if he were a human trying to wear armor of his own kind. The DM should, however, subtract that same modifier from the character's chance to wear armor built for humans: that chance would go down from 65% to 50%.`,
+                `
+<table>
+<tr>
+    <td><strong>Race</strong></td>
+</tr>
+<tr>
+    <td><strong>Trying To</strong></td>
+    <td colspan="12" style="text-align: center;"><strong>Race For Which Armor Was Built:</strong></td>
+</tr>
+<tr>
+    <td><strong>Wear Armor:</strong></td>
+    <td colspan="2" style="text-align: center; padding: 0 10px"><strong>Dwarf</strong></td>
+    <td colspan="2" style="text-align: center; padding: 0 10px;"><strong>Elf</strong></td>
+    <td colspan="2" style="text-align: center; padding: 0 10px;"><strong>Gnome</strong></td>
+    <td colspan="2" style="text-align: center; padding: 0 10px;"><strong>Half-Elf</strong></td>
+    <td colspan="2" style="text-align: center; padding: 0 10px;"><strong>Halfling</strong></td>
+    <td colspan="2" style="text-align: center; padding: 0 10px;"><strong>Human</strong></td>
+</tr>
+<tr>
+    <td>Dwarf</td>
+    <td style="text-align: right;">80%</td>
+    <td></td>
+    <td style="text-align: right;">0%</td>
+    <td>–</td>
+    <td style="text-align: right;">10%</td>
+    <td>–</td>
+    <td style="text-align: right;">10%</td>
+    <td>–</td>
+    <td style="text-align: right;">35%</td>
+    <td>–</td>
+    <td style="text-align: right;">40%</td>
+    <td></td>
+</tr>
+<tr>
+    <td>Elf</td>
+    <td style="text-align: right;">10%</td>
+    <td>+</td>
+    <td style="text-align: right;">90%</td>
+    <td></td>
+    <td style="text-align: right;">50%</td>
+    <td>–</td>
+    <td style="text-align: right;">70%</td>
+    <td>+</td>
+    <td style="text-align: right;">35%</td>
+    <td>+</td>
+    <td style="text-align: right;">50%</td>
+    <td>+</td>
+</tr>
+<tr>
+    <td>Gnome</td>
+    <td style="text-align: right;">40%</td>
+    <td>+</td>
+    <td style="text-align: right;">40%</td>
+    <td>+</td>
+    <td style="text-align: right;">75%</td>
+    <td></td>
+    <td style="text-align: right;">25%</td>
+    <td>+</td>
+    <td style="text-align: right;">65%</td>
+    <td>+</td>
+    <td style="text-align: right;">20%</td>
+    <td>+</td>
+</tr>
+<tr>
+    <td>Half-Elf</td>
+    <td style="text-align: right;">20%</td>
+    <td>+</td>
+    <td style="text-align: right;">45%</td>
+    <td></td>
+    <td style="text-align: right;">10%</td>
+    <td>+</td>
+    <td style="text-align: right;">70%</td>
+    <td></td>
+    <td style="text-align: right;">35%</td>
+    <td></td>
+    <td style="text-align: right;">50%</td>
+    <td></td>
+</tr>
+<tr>
+    <td>Halfling</td>
+    <td style="text-align: right;">75%</td>
+    <td>+</td>
+    <td style="text-align: right;">30%</td>
+    <td>–</td>
+    <td style="text-align: right;">35%</td>
+    <td>–</td>
+    <td style="text-align: right;">35%</td>
+    <td>+</td>
+    <td style="text-align: right;">70%</td>
+    <td></td>
+    <td style="text-align: right;">20%</td>
+    <td>+</td>
+</tr>
+<tr>
+    <td>Human</td>
+    <td style="text-align: right;">50%</td>
+    <td>–</td>
+    <td style="text-align: right;">20%</td>
+    <td>–</td>
+    <td style="text-align: right;">5%</td>
+    <td>–</td>
+    <td style="text-align: right;">30%</td>
+    <td>–</td>
+    <td style="text-align: right;">10%</td>
+    <td>–</td>
+    <td style="text-align: right;">65%</td>
+    <td></td>
+</tr>
+</table>`
+            ],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_MAGIC_ITEM_SIZE],
         },
         {
             page_number: '18',
@@ -16029,8 +16186,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A magical ring can be worn on anything that approximates a finger. Unfortunately, an eagle's claws are toes—not fingers. An ***enlarge*** spell can't do anything about that. I suppose one could ***enlarge*** a magical ring so it would fit on a really big finger, but that's usually only a temporary solution. (***Enlarge*** can be made permanent.) If the ***enlarge*** was not made permanent, something dramatic, and maybe painful, might happen when the spell wore of.`
             ],
-            comment: `Kinda follow up on #243`,
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGIC_ITEM_SIZE],
         },
         {
             page_number: '26',

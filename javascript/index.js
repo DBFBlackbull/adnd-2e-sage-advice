@@ -87,7 +87,7 @@ function getSearchTerms() {
             })
         })
 
-        return Array.from(set).map(s => `\\W${s}`);
+        return Array.from(set).map(s => `\\W${s}|^${s}`);
     });
 
     if (document.getElementById('radio-any-search-term').checked) {
