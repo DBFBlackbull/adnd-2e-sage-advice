@@ -28,6 +28,7 @@ const SYNONYMS = [
     ['smokepowder', 'smoke powder'],
     ['longbow', 'long bow'],
     ['shortbow', 'short bow'],
+    ['polearm', 'pole arm'],
 ];
 
 document.addEventListener("DOMContentLoaded", function() {

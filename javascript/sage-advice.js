@@ -15,7 +15,7 @@ const ATTRIBUTE_STONESKIN = "Stoneskin";
 const ATTRIBUTE_MAGICAL_AGING = "Magical aging";
 const ATTRIBUTE_DOT = "Continuing Damage"
 const ATTRIBUTE_ELVEN_RESISTANCE = "Elven resistance"
-const ATTRIBUTE_GNOME_BASTARD_SWORD = "Gnomes+Bastard sword"
+const ATTRIBUTE_GNOME_BASTARD_SWORD = "Gnome Bastard sword"
 const ATTRIBUTE_RANGED_IN_MELEE = "Ranged in melee"
 const ATTRIBUTE_MONSTER_ABILITY_SCORES = "Monster Ability Scores"
 const ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS = "Int vs illusion"
@@ -36,7 +36,7 @@ const ATTRIBUTES = [
     {id: ATTRIBUTE_SPELL},
     {id: ATTRIBUTE_CLASS},
     {id: ATTRIBUTE_ELVEN_RESISTANCE, title: "Elven resistance to Sleep and Charm"},
-    {id: ATTRIBUTE_GNOME_BASTARD_SWORD},
+    {id: ATTRIBUTE_GNOME_BASTARD_SWORD, title: "Gnomes with Bastard sword"},
     {id: ATTRIBUTE_RANGED_IN_MELEE, title: "Ranged weapons in melee combat"},
     {id: ATTRIBUTE_BOWS_AND_STRENGTH, title: "Bows and Strength bonus"},
     {id: ATTRIBUTE_MORNING_STAR, title: "What is a morning star?"},
@@ -44,7 +44,7 @@ const ATTRIBUTES = [
     {id: ATTRIBUTE_D30, title: "What comes after a d20?"},
     {id: ATTRIBUTE_SCROLL, title: "Scroll rules and limitations"},
     {id: ATTRIBUTE_MAGIC_ITEM_SIZE, title: "Who fit magic items?"},
-    {id: ATTRIBUTE_PANTHEON},
+    {id: ATTRIBUTE_PANTHEON, title: "Pantheon of the Month"},
     {id: ATTRIBUTE_DISPEL_MAGIC},
     {id: ATTRIBUTE_TURN_UNDEAD},
     {id: ATTRIBUTE_INVISIBILITY},
@@ -60,7 +60,7 @@ const ATTRIBUTES = [
 ];
 
 // threads / attributes:
-// magical item fitting - DMG 240, Fighters Handbook 109
+// wizards in armor
 // thief backstab
 // dual class in the same group
 // wall of force
@@ -3493,10 +3493,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes. Damage makes the concentration required for spell-casting impossible. This is one thing that makes ***Melf's acid arrow*** a useful spell. However, the acid can be washed off before the duration expires.`,
             ],
-            comment: [
-                `Matches how the spell was originally intended. https://youtu.be/tenOqLK2sEw?t=275.`,
-                `This ruling is loosened a bit in #198 and reiterated in #206`
-            ],
+            comment: `Matches how the spell was originally intended. <a href="https://youtu.be/tenOqLK2sEw?t=275" target="_blank">Luke Gygax on *Melf's Acid Arrow*</a>.`,
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_DOT],
         },
         {
@@ -14267,7 +14264,6 @@ DRAGON_MAGAZINES.push({
                 `If you're using the combat rules in the ***PHB***, allow a spellcaster affected by a ***choke*** spell (or any other from of continuing damage) a normal initiative roll each round. If he wins, he can cast a spell (he still takes damage, but managed to get a spell off before any damage took effect). If the target loses initiative, the choking disrupts spellcasting during that round.`,
                 `Note that in the ***PLAYER'S OPTION*** combat system, continuing damage from a spell like ***choke*** doesn't take effect until the resolution phase of the round, after everyone has taken their actions. If you're playing by the book, such damage cannot disrupt spellcasting unless the casting takes more than a full round.`
             ],
-            comment: `Follow up on #165 and #205`,
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_DOT],
         },
         {
