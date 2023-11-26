@@ -59,8 +59,8 @@ body
         h2 Attributes
         each attribute, _ in attributes
             div
-                input(type="checkbox" class="attribute" value=attribute onchange="search()")
-                | !{attribute}
+                input(type="checkbox" class="attribute" value=attribute.id onchange="search()")
+                | !{attribute.title ? attribute.title : attribute.id}
 
     div(id="main" class="main")
         h1(style="text-align: center;")

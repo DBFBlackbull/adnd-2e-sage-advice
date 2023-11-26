@@ -12,61 +12,60 @@ const ATTRIBUTE_DEAFNESS = 'Deafness';
 const ATTRIBUTE_SILENCE = 'Silence';
 const ATTRIBUTE_DISPEL_MAGIC = 'Dispel Magic';
 const ATTRIBUTE_STONESKIN = "Stoneskin";
-const ATTRIBUTE_HASTE = "Haste";
+const ATTRIBUTE_MAGICAL_AGING = "Magical aging";
 const ATTRIBUTE_DOT = "Continuing Damage"
-const ATTRIBUTE_ELVEN_RESISTANCE = "Elven resistance to Sleep and Charm"
+const ATTRIBUTE_ELVEN_RESISTANCE = "Elven resistance"
 const ATTRIBUTE_GNOME_BASTARD_SWORD = "Gnomes with Bastard sword"
 const ATTRIBUTE_RANGED_IN_MELEE = "Ranged weapons in melee combat"
 const ATTRIBUTE_MONSTER_ABILITY_SCORES = "Monster Ability Scores"
-const ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS = "High Intelligence illusion immunity"
-const ATTRIBUTE_MORNING_STAR = "What is a morning star?"
-const ATTRIBUTE_D30 = "What comes after a d20?"
-const ATTRIBUTE_BOWS_AND_STRENGTH = "Bows and Strength bonus"
-const ATTRIBUTE_PRONOUNCE_DROW = 'Pronouncing "drow"'
-const ATTRIBUTE_PRONOUNCE_FLIND = 'Pronouncing "flind"'
+const ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS = "Int vs illusion"
+const ATTRIBUTE_PANTHEON = "Pantheon of the Month"
+const ATTRIBUTE_SCROLL = "Scroll"
+const ATTRIBUTE_MORNING_STAR = "Morningstar"
+const ATTRIBUTE_D30 = "d30"
+const ATTRIBUTE_BOWS_AND_STRENGTH = "Bows and Strength"
+const ATTRIBUTE_PRONOUNCE_DROW = 'Pronounce "drow"'
+const ATTRIBUTE_PRONOUNCE_FLIND = 'Pronounce "flind"'
 
 const ATTRIBUTE_APRIL_FOOLS = 'April Fools';
 
 const ATTRIBUTES = [
-    ATTRIBUTE_1E,
-    ATTRIBUTE_2E,
-    ATTRIBUTE_SPELL,
-    ATTRIBUTE_CLASS,
-    // ATTRIBUTE_RACE,
-    // ATTRIBUTE_WEAPON,
-    ATTRIBUTE_ELVEN_RESISTANCE,
-    ATTRIBUTE_GNOME_BASTARD_SWORD,
-    ATTRIBUTE_RANGED_IN_MELEE,
-    ATTRIBUTE_BOWS_AND_STRENGTH,
-    ATTRIBUTE_MORNING_STAR,
-    ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS,
-    ATTRIBUTE_D30,
-    ATTRIBUTE_DISPEL_MAGIC,
-    ATTRIBUTE_TURN_UNDEAD,
-    ATTRIBUTE_INVISIBILITY,
-    ATTRIBUTE_BLINDNESS,
-    ATTRIBUTE_DEAFNESS,
-    ATTRIBUTE_SILENCE,
-    ATTRIBUTE_STONESKIN,
-    ATTRIBUTE_HASTE,
-    ATTRIBUTE_DOT,
-    ATTRIBUTE_PRONOUNCE_DROW,
-    ATTRIBUTE_PRONOUNCE_FLIND,
-    ATTRIBUTE_APRIL_FOOLS,
+    {id: ATTRIBUTE_1E},
+    {id: ATTRIBUTE_2E},
+    {id: ATTRIBUTE_SPELL},
+    {id: ATTRIBUTE_CLASS},
+    {id: ATTRIBUTE_ELVEN_RESISTANCE, title: "Elven resistance to Sleep and Charm"},
+    {id: ATTRIBUTE_GNOME_BASTARD_SWORD},
+    {id: ATTRIBUTE_RANGED_IN_MELEE, title: "Ranged weapons in melee combat"},
+    {id: ATTRIBUTE_BOWS_AND_STRENGTH},
+    {id: ATTRIBUTE_MORNING_STAR, title: "What is a morning star?"},
+    {id: ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS, title: "High Intelligence illusion immunity"},
+    {id: ATTRIBUTE_D30, title: "What comes after a d20?"},
+    {id: ATTRIBUTE_SCROLL, title: "Scroll rules and limitations"},
+    {id: ATTRIBUTE_PANTHEON},
+    {id: ATTRIBUTE_DISPEL_MAGIC},
+    {id: ATTRIBUTE_TURN_UNDEAD},
+    {id: ATTRIBUTE_INVISIBILITY},
+    {id: ATTRIBUTE_BLINDNESS},
+    {id: ATTRIBUTE_DEAFNESS},
+    {id: ATTRIBUTE_SILENCE},
+    {id: ATTRIBUTE_STONESKIN},
+    {id: ATTRIBUTE_DOT},
+    {id: ATTRIBUTE_MAGICAL_AGING},
+    {id: ATTRIBUTE_PRONOUNCE_DROW, title: 'How to pronouncing "drow"'},
+    {id: ATTRIBUTE_PRONOUNCE_FLIND, title: 'How to pronouncing "flind"'},
+    {id: ATTRIBUTE_APRIL_FOOLS},
 ];
 
 // threads / attributes:
 // thief backstab
 // dual class in the same group
-// scroll limitations,
 // wall of force
 // regeneration (and death)
 // stacking magic / combining magic
 // multi-class mages and elven chain mail
 // specialist mages and magical items
-// haste / magical aging
 // vorpal blade / sword of sharpness
-// Pantheon of the month
 // humanoid / animal / monster definitions
 // polymorph possibilities
 // other stuff where I have added a comment
@@ -515,7 +514,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `This is a typographical error. System shock rolls are made when characters are exposed to magical aging, polymorphing, or petrification. Resurrection survival rolls are used when bringing slain characters to life again.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON],
+            attributes: [ATTRIBUTE_2E, ATTRIBUTE_WEAPON, ATTRIBUTE_MAGICAL_AGING],
         },
         {
             page_number: '10',
@@ -1748,7 +1747,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A character who can use spells can use a scroll if it matches his class, so priests can use scroll spells from outside their spheres and wizards can use scroll spells from outside their schools.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '14',
@@ -1756,7 +1755,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Unless stated otherwise in the scroll's description, a protection scroll has an initiative modifier of + 3.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '59',
@@ -2632,7 +2631,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Spells and scrolls are used up and lost if they are disrupted during casting. Some magical items require a "casting" procedure that can also be disrupted; these include wands, staves, and rods if the command word optional rule is in effect. (This assumes that the "command word" is actually a phrase or rhyme; perhaps the wielder must actually accompany the speaking of the phrase or rhyme with some kind of somatic gestures.) If wand, stave, or rod use is disrupted, the appropriate charges are expended and lost. Rings, weapons, armor, and miscellaneous magical items generally have very short command words or sequences (if they have any at all) and usually cannot be disrupted. Some wands, staves, and rods that are usable by non-spell-casters, such as the ***rod of lordly might*** and ***wand of secret door and trap location***, tend to have very simple command words or sequences and also cannot be disrupted. Spell-casting and magical-item use count as actions. A character cannot perform a second action in the same round even if the spell or item's effect is disrupted.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '25',
@@ -2665,7 +2664,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The rules on ability-score minimums and maximums (see the ***PHB***, page 20) make it clear that the limits apply only to characters when they are being created. So if a character actually lives long enough to get an intelligence or wisdom boost (these are the only ability scores that *increase* with age), I see no reason why he shouldn't get the full benefit. Note that magical aging does not improve intelligence and wisdom; only actual life experience does that.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_MAGICAL_AGING],
         },
         {
             page_number: '25',
@@ -2673,7 +2672,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Scrolls are temporary magical writings good for one—and only one—use. I suppose a wizard could memorize a spell from a scroll, but doing so would use up the scroll, as would writing the scrolls spell into a book. This being the case, I should think the advantage of taking the time to make a permanent record of the spell in a book is obvious.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '25',
@@ -3439,7 +3438,7 @@ DRAGON_MAGAZINES.push({
                 `3. Introduce clerical versions of ***read magic*** and ***comprehend languages*** spells into your campaign. I recommend that you make them both first-level spells in the All sphere.`,
                 `4. Assume that all priests have a limited ability to decipher priestly scrolls on their own. A priest who does nothing else during a day might have a chance to petition his deity for help in deciphering one or more scrolls, provided he can read and write.`,
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS,ATTRIBUTE_SPELL,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '32',
@@ -3731,7 +3730,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Page 41 gives the specific time requirements and costs for getting a spell found on a scroll into a spell book. Technically, the wizard does not copy the spell but reinvents it, using the scroll as a guide, then records the "invention" into his book. It amounts to the same thing.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '56',
@@ -4330,7 +4329,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `All liches have very good infravision, or its equivalent (see the ***Monstrous Compendium***, Volume I). DMs are free to have liches retain other racial abilities. Liches do age, though their "lifespans" last for centuries. When subject to magical aging, such as casting a ***wish*** spell, a lich must make a system-shock roll just as any other spell caster does. The DM is free to set the lich's constitution score at any appropriate value for this purpose (18 or even higher is not unreasonable). However, if the lich fails, its body is ripped apart by the force of the spell and the creature "dies."`,
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGICAL_AGING],
         },
         {
             page_number: '63-64',
@@ -5008,7 +5007,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No; at least not unless the printing press is actually a magical artifact (see the ***DMG***, pages 89-93). Only fresh writing implements can be used to create scrolls; once a quill or printing plate is used to create a scroll, the residual magical energies remaining on it will spoil all future attempts (see the ***DMG***, page 86). Furthermore, inscribing a spell onto a scroll requires the creator to know the spell (if he's a wizard, that means having it in his spell books) and to expend the appropriate material component and suffer any normal penalties (such as unnatural aging) associated with the spell. While this latter requirement is not mentioned on page 86, it is implied on page 145 (see "Casting Scroll Effects"); it also is necessary for game balance, as PCs otherwise would avoid paying for expensive material components and avoid nasty side effects by writing scrolls instead of casting spells directly.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '96',
@@ -6318,7 +6317,7 @@ DRAGON_MAGAZINES.push({
                 `Priests of Reorx can turn any creature with the ability to drain ability scores or life energy, whether they are undead or not. For example, a priest of Reorx has no power over undead such as skeletons or ghosts because they have no draining ability (the ghost's aging attack is not a draining attack). However, priests of Reorx can turn undead such as wights or shadows because these undead can drain life energy or ability scores. Likewise, priests of Reorx can turn non-undead creatures such as fetch, which have a draining attack. Priests of Reorx use table 61 from the ***PH*** (page 103) to resolve turning attempts, If a creature is not listed on the table, use the line from the table that shows the creature's hit dice.`,
                 `Priests of Sargonnas do turn undead. Since the ability to turn undead allows priests and clerics to blast many types of undead to dust, the ***Tales of the Lance*** designers felt that this would be an appropriate ability for priests of Sargonnas, Krynn's deity of fiery destruction.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS,ATTRIBUTE_TURN_UNDEAD],
         },
         {
             page_number: '78',
@@ -6383,7 +6382,7 @@ DRAGON_MAGAZINES.push({
                 `Also, while making chain mail's many separate links is arduous, the armorer has the luxury of tossing out badly made links. An armorer who is hammering out a whole breastplate can't afford even small mistakes—if there is an error, an entire piece has to be thrown out or laboriously remade.`,
                 `Finally, plate armor has to be periodically heated and cooled again during manufacture to restore the metal's strength and flexibility in a process called annealing. The armorer must carefully judge just how far he can push, pull, and bend the metal before it has to be annealed. Proper annealing makes a suit of plate armor very strong, but too much annealing yields metal that is much too weak to provide good protection. This additional opportunity for error makes plate armor production even more costly.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '80',
@@ -6468,10 +6467,45 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Gosh, my first bribe.`,
                 `Okay, try these unofficial suggestions on for size. I picked them mainly to match the spheres with each deity's portfolio, personality, and alignment. Generally, I gave more new spheres to the greater powers than to the lesser and demi powers.`,
-                `Auril: *Major*: Time; *Minor*: Wards; Azuth: *Major*: Thought; *Minor*: Law; Beshaba: *Major*: Chaos; *Minor*: Time; Chauntea: *Major*: Time, Wards; *Minor*: Travelers; Cyric: *Major*: War, Time; *Minor*: Numbers; Denier: *Major*: Thought; *Minor*: Time; Eldath: *Major*: Wards; *Minor*: Travelers; Gond: *Major*: Numbers; *Minor*: Wards; Helm: *Major*: Wards; *Minor*: War; Ilmater: *Major*: Law; *Minor*: Wards; Lathander: *Major*: Thought; *Minor*: Time; Leira: *Major*: Time; *Minor*: Chaos; Lliira: *Major*: none; *Minor*: Thought, Time, Travelers; Loviatar: *Major*: Law; *Minor*: Time; Malar: *Major*: War; *Minor*: Travelers; Mask: *Major*: Time; *Minor*: Thought; Mielikki: *Major*: none; *Minor*: Time, Travelers; Milil: *Major*: Thought; *Minor*: Travelers; Mystra: *Major*: Thought; *Minor*: Time; Oghma: *Major*: Travelers; *Minor*: Thought, Wards; Selune: *Major*: Travelers, Numbers; *Minor*: none; Shar: *Major*: Time, Thought; *Minor*: none; Silvanus: *Major*: Time, Wards; *Minor*: Travelers; Talona: *Major*: Chaos; *Minor*: none; Talos: *Major*: Chaos, War; *Minor*: Time; Tempus: *Major*: Chaos, War; *Minor*: Wards; Torm: *Major*: Law *Minor*: Travelers; Tymora: *Major*: Chaos; *Minor*: Wards; Tyr: *Major*: as cleric; *Minor*: as cleric; Umberlee: *Major*: Chaos; *Minor*: none; Waukeen: *Major*: Travelers; *Minor*: Wards; Elemental Cults: *Major*: none; *Minor*: time; Bane: *Major*: Law, War; *Minor*: Numbers; Bhaal: *Major*: Law; *Minor*: Time; Myrkul: *Major*: Chaos, Time; *Minor*: War; Clerics: *Major*: Law or Chaos (depending on alignment, neutral clerics choose one), Wards; *Minor*: Travelers, War.`,
+                `**Auril:** *Major*: Time; *Minor*: Wards;`,
+                `**Azuth:** *Major*: Thought; *Minor*: Law;`,
+                `**Beshaba:** *Major*: Chaos; *Minor*: Time;`,
+                `**Chauntea:** *Major*: Time, Wards; *Minor*: Travelers;`,
+                `**Cyric:** *Major*: War, Time; *Minor*: Numbers;`,
+                `**Denier:** *Major*: Thought; *Minor*: Time;`,
+                `**Eldath:** *Major*: Wards; *Minor*: Travelers;`,
+                `**Gond:** *Major*: Numbers; *Minor*: Wards;`,
+                `**Helm:** *Major*: Wards; *Minor*: War;`,
+                `**Ilmater:** *Major*: Law; *Minor*: Wards;`,
+                `**Lathander:** *Major*: Thought; *Minor*: Time;`,
+                `**Leira:** *Major*: Time; *Minor*: Chaos;`,
+                `**Lliira:** *Major*: none; *Minor*: Thought, Time, Travelers;`,
+                `**Loviatar:** *Major*: Law; *Minor*: Time;`,
+                `**Malar:** *Major*: War; *Minor*: Travelers;`,
+                `**Mask:** *Major*: Time; *Minor*: Thought;`,
+                `**Mielikki**: *Major*: none; *Minor*: Time, Travelers;`,
+                `**Milil:** *Major*: Thought; *Minor*: Travelers;`,
+                `**Mystra:** *Major*: Thought; *Minor*: Time;`,
+                `**Oghma:** *Major*: Travelers; *Minor*: Thought, Wards;`,
+                `**Selune:** *Major*: Travelers, Numbers; *Minor*: none;`,
+                `**Shar:** *Major*: Time, Thought; *Minor*: none;`,
+                `**Silvanus:** *Major*: Time, Wards; *Minor*: Travelers;`,
+                `**Talona:** *Major*: Chaos; *Minor*: none;`,
+                `**Talos:** *Major*: Chaos, War; *Minor*: Time; `,
+                `**Tempus:** *Major*: Chaos, War; *Minor*: Wards;`,
+                `**Torm:** *Major*: Law *Minor*: Travelers;`,
+                `**Tymora:** *Major*: Chaos; *Minor*: Wards;`,
+                `**Tyr:** *Major*: as cleric; *Minor*: as cleric;`,
+                `**Umberlee:** *Major*: Chaos; *Minor*: none;`,
+                `**Waukeen:** *Major*: Travelers; *Minor*: Wards;`,
+                `**Elemental Cults:** *Major*: none; *Minor*: time;`,
+                `**Bane:** *Major*: Law, War; *Minor*: Numbers;`,
+                `**Bhaal:** *Major*: Law; *Minor*: Time;`,
+                `**Myrkul:** *Major*: Chaos, Time; *Minor*: War;`,
+                `**Clerics:** *Major*: Law or Chaos (depending on alignment, neutral clerics choose one), Wards; *Minor*: Travelers, War.`,
                 `Note that pages 14 and 15 of the ***TOM*** provide detailed guidelines for assigning new spheres. Also, there has been some talk at TSR, Inc. about officially assigning the ***TOM*** spheres to all previously published deities in a new deities book. The final plans for this project have not yet been made. As for your $20, keep it; or better yet, donate it to your local children's hospital (your yellow pages should have the address and phone number).`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PANTHEON],
         },
         {
             page_number: '77',
@@ -6972,7 +7006,7 @@ DRAGON_MAGAZINES.push({
                 `I've been getting a fairly steady stream of requests for this type of material (though there still has been only one attempt at a crass bribe). So, starting with the next issue, I'll work through all the pantheons in the ***Legends & Lore*** tome, one pantheon a month, until they're all done or until TSR, Inc. releases a product that makes the effort moot. If the enterprise still seems worthwhile after I finish the ***L&L*** pantheons, I'll move on to the ***Monster Mythology*** deities.`,
                 `(The deities of the FORGOTTEN REALMS® setting appear with the additional spheres from the ***Tome of Magic*** in DRAGON issue #192.)`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PANTHEON],
         },
         {
             page_number: '38',
@@ -7058,7 +7092,7 @@ DRAGON_MAGAZINES.push({
                 `***Coyote***: *Major*: none; *Minor*: Chaos, Travelers.`,
                 `***Snake***: *Major*: none; *Minor*: Time, Wards.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PANTHEON],
         },
     ]
 });
@@ -7128,7 +7162,7 @@ DRAGON_MAGAZINES.push({
                 `**Centeotl**: *Major*: Time; *Minor*: Chaos.`,
                 `**Ixtlilton**: *Major*: Time; *Minor*: Wards.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PANTHEON],
         },
     ]
 });
@@ -7367,7 +7401,7 @@ DRAGON_MAGAZINES.push({
                 `**The Dragon Kings**: These deities grant no spells.`,
                 `**Ch'eng Huang**: These local deities might grant minor access to any one of the following spheres: Time, Travelers, or Wards.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PANTHEON],
         },
     ]
 });
@@ -7480,7 +7514,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Oops, here they are: *Major*: Time, Thought; *Minor*: None.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PANTHEON],
         },
         {
             page_number: '45',
@@ -7510,7 +7544,7 @@ DRAGON_MAGAZINES.push({
                 `**Anhur**: *Major*: War; *Minor*: Time.`,
                 `**Bast**: *Major*: Time; *Minor*: Travelers.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PANTHEON],
         },
     ]
 });
@@ -7633,7 +7667,7 @@ DRAGON_MAGAZINES.push({
                 `**Titans**: *Major*: None; *Minor*: One of the following, as appropriate: Thought, Time, or Wards!`,
                 `**The Furies**: The Furies do not grant spells, as they have no worshipers.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PANTHEON],
         },
     ]
 });
@@ -7724,7 +7758,7 @@ DRAGON_MAGAZINES.push({
                 `**Vayu**: *Major*: None; *Minor*: Time, Wards.`,
                 `**Tvashtri**: *Major*: None; *Minor*: Numbers, Thought.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PANTHEON],
         },
     ]
 });
@@ -7840,7 +7874,7 @@ DRAGON_MAGAZINES.push({
                 `**Amatsu-Mikaboshi**: *Major*: Time; *Minor*: None.`,
                 `**Shichifukujin**: *Major*: Priest chooses one of the following: Time, Travelers, Wards; *Minor*: None.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PANTHEON],
         },
     ]
 });
@@ -7978,7 +8012,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `That's correct; no spell cast from a scroll on Athas has defiling effects. My error.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '74',
@@ -7994,7 +8028,7 @@ DRAGON_MAGAZINES.push({
                 `**Tyaa**: *Major*: Time; *Minor*: None.`,
                 `**Red God**: *Major*: War; *Minor*: Wards.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PANTHEON],
         },
     ]
 });
@@ -8093,7 +8127,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The ***DMG*** is correct. Generally, the most recently published material takes precedence over older material, but in this case the ***Complete Wizard's Handbook*** is wrong. Note that not all Illusion/Phantasm spells can be disbelieved. Spells that have no saving throw, or that are negated by a normal saving throw, such as ***invisibility***, ***hypnotic pattern***, and ***mirror image***, do not use the disbelief procedures.`,
                 `The ***invisibility*** spell is an illusion; as such, creatures with 20 + Intelligence scores are immune to it. Such creatures also are immune to spells such as ***mirror image***, ***blindness***. This does not, however, mean that these creatures automatically see every *invisible* creature in the AD&D universe. Naturally invisible creatures such as invisible stalkers, aerial servants, and pixies are still hidden from supra-genius creatures. The DM also might rule that magical ***invisibility*** bestowed by items such as ***dust of disappearance***, ***cloaks of elvenkind***, and maybe even ***rings of invisibility*** also work in the face of supra-genius intelligence by virtue of the magical power invested in them.`,
-                `When a character becomes *invisible*, all her equipment becomes invisible with her The character could read a scroll, however by putting down the scroll and allow ing it to become visible (see the ***invisibility*** spell description in the ***PH***, page 142). The character can pick up the visible scroll and read it normally, and can make the scroll *invisible* again by tucking it into her clothing. I strongly suggest that you assume nonmagical invisibility detection merely reveals an invisible creature's outline and position. The viewer has a good idea of the creature's size and shape, and the viewer knows exactly where the creature is—well enough to attack the creature with spells and to make physical attacks without the usual -4 penalty.`
+                `When a character becomes *invisible*, all her equipment becomes invisible with her The character could read a scroll, however by putting down the scroll and allowing it to become visible (see the ***invisibility*** spell description in the ***PH***, page 142). The character can pick up the visible scroll and read it normally, and can make the scroll *invisible* again by tucking it into her clothing. I strongly suggest that you assume nonmagical invisibility detection merely reveals an invisible creature's outline and position. The viewer has a good idea of the creature's size and shape, and the viewer knows exactly where the creature is—well enough to attack the creature with spells and to make physical attacks without the usual -4 penalty.`
             ],
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY,ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS],
         },
@@ -8193,7 +8227,7 @@ DRAGON_MAGAZINES.push({
                 `**Thyrm**: *Major*: None; *Minor*: War, Wards, Time.`,
                 `**Surtr**: *Major*: None; *Minor*: War, Wards, Time.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PANTHEON],
         },
     ]
 });
@@ -8307,7 +8341,7 @@ DRAGON_MAGAZINES.push({
                 `A lich who casts a ***wish*** spell gets five years older. This doesn't have much effect on the lich, but it does shorten its unlife by five years. If a lich casts enough ***wish*** spells, it eventually "dies" and falls into dust. Note also that casting a ***wish*** spell forces the character to rest in bed for 2d4 days. A lich must rest in its tomb for the required time after casting a ***wish***. Because this leaves the lich vulnerable to attack, I doubt that liches cast ***wish*** spells very often.`,
                 `Because liches once were living characters, it's a good bet that they have a Constitution score, which is determined by rolling 3d6 or whatever method the campaign employs. The DM is free to decide what effect the lich's transformation into an undead creature has on the Constitution score. It might be reduced (dead people are not at all well), or it might be increased (dead creatures can pretty much ignore injuries that would imperil a living creature, and they don't have to worry about getting sick). In any case, once the lich's Constitution score falls to zero it "dies."`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGICAL_AGING],
         },
         {
             page_number: '70',
@@ -8349,7 +8383,7 @@ DRAGON_MAGAZINES.push({
                 `You might decide that vampires do get older and more powerful with unnatural aging, but are forced to hibernate (with its attendant disabilities and risks) more often as they add unnatural years to their lives.`,
                 `You might decide that vampires and other undead are immune to all forms of unnatural aging. Time may weigh heavily on a vampire's mind and the passing decades may tear away at its body, but there's no reason to assume that a vampire really ages in the same sense that a living creature does.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_MAGICAL_AGING],
         },
         {
             page_number: '107',
@@ -8697,7 +8731,7 @@ DRAGON_MAGAZINES.push({
                 `*Major*: All, Astral, Charm, Combat, Divination, Elemental, Guardian, Healing, Necromantic, Protection, Summoning, Chaos*, Law*, Thought*, and Wards*; *Minor*: None.`,
                 `Note that dragon clerics get both Law and Chaos spells regardless of alignments.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS,ATTRIBUTE_PANTHEON],
         },
         {
             page_number: '96',
@@ -8707,7 +8741,7 @@ DRAGON_MAGAZINES.push({
                 `**Lolth**: *Major*: Chaos; *Minor*: Time.`,
                 `**Eilistraee**: *Major*: Wards; *Minor*: Travelers.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_PANTHEON],
         },
     ]
 });
@@ -9124,7 +9158,7 @@ DRAGON_MAGAZINES.push({
                 `A character must be able to read to use any written magical item, including books and scrolls.`,
                 `Technically, wizards and bards are not required to have the read/write proficiency, though many campaigns do require it as a house rule. Spell books are written in a sort of personal magical cipher, and illiterate characters can make up their own if they know how to cast spells. Note that read magic always gives the caster the ability to read a scroll, though the character might be categorically denied the use of the spell (no wizard can cast a priest spell from a scroll and vice versa). Likewise, thieves are not technically required to have the read/write proficiency to use their read languages skill (the skill itself is sufficient to unravel the mysteries of a written page if the character's die roll succeeds) or to use scrolls at high level.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '103-104',
@@ -9296,7 +9330,7 @@ DRAGON_MAGAZINES.push({
                 `I recommend that you allow specialist wizards to use freely any items that can be used by all character classes, even when they duplicate effects from their opposition schools. This includes the majority of potions, and most rings and miscellaneous magical items. Any item, however, that can be used only by wizards, or only by wizards and priests, is off-limits to a specialist if it duplicates an effect from the character's opposition schools. Any character, for example, can use a ***potion of healing***, even an illusionist. An illusionist also can use a ***wand of magic missiles***, but the character must make attack rolls when firing the missiles, just as a non-wizard does.`
             ],
             comment: `The same answer is given again in issue #227.`,
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '84',
@@ -9376,7 +9410,7 @@ DRAGON_MAGAZINES.push({
                 `Yes, a half-elf wizard needs an Intelligence score of 19 or more to reach 16th level (if the campaign is using the Exceeding Level Limits optional rule).`,
                 `But no rule says a character who is creating a magical item has to cast all the required spells himself. The character can get another character to cast the spells for him, read the spells from scrolls, or use a ***wish*** to duplicate a spell's effects. Remember that any wizard can read wizard spells from scrolls, even spells from a specialist's opposition schools. (This a special property of magical scrolls and an important exception to the general rule that prevents specialists from employing magical items that produce effects from their opposition schools.) Also, "Sage Advice" suggested last month that it's okay to add ***enchant an item*** to the evocation/invocation school. You can use the same logic to put ***permanency*** into the evocation/invocation school, too, but that's beginning to stretch things a bit.`,
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS,ATTRIBUTE_RACE,ATTRIBUTE_SPELL,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '98',
@@ -9499,7 +9533,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A scroll is essentially a precast spell waiting for someone to come along and trigger it. A character who can read a spell scroll can use the spells on it without regard to any other restrictions. Both player characters (PCs) in the example could use the spells on the scrolls. Of course, the priest cannot read the wizard scroll and vice versa.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '81',
@@ -14096,7 +14130,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `If the thief is high enough level to use the scroll (10th level), he can study it and understand it somewhat. The study reveals which spells are on the scroll and what they do (well enough so the thief's player can refer to the spell's description). The thief could tell the party wizard or priest what's on the scroll, but these characters still must study the scroll with a read magic spell before they can use it (a description from a dilettante is not good enough for a true professional). When using the scroll, the thief is free to decide which spell to cast from it. Don't forget the thief's spell failure chance of 25%. If the spell fails, there is always some adverse effect on the thief—the DM should feel free to be creative.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '22',
@@ -14961,8 +14995,7 @@ DRAGON_MAGAZINES.push({
                 `Nothing "gives." I assume you refer to the text on scrolls in Appendix 3. You have quoted the rule correctly A spell scribed on a scroll always has a casting level (for determining level-based variables such as range, damage, duration, and resistance to dispel attempts) of one level higher than the minimum required to cast it, but never less than 6th level. The rule tends to make a scroll spell less potent when read from the scroll than it would be if the character who wrote the scroll cast it herself. (sometimes considerably less potent). In other words, the act of writing a scroll limits its power. Alert readers will notice that the caster could actually gain a casting-level boost from this rule. In such a case, assign the caster's own level to the scroll (A scroll spell never functions at a level higher than its creator's level.)`,
                 `I know several DMs who allow characters to control the casting level of scrolls they write, so long as it is not less than the minimum level required to cast the spell. In most of these games, the actual casting level (not the spell level) is used to determine the failure chance when a character reads the scroll. Using unknown scrolls can be quite a gamblein such campaigns.`
             ],
-            comment: `More on scrolls`,
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '22',
@@ -15104,7 +15137,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Nothing; immortal or ageless creatures ignore aging effects. Note, however, any aging side effects from spell casting are meant to represent the terrible strain casting a powerful spell places on the caster's body and psyche. Even an ageless creature is required to pass a system shock roll to survive the ordeal (see the Constitution section of Chapter 1 in the ***PHB***).`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGICAL_AGING],
         },
         {
             page_number: '20',
@@ -16080,7 +16113,7 @@ DRAGON_MAGAZINES.push({
                 `If the host body is significantly different (say a human occupying a centaur's body). The character might suffer a movement penalty and be unable to perform any complex task. In a short time, such a character might become incapacitated thanks to the cumulative effects of too many minor accidents, improper diet, insufficient rest, and a host of other problems. In any case, the character must spend some time (and maybe even a proficiency slot), learning how to use and take proper care of the host.`,
                 `No matter what type of host body the caster invades, he'll have to be wary of spells such as ***dispel magic*** and ***dispel evil***, which can drive him from the host body. The character/host counts as an enchanted creature for purposes of spells such as ***protection from evil*** and ***antimagic shell*** and wil find himself hedged out by these effects. The character radiates Enchantment/Charm magic, and spells such as ***detect magic*** and ***detect charm*** reveal this. A ***true seeing*** spell reveals the caster's life force. The DM is free to decide exactly what the spell reveals; ***true seeing*** might simply detect an odd ripple in the host's aura, or it might show the invading character's visage superimposed on the host.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_DISPEL_MAGIC],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_DISPEL_MAGIC,ATTRIBUTE_MAGICAL_AGING],
         },
         {
             page_number: '22',
@@ -16263,7 +16296,7 @@ DRAGON_MAGAZINES.push({
                 `In any case, scrolls don't work well underwater—they're ruined if they get soaking wet.`,
                 `For a detailed examination of underwater spellcasting and the attendant difficulties, see ***Of Ships and the Sea***, Chapter .7`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '24',
@@ -16761,7 +16794,7 @@ DRAGON_MAGAZINES.push({
                 `A ***haste*** spell instantly makes the recipient's body a year older, though the mind (Intelligence and Wisdom) is unaffected (see Chapter 2 in the ***Player's Handbook***).`,
                 `If a poisoned character receives a ***haste*** spell, the character's body gets a year older. The poison still has its normal duration and effect on the character.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_HASTE],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGICAL_AGING],
         },
         {
             page_number: '22',
@@ -16769,7 +16802,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No. The real passage of time (or healing magic) heals wounds; instantly becoming a year older doesn't.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_HASTE,ATTRIBUTE_APRIL_FOOLS],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGICAL_AGING,ATTRIBUTE_APRIL_FOOLS],
         },
         {
             page_number: '22',
@@ -16777,7 +16810,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_HASTE,ATTRIBUTE_APRIL_FOOLS],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGICAL_AGING,ATTRIBUTE_APRIL_FOOLS],
         },
         {
             page_number: '22',
@@ -16785,7 +16818,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The character physically gets a year older the instant he receives the spell, and the mummy rot proceeds on its normal course.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_HASTE,ATTRIBUTE_APRIL_FOOLS],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGICAL_AGING,ATTRIBUTE_APRIL_FOOLS],
         },
         {
             page_number: '22',
@@ -16793,7 +16826,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_HASTE,ATTRIBUTE_APRIL_FOOLS],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGICAL_AGING,ATTRIBUTE_APRIL_FOOLS],
         },
         {
             page_number: '22-23',
@@ -16801,7 +16834,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `***Haste*** (and ***slow***) works on any creature unless that creature's description specifically states otherwise. Whether ***haste*** has any particular affect on the recipient's metabolism is up to the DM.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_HASTE],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGICAL_AGING],
         },
         {
             page_number: '23',
@@ -16809,7 +16842,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `In either case, the "wound" functions normally.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_HASTE],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGICAL_AGING],
         },
         {
             page_number: '23',
@@ -16817,7 +16850,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `As noted several questions ago, the aging occurs the instant a creature receives the spell.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_HASTE],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGICAL_AGING],
         },
         {
             page_number: '23',
@@ -16825,7 +16858,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Instantly becoming a year older doesn't make a character any stronger, no matter what the character does; though it could make the character weaker (Strength loss) and possibly less healthy (Constitution loss) if the aging moves the character into a higher age category. (See Table 12 in the ***Player's Handbook***.) Any magical aging visits the ravages of time on the subject's body with none of the benefits.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_HASTE,ATTRIBUTE_APRIL_FOOLS],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGICAL_AGING,ATTRIBUTE_APRIL_FOOLS],
         },
         {
             page_number: '23',
@@ -17202,7 +17235,7 @@ DRAGON_MAGAZINES.push({
                 `For Wizard / Thieves, calculate both failure chances and use the lowest failure chance. Note that a Thief always has a 25% chance for a harmful failure, whereas it is possible for a Wizard to simply fail outright with no catastrophic effects. You might want to let the player choose to have the character attempt to use a scroll as a Wizard or as a Thief.`
             ],
             comment: `More on scrolls`,
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '23',
@@ -17377,7 +17410,7 @@ DRAGON_MAGAZINES.push({
                 `Once the invisible character attacks, he's used up his action for the round. The character stays visible until he can use the ***ring*** to become invisible again. To do so, he must wait until the next round, when he can take an action to activate the ***ring***. Note that using a magical item counts as a character's sole action for the round (unless *hasted*).`
             ],
             comment: `Matches the answer to a similar question in #237`,
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY,ATTRIBUTE_HASTE],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_INVISIBILITY],
         },
         {
             page_number: '9',
@@ -18279,7 +18312,7 @@ DRAGON_MAGAZINES.push({
                 `Permanent changes such as aging, ability score loss, alignment shifts, or reincarnation aren't revealed by a ***true seeing*** spell. So, in your first two examples, ***true seeing*** reveals nothing special.`,
                 `Temporary changes in form, or changes based on a continuing magical effect, such as *polymorph*, *shapechange*, and illusion magic, are always revealed by ***true seeing***. So in your last example, true seeing reveals a person.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL,ATTRIBUTE_MAGICAL_AGING],
         },
         {
             page_number: '22',
@@ -18789,7 +18822,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Loremasters receive the Arcane Lore ability instead of the standard bard ability to use written items. When reading a scroll, the Loremaster can attempt a Wisdom check. If the check succeeds, the character can use the scroll. If the check fails, the character can't use the scroll. A failed roll does not cause a mishap, but I recommend that a mishap occur on a roll of 20.`
             ],
-            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS],
+            attributes: [ATTRIBUTE_2E,ATTRIBUTE_CLASS,ATTRIBUTE_SCROLL],
         },
         {
             page_number: '99',
