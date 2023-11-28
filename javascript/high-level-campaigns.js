@@ -1082,54 +1082,54 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
 </tr>
 <tr>
     <td>6 vials</td>
-    <td>1d6✕10+120 gp</td>
+    <td>1d6×10+120 gp</td>
     <td style="text-align: right;">200 gp</td>
 </tr>
 <tr>
     <td>8 vials</td>
-    <td>1d6✕50+1000 gp</td>
+    <td>1d6×50+1000 gp</td>
     <td style="text-align: right;">350 gp</td>
 </tr>
 <tr>
     <td>10 vials</td>
-    <td>1d6✕100+1,800 gp</td>
+    <td>1d6×100+1,800 gp</td>
     <td style="text-align: right;">500 gp</td>
 </tr>
 <tr>
     <td>14 vials</td>
-    <td>1d4✕500+5,200 gp</td>
+    <td>1d4×500+5,200 gp</td>
     <td style="text-align: right;">750 gp</td>
 </tr>
 <tr>
     <td>18 vials</td>
-    <td>1d4✕1000+8,000 gp</td>
+    <td>1d4×1000+8,000 gp</td>
     <td style="text-align: right;">1,000 gp</td>
 </tr>
 <tr>
     <td>24 vials</td>
-    <td>1d4✕1000+15,000 gp</td>
+    <td>1d4×1000+15,000 gp</td>
     <td style="text-align: right;">1,250 gp</td>
 </tr>
 <tr>
     <td>32 vials</td>
-    <td>1d4✕1000+18,000 gp</td>
+    <td>1d4×1000+18,000 gp</td>
     <td style="text-align: right;">1,500 gp</td>
 </tr>
 <tr>
     <td>40 vials</td>
-    <td>1d6✕10,000+50,000 gp</td>
+    <td>1d6×10,000+50,000 gp</td>
     <td style="text-align: right;">1,750 gp</td>
 </tr>
 <tr>
     <td>50 vials</td>
-    <td>1d10✕10,000+100,000 gp</td>
+    <td>1d10×10,000+100,000 gp</td>
     <td style="text-align: right;">2,000 gp</td>
 </tr>
 </table>`,
             `The basin and pedestal must be specially designed and fashioned; the process requires 2d4+2 weeks.`,
             `Holy water loses its potency if removed from the font for more than one turn unless it is placed in a specially blessed crystal or leaded glass vial. Each vial holds a quarter pint of liquid and costs 5 gp. (Copper-pinching characters can sell empty vials on the open market for 1d4+1 gp each.)`,
             `A font can be defiled and made useless for creating holy water (and for *magic font* spells) by touching it and casting a *curse* spell. Fonts can be nonmagically defiled by placing anything repugnant to the deity to which the font is dedicated to within its confines.`,
-            `A defiled font must be entirely remade. The font cannot be cleansed or restored, except by a *wish*, though the materials in the basin can be recycled and used in a new basin for 1d4+1✕10% of the original cost. For example, Delsenora's temple has a font that can hold 32 vials of holy water. The initial cost was 21,000 gp for the basin plus 1,500 gp for the pedestal. If the font is defiled, the replacement cost is 1,500 gp for the pedestal and 20-50% of the original basin cost. Delsenora rolls a 2 and must pay 30% of the original cost—6,300 gp.`
+            `A defiled font must be entirely remade. The font cannot be cleansed or restored, except by a *wish*, though the materials in the basin can be recycled and used in a new basin for 1d4+1×10% of the original cost. For example, Delsenora's temple has a font that can hold 32 vials of holy water. The initial cost was 21,000 gp for the basin plus 1,500 gp for the pedestal. If the font is defiled, the replacement cost is 1,500 gp for the pedestal and 20-50% of the original basin cost. Delsenora rolls a 2 and must pay 30% of the original cost—6,300 gp.`
         ],
         attributes: [ATTRIBUTE_2E],
     },

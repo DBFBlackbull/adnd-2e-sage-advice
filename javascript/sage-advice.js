@@ -16927,7 +16927,7 @@ DRAGON_MAGAZINES.push({
             page_number: '22',
             question: `How much does a vail of holy water weigh, and how much liquid can it contain? According to the Money and Equipment chart in the ***Player's Handbook***, it weighs ⅒ of a pound and this contains 1.5 fluid ounces. But according to the DRAGONLANCE® lists, a vial contains 4 oz. (¼ of a pound). Which is right?`,
             answer: [
-                `Traditionally, a holy water vial holds ¼pint of liquid—4 fluid ounces. A fluid ounce is a measure of volume, not weight. Let's see: Water weighs about 8½ pounds per gallon. There are 128 fluid ounces to the gallon, so 4 fluid ounces of water weighs 4/128 (.03125) ✕ 8.5 = .26525 pounds or a little more than a quarter pound, plus the weight of the flask; perhaps about a third of a pound is a reasonable figure for the total weight.`
+                `Traditionally, a holy water vial holds ¼ pint of liquid—4 fluid ounces. A fluid ounce is a measure of volume, not weight. Let's see: Water weighs about 8½ pounds per gallon. There are 128 fluid ounces to the gallon, so 4 fluid ounces of water weighs 4/128 (.03125) × 8.5 = .26525 pounds or a little more than a quarter pound, plus the weight of the flask; perhaps about a third of a pound is a reasonable figure for the total weight.`
             ],
             comment: `4 oz is consistent with my own research`,
             attributes: [ATTRIBUTE_2E],
@@ -17043,9 +17043,9 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '23',
-            question: `How much does a regular, 2" ✕ 4" board cost? That is, in a forest town or city?`,
+            question: `How much does a regular, 2" × 4" board cost? That is, in a forest town or city?`,
             answer: [
-                `That depends on how long the 2" ✕ 4" is, whether it's finished or not, and what kind of tree the board is from. Assuming the 2" ✕ 4" is like a modern example (soft wood, dried, and planed smooth on four sides), it should cost about 2 copper pieces a foot.`
+                `That depends on how long the 2" × 4" is, whether it's finished or not, and what kind of tree the board is from. Assuming the 2" × 4" is like a modern example (soft wood, dried, and planed smooth on four sides), it should cost about 2 copper pieces a foot.`
             ],
             attributes: [ATTRIBUTE_2E],
         },
@@ -17059,7 +17059,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '23-24',
-            question: `I was looking at the stowage capacity rules (Table 50 in the ***Player's Handbook***), and they say that a large belt pouch is 6" ✕ 8" ✕ 2". How do you get your hand in a bag with a width of 2 inches, and if that isn't the opening, the depth will suck.`,
+            question: `I was looking at the stowage capacity rules (Table 50 in the ***Player's Handbook***), and they say that a large belt pouch is 6" × 8" × 2". How do you get your hand in a bag with a width of 2 inches, and if that isn't the opening, the depth will suck.`,
             answer: [
                 `Think of the bag as a rectangular block 6 inches wide, 8 inches long, and 2 inches thick. The opening is therefore 2 inches by 6 inches, with a depth of 8 inches-plenty of room for a hand. If that doesn't help, try to get a look at the picture in the equipment section of the Core Rules CD-ROM.`
             ],
@@ -18928,7 +18928,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `First, you cannot target any spell on something held in a container; there must be an unbroken line between the caster and the target point.`,
                 `In any case, since the character has packed all the items together to construct a sort of fragmentation bomb, the whole collection should be treated as a single object. (This brings to mind last month's discussion of the ***item*** spell.) The caster cannot target just one part of the item. If the assembled item weighs more than what the spell can affect, the spell fails. If the spell can affect the new item, the blast should inflict damage equal to the target item's total weight.`,
-                `In general, ***Tenser's destructive resonance*** does not produce any shrapnel effects. When there are lots of loose items lying about, items tend to be obliterated in the blast or else largely unaffected (roll item saving throws vs. magical fire). Surviving objects could be scattered around if they weigh less than 1 pound. Roll randomly for direction and distance. Use the grenade scatter diagram from Chapter 9 in the ***DUNGEON MASTER® Guide*** and orient it so that the "1" position is toward the caster. Objects should move about 1d3 ✕ 5 feet.`
+                `In general, ***Tenser's destructive resonance*** does not produce any shrapnel effects. When there are lots of loose items lying about, items tend to be obliterated in the blast or else largely unaffected (roll item saving throws vs. magical fire). Surviving objects could be scattered around if they weigh less than 1 pound. Roll randomly for direction and distance. Use the grenade scatter diagram from Chapter 9 in the ***DUNGEON MASTER® Guide*** and orient it so that the "1" position is toward the caster. Objects should move about 1d3 × 5 feet.`
             ],
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
         },
@@ -19062,7 +19062,7 @@ DRAGON_MAGAZINES.push({
             question: `How does a thief's Backstab ability work with the critical hit system from the ***PLAYERS' OPTION: Combat & Tactics*** rules? Will a successful backstab always be a torso hit? How do you calculate damage?`,
             answer: [
                 `Just go through the critical hit procedure normally. Assuming a backstab is always a torso hit is fine as a house rule, but it doesn't have to be that way. In any case, determine whether a critical hit occurs and what effect the critical hit has before calculating the backstab damage. A backstab does not increase or otherwise alter any special effect a critical hit might have (such as severing, crushing, bleeding, or movement reduction). You might want to reroll some criticals or bump up the severity roll; for example, you might decide that a successful backstab does not cause a graze effect.`,
-                `When a critical hit doubles or triples damage, add the multiples to the multiples from the backstab. For example, a ✕2 (one extra multiple) damage critical hit coupled with a ✕3 (two extra multiples) backstab yields ✕4 damage (✕1 for the base damage plus three extra multiples). A ✕3 damage critical hit coupled with a ✕3 backstab yields ✕5 damage (1+2+2).`
+                `When a critical hit doubles or triples damage, add the multiples to the multiples from the backstab. For example, a ×2 (one extra multiple) damage critical hit coupled with a ×3 (two extra multiples) backstab yields ×4 damage (×1 for the base damage plus three extra multiples). A ×3 damage critical hit coupled with a ×3 backstab yields ×5 damage (1+2+2).`
             ],
             comment: `Consistent with #222. It sadly does not specify if you roll more dice, or multiply the result. But it seems the ***C&T*** rules lean mostly towards rolling more dice.`,
             attributes: [ATTRIBUTE_2E],
