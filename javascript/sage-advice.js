@@ -14068,7 +14068,7 @@ DRAGON_MAGAZINES.push({
 </tr>
 <tr>
     <td style="text-align: center;">96–100</td>
-    <td>man-sized, large (up to 61⁄2 feet, 250 lbs.)</td>
+    <td>man-sized, large (up to 6½ feet, 250 lbs.)</td>
 </tr>
 </table>`,
                 `***The Complete Fighter's Handbook*** p. 109 **Armor Fitting**:`,
@@ -14090,12 +14090,12 @@ DRAGON_MAGAZINES.push({
 </tr>
 <tr>
     <td><strong>Wear Armor:</strong></td>
-    <td colspan="2" style="text-align: center; padding: 0 10px"><strong>Dwarf</strong></td>
-    <td colspan="2" style="text-align: center; padding: 0 10px;"><strong>Elf</strong></td>
-    <td colspan="2" style="text-align: center; padding: 0 10px;"><strong>Gnome</strong></td>
-    <td colspan="2" style="text-align: center; padding: 0 10px;"><strong>Half-Elf</strong></td>
-    <td colspan="2" style="text-align: center; padding: 0 10px;"><strong>Halfling</strong></td>
-    <td colspan="2" style="text-align: center; padding: 0 10px;"><strong>Human</strong></td>
+    <td colspan="2" style="text-align: center; padding: 0 15px"><strong>Dwarf</strong></td>
+    <td colspan="2" style="text-align: center; padding: 0 15px;"><strong>Elf</strong></td>
+    <td colspan="2" style="text-align: center; padding: 0 15px;"><strong>Gnome</strong></td>
+    <td colspan="2" style="text-align: center; padding: 0 15px;"><strong>Half-Elf</strong></td>
+    <td colspan="2" style="text-align: center; padding: 0 15px;"><strong>Halfling</strong></td>
+    <td colspan="2" style="text-align: center; padding: 0 15px;"><strong>Human</strong></td>
 </tr>
 <tr>
     <td>Dwarf</td>
