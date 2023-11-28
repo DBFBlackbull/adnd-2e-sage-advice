@@ -178,75 +178,100 @@ function search() {
 }
 
 function copyPlainText(id) {
-    // Get the text field
     let element = document.getElementById(id);
-    let innerHTML = element.innerHTML;
-    innerHTML = innerHTML.replaceAll(/<span class="no-copy">(.|\n)*?<\/span>/g, '')
-        .replaceAll(/<br>/g, '\n');
-
     // Get rid of the rest of the HTML tags
-    let tempElement = document.createElement('div');
-    tempElement.innerHTML = innerHTML;
-    let text = tempElement.innerText;
+    let title = element.querySelectorAll('.title')[0].innerText;
+    let question = element.querySelectorAll('.question,.entry')[0].innerText;
+    let answer = '';
+    let answerElements = element.querySelectorAll('.answer,.optional');
+    if (answerElements.length > 0)
+        answer = answerElements[0].innerText;
+
+    let strings = [title, question, answer].filter(Boolean);
+    console.log(strings);
+    let formattedText = strings.join('\n');
 
     // Copy the text inside the text field
-    navigator.clipboard.writeText(text);
+    navigator.clipboard.writeText(formattedText);
 }
 
 function copyRichText(id) {
-    // Get the text field
     let element = document.getElementById(id);
-    let innerHTML = element.innerHTML;
-    innerHTML = innerHTML.replaceAll(/<span class="no-copy">(.|\n)*?<\/span>/g, '');
+
+    let title = element.querySelectorAll('.title')[0].innerHTML;
+    let question = element.querySelectorAll('.question,.entry')[0].innerHTML;
+    let answer = '';
+    let answerElements = element.querySelectorAll('.answer,.optional');
+    if (answerElements.length > 0)
+        answer = answerElements[0].innerHTML;
+
+    let strings = [title, question, answer].filter(Boolean);
+    console.log(strings);
+    let formattedText = strings.join('<br>');
 
     // Copy the text inside the text field
-    const blob = new Blob([innerHTML], {type: 'text/html'});
+    const blob = new Blob([formattedText], {type: 'text/html'});
     const clipboardItem = new window.ClipboardItem({'text/html': blob});
     navigator.clipboard.write([clipboardItem]);
 }
 
-function copyDiscordText(id) {
-    // Get the text field
-    let element = document.getElementById(id);
-    let innerHTML = element.innerHTML;
-    innerHTML = innerHTML.replaceAll(/<br>/g, '\n')
-        .replaceAll(/<\/?strong>/g,'**')
-        .replaceAll(/<\/?em>/g,'*');
-
-    let tempElement = document.createElement('div');
-    tempElement.innerHTML = innerHTML;
-
+function getMarkdownStrings(element) {
     // Get rid of the rest of the HTML tags
-    let title = tempElement.getElementsByClassName('title')[0].innerText;
-    let question = tempElement.getElementsByClassName('question')[0].innerText
-        .replaceAll(/\*\*\*/g, '*');
-    let answer = tempElement.getElementsByClassName('answer')[0].innerText;
+    let strings = [];
+    let title = element.querySelectorAll('.title')[0].innerText;
+    strings.push(title);
 
-    let formattedText = `${title}\n> ${question}\n> ${answer}`;
+    let questionElements = element.querySelectorAll('.question,.entry');
+    let question = questionElements[0].innerHTML
+        .replaceAll(/<\/?strong>/g, '**')
+        .replaceAll(/<\/?em>/g,'*')
+    if (questionElements[0].className.includes('question')) {
+        question = question.replaceAll(/\*{3}/g, '*'); // Remove double bold
+    }
+    question.split('<br>')
+        .map(q => {
+            strings.push('');
+            strings.push(q);
+        });
+
+    let answerElements = element.querySelectorAll('.answer,.optional');
+    if (answerElements.length > 0) {
+        let answer = answerElements[0].innerHTML
+            .replaceAll(/<\/?strong>/g, '**')
+            .replaceAll(/<\/?em>/g, '*');
+        let answers = answer.split('<br>')
+            .map(a => {
+                strings.push('');
+                strings.push(a);
+            });
+        strings = strings.concat(answers);
+    }
+
+    return strings
+}
+
+function copyDiscordText(id) {
+    let element = document.getElementById(id);
+
+    let strings = getMarkdownStrings(element);
+
+    strings = strings.filter(Boolean);
+    console.log(strings);
+    let formattedText = strings.join('\n> ');
+
     // Copy the text inside the text field
     navigator.clipboard.writeText(formattedText);
 }
 
 function copyRedditText(id) {
-    // Get the text field
     let element = document.getElementById(id);
-    let innerHTML = element.innerHTML;
-    innerHTML = innerHTML.replaceAll(/<span class="no-copy">(.|\n)*?<\/span>/g, '')
-        .replaceAll(/<br>/g, '  \n')
-        .replaceAll(/<\/?strong>/g, '**')
-        .replaceAll(/<\/?em>/g, '*');
 
-    // Get rid of the rest of the HTML tags
-    let tempElement = document.createElement('div');
-    tempElement.innerHTML = innerHTML;
-    let text = tempElement.innerText;
+    let strings = getMarkdownStrings(element)
 
-    let index = text.indexOf('\n');
-    let title = text.slice(0, index);
-    let rest = text.slice(index+1);
-
-    let finalText = `${title}\n\n>${rest}`;
+    strings = strings.filter(s => s !== undefined);
+    console.log(strings);
+    let formattedText = strings.join('\n>');
 
     // Copy the text inside the text field
-    navigator.clipboard.writeText(finalText);
+    navigator.clipboard.writeText(formattedText);
 }

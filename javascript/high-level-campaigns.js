@@ -179,7 +179,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
         {
             page_number: '71',
             entry: [
-                `Fear: If made permanent, a *fear* spell causes the recipient to continually radiate a fear aura.`,
+                `***Fear:*** If made permanent, a *fear* spell causes the recipient to continually radiate a fear aura.`,
                 `When cast on an area, a permanent fear effect creates a cone as described in the spell description. The caster can orient the cone in any direction, but the direction cannot be changed thereafter. Creatures entering the cone must save vs. spells or flee for one round per level of the caster at the time the spell was cast.`,
                 `When cast on an object or creature, the recipient radiates a cone of fear that can be pointed in any direction the recipient desires once per round as though wielding a *wand of fear*. Even though this attack requires no casting time or command word, it still counts as an action for that round and has an initiative modifier of +3.`
             ],
