@@ -257,8 +257,8 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
         {
             page_number: '73',
             entry: [
-                `***Permanency:*** The caster can use this spell to make an- other spellcaster's spell permanent. The permonency must be cast simultaneously with the spell to be made permanent and the permanency caster must touch the other caster.`,
-                `A permanent spell cast upon the caster himself or upon a living creature can be dispelled only by a spell- caster of a level greater than the permanency caster at the time he cast the spell. Further, the dispel effect must be targeted solely upon the caster to be effective (see dispel magic spell description and the note on dispel magic in this section).`,
+                `***Permanency:*** The caster can use this spell to make another spellcaster's spell permanent. The *permanency* must be cast simultaneously with the spell to be made permanent and the *permanency* caster must touch the other caster.`,
+                `A permanent spell cast upon the caster himself or upon a living creature can be dispelled only by a spellcaster of a level greater than the *permanency* caster at the time he cast the spell. Further, the dispel effect must be targeted solely upon the caster to be effective (see *dispel magic* spell description and the note on *dispel magic* in this section).`,
                 `The following spells can be made permanent if the caster uses the spell on himself`,
                 `
 <table>
