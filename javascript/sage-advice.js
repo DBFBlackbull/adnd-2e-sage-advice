@@ -18387,6 +18387,7 @@ DRAGON_MAGAZINES.push({
                 `Ignore subjective time effects unless the spell actually causes the user to enter the Astral Plane fully.`,
                 `If you still think the spell is too pricey, treat the flat likeness as a focus, not a component. The focus is necessary for the spell but is not consumed in the cast-`
             ],
+            comment: `Seems weird to me that the squares are not mirrored. Column 7, row 3 and 7 should be "—" for the figure to make sense to me.`,
             attributes: [ATTRIBUTE_2E,ATTRIBUTE_SPELL],
         },
         {
