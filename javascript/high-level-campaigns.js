@@ -304,7 +304,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
     <td>*fear&ast;*</td>
 </tr>
 <tr>
-    <td colspan="2"><br>&emsp;The following spells can be made permanent if cast on an object or area::<br><br></td>
+    <td colspan="2"><br>&emsp;The following spells can be made permanent if cast on an object or area:<br><br></td>
 </tr>
 <tr>
     <td>*alarm*</td>
