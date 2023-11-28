@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function hideForeword() {
     let main = document.getElementById('main');
-    let headings = main.querySelectorAll('h2,h3');
+    let headings = main.querySelectorAll('h1,h2,h3,h4');
     for (heading of headings) {
         heading.classList.toggle('hidden');
     }
@@ -126,10 +126,10 @@ function search() {
 
     let results = 0;
 
-    let sageAdvices = document.getElementsByClassName('sage-advice');
-    for (let sageAdvice of sageAdvices) {
+    let contentElements = document.getElementsByClassName('content');
+    for (let content of contentElements) {
         let hiddenCounter = 0;
-        let paragraphs = sageAdvice.querySelectorAll('p');
+        let paragraphs = content.querySelectorAll('p');
         for (let paragraph of paragraphs) {
             if (!attributeRegex && !searchRegexes) {
                 paragraph.classList.remove('hidden');
@@ -148,7 +148,7 @@ function search() {
             if (searchRegexes) {
                 let searchMatch = false;
 
-                let contentTexts = paragraph.querySelectorAll('.question,.answer');
+                let contentTexts = paragraph.querySelectorAll('.question,.answer,.entry,.optional');
                 for (let text of contentTexts) {
                     searchMatch = searchMatch || searchRegexes.every(reg => text.innerText.match(reg));
                 }
@@ -164,9 +164,9 @@ function search() {
         }
 
         if (hiddenCounter === paragraphs.length) {
-            sageAdvice.classList.add('hidden');
+            content.classList.add('hidden');
         } else {
-            sageAdvice.classList.remove('hidden');
+            content.classList.remove('hidden');
         }
     }
 

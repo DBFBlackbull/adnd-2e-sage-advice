@@ -1,0 +1,10 @@
+mixin buttons(id)
+    button(onclick=`copyPlainText('${id}')` title="Copy plain text") 📄
+    button(onclick=`copyRichText('${id}')` title="Copy rich text") 📋
+    button(onclick=`copyDiscordText('${id}')` title="Copy discord text")
+        image(src="../img/icons8-discord-16.png")
+    button(onclick=`copyRedditText('${id}')` title="Copy reddit text")
+        image(src="../img/icons8-reddit-16.png")
+    | &ensp;
+    a(href=anchorLink(id)) 🔗
+    br

@@ -1,3 +1,7 @@
+//- INCLUDES
+  =============================
+include abstract/mixins.pug
+
 -
     function formatInput(input, issue, question) {
         if (Array.isArray(input)) {
@@ -79,44 +83,5 @@ body
             input(id="radio-all-search-terms" type="radio" name="search-type" value="all-search-terms")
             label(for="radio-all-search-terms") Match all search terms
 
-        each magazine, _ in dragonMagazines
-            div(class="sage-advice")
-                h2 Sage Advice ##{magazine.issue_number}, #{magazine.publication_month} #{magazine.publication_year}
-                h3 !{formatInput(magazine.foreword, magazine.issue_number, 'foreword')}
-                each advice, index in magazine.sage_advice
-                    - let questionNumber = index + 1
-                    - let id = `${magazine.issue_number}-${questionNumber}`
-                    // - console.log(`Sage Advice #${magazine.issue_number} p. ${advice.page_number}, Question: ${questionNumber}`)
-                    p(id=id)
-                        span(class='title') Sage Advice ##{magazine.issue_number} (#{magazine.publication_month} #{magazine.publication_year}) p. #{advice.page_number}, Question: #{questionNumber}
-                        span(class="no-copy")
-                            button(onclick=`copyPlainText('${id}')` title="Copy plain text") 📄
-                            button(onclick=`copyRichText('${id}')` title="Copy rich text") 📋
-                            button(onclick=`copyDiscordText('${id}')` title="Copy discord text")
-                                image(src="../img/icons8-discord-16.png")
-                            button(onclick=`copyRedditText('${id}')` title="Copy reddit text")
-                                image(src="../img/icons8-reddit-16.png")
-                            | &ensp;
-                            a(href=anchorLink(id)) 🔗
-                        br
-                        span(class="question")
-                            strong !{formatInput(advice.question, magazine.issue_number, questionNumber)}
-                        br
-                        span(class="answer") &emsp;!{formatInput(advice.answer, magazine.issue_number, questionNumber)}
-                        if advice.image
-                            span(class="no-copy")
-                                if Array.isArray(advice.image)
-                                    each img, _ in advice.image
-                                        br
-                                        img(src="../img/" + img)
-                                else
-                                    br
-                                    img(src="../img/" + advice.image)
-                        if advice.comment
-                            span(class="comment")
-                                strong
-                                    em Comment:
-                                |  !{formatInput(advice.comment, magazine.issue_number, questionNumber)}
-                        span(class="content-attributes") Attributes: #{advice.attributes.join(", ")}
-                if magazine.epilogue
-                    h3 !{formatInput(magazine.epilogue, magazine.issue_number, 'epilogue')}
+        include sage-advice.pug
+        include high-level-campaigns.pug

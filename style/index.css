@@ -21,10 +21,14 @@ body {
     padding-top: 5px;
 }
 
+.optional,
 .comment {
     display: block;
-    padding-top: 5px;
+    margin-top: 5px;
     background-color: lightgray;
+}
+.optional {
+    background-color: darkgray;
 }
 
 .hidden {
@@ -40,5 +44,7 @@ h2 {
 h3 {
     font-weight: normal;
     margin-block-start: 0.2em;
+}
+h3.sage-advice {
     font-style: italic;
 }

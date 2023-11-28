@@ -60,6 +60,8 @@ const ATTRIBUTES = [
 ];
 
 // threads / attributes:
+// identifying items
+// identifying potions
 // wizards in armor
 // thief backstab
 // dual class in the same group

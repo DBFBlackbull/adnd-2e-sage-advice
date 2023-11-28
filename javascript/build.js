@@ -6,7 +6,14 @@ const jsFolder = path.join(sourceFolder, 'javascript');
 const htmlFolder = path.join(sourceFolder, 'html');
 const pugFolder = path.join(sourceFolder, 'pug');
 
-const content = require(path.join(jsFolder, 'sage-advice.js'));
+const sageAdvice = require(path.join(jsFolder, 'sage-advice.js'));
+const highLevelCampaigns = require(path.join(jsFolder, 'high-level-campaigns.js'));
 
-let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {pretty: true, dragonMagazines: content.dragonMagazines, attributes: content.attributes, synonyms: content.synonyms});
+let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {
+    pretty: true,
+    dragonMagazines: sageAdvice.dragonMagazines,
+    attributes: sageAdvice.attributes,
+    synonyms: sageAdvice.synonyms,
+    highLevelCampaigns: highLevelCampaigns,
+});
 fs.writeFileSync(path.join(htmlFolder,'index.html'), html);
