@@ -1,34 +1,4 @@
-const ATTRIBUTE_1E = '1E';
-const ATTRIBUTE_2E = '2E';
-const ATTRIBUTE_SPELL = 'Spell';
-const ATTRIBUTE_RACE = 'Race';
-const ATTRIBUTE_CLASS = 'Class';
-const ATTRIBUTE_WEAPON = 'Weapon';
-
-const ATTRIBUTE_TURN_UNDEAD = 'Turn Undead';
-const ATTRIBUTE_INVISIBILITY = 'Invisibility';
-const ATTRIBUTE_BLINDNESS = 'Blindness';
-const ATTRIBUTE_DEAFNESS = 'Deafness';
-const ATTRIBUTE_SILENCE = 'Silence';
-const ATTRIBUTE_DISPEL_MAGIC = 'Dispel Magic';
-const ATTRIBUTE_STONESKIN = "Stoneskin";
-const ATTRIBUTE_MAGICAL_AGING = "Magical aging";
-const ATTRIBUTE_DOT = "Continuing Damage"
-const ATTRIBUTE_ELVEN_RESISTANCE = "Elven resistance"
-const ATTRIBUTE_GNOME_BASTARD_SWORD = "Gnome Bastard sword"
-const ATTRIBUTE_RANGED_IN_MELEE = "Ranged in melee"
-const ATTRIBUTE_MONSTER_ABILITY_SCORES = "Monster Ability Scores"
-const ATTRIBUTE_INTELLIGENCE_VS_ILLUSIONS = "Int vs illusion"
-const ATTRIBUTE_PANTHEON = "Pantheon"
-const ATTRIBUTE_MAGIC_ITEM_SIZE = "Magic item size"
-const ATTRIBUTE_SCROLL = "Scroll"
-const ATTRIBUTE_MORNING_STAR = "Morningstar"
-const ATTRIBUTE_D30 = "d30"
-const ATTRIBUTE_BOWS_AND_STRENGTH = "Bows and Strength"
-const ATTRIBUTE_PRONOUNCE_DROW = 'Pronounce drow'
-const ATTRIBUTE_PRONOUNCE_FLIND = 'Pronounce flind'
-
-const ATTRIBUTE_APRIL_FOOLS = 'April Fools';
+import {ATTRIBUTE} from "./attributes";
 
 const DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS = {
     publication_year: '1995',
@@ -47,14 +17,14 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
             entry: [
                 `***Abi-Dalzim's Horrid Wilting✝:*** The maximum damage is 16d8.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '69',
             entry: [
                 `***Alacrity✝:*** This spell can be very useful for reducing spell casting times on low-magic worlds (see page 47). Apply the local multiplier to a spell's casting time before calculating the *alacrity* spell's effect`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '69',
@@ -64,7 +34,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `An *antimagic shell* suppresses special attacks and innate abilities that function over a distance, including breath weapons, gaze attacks, sonic attacks, and psionics, but not touch-delivered special attacks such as energy draining or the corrosive effects of green slime. A lich, for example, cannot employ spells within an *antimagic shell* and its ability to cause fear is suppressed, but its paralyzing touch is still effective. Note that holy water is not magical and is fully effective within an *antimagic shell*.`,
                 `An *antimagic shell* suppresses most potions and their effects; see the note at potions for details.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '69-70',
@@ -77,14 +47,14 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `A successful *dispel magic* cast on a traveler's physical body ends the spell, drawing the traveler back to the Prime Material Plane without being otherwise harmed; any companions accompanying the caster are likewise forcibly returned.`,
                 `While traveling through the Astral Plane, a projected form can move by pure thought; a character's astral movement rate is 30 times his Intelligence/Reason score.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_DISPEL_MAGIC],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.DISPEL_MAGIC],
         },
         {
             page_number: '70',
             entry: [
                 `***Blink:*** Spellcasting is not possible while blinking.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '70',
@@ -92,42 +62,42 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Clairvoyance:*** The spellcaster must describe where the sensor this spell creates is to appear. Once created, the sensor cannot be moved.`,
                 `When placing the sensor, the caster must be precise and state the location in terms he knows or are fairly obvious. For example, the caster cannot place the sensor six inches from Ren the wizard's left ear if he has no idea where Ren is at the moment. He can place the sensor in the exact center of Ren's laboratory if he has a reasonable idea where the laboratory is located. A general location for the sensor is permissible if the location is based on something known or obvious to the caster. For example, the caster could specify the exact center of the chamber beyond a closed door nearby.`,
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '70',
             entry: [
                 `***Clairaudience:*** The caster must describe where the sensor this spell creates is to appear, see the clairvoyance spell for details.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '70',
             entry: [
                 `***Color Spray:*** The area of effect for this spell is a plane five feet wide at the caster's hand, 20 feet long, and 20 feet wide at the far end.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '70',
             entry: [
                 `***Cone of Cold:*** The maximum damage from this spell is 10d4+10 points.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '70',
             entry: [
                 `***Continual Light:*** This wizard spell is not reversible, though the priest's version is.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '70',
             entry: [
                 `***Delayed Blast Fireball:*** This spell inflicts up to 15d6+15 points of damage.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '70',
@@ -143,7 +113,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `The paragraph about "Permanent spells must be individually targeted to be dispelled", I believe should say "Spells made permanent with the *permanency* spell must be individually targeted to be dispelled" to rule out spells such as *continual light*. This matches the text later in the paragraph that goes further into detail on the matter and it is more in line with the description of the *permanency* spell on page 73.`,
                 `The line about "spell and potions whose basic duration are permanent", should say "spell and potions whose basic duration are **instantaneous**" to be consistent with the changes added in the *Wizard's Spell Compendium*`,
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_DISPEL_MAGIC],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.DISPEL_MAGIC],
         },
         {
             page_number: '70-71',
@@ -158,7 +128,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `A +3 bonus is granted if the interrogator has attacked the subject or is asking seriously damaging questions. For example, the subject is being prompted to reveal a secret vital to his future, such as military plans or trade secrets.`,
                 `A +4 bonus to the save is warranted if the interrogator has killed one of the subject's companions or is asking deeply personal or damaging questions. For example, the subject is being prompted to reveal information vital to himself or to someone important to him, such as the location of a family heirloom, an employer's daily routine, or a carefully guarded password.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '71',
@@ -167,14 +137,14 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `If the caster is falling an extreme distance (in excess of 120 feet/level), the caster can opt to delay the *feather fall* spell so that its duration does not expire before the caster lands. When in doubt about the caster's ability to complete the spell before impact, roll initiative. The caster makes a normal roll, adding +1 for the spell's casting time, and the DM rolls for the fall, adding +1 for each 120 feet of free fall. If the caster loses the initiative roll, impact occurs before the spell is completed.`,
                 `This spell does not provide any method by which the spellcaster can determine the length of a fall. Thus, a wizard falling into a lightless pit has no way to determine if the fall is going to be 10 feet or 1,000 feet.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '71',
             entry: [
                 `***Fly:*** It is important to remember that this spell bestows Maneuverability Class B upon the recipient, which limits the user to turns totaling 180 degrees or less per round. This might make it difficult for the user to negotiate a twisting corridor at full speed. Once the flying character has completed his allowable turns, he must either finish the round flying in a straight line or stop.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '71',
@@ -188,7 +158,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `An object with a fear aura might cause fear when handled, shed continuous fear in a 5- to 20-foot radius, or inspire fear when viewed clearly.`,
                 `Permanent *fear* on an area might affect creatures passing though a portal or opening up to 60 by 60 feet, a cube of up to 30 feet per side, a sphere with a radius of up to 20 feet, or a hemisphere with a radius of up to 25 feet. The shape and dimensions of this spell cannot be changed once set.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '71-72',
@@ -196,7 +166,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Haste:*** A creature who has been subjected to two or more haste-type effects gains the benefit of only the best of the group. A *haste* spell never magnifies the effects of magical items, such as *boots of speed* or a *potion of speed*.`,
                 `The one year of magical aging inflicted upon the recipients of this spell requires the recipient to make a system shock roll (see *Player's Handbook*, Chapter 1); failure results in death. This magical aging only occurs during the first round of the spell's effect, and multiple *haste* spells do not cause additional aging unless their effects overlap. For example, casting an additional *haste* spell one round before an existing *haste* spell ends would cause another year of magical aging once the new spell took effect.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_MAGICAL_AGING],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.MAGICAL_AGING],
         },
         {
             page_number: '72',
@@ -205,21 +175,21 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `The spell also requires the caster to handle the item, and a good way to keep magic under control in a campaign is to require the caster to actually wear or wield the item as it was intended. This requirement means some cursed items are going to affect the caster.`,
                 `Be sure to impose the eight-point temporary Constitution loss the spell inflicts (which provides enemies with an excellent opportunity to attack the weakened spellcaster). Note that there is a limit to the number different magical properties this spell can reveal during a single casting and that the exact number of charges and magical pluses are never revealed.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '72',
             entry: [
                 `***Invisibility:*** If this spell is made permanent, the recipient gains the ability to become invisible and remain so indefinitely. Any attack breaks the invisibility, but the recipient can become invisible again during the next round. The return to invisibility has an initiative modifier of +3, and the recipient can take no action other than normal movement during a round in which he becomes invisible.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_INVISIBILITY],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.INVISIBILITY],
         },
         {
             page_number: '72',
             entry: [
                 `***Light:*** The wizard's version of this spell is not reversible.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '72',
@@ -230,21 +200,21 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `This spell functions as a *wish* spell in most respects, but it cannot produce wealth or magical items. A *limited wish* can mimic the function of most other spells of 7th level or less. If used to alter reality, the changes must be minor. For example, a single creature automatically hits on its next attack, all opponents currently attacking the caster's party suffer a -2 attack penalty for the duration of the encounter, a single creature regains 20-50% of lost hit points, or a single creature fails its next saving throw are all possible uses for the spell.`,
                 `Major changes in reality persist for a limited duration, such as a single creature regaining all lost hit points for 24 hours, a hostile creature becoming cooperative for an hour, or an alert sentry falling asleep at his post.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_MAGICAL_AGING],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.MAGICAL_AGING],
         },
         {
             page_number: '72',
             entry: [
                 `***Magic Mirror:*** This spell creates an invisible sensor similar to the one created by a *clairvoyance* spell; the sensor has the same visual capabilities as a *clairvoyance* sensor, but the spellcaster can also employ other spells to enhance the effect (see spell description). As with the *clairvoyance* spell, the user must state where the sensor is to appear; however, the user is free to state the sensors location with respect to the subject without knowing the subject's exact location. No matter what the spell's actual duration, the user's knowledge of the subject limits how long this spell can be safely used; see the *crystal ball* description in the *DUNGEON MASTER Guide* for details.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '72',
             entry: [
                 `***Magic Staff✝:*** Spells stored in the staff are unusable on worlds rated M4 or less (see page 47). A low-magic world does not dispel the stored spells, however, and the spells can be used again if the staff is taken to a world with a higher rating before the *magic staff* spell's duration ends.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '72',
@@ -252,7 +222,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Otiluke's Dispelling Screen‡:*** This spell has no effect on permanent spells unless those effects are in operation at the time the individual walks through the screen. For example, a creature made permanently invisible would become visible when walking through the screen and then disappear again on the other side. The screen must still successfully *dispel magic* against the spell in order to even briefly negate it. Magical items are likewise unaffected by exposure to a dispelling screen.`,
                 `Since this spell cannot focus its *dispel magic* effect, it cannot destroy permanent spells or negate the powers of magical items.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_INVISIBILITY, ATTRIBUTE_DISPEL_MAGIC],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.INVISIBILITY, ATTRIBUTE.DISPEL_MAGIC],
         },
         {
             page_number: '73',
@@ -348,7 +318,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `&ast; See this section for further notes on this spell.`
             ],
             comment: `The requirement given about "making another caster's spell permanent and that the two casters must touch each other"  is rather strict. In the *Wizard's Spell Compendium*, Volume 3 (February 1998) p. 656 this limitation is lifted. Here the caster can cast the desired spell first and then follow it with a *permanency*.`,
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_DISPEL_MAGIC],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.DISPEL_MAGIC],
         },
         {
             page_number: '73',
@@ -356,7 +326,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Polymorph Any Object:*** The DM usually must determine how long this lasts. If employed as a simple *polymorph other* or *stone to flesh* spell, the duration is permanent. If employed to turn a creature into an object or an object into another object, the duration is measured in hours or turns, as noted in the spell description.`,
                 `Generally, the duration should not be less than two hours or turns. A change whose duration is measured in turns should not last more than a week, and a change whose duration is measured in hours will not last more than a day. The more radical the change, the shorter the duration. For example, turning a human into a teacup involves a change of kingdom (animal to mineral), plus a change in size and shape: This change might last 1d4+1 turns.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '73',
@@ -366,7 +336,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
             optional: [
                 `If the caster chooses a form that cannot survive under the local conditions, the recipient suffers 1d4 to 1d8 points of damage each day, hour, turn, or round it is exposed to such conditions. For example, a goldfish in a desert might suffer 1d8 points of damage every round from heat and dryness. The same goldfish might suffer 1d6 points of damage every turn on a dungeon floor or 1d4 points of damage every day in a frigid mountain pool. Some creatures might be immune to environmental damage as long as their mentality remains intact. For example, a mummy turned into a goldfish does not suffer from the desert heat.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '73-74',
@@ -378,21 +348,21 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
             optional: [
                 `The caster can assume the forms of creatures he has personally seen. For example, a caster who has never seen an ochre jelly cannot change into one.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '74',
             entry: [
                 `***Power Word, Stun***: Creatures affected by this spell are unable to take any meaningful actions. They cannot communicate, employ spells, use magical items, initiate psionic abilities, use spell-like abilities, fight, or move freely. Movement is limited to one third the creature's current movement rate, or a rate of 3, whichever is less. Attacks against stunned creatures gain a +4 bonus.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '74',
             entry: [
                 `***Protection from Evil:*** Contrary to popular belief, this spell does not hedge out undead creatures (except ghouls, see the *MONSTROUS MANUAL* accessory) unless they have been brought to the scene by a conjuration/summoning spell (such as *monster summoning III*) or have come from another plane.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '74',
@@ -401,21 +371,21 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `Placing another extradimensional space inside the area created by a *rope trick* spell has catastrophic effects, see the note at extradimensional spaces in the magical items section (page 80).`,
                 `This spell is ineffective in the Astral Plane and in any locale where extradimensional spaces are inaccessible or nonexistent (see page 56). Creatures within the space created by a *rope trick* can breathe normally for the duration of the spell.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '74',
             entry: [
                 `***Shape Change:*** This spell functions in much the same way as a *polymorph self* spell except that the caster can assume non-animal forms and there are no size limitations. Unlike the *polymorph self* spell, the caster gains any ability the assumed form has provided the ability is not magical or mental in nature. For example, a character who changes into an owl gains its night vision, but changing into a cockatrice does not grant the monster's petrifying touch. The spell does not bestow magic resistance.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '74',
             entry: [
                 `***Stinking Cloud:*** A permanent *stinking cloud* remains where it is created and generally is not disturbed by minor effects. If dispersed by a strong breeze or a gust of wind spell, the vapors return one round after the breeze or wind ceases. Even hurricane force winds cannot destroy the cloud, though the vapors are dispersed and ineffective while the winds last.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '74',
@@ -424,7 +394,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `*Stoneskin* protects only against blows, cuts, pokes, and slashes directed at the recipient. It does not protect against falls, magical attacks, touch-delivered special attacks (such as touch-delivered spells, energy draining, green slime, etc.), or nonmagical attacks that do not involve blows (such as flaming oil, ingested or inhaled poisons, acid, constriction, and suffocation). *Stoneskin* lasts for 24 hours or until the spell has absorbed its allotment of attacks.`
             ],
             comment: `The 24 hour limit is presented as a hard rule, as oppose to the Sage Advices #247 that present it as a suggestion. #270 `,
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_STONESKIN],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.STONESKIN],
         },
         {
             page_number: '74-75',
@@ -439,7 +409,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
             optional: [
                 `If a permanent *teleport* spell is inaccurate, both the *permanency* and the *teleport* spell fail, but the caster can attempt a system shock roll to avoid losing a point of Constitution. If this option is in play, the caster also might be allowed to set multiple destinations with the same permanent *teleport* spell. The caster must name a different trigger for each destination and roll for accuracy each time a trigger is set.`,
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '75',
@@ -448,7 +418,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `A *teleport without error* spell has no chance for error if the destination lies in the same world as the caster. If the caster accidentally specifies a destination already occupied by a solid object, the character is automatically displaced a sufficient distance to allow for a safe arrival.`,
                 `*Teleport without error* also allows travel between world (planes, crystal spheres, and pocket dimensions) but there is a chance for error, see the spell description for details.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '75',
@@ -459,7 +429,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
             optional: [
                 `A permanent *unseen servant* can be cast on an area and instructed to endlessly perform a single task, such as forever cleaning a room. Once a task is set, it cannot be changed.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '75',
@@ -467,7 +437,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Web:*** *Webs* must be properly supported if they are to be made permanent. Permanent webbing remains where it is created, if torn away, new webs spring into existence to take its place. Chunks of webbing carried out of the area of effect dissolve in seconds. Creatures can break through the webbing at the rates given in the spell description, but the webs immediately fill in behind them. Creatures who blunder into permanent webbing (or who are thrown in) can be trapped and suffocated if they fail to save vs. spell just as they can if caught in normal webbing.`,
                 `Permanent *webs* can be burned away with fire, but they spring back into being one round after the flames die away.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '75-76',
@@ -489,7 +459,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `*Wishing* to raise an ability score that is 21 or higher requires 20 *wishes* per point increase. This rule is only available in the original 2E *DMG* (the blue book) p. 12. It was erroneously dropped from the reprinted 2E *DMG* (the black book)`,
                 `*The Complete Wizard's Handbook* discusses wishes on page 85.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_MAGICAL_AGING],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.MAGICAL_AGING],
         },
     ],
     priest_spells: [
@@ -498,63 +468,63 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
             entry: [
                 `***Age Creature✝:*** The reverse of this spell, *restore youth*, negates most sorts of magical aging, provided the aging is the magic's primary effect. It negates aging from *age creature* spells, *staffs of withering*, and attacks by ghosts. It does not reverse incidental aging effects, such as those inflicted by casting a *wish* or receiving a *haste* spell.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_MAGICAL_AGING],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.MAGICAL_AGING],
         },
         {
             page_number: '76',
             entry: [
                 `***Breath of Life✝:*** The reverse of this spell, *breath of death*, produces a nonmagical disease that *breath of life* can cure.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '76',
             entry: [
                 `***Combine:*** The central priest gains a boost to the spells and granted abilities he already has. The central priest gains no extra spells or granted abilities from this spell.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '76',
             entry: [
                 `***Dispel Evil:*** In addition to driving away evil extra-planar and summoned creatures, this spell is effective against evil enchantment/charm spells and all forms of domination and possession.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '76',
             entry: [
                 `***Dispel Magic:*** Refer to the wizard's version of this spell.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_DISPEL_MAGIC],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.DISPEL_MAGIC],
         },
         {
             page_number: '76',
             entry: [
                 `***Dragonbane✝:*** This spell can be the subject of a site focus✝.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '76',
             entry: [
                 `***Draw Upon Holy Might✝:*** This spell cannot increase an ability score beyond 25.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '76',
             entry: [
                 `***Extradimensional Pocket✝:*** The extradimensional space created by this spell functions as a *bag of holding* in all respects while its duration lasts.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '77',
             entry: [
                 `***Imbue with Spell Ability:*** If the recipient dies before the imbued spells are cast, the imbue with spell ability caster regains the ability to cast the imbued spells.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '77',
@@ -562,7 +532,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Know Time✝:*** This spell reveals the correct local time in terms the caster can most readily understand. If the caster has just arrived on a new world where he is unfamiliar with the names of hours, days, months, and years, the spell reveals a generic result that might not be immediately useful until the caster gets more information. For example, the spell might reveal that it is the 10th hour of the 23rd day of the 7th month in the 2,345th year. The hour is always given in relation to local midnight.`,
                 `If the world where the *know time* spell is cast has a time flow different from that of the base campaign, this spell has a 2% chance per caster level of giving an estimation of the difference. The caster can learn if time flows faster or slower and the general degree of difference; great, moderate, or minor. When using table 2 (page 46), ratings of 2-4 and 18-20 are great; ratings of 5-7 and 15-17 are moderate, and ratings of 8-9 and 13-14 are minor.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '77',
@@ -571,35 +541,35 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `Several other spells can make a *magic font* more useful, see the *crystal ball* description in the *DMG* for the list. See the notes on the *magic mirror* and *clairvoyance* spells for more information on scrying.`
             ],
             comment: `Font for creating holy water is described on page 86-87, not 96. Skip Williams is as accurate as ever.`,
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '77',
             entry: [
                 `***Mind Read✝:*** This spell functions just like the wizard spell *ESP* in most respects. Each time a *mind read* spell is cast, however, the priest can conduct a deep probe of a single creature, possibly gaining additional information as detailed in the spell description.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '77',
             entry: [
                 `***Mistaken Missive✝:*** This spell can affect any document written in ink. For purposes of the spell, ink is any substance that is artificially compounded or altered to render it suitable for use in writing. Documents written with substances that have not been artificially prepared are not subject to this spell. For example, a note written in chalk cannot be altered by this spell, neither can a letter or agreement written in blood.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '77',
             entry: [
                 `***Music of the Spheres✝:*** A successful saving throw against this spell negates only the entrancing effect. An opponent who successfully saves is free to attack the caster but still suffers the -3 penalty to charm-based saving throws for as long as he can hear the music.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '77',
             entry: [
                 `***Nap✝:*** This spell does not reduce the study time (10 minutes per spell level) required to memorize spells. The spell has no effect if the recipient is unwilling or has received a *nap* spell in the previous 18 hours.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '77+79',
@@ -658,14 +628,14 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `³ The number is the typical cost in gold pieces for constructing one rod, provided that the proper materials are available. Rods made of extremely rare materials can cost considerably more.`,
                 `⁴ Add these modifiers to the type of plane the Pocket Dimension is attached to. For example, researching a Pocket Dimension that is attached to the Ethereal Plane would cost 2,500 gp and take five weeks. The cost for the rod would remain 100 gp.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '79',
             entry: [
                 `***Protection from Evil:*** Refer to the wizard version of this spell.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '79',
@@ -673,28 +643,28 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Reflecting Pool:*** This spell requires a natural pool—a small body of water fed by a natural water source and contained in a setting generally free of artificial constructions. A naturally occurring puddle of rainwater could be considered a pool if it lies in a meadow but not if it lies in a city street.`,
                 `See the notes on the wizard spells *magic mirror* and *clairvoyance* for more information on how this spell functions.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '79',
             entry: [
                 `***Speak With Dead:*** This spell has a range of one yard The dead do not lie, but they can be evasive, misleading, or obtusely literal if they answer the caster's questions at all (some creatures are allowed saving throws, see the spell description).`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '79',
             entry: [
                 `***Unceasing Vigilance of the Holy Sentinel✝:*** A priest recovering from this spell must rest unless compelled to act by some external cause. Generally, the priest cannot respond to threats that he cannot perceive (though the priest always perceives a threat to himself if he suffers damage). A *nap* spell grants the priest 48 turns of rest.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '79',
             entry: [
                 `***Weighty Chest:*** The weight increase created by this spell is activated only when a creature other than the caster attempts to move or lift the protected chest. It is not possible to use a *weighty chest* as a weapon. For example, the caster cannot cast this spell on a small coffer and then toss it at an opponent, hoping the foe will be bowled over or unbalanced by the coffer's great weight. Note, however, that a foe could be tricked into attempting to lift or move the chest.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
     ],
     magical_items: [
@@ -704,7 +674,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Amulet of Life Protection:*** A character whose psyche is held in the amulet does not truly die until seven days have passed. Until that time, any healing the character receives revives the character as long as the healing is sufficient to give the character a positive hit point total.`,
                 `The wearer can be raised or resurrected no matter how the character died. The *raise dead* or *resurrection* spells can be cast upon the amulet if the character's body has been destroyed.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '80',
@@ -741,7 +711,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `&ast; This is the amount of time a single creature in a sealed bag remains comfortable. After the listed time, the air becomes foul and the creature begins gasping; a -2 penalty applies to all attack rolls and ability checks until the creature gets fresh air. If the creature remains in the bag for twice the listed time, it must save vs. poison or fall unconscious until the creature gets fresh air. The save must be repeated each turn. Unconscious creatures also must save vs. poison every turn, and they die if they fail a second time.`,
                 `&ast;&ast; This shows the amount of water the bag can hold. Note that water is heavy and a bag carrying the listed amount of water only appears to be about 10% full as far as its cubic capacity is concerned. This makes it very easy to exceed the bag's weight limit and destroy it.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '80',
@@ -749,7 +719,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Books/Tomes:*** The baneful effects from all books, tomes, manuals, and librams are triggered by perusing even a small passage. Magical books cannot be distinguished from other types of normal or magical books.`,
                 `A character who studies a book to find out what's in it triggers the book's effects. Magical books always vanish once they bestow a beneficial effect but usually remain behind if they inflict a harmful effect. Multi-classed characters get only the best possible result—other helpful results (and harmful ones) are ignored. For example, an elf fighter/mage/thief glances at a *manual of puissant skill at arms*, a book that is normally harmful to wizards. Because the elf is a fighter, he can ignore the harmful effect and gain one fighter level instead.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '80',
@@ -760,28 +730,28 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `For example a *fireball* spell never misses, but the cloak wearer gains a +2 saving throw bonus. If a spell allows no saving throw, displacement has no effect on it; for example, a *magic missile* or *death spell* is never affected by displacement.`,
                 `Under normal conditions, the first melee or missile attack against a displaced creature automatically misses. The opponent is assumed to note the displaced creature's correct position and can keep track of it thereafter. If an opponent has multiple attacks, only the first one automatically misses. If there are multiple opponents, only the first attack by the first creature automatically misses. The remaining opponents are assumed to observe the failed attack and make the appropriate adjustments. If the DM determines that one or more creatures did not observe the initial attack, their first attacks automatically miss, too. Note that intelligent opponents who have reason to suspect a character is displaced might launch some type of probing attack to test the character's defenses, such as hurling a rock. Such attacks count as a combat action for the creatures attempting them.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_INVISIBILITY],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.INVISIBILITY],
         },
         {
             page_number: '80',
             entry: [
                 `***Contract of Nepthas:*** A *mistaken missive* spell alters the words written on the a *contract of Nepthas* but does not free characters who have signed the contract from their obligations.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '80',
             entry: [
                 `***Crystal Balls:*** See the notes under the *magic mirror* and *clairaudience* spells.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '80',
             entry: [
                 `***Daern's Instant Fortress:*** A creature attacking the fortress's walls with a magical weapon inflicts one point of damage for every three rounds spent attacking the walls. If the escalade rules from the *PLAYER'S OPTION: Combat and Tactics* book are in play, the fortress can be attacked by bombardment engines or sapped by attackers equipped with magical weapons. In either case, all damage is subtracted from the fortress's total hit points.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '81',
@@ -789,7 +759,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Deck of Many Things:*** Baneful effects from this item cannot be removed through *wishes* or lesser means, although a *wish* might indirectly help the PCs in dealing with the difficulties the cards inflict. For example, a *wish* can reveal where a victim of the void or the donjon is imprisoned. A *wish* also could reveal the identity of an enemy produced by the flames or the rogue.`,
                 `10th-level magic is effective against a *deck of many things* in the same way a *wish* is, but there are certain exceptions. 10th-level divination spells cannot be used to determine the identity of a particular card nor can magical wards negate a card's effects, but they can reveal the location of a creature trapped by the void or donjon card. There is no way to shield a creature from the harmful effects of the *deck of many things* while allowing the benefits to occur by using 10th-level spells.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '81',
@@ -804,14 +774,14 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
             optional: [
                 `Creatures drawn through the gate created by a *portable hole* arrive in a random location and fall in a heap within a 10-foot radius. Items in the extradimensional spaces are either lost on the Astral Plane (50%) or scattered randomly about the circle where the creatures land (50%). The DM makes the roll and can decide to check the items singly or in groups.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '81',
             entry: [
                 `***Flatbox:*** The box can hold 60 gallons of water. A creature inside one of these items can breathe normally for six minutes if the lid is closed. Additional information can be found at the *bag of holding* and extradimensional spaces entries.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '81-82',
@@ -820,56 +790,56 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `The daily movement rate assumes 10 hours of flying time with ample rest stops; it is not an altogether pleasant experience to fly (consider the effects of rough air, unsteady seating, awkward body positioning, and exposure to weather). Characters in a hurry can eliminate most rest periods and stay aloft longer, spending 18-20 hours in the air and doubling the daily movement rate, but this subjects the riders to the effects of a forced march (see *Player's Handbook*, Chapter 14). Riders who stay aloft for 24 hours a day move at 2 ½ times their normal daily rate and suffer double force march penalties.`,
                 `When a party has access to magical items that grant flight, the DM should take special care to plan adventures that take this capability into account. Flying characters can easily evade most land-based encounters, so the adventure should include encounters with flying creatures or those that entice the characters to land. The DM should also determine the prevailing weather conditions in advance, as they affect both flying conditions and the party's ability to see and be seen while aloft.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '82',
             entry: [
                 `***Gem of Insight:*** A character can benefit from one of these items only once, no matter how many gems are found over the course of the character's lifetime or how long a single *gem of insight* is kept.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '82',
             entry: [
                 `***Girdle of Many Pouches:*** Though intended to hold equipment, this item's small pouches can hold about one gallon of water or a single tiny creature. If belted around a character's waist, the pouches are sealed and the creatures inside them have about four minutes of air. Additional information can be found at the *bag of holding* and extradimensional spaces entries.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '82',
             entry: [
                 `***Heward's Handy Haversack:*** Though intended to hold equipment, this item's compartments can hold water or creatures. The side pouches can hold two gallons of water or one tiny creature each. The central compartment can hold eight gallons of water or a single small creature. If strapped around a character's back and closed, creatures inside the haversack have about four minutes of air. Additional information can be found at the *bag of holding* and extradimensional spaces entries.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '82',
             entry: [
                 `***Iron Bands of Bilarro:*** There is no saving throw against this item, though the user must make a successful attack roll to trap a target. A failed attack roll never entraps a creature. An entrapped victim's companions can attempt a bend bars/lift gates roll to break the bands if the victim cannot get free. Spells such as *free action*, *wraithform*, *antimagic shell*, and *duo-dimension* are all effective means of escape, but teleportation magic merely transports the trapped creature from one place to another with the bands still trapping him. Magical items such as a *potion of slipperiness* or *ring of free action* are also effective against the magic of the bands.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '82',
             entry: [
                 `***Javelin of Lightning:*** This item has a maximum range of 90 yards. The lightning created is a single bolt that extends from the target toward the thrower. Thus, a *javelin of lightning* should not be used if the target is within 30 feet.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '82',
             entry: [
                 `***Librams and Manuals:*** See note at books.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '82',
             entry: [
                 `***Medallion of ESP:*** Refer to the wizard spell *ESP*.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '82',
@@ -878,7 +848,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `Travel through the portal created by the mirror is instantaneous. A *detect invisibility* or *true seeing* spell reveals the portal.`,
                 `The mirror's power to answer a question each week is similar to the priest spell *commune* in most respects, but the user is limited to questions about a creature whose reflection is being cast in the mirror.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '82',
@@ -888,14 +858,14 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `Third, the periapt grants a general bonus to normal saving throws against poisons. The bonuses are cumulative with other magical protections (but see the automatic failure rule on page 142).`
             ],
             comment: `The automatic failures on page 142 are a revised rule. The standard / core rule (which is missing from the *PHB* and *DMG*) only have failures on a natural 1.`,
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '82',
             entry: [
                 `***Portable Hole:*** This item has a capacity of about 280 cubic feet. It has no weight limit, and about 2,100 gallons of water or 100,000 standard coins can be held inside. A creature in a *portable hole* has enough air for 10 minutes. See the note at *bag of holding* for the effects of depleted air, and see the general note on extradimensional spaces for more information.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '82-83',
@@ -905,42 +875,42 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `Tasting a potion gives the character a minor clue as to the potion's effects. For example, a *potion of levitation* or a *potion of flying* might make the character feel light. Often the effect from tasting a potion is not immediately obvious, and the character must attempt some action before any effects are revealed. In the previous example, the taster might feel nothing initially but might walk with a bouncing gait or feel light-footed when walking. A potion's taste, smell, and texture might help identify it, but this tends to be unreliable because potions with identical effects can look, feel, smell, and taste differently if they were made in different laboratories or concocted at different times.`
             ],
             comment: `"potions that are permanent in nature" again should be changed to "potions that are instantaneous in nature" to be consistent with the Wizard's Spell Compendium.`,
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SPELL, ATTRIBUTE_DISPEL_MAGIC],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.DISPEL_MAGIC],
         },
         {
             page_number: '83',
             entry: [
                 `***Potion of Vitality:*** A character drinking this potion increases his body's natural healing ability to the rate of one hit point recovered every four hours. Damage that cannot be healed by magical means—such as from a sword of wounding—is restored. Damage that can be healed only by magical means—such as wounds from a chasme tanar'ri's claws or the fists of a clay golem—is not restored.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '83',
             entry: [
                 `***Pouch o f Accessibility:*** Though intended to hold equipment, this item's internal pouches can hold about one gallon of water or a single tiny creature. Closing the pouch seals all the internal compartments, and the creatures inside them have about four minutes of air. See the note at *bag of holding* for the effects of depleted air, and refer to extradimensional spaces for more information.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '83',
             entry: [
                 `***Quiver of Ehlonna:*** Only long, thin objects such as arrows, javelins, and bows can be placed in this item. Creatures cannot be placed inside, nor does the quiver hold water.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '83',
             entry: [
                 `***Ring of Blinking:*** See note at the wizard spell *blink*.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '83-84',
             entry: [
                 `***Ring of Contrariness:*** This cursed item always makes the wearer do things that run counter to what others desire. The wearer does not necessarily do the exact opposite of what is suggested. For example, if someone says "keep that ring on," the wearer wholeheartedly agrees. He might also suddenly become fearful that others desire the ring and attack the speaker. The ring's enchantment makes the wearer difficult to be around, always selecting the response that is most troublesome.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '84',
@@ -949,7 +919,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `A *ring of regeneration* only repairs damage inflicted on the wearer after the character puts on the ring. Damage inflicted before the character wore the ring is not regenerated, so placing a *ring of regeneration* on a dead or unconscious character has no effect.`,
                 `A *ring of regeneration* does not remove the need to eat, sleep, or breathe, nor does it prevent natural or unnatural aging.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '84',
@@ -959,14 +929,14 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `For example, if the wielder is caught in the blast of a *fireball*, the rod cannot be used to absorb the spell because the wielder was not the target—the actual target was a point in space. If, however, the *fireball* was set to detonate directly on the wielder, it could be absorbed. Some spells, such as *hold person* and *slow*, are individually targeted on multiple creatures within an area. If the rod-wielder is one of those targets, he can absorb the entire spell.`,
                 `Absorbed spells have no effect whatsoever; their power has been stored in the rod. Thus, if a *hold person* is directed at the rod-wielder, the magic is totally negated—even for other targets. 10th-level spells cannot be absorbed.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '84',
             entry: [
                 `***Rod of Beguiling:*** The beguiling effect has a 20-foot radius. There is no saving throw, though magic resistance applies, as does resistance to mental attacks or control. Racial resistances to charm effects also apply. Affected creatures remain beguiled for the full one-turn duration even if they leave the radius.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_ELVEN_RESISTANCE],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.ELVEN_RESISTANCE],
         },
         {
             page_number: '84',
@@ -976,21 +946,21 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
             optional: [
                 `Specialty priests dedicated to deities of healing, protection, warfare, endurance, and similar areas of influence require only one charge to resurrect.`,
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '84',
             entry: [
                 `***Rod of Rulership:*** Creatures being ruled need not remain within the rod's 150-foot radius once they have been affected. Most creatures get no saving throw, but magic resistance and resistance to mental attack or control applies. Racial resistances to charm effects also apply.`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_ELVEN_RESISTANCE],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.ELVEN_RESISTANCE],
         },
         {
             page_number: '84',
             entry: [
                 `***Rod of Security:*** This item transports creatures into a pocket dimension (see page 45) attached to the world where the rod was activated.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '84',
@@ -999,7 +969,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `If other creatures fail their saving throw versus the rope, those who succeeded in their save can only move if the combined weight of those who failed is less than their maximum press. For instance, a fighter wearing a *girdle of hill giant strength* could drag up to 640 lbs. of weight along with him. Of course, groups of creatures must move generally the same direction to initiate an attack.`,
                 `Entwined creatures suffer a +2 initiative penalty and attacks against them are at +2. Targets who fail the save are held completely immobile and cannot perform any actions that require movement; attacks against immobile creatures are made with a +4 bonus.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '84-85',
@@ -1007,7 +977,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Spell Scrolls:*** A scroll is a temporary magical writing that stores spell energy in a portable form; it is essentially a precast spell waiting to be triggered. The level at which a priest spell read from scroll functions is never diminished due to planar distances (see page 49), but all scroll spells are subject to local conditions. For example, a *fireball* read from a scroll is ineffective on the Plane of Elemental Water—the spell creates a harmless bubble of vapor and the writing fades. Scrolls become inert if taken to a world rated M2 (see page 47) or lower, but are not otherwise harmed.`,
                 `Spell scrolls come in two types, priest and wizard. Priests cannot use wizard scrolls and vice versa. High-level thieves and bards have a chance to employ either type. A character who can use spell scrolls can read any spell of the appropriate type regardless of other restrictions. For example, an illusionist, who is normally barred from casting abjuration spells, can read a *dispel magic* spell from a scroll. Likewise, a priest can read priest spells from spheres normally unavailable. Note that the reader could still suffer the effects of spell failure by attempting to cast a spell that is too high a level (see *DUNGEON MASTER Guide*, Appendix 3).`
             ],
-            attributes: [ATTRIBUTE_2E, ATTRIBUTE_SCROLL],
+            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SCROLL],
         },
         {
             page_number: '85',
@@ -1015,7 +985,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Sphere of Annihilation:*** A wizard's maximum chance to control a *sphere of annihilation* without the aid of a *talisman of the sphere* is 92% for a wizard of 21st level and an 18 Intelligence/Reason. There are no additional bonuses for being higher level or having an Intelligence/Reason score grater than 18.`,
                 `A *talisman of the sphere* doubles a wizard's Intelligence bonus for controlling the sphere. Adjusted control scores of 100% or more indicate automatic success, but other wizards trying to usurp control reduce the control chance; see the *sphere of annihilation* in the *DMG* description for details.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '85',
@@ -1023,7 +993,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Staff of the Magi:*** The staff's plane travel ability is similar to the priest spell *plane shift*, but no forked rod is required. The staff-wielder must be generally familiar with the destination plane either by making a previous visit or having information about the plane from a traveler who has been there. If a character wishes to research details on an unknown plane, refer to the note at *plane shift* for cost and time requirements.`,
                 `The absorption power of the staff works just like that of the *rod of absorption* except that the level of absorbed spell is not communicated to the staff-wielder. The decision to absorb must be made based on the appearance of the magic or, in the case of invisible effects, blind luck.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '85',
@@ -1038,7 +1008,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `If the critical hit rules from *PLAYER'S OPTION: Combat and Tactics* are in use, ignore all of the foregoing and use the hit location system from that book. The area struck suffers a "destroyed" result if the saving throw fails, even if it is not a limb (do not roll for severity). The staff-wielder does not need to score a critical hit to roll for hit location. If the staff-wielder does score a critical hit, the target suffers double damage and must roll saving throws vs. both the withering and the critical hit.`,
                 `There are several ways to repair withered limbs, but *regenerate* and *restoration* are the most common methods. Creatures that regenerate (through an innate ability or magical item) regain the use of a shriveled limb after regenerating the equivalent of 20 points of damage. For example, a character wearing a *ring of regeneration* would recover from a shriveled limb in 20 turns, and a troll would recover in seven rounds.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '85',
@@ -1046,14 +1016,14 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 `***Stone of Good Luck:*** The stone's +1 (or +5%) bonus applies whenever dice are rolled to see if the character (not the character's equipment) avoids an adverse happening. The bonus applies to saving throws, ability checks used as saving throws, system shock rolls, resurrection survival rolls, and any other event in which chance, not skill, is the determining factor. The bonus does not apply to spell failure, magical item creation, learning spells, or to most proficiency checks.`,
                 `The character's good luck applies to rolls for party treasure distribution and to proficiency checks involving luck or dodging, such as gaming and tumbling.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
         {
             page_number: '85',
             entry: [
                 `***Wand of Negation:*** The wand temporary renders magical devices unable to create spell-like effects. When a device's spell-like function is negated, any charges expended to produce the effect are lost, but the device is not otherwise harmed. A *wand of negation* has no effect on cast spells or a creature's spell-like abilities. The wand has an initiative modifier of +1.`
             ],
-            attributes: [ATTRIBUTE_2E],
+            attributes: [ATTRIBUTE.SECOND_EDITION],
         },
     ],
 });
@@ -1131,7 +1101,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
             `A font can be defiled and made useless for creating holy water (and for *magic font* spells) by touching it and casting a *curse* spell. Fonts can be nonmagically defiled by placing anything repugnant to the deity to which the font is dedicated to within its confines.`,
             `A defiled font must be entirely remade. The font cannot be cleansed or restored, except by a *wish*, though the materials in the basin can be recycled and used in a new basin for 1d4+1×10% of the original cost. For example, Delsenora's temple has a font that can hold 32 vials of holy water. The initial cost was 21,000 gp for the basin plus 1,500 gp for the pedestal. If the font is defiled, the replacement cost is 1,500 gp for the pedestal and 20-50% of the original basin cost. Delsenora rolls a 2 and must pay 30% of the original cost—6,300 gp.`
         ],
-        attributes: [ATTRIBUTE_2E],
+        attributes: [ATTRIBUTE.SECOND_EDITION],
     },
 });
 
