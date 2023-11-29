@@ -1,4 +1,4 @@
-import {ATTRIBUTE} from "./attributes";
+const {ATTRIBUTE, _} = require('./attributes')
 
 const DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS = {
     publication_year: '1995',

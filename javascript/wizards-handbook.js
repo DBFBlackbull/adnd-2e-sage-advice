@@ -1,4 +1,4 @@
-import {ATTRIBUTE} from "./attributes";
+const {ATTRIBUTE, _} = require('./attributes')
 
 const THE_COMPLETE_WIZARDS_HANDBOOK = {
     publication_year: '1990',

@@ -1,4 +1,4 @@
-export const ATTRIBUTE = {
+const ATTRIBUTE = {
     FIRST_EDITION: '1E',
     SECOND_EDITION: '2E',
     SPELL: 'Spell',
@@ -61,4 +61,7 @@ const ATTRIBUTES = [
     {id: ATTRIBUTE.APRIL_FOOLS},
 ];
 
-// module.exports = ATTRIBUTES;
+module.exports = {
+    ATTRIBUTE,
+    ATTRIBUTES
+};

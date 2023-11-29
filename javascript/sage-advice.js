@@ -1,4 +1,4 @@
-import { ATTRIBUTE } from "./attributes";
+const {ATTRIBUTE, _} = require('./attributes')
 
 // threads / attributes:
 // identifying items

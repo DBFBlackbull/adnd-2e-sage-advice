@@ -6,11 +6,13 @@ const jsFolder = path.join(sourceFolder, 'javascript');
 const htmlFolder = path.join(sourceFolder, 'html');
 const pugFolder = path.join(sourceFolder, 'pug');
 
+const {_, ATTRIBUTES} = require(path.join(jsFolder, 'attributes.js'));
 const dragonMagazines = require(path.join(jsFolder, 'sage-advice.js'));
 const highLevelCampaigns = require(path.join(jsFolder, 'high-level-campaigns.js'));
 
 let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {
     pretty: true,
+    attributes: ATTRIBUTES,
     dragonMagazines: dragonMagazines,
     highLevelCampaigns: highLevelCampaigns,
 });
