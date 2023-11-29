@@ -26,6 +26,6 @@ each magazine, _ in dragonMagazines
                         strong
                             em Comment:
                         |  !{formatInput(advice.comment, magazine.issue_number, questionNumber)}
-                span(class="content-attributes") Attributes: #{advice.attributes.join(", ")}
+                span(class="content-attributes") Attributes: #{advice.attributes.map(a => a.id).join(", ")}
         if magazine.epilogue
             h3 !{formatInput(magazine.epilogue, magazine.issue_number, 'epilogue')}

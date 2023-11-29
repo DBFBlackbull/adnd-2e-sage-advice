@@ -4,6 +4,10 @@ include abstract/mixins.pug
 
 -
     function formatInput(input, issue, question) {
+        if (!input) {
+            console.log(`input is nil in #${issue}, Q:${question}`)
+        }
+
         if (Array.isArray(input)) {
             return input.map(s => formatString(s, issue, question))
                     .join('<br>&emsp;')
@@ -51,20 +55,7 @@ script(src="../javascript/index.js")
 head
     meta(charset="UTF-8")
 body
-    // Sidebar
-    div(id="sidebar" class="sidebar")
-        h2 Visual settings
-        div
-            input(id="hide-foreword" type="checkbox" onchange="hideForeword()")
-            | Hide foreword and epilogue
-        div
-            input(id="hide-comments" type="checkbox" onchange="hideComments()")
-            | Hide editor's comments
-        h2 Attributes
-        each attribute, _ in attributes
-            div
-                input(type="checkbox" class="attribute" value=attribute.id onchange="search()")
-                | !{attribute.title ? attribute.title : attribute.id}
+    include sidebar.pug
 
     div(id="main" class="main")
         h1(style="text-align: center;")
@@ -84,4 +75,5 @@ body
             label(for="radio-all-search-terms") Match all search terms
 
         include sage-advice.pug
-        include high-level-campaigns.pug
+        +book(wizardsHandbook)
+        +book(highLevelCampaigns)

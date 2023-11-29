@@ -1,9 +1,11 @@
-const {ATTRIBUTE, _} = require('./attributes')
+const {_, GAME_SYSTEM ,ATTRIBUTE} = require('./constants')
 
 const THE_COMPLETE_WIZARDS_HANDBOOK = {
     publication_year: '1990',
     publication_month: 'June',
     publication_print: '10th printing, March 1996',
+    title: "The Complete Wizard's Handbook",
+    abbreviation: 'wizards-handbook',
     chapters: [],
 };
 THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
@@ -16,8 +18,9 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                 `Part of the fun of playing a wizard is developing new applications for spells through experimentation and improvisation. However, the creative use of many spells may not be immediately obvious. If a wizard always uses his spells in the same old ways, he is not taking full advantage of them.`,
                 `The following list features some unusual applications for a variety of spells from all levels. Players can also use these suggestions for inspiration when inventing new uses for other spells in their arsenals. Additionally, clarifications of several of the game's more esoteric spells are provided, which can be used by the DM to help adjudicate their effects.`
             ],
-            subsection: [
+            sections: [
                 {
+                    id: '1st-level',
                     heading: '1st Level',
                     entries: [
                         {
@@ -31,7 +34,7 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `• The companion of a wizard is about to engage a dangerous opponent in a duel. The wizard casts *cantrip* to cause a slight itch on the opponent's face. The opponent is distracted, giving the wizard's companion a momentary advantage.`,
                                 `• A menacing warrior stands before the party. The wizard casts *cantrip* to create a banana peel in front of the warrior. The warrior takes one step and falls on his face.`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                         {
                             page_number: '83',
@@ -39,7 +42,7 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `**Enlarge**`,
                                 `Much is made in the spell description in the *Player's Handbook* of changing the size of creatures, but wizards often overlook the usefulness of *enlarge* to change the size of objects. For instance, if the party is being pursued through a narrow passage or hallway, casting *enlarge* on a stone or other object behind the party can effectively block the passage and prevent the enemy's advancement. Similarly, if the party is faced with a locked or stuck door, the reverse spell, *reduce*, might be able to shrink the door just enough to allow the party to get through.`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                         {
                             page_number: '83',
@@ -47,12 +50,13 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `**Mending**`,
                                 `In addition to the uses for *mending* listed in the spell description, this spell can also be used to repair a leaky boat, a torn document, a broken wagon axle, or a cut rope (but it won't link the ends of two different ropes to make a single rope).`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
 
                     ]
                 },
                 {
+                    id: '2nd-level',
                     heading: '2nd Level',
                     entries: [
                         {
@@ -68,10 +72,10 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                             ],
                             comment: [
                                 `The first paragraph about the character being able to see himself is wrong as stated directly in Sage Advice #206.`,
-                                `The fourth paragraph about creatures with fewer than 10 hit dice, matches the *DMG* description of a wolf using its superior sense of smell and hearing to notice a *invisible* character.`
-                                    `The fifth paragraph about opponents not automatically getting a chance to detect also matches the *DMG*.`
+                                `The fourth paragraph about creatures with fewer than 10 hit dice, matches the *DMG* description of a wolf using its superior sense of smell and hearing to notice a *invisible* character.`,
+                                `The fifth paragraph about opponents not automatically getting a chance to detect also matches the *DMG*.`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.INVISIBILITY],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.INVISIBILITY],
                         },
                         {
                             page_number: '83-84',
@@ -79,7 +83,7 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `**Misdirection**`,
                                 `This spell can be used to misdirect the results of non-weapon proficiencies that impart knowledge. Examples of non-weapon proficiencies affected by *misdirection* include Ancient History, Animal Lore, Appraising, Astrology, Direction Sense, and Herbalism. If the subject of *misdirection* fails his saving throw, he receives incorrect information from the use of his proficiency. For instance, *misdirected* Animal Lore will convince the subject that a vicious creature is harmless, while *misdirected* Appraising will convince him that a valuable gem is worthless.`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                         {
                             page_number: '84',
@@ -87,11 +91,12 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `**Web**`,
                                 `This spell can be used as a makeshift net to prevent damage to falling characters, assuming there are suitable projections or surfaces available to anchor the web, A web of at least 5 feet of thickness protects a falling character from damage regardless of the height from which he falls.`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                     ]
                 },
                 {
+                    id: '3rd-level',
                     heading: '3rd Level',
                     entries: [
                         {
@@ -100,7 +105,7 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `**Hold Person**`,
                                 `The name of this spell should not be taken literally. *Hold person* makes its victims rigid—if they're falling, for instance, it cannot "freeze" them in mid-fall and suspend them in the air. (However, see the *hold monster* entry below.)`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                         {
                             page_number: '84',
@@ -108,7 +113,7 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `**Item**`,
                                 `Use this spell on a weapon if the party is on the verge of being captured. In its cloth-like state, the shrunken weapon can be concealed up the caster's sleeve or it can be tucked underneath his belt or in his trousers. The wizard can later use the enlarged weapon to surprise his captors or, if the wizard's hands are bound, he may be able to use the weapon to cut himself free. Similarly, the spell can be used to conceal a grappling hook or a thief's pick. (The wizard should be careful where he hides a shrunken weapon; if a shrunken long sword is tucked inside his pants and is enlarged before it is removed, the result could be extremely painful.)`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                         {
                             page_number: '84',
@@ -116,7 +121,7 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `**Melf's Minute Meteors**`,
                                 `One of the most frequently overlooked functions of *Melf's minute meteors* (or any flame-producing spell, such as *fireball*) is its ability to ignite combustible materials. In the right situations, this ability is capable of producing a startling amount of damage, rivaling and often exceeding the damage caused by spells of much higher levels.`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                         {
                             page_number: '84',
@@ -126,11 +131,12 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `For instance, imagine that a wizard can speak only common. All other members of his party also speak only common. The party encounters a group of two dwarves and one gnome; the dwarves speak only dwarvish, the gnome speaks only gnomish. The wizard casts *tongues* and speaks to the gnome; the gnome automatically understands what the wizard says, but the dwarves and the other party members do not—as far as they can tell, the wizard is speaking gnomish. Assuming the wizard is of sufficiently high level (he can speak one additional tongue for every three levels of experience) and the spell's duration has not yet expired, he can also address the dwarves. Both dwarves will understand the wizard, but the gnome and the rest of the party will not.`,
                                 `If a dwarf and a gnome begin chattering at the wizard at the same time, and the wizard is of sufficiently high level and the spell's duration hasn't expired, the wizard can understand them both. The other party members, however, will hear nothing but babble.`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                     ]
                 },
                 {
+                    id: '4th-level',
                     heading: '4th Level',
                     entries: [
                         {
@@ -140,7 +146,7 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `This is a very helpful spell when dealing with large, uncontrollable fires that are spreading in a field or other open area. To stop the advance of a spreading fire, *dig* can be used to create a firebreak—a ditch of broken soil devoid of combustible material. A fire reaching a firebreak will stop advancing, eventually burning itself out.`,
                                 `If the fire is too large to stop, the wizard can protect himself and his companions by using *dig* to surround themselves with a firebreak and remain inside it while the fire rages around them. The wizard must take care to make the firebreak large enough to protect himself and his companions from heat damage, which typically affects those within 5 feet of the flames.`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                         {
                             page_number: '84',
@@ -148,7 +154,7 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `**Fumble**`,
                                 `This spell can cause a lot of grief to opponents in precarious positions. *Fumble* cast on a character clinging to the side of a cliff might cause him to fall. If cast on a character moving hand over hand across a rope bridge, the character might lose his grip and fall. If such a character fails his saving throw, he plunges from the cliff or releases the rope. If he succeeds in his saving throw, he hesitates, but doesn't fall.`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                         {
                             page_number: '84-85',
@@ -158,11 +164,12 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `If the *sphere* contains more weight than air, the *sphere* will gradually sink, but it could be pushed or carried by water-breathing creatures with sufficient strength.`,
                                 `If a water-breathing character wants to explore a dark, underwater cavern, the sphere could be cast around a burning fire. The protected fire could then be carried underwater and would continue to burn until the air supply in the *sphere* was exhausted. (The carrier should take precautions to prevent being burned—in most cases, heavy gloves would probably do the trick).`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                     ]
                 },
                 {
+                    id: '5th-level',
                     heading: '5th Level',
                     entries: [
                         {
@@ -171,7 +178,7 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `**Hold Monster**`,
                                 `Since this spell immobilizes victims and prevents them from moving under their own power, it is a very effective way to bring down flying creatures. *Hold monster* cast on a creature hovering overhead will not only cause it to fall to the ground, it also might suffer a significant amount of damage when it hits (1d6 hit points of damage per every 10 feet fallen).`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                         {
                             page_number: '85',
@@ -179,11 +186,12 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `**Telekinesis**`,
                                 `This spell can be used to scoop up slimes, jellies, and other semiliquid creatures in jugs or similar containers. If the containers are sealed, *telekinesis* can be used to position the containers over an opponent's head, then tipped to dump their contents. Such containers could also be filled with poison, acid, or other damaging substances.`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                     ]
                 },
                 {
+                    id: '7th-level',
                     heading: '7th Level',
                     entries: [
                         {
@@ -198,11 +206,12 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `• A *limited wish* can change the outcome of any action the wizard took within the past 24 hours, as long as the change is reasonably minor. For instance, the wizard could *wish* to search the body of an opponent he defeated earlier that day, but he could not wish to single-handedly have fought and defeated an entire army.`,
                                 `All of the general restrictions that apply to *wish* (see below) also apply to *limited wish*. The suggestions regarding the selection of appropriate durations, casting times, and areas of effect also apply.`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                     ]
                 },
                 {
+                    id: '8th-level',
                     heading: '8th Level',
                     entries: [
                         {
@@ -211,11 +220,12 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `**Sink**`,
                                 `This spell is a terrific way to help a character who is on the verge of falling off the edge of a cliff or losing his grip when hanging from the edge of a building. While the subject clings to the cliff, the wizard casts *sink*. If the spell is successfully cast, the subject becomes stuck to the cliff and won't fall. However, the spell expires in four turns, at which time the subject risks falling.`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                     ]
                 },
                 {
+                    id: '9th-level',
                     heading: '9th Level',
                     entries: [
                         {
@@ -258,7 +268,7 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                                 `Casting Time: 1 round.`,
                                 `Area of Effect: All characters within a 20-yard radius of the caster.`
                             ],
-                            attributes: [ATTRIBUTE.SECOND_EDITION, ATTRIBUTE.SPELL],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
                     ]
                 }
@@ -266,3 +276,5 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
         }
     ],
 });
+
+module.exports = THE_COMPLETE_WIZARDS_HANDBOOK;

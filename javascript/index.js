@@ -59,7 +59,7 @@ function hideComments() {
     }
 }
 
-function getSearchTerms() {
+function getSearchRegexes() {
     let query = document.getElementById('search').value;
     if (query.replaceAll(/[- ]/g,'') === '')
         return null;
@@ -101,28 +101,23 @@ function getSearchTerms() {
     })
 }
 
-function getAttributes() {
+function getAttributeRegexes() {
     let elements = document.getElementsByClassName('attribute');
-    let activeAttributes = []
+    let attributeRegexes = []
     for (let item of elements) {
         if (item.checked) {
-            activeAttributes.push(item.value);
+            console.log(new RegExp(item.value, 'g'))
+            attributeRegexes.push(new RegExp(item.value, 'g'));
         }
     }
 
-    return activeAttributes
+    return attributeRegexes.length > 0 ? attributeRegexes : null
 }
 
 function search() {
-    let searchRegexes = getSearchTerms();
-    let activeAttributes = getAttributes();
-
-    console.log(searchRegexes);
-
-    let attributeRegex;
-    if (activeAttributes.length > 0) {
-        attributeRegex = new RegExp(`(${activeAttributes.join('|')})`,'gi');
-    }
+    let searchRegexes = getSearchRegexes();
+    let attributeRegexes = getAttributeRegexes();
+    console.log(attributeRegexes);
 
     let results = 0;
 
@@ -131,13 +126,13 @@ function search() {
         let hiddenCounter = 0;
         let paragraphs = content.querySelectorAll('p');
         for (let paragraph of paragraphs) {
-            if (!attributeRegex && !searchRegexes) {
+            if (!attributeRegexes && !searchRegexes) {
                 paragraph.classList.remove('hidden');
                 continue;
             }
 
             let contentAttributes = paragraph.querySelector('.content-attributes');
-            if (attributeRegex && !contentAttributes.innerText.match(attributeRegex)) {
+            if (attributeRegexes && !attributeRegexes.every(reg => contentAttributes.innerText.match(reg))) {
                 paragraph.classList.add('hidden');
                 hiddenCounter++;
                 continue;
@@ -170,7 +165,7 @@ function search() {
         }
     }
 
-    if (!attributeRegex && !searchRegexes) {
+    if (!attributeRegexes && !searchRegexes) {
         document.getElementById('results').innerText = '';
     } else {
         document.getElementById('results').innerText = `${results} match${results === 1 ? '' : 'es'}`;

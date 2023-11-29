@@ -1,0 +1,18 @@
+// Sidebar
+div(id="sidebar" class="sidebar")
+    h2 Visual settings
+    div
+        input(id="hide-foreword" type="checkbox" onchange="hideForeword()")
+        | Hide foreword and epilogue
+    div
+        input(id="hide-comments" type="checkbox" onchange="hideComments()")
+        | Hide editor's comments
+    h2 Sources
+    // each book, _ in books
+
+
+    h2 Attributes
+    each attribute, _ in attributes
+        span(style="display: block;")
+            input(type="checkbox" class="attribute" value=attribute.id onchange="search()")
+            | !{attribute.title ? attribute.title : attribute.id}
