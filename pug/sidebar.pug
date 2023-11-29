@@ -1,3 +1,10 @@
+mixin filterFacets(facets, title, htmlClass, checked)
+    h2 #{title}
+    each facet, _ in facets
+        div
+            input(type="checkbox" class=htmlClass value=facet.id onchange="search()" checked=checked)
+            | !{facet.title ? facet.title : facet.id}
+
 // Sidebar
 div(id="sidebar" class="sidebar")
     h2 Visual settings
@@ -7,12 +14,6 @@ div(id="sidebar" class="sidebar")
     div
         input(id="hide-comments" type="checkbox" onchange="hideComments()")
         | Hide editor's comments
-    h2 Sources
-    // each book, _ in books
-
-
-    h2 Attributes
-    each attribute, _ in attributes
-        span(style="display: block;")
-            input(type="checkbox" class="attribute" value=attribute.id onchange="search()")
-            | !{attribute.title ? attribute.title : attribute.id}
+    +filterFacets(sources, "Sources", "source", true)
+    +filterFacets(gameSystems, "Game System", "game-system")
+    +filterFacets(attributes, "Attributes", "attribute")

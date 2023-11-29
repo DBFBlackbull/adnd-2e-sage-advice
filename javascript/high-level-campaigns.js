@@ -1,11 +1,13 @@
-const {GAME_SYSTEM , ATTRIBUTE} = require('./constants')
+const {SOURCE, GAME_SYSTEM , ATTRIBUTE} = require('./constants')
 
 const DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS = {
     publication_year: '1995',
     publication_month: 'August',
     publication_print: 'First Printing',
     title: 'DUNGEON MASTER® Option: High-Level Campaigns',
-    abbreviation: 'DMGR:HLC',
+    shortTitle: 'DMGR:HLC',
+    id: 'dmgr-hlc',
+    sourceAttribute: SOURCE.HIGH_LEVEL_CAMPAIGNS,
     chapters: [],
 };
 DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({

@@ -1,7 +1,7 @@
-const BOOK = {
+const SOURCE = {
     SAGE_ADVICE: {id: "Sage Advice", title: "Dragon Magazine: Sage Advice"},
-    HIGH_LEVEL_CAMPAIGNS: {id: "DMGR:High-Level Campaigns", title: "Dungeon Master Option: High-Level Campaign"},
     WIZARDS_HANDBOOK: {id: "Complete Wizard's Handbook", title:"The Complete Wizard's Handbook"},
+    HIGH_LEVEL_CAMPAIGNS: {id: "DMGR:High-Level Campaigns", title: "Dungeon Master Option: High-Level Campaign"},
 }
 
 const GAME_SYSTEM = {
@@ -39,11 +39,11 @@ const ATTRIBUTE = {
 
     PRONOUNCE_DROW: {id: 'Pronounce drow', title: 'How to pronouncing "drow"'},
     PRONOUNCE_FLIND: {id: 'Pronounce flind', title: 'How to pronouncing "flind"'},
-    APRIL_FOOLS: 'April Fools',
+    APRIL_FOOLS: {id: 'April Fools'},
 };
 
 module.exports = {
-    BOOK,
+    SOURCE,
     GAME_SYSTEM,
     ATTRIBUTE,
 };

@@ -102,74 +102,90 @@ function getSearchRegexes() {
 }
 
 function getAttributeRegexes() {
-    let elements = document.getElementsByClassName('attribute');
-    let attributeRegexes = []
-    for (let item of elements) {
-        if (item.checked) {
-            console.log(new RegExp(item.value, 'g'))
-            attributeRegexes.push(new RegExp(item.value, 'g'));
+    let sources = document.querySelectorAll('.source');
+    let gameSystems = document.querySelectorAll('.game-system');
+    let attributes = document.querySelectorAll('.attribute');
+
+    let filterRegexes = [getRegex(sources), getRegex(gameSystems), getRegex(attributes)].filter(Boolean)
+
+    return filterRegexes.length > 0 ? filterRegexes : null
+}
+
+function getRegex(nodeList) {
+    let strings = []
+    for (let element of nodeList) {
+        if (element.checked) {
+            strings.push(element.value);
         }
     }
 
-    return attributeRegexes.length > 0 ? attributeRegexes : null
+    if (strings.length === 0) {
+        return null
+    }
+
+    return new RegExp(`(${strings.join('|')})`, 'g');
 }
 
 function search() {
     let searchRegexes = getSearchRegexes();
     let attributeRegexes = getAttributeRegexes();
-    console.log(attributeRegexes);
 
     let results = 0;
 
-    let contentElements = document.getElementsByClassName('content');
-    for (let content of contentElements) {
-        let hiddenCounter = 0;
-        let paragraphs = content.querySelectorAll('p');
-        for (let paragraph of paragraphs) {
-            if (!attributeRegexes && !searchRegexes) {
-                paragraph.classList.remove('hidden');
-                continue;
-            }
+    let wrappers = document.getElementsByClassName('wrapper');
+    for (let wrapper of wrappers) {
+        let hiddenWrapperCounter = 0;
 
-            let contentAttributes = paragraph.querySelector('.content-attributes');
-            if (attributeRegexes && !attributeRegexes.every(reg => contentAttributes.innerText.match(reg))) {
-                paragraph.classList.add('hidden');
-                hiddenCounter++;
-                continue;
-            }
-            paragraph.classList.remove('hidden');
-            results++;
-
-            if (searchRegexes) {
-                let searchMatch = false;
-
-                let contentTexts = paragraph.querySelectorAll('.question,.answer,.entry,.optional');
-                for (let text of contentTexts) {
-                    searchMatch = searchMatch || searchRegexes.every(reg => text.innerText.match(reg));
-                }
-
-                if (searchMatch) {
-                    paragraph.classList.remove('hidden');
-                } else {
+        let contentElements = wrapper.getElementsByClassName('content');
+        for (let content of contentElements) {
+            let hiddenContentCounter = 0;
+            let paragraphs = content.querySelectorAll('p');
+            for (let paragraph of paragraphs) {
+                let contentAttributesElement = paragraph.querySelector('.content-attributes');
+                let contentAttributes = contentAttributesElement.innerText + ' ' + contentAttributesElement.children[0].innerText
+                if (attributeRegexes && !attributeRegexes.every(reg => contentAttributes.match(reg))) {
                     paragraph.classList.add('hidden');
-                    hiddenCounter++;
-                    results--;
+                    hiddenContentCounter++;
+                    continue;
                 }
+                paragraph.classList.remove('hidden');
+                results++;
+
+                if (searchRegexes) {
+                    let searchMatch = false;
+
+                    let contentTexts = paragraph.querySelectorAll('.question,.answer,.entry,.optional');
+                    for (let text of contentTexts) {
+                        searchMatch = searchMatch || searchRegexes.every(reg => text.innerText.match(reg));
+                    }
+
+                    if (searchMatch) {
+                        paragraph.classList.remove('hidden');
+                    } else {
+                        paragraph.classList.add('hidden');
+                        hiddenContentCounter++;
+                        results--;
+                    }
+                }
+            }
+
+            if (hiddenContentCounter === paragraphs.length) {
+                content.classList.add('hidden');
+                hiddenWrapperCounter++;
+            } else {
+                content.classList.remove('hidden');
+                hiddenWrapperCounter--;
             }
         }
 
-        if (hiddenCounter === paragraphs.length) {
-            content.classList.add('hidden');
+        if (hiddenWrapperCounter === contentElements.length) {
+            wrapper.classList.add('hidden');
         } else {
-            content.classList.remove('hidden');
+            wrapper.classList.remove('hidden');
         }
     }
 
-    if (!attributeRegexes && !searchRegexes) {
-        document.getElementById('results').innerText = '';
-    } else {
-        document.getElementById('results').innerText = `${results} match${results === 1 ? '' : 'es'}`;
-    }
+    document.getElementById('results').innerText = `${results} match${results === 1 ? '' : 'es'}`;
 }
 
 function copyPlainText(id) {

@@ -1,11 +1,13 @@
-const {_, GAME_SYSTEM ,ATTRIBUTE} = require('./constants')
+const {SOURCE, GAME_SYSTEM ,ATTRIBUTE} = require('./constants')
 
 const THE_COMPLETE_WIZARDS_HANDBOOK = {
     publication_year: '1990',
     publication_month: 'June',
     publication_print: '10th printing, March 1996',
     title: "The Complete Wizard's Handbook",
-    abbreviation: 'wizards-handbook',
+    shortTitle: "The Complete Wizard's Handbook",
+    id: 'wizards-handbook',
+    sourceAttribute: SOURCE.WIZARDS_HANDBOOK,
     chapters: [],
 };
 THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({

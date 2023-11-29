@@ -1,31 +1,32 @@
-each magazine, _ in dragonMagazines
-    div(class="content sage-advice")
-        h2 Sage Advice ##{magazine.issue_number}, #{magazine.publication_month} #{magazine.publication_year}
-        h3 !{formatInput(magazine.foreword, magazine.issue_number, 'foreword')}
-        each advice, index in magazine.sage_advice
-            - let questionNumber = index + 1
-            - let id = `sage-advice-${magazine.issue_number}-${questionNumber}`
-            // - console.log(`Sage Advice #${magazine.issue_number} p. ${advice.page_number}, Question: ${questionNumber}`)
-            p(id=id)
-                span(class='title') Sage Advice ##{magazine.issue_number} (#{magazine.publication_month} #{magazine.publication_year}) p. #{advice.page_number}, Question: #{questionNumber}
-                +buttons(id)
-                span(class="question")
-                    strong !{formatInput(advice.question, magazine.issue_number, questionNumber)}
-                br
-                span(class="answer") &emsp;!{formatInput(advice.answer, magazine.issue_number, questionNumber)}
-                if advice.image
-                    if Array.isArray(advice.image)
-                        each img, _ in advice.image
+div(class="wrapper")
+    each magazine, _ in dragonMagazines
+        div(class="content sage-advice")
+            h2 Sage Advice ##{magazine.issue_number}, #{magazine.publication_month} #{magazine.publication_year}
+            h3 !{formatInput(magazine.foreword, magazine.issue_number, 'foreword')}
+            each advice, index in magazine.sage_advice
+                - let questionNumber = index + 1
+                - let id = `sage-advice-${magazine.issue_number}-${questionNumber}`
+                // - console.log(`Sage Advice #${magazine.issue_number} p. ${advice.page_number}, Question: ${questionNumber}`)
+                p(id=id)
+                    span(class='title') Sage Advice ##{magazine.issue_number} (#{magazine.publication_month} #{magazine.publication_year}) p. #{advice.page_number}, Question: #{questionNumber}
+                    +buttons(id)
+                    span(class="question")
+                        strong !{formatInput(advice.question, magazine.issue_number, questionNumber)}
+                    br
+                    span(class="answer") &emsp;!{formatInput(advice.answer, magazine.issue_number, questionNumber)}
+                    if advice.image
+                        if Array.isArray(advice.image)
+                            each img, _ in advice.image
+                                br
+                                img(src="../img/" + img)
+                        else
                             br
-                            img(src="../img/" + img)
-                    else
-                        br
-                        img(src="../img/" + advice.image)
-                if advice.comment
-                    span(class="comment")
-                        strong
-                            em Comment:
-                        |  !{formatInput(advice.comment, magazine.issue_number, questionNumber)}
-                span(class="content-attributes") Attributes: #{advice.attributes.map(a => a.id).join(", ")}
-        if magazine.epilogue
-            h3 !{formatInput(magazine.epilogue, magazine.issue_number, 'epilogue')}
+                            img(src="../img/" + advice.image)
+                    if advice.comment
+                        span(class="comment")
+                            strong
+                                em Comment:
+                            |  !{formatInput(advice.comment, magazine.issue_number, questionNumber)}
+                    +attributes(advice, sources.SAGE_ADVICE)
+            if magazine.epilogue
+                h3 !{formatInput(magazine.epilogue, magazine.issue_number, 'epilogue')}
