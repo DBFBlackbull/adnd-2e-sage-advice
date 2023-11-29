@@ -1050,7 +1050,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
     ],
 });
 DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
-    chapter: '4',
+    number: '4',
     heading: 'Creating Magical Items',
     sections: [
         {
