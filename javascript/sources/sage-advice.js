@@ -331,7 +331,7 @@ DRAGON_MAGAZINES.push({
                 `As clearly stated on page 44, there are no restrictions on the class combinations allowed to dual-classed characters, provided that alignment restrictions are respected. Most DMs, however, do not allow characters to combine subclasses (e.g., no bard/thieves, paladin/rangers, etc.).`
             ],
             comment: `Revised ***Player's Handbook*** (black book) made it a hard rule that you cannot dual/multi-class in the same group. ***The Complete Bard's Handbook*** reintroduced it for bard multi-classes.`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.CLASS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.CLASS, ATTRIBUTE.DUAL_CLASS_IN_GROUP],
         },
         {
             page_number: '12',
@@ -3844,7 +3844,7 @@ DRAGON_MAGAZINES.push({
                 `If the roll is higher, start figuring: Roll 1d3 to get the base ability score. In the case of dexterity, add one or two to the base score if the creature is described as agile, quick, or sure footed (subtract one or two for clumsy creatures). You might add a point for a high movement rate and one point for every multiple of three that the land or water movement rate rises above 12 or every multiple of six for air movement above 18 (you can subtract points at the same rate for exceptionally slow creatures). Generally, creatures with multiple legs are more sure footed than bipedal creatures, allowing one point for each pair of legs after the first two. The situation will exclude some modifiers; a horse might get modifiers for speed and legs when determining if it can jump a fence, but it might get none for deciding if it slides down a rocky slope. On the other hand, a basilisk probably couldn't jump over a matchbox but would get credit for its eight legs when negotiating slopes. Giants are notoriously clumsy, but their sheer size allows them to simply ignore most obstacles.`,
                 `When calculating other ability scores, consider the following: Strength generally equates to size; tiny creatures might receive a -2, small creatures a -1, man-sized creatures no modifier, large creatures a +1, and so on. Creatures especially noted for strength, such as draft horses, might get an extra point or two. If a creature has any damage modifiers from strength, use Table 1 in the ***PHB*** to estimate its strength score. Wisdom generally equates to intelligence, with an extra point or two if the creature has priest spells or is noted for its cunning or guile. Most monsters have higher than normal constitutions (say 11-13), modified for size as per strength. Most monsters have low charismas (say 8-10) with extra points added for high intelligence and times when a creature deals with other monsters of the same alignment. Needless to say, it's always better to go through this process *before* play begins when possible.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.MONSTER_ABILITY_SCORES],
         },
         {
             page_number: '100',
@@ -9537,7 +9537,7 @@ DRAGON_MAGAZINES.push({
                 `The ***Player's Handbook*** did say something of the sort once, but not anymore. Page 62 of the current printing limits dual-classed PCs to four classes, one from each character group. Because the paladin class is part of the warrior group, a dual-classed paladin cannot choose another class from that group.`,
                 `Standard paladins are not obligated to wear armor, and could become dual-classed paladin/wizards. Paladin kits from the ***Complete Paladin's Handbook*** that do require armor (the wyrmslayer for example) cannot become dual-classed paladin/wizards.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS, ATTRIBUTE.DUAL_CLASS_IN_GROUP],
         },
         {
             page_number: '82',
@@ -10345,7 +10345,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Here's something to tide you over until something better comes along: Assume that the creature's Wisdom score is about equal to its Intelligence score. To determine the creature's scores, look up the monster's entry in the ***MONSTROUS MANUAL*** tome or the ***MONSTROUS COMPENDIUM®*** tome and note its general intelligence rating. A parenthetical note right next to the rating tells give you a range of mental ability scores. For example, a ki-rin has an intelligence rating of supra-genius, giving in a rating of 19-20 in both Wisdom and Intelligence. You can roll 1d6 to determine the exact score (1-3= 19, 4-6=20). Once you have the scores, calculate its MAC using table 74 (***S&P***, page 144) just like you would for a character. If a particular ki-rin has a Wisdom of 19 and an Intelligence of 20, its MAC would be 3. If you want a wider range of scores for the creature, you'll find tables for generating creature's ability scores in Chapter 2 of the ***DUNGEON MASTER™ Option: High-Level Campaigns*** book, pages 58-61. Creatures with racial psionic abilities, such as su-monsters and mind flayers, should get an additional bonus of +1 to +3.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.MONSTER_ABILITY_SCORES],
         },
         {
             page_number: '77',
@@ -13021,7 +13021,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Though wild mages don't pursue a specialty, per se, they get enough specialist-type benefits that I recommend you treat them as specialist wizards — no dual- or multi-classing. Your campaign probably won't crash and burn if you ignore my advice. (If you're allowing both wild mages and chronomancers into your game, dual- and multi-classed wild mages will be the least of your worries.) On the other hand, both wild mages and chronomancers are members of the wizard group. The dual-class rules (see ***PHB***, Chapter 3) allow characters to have only one class from each group.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS, ATTRIBUTE.DUAL_CLASS_IN_GROUP],
         },
     ]
 });
@@ -18078,7 +18078,7 @@ DRAGON_MAGAZINES.push({
                 `For example, a fighter who has just reached 6th level becomes a paladin. The character must have 75,000 experience points before he becomes a 7th-level paladin. In the meantime, the character must give up weapon specialization, tithe, and otherwise act as a paladin—before gaining any of the paladin's benefits. If the character performs exceptionally well, the DM might want to award some paladin benefits a little at a time, say every 10,000 XP or so. Some benefits that would work well for "early delivery" would include the paladin's +2 saving throw bonus, disease immunity, lay on hands ability, and *detect evil* ability.`
             ],
             comment: `Another example of dual class in the same group.`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS, ATTRIBUTE.DUAL_CLASS_IN_GROUP],
         },
         {
             page_number: '26',
@@ -19750,8 +19750,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `It depends on the undead. Incorporeal creatures have no Strength scores to speak of. For corporeal undead creatures (or any corporeal creature), assume 3½ points per size category (Strength 3 at tiny, 7 at small, 10 at medium, and so on) plus the creature's Hit Dice. For example, a ghoul is a 2 HD creature of medium size, so a typical ghoul has a Strength score of 12. If you want a more detailed method for assigning ability scores to monsters, check out Chapter 2 of the ***High-Level Campaigns*** book.`
             ],
-            comment: `Another entry for monster attributes. #169 was the first`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.MONSTER_ABILITY_SCORES],
         },
         {
             page_number: '114',

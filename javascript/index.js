@@ -1,6 +1,7 @@
 const SYNONYMS = [
     ['elf', 'elves'],
     ['dwarf', 'dwarves'],
+    ['thief', 'thieves'],
     ['demihuman', 'demi-human'],
     ['multiclass', 'multi-class'],
     ['dualclass', 'dual-class'],
@@ -59,6 +60,12 @@ function hideComments() {
     }
 }
 
+function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()[\]\\/]/g, '\\$&'); // $& means the whole matched string
+}
+
+const SPECIAL_CHARACTERS = '.*+?^${}()[]\\/';
+
 function getSearchRegexes() {
     let query = document.getElementById('search').value;
     if (query.replaceAll(/[- ]/g,'') === '')
@@ -88,7 +95,12 @@ function getSearchRegexes() {
             })
         })
 
-        return Array.from(set).map(s => `\\W${s}|^${s}`);
+        return Array.from(set).map(s => {
+            if (SPECIAL_CHARACTERS.includes(s.slice(0, 1))) {
+                return escapeRegExp(s);
+            }
+            return `\\W${s}|^${s}`;
+        });
     });
 
     if (document.getElementById('radio-any-search-term').checked) {
@@ -129,6 +141,7 @@ function getRegex(nodeList) {
 function search() {
     let searchRegexes = getSearchRegexes();
     let attributeRegexes = getAttributeRegexes();
+    console.log(searchRegexes);
 
     let results = 0;
 

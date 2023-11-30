@@ -16,6 +16,7 @@ const ATTRIBUTE = {
     CLASS: {id: 'Class'},
     // RACE: {id: 'Race'},
     // WEAPON: {id: 'Weapon'},
+    DUAL_CLASS_IN_GROUP: {id: 'Dual-class within group', title: 'Dual-class in the same group'},
 
     ELVEN_RESISTANCE: {id: "Elven resistance", title: "Elven resistance to Sleep and Charm"},
     GNOME_BASTARD_SWORD: {id: "Gnome Bastard sword", title: "Gnomes with Bastard sword"},
@@ -28,7 +29,7 @@ const ATTRIBUTE = {
     SCROLL: {id: "Scroll", title: "Scroll rules and limitations"},
     MAGIC_ITEM_SIZE: {id: "Magic item size", title: "Who fit magic items?"},
     PANTHEON: {id: "Pantheon", title: "Pantheon of the Month"},
-    // MONSTER_ABILITY_SCORES: {id: "Monster Ability Scores"},
+    MONSTER_ABILITY_SCORES: {id: "Monster Ability Scores"},
 
     DISPEL_MAGIC: {id: 'Dispel Magic'},
     TURN_UNDEAD: {id: 'Turn Undead'},

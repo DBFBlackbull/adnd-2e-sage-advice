@@ -7,7 +7,8 @@ const htmlFolder = path.join(sourceFolder, 'html');
 const pugFolder = path.join(sourceFolder, 'pug');
 
 const {SOURCE, GAME_SYSTEM, ATTRIBUTE} = require(path.join(jsFolder, 'constants.js'));
-const phb = require(path.join(jsFolder, 'sources','players-handbook.js'));
+const phb1 = require(path.join(jsFolder, 'sources','players-handbook-1st-print.js'));
+const phbr = require(path.join(jsFolder, 'sources','players-handbook-revised.js'));
 const dmg = require(path.join(jsFolder, 'sources','dungeon-master-guide.js'));
 const dragonMagazines = require(path.join(jsFolder, 'sources','sage-advice.js'));
 const highLevelCampaigns = require(path.join(jsFolder, 'sources','high-level-campaigns.js'));
@@ -18,7 +19,8 @@ let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {
     sources: SOURCE,
     gameSystems: GAME_SYSTEM,
     attributes: ATTRIBUTE,
-    phb: phb,
+    phb1: phb1,
+    phbr: phbr,
     dmg: dmg,
     dragonMagazines: dragonMagazines,
     highLevelCampaigns: highLevelCampaigns,
