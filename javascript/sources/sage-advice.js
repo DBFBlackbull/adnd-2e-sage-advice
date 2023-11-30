@@ -550,7 +550,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Fighters can specialize with only one weapon. Any character attacking with two weapons gets one—and only one—extra attack per round; the character gets the full number of attacks for the primary weapon and one attack from the secondary weapon. The DM can allow strength bonuses for each hand, but I do not recommend it. Limit strength bonuses to one weapon or the other, or allow the character to split the bonus between weapons.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.WEAPON],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.TWO_WEAPONS_STRENGTH, ATTRIBUTE.WEAPON],
         },
         {
             page_number: '12',
@@ -14671,7 +14671,7 @@ DRAGON_MAGAZINES.push({
                 `In the interest of play balance, I use a house rule that requires a character with two weapons to divide his Strength between the weapons. Say Gond has a Strength score of 18/00—he has a +3 attack bonus and a +6 damage bonus. If Gond uses two weapons, his player must decide how much of that bonus Gond uses for each weapon. If he puts it all into the primary weapon, the second weapon has no bonuses from Strength at all. If Gond has multiple attacks, he still enjoys whatever bonuses the player has assigned to that weapon for every attack Gond makes with that weapon.`,
                 `The rule is not official, but try it out and see how you like it.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.TWO_WEAPONS_STRENGTH],
         },
         {
             page_number: '18',
@@ -17179,7 +17179,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '24',
-            question: `What happens when a dual-classed character who started out as a Warrior and has since become something else receives a ***strength*** spell? For example suppose a 5th-level Fighter/6th-level Mage who started out as a Fighter receives a ***strength*** spell. Do you roll 1d4 for the ***strength*** boost because the character is a Mage or 1d8 because the character is aFighter?`,
+            question: `What happens when a dual-classed character who started out as a Warrior and has since become something else receives a ***strength*** spell? For example suppose a 5th-level Fighter/6th-level Mage who started out as a Fighter receives a ***strength*** spell. Do you roll 1d4 for the ***strength*** boost because the character is a Mage or 1d8 because the character is a Fighter?`,
             answer: [
                 `If the recipient of a ***strength*** spell has an active class from the Warrior group, use the Warrior value for the spell (1d8). A class is "active" when the dual-classed character is earning experience in the class or when the character has full access to the class's abilities.`
             ],

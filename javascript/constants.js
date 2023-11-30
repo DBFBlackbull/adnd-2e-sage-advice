@@ -20,6 +20,7 @@ const ATTRIBUTE = {
     ELVEN_RESISTANCE: {id: "Elven resistance", title: "Elven resistance to Sleep and Charm"},
     GNOME_BASTARD_SWORD: {id: "Gnome Bastard sword", title: "Gnomes with Bastard sword"},
     RANGED_IN_MELEE: {id: "Ranged in melee", title: "Ranged weapons in melee combat"},
+    TWO_WEAPONS_STRENGTH: {id: "Two weapons Strength", title: 'Two weapons and Strength bonus'},
     BOWS_AND_STRENGTH: {id: "Bows and Strength", title: "Bows and Strength bonus"},
     MORNING_STAR: {id: "Morningstar", title: "What is a morning star?"},
     INTELLIGENCE_VS_ILLUSIONS: {id: "Int vs illusion", title: "High Intelligence illusion immunity"},
