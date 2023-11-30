@@ -13,17 +13,17 @@ mixin book(book)
     div(class="wrapper")
         h1 #{book.title} (Published #{book.publication_month} #{book.publication_year}, #{book.publication_print})
         each chapter, _ in book.chapters
-            div(class="content")
                 each section, _ in chapter.sections
-                    h2 Chapter: #{chapter.number} #{chapter.heading} — #{section.heading}
-                    if section.foreword
-                        h3 !{formatInput(section.foreword)}
-                    if section.sections
-                        each subsection, _ in section.sections
-                            h4 #{subsection.heading}
-                            +entries(book, chapter, subsection, `${section.heading} — ${subsection.heading}`)
-                    else
-                        +entries(book, chapter, section, section.heading)
+                    div(class="content")
+                        h2 Chapter: #{chapter.number} #{chapter.heading} — #{section.heading}
+                        if section.foreword
+                            h3 !{formatInput(section.foreword)}
+                        if section.entries
+                            +entries(book, chapter, section, `${chapter.heading} — ${section.heading}`)
+                        if section.sections
+                            each subsection, _ in section.sections
+                                h4 #{subsection.heading}
+                                +entries(book, chapter, subsection, `${section.heading} — ${subsection.heading}`)
 
 mixin entries(book, chapter, section, heading)
     each entry, index in section.entries
