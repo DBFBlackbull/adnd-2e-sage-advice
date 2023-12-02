@@ -7900,7 +7900,7 @@ DRAGON_MAGAZINES.push({
                 `*Uncertainty:* All this reliance on physical things undermines the mental discipline the wizard needs to command his magic. There is a 25% chance that any spell he casts during the next 24 hours will fail outright. (Of course, if the character is wearing prohibited armor at the time of casting, the spell fails 100% of the time.) Further, the character gains no experience for the adventure in which he dons armor to protect himself. If he makes a habit of wearing armor, he might even lose a level or two.`
             ],
             comment: `Repeated in #246`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS, ATTRIBUTE.WIZARD_ARMOR],
         },
         {
             page_number: '72-73',
@@ -12984,7 +12984,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `In the current edition of the AD&D rules, multi-classed characters are stuck with the most stringent armor restriction among their classes. Warrior/wizards and priest/wizards, for example, aren't allowed armor. If you're inclined to follow the rules to the letter, warrior/wizards (only) can wear elven chain mail, but I strongly recommend allowing priest/wizards to wear it, too.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS,ATTRIBUTE.WIZARD_ELVEN_CHAIN,ATTRIBUTE.WIZARD_ARMOR],
         },
         {
             page_number: '94',
@@ -13080,7 +13080,7 @@ DRAGON_MAGAZINES.push({
                 `On the other hand, when using the ***Skills & Powers*** character generation rules you should not allow any character to claim extra character points for a limitation that does not actually affect him. I recommend that you tell your players the "no armor" limitation isn't available to them — even the ones that don't own ***bracers of defense***. Whenever you apply a complex rule retroactively, you've got to be careful lest you alter your game too much. In this case, you probably don't want characters. who've been wearing armor to suddenly give up the habit. Your players should be selecting abilities that reflect their characters' game histories.`,
                 `You are correct in assuming that -10 is the limit for Armor Class in the AD&D® game. There are a few creatures that exceed the limit, but characters have to stick to it. I am amused, not offended, by your offer of a "token of appreciation." This marks the third time I've been offered a bribe (though only the second time I've mentioned being bribed in print). If this answer makes you especially joyful, please do not hesitate to make a generous donation to your local children's hospital.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.CLASS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.CLASS, ATTRIBUTE.WIZARD_ARMOR],
         },
         {
             page_number: '81',
@@ -14390,7 +14390,8 @@ DRAGON_MAGAZINES.push({
 </table>`,
                 `&ast;DM's choice or roll randomly, 50% chance for each type.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            comment: `***DMG*** p. 241 says that all magical lances are heavy lances. The table given by the Sage only have 65% chance for a heavy lance, which is still the largest distribution, but not 100%.`,
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.WEAPON],
         },
     ]
 });
@@ -14785,8 +14786,7 @@ DRAGON_MAGAZINES.push({
                 `*Uncertainty:* Too much reliance on physical things undermines the mental discipline the wizard needs to command his magic. There is a 25% chance that any spell he casts during the next 24 hours will fail outright. (If the caster is wearing prohibited armor at the time of casting, the spell fails 100% of the time.) Further, the character gains no experience for the adventure in which he dons armor to protect himself. If he makes a habit of wearing armor, he might even lose a level or two. The uncertainty penalty shouldn't apply to wizards who genuinely have been forced to wear armor.`,
                 `Note that these penalties don't make much sense if the wizard also has warrior or priest abilities, but "Sage Advice" has suggested allowing armor to such characters several times.`
             ],
-            comment: `Previous issue is #205`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS,ATTRIBUTE.WIZARD_ARMOR],
         },
         {
             page_number: '20',

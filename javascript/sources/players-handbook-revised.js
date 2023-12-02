@@ -79,6 +79,19 @@ PLAYERS_HANDBOOK.chapters.push({
             heading: 'Multi-Class and Dual-Class Characters',
             sections: [
                 {
+                    id: 'multi-class-restrictions',
+                    heading: 'Multi-Class Benefits and Restrictions',
+                    entries: [
+                        {
+                            page_number: '62',
+                            entry: [
+                                `**Wizard:** A multi-classed wizard can freely combine the powers of the wizard with any other class allowed, although the wearing of armor is restricted. Elves wearing elven chain can cast spells in armor, as magic is part of the nature of elves. However, elven chain is extremely rare and can never be purchased. It must be given, found, or won.`
+                            ],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.CLASS, ATTRIBUTE.WIZARD_ARMOR, ATTRIBUTE.WIZARD_ELVEN_CHAIN]
+                        }
+                    ]
+                },
+                {
                     id: 'dual-class-restrictions',
                     heading: 'Dual-Class Benefits and Restrictions',
                     entries: [

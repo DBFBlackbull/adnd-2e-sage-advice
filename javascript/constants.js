@@ -1,6 +1,7 @@
 const SOURCE = {
     PHB: {id: "PHB", title: "Player's Handbook"},
     DMG: {id: "DMG", title: "Dungeon Master Guide"},
+    AEG: {id: "AEG", title: "Arms and Equipment Guide"},
     SAGE_ADVICE: {id: "Sage Advice", title: "Dragon Magazine: Sage Advice"},
     WIZARDS_HANDBOOK: {id: "Complete Wizard's Handbook", title:"The Complete Wizard's Handbook"},
     HIGH_LEVEL_CAMPAIGNS: {id: "DMGR:High-Level Campaigns", title: "Dungeon Master Option: High-Level Campaign"},
