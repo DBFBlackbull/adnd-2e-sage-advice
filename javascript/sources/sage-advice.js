@@ -4281,7 +4281,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `If you carefully reread page 182 of the ***Dungeon Master's Guide***, you'll find it says that elven fighter/mages can wear elven chain mail without restriction; this is the only case in which magic-users can wear this armor. This rule also is included in the ***Player's Handbook***, page 45. Single-classed mages cannot wear any armor at all. It probably will not cause play-balance problems if the DM allows other multiclassed (but not dual-classed) warrior/mages to wear other types of armor made from elven steel; details on these armors must be invented by the DM (using the ***DMG***, pages 37-38).`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.WIZARD_ELVEN_CHAIN, ATTRIBUTE.WIZARD_ARMOR],
         },
         {
             page_number: '64',
@@ -5009,7 +5009,7 @@ DRAGON_MAGAZINES.push({
                 `This is a misprint. The line should read: "Its lightness and flexibility allow even bards and thieves to use it with few restrictions." This official correction has already appeared in more recent printings of the ***DMG***.`,
                 `In the core AD&D 2nd Edition rules, mages cannot wear armor unless they are elven fighter/mages. However, it seems to me that half-elven cleric/mages, fighter/mages, and fighter/mage/clerics also could function while wearing elven chain mail. Mage/thieves and fighter/mage/thieves could probably also wear elven chain mail since straight thieves can—but don't forget to apply the penalties to thieving abilities from Table 29, page 39, in the ***Player's Handbook***.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.CLASS, ATTRIBUTE.WIZARD_ELVEN_CHAIN, ATTRIBUTE.WIZARD_ARMOR],
         },
         {
             page_number: '77',
@@ -14126,7 +14126,7 @@ DRAGON_MAGAZINES.push({
                 `Except as noted above, a multi-classed character uses the best THAC0 from her classes.`,
                 `A multi-classed character always uses the best available saving throw from all her classes.`,
                 `To assign proficiencies to a multi-classed character, choose the highest number of initial proficiencies from among all the character's classes. Thereafter assign a new proficiency whenever the character would normally earn them for each class. (This, too, is a departure from the ***PHB*** method.) The character can freely choose non-weapon proficiencies from any group allowed to any one her classes. For example, a fighter/thief could chooses from the General, Warrior, and Rogue groups. Weapon proficiencies work the same way, except where noted below.`,
-                `Multi-classed characters generally must abide by the worst armor restrictions among their classes. Multi-classed elf and half-elf mages can wear elven chain mail if one of their other classes is normally allowed to use chain mail. Multi-classed thieves suffer penalties to their abilities if they wear armor better that leather. Elven chain mail, padded armor, and leather armor impose the penalties noted on Table 29 in the PHB. Other types of armor negate all thief abilities except Open Locks and Detect Noise (these abilities still suffer the penalties from the "Padded or Studded Leather" column on Table 29). Note that the Complete Thief's Handbook extends Table 29 to cover most types of armor. (I personally don't like this rule very much. I prefer to allow multi-classed characters to wear the best available armor, except for thieves, who suffer the penalties noted above if they wear heavy armor.)`,
+                `Multi-classed characters generally must abide by the worst armor restrictions among their classes. Multi-classed elf and half-elf mages can wear elven chain mail if one of their other classes is normally allowed to use chain mail. Multi-classed thieves suffer penalties to their abilities if they wear armor better that leather. Elven chain mail, padded armor, and leather armor impose the penalties noted on Table 29 in the ***PHB***. Other types of armor negate all thief abilities except Open Locks and Detect Noise (these abilities still suffer the penalties from the "Padded or Studded Leather" column on Table 29). Note that the ***Complete Thief's Handbook*** extends Table 29 to cover most types of armor. (I personally don't like this rule very much. I prefer to allow multi-classed characters to wear the best available armor, except for thieves, who suffer the penalties noted above if they wear heavy armor.)`,
                 `Multi-classed characters generally enjoy the best weapon selection from among all their classes, except for priests, who remain bound by their priest weapon restrictions. (I don't care for this rule, either, and prefer to allow any multi-classed character to choose weapons form those available to all their classes.)`
             ],
             comment: [
@@ -14137,7 +14137,7 @@ DRAGON_MAGAZINES.push({
                 `The note about thieves getting penalties when using armor better than leather, the following sentence should probably say studded leather instead of just saying leather.`,
                 `Elf and half-elf mages + elven chain mail is also a departure from the ***DMG***, as it only says you can do this if you are a elf fighter/mage (note half-elf not mentioned). This is also a departure from #172, but is somewhat aligned to #180 and #237`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS, ATTRIBUTE.WIZARD_ELVEN_CHAIN, ATTRIBUTE.WIZARD_ARMOR],
         },
         {
             page_number: '20',

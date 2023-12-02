@@ -29,7 +29,9 @@ body {
     display: block;
     padding-top: 5px;
 }
-
+.title{
+    text-decoration: underline;
+}
 .optional,
 .comment {
     display: block;
