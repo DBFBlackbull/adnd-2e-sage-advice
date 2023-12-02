@@ -23,7 +23,8 @@ const ATTRIBUTE = {
     RANGED_IN_MELEE: {id: "Ranged in melee", title: "Ranged weapons in melee combat"},
     TWO_WEAPONS_STRENGTH: {id: "Two weapons Strength", title: 'Two weapons and Strength bonus'},
     BOWS_AND_STRENGTH: {id: "Bows and Strength", title: "Bows and Strength bonus"},
-    MORNING_STAR: {id: "Morningstar", title: "What is a morning star?"},
+    WIZARD_ELVEN_CHAIN: {id: 'Wizard in Elven chain mail'},
+    WIZARD_ARMOR: {id: 'Wizard in metal armor'},
     INTELLIGENCE_VS_ILLUSIONS: {id: "Int vs illusion", title: "High Intelligence illusion immunity"},
     D30: {id: "d30", title: "What comes after a d20?"},
     SCROLL: {id: "Scroll", title: "Scroll rules and limitations"},
@@ -41,6 +42,7 @@ const ATTRIBUTE = {
     DOT: {id: "Continuing Damage"},
     MAGICAL_AGING: {id: "Magical aging"},
 
+    MORNING_STAR: {id: "Morningstar", title: "What is a morning star?"},
     PRONOUNCE_DROW: {id: 'Pronounce drow', title: 'How to pronouncing "drow"'},
     PRONOUNCE_FLIND: {id: 'Pronounce flind', title: 'How to pronouncing "flind"'},
     APRIL_FOOLS: {id: 'April Fools'},

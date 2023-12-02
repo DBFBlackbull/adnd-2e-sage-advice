@@ -162,7 +162,7 @@ DUNGEON_MASTER_GUIDE.chapters.push({
 </tr>
 </table>`,
                     ],
-                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.MAGIC_ITEM_SIZE]
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.MAGIC_ITEM_SIZE, ATTRIBUTE.WIZARD_ELVEN_CHAIN]
                 }
             ],
         },

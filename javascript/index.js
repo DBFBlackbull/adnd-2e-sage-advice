@@ -25,6 +25,7 @@ const SYNONYMS = [
     ['tome of magic', 'tom'],
     ['l&l', 'legends & lore'],
     ['chainmail', 'chain mail'],
+    ['elven chainmail', 'elven chain mail'],
     ['morningstar', 'morning star'],
     ['smokepowder', 'smoke powder'],
     ['longbow', 'long bow'],
