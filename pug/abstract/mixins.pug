@@ -15,7 +15,7 @@ mixin book(book)
         each chapter, _ in book.chapters
                 each section, _ in chapter.sections
                     div(class="content")
-                        h2 Chapter: #{chapter.number} #{chapter.heading} — #{section.heading}
+                        h2 #{chapter.name}: #{chapter.number} #{chapter.heading} — #{section.heading}
                         if section.foreword
                             h3 !{formatInput(section.foreword)}
                         if section.entries
@@ -27,7 +27,8 @@ mixin book(book)
 
 mixin entries(book, chapter, section, heading)
     each entry, index in section.entries
-        - id = `${book.id}-${chapter.number}-${section.id}-${index+1}`.replaceAll(/:/g,'-')
+        - id = `${book.id}-${chapter.name}${chapter.number}-${section.id}-${index+1}`.toLowerCase().replaceAll(/:/g,'-')
+        - if (id.includes('undefined')) {console.log(id)}
         p(id=id)
             span(class="title") #{book.title} (#{book.publication_month} #{book.publication_year}) #{heading}, p. #{entry.page_number}
             +buttons(id)

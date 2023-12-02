@@ -11,6 +11,7 @@ const DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS = {
     chapters: [],
 };
 DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
+    name: 'Chapter',
     number: '3',
     heading: 'Spells and Magical Items',
     sections: [
@@ -1050,6 +1051,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
     ],
 });
 DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
+    name: 'Chapter',
     number: '4',
     heading: 'Creating Magical Items',
     sections: [

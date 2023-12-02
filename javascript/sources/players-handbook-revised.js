@@ -11,6 +11,7 @@ const PLAYERS_HANDBOOK = {
     chapters: [],
 };
 PLAYERS_HANDBOOK.chapters.push({
+    name: 'Chapter',
     number: '1',
     heading: 'Ability Scores',
     sections: [
@@ -43,6 +44,7 @@ PLAYERS_HANDBOOK.chapters.push({
     ]
 });
 PLAYERS_HANDBOOK.chapters.push({
+    name: 'Chapter',
     number: '3',
     heading: 'Player Character Classes',
     sections: [

@@ -11,6 +11,7 @@ const PLAYERS_HANDBOOK = {
     chapters: [],
 };
 PLAYERS_HANDBOOK.chapters.push({
+    name: 'Chapter',
     number: '3',
     heading: 'Player Character Classes',
     sections: [

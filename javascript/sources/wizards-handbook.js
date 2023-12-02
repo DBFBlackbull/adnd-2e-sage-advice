@@ -11,6 +11,7 @@ const THE_COMPLETE_WIZARDS_HANDBOOK = {
     chapters: [],
 };
 THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
+    name: 'Chapter',
     number: '7',
     heading: 'Advanced Procedures',
     sections: [

@@ -11,10 +11,12 @@ const DUNGEON_MASTER_GUIDE = {
     chapters: [],
 };
 DUNGEON_MASTER_GUIDE.chapters.push({
+    name: 'Chapter',
     number: '13',
     heading: 'Vision and Light',
     sections: [
         {
+            id: 'darkness',
             heading: 'Darkness',
             entries: [
                 {
@@ -105,6 +107,66 @@ DUNGEON_MASTER_GUIDE.chapters.push({
             ]
         }
     ],
-})
+});
+DUNGEON_MASTER_GUIDE.chapters.push({
+    name: 'Appendix',
+    number: '3',
+    heading: 'Magical Item Descriptions',
+    sections: [
+        {
+            id: 'armor-shields',
+            heading: 'Armor and Shields',
+            entries: [
+                {
+                    page_number: '240',
+                    entry: [
+                        `In this section, you will find descriptions of some very special kinds of armor and shields. Before adding these to your campaign, however, be sure you are fully familiar with the armor gradation system:`,
+                        `For each +1 bonus to armor, regardless of the type of armor, the wearer's Armor Class moves downward (toward AC 2 ... to 1 ... to 0, –1, –2, and so on). A normal shield improves the armor class by one. A magical shield improves Armor Class like magical armor—toward –1, –2, etc. Note, however, that Armor Class can never be improved beyond –10.`,
+                        `Thus, chain mail +1 is like ordinary chain mail (AC 5), but one category better (AC 4). A shield +1 is equal to Armor Class 8—two places better than no armor (+1 for bearing a shield, +1 for the magical bonus of the shield).`,
+                        `When adding magical armor to the game, be aware of sizing problems: 65% of all armor (except elven chain mail) is man-sized, and 20% is elf-sized, 10% is dwarf-sized, and but 5% gnome- or halfling-sized. (Elven chain mail sizing is determined by the table found below.)`,
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.MAGIC_ITEM_SIZE],
+                },
+                {
+                    page_number: '241',
+                    entry: [
+                        `**Elven Chain Mail:** This is magical armor so fine and light that it can be worn under normal clothing without revealing its presence. Its lightness and flexibility allow even bards and thieves to use it with few restrictions (see Chapter 3 in the PHB). Elven fighter/mages use it without restriction. However, it is rarely sized to fit anyone other than an elf or a half-elf. Roll percentile dice and consult the following table to ascertain what size character elven chain mail will fit:`,
+                        `
+<table>
+<tr>
+    <td colspan="2">***DMG*** p. 241 about Elven Chain Mail:</td>
+</tr>
+<tr>
+    <td style="text-align: center;"><strong>D100 Roll</strong></td>
+    <td><strong>Size of Elven Chain Mail</strong></td>
+</tr>
+<tr>
+    <td style="text-align: center;">01–10</td>
+    <td>gnome/halfling (hairfoot)</td>
+</tr>
+<tr>
+    <td style="text-align: center;">11–15</td>
+    <td>dwarf/halfling (Stout or Tallfellow)</td>
+</tr>
+<tr>
+    <td style="text-align: center;">16–80</td>
+    <td>gnome/halfling (hairfoot)</td>
+</tr>
+<tr>
+    <td style="text-align: center;">81–95</td>
+    <td>man-sized, normal (up to 6 feet, 200 lbs.)</td>
+</tr>
+<tr>
+    <td style="text-align: center;">96–100</td>
+    <td>man-sized, large (up to 6½ feet, 250 lbs.)</td>
+</tr>
+</table>`,
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.MAGIC_ITEM_SIZE]
+                }
+            ],
+        },
+    ],
+});
 
 module.exports = DUNGEON_MASTER_GUIDE;

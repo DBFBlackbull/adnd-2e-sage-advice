@@ -13978,41 +13978,6 @@ DRAGON_MAGAZINES.push({
                 `Some magical items do change size to fit the wearer. ***Gauntlets of ogre power***, for example, grow or shrink to fit halfling- to human-sized hands. All magical boots expand or shrink to fit wearers from halfling to giant size (see the notes on categories of miscellaneous magical items in the ***DMG***). Beyond these specific examples, there is no general rule for item sizes. Your DM can decide that on his or her own. In campaigns where magic is rare, its best to allow considerable latitude in this matter; otherwise, the PCs won't be able to use what little magic they find. In some cases, an item will fit a large range of creatures without altering its size at all. For example, a ring that a gnome or halfling character might have to wear on her thumb might fit on an ogre's pinkie.`
             ],
             comment: [
-                `***DMG*** p. 240 about magical armor in general:`,
-                `65% of all armor (except elven chain mail) is man-sized.`,
-                `20% is elf-sized.`,
-                `10% is dwarf-sized`,
-                `5% gnome- or halfling-sized.`,
-                `
-<table>
-<tr>
-    <td colspan="2">***DMG*** p. 241 about Elven Chain Mail:</td>
-</tr>
-<tr>
-    <td style="text-align: center;"><strong>D100 Roll</strong></td>
-    <td><strong>Size of Elven Chain Mail</strong></td>
-</tr>
-<tr>
-    <td style="text-align: center;">01–10</td>
-    <td>gnome/halfling (hairfoot)</td>
-</tr>
-<tr>
-    <td style="text-align: center;">11–15</td>
-    <td>dwarf/halfling (Stout or Tallfellow)</td>
-</tr>
-<tr>
-    <td style="text-align: center;">16–80</td>
-    <td>gnome/halfling (hairfoot)</td>
-</tr>
-<tr>
-    <td style="text-align: center;">81–95</td>
-    <td>man-sized, normal (up to 6 feet, 200 lbs.)</td>
-</tr>
-<tr>
-    <td style="text-align: center;">96–100</td>
-    <td>man-sized, large (up to 6½ feet, 250 lbs.)</td>
-</tr>
-</table>`,
                 `***The Complete Fighter's Handbook*** p. 109 **Armor Fitting**:`,
                 `Armor made for one race rarely fits another: it may be too big, too small, or proportioned too strangely.`,
                 `Below is a chart. The column to the left shows the type of demihuman trying to wear the armor. The rows along the top show what species the armor was made for. The percentage chances shown are the chances that the person can wear the armor, and the "+" and "–" symbols show whether the armor is more likely to be too big or too small for the wearer. (If there is no such symbol, it means that odds are even, 50% that it will be too big, 50% that it will be too small.) "Too large" could mean that it is so baggy or empty that it hinders the wearer and does not protect him well enough, or that it is so long on him that it interferes with his walking. "Too small" could mean that it is not broad enough to accommodate the wearer's chest, or that it is so short that it looks ridiculous and docs not sufficiently protect the wearer.`,
