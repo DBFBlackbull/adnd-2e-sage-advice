@@ -12,6 +12,7 @@ const phbr = require(path.join(jsFolder, 'sources','players-handbook-revised.js'
 const dmg = require(path.join(jsFolder, 'sources','dungeon-master-guide.js'));
 const age = require(path.join(jsFolder, 'sources','arms-and-equipment-guide.js'));
 const wizardsHandbook = require(path.join(jsFolder, 'sources','wizards-handbook.js'));
+const combatAndTactics = require(path.join(jsFolder, 'sources','combat-and-tactics.js'));
 const dragonMagazines = require(path.join(jsFolder, 'sources','sage-advice.js'));
 const highLevelCampaigns = require(path.join(jsFolder, 'sources','high-level-campaigns.js'));
 
@@ -24,6 +25,7 @@ let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {
     phbr: phbr,
     dmg: dmg,
     age: age,
+    combatAndTactics: combatAndTactics,
     dragonMagazines: dragonMagazines,
     highLevelCampaigns: highLevelCampaigns,
     wizardsHandbook: wizardsHandbook,
