@@ -15535,9 +15535,9 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '22',
-            question: `If memory serves, halflings can be luckbringers (specialty priests of Tymora). That's nice, but the ***Faiths & Avatars*** book fails to mention the level limits of these demihuman specialty priests. Since halflings can make it to 13th level as mystics, but only something like 8th or 9th level as clerics, the answer isn't intuitively obvious. Unfortunately, this oversight exists al the way through both ***Faiths & Avatars***, as well as ***Powers & Pantheons***. Every time a demihuman is eligible for a specialty priesthood, no level limit is mentioned.`,
+            question: `If memory serves, halflings can be luckbringers (specialty priests of Tymora). That's nice, but the ***Faiths & Avatars*** book fails to mention the level limits of these demihuman specialty priests. Since halflings can make it to 13th level as mystics, but only something like 8th or 9th level as clerics, the answer isn't intuitively obvious. Unfortunately, this oversight exists all the way through both ***Faiths & Avatars***, as well as ***Powers & Pantheons***. Every time a demihuman is eligible for a specialty priesthood, no level limit is mentioned.`,
             answer: [
-                `Al demihuman specialty priests in the FORGOTTEN REALMS® setting gain experience normally until they reach a level equal to their race's normal advancement limit for a cleric, plus four levels. Thereafter, the character can keep advancing but requires triple the normal experience requirement. See Specialty Priest Level Limits at the bottom of this page for the information as it appears in the upcoming ***Demihuman Deities*** book (courtesy of TSR's Julia Martin).`,
+                `All demihuman specialty priests in the FORGOTTEN REALMS® setting gain experience normally until they reach a level equal to their race's normal advancement limit for a cleric, plus four levels. Thereafter, the character can keep advancing but requires triple the normal experience requirement. See Specialty Priest Level Limits at the bottom of this page for the information as it appears in the upcoming ***Demihuman Deities*** book (courtesy of TSR's Julia Martin).`,
                 `
 <table style="text-align: center;">
 <tr>
@@ -15886,7 +15886,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A ***fireball*** produces almost no pressure, so there's no significant shock or blast. The effect certainly depletes oxygen, but the area would have to be very small—and airtight—for the effect to be at all noticeable. In any case, a ***fireball*** doesn't create a vacuum, nor does a ***fireball*** produce enough light to cause a daze effect—if it did, these effects would be listed in the spell description. In any case, fire immunity would also grant immunity to such special effects. (A knockdown still could happen, though.)`,
                 `Note that a 14th-level mage doesn't cast a "big" fireball. A ***fireball's*** size does not vary with the caster level. It also never inflicts more than 10d6 hp damage, no matter what the caster's level.`,
-                `Your example illustrates the perils of quoting rules during play. It spoils the mood and invites arguments. The next time something like that happens, don't say: "Succubi are immune to fire!" Just say the ***fireball*** goes of with a whoosh, leaving behind a slightly singed, slightly amused (or maybe slightly miffed) succubus. (Assuming, of course, that the character in question even knows he's facing a succubus; succubi don't exactly wear name tags that say "I'm a succubus, and I'm immune to fire.") Let the player figure out what's going on al by himself.`
+                `Your example illustrates the perils of quoting rules during play. It spoils the mood and invites arguments. The next time something like that happens, don't say: "Succubi are immune to fire!" Just say the ***fireball*** goes of with a whoosh, leaving behind a slightly singed, slightly amused (or maybe slightly miffed) succubus. (Assuming, of course, that the character in question even knows he's facing a succubus; succubi don't exactly wear name tags that say "I'm a succubus, and I'm immune to fire.") Let the player figure out what's going on all by himself.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
@@ -16647,7 +16647,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '30',
-            question: `Does a spell's reverse effect act exactly as the printed spell unless stated specifically in the spell description? For example, the reverse of ***detect lie*** has a longer duration than the standard spell does. My question is about ***slay living***; elves cannot be raised with a ***raise dead*** spell. Since there is no further text discussing those that are affected, are elves immune to ***slay living***? I feel that they should be. Unlike ***detect lie***, there is no further text that states a different area of effect, range, duration, or creatures affected. If elves are affected by ***slay living***, are al the limits off for the reverses of such spells as ***animal growth***? That is, can I use the reverse to shrink humans?`,
+            question: `Does a spell's reverse effect act exactly as the printed spell unless stated specifically in the spell description? For example, the reverse of ***detect lie*** has a longer duration than the standard spell does. My question is about ***slay living***; elves cannot be raised with a ***raise dead*** spell. Since there is no further text discussing those that are affected, are elves immune to ***slay living***? I feel that they should be. Unlike ***detect lie***, there is no further text that states a different area of effect, range, duration, or creatures affected. If elves are affected by ***slay living***, are all the limits off for the reverses of such spells as ***animal growth***? That is, can I use the reverse to shrink humans?`,
             answer: [
                 `That's just about the slickest bit of rules lawyering I've encountered ni a long time. As ti happens, ***slay living*** can kill any living creature—including elves—unless it has immunity to death magic (which elves do not have). This is a case in which the reverse has a much broader application than the normal spell, as ***raise dead*** can only restore life to "persons," but not persons who happen to be elves.`,
                 `In general, however, your point is correct. (***Animal growth*** and its reverse affect only animals.)`
@@ -16816,7 +16816,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The area of effect for the ***swordward*** spell is 5 feet square (25 square feet) to 60 feet square (3,600 square feet). If you take a look at the ***blade barrier*** spell description, you'll discover a similar error.`,
                 `An *enlarged* and *hasted* Paladin sure could gain a lot more than 200 hit points from this spell, particularly if the Paladin was high level.`,
-                `Al the damage an affected creature inflicts is returned to the creature as bonus hit points. The total can exceed the creature's normal maximum. Though the spell description is not clear on the point, I heartily recommend that these bonus hit points last only so long as the affected creatures remain in the spell's area of effect— they go away immediately when the spell ends or the creatures leave the area of effect. If a creature leaves the area of effect and enters again, the bonus hit points don't return, but the creature can begin accumulating them again.`,
+                `All the damage an affected creature inflicts is returned to the creature as bonus hit points. The total can exceed the creature's normal maximum. Though the spell description is not clear on the point, I heartily recommend that these bonus hit points last only so long as the affected creatures remain in the spell's area of effect— they go away immediately when the spell ends or the creatures leave the area of effect. If a creature leaves the area of effect and enters again, the bonus hit points don't return, but the creature can begin accumulating them again.`,
                 `While the creature has any bonus hit points, however, any damage it suffers is subtracted from the bonus hit points first.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
@@ -17376,7 +17376,7 @@ Saving Throw: See text<br>`,
                 `A *rune of power* can be set to avoid discharging when creatures of certain races, alignments, faiths, and sizes try to pass it. It cannot be set to avoid specific levels, hit dice, or classes of creatures.`,
                 `A *rune of power* cannot be placed in the same area with another *rune*, a *glyph of warding*, or a *symbol*. The second warding spell placed in such an area fails.`,
                 `The most widely known *runes of power* are:`,
-                `***Alhalbrin:*** This *rune* melts metal. Once triggered, it glows for 3 rounds. Al metal within 30 feet of the glowing *rune* becomes hot, inflicting 1d4 points of damage each round upon any creature wearing or touching it. Each metal item must make a successful saving throw vs. magical fire at a-3 penalty each round it is affected or melt. Melting metal inflicts 4d6 points of damage on any creature touching or wearing it.`,
+                `***Alhalbrin:*** This *rune* melts metal. Once triggered, it glows for 3 rounds. All metal within 30 feet of the glowing *rune* becomes hot, inflicting 1d4 points of damage each round upon any creature wearing or touching it. Each metal item must make a successful saving throw vs. magical fire at a-3 penalty each round it is affected or melt. Melting metal inflicts 4d6 points of damage on any creature touching or wearing it.`,
                 `***Faerindyl:*** This *rune* causes a 10'-diameter sphere of flame to shoot from the protected surface and roll over the creature who triggered it. The sphere travels in a straight line at a movement rate of 18 for 1 turn. If the sphere collides with an object larger than it is, it bursts, filling a 20'-radius area with flame. (It always bursts when its duration expires.) The sphere simply rolls over smaller objects. If an object is too large to roll over and too small to burst the sphere, the sphere rolls around it (50% chance to go left or right). The sphere must roll along a surface. If it rolls over an opening in the floor, it falls and bursts if the drop is more than 10 feet. It can roll up or down stairs or ramps.`,
                 `Objects the sphere touches must make a saving throw vs. magical fire; creatures the sphere touches suffer 3d6 points of fire damage (no saving throw). When the sphere bursts, all creatures within the 20'-radius area suffer 3d6 points of fire damage (save vs. spell for half).`,
                 `***Sabras:*** This *rune* creates an effect similar to a *blade barrier* 10 feet thick and as long and wide as the surface the *rune* protects (or the opening the *rune* surrounds). The barrier lasts one round but inflicts 4d6 points of damage to creatures within the area (save vs. spell for half). A Priest must be at least 13th level to cast this *rune*.`,
@@ -18092,7 +18092,7 @@ DRAGON_MAGAZINES.push({
             page_number: '22',
             question: `The monster description for the dracolich says that attacks against the creature receive no attack or damage bonuses. Which bonuses don't apply? What about magical items that are specifically made to affect undead? Which of the following combat bonuses would still apply when fighting a dracolich? Strength, weapon specialization, elven bonuses for swords and bows, a magical weapon, a ***flametongue*** sword, a ***bless*** spell, a ***prayer*** spell, ***oil of sharpness***, an ***aid*** spell, a ***helm of brilliance***, a ***sword of dragon slaying***.`,
             answer: [
-                `No attack or damage bonuses of any kind apply against a dracolich, including al the bonuses you have listed.`
+                `No attack or damage bonuses of any kind apply against a dracolich, including all the bonuses you have listed.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
@@ -18809,7 +18809,7 @@ DRAGON_MAGAZINES.push({
             page_number: '22',
             question: `Does one receive a saving throw if a cleric casts a ***heat metal*** spell on one's nonmagical armor or weapons? If the wearer has magic resistance, does it apply to a ***heat metal*** spell?`,
             answer: [
-                `A creature wearing or carrying nonmagical metal receives no saving throw against a***heat metal*** spell. The target's magic resistance, if any, does apply if the spell is cast on metal the creature is wearing or carrying. Magic resistance does not apply if a***heat metal*** spell is cast on unattended items that the creature subsequently picks up.`
+                `A creature wearing or carrying nonmagical metal receives no saving throw against a ***heat metal*** spell. The target's magic resistance, if any, does apply if the spell is cast on metal the creature is wearing or carrying. Magic resistance does not apply if a***heat metal*** spell is cast on unattended items that the creature subsequently picks up.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
@@ -19681,7 +19681,7 @@ DRAGON_MAGAZINES.push({
             page_number: '112',
             question: `The ***MONSTROUS MANUAL*** book says a dragon cannot execute any other attacks while using a plummet or pin attack. Does that mean that the dragon, once the pin is executed, can do nothing while its bulk pins its hapless foes, or can it just not claw, tail slap, or kick? I would think it reasonable that biting or breath weapon attacks or spells would be feasible while the dragon sits on its foes.`,
             answer: [
-                `It takes al the dragon's efforts to keep opponents pinned. The dragon actually has to wiggle around and use its limbs to keep sweeping foes under its body; it does not just lie on top of them.`
+                `It takes all the dragon's efforts to keep opponents pinned. The dragon actually has to wiggle around and use its limbs to keep sweeping foes under its body; it does not just lie on top of them.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
