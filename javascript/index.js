@@ -300,3 +300,22 @@ function copyRedditText(id) {
     // Copy the text inside the text field
     navigator.clipboard.writeText(formattedText);
 }
+
+function showEntry(id) {
+    document.getElementById(`${id}-hidden`).remove();
+    document.getElementById(id).classList.remove('hidden');
+}
+
+function createHiddenElement(id) {
+    let div = document.createElement('div');
+    div.id = `${id}-hidden`;
+    div.innerText = `✕ ${id}`;
+    div.onclick = () => showEntry(id);
+
+    return div
+}
+
+function hideEntry(id) {
+    document.getElementById(id).classList.add('hidden');
+    document.getElementById('sidebar-right').appendChild(createHiddenElement(id));
+}

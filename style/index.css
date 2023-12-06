@@ -1,7 +1,7 @@
 body {
     margin: 0;
 }
-.sidebar {
+.sidebar-left {
     height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 200px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
@@ -11,13 +11,29 @@ body {
     overflow-x: hidden; /* Disable horizontal scroll */
     background: lightgray;
 }
+.sidebar-right {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    background: lightgray;
+}
 
-.sidebar div {
+.sidebar-left div,
+.sidebar-right div {
     padding: 8px 0;
+}
+.sidebar-right div:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .main{
     margin-left: 200px; /* Same as the width of the sidebar */
+    margin-right: 200px; /* Same as the width of the sidebar */
     padding: 0 40px;
 }
 

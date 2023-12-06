@@ -1,0 +1,19 @@
+mixin filterFacets(facets, title, htmlClass, checked)
+    h2 #{title}
+    each facet, _ in facets
+        div
+            input(type="checkbox" class=htmlClass value=facet.id onchange="search()" checked=checked)
+            | !{facet.title ? facet.title : facet.id}
+
+// Sidebar
+div(id="sidebar-left" class="sidebar-left")
+    h2 Visual settings
+    div
+        input(id="hide-foreword" type="checkbox" onchange="hideForeword()")
+        | Hide foreword and epilogue
+    div
+        input(id="hide-comments" type="checkbox" onchange="hideComments()")
+        | Hide editor's comments
+    +filterFacets(sources, "Sources", "source", true)
+    +filterFacets(gameSystems, "Game System", "game-system")
+    +filterFacets(attributes, "Attributes", "attribute")

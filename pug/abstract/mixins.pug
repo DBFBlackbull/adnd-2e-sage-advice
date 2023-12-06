@@ -7,6 +7,8 @@ mixin buttons(id)
         image(src="../img/icons8-reddit-16.png")
     | &ensp;
     a(href=anchorLink(id)) 🔗
+    | &emsp;
+    button(onclick=`hideEntry('${id}')` title="Hide entry") ✕
     br
 
 mixin book(book)
