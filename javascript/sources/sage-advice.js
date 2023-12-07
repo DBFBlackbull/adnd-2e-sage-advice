@@ -2538,7 +2538,7 @@ DRAGON_MAGAZINES.push({
                 `Once completed, a ***simulacrum*** cannot be ***dispelled*** or rendered nonfunctional by a ***dispel magic*** spell. ***Anti-magic shells*** keep ***simulacrums*** and other magically created creatures at bay (see the ***PHB***, page 173), but ***protection from evil*** in any form does not. A ***Mordenkainen's disjunction*** spell can destroy ***simulacrums*** just as it can destroy magical items; the creature's chance to resist the ***disjunction*** is based on its creator's level (or on level 14, if the creator's level is unknown).`,
                 `***Simulacrums*** usually cannot be detected by nonmagical means, since each one is a functioning replica of some creature; however, the replica's degree of accuracy is variable (see the ***PHB***, page 186), and the DM might give players subtle clues as to the creature's actual nature. Very poor ***simulacrums*** (having less than 55% of the original's hit points and knowledge) probably shy away from flame or intense heat, and they might speak in monotones. Characters who are quite familiar with the original creature should have no problem finding gaps in the ***simulacrum's*** knowledge, as even the best ***simulacrum*** has only 65% of the copied creature's knowledge and personality, but all such clues to the creature's true nature should be provided through role-playing. For example, a ***simulacrum*** of a character might lack the original's zest for apple cider, lack an unusual nonweapon proficiency, and lack the original's distaste for undercooked meat. Only very perceptive players should be able to detect a ***simulacrum*** in this manner.`,
             ],
-            attributes: [GAME_SYSTEM.FIRST_EDITION,GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.DISPEL_MAGIC],
+            attributes: [GAME_SYSTEM.FIRST_EDITION,GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.DISPEL_MAGIC,ATTRIBUTE.CHARM],
         },
         {
             page_number: '24',
@@ -3621,7 +3621,7 @@ DRAGON_MAGAZINES.push({
                 `Gamesmanship such as you have described is fine in small doses; however, the DM must intervene when rules-bending threatens to send the campaign out of control. What should you do? Get creative.`,
                 `A shambling mound gains 1 HD and grows 1' with every lightning attack. Ever hear of growing pains? Anything that causes pain can be construed as a hostile act (the wizard in your example hardly has the shambler's best interests in mind), and attacks on the subject of a ***charm*** by the caster break the effect. Or, assume that the growth effect is only temporary—perhaps the shambler can maintain the extra growth for only a few turns or hours. Afterward, the shambler might shrink or the new growth might just die off. If you're feeling especially cruel, you might rule that once the shambler reaches 16 dice, it splits off and forms two 8-HD shamblers. Of course, the new shamblers wouldn't be ***charmed***. Note that unless the wizard in your example is using the ***charm plants*** spell, communication with the ***charmed*** shambler isn't possible without a ***speak with plants*** spell.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.CHARM],
         },
         {
             page_number: '56',
@@ -4485,7 +4485,7 @@ DRAGON_MAGAZINES.push({
                 `The intent behind this ability clearly is to make the druid immune to the innate ***charm*** abilities possessed by fantastic creatures who live permanently in the forest. This keeps the druids status as master and protector of the forest from being undermined by capricious ***charm*** attempts from sylvan creatures who can't be counted on to use their abilities with common sense. The druid gains this ability because he taps into the same base of power that grants sylvan creatures their ***charm*** abilities. The immunity does not protect the druid from spells such as ***charm person*** or ***charm person or mammal***, even when cast by other druids or woodland creatures such as green dragons; their power comes from a different source.`,
                 `A woodland creature is any creature normally associated with a sylvan setting, such as a dryad, hamadryad, or nymph. When in doubt, check the creature's "Climate/Terrain" heading in the ***Monstrous Compendium***. Creatures that typically live in nonforested terrain, such as vampires, can ***charm*** druids normally.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS,ATTRIBUTE.CHARM],
         },
         {
             page_number: '77',
@@ -8910,14 +8910,14 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '78-79',
-            question: `Because there is a second-level priest spell ***detect charm***, I think that a ***detect magic*** spell, which is first level for wizards and priests, cannot detect spells such as charm person. Am I right?`,
+            question: `Because there is a second-level priest spell ***detect charm***, I think that a ***detect magic*** spell, which is first level for wizards and priests, cannot detect spells such as ***charm person***. Am I right?`,
             answer: [
                 `I don't know. If you're the DM, you're right.`,
                 `On the other hand, ***detect magic*** reveals magical emanations within the area of effect. Now, I don't find anything in the ***charm person***, ***charm person or mammal***, ***suggestion***, ***mass charm***, ***fire charm***, or ***charm monster*** spell descriptions implying that any of these spells do not produce magical emanations just like any other spell does.`,
                 `Let's pause for a moment, however, and examine what ***detect magic*** can and cannot do. ***Detect magic*** can detect magical emanations from a charmed creature. If a priest casts the spell, all it reveals is the approximate strength magic, weak to overwhelming; the priest who cast the spell learns nothing else. If a wizard casts the ***detect magic*** spell, there is a 10% chance per caster level of identifying the exact type of magic; in this case, Enchantment/Charm magic, not ***charm person*** or any other specific effect. Note that this kind of accuracy is not always possible. The percentile roll to determine the type of magic can fail and the DM can rule that there are so many conflicting types of magic present that no one of them can be singled out. This might very well be the case if the charmed character also is carrying several magical items, has consumed a potion, and has also has received some other type of spell.`,
                 `***Detect charm*** exists as a separate spell for two reasons. First, it allows priests to identify magical charms when they find them; something that their version of ***detect magic*** cannot do. Second, it allows a magical charm to be identified exactly, right down to the specific type—it can distinguish a ***charm person*** effect from a ***rod of beguiling*** effect even when there are several different types of magic affecting the creature being examined; something that not even the wizard's version of ***detect magic*** can do. Note, however, that if the creature being examined has been subjected to several different charm effects all at once not even ***detect charm*** can distinguish between them.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.CHARM],
         },
         {
             page_number: '79',
@@ -8987,7 +8987,7 @@ DRAGON_MAGAZINES.push({
                 `A *charmed* creature will do pretty much anything the caster asks it to do, short of obviously suicidal actions and actions completely contrary to the creature's ethos or alignment. For example, no druid is going to set fire to a forest (though a *charmed* druid might be convinced to leave a campfire unattended). If the caster tells the creature to follow, the creature will tag along while the spell lasts. Note that hostile actions on the caster's part merit a new saving throw for the creature, as does too much abuse or interference from the caster's companions.`,
                 `A caster can keep any number of *charmed* creatures under his thumb at once, but there are practical limitations to how many creatures he can control at once; under most conditions, the caster might issues brief commands to four or five *charmed* creatures in a single round. If a *charmed* creature cannot see, hear, and understand the caster, it probably won't heed his commands.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.CHARM],
         },
         {
             page_number: '88',
@@ -9077,7 +9077,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes the bonuses are cumulative. However the dwarf in your example would receive the full +8 only against spells that affect the mind, such as ***charm person***, because the +4 bonus from Wisdom only helps against mental attacks. Also remember that a roll of a 1 on the saving throw die is a failure.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.RACE,ATTRIBUTE.CHARM],
         },
         {
             page_number: '103',
@@ -9510,7 +9510,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes. Most forms of telepathic control, such as Domination, function as magical charms with regard to creatures with special immunities.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.CHARM],
         },
         {
             page_number: '81',
@@ -10592,7 +10592,7 @@ DRAGON_MAGAZINES.push({
                 `The question is an old one, but I received several letters on the topic this month. I would prefer to avoid giving an actual list, because new spells are being added to the game all the time. Elven and half-elven resistance to sleep and charm spells applies to most spells, and spell-like effects that cause the subject to fall asleep or fall under another character's continuing influence. Such effects include: ***charm monster***, ***charm person***, ***charm person or mammal***, ***domination***, ***eyebite*** (charm effect only, the sleep effect works normally on elves and half-elves, as do the fear and sicken effects), ***fire charm***, ***mass charm***, and ***sleep***. Magical devices and creature special attacks that duplicate these spells, such as ***eyes of charming***, the beholder's charm rays, and the vampire's charm gaze also are subject to elven and half-elven resistance. Sleep-inducing breath weapons, such as the brass dragon's sleep gas, are not. Neither are the ***rod of beguiling*** or the ***rod of rulership***; charm effects from a ***staff of commanding*** are.`,
                 `Spells and other effects that merely incapacitate the subjects or that allow only limited control, such as ***hold*** spells, ***hypnosis***, ***suggestion***, ***quest***, and ***geas*** are not subject the eleven or half-eleven resistance. When there is a reasonable doubt, the DM must decide.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.RACE,ATTRIBUTE.ELVEN_RESISTANCE],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.RACE,ATTRIBUTE.ELVEN_RESISTANCE,ATTRIBUTE.CHARM],
         },
         {
             page_number: '78',
@@ -12302,13 +12302,13 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
         {
-            page_number: '944',
+            page_number: '94',
             question: `Is there an initial saving throw against *charm*-type spells? Or is the target automatically charmed? One player "threw a cow" when I told him that the ***charm*** spell his character had cast didn't work.`,
             answer: [
                 `Check the spell's description. I expect you'll find that any ***charm***-type spell has a saving throw of "neg," which means that the recipient is entitled to a saving throw when the spell is cast, and the spell has no effect at all if the saving throw succeeds.`,
                 `In any case, there are two things you don't have to do when adjudicating ***charm*** spells. First, you don't have to say whether the spell worked; you can let the player figure that out on his own. If the target is familiar with spell casters, it might surmise that it has been subjected to a ***charm*** spell attempt and only pretend to be charmed. Second, you don't have to put up with bovine ballistics. Players who can't handle the occasional failure shouldn't be playing the game.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.CHARM],
         },
         {
             page_number: '94',
@@ -13884,7 +13884,7 @@ DRAGON_MAGAZINES.push({
                 `Yeah, its an old question, one the Sage has answered before, but here's a better answer: An elf's resistance applies to spells and spell-like effects that allow continuing control over the recipient. These include ***charm person***, ***charm monster***, ***domination***, ***fire charm***, a vampire's charm gaze, a harpy's song, and many others. An elf's resistance does not apply to effects that allow limited control or impose a disability, such as ***command***, ***hold person***, ***suggestion***, ***quest***, or ***geas***. Nor does an elf's resistance prevent outside influences from usurping control of the body, such as ***magic jar***.`,
                 `Any effect that causes the recipient to fall into an enchanted slumber, such as the ***sleep*** spell or the sleep effect of the ***eyebite*** spell, is subject to elven resistance. If an opponent uses a ***command*** or ***suggestion*** spell to induce an elf to fall asleep, the elf does not gain the benefit of his resistance, but the resulting sleep is not "magical" sleep, and the elf can awaken in response to loud noise, general discomfort, or the like.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.RACE,ATTRIBUTE.ELVEN_RESISTANCE],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.RACE,ATTRIBUTE.ELVEN_RESISTANCE,ATTRIBUTE.CHARM],
         },
         {
             page_number: '18',
@@ -14891,7 +14891,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The target is entitled to a saving throw bonus if the caster or her party damages the target during the round when the spell is cast.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.CHARM],
         },
         {
             page_number: '20',
@@ -15438,7 +15438,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The ***charm monster*** spell affects 2d4 levels or hit dice of creatures, but always at least one creature, regardless of level or hit dice; see the first paragraph of the spell description.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.CHARM],
         },
         {
             page_number: '22',
@@ -16101,7 +16101,7 @@ DRAGON_MAGAZINES.push({
                 `I prefer the following: Assume a ***mirror image*** spell creates a distortion effect similar to that of a ***cloak of displacement***. This would grant the ***mirror image*** user a +2 saving throw adjustment against spells such as ***charm person***, but there would be no roll to see if such a spell would strike an image and be wasted. Note that a ***magic missile*** or any effect that requires an attack roll still might be targeted on an image and wasted.`
             ],
             comment: `The closest we ever get to know if a ***magic missle*** can remove one of the images created by a ***mirror image*** spell.`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.CHARM],
         },
         {
             page_number: '26',
@@ -17704,7 +17704,7 @@ DRAGON_MAGAZINES.push({
                 `If a ***charm person*** caster dies before the spell's effect on a subject wears of, nothing special happens. The spell runs its course and can be detected or dispelled. However, only the caster can exercise control over the subject. Since the caster is dead, the lingering spell has no further effect on the subject, though the subject might feel some regret over the passing of his or her "friend."`
             ],
             comment: `Soft follow up to #215 about and what can be done with ***charm person***`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.CHARM],
         },
         {
             page_number: '23',
@@ -19609,7 +19609,7 @@ DRAGON_MAGAZINES.push({
                 `In any case, a vampire's *charm* power works just like a ***charm person*** spell, except that the subject will gladly allow the vampire to feed on his blood.`,
                 `A vampire's *charm* power is a gaze attack, which requires a direct look at the vampire, not merely seeing the vampire's image in a scrying device.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CHARM],
         },
         {
             page_number: '110',
@@ -19723,8 +19723,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `There is no such spell. Geryon's spell-like power works like a ***rod of beguiling***. There is no saving throw, but magic resistance and elven resistance to charm effects are applicable. Any number of magical effects can negate or block beguiling, including the ***mind blank*** spell. Note that beguiled creatures cannot be compelled to do anything harmful to themselves or that would contradict their alignments.`
             ],
-            comment: `Another on elven magic resistance`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.ELVEN_RESISTANCE],
         },
         {
             page_number: '114',
@@ -19785,7 +19784,7 @@ DRAGON_MAGAZINES.push({
                 `As "Sage Advice" has said before, an elf's or half-elf's resistance applies to effects that make the recipient sleep or charm the recipient. In this case, a "charm" is an effect that establishes some sort of continuing control over the recipient, not just a compulsion; ***charm person*** is a charm effect, ***hold person*** and ***suggestion*** are not.`,
                 `Unlike magic resistance, an elf's or half-elf's resistance can apply to breath weapons and other non spell-like effects.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.RACE,ATTRIBUTE.ELVEN_RESISTANCE],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.RACE,ATTRIBUTE.ELVEN_RESISTANCE,ATTRIBUTE.CHARM],
         },
         {
             page_number: '116',
@@ -20151,7 +20150,7 @@ DRAGON_MAGAZINES.push({
                 `On the other hand, the more ordinary the subject's actions, the less likely the subject is to realize he has been enspelled. For example, if a PC ducks into a shop while running from the town guard and uses ***charm person*** to persuade the merchant not to turn him in, the merchant probably will be none the wiser (particularly if the merchant wasn't too honest to begin with). If the CP then buys something from the merchant for a generous sum, the merchant might well remember the PC fondly.`
             ],
             comment: `Pretty consistent with issue #262`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.CHARM],
         },
         {
             page_number: '117',
@@ -20159,7 +20158,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The *charmed* character's alignment is unchanged, but the power of the *charm* still makes the character regard the *charm* caster as a trusted friend. The *charmed* evil character might be dumbfounded by her actions while under the charm, though (see previous question)`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.CHARM],
         },
     ]
 });

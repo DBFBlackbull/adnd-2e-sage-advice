@@ -955,7 +955,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                             entry: [
                                 `***Rod of Beguiling:*** The beguiling effect has a 20-foot radius. There is no saving throw, though magic resistance applies, as does resistance to mental attacks or control. Racial resistances to charm effects also apply. Affected creatures remain beguiled for the full one-turn duration even if they leave the radius.`
                             ],
-                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.ELVEN_RESISTANCE],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.ELVEN_RESISTANCE,ATTRIBUTE.CHARM],
                         },
                         {
                             page_number: '84',
@@ -972,7 +972,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                             entry: [
                                 `***Rod of Rulership:*** Creatures being ruled need not remain within the rod's 150-foot radius once they have been affected. Most creatures get no saving throw, but magic resistance and resistance to mental attack or control applies. Racial resistances to charm effects also apply.`
                             ],
-                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.ELVEN_RESISTANCE],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.ELVEN_RESISTANCE,ATTRIBUTE.CHARM],
                         },
                         {
                             page_number: '84',
