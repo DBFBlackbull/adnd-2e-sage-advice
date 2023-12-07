@@ -37,6 +37,7 @@ const ATTRIBUTE = {
     DISPEL_MAGIC: {id: 'Dispel Magic'},
     TURN_UNDEAD: {id: 'Turn Undead'},
     INVISIBILITY: {id: 'Invisibility'},
+    CHARM: {id: 'Charm'},
     BLINDNESS: {id: 'Blindness'},
     DEAFNESS: {id: 'Deafness'},
     SILENCE: {id: 'Silence'},

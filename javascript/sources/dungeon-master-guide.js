@@ -12,6 +12,41 @@ const DUNGEON_MASTER_GUIDE = {
 };
 DUNGEON_MASTER_GUIDE.chapters.push({
     name: 'Chapter',
+    number: '9',
+    heading: 'Combat',
+    sections: [
+        {
+            id: 'Special Attacks',
+            heading: 'special-attacks',
+            sections: [
+                {
+                    id: 'charmed-creatures',
+                    heading: 'Attacking with Charmed Creatures',
+                    entries: [
+                        {
+                            page_number: '89-90',
+                            entry: [
+                                `There may be times when charmed creatures, perhaps even party members, will be compelled to fight their companions. When this happens, remember that the creature, NPC, or player character no longer has control over his decisions.`,
+                                `If a charmed player character is compelled to attack his friends, he must do so in an effective manner. Grappling or punching is not acceptable if the character possesses a better method. At the same time, the charmed character need use only those abilities that are obvious to his new (and, one hopes, temporary) master.`,
+                                `Thus, if a charmed fighter with a sword at his side is carrying a *javelin of lightning*, he fights with his sword unless specifically commanded to do otherwise. The master in this case could not command him to use the *javelin of lightning* unless he had some way of knowing the fighter carried one.`,
+                                `Similarly, a wizard's master must know which spells his charmed spellcaster possesses, and which he has memorized. This is most commonly learned simply by asking. However, due to the charmed fellow's befuddled state, there is a 25 percent chance that he will unwittingly cast a spell harmful to himself and his master. Relying on charmed spellcasters can be a very risky business.`,
+                                `<br>**Limits on Charmed Creatures**`,
+                                `A charmed creature has two critical limitations on its actions. First, it cannot carry out commands requiring individual initiative. The master cannot say, "Fight with"our most powerful magical item!" since this requires judgment on the part of the charmed character. Second, the charmed creature won't obey any command that would obviously lead to selfdestruction. Since combat is composed of many different variables, fighting in itself is not clearly self-destructive, even against hopeless-seeming odds.`,
+                                `<br>**Degrees of Charm**`,
+                                `There are two degrees of charm power in the AD&D game, that of monsters and that of characters.`,
+                                `The charm power of monsters, such as vampires, makes verbal communication unnecessary. The charmed creature understands the monster's desires through mental command. A character charmed by this power obeys the commands of his master totally, at least within the limits of his ability and the guidelines above.`,
+                                `The charm power of characters is more limited. The master must have some method of making himself understood to the charmed creature, preferably by speaking the same language. Otherwise, charmed creatures can attempt to follow their master's hand gestures. This can be a useful and entertaining spur to role-playing.`
+                            ],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.CHARM],
+                        },
+                    ],
+                }
+            ],
+        },
+    ],
+});
+DUNGEON_MASTER_GUIDE.chapters.push({
+    name: 'Chapter',
     number: '13',
     heading: 'Vision and Light',
     sections: [
@@ -92,7 +127,7 @@ DUNGEON_MASTER_GUIDE.chapters.push({
                             page_number: '161',
                             entry: [
                                 `Invisible creatures and things are not detectable by normal sight or by infravision. They do not create any significant distortion or haze pattern that can be noted. However, invisible creatures aren't completely undetectable. First, things still cling to them. Flour thrown into the air is useful for this purpose, although it can be easily covered, washed off, or brushed away. Second, they do not leave invisible footprints. Again, flour on the floor is a good way to spot the movement of invisible creatures.`,
-                                `The effects of specific environments are more subtle. Fog and smoke do not reveal invisible creatures. Smoke and fog are filled with swirls and eddies, preventing the creature from being detected. Invisible creatures completely submerged in liquids are also concealed; there is no hollow space or “air bubble'' to reveal the creature's presence. At the surface, an invisible swimmer may be noticed by the observant as an unusual distortion of the waves.`,
+                                `The effects of specific environments are more subtle. Fog and smoke do not reveal invisible creatures. Smoke and fog are filled with swirls and eddies, preventing the creature from being detected. Invisible creatures completely submerged in liquids are also concealed; there is no hollow space or "air bubble" to reveal the creature's presence. At the surface, an invisible swimmer may be noticed by the observant as an unusual distortion of the waves.`,
                                 `Invisible creatures are not automatically silent. An invisible fighter in plate mail still clanks and rattles as he moves, a dead giveaway to most creatures. They still have scent, so creatures with keen noses can smell them. Indeed, blind, or nearly blind, creatures are unaffected by invisibility.`,
                                 `A *detect magic* shows only the presence of something magical without pinpointing it exactly. Thus, it cannot be used as a substitute for a *detect invisible* spell. Furthermore, while an actual light source may be invisible, the light emanating from it is not. This can reveal the location of an invisible character.`,
                                 `When the DM thinks there is minor but sufficient cause for a creature to detect an invisible character, a saving throw vs. spell should be made (secretly if the DM is checking for a player character). A minor cause might be a strange odor, small noise, an object that disappeared when it shouldn't have, or a strange reaction from another person (who has been pushed, kicked, poked, etc., by the invisible character). Such a saving throw should be allowed for each new event. A wolf would get a save when it detected a strange scent, then shortly after when it heard a stick break, and finally a last chance when the character drew his sword from his scabbard. Furthermore, the acuity of the creature's senses and its general intelligence can increase or decrease the frequency of checks, at the DM's discretion.`,
