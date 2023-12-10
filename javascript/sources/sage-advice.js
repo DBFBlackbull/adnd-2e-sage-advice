@@ -17260,7 +17260,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `According to Chapter 7 in the ***Player's Handbook***, the caster must be able to see the target point to cast any spell with a range other than "touch." If the caster is unable to see the target point for any reason, he cannot cast the spell. If the spell has "touch" range, the caster can use the spell against anything he can touch, whether he can see it or not. Although the rules don't specifically say so, it stands to reason that a caster can always use a spell with a range of "0" even if he can't see or touch anything. It also stands to reason that a character can cast any spell with a range of greater than "0" against anything he can touch whether he can see it or not.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.BLINDNESS],
         },
         {
             page_number: '23',
