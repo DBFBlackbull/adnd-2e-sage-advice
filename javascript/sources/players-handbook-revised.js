@@ -164,5 +164,25 @@ PLAYERS_HANDBOOK.chapters.push({
         }
     ]
 });
+PLAYERS_HANDBOOK.chapters.push({
+    name: 'Appendix',
+    number: '6',
+    heading: 'Notes on Spells',
+    sections: [
+        {
+            id: '',
+            heading: '',
+            entries: [
+                {
+                    page_number: '168',
+                    entry: [
+                        `**Range:** This lists the distance from the caster at which the spell effect occurs or begins. A “0” indicates the spell can be used on the caster only, with the effect embodied within or emanating from him. “Touch” means the caster can use the spell on others if he can physically touch them. Unless otherwise specified, all other spells are centered on a point visible to the caster and within the range of the spell. The point can be a creature or object if desired. In general, a spell that affects a limited number of creatures within an area affects those closest to the center first, unless there are other parameters operating (such as level or Hit Dice). Spells can be cast through narrow openings only if both the caster’s vision and the spell energy can be directed simultaneously through the opening. A wizard standing behind an arrow slit can cast through it; sending a fireball through a small peephole he is peering through is another matter.`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.BLINDNESS]
+                }
+            ],
+        }
+    ]
+});
 
 module.exports = PLAYERS_HANDBOOK;
