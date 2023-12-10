@@ -16,8 +16,8 @@ DUNGEON_MASTER_GUIDE.chapters.push({
     heading: 'Combat',
     sections: [
         {
-            id: 'Special Attacks',
-            heading: 'special-attacks',
+            id: 'special-attacks',
+            heading: 'Special Attacks',
             sections: [
                 {
                     id: 'charmed-creatures',
