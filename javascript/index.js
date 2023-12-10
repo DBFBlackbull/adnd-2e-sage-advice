@@ -62,7 +62,8 @@ function hideComments() {
 }
 
 function escapeRegExp(string) {
-    return string.replace(/[.*+?^${}()[\]\\/]/g, '\\$&'); // $& means the whole matched string
+    let replace = string.replace(/[.*+?^${}()[\]\\/]/g, '\\$&');
+    return `(?<!<)${replace}`; // $& means the whole matched string
 }
 
 const SPECIAL_CHARACTERS = '.*+?^${}()[]\\/';
@@ -170,7 +171,28 @@ function search() {
 
                     let contentTexts = paragraph.querySelectorAll('.question,.answer,.entry,.optional');
                     for (let text of contentTexts) {
-                        searchMatch = searchMatch || searchRegexes.every(reg => text.innerText.match(reg));
+                        // Remove old highlights
+                        text.innerHTML = text.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, substring => {
+                            return substring.replace(/(<span class="highlight">|<\/span>)/g, '');
+                        })
+
+                        // Search for match
+                        let subSearchMatch = searchRegexes.every(reg => text.innerText.match(reg));
+                        searchMatch = searchMatch || subSearchMatch;
+
+                        // Add new highlights
+                        if (subSearchMatch) {
+                            searchRegexes.forEach(reg => {
+                                text.innerHTML = text.innerHTML.replace(reg, substring => {
+                                    console.log(substring);
+                                    let closeTag = '';
+                                    switch (substring.charAt(0)) {
+                                        case ' ': closeTag = ' '; break;
+                                    }
+                                    return `${closeTag}<span class="highlight">${substring.slice(closeTag.length)}</span>`
+                                });
+                            });
+                        }
                     }
 
                     if (searchMatch) {

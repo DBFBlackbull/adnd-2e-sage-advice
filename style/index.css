@@ -75,3 +75,7 @@ h3 {
 .sage-advice h3 {
     font-style: italic;
 }
+
+.highlight {
+    background-color: yellow;
+}
