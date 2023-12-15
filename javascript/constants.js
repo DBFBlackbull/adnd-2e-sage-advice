@@ -6,6 +6,7 @@ const SOURCE = {
     COMBAT_AND_TACTICS: {id: "Combat and Tactics", title:"PLAYER'S OPTION: Combat & Tactics"},
     SAGE_ADVICE: {id: "Sage Advice", title: "Dragon Magazine: Sage Advice"},
     HIGH_LEVEL_CAMPAIGNS: {id: "DMGR:High-Level Campaigns", title: "Dungeon Master Option: High-Level Campaign"},
+    WIZARD_SPELL_COMPENDIUM_4: {id: 'WSC 4', title: "Wizard's Spell Compendium Volume Four"}
 }
 
 const GAME_SYSTEM = {

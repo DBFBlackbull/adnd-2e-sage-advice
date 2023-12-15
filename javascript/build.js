@@ -15,6 +15,7 @@ const wizardsHandbook = require(path.join(jsFolder, 'sources','wizards-handbook.
 const combatAndTactics = require(path.join(jsFolder, 'sources','combat-and-tactics.js'));
 const dragonMagazines = require(path.join(jsFolder, 'sources','sage-advice.js'));
 const highLevelCampaigns = require(path.join(jsFolder, 'sources','high-level-campaigns.js'));
+const wsc4 = require(path.join(jsFolder, 'sources','wizards-spell-compendium-volume-4.js'));
 
 let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {
     pretty: true,
@@ -29,5 +30,6 @@ let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {
     dragonMagazines: dragonMagazines,
     highLevelCampaigns: highLevelCampaigns,
     wizardsHandbook: wizardsHandbook,
+    wsc4: wsc4,
 });
 fs.writeFileSync(path.join(htmlFolder,'index.html'), html);
