@@ -257,7 +257,7 @@ function copyRichText(id) {
     if (answerElements.length > 0)
         answer = answerElements[0].innerHTML;
 
-    let strings = [title, question, answer].filter(Boolean);
+    let strings = [title, question, answer].filter(Boolean).map(s => removeHighlight(s));
     console.log(strings);
     let formattedText = strings.join('<br>');
 
@@ -308,7 +308,8 @@ function copyDiscordText(id) {
 
     let strings = getMarkdownStrings(element);
 
-    strings = strings.filter(Boolean); // Remove empty strings and undefined
+    strings = strings.filter(Boolean); // Remove empty strings
+    console.log(strings);
     let formattedText = strings.join('\n> ');
 
     // Copy the text inside the text field
@@ -319,8 +320,7 @@ function copyRedditText(id) {
     let element = document.getElementById(id);
 
     let strings = getMarkdownStrings(element)
-
-    strings = strings.filter(s => s !== undefined); // Only remove undefined
+    console.log(strings);
     let formattedText = strings.join('\n>');
 
     // Copy the text inside the text field
