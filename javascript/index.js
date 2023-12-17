@@ -188,6 +188,7 @@ function search() {
                                     let closeTag = '';
                                     switch (substring.charAt(0)) {
                                         case ' ': closeTag = ' '; break;
+                                        case '>': closeTag = '>'; break;
                                     }
                                     return `${closeTag}<span class="highlight">${substring.slice(closeTag.length)}</span>`
                                 });
