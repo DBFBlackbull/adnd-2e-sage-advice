@@ -140,6 +140,12 @@ function getRegex(nodeList) {
     return new RegExp(`(${strings.join('|')})`, 'g');
 }
 
+function removeHighlight(s) {
+    return s.replace(/<span class="highlight">(.*?)<\/span>/g, substring => {
+        return substring.replace(/(<span class="highlight">|<\/span>)/g, '');
+    });
+}
+
 function search() {
     let searchRegexes = getSearchRegexes();
     let attributeRegexes = getAttributeRegexes();
@@ -172,9 +178,7 @@ function search() {
                     let contentTexts = paragraph.querySelectorAll('.question,.answer,.entry,.optional');
                     for (let text of contentTexts) {
                         // Remove old highlights
-                        text.innerHTML = text.innerHTML.replace(/<span class="highlight">(.*?)<\/span>/g, substring => {
-                            return substring.replace(/(<span class="highlight">|<\/span>)/g, '');
-                        })
+                        text.innerHTML = removeHighlight(text.innerHTML);
 
                         // Search for match
                         let subSearchMatch = searchRegexes.every(reg => text.innerText.match(reg));
@@ -294,8 +298,9 @@ function getMarkdownStrings(element) {
             });
         strings = strings.concat(answers);
     }
+    strings = strings.filter(s => s !== undefined); // Remove undefined
 
-    return strings
+    return strings.map(s => removeHighlight(s));
 }
 
 function copyDiscordText(id) {
@@ -303,8 +308,7 @@ function copyDiscordText(id) {
 
     let strings = getMarkdownStrings(element);
 
-    strings = strings.filter(Boolean);
-    console.log(strings);
+    strings = strings.filter(Boolean); // Remove empty strings and undefined
     let formattedText = strings.join('\n> ');
 
     // Copy the text inside the text field
@@ -316,8 +320,7 @@ function copyRedditText(id) {
 
     let strings = getMarkdownStrings(element)
 
-    strings = strings.filter(s => s !== undefined);
-    console.log(strings);
+    strings = strings.filter(s => s !== undefined); // Only remove undefined
     let formattedText = strings.join('\n>');
 
     // Copy the text inside the text field
