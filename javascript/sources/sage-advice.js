@@ -15857,7 +15857,7 @@ DRAGON_MAGAZINES.push({
             question: `What happens when you cast ***feather fall*** on a flying creature or a propelled object?`,
             answer: [
                 `There's very little effect on a flying creature unless there's wind (such as a ***gust of wind*** spell) to push it around. The spell negates the effects of diving. The creature can still fly downward at its normal rate, but it loses any attack, damage, and movement bonuses it would otherwise gain from diving.`,
-                `A propelled object (such as an arrow) misses its target fi subjected to ***feather fall***.`
+                `A propelled object (such as an arrow) misses its target if subjected to ***feather fall***.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
@@ -18505,7 +18505,7 @@ DRAGON_MAGAZINES.push({
             page_number: '24',
             question: `The ***Combat & Tactics*** rules say that when someone charges an opponent who is guarding, the order of attacks depends on who has the greatest reach, but if they both have equal reach the opponent who won initiative attacks first. The same rules also say the opponent with the largest weapon attacks first if both have the same reach. Which is it: size or initiative?`,
             answer: [
-                `Consider reach first and default to initiative fi both have the same reach.`
+                `Consider reach first and default to initiative if both have the same reach.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
