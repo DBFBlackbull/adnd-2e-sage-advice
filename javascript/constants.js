@@ -3,6 +3,8 @@ const SOURCE = {
     DMG: {id: "DMG", title: "Dungeon Master Guide"},
     AEG: {id: "AEG", title: "Arms and Equipment Guide"},
     WIZARDS_HANDBOOK: {id: "Complete Wizard's Handbook", title:"The Complete Wizard's Handbook"},
+    PSIONICS_HANDBOOK: {id: "Complete Psionics Handbook", title:"The Complete Psionics Handbook"},
+    THE_WILL_AND_THE_WAY: {id: "The Will and the Way", title:"The Will and the Way"},
     COMBAT_AND_TACTICS: {id: "Combat and Tactics", title:"PLAYER'S OPTION: Combat & Tactics"},
     SAGE_ADVICE: {id: "Sage Advice", title: "Dragon Magazine: Sage Advice"},
     HIGH_LEVEL_CAMPAIGNS: {id: "DMGR:High-Level Campaigns", title: "Dungeon Master Option: High-Level Campaign"},
@@ -16,9 +18,10 @@ const GAME_SYSTEM = {
 
 const ATTRIBUTE = {
     SPELL: {id: 'Spell'},
+    PSIONICS: {id: 'Psionics', title: 'Psionics (incomplete)'},
     CLASS: {id: 'Class'},
-    // RACE: {id: 'Race'},
-    // WEAPON: {id: 'Weapon'},
+    RACE: {id: 'Race', title: 'Race (incomplete)'},
+    WEAPON: {id: 'Weapon', title:'Weapon (incomplete)'},
     DUAL_CLASS_IN_GROUP: {id: 'Dual-class within group', title: 'Dual-class in the same group'},
 
     ELVEN_RESISTANCE: {id: "Elven resistance", title: "Elven resistance to Sleep and Charm"},
@@ -39,7 +42,7 @@ const ATTRIBUTE = {
     TURN_UNDEAD: {id: 'Turn Undead'},
     INVISIBILITY: {id: 'Invisibility'},
     CHARM: {id: 'Charm'},
-    BLINDNESS: {id: 'Blindness'},
+    BLINDNESS: {id: 'Blindness', title: 'Blindness/Darkness'},
     DEAFNESS: {id: 'Deafness'},
     SILENCE: {id: 'Silence'},
     STONESKIN: {id: "Stoneskin"},

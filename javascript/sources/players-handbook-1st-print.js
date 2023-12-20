@@ -6,7 +6,7 @@ const PLAYERS_HANDBOOK = {
     publication_print: 'First printing',
     title: "Player's Handbook",
     shortTitle: 'PHB',
-    id: 'phb-revised',
+    id: 'phb-1st-print',
     sourceAttribute: SOURCE.PHB,
     chapters: [],
 };
