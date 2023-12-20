@@ -214,7 +214,6 @@ function search() {
                         paragraph.classList.remove('hidden');
                     } else {
                         paragraph.classList.add('hidden');
-                        hiddenContentCounter++;
                     }
                 }
             }
