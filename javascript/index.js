@@ -345,18 +345,21 @@ function showAll() {
     for (let entry of hiddenEntries) {
         entry.click()
     }
+    search();
 }
 
 function showEntry(id) {
     document.getElementById(`${id}-hidden`).remove();
     document.getElementById(id).classList.remove('hidden');
-    search();
+    updateVisibilityFromParagraph(id);
+    updateResultCount();
 }
 
 function hideEntry(id) {
     document.getElementById(id).classList.add('hidden');
     document.getElementById('sidebar-right').appendChild(createHiddenElement(id));
-    search();
+    updateVisibilityFromParagraph(id);
+    updateResultCount();
 }
 
 function createHiddenElement(id) {
@@ -367,4 +370,25 @@ function createHiddenElement(id) {
     div.onclick = () => showEntry(id);
 
     return div
+}
+
+function updateVisibilityFromParagraph(id) {
+    let paragraph = document.getElementById(id);
+    let content = paragraph.closest('.content');
+    if (content) {
+        if (content.querySelectorAll('p').length === content.querySelectorAll('p.hidden').length) {
+            content.classList.add('hidden');
+        } else {
+            content.classList.remove('hidden');
+        }
+
+        let wrapper = content.closest('.wrapper');
+        if (wrapper) {
+            if (wrapper.querySelectorAll('p').length === wrapper.querySelectorAll('p.hidden').length) {
+                wrapper.classList.add('hidden');
+            } else {
+                wrapper.classList.remove('hidden');
+            }
+        }
+    }
 }
