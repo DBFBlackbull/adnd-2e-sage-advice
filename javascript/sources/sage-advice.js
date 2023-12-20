@@ -18978,7 +18978,7 @@ DRAGON_MAGAZINES.push({
             page_number: '100',
             question: `I've noticed that the familiars listed in the ***Player's Handbook*** have different statistics from those listed for similar animals in the ***MONSTROUS MANUAL***™ tome. For example, cat familiars have Armor Class 7 and Intelligence scores of only 2 or 3. In the ***MONSTROUS MANUAL***™ tome, however, domestic cats have Armor Class 6 and Intelligence scores of 9. Which statistics should we use?`,
             answer: [
-                `My copy of the ***MONSTROUS MANUAL*** tome gives csat an Intelligence of 1, a movement of 9, and an AC of 6. In general, when dealing with familiars, use the statistics in the ***Player's Handbook***. A cat familiar, however, has an Armor Class of 6 and is semi-intelligent (2-3). You might want to give domestic cats (and familiars) a movement rate of 12—they sure aren't slower than people.`
+                `My copy of the ***MONSTROUS MANUAL*** tome gives cats an Intelligence of 1, a movement of 9, and an AC of 6. In general, when dealing with familiars, use the statistics in the ***Player's Handbook***. A cat familiar, however, has an Armor Class of 6 and is semi-intelligent (2-3). You might want to give domestic cats (and familiars) a movement rate of 12—they sure aren't slower than people.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
