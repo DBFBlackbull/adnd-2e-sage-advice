@@ -125,6 +125,17 @@ function getAttributeRegexes() {
     return filterRegexes.length > 0 ? filterRegexes : null
 }
 
+function getHiddenEntries() {
+    let entries = document.getElementById('sidebar-right').querySelectorAll('.hiddenEntry');
+
+    let set = new Set();
+    for (let entry of entries) {
+        entry.id.substring()
+        set.add(entry.id.replaceAll(/-hidden$/g, ''));
+    }
+    return set;
+}
+
 function getRegex(nodeList) {
     let strings = []
     for (let element of nodeList) {
@@ -149,28 +160,27 @@ function removeHighlight(s) {
 function search() {
     let searchRegexes = getSearchRegexes();
     let attributeRegexes = getAttributeRegexes();
-    console.log(searchRegexes);
-
-    let results = 0;
+    let hiddenEntries = getHiddenEntries();
+    if (searchRegexes)
+        console.log(searchRegexes);
 
     let wrappers = document.getElementsByClassName('wrapper');
     for (let wrapper of wrappers) {
-        let hiddenWrapperCounter = 0;
-
         let contentElements = wrapper.getElementsByClassName('content');
         for (let content of contentElements) {
-            let hiddenContentCounter = 0;
             let paragraphs = content.querySelectorAll('p');
             for (let paragraph of paragraphs) {
+                if (hiddenEntries.has(paragraph.id)) {
+                    continue;
+                }
+
                 let contentAttributesElement = paragraph.querySelector('.content-attributes');
                 let contentAttributes = contentAttributesElement.innerText + ' ' + contentAttributesElement.children[0].innerText
                 if (attributeRegexes && !attributeRegexes.every(reg => contentAttributes.match(reg))) {
                     paragraph.classList.add('hidden');
-                    hiddenContentCounter++;
                     continue;
                 }
                 paragraph.classList.remove('hidden');
-                results++;
 
                 if (searchRegexes) {
                     let searchMatch = false;
@@ -205,27 +215,31 @@ function search() {
                     } else {
                         paragraph.classList.add('hidden');
                         hiddenContentCounter++;
-                        results--;
                     }
                 }
             }
 
-            if (hiddenContentCounter === paragraphs.length) {
+            let hiddenParagraphs = content.querySelectorAll('p.hidden');
+            if (hiddenParagraphs.length === paragraphs.length) {
                 content.classList.add('hidden');
-                hiddenWrapperCounter++;
             } else {
                 content.classList.remove('hidden');
-                hiddenWrapperCounter--;
             }
         }
 
-        if (hiddenWrapperCounter === contentElements.length) {
+        let hiddenContentElements = wrapper.querySelectorAll('.content.hidden');
+        if (hiddenContentElements.length === contentElements.length) {
             wrapper.classList.add('hidden');
         } else {
             wrapper.classList.remove('hidden');
         }
     }
 
+    updateResultCount();
+}
+
+function updateResultCount() {
+    let results = document.querySelectorAll('p:not(.hidden)').length;
     document.getElementById('results').innerText = `${results} match${results === 1 ? '' : 'es'}`;
 }
 
@@ -327,21 +341,31 @@ function copyRedditText(id) {
     navigator.clipboard.writeText(formattedText);
 }
 
+function showAll() {
+    let hiddenEntries = document.getElementById('sidebar-right').querySelectorAll('.hiddenEntry');
+    for (let entry of hiddenEntries) {
+        entry.click()
+    }
+}
+
 function showEntry(id) {
     document.getElementById(`${id}-hidden`).remove();
     document.getElementById(id).classList.remove('hidden');
-}
-
-function createHiddenElement(id) {
-    let div = document.createElement('div');
-    div.id = `${id}-hidden`;
-    div.innerText = `✕ ${id}`;
-    div.onclick = () => showEntry(id);
-
-    return div
+    search();
 }
 
 function hideEntry(id) {
     document.getElementById(id).classList.add('hidden');
     document.getElementById('sidebar-right').appendChild(createHiddenElement(id));
+    search();
+}
+
+function createHiddenElement(id) {
+    let div = document.createElement('div');
+    div.id = `${id}-hidden`;
+    div.classList.add('hiddenEntry')
+    div.innerText = `✕ ${id}`;
+    div.onclick = () => showEntry(id);
+
+    return div
 }
