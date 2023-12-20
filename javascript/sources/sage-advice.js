@@ -13668,7 +13668,7 @@ DRAGON_MAGAZINES.push({
                 `Sometimes, however, a spell's statistics can settle the issue pretty well. Any spell with a range of "touch" can be cast for another's benefit. On the other hand, a spell with a range of "0" always affects the caster, and any powers the spell grants cannot be transferred elsewhere no matter what the spell's description might imply; the spell's area of effect might be large enough to affect multiple creatures, but if the range is 0 the spell always must be centered on the caster.`,
                 `Perhaps the statistics for the ***find familiar*** spell should read: Range: 0; Area of Effect: 1 creature within a radius of 1 mile per caster level.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.DISPEL_MAGIC],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.DISPEL_MAGIC, ATTRIBUTE.CHARM],
         },
         {
             page_number: '12+14',
