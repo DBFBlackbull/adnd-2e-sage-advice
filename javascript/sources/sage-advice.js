@@ -1482,11 +1482,11 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '8',
-            question: `If an identify spell will not tell you the exact number of charges or pluses an item has, how do you find out? Can a sage tell?`,
+            question: `If an ***identify*** spell will not tell you the exact number of charges or pluses an item has, how do you find out? Can a sage tell?`,
             answer: [
                 `The best way to get an item's exact charges or pluses is to start with an ***identify*** spell to determine the approximate number, then use a ***contact other plane*** or ***commune*** spell to get the exact number. The DM has to decide what sages can do in his campaign, but giving a sage a chance to determine an item's exact pluses is reasonable. Sages have no way to determine charges; a wand with one charge looks exactly like a wand with 99 charges. If the item was first studied with ***detect magic*** and ***identify*** spells, a sage could study the item for additional clues about who made and enchanted it and stand a good chance of guessing its powers. This would require a sage with knowledge of folklore, history, or both.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
         {
             page_number: '8',
