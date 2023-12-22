@@ -1,0 +1,47 @@
+-
+    const SHARED_SPELLS = [
+        'Detect Evil',
+        'Detect Magic',
+        'Light',
+        'Protection From Evil',
+        'Fire Trap',
+        'Hold Person',
+        'Know Alignment',
+        'Camouflage',
+        'Seeking',
+        'Animate Dead',
+        'Continual Light',
+        'Dispel Magic',
+        'Feign Death',
+        'Locate Object',
+        'Plant Growth',
+        'Pyrotechnics',
+        'Remove Curse',
+        'Stone Shape',
+        'Water Breathing',
+        'Etherealness',
+        'Lower Water',
+        'Tongues',
+        'Animal Growth',
+        'Transmute Rock to Mud',
+        'True Seeing',
+        'Wall of Fire',
+        'Conjure Animals',
+        'Part Water',
+        'Transmute Water to Dust',
+        'Astral Spell',
+        'Confusion',
+        'Control Weather',
+        'Gate',
+        'Succor',
+        'Symbol',
+    ]
+div(class="wrapper")
+    div(class="content")
+        each spell, _ in SHARED_SPELLS
+            - let id = `shared-spell-${spell}`
+            p(id=id)
+                span(class='title') Shared Spell
+                br
+                span(class="entry") #{spell}
+                +attributes({attributes: [gameSystems.SECOND_EDITION, attributes.SPELL]}, sources.SHARED_SPELLS)
