@@ -8,7 +8,7 @@ div(class="wrapper")
                 - let id = `sage-advice-${magazine.issue_number}-${questionNumber}`
                 // - console.log(`Sage Advice #${magazine.issue_number} p. ${advice.page_number}, Question: ${questionNumber}`)
                 p(id=id)
-                    span(class='title') Sage Advice ##{magazine.issue_number} (#{magazine.publication_month} #{magazine.publication_year}) p. #{advice.page_number}, Question: #{questionNumber}
+                    span(class='title') Sage Advice ##{magazine.issue_number} p. #{advice.page_number} (#{magazine.publication_month} #{magazine.publication_year}), Question: #{questionNumber}
                     +buttons(id)
                     span(class="question")
                         strong !{formatInput(advice.question, magazine.issue_number, questionNumber)}

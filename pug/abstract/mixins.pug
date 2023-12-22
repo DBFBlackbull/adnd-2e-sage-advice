@@ -32,7 +32,7 @@ mixin entries(book, chapter, section, heading)
         - id = `${book.id}-${chapter.name}${chapter.number}-${section.id}-${index+1}`.toLowerCase().replaceAll(/:/g,'-')
         - if (id.includes('undefined')) {console.log(id)}
         p(id=id)
-            span(class="title") #{book.title} (#{book.publication_month} #{book.publication_year}) #{heading}, p. #{entry.page_number}
+            span(class="title") #{book.title} p. #{entry.page_number} #{heading} (#{book.publication_month} #{book.publication_year})
             +buttons(id)
             span(class="entry") !{formatInput(entry.entry, book.shortTitle, entry.page_number)}
             if entry.optional
