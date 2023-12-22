@@ -198,11 +198,10 @@ function search() {
                         if (subSearchMatch) {
                             searchRegexes.forEach(reg => {
                                 text.innerHTML = text.innerHTML.replace(reg, substring => {
-                                    console.log(substring);
                                     let closeTag = '';
-                                    switch (substring.charAt(0)) {
-                                        case ' ': closeTag = ' '; break;
-                                        case '>': closeTag = '>'; break;
+                                    if (reg.source.includes('\\W')) {
+                                        let match = substring.match(/^\W/);
+                                        closeTag = match ? match[0] : '';
                                     }
                                     return `${closeTag}<span class="highlight">${substring.slice(closeTag.length)}</span>`
                                 });
