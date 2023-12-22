@@ -128,7 +128,6 @@ PLAYERS_HANDBOOK.chapters.push({
                                 `...`,
                                 `*Option:* If a character wishes to create a weapon of truly fine quality and the DM allows it, the player can opt to use the following alternative procedure for determining the success of his attempt. When the proficiency check is made, any failure means that the weapon is useless. However, a successful check means that the weapon enables the character to add Strength bonuses to attack and damage rolls. Additionally, if the proficiency check is a natural 1, the range of the bow is increased 10 yards for all range classes or is of such fine work that it is suitable for enchantment.`
                             ],
-                            comment: `This is the only reference that says bows can gain strength bonus to **attack rolls**. This must be a typo as all other references only ever mentions a bonus to **damage rolls**.`,
                             attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.WEAPON, ATTRIBUTE.BOWS_AND_STRENGTH]
                         }
                     ]
