@@ -428,7 +428,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `There is no error in the spell's description, but you have made an erroneous statement. The ***identify*** spell does not detect magic or its strength; it reveals an item's functions and charges. A ***ring of three wishes*** has only three charges, so it is faintly charged. Smart wizards use a ***detect magic*** spell, which can determine magical strength and type, before casting ***identify***.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.CLASS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
     ],
 });
