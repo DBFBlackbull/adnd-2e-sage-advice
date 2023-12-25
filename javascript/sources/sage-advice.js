@@ -18808,7 +18808,7 @@ DRAGON_MAGAZINES.push({
             page_number: '22',
             question: `Does one receive a saving throw if a cleric casts a ***heat metal*** spell on one's nonmagical armor or weapons? If the wearer has magic resistance, does it apply to a ***heat metal*** spell?`,
             answer: [
-                `A creature wearing or carrying nonmagical metal receives no saving throw against a ***heat metal*** spell. The target's magic resistance, if any, does apply if the spell is cast on metal the creature is wearing or carrying. Magic resistance does not apply if a***heat metal*** spell is cast on unattended items that the creature subsequently picks up.`
+                `A creature wearing or carrying nonmagical metal receives no saving throw against a ***heat metal*** spell. The target's magic resistance, if any, does apply if the spell is cast on metal the creature is wearing or carrying. Magic resistance does not apply if a ***heat metal*** spell is cast on unattended items that the creature subsequently picks up.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
