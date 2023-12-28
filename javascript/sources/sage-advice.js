@@ -725,14 +725,6 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '13',
-            question: `According to Table 65 (page 122), unskilled characters have a base climbing chance of 40%. The same table notes that a character who spends one slot for the mountaineering proficiency also has a 40% climbing chance. Is this an error, or do characters have to spend two slots before they are better climbers than unskilled characters?`,
-            answer: [
-                `Yes, there is an error. The base climbing chance improves 10% for each slot spent on mountaineering; thus, a character with one proficiency slot in this skill has a 50% base climbing chance.`
-            ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
-        },
-        {
-            page_number: '13',
             question: `Page 45 says a dual-classed character who loses a level to an energy drainer will lose his highest level; if drained again, he loses the level that is hardest to replace. However, the example shows a character losing one level in each class to a wight. What is the correct procedure?`,
             answer: [
                 `A dual-classed (or multiclassed) character who loses a single level to an energy drain always loses his highest level, no matter how many times he is drained. If his levels are equal, he loses the level that takes the most experience to regain. The example on page 45 is correct only if the character loses two levels at once. In this case, the dual-classed character loses one level from each class, just as in the 1st Edition AD&D game.`
@@ -741,7 +733,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '13',
-            question: `I thought falling damage was cumulative per 10', reaching 20d6 at 60'. What happened?`,
+            question: `I thought falling damage was *cumulative* per 10', reaching 20d6 at 60'. What happened?`,
             answer: [
                 `The controversy over falling damage has been settled. Falling damage is 1d6 for each 10' (or fraction of 10') fallen. The reasons are thoroughly explained on page 104. Individual DMs are free to plague their players with any variant falling damage systems they can devise.`
             ],
