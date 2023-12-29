@@ -20,6 +20,14 @@ PLAYERS_HANDBOOK.chapters.push({
             heading: 'Strength',
             entries: [
                 {
+                    page_number: '19-20',
+                    entry: [
+                        `**Hit Probability** adjustments are added to or subtracted from the attack roll rolled on 1d20 (one 20-sided die) during combat. A bonus (positive number) makes the opponent easier to hit; a penalty (negative number) makes him harder to hit.`
+                    ],
+                    comment: 'The DMG explicitly tells that this bonus is also included for hurled weapons and bows.',
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.BOWS_AND_STRENGTH]
+                },
+                {
                     page_number: '20',
                     entry: [
                         `**Damage Adjustment** also applies to combat. The listed number is added to or subtracted from the dice rolled to determine the damage caused by an attack (regardless of subtractions, a successful attack roll can never cause less than 1 point of damage). For example, a short sword normally causes 1d6 points of damage (a range of 1 to 6). An attacker with Strength 17 causes one extra point of damage, for a range of 2 to 7 points of damage. The damage adjustment also applies to missile weapons, although bows must be specially made to gain the bonus; crossbows never benefit from the user's Strength.`
