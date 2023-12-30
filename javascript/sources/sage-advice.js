@@ -18038,7 +18038,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '26',
-            question: `If a low-level wizard found a spellbook with lots of spells ranging from 1st to 9th level, could the wizard identify the spells well enough to know what they are? For example, could a 5th-level wizard who finds a 9th-level ***meteor swarm*** spell know what the spell is? I understand that a wizard cannot cast a spell that is too difficult for the wizard's current level unless the spell is contained on a scroll or the character has some other magical assistance. But Iam wondering if the wizard can even interpret the spell in question?`,
+            question: `If a low-level wizard found a spellbook with lots of spells ranging from 1st to 9th level, could the wizard identify the spells well enough to know what they are? For example, could a 5th-level wizard who finds a 9th-level ***meteor swarm*** spell know what the spell is? I understand that a wizard cannot cast a spell that is too difficult for the wizard's current level unless the spell is contained on a scroll or the character has some other magical assistance. But I am wondering if the wizard can even interpret the spell in question?`,
             answer: [
                 `Once a character has studied the new discovery with ***read magic*** spell, he or she will understand the new spell's general effects and limitations even though the mage cannot cast the spell.`
             ],
