@@ -16949,7 +16949,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '23',
-            question: `During my group's last adventure, we had the unwanted pleasure of fighting a demon in a cave. Our halfling Thief chose to use his boots of spider climbing and Hide in Shadows ability to get the drop on the demon from a 120-foot ceiling, hoping to drag his blade down its back to slow his descent while causing backstab damage. The two bad-guy Mages who conjured the demon had defended themselves and the demon with ***protection from normal missiles*** and ***protection from magical missiles***. Would the halfling, having fallen 60-70 feet to the demon's head, then be considered a missile weapon?`,
+            question: `During my group's last adventure, we had the unwanted pleasure of fighting a demon in a cave. Our halfling Thief chose to use his ***boots of spider climbing*** and Hide in Shadows ability to get the drop on the demon from a 120-foot ceiling, hoping to drag his blade down its back to slow his descent while causing backstab damage. The two bad-guy Mages who conjured the demon had defended themselves and the demon with ***protection from normal missiles*** and ***protection from magical missiles***. Would the halfling, having fallen 60-70 feet to the demon's head, then be considered a missile weapon?`,
             answer: [
                 `No. Falling on top of an opponent is a grappling or overbearing attack. Slashing with a blade is a melee attack. Combining the two is a charge. Note that the maneuver would not slow the character's fall one bit. The character suffers full falling damage, hit or miss.`
             ],
