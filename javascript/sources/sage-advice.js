@@ -817,7 +817,7 @@ DRAGON_MAGAZINES.push({
                 `Blinded creatures are unable to cast any spell that requires a target, but spells that can be cast on an area (such as ***fireball***) or delivered by touch (such as ***cure light wounds***) may still be used. Deafness can cause spells with verbal components to be miscast and fail. The failure chance is up to you, but it shouldn't exceed 20% (less for spells with short casting times). The cleric spell ***holy word*** has a deafness effect that causes spells to fail 50% of the time; this is due mostly to the extreme power of the holy word, not merely the deafness.`
             ],
             comment: `***Holy word*** deafness repeated in #256`,
-            attributes: [GAME_SYSTEM.FIRST_EDITION],
+            attributes: [GAME_SYSTEM.FIRST_EDITION, ATTRIBUTE.BLINDNESS, ATTRIBUTE.DEAFNESS],
         },
         {
             page_number: '9',
