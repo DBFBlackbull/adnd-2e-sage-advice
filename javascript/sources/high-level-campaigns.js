@@ -4,7 +4,7 @@ const DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS = {
     publication_year: '1995',
     publication_month: 'August',
     publication_print: 'First Printing',
-    title: 'DUNGEON MASTER® Option: High-Level Campaigns',
+    title: 'Dungeon Master Option: High-Level Campaigns',
     shortTitle: 'DMGR:HLC',
     id: 'dmgr-hlc',
     sourceAttribute: SOURCE.HIGH_LEVEL_CAMPAIGNS,
