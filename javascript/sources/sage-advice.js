@@ -13716,14 +13716,6 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '16',
-            question: `The ***Complete Book of Humanoids*** lists all giant-kin weapons as size G—even the dagger. Is this correct? My group uses the critical hit tables from the ***PLAYER'S OPTION: Combat & Tactics*** book, so we need to know.`,
-            answer: [
-                `I recommend the statistics in the chart on this page for all the weapons included on Table 7 in the ***Complete Book of Humanoids***.`,
-            ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
-        },
-        {
-            page_number: '16',
             question: `Can a priest ***resurrect*** a character even if his head is missing?`,
             answer: [
                 `I'd say a priest would have a hard time casting any spells at all without his head, much less ***raise dead*** or ***resurrection***. If the spell recipient is missing his head, ***raise dead*** won't help, but ***resurrection*** works fine.`,
