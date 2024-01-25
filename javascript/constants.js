@@ -9,6 +9,9 @@ const SOURCE = {
     SAGE_ADVICE: {id: "Sage Advice", title: "Dragon Magazine: Sage Advice"},
     HIGH_LEVEL_CAMPAIGNS: {id: "DMGR:High-Level Campaigns", title: "Dungeon Master Option: High-Level Campaign"},
     WIZARD_SPELL_COMPENDIUM_4: {id: 'WSC 4', title: "Wizard's Spell Compendium Volume Four"},
+    PRIEST_SPELL_COMPENDIUM_1: {id: 'PSC 1', title: "Priest's Spell Compendium Volume One"},
+    PRIEST_SPELL_COMPENDIUM_2: {id: 'PSC 2', title: "Priest's Spell Compendium Volume Two"},
+    PRIEST_SPELL_COMPENDIUM_3: {id: 'PSC 3', title: "Priest's Spell Compendium Volume Three"},
     SHARED_SPELLS: {id: 'Shared spell'}
 }
 

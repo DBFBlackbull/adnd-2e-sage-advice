@@ -18,6 +18,9 @@ const combatAndTactics = require(path.join(jsFolder, 'sources','combat-and-tacti
 const dragonMagazines = require(path.join(jsFolder, 'sources','sage-advice.js'));
 const highLevelCampaigns = require(path.join(jsFolder, 'sources','high-level-campaigns.js'));
 const wsc4 = require(path.join(jsFolder, 'sources','wizards-spell-compendium-volume-4.js'));
+const psc1 = require(path.join(jsFolder, 'sources','priests-spell-compendium-volume-1.js'));
+const psc2 = require(path.join(jsFolder, 'sources','priests-spell-compendium-volume-2.js'));
+const psc3 = require(path.join(jsFolder, 'sources','priests-spell-compendium-volume-3.js'));
 
 let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {
     pretty: true,
@@ -35,5 +38,8 @@ let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {
     psionicsHandbook: psionics,
     waw: waw,
     wsc4: wsc4,
+    psc1: psc1,
+    psc2: psc2,
+    psc3: psc3,
 });
 fs.writeFileSync(path.join(htmlFolder,'index.html'), html);
