@@ -17828,7 +17828,7 @@ DRAGON_MAGAZINES.push({
             page_number: '22',
             question: `I am confused about how paladins and rangers can spend their spell points under the ***Spells & Magic*** spell point system. The tables imply that members of the two classes receive orisons, which are from the All sphere. As far as I know, neither class gains access to that sphere.`,
             answer: [
-                `Paladins and rangers do not have access to the All sphere; however, orisons are shown on Table 34 because customized paladin or ranger characters (see Chapter 3) can choose access to the Al. sphere.`
+                `Paladins and rangers do not have access to the All sphere; however, orisons are shown on Table 34 because customized paladin or ranger characters (see Chapter 3) can choose access to the All sphere.`
             ],
             comment: `Suggestion in #237 to give paladins and rangers access to the All sphere.`,
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
