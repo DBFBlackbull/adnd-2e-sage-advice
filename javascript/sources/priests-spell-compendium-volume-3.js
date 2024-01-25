@@ -33,7 +33,7 @@ PRIESTS_SPELL_COMPENDIUM_VOLUME_3.chapters.push({
                     heading: 'Speciality Spheres',
                     entries: [
                         {
-                            page_number: '5',
+                            page_number: '580',
                             entry: [
                                 `**Optional:** If the DM wishes, speciality spheres might be made available as follows:`,
                                 `*Clerics* might receive major access to Wards, and to either Law or Chaos, depending on their alignment (a neutral cleric receives one or the other but not both).`,
