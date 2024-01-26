@@ -2571,7 +2571,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Spells and scrolls are used up and lost if they are disrupted during casting. Some magical items require a "casting" procedure that can also be disrupted; these include wands, staves, and rods if the command word optional rule is in effect. (This assumes that the "command word" is actually a phrase or rhyme; perhaps the wielder must actually accompany the speaking of the phrase or rhyme with some kind of somatic gestures.) If wand, stave, or rod use is disrupted, the appropriate charges are expended and lost. Rings, weapons, armor, and miscellaneous magical items generally have very short command words or sequences (if they have any at all) and usually cannot be disrupted. Some wands, staves, and rods that are usable by non-spell-casters, such as the ***rod of lordly might*** and ***wand of secret door and trap location***, tend to have very simple command words or sequences and also cannot be disrupted. Spell-casting and magical-item use count as actions. A character cannot perform a second action in the same round even if the spell or item's effect is disrupted.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SCROLL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SCROLL,ATTRIBUTE.DISPEL_MAGIC],
         },
         {
             page_number: '25',
