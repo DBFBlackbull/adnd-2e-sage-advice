@@ -5142,7 +5142,7 @@ DRAGON_MAGAZINES.push({
                 `Take a closer look at the rules and table on pages 38-39 of the DARK SUN Rules Book. Several psionicist combinations are listed there. If you check the notes immediately following the multiclassed table on page 39, you'll see that the templar, ranger, and bard can be substituted for the cleric, fighter, and thief, respectively, in most cases. Gladiators cannot be part of a multiclass combination. No fighter/fighter combinations exist; no combinations list a major class more than once, because no character in any AD&D game setting can use subclasses of the same class in a multi- or dual-classed combination.`,
                 `If you have a taste for really far-out variants, fine, but don't bring the problems they create to "Sage Advice." However, since you've gotten me started, note that rangers don't get two attacks a round. What rangers get is the ability to use a secondary weapon without penalty. A secondary weapon gives a character exactly *one* extra attack each round. Multiple attacks from level or specialization apply only to the primary weapon. Of course, a haste spell and similar magicks do grant double the normal number of attacks. In this case, the character gets two attacks with the secondary weapon and twice his normal allotment of attacks with the primary weapon.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS,ATTRIBUTE.DUAL_CLASS_IN_GROUP],
         },
         {
             page_number: '29',
