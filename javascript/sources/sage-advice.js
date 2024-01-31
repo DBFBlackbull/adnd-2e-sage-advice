@@ -10758,7 +10758,7 @@ DRAGON_MAGAZINES.push({
                 `Yes, rakshasas are immune to priest spells of level 7 or less, which is all priest spells except quest spells (from the ***Tome of Magic***) and true dweomers (from ***PLAYER'S OPTION: High-Level Campaigns***). Generally, any immunity or limitation based on a spell's level applies equally to priest and wizard spells.`,
                 `Level-based spell immunity protects against spell-like effects from magical items if the spells they mimic are of levels low enough to be defeated themselves. A rakshasa, for example, is unaffected by ***fireballs*** or ***lightning bolts*** from any source, be they spells, wands, staffs, or other magical items. A character with an Intelligence score of 20 is immune ***audible glamer*** and ***phantasmal force*** effects from a ***wand of illusion***.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.INTELLIGENCE_VS_ILLUSIONS],
         },
         {
             page_number: '102',
