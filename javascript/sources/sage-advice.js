@@ -8080,6 +8080,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `There's nothing in the spell description that implies a ***forget*** spell disrupts ongoing actions, but it's not unreasonable to assume that it can. Casting a spell is a complex and exacting mental process and if a spell-caster suddenly forgets when and why he began the process his concentration could be broken. The DM can decide that any failed save against a ***forget*** spell disrupts a spell in process, or the DM can require the victim to make a Intelligence check to correctly asses the situation and complete the spell. Note that the ***forget*** spell victim still will not remember why he started the spell or what he was going to do with it.`,
             ],
+            comment: 'PHB p. 111 says: "*Furthermore, if the spellcaster is struck by a weapon or **fails to make a saving throw** before the spell is cast, the caster’s concentration is disrupted.*" Since ***forget*** only works if the target fails to make a saving throw and failing a saving throw interrupts a spell, a ***forget*** spell will interrupt a caster. The Sage is being lenient with the rules here.',
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
         {
