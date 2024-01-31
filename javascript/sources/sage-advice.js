@@ -4294,7 +4294,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '64',
-            question: `According to the rules, an ***invisible*** and ***silenced*** elf sneaking up on an opponent whose dexterity is 15 or lower can gain surprise on an 11in-10 chance. (The normal chance of surprise is 3-in-10 with a -4 modifier for being an elf without metallic armor, a -2 modifier for being ***invisible***, and a -2 modifier for being ***silenced***.) Is this really fair?`,
+            question: `According to the rules, an ***invisible*** and ***silenced*** elf sneaking up on an opponent whose dexterity is 15 or lower can gain surprise on an 11-in-10 chance. (The normal chance of surprise is 3-in-10 with a -4 modifier for being an elf without metallic armor, a -2 modifier for being ***invisible***, and a -2 modifier for being ***silenced***.) Is this really fair?`,
             answer: [
                 `What is fair is up to the DM. However, if you have the common sense to realize this situation is unfair, it shouldn't be too hard to figure out what to do about it. The -4 modifier for being a lone elf not in metallic armor already assumes the character is moving silently (see ***PHB***, page 22), so I suggest dropping the -2 modifier for silence in this case (you can't be doubly silent). Generally, surprise chances shouldn't be greater than 9-in-10 except in extraordinary circumstances, such as if a thief sneaks up on a sleeping drunk.`,
             ],
