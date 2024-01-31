@@ -1709,7 +1709,7 @@ DRAGON_MAGAZINES.push({
             page_number: '59',
             question: `There seems to be an error in the description for the second-level wizard spell, ***fool's gold***. Shouldn't the creature viewing the gold subtract one from its saving-throw roll for every level of the caster?`,
             answer: [
-                `Yes, but the creature' s wisdom adjustment (if any) applies to the save.`
+                `Yes, but the creature's wisdom adjustment (if any) applies to the save.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
