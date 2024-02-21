@@ -66,6 +66,34 @@ PLAYERS_HANDBOOK.chapters.push({
 });
 PLAYERS_HANDBOOK.chapters.push({
     name: 'Chapter',
+    number: '2',
+    heading: 'PC Races',
+    sections: [
+        {
+            id: 'other-characteristics',
+            heading: 'Other Characteristics',
+            entries: [
+                {
+                    page_number: '32-33',
+                    entry: [
+                        `As a character ages, his ability scores are affected. Upon reaching one-half of his base maximum age (45 for a human), the character loses 1 point of Strength (or half of his exceptional Strength rating) and 1 point of Constitution, but gains 1 point each of Intelligence and Wisdom. At two-thirds of his base maximum age (60 for a human), the character loses 2 more points of Strength (or all his exceptional Strength and 1 point more), 2 points of Dexterity, and 1 more point of Constitution, but he gains 1 point of Wisdom. Upon reaching the base maximum age, the character loses 1 more point from each of Strength, Dexterity, and Constitution, while gaining 1 more point in both Intelligence and Wisdom. All aging adjustments are cumulative. See Table 12 for a summary of these effects.`
+                    ],
+
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.MAGICAL_AGING]
+                },
+                {
+                    page_number: '33',
+                    entry: [
+                        `There may be times when a magical device or spell adds years to or subtracts years from a player character’s life. This magical aging can have two different effects. Some magical aging physically affects the character. For example, a *haste* spell ages those it affects by one year. This aging is added directly to the player character’s current age. He physically acquires the appearance of himself one year older (a few more wrinkles, etc.). Characters who increase in age from magical effects do not gain the benefits of increased Wisdom and Intelligence—these are a function of the passage of game time—but the character does suffer the physical losses to Strength, Dexterity, and Constitution associated with aging. These are breakdowns of the body’s systems. Physical age can also be removed in the same manner. Some potions give years back to the character. In this case, the physical appearance of the character is restored. The character can regain lost vigor (Str, Dex, and Con) as his body is renewed but he does not lose any of the benefits of aging (Wis and Int).`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.MAGICAL_AGING]
+                }
+            ]
+        },
+    ]
+});
+PLAYERS_HANDBOOK.chapters.push({
+    name: 'Chapter',
     number: '3',
     heading: 'Player Character Classes',
     sections: [
