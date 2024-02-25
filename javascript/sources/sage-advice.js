@@ -17860,7 +17860,7 @@ DRAGON_MAGAZINES.push({
     <td>30 Minutes</td>
 </tr>
 <tr>
-    <td>Hand/Food</td>
+    <td>Hand/Foot</td>
     <td>1 Hour</td>
 </tr>
 <tr>
