@@ -17502,14 +17502,6 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '10',
-            question: `Will a ***rope of entanglement*** function on any huge or gargantuan creature? In a past issue, you said a ***vorpal blade*** would function `,
-            answer: [
-                `According to the rules, a ***vorpal blade*** severs a dragon's neck on a good attack roll even if the wielder attacks the dragon's tail. Magic defies rational explanation; that's what makes it magic. DMs who `
-            ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
-        },
-        {
-            page_number: '10',
             question: `Is it possible to recharge ***Nidus' wand of endless repetition*** (from FR4: ***The Magister***)? What level spell would be needed to recharge the ***wand***?`,
             answer: [
                 `Wands, in general, are rechargeable. Since the item description does not say this ***wand*** is not rechargeable, it is safe to assume that it is. Still, the ***wand*** should be difficult to recharge. I suggest ***ray of Ondovir*** (from ***Wizard's Spell Compendium***, Volume Three) and ***time stop***.`
@@ -18119,14 +18111,6 @@ DRAGON_MAGAZINES.push({
             question: `Are there any special effects when a character uses the psionic residue power (from ***Dragon Kings***) on the Astral plane? If a character has the ability to travel between planes, what happens if he or she goes to all three planes where the residue exists?`,
             answer: [
                 `A character using the psionic residue powers gains 1/10th of the PSPs he or she expended during the previous 5 rounds. A psionicist who has absorbed this limit cannot absorb any more PSPs from the same time period, even if visiting all three affected planes.`
-            ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
-        },
-        {
-            page_number: '23',
-            question: `Will a ***rope of entanglement*** function on any huge or gargantuan creature? In a past issue, you said a ***vorpal blade*** would function `,
-            answer: [
-                `According to the rules, a ***vorpal blade*** severs a dragon's neck on a good attack roll even if the wielder attacks the dragon's tail. Magic defies rational explanation; that's what makes it magic. DMs who `
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
