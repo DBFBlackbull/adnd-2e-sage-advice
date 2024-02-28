@@ -2446,7 +2446,7 @@ DRAGON_MAGAZINES.push({
                 `**Dinosaur vs. magical item:** In either edition of the AD&D game, a roll of 1 always fails a saving throw, weapons' bonuses notwithstanding. Someone is bound to write to me and point out that the item saving-throw table in the 1st Edition ***DMG***, page 80, lists the numbers 1 and 0 in several places. When an item has a saving throw of 1, a roll of 1 still fails; however, if the DM assigns a circumstantial penalty, any adjusted roll of 1 or more is a successful save. For example, a book falling 15' onto a hard surface has a modifier of -2 (-1 for every 5' beyond the first 5'1; if a 3 were rolled as a save, the save would be successful (3 - 2 = 1, still good). Items that have a save of 0 are immune to the listed attack form; for example, liquids are immune to blows, even if their containers are not.`,
                 `A ***wish*** certainly could restore the sword if all its pieces were present. Whether or not the sword could simply be remade is up to the DM. I suggest that most enchanted items be rendered nonmagical if broken, though I can think of one or two classic fantasy stories in which broken magical items were remade. If the item is very powerful (with a bonus of +4 or better), it might be remade if it is simply broken—not ***disintegrated*** or reduced to ash or slag—and if it rolls a second save of 20. The item should get a bonus of +1 for every two magical bonuses the item has (artifacts receive a +4 bonus to their saves). If the item fails the second save, it no longer radiates magic; characters smart enough to use ***detect magic*** will know an attempt to repair the item is a waste of time. If the save is successful, the repair should be made using the best possible materials and a master craftsman of unequaled skill; finding either of these should be an adventure in itself. If the DM really wants to prolong the player's agony, he can require the being who will repair the item to make a successful proficiency check and maybe even make a save vs. spells to be successful.`,
             ],
-            attributes: [GAME_SYSTEM.FIRST_EDITION, GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.APRIL_FOOLS],
+            attributes: [GAME_SYSTEM.FIRST_EDITION, GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.NAT1_SAVING_THROW, ATTRIBUTE.APRIL_FOOLS],
         },
         {
             page_number: '55-57',
@@ -9069,7 +9069,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes the bonuses are cumulative. However the dwarf in your example would receive the full +8 only against spells that affect the mind, such as ***charm person***, because the +4 bonus from Wisdom only helps against mental attacks. Also remember that a roll of a 1 on the saving throw die is a failure.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.RACE,ATTRIBUTE.CHARM],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.RACE,ATTRIBUTE.CHARM,ATTRIBUTE.NAT1_SAVING_THROW],
         },
         {
             page_number: '103',
