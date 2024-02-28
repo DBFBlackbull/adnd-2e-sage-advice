@@ -33,6 +33,13 @@ const SYNONYMS = [
     ['polearm', 'pole arm'],
 ];
 
+const QUERY_PARAM_VISIBILITY = 'visibility';
+const QUERY_PARAM_QUERY = 'q';
+const QUERY_PARAM_QUERY_TYPE = 'qt';
+const QUERY_PARAM_GAME_SYSTEM = 'system';
+const QUERY_PARAM_ATTRIBUTES = 'attributes';
+const QUERY_PARAM_HIDDEN = 'hidden';
+
 document.addEventListener("DOMContentLoaded", function() {
     let input = document.getElementById('search');
     input.addEventListener("keypress", function(event) {
@@ -44,6 +51,39 @@ document.addEventListener("DOMContentLoaded", function() {
             search();
         }
     });
+
+    // update site to match query
+    let url = new URL(window.location.href);
+
+    let queryVisibility = url.searchParams.get(QUERY_PARAM_VISIBILITY) || '';
+    let visibility = queryVisibility.split(',').filter(Boolean);
+    visibility.forEach(id => {
+        let visibilityCheckbox = document.getElementById(id);
+        visibilityCheckbox.checked = true;
+        visibilityCheckbox.dispatchEvent(new Event('change'));
+    });
+
+    let query = url.searchParams.get(QUERY_PARAM_QUERY);
+    input.value = query;
+    if (url.searchParams.get(QUERY_PARAM_QUERY_TYPE) === 'any') {
+        document.getElementById('radio-any-search-term').checked = true;
+    }
+
+    let queryGameSystems = url.searchParams.get(QUERY_PARAM_GAME_SYSTEM) || '';
+    let gameSystems = queryGameSystems.split(',').filter(Boolean);
+    gameSystems.forEach(id => document.getElementById(id).checked = true);
+
+    let queryAttributes = url.searchParams.get(QUERY_PARAM_ATTRIBUTES) || '';
+    let attributes = queryAttributes.split(',').filter(Boolean);
+    attributes.forEach(id => document.getElementById(id).checked = true);
+
+    let queryHidden = url.searchParams.get(QUERY_PARAM_HIDDEN) || '';
+    let hidden = queryHidden.split(',').filter(Boolean);
+    hidden.forEach(id => hideEntry(id));
+
+    if (query?.length || attributes?.length || hidden?.length) {
+        search();
+    }
 });
 
 function hideForeword() {
@@ -52,6 +92,8 @@ function hideForeword() {
     for (heading of headings) {
         heading.classList.toggle('hidden');
     }
+
+    updateUrlVisibility()
 }
 
 function hideComments() {
@@ -59,6 +101,24 @@ function hideComments() {
     for (comment of comments) {
         comment.classList.toggle('hidden');
     }
+
+    updateUrlVisibility()
+}
+
+function updateUrlVisibility() {
+    let foreword = document.getElementById('hide-foreword');
+    let comments = document.getElementById('hide-comments');
+
+    let elements = []
+    if (foreword.checked) {
+        elements.push('hide-foreword');
+    }
+
+    if (comments.checked) {
+        elements.push('hide-comments');
+    }
+
+    updateUrl(QUERY_PARAM_VISIBILITY, elements, ',')
 }
 
 function escapeRegExp(string) {
@@ -68,10 +128,27 @@ function escapeRegExp(string) {
 
 const SPECIAL_CHARACTERS = '.*+?^${}()[]\\/';
 
+function updateUrl(param, elements, delimiter) {
+    let url = new URL(window.location.href);
+    if (elements.length > 0) {
+        url.searchParams.set(param, elements.join(delimiter));
+    } else {
+        url.searchParams.delete(param);
+    }
+    url.search = url.searchParams.toString()
+        .replaceAll('%2C', ',')
+        .replaceAll('%7C', '|');
+
+    window.history.pushState(param, "", url.href)
+}
+
 function getSearchRegexes() {
     let query = document.getElementById('search').value;
-    if (query.replaceAll(/[- ]/g,'') === '')
+    if (query.replaceAll(/[- |]/g,'') === '') {
+        updateUrl(QUERY_PARAM_QUERY, [], '|');
+        updateUrl(QUERY_PARAM_QUERY_TYPE, [], '|');
         return null;
+    }
 
     let searchTerms = query
         .split('|')
@@ -80,6 +157,11 @@ function getSearchRegexes() {
             .trim()
             .replaceAll(/\./g,''))
         .filter(Boolean);
+    updateUrl(QUERY_PARAM_QUERY, searchTerms, '|');
+
+    let searchAny = document.getElementById('radio-any-search-term').checked;
+    let searchType = searchAny ? ['any'] : ['all']
+    updateUrl(QUERY_PARAM_QUERY_TYPE, searchType, ',')
 
     let expandedSearchTerms = searchTerms.map(s => {
         let set = new Set();
@@ -105,7 +187,7 @@ function getSearchRegexes() {
         });
     });
 
-    if (document.getElementById('radio-any-search-term').checked) {
+    if (searchAny) {
         let allTerms = expandedSearchTerms.flat().join('|');
         return [new RegExp(`(${allTerms})`, 'gi')];
     }
@@ -120,6 +202,9 @@ function getAttributeRegexes() {
     let gameSystems = document.querySelectorAll('.game-system');
     let attributes = document.querySelectorAll('.attribute');
 
+    updateUrl(QUERY_PARAM_GAME_SYSTEM, getCheckedValues(gameSystems), ',');
+    updateUrl(QUERY_PARAM_ATTRIBUTES, getCheckedValues(attributes), ',');
+
     let filterRegexes = [getRegex(sources), getRegex(gameSystems), getRegex(attributes)].filter(Boolean)
 
     return filterRegexes.length > 0 ? filterRegexes : null
@@ -130,13 +215,13 @@ function getHiddenEntries() {
 
     let set = new Set();
     for (let entry of entries) {
-        entry.id.substring()
         set.add(entry.id.replaceAll(/-hidden$/g, ''));
     }
+
     return set;
 }
 
-function getRegex(nodeList) {
+function getCheckedValues(nodeList) {
     let strings = []
     for (let element of nodeList) {
         if (element.checked) {
@@ -144,10 +229,14 @@ function getRegex(nodeList) {
         }
     }
 
-    if (strings.length === 0) {
+    return strings;
+}
+
+function getRegex(nodeList) {
+    let strings = getCheckedValues(nodeList);
+    if (strings.length < 1) {
         return null
     }
-
     return new RegExp(`(${strings.join('|')})`, 'g');
 }
 
@@ -163,9 +252,6 @@ function search() {
     let hiddenEntries = getHiddenEntries();
     if (searchRegexes)
         console.log(searchRegexes);
-
-    let url = new URL(window.location.href);
-    console.log(url);
 
     let wrappers = document.getElementsByClassName('wrapper');
     for (let wrapper of wrappers) {
@@ -355,6 +441,24 @@ function showEntry(id) {
     document.getElementById(id).classList.remove('hidden');
     updateVisibilityFromParagraph(id);
     updateResultCount();
+
+    let url = new URL(window.location.href);
+    let hidden = url.searchParams.get(QUERY_PARAM_HIDDEN)
+        .split(',')
+        .filter(s => s !== id);
+
+    console.log(hidden);
+    if (hidden.length > 0) {
+        url.searchParams.set(QUERY_PARAM_HIDDEN, hidden.join(','));
+    } else {
+        url.searchParams.delete(QUERY_PARAM_HIDDEN);
+    }
+
+    url.search = url.searchParams.toString()
+        .replaceAll('%2C', ',')
+        .replaceAll('%7C', '|');
+
+    window.history.pushState(QUERY_PARAM_HIDDEN, "", url.href)
 }
 
 function hideEntry(id) {
@@ -362,6 +466,17 @@ function hideEntry(id) {
     document.getElementById('sidebar-right').appendChild(createHiddenElement(id));
     updateVisibilityFromParagraph(id);
     updateResultCount();
+
+    let url = new URL(window.location.href);
+    let hidden = url.searchParams.get(QUERY_PARAM_HIDDEN) || '';
+    let set = new Set(hidden.split(',').filter(Boolean));
+    set.add(id);
+    url.searchParams.set(QUERY_PARAM_HIDDEN, Array.from(set).join(','));
+    url.search = url.searchParams.toString()
+        .replaceAll('%2C', ',')
+        .replaceAll('%7C', '|');
+
+    window.history.pushState(QUERY_PARAM_HIDDEN, "", url.href)
 }
 
 function createHiddenElement(id) {

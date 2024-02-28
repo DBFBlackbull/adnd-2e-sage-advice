@@ -2,7 +2,7 @@ mixin filterFacets(facets, title, htmlClass, checked)
     h2 #{title}
     each facet, _ in facets
         div
-            input(type="checkbox" class=htmlClass value=facet.id onchange="search()" checked=checked)
+            input(type="checkbox" id=facet.id class=htmlClass value=facet.id onchange="search()" checked=checked)
             | !{facet.title ? facet.title : facet.id}
 
 // Sidebar
