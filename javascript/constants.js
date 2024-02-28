@@ -41,6 +41,7 @@ const ATTRIBUTE = {
     MAGIC_ITEM_SIZE: {id: "Magic item size", title: "Who fit magic items?"},
     PANTHEON: {id: "Pantheon", title: "Pantheon of the Month"},
     MONSTER_ABILITY_SCORES: {id: "Monster Ability Scores"},
+    NAT1_SAVING_THROW: {id: "Nat1 save", title: "Nat 1 Saving Throw always fails"},
 
     DISPEL_MAGIC: {id: 'Dispel Magic'},
     TURN_UNDEAD: {id: 'Turn Undead'},

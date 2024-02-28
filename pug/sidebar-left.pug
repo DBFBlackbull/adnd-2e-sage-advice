@@ -1,9 +1,20 @@
-mixin filterFacets(facets, title, htmlClass)
-    h2 #{title}
-    each facet, _ in facets
-        div
-            input(type="checkbox" id=facet.id class=htmlClass value=facet.id onchange="search()")
-            | !{facet.title ? facet.title : facet.id}
+mixin filterFacets(facets, title, htmlClass, open)
+    if open
+        details(open)
+            summary
+                h2(style="display: inline-block;") #{title}
+            each facet, _ in facets
+                div
+                    input(type="checkbox" id=facet.id class=htmlClass value=facet.id onchange="search()")
+                    | !{facet.title ? facet.title : facet.id}
+    else
+        details
+            summary
+                h2(style="display: inline-block;") #{title}
+            each facet, _ in facets
+                div
+                    input(type="checkbox" id=facet.id class=htmlClass value=facet.id onchange="search()")
+                    | !{facet.title ? facet.title : facet.id}
 
 // Sidebar
 div(id="sidebar-left" class="sidebar-left")
@@ -16,4 +27,4 @@ div(id="sidebar-left" class="sidebar-left")
         | Hide editor's comments
     +filterFacets(sources, "Sources", "source")
     +filterFacets(gameSystems, "Game System", "game-system")
-    +filterFacets(attributes, "Attributes", "attribute")
+    +filterFacets(attributes, "Attributes", "attribute", true)
