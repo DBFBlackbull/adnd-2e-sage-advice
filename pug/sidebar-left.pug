@@ -1,8 +1,8 @@
-mixin filterFacets(facets, title, htmlClass, checked)
+mixin filterFacets(facets, title, htmlClass)
     h2 #{title}
     each facet, _ in facets
         div
-            input(type="checkbox" id=facet.id class=htmlClass value=facet.id onchange="search()" checked=checked)
+            input(type="checkbox" id=facet.id class=htmlClass value=facet.id onchange="search()")
             | !{facet.title ? facet.title : facet.id}
 
 // Sidebar
@@ -14,6 +14,6 @@ div(id="sidebar-left" class="sidebar-left")
     div
         input(id="hide-comments" type="checkbox" onchange="hideComments()")
         | Hide editor's comments
-    +filterFacets(sources, "Sources", "source", true)
+    +filterFacets(sources, "Sources", "source")
     +filterFacets(gameSystems, "Game System", "game-system")
     +filterFacets(attributes, "Attributes", "attribute")

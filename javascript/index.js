@@ -36,6 +36,7 @@ const SYNONYMS = [
 const QUERY_PARAM_VISIBILITY = 'visibility';
 const QUERY_PARAM_QUERY = 'q';
 const QUERY_PARAM_QUERY_TYPE = 'qt';
+const QUERY_PARAM_SOURCES = 'sources';
 const QUERY_PARAM_GAME_SYSTEM = 'system';
 const QUERY_PARAM_ATTRIBUTES = 'attributes';
 const QUERY_PARAM_HIDDEN = 'hidden';
@@ -69,6 +70,10 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('radio-any-search-term').checked = true;
     }
 
+    let querySources = url.searchParams.get(QUERY_PARAM_SOURCES) || '';
+    let sources = querySources.split(',').filter(Boolean);
+    sources.forEach(id => document.getElementById(id).checked = true);
+
     let queryGameSystems = url.searchParams.get(QUERY_PARAM_GAME_SYSTEM) || '';
     let gameSystems = queryGameSystems.split(',').filter(Boolean);
     gameSystems.forEach(id => document.getElementById(id).checked = true);
@@ -81,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let hidden = queryHidden.split(',').filter(Boolean);
     hidden.forEach(id => hideEntry(id));
 
-    if (query?.length || attributes?.length || hidden?.length) {
+    if (query?.length || sources?.length || gameSystems?.length || attributes?.length || hidden?.length) {
         search();
     }
 });
@@ -199,12 +204,13 @@ function getSearchRegexes() {
 }
 
 function getAttributeRegexes() {
-    let sources = document.querySelectorAll('.source');
-    let gameSystems = document.querySelectorAll('.game-system');
-    let attributes = document.querySelectorAll('.attribute');
+    let sources = getCheckedValues(document.querySelectorAll('.source'));
+    let gameSystems = getCheckedValues(document.querySelectorAll('.game-system'));
+    let attributes = getCheckedValues(document.querySelectorAll('.attribute'));
 
-    updateUrl(QUERY_PARAM_GAME_SYSTEM, getCheckedValues(gameSystems), ',');
-    updateUrl(QUERY_PARAM_ATTRIBUTES, getCheckedValues(attributes), ',');
+    updateUrl(QUERY_PARAM_SOURCES, sources, ',');
+    updateUrl(QUERY_PARAM_GAME_SYSTEM, gameSystems, ',');
+    updateUrl(QUERY_PARAM_ATTRIBUTES, attributes, ',');
 
     let filterRegexes = [getRegex(sources), getRegex(gameSystems), getRegex(attributes)].filter(Boolean)
 
@@ -233,12 +239,11 @@ function getCheckedValues(nodeList) {
     return strings;
 }
 
-function getRegex(nodeList) {
-    let strings = getCheckedValues(nodeList);
-    if (strings.length < 1) {
+function getRegex(checkedValues) {
+    if (checkedValues.length < 1) {
         return null
     }
-    return new RegExp(`(${strings.join('|')})`, 'g');
+    return new RegExp(`(${checkedValues.join('|')})`, 'g');
 }
 
 function removeHighlight(s) {
