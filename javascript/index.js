@@ -135,11 +135,7 @@ function updateUrl(param, elements, delimiter) {
     } else {
         url.searchParams.delete(param);
     }
-    url.search = url.searchParams.toString()
-        .replaceAll('%2C', ',')
-        .replaceAll('%7C', '|');
-
-    console.log(url.search);
+    url.search = decodeURIComponent(url.searchParams.toString())
     console.log(decodeURIComponent(url.search));
 
     window.history.pushState(param, "", url.href)
@@ -450,18 +446,7 @@ function showEntry(id) {
         .split(',')
         .filter(s => s !== id);
 
-    console.log(hidden);
-    if (hidden.length > 0) {
-        url.searchParams.set(QUERY_PARAM_HIDDEN, hidden.join(','));
-    } else {
-        url.searchParams.delete(QUERY_PARAM_HIDDEN);
-    }
-
-    url.search = url.searchParams.toString()
-        .replaceAll('%2C', ',')
-        .replaceAll('%7C', '|');
-
-    window.history.pushState(QUERY_PARAM_HIDDEN, "", url.href)
+    updateUrl(QUERY_PARAM_HIDDEN, hidden, ',');
 }
 
 function hideEntry(id) {
@@ -474,12 +459,8 @@ function hideEntry(id) {
     let hidden = url.searchParams.get(QUERY_PARAM_HIDDEN) || '';
     let set = new Set(hidden.split(',').filter(Boolean));
     set.add(id);
-    url.searchParams.set(QUERY_PARAM_HIDDEN, Array.from(set).join(','));
-    url.search = url.searchParams.toString()
-        .replaceAll('%2C', ',')
-        .replaceAll('%7C', '|');
 
-    window.history.pushState(QUERY_PARAM_HIDDEN, "", url.href)
+    updateUrl(QUERY_PARAM_HIDDEN, Array.from(set), ',');
 }
 
 function createHiddenElement(id) {
