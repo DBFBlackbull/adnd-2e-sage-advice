@@ -135,7 +135,9 @@ function updateUrl(param, elements, delimiter) {
     } else {
         url.searchParams.delete(param);
     }
-    url.search = decodeURIComponent(url.searchParams.toString())
+    url.search = decodeURIComponent(url.searchParams.toString()).
+        replace(/index\.html=/, 'index.html');
+
     console.log(decodeURIComponent(url.search));
 
     window.history.pushState(param, "", url.href)
