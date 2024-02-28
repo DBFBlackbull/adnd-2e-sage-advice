@@ -164,6 +164,9 @@ function search() {
     if (searchRegexes)
         console.log(searchRegexes);
 
+    let url = new URL(window.location.href);
+    console.log(url);
+
     let wrappers = document.getElementsByClassName('wrapper');
     for (let wrapper of wrappers) {
         let contentElements = wrapper.getElementsByClassName('content');
