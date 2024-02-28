@@ -14871,8 +14871,9 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '20',
-            question: `Is there a saving throw against the priest spell ***charm person or mammal***? If so, does the save work like the wizard spell ***charm person*** in that the target gains a saving throw vs. spells, modified by the number of hp damage the party has inflicted on the target? A successful saving throw negates the spell—that's what the abbreviation "Neg." means in the summary at the beginning of the spell description.`,
+            question: `Is there a saving throw against the priest spell ***charm person or mammal***? If so, does the save work like the wizard spell ***charm person*** in that the target gains a saving throw vs. spells, modified by the number of hp damage the party has inflicted on the target?`,
             answer: [
+                `A successful saving throw negates the spell—that's what the abbreviation "Neg." means in the summary at the beginning of the spell description.`,
                 `The target is entitled to a saving throw bonus if the caster or her party damages the target during the round when the spell is cast.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.CHARM],
