@@ -139,6 +139,9 @@ function updateUrl(param, elements, delimiter) {
         .replaceAll('%2C', ',')
         .replaceAll('%7C', '|');
 
+    console.log(url.search);
+    console.log(decodeURIComponent(url.search));
+
     window.history.pushState(param, "", url.href)
 }
 
