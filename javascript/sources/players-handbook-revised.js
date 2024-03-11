@@ -84,7 +84,7 @@ PLAYERS_HANDBOOK.chapters.push({
                 {
                     page_number: '33',
                     entry: [
-                        `There may be times when a magical device or spell adds years to or subtracts years from a player character’s life. This magical aging can have two different effects. Some magical aging physically affects the character. For example, a *haste* spell ages those it affects by one year. This aging is added directly to the player character’s current age. He physically acquires the appearance of himself one year older (a few more wrinkles, etc.). Characters who increase in age from magical effects do not gain the benefits of increased Wisdom and Intelligence—these are a function of the passage of game time—but the character does suffer the physical losses to Strength, Dexterity, and Constitution associated with aging. These are breakdowns of the body’s systems. Physical age can also be removed in the same manner. Some potions give years back to the character. In this case, the physical appearance of the character is restored. The character can regain lost vigor (Str, Dex, and Con) as his body is renewed but he does not lose any of the benefits of aging (Wis and Int).`
+                        `There may be times when a magical device or spell adds years to or subtracts years from a player character's life. This magical aging can have two different effects. Some magical aging physically affects the character. For example, a *haste* spell ages those it affects by one year. This aging is added directly to the player character's current age. He physically acquires the appearance of himself one year older (a few more wrinkles, etc.). Characters who increase in age from magical effects do not gain the benefits of increased Wisdom and Intelligence—these are a function of the passage of game time—but the character does suffer the physical losses to Strength, Dexterity, and Constitution associated with aging. These are breakdowns of the body's systems. Physical age can also be removed in the same manner. Some potions give years back to the character. In this case, the physical appearance of the character is restored. The character can regain lost vigor (Str, Dex, and Con) as his body is renewed but he does not lose any of the benefits of aging (Wis and Int).`
                     ],
                     attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.MAGICAL_AGING]
                 }
@@ -97,6 +97,25 @@ PLAYERS_HANDBOOK.chapters.push({
     number: '3',
     heading: 'Player Character Classes',
     sections: [
+        {
+            id: 'warrior',
+            heading: 'Warriors',
+            sections: [
+                {
+                    id: 'paladin',
+                    heading: 'Paladin',
+                    entries: [
+                        {
+                            page_number: '39',
+                            entry: [
+                                `**A paladin using a *holy sword* projects a circle of power** 10 feet in diameter when the sword is unsheathed and held. This power dispels hostile magic of a level up to the paladin's experience level. (A *holy sword* is a very special weapon; if your paladin acquires one, the DM will explain its other powers.)`
+                            ],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.CLASS, ATTRIBUTE.PALADIN_HOLY_SWORD]
+                        }
+                    ],
+                },
+            ]
+        },
         {
             id: 'wizard',
             heading: 'Wizard',
@@ -189,7 +208,7 @@ PLAYERS_HANDBOOK.chapters.push({
                             page_number: '96',
                             entry: [
                                 `**Bows:** Bows come in various shapes and sizes. The power of a bow is measured by its pull. The greater the pull, the more Strength needed to work the bow. Thus, it is possible for characters to have bows that grant them damage bonuses for high Strength (it is assumed the character has chosen a bow that has a greater pull). Likewise, characters with low Strengths suffer their usual penalties when using a bow (they are forced to use weaker bows or simply cannot draw back as far). The pull of a bow seldom prevents a character from using the weapon, only from gaining the full effect. The true test of a character's Strength comes in stringing a bow—the bow of a strong hero may simply be unstringable by a lesser man (as was Odysseus's).`,
-                                `Heavier pull bows are not normally any more expensive than standard bows. The exceptions to this are those bows that enable the fighter to gain bonuses for exceptional Strength (18/01 or greater). These bows must be custom crafted and cost three to five times the normal price. These bows are also difficult to string or use effectively for those without exceptional Strength. These characters must roll a successful bend bars/lift gates roll to string or use such weapons (again, think of the test of the suitors in Odysseus’s household).`
+                                `Heavier pull bows are not normally any more expensive than standard bows. The exceptions to this are those bows that enable the fighter to gain bonuses for exceptional Strength (18/01 or greater). These bows must be custom crafted and cost three to five times the normal price. These bows are also difficult to string or use effectively for those without exceptional Strength. These characters must roll a successful bend bars/lift gates roll to string or use such weapons (again, think of the test of the suitors in Odysseus's household).`
                             ],
                             attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.WEAPON, ATTRIBUTE.BOWS_AND_STRENGTH]
                         }
@@ -211,7 +230,7 @@ PLAYERS_HANDBOOK.chapters.push({
                 {
                     page_number: '168',
                     entry: [
-                        `**Range:** This lists the distance from the caster at which the spell effect occurs or begins. A “0” indicates the spell can be used on the caster only, with the effect embodied within or emanating from him. “Touch” means the caster can use the spell on others if he can physically touch them. Unless otherwise specified, all other spells are centered on a point visible to the caster and within the range of the spell. The point can be a creature or object if desired. In general, a spell that affects a limited number of creatures within an area affects those closest to the center first, unless there are other parameters operating (such as level or Hit Dice). Spells can be cast through narrow openings only if both the caster’s vision and the spell energy can be directed simultaneously through the opening. A wizard standing behind an arrow slit can cast through it; sending a fireball through a small peephole he is peering through is another matter.`
+                        `**Range:** This lists the distance from the caster at which the spell effect occurs or begins. A “0” indicates the spell can be used on the caster only, with the effect embodied within or emanating from him. “Touch” means the caster can use the spell on others if he can physically touch them. Unless otherwise specified, all other spells are centered on a point visible to the caster and within the range of the spell. The point can be a creature or object if desired. In general, a spell that affects a limited number of creatures within an area affects those closest to the center first, unless there are other parameters operating (such as level or Hit Dice). Spells can be cast through narrow openings only if both the caster's vision and the spell energy can be directed simultaneously through the opening. A wizard standing behind an arrow slit can cast through it; sending a fireball through a small peephole he is peering through is another matter.`
                     ],
                     attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.BLINDNESS]
                 }

@@ -321,6 +321,25 @@ DUNGEON_MASTER_GUIDE.chapters.push({
                 }
             ],
         },
+        {
+            id: 'magical-weapons',
+            heading: 'Magical Weapons',
+            sections: [
+                {
+                    id: 'list-of-magical-weapons',
+                    heading: 'List of Magical Weapons',
+                    entries: [
+                        {
+                            page_number: '245',
+                            entry: [
+                                `**Sword, +5 Holy Avenger:** In the hands of any character other than a paladin, this holy sword will perform only as a *sword +2*. In the hands of a paladin, however, it creates a magic resistance of 50% in a 5-foot radius, dispels magic in a 5-foot radius at the level of the paladin, and inflicts +10 points of bonus damage upon chaotic evil opponents.`,
+                            ],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.PALADIN_HOLY_SWORD],
+                        },
+                    ]
+                }
+            ]
+        }
     ],
 });
 

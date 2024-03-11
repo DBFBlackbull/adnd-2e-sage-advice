@@ -7635,7 +7635,7 @@ DRAGON_MAGAZINES.push({
                 `Though there has yet to be any official rulings, the current thought at TSR, Inc., is as follows: The ***dispel magic*** and magic resistance powers have a five-foot radius. The magic resistance is continuous while the sword is unsheathed and held (by a paladin). ***Dispel magic*** is not continuous and must be invoked by the paladin holding the sword. Doing this counts as an action and the ***dispel*** affects all magic in the radius, hostile or not. Because the ***dispel*** is instantaneous, it usually cannot stop magic from passing though the radius—this power is most effective against in-place effects.`,
                 `The magic-resistance power functions according to the rules for magic resistance in the ***PH*** and ***DMG***. Note that magic resistance comes into play only when magic can affect the protected creature. A spell that is just passing though is not affected. For example, a ***magic missile*** targeted at a creature 20' behind the paladin works normally. If the same spell is targeted at the paladin or at any other creature within five feet of the paladin, the magic resistance comes into play. Note that in some cases a spell can be blocked by default. For example, a blast from ***fireball*** affects anything within its area of effect. If a holy swords magic-resistance roll succeeds against the blast, then the blast is completely excluded from the five-foot magic-resistance radius. If the blast is rushing down a corridor at the paladin the magic resistance radius will completely block the blast if the corridor is small enough. This does not mean that a holy sword blocks all ***fireballs*** and similar effects. If, for example, a ***fireball's*** glowing missile is set to detonate outside the magic-resistance radius, the missile can explode normally, but if the magic-resistance roll succeeds, anything within the radius is protected from the blast.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL, ATTRIBUTE.PALADIN_HOLY_SWORD],
         },
         {
             page_number: '79',
@@ -10858,7 +10858,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `In this case, magic is hostile when it is potentially harmful to the paladin or his allies and directed either at the paladin or placed so that this its area of effect overlaps the circle of power the holy sword generates.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.PALADIN_HOLY_SWORD],
         },
         {
             page_number: '83',

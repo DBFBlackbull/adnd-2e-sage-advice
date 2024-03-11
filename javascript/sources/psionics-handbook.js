@@ -5,7 +5,7 @@ const THE_COMPLETE_PSIONICS_HANDBOOK = {
     publication_month: 'January',
     publication_print: '9th printing, October 1996',
     title: "The Complete Psionics Handbook",
-    shortTitle: "The Complete Psionics Handbook",
+    shortTitle: "Psionics Handbook",
     id: 'psionics-handbook',
     sourceAttribute: SOURCE.PSIONICS_HANDBOOK,
     chapters: [],

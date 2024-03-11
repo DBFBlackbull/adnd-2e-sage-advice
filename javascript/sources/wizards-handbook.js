@@ -5,7 +5,7 @@ const THE_COMPLETE_WIZARDS_HANDBOOK = {
     publication_month: 'June',
     publication_print: '10th printing, March 1996',
     title: "The Complete Wizard's Handbook",
-    shortTitle: "The Complete Wizard's Handbook",
+    shortTitle: "Wizards Handbook",
     id: 'wizards-handbook',
     sourceAttribute: SOURCE.WIZARDS_HANDBOOK,
     chapters: [],
