@@ -1,18 +1,18 @@
 const SOURCE = {
-    PHB: {id: "PHB", title: "Player's Handbook"},
+    PHB: {id: "PHB", title: "Player’s Handbook"},
     DMG: {id: "DMG", title: "Dungeon Master Guide"},
     AEG: {id: "AEG", title: "Arms and Equipment Guide"},
-    WIZARDS_HANDBOOK: {id: "Complete Wizards Handbook", title:"The Complete Wizard's Handbook"},
+    WIZARDS_HANDBOOK: {id: "Complete Wizards Handbook", title:"The Complete Wizard’s Handbook"},
     PSIONICS_HANDBOOK: {id: "Complete Psionics Handbook", title:"The Complete Psionics Handbook"},
-    PALADINS_HANDBOOK: {id: "Complete Paladins Handbook", title:"The Complete Paladin's Handbook"},
+    PALADINS_HANDBOOK: {id: "Complete Paladins Handbook", title:"The Complete Paladin’s Handbook"},
     THE_WILL_AND_THE_WAY: {id: "The Will and the Way", title:"The Will and the Way"},
-    COMBAT_AND_TACTICS: {id: "Combat and Tactics", title:"PLAYER'S OPTION: Combat & Tactics"},
+    COMBAT_AND_TACTICS: {id: "Combat and Tactics", title:"PLAYER’S OPTION: Combat & Tactics"},
     SAGE_ADVICE: {id: "Sage Advice", title: "Dragon Magazine: Sage Advice"},
     HIGH_LEVEL_CAMPAIGNS: {id: "DMGR High-Level Campaigns", title: "Dungeon Master Option: High-Level Campaign"},
-    WIZARD_SPELL_COMPENDIUM_4: {id: 'WSC 4', title: "Wizard's Spell Compendium Volume Four"},
-    PRIEST_SPELL_COMPENDIUM_1: {id: 'PSC 1', title: "Priest's Spell Compendium Volume One"},
-    PRIEST_SPELL_COMPENDIUM_2: {id: 'PSC 2', title: "Priest's Spell Compendium Volume Two"},
-    PRIEST_SPELL_COMPENDIUM_3: {id: 'PSC 3', title: "Priest's Spell Compendium Volume Three"},
+    WIZARD_SPELL_COMPENDIUM_4: {id: 'WSC 4', title: "Wizard’s Spell Compendium Volume Four"},
+    PRIEST_SPELL_COMPENDIUM_1: {id: 'PSC 1', title: "Priest’s Spell Compendium Volume One"},
+    PRIEST_SPELL_COMPENDIUM_2: {id: 'PSC 2', title: "Priest’s Spell Compendium Volume Two"},
+    PRIEST_SPELL_COMPENDIUM_3: {id: 'PSC 3', title: "Priest’s Spell Compendium Volume Three"},
     SHARED_SPELLS: {id: 'Shared spell'}
 }
 
