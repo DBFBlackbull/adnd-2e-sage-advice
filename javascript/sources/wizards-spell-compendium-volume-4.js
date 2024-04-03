@@ -4,7 +4,7 @@ const WIZARDS_SPELL_COMPENDIUM_VOLUME_4 = {
     publication_year: '1998',
     publication_month: 'September',
     publication_print: 'First Printing',
-    title: "Wizard's Spell Compendium Volume Four",
+    title: "Wizard’s Spell Compendium Volume Four",
     shortTitle: "WSC 4",
     id: 'wsc-4',
     sourceAttribute: SOURCE.WIZARD_SPELL_COMPENDIUM_4,

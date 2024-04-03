@@ -4,7 +4,7 @@ const THE_COMPLETE_PALADINS_HANDBOOK = {
     publication_year: '1994',
     publication_month: 'May',
     publication_print: '',
-    title: "The Complete Paladin's Handbook",
+    title: "The Complete Paladin’s Handbook",
     shortTitle: "Paladins Handbook",
     id: 'paladins-handbook',
     sourceAttribute: SOURCE.PALADINS_HANDBOOK,

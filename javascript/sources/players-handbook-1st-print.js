@@ -4,7 +4,7 @@ const PLAYERS_HANDBOOK = {
     publication_year: '1989',
     publication_month: 'April',
     publication_print: 'First printing',
-    title: "Player's Handbook",
+    title: "Player’s Handbook",
     shortTitle: 'PHB',
     id: 'phb-1st-print',
     sourceAttribute: SOURCE.PHB,

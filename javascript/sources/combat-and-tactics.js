@@ -4,7 +4,7 @@ const COMBAT_AND_TACTICS = {
     publication_year: '1995',
     publication_month: 'June',
     publication_print: '2nd Printing, Nov 1995.',
-    title: "PLAYER'S OPTION™: Combat & Tactics",
+    title: "PLAYER’S OPTION™: Combat & Tactics",
     shortTitle: 'C&T',
     id: 'c-and-t',
     sourceAttribute: SOURCE.COMBAT_AND_TACTICS,

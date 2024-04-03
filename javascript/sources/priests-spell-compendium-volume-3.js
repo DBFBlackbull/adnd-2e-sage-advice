@@ -4,7 +4,7 @@ const PRIESTS_SPELL_COMPENDIUM_VOLUME_3 = {
     publication_year: '1999',
     publication_month: '',
     publication_print: '',
-    title: "Priest's Spell Compendium Volume Three",
+    title: "Priest’s Spell Compendium Volume Three",
     shortTitle: "PSC 3",
     id: 'psc-3',
     sourceAttribute: SOURCE.PRIEST_SPELL_COMPENDIUM_3,
