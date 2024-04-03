@@ -92,7 +92,7 @@ THE_COMPLETE_WIZARDS_HANDBOOK.chapters.push({
                             page_number: '84',
                             entry: [
                                 `**Web**`,
-                                `This spell can be used as a makeshift net to prevent damage to falling characters, assuming there are suitable projections or surfaces available to anchor the web, A web of at least 5 feet of thickness protects a falling character from damage regardless of the height from which he falls.`
+                                `This spell can be used as a makeshift net to prevent damage to falling characters, assuming there are suitable projections or surfaces available to anchor the *web*. A *web* of at least 5 feet of thickness protects a falling character from damage regardless of the height from which he falls.`
                             ],
                             attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
                         },
