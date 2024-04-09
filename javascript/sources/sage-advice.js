@@ -19554,7 +19554,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The rules for identifying potions are deliberately vague. The idea is to require players to be creative for have their characters spend some gold on ***identify*** spells). Of course, the DM has to be creative, too. The DM must adjudicate the result of any test a character tries and must provide clues where appropriate. Neither problem is insurmountable. Just assume that the required "small sample" produces some magical tingle and that its effects last a minute or two. Now, let's run through your list:`,
                 `<br>
-**Fire Resistance:** Holding a pinky a candle flame would be a sufficient test. (Criel DMs will insists that the character poke the flame and risk getting burned.)<br>
+**Fire Resistance:** Holding a pinky up to a candle flame would be a sufficient test. (Cruel DMs will insist that the character poke the flame and risk getting burned.)<br>
 **Invulnerability:** A small cut with a table knife will do the trick—the potion will prevent the cut.<br>
 **Plant Control:** Can the character make a flower open or close?<br>
 **Water Breathing:** Time for a dip in the horse trough. (If the test fails, at least the character gets a bath.)`,
