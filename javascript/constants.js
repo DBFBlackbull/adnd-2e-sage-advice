@@ -6,6 +6,7 @@ const SOURCE = {
     PSIONICS_HANDBOOK: {id: "Complete Psionics Handbook", title:"The Complete Psionics Handbook"},
     PALADINS_HANDBOOK: {id: "Complete Paladins Handbook", title:"The Complete Paladin’s Handbook"},
     DRUIDS_HANDBOOK: {id: "Complete Druids Handbook", title:"The Complete Druid’s Handbook"},
+    NECROMANCERS_HANDBOOK: {id: "Complete Book of Necromancers", title:"The Complete Book of Necromancers"},
     THE_WILL_AND_THE_WAY: {id: "The Will and the Way", title:"The Will and the Way"},
     COMBAT_AND_TACTICS: {id: "Combat and Tactics", title:"PLAYER’S OPTION: Combat & Tactics"},
     SAGE_ADVICE: {id: "Sage Advice", title: "Dragon Magazine: Sage Advice"},

@@ -15,6 +15,7 @@ const wizardsHandbook = require(path.join(jsFolder, 'sources','wizards-handbook.
 const psionics = require(path.join(jsFolder, 'sources','psionics-handbook.js'));
 const paladinsHandbook = require(path.join(jsFolder, 'sources','paladins-handbook.js'));
 const druidsHandbook = require(path.join(jsFolder, 'sources','druids-handbook.js'));
+const necromancersHandbook = require(path.join(jsFolder, 'sources','necromancers-handbook.js'));
 const waw = require(path.join(jsFolder, 'sources','the-will-and-the-way.js'));
 const combatAndTactics = require(path.join(jsFolder, 'sources','combat-and-tactics.js'));
 const dragonMagazines = require(path.join(jsFolder, 'sources','sage-advice.js'));
@@ -40,6 +41,7 @@ let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {
     psionicsHandbook: psionics,
     paladinsHandbook: paladinsHandbook,
     druidsHandbook: druidsHandbook,
+    necromancersHandbook: necromancersHandbook,
     waw: waw,
     wsc4: wsc4,
     psc1: psc1,
