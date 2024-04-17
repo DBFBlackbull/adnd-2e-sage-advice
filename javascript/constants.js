@@ -9,6 +9,7 @@ const SOURCE = {
     NECROMANCERS_HANDBOOK: {id: "Complete Book of Necromancers", title:"The Complete Book of Necromancers"},
     THE_WILL_AND_THE_WAY: {id: "The Will and the Way", title:"The Will and the Way"},
     COMBAT_AND_TACTICS: {id: "Combat and Tactics", title:"PLAYER’S OPTION: Combat & Tactics"},
+    SPELLS_AND_MAGiC: {id: "Spells and Magic", title:"PLAYER’S OPTION: Spells & Magic"},
     SAGE_ADVICE: {id: "Sage Advice", title: "Dragon Magazine: Sage Advice"},
     HIGH_LEVEL_CAMPAIGNS: {id: "DMGR High-Level Campaigns", title: "Dungeon Master Option: High-Level Campaign"},
     WIZARD_SPELL_COMPENDIUM_4: {id: 'WSC 4', title: "Wizard’s Spell Compendium Volume Four"},
