@@ -14,6 +14,7 @@ SPELLS_AND_MAGIC.chapters.push({
     name: 'Appendix',
     number: '3',
     heading: 'Wizard Spells by School',
+    foreword: `As mentioned in Chapter 2, some spells have been reassigned to the school of universal magic.`,
     sections: [
         {
             id: 'universal-magic',
@@ -6539,3 +6540,3078 @@ SPELLS_AND_MAGIC.chapters.push({
         }
     ]
 });
+SPELLS_AND_MAGIC.chapters.push({
+    name: 'Appendix',
+    number: '4',
+    heading: 'Priest Spells by Sphere',
+    foreword: [
+        `In the PHB, clerics have major access to all, astral, charm, combat, creation, divination, guardian, healing, necromantic, protection, summoning, sun, and minor access to elemental.`,
+        `**Revision: Clerics lose access to sun, elemental air, and elemental fire. They retain minor access to elemental water and elemental earth.**`,
+        `Previously, druids had major access to all, animal, elemental, healing, plant, weather, and minor access to divination.`,
+        `**Revision: Druids lose access to the sphere of divination. They gain major access to the sphere of sun.**`,
+        ``,
+        `As mentioned in Chapter 3, some spells have been added to the sphere of all. Also, other spheres have been reorganized.`
+    ],
+    sections: [
+        {
+            id: 'all',
+            heading: 'All',
+            foreword: `**(Major: any priest)**`,
+            entries: [
+                {
+                    page_number: '186',
+                    entry: [
+                        `Bless/Curse (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Combine (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Detect Magic (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Orison (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Purify Food & Drink/Putrefy Food & Drink (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Chant (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Mystic Transfer (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Sanctify/Defile (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Dispel Magic (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Remove Curse/Bestow Curse (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Focus (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Tongues (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Uplift (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Atonement (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Commune (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Meld (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Quest (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `True Seeing/False Seeing (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Speak with Monsters (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Gate (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'animal',
+            heading: 'Animal',
+            foreword: `**(Major: shaman, druid)**`,
+            entries: [
+                {
+                    page_number: '186',
+                    entry: [
+                        `Animal Friendship (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Calm Animals (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Invisibility to Animals (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Locate Animals or Plants (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Charm Person or Mammal (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Messenger (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Snake Charm (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Speak with Animals (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Control Animal (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Hold Animal (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Summon Insects (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Animal Summoning I (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Call Woodland Beings (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Giant Insect (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Repel Insects (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Animal Growth (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Animal Summoning II (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Commune with Nature (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Insect Plague (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Animal Summoning III (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Antianimal Shell (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Creeping Doom (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Reincarnate (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'astral',
+            heading: 'Astral',
+            foreword: `**(Major: cleric)**`,
+            entries: [
+                {
+                    page_number: '186',
+                    entry: [
+                        `Astral Celerity (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Speak with Astral Traveler (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Astral Awareness (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Ethereal Barrier (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Astral Window (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Etherealness (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Join with Astral Traveler (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Plane Shift (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Astral Spell (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'chaos',
+            heading: 'Chaos',
+            foreword: `**(Major: chaotic crusaders)**`,
+            entries: [
+                {
+                    page_number: '186',
+                    entry: [
+                        `Battlefate (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Mistaken Missive (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Chaos Ward (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Dissension's Feast (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Miscast Magic (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Random Causality (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Chaotic Combat (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Chaotic Sleep (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Inverted Ethics (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Chaotic Commands (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Entropy Shield (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Uncontrolled Weather (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'charm',
+            heading: 'Charm',
+            foreword: `**(Major: clerics)**`,
+            entries: [
+                {
+                    page_number: '186',
+                    entry: [
+                        `Command (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Remove Fear/Cause Fear (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Sanctuary (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Enthrall (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Hold Person (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Music of the Spheres (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Snake Charm (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Dictate (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Emotion Control (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Cloak of Bravery/Cloak of Fear (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Free Action (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Imbue with Spell Ability (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Command Monster (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Confusion (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Exaction (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'combat',
+            heading: 'Combat',
+            foreword: `**(Major: clerics, crusaders; Minor: monks)**`,
+            entries: [
+                {
+                    page_number: '186',
+                    entry: [
+                        `Command (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Magical Stone (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Aid (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Spiritual Hammer (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Prayer (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Unearthly Choir (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Recitation (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Flame Strike (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Righteous Wrath of the Faithful (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Spiritual Wrath (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Word of Recall (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Holy Word/Unholy Word (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'creation',
+            heading: 'Creation',
+            foreword: `**(Major: clerics)**`,
+            entries: [
+                {
+                    page_number: '186',
+                    entry: [
+                        `Light/Darkness (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Create Holy Symbol (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Continual Light/Continual Darkness (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Create Food & Water (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Blessed Abundance (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Blade Barrier (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Heroes' Feast (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `The Great Circle/The Black Circle (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'divination',
+            heading: 'Divination',
+            foreword: `**(Major: clerics, monks)**`,
+            entries: [
+                {
+                    page_number: '186',
+                    entry: [
+                        `Analyze Balance (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Detect Evil/Detect Good (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Detect Poison (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Augury (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Detect Charm/Undetectable Charm (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Find Traps (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Detect Spirits (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Extradimensional Detection (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Locate Object/Obscure Object (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Speak with Dead (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Detect Lie/Undetectable Lie (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Divination (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Omniscient Eye (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Consequence (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Magic Font (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Find the Path/Lose the Path (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Stone Tell (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Divine Inspiration (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'elemental-air',
+            heading: 'Elemental, Air',
+            foreword: `**(Major: druids)**`,
+            entries: [
+                {
+                    page_number: '186',
+                    entry: [
+                        `Wind Column (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Dust Devil (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Wind Servant (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Zone of Sweet Air (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Windborne (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Air Walk (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Cloud of Purification (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '186',
+                    entry: [
+                        `Control Winds (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Whirlwind (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Conjure Air Elemental (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Wind Walk (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'elemental-earth',
+            heading: 'Elemental, Earth',
+            foreword: `**(Major: druids; Minor: clerics)**`,
+            entries: [
+                {
+                    page_number: '187',
+                    entry: [
+                        `Strength of Stone (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Soften Earth and Stone (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Meld into Stone (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Stone Shape (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Adamantite Mace (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Spike Stones (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Transmute Rock to Mud/Transmute Mud to Rock (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Stone Tell (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Animate Rock (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Antimineral Shell (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Conjure Earth Elemental (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Earthquake (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Transmute Metal to Wood (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'elemental-fire',
+            heading: 'Elemental, Fire',
+            foreword: `**(Major: druids)**`,
+            entries: [
+                {
+                    page_number: '187',
+                    entry: [
+                        `Firelight (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Log of Everburning (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Fire Trap (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Flame Blade (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Heat Metal/Chill Metal (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Produce Flame (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Flame Walk (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Protection from Fire (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Pyrotechnics (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Produce Fire/Quench Fire (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Animate Flame (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Wall of Fire (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Conjure Fire Elemental (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Fire Seeds (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Chariot of Sustarre (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Fire Storm (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'elemental-water',
+            heading: 'Elemental, Water',
+            foreword: `**(Major: druids; Minor: clerics)**`,
+            entries: [
+                {
+                    page_number: '187',
+                    entry: [
+                        `Create Water/Destroy Water (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Watery Fist (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Water Breathing/Air Breathing (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Water Walk (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Lower Water/Raise Water (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Reflecting Pool (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Produce Ice (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Part Water (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Transmute Water to Dust/Improved Create Water (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Conjure Water Elemental (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Tsunami (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'guardian',
+            heading: 'Guardian',
+            foreword: `**(Major: clerics, crusaders, monks)**`,
+            entries: [
+                {
+                    page_number: '187',
+                    entry: [
+                        `Blessed Watchfulness (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Light/Darkness (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Sacred Guardian (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Iron Vigil (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Silence, 15' Radius (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Wyvern Watch (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Continual Light/Continual Darkness (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Glyph of Warding (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Abjure (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Dimensional Anchor (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Dispel Evil/Dispel Good (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Unceasing Vigilance of the Holy Sentinel (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Blade Barrier (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Forbiddance (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Symbol (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'healing',
+            heading: 'Healing',
+            foreword: `**(Major: clerics, crusaders, druids; Minor: monks, shamans)**`,
+            entries: [
+                {
+                    page_number: '187',
+                    entry: [
+                        `Cure Light Wounds/Cause Light Wounds (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Cure Moderate Wounds/Cause Moderate Wounds (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Slow Poison (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Cure Blindness or Deafness/Cause Blindness or Deafness (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Cure Disease/Cause Disease (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Hold Poison (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Repair Injury (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Cure Serious Wounds/Cause Serious Wounds (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Fortify (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Neutralize Poison/Poison (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Cure Critical Wounds/Cause Critical Wounds (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Heal/Harm (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Regenerate (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'law',
+            heading: 'Law',
+            foreword: `**(Major: lawful crusaders)**`,
+            entries: [
+                {
+                    page_number: '187',
+                    entry: [
+                        `Command (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Protection from Chaos (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Calm Chaos (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Enthrall (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Hold Person (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Dictate (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Rigid Thinking (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Strength of One (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Compulsive Order (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Defensive Harmony (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Champion's Strength (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Impeding Permission (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Legal Thoughts (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'necromantic',
+            heading: 'Necromantic',
+            foreword: `**(Major: clerics; Minor: crusaders, monks)**`,
+            entries: [
+                {
+                    page_number: '187',
+                    entry: [
+                        `Dispel Fatigue (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Invisibility to Undead (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Aid (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Restore Strength (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Animate Dead (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Feign Death (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Negative Plane Protection (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Remove Paralysis (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Speak with Dead (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Suspended Animation (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Unfailing Endurance (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Raise Dead (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Restoration (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Resurrection (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'numbers',
+            heading: 'Numbers',
+            foreword: `**(Major: Monks)**`,
+            entries: [
+                {
+                    page_number: '187',
+                    entry: [
+                        `Analyze Balance (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Calculate (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Personal Reading (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Moment (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Music of the Spheres (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Etherealness (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Extradimensional Detection (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Moment Reading (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Telethaumaturgy (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Addition (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Dimensional Folding (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Probability Control (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Consequence (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Dimensional Translocation (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Extradimensional Manipulation (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Extradimensional Pocket (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Physical Mirror (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Seclusion (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Spacewarp (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Timelessness (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'plant',
+            heading: 'Plant',
+            foreword: `**(Major: druids; Minor: shamans)**`,
+            entries: [
+                {
+                    page_number: '187',
+                    entry: [
+                        `Entangle (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Locate Animals or Plants (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Pass without Trace (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Shillelagh (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Barkskin (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Detect Snares & Pits (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Goodberry/Badberry (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Trip (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Warp Wood (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Plant Growth (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Slow Rot (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Snare (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Spike Growth (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Tree (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Hallucinatory Forest (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Hold Plant (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Plant Door (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Speak with Plants (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Sticks to Snakes (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Antiplant Shell (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Commune with Nature (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '187',
+                    entry: [
+                        `Pass Plant (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Liveoak (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Transport Via Plants (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Turn Wood (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Wall of Thorns (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Changestaff (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'protection',
+            heading: 'Protection',
+            foreword: `**(Major: clerics, shamans; Minor: crusaders)**`,
+            entries: [
+                {
+                    page_number: '188',
+                    entry: [
+                        `Endure Cold/Endure Heat (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Protection from Evil/Protection from Good (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Ring of Hands/Ring of Woe (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Sanctuary (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Resist Acid and Corrosion (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Resist Fire/Resist Cold (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Withdraw (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Line of Protection/Line of Destruction (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Magical Vestment (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Negative Plane Protection (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Protection from Evil, 10' Radius/Protection from Good, 10' Radius (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Remove Paralysis (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Spell Immunity (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Antiplant Shell (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Impregnable Mind (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Antianimal Shell (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Antimineral Shell (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Impervious Sanctity of Mind (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'summoning',
+            heading: 'Summoning',
+            foreword: `**(Major: clerics, shamans)**`,
+            entries: [
+                {
+                    page_number: '188',
+                    entry: [
+                        `Call Upon Faith (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Draw Upon Holy Might (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Dust Devil (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Messenger (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Summon Animal Spirit (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Abjure (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Dimensional Translocation C5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Dispel Evil/Dispel Good (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Aerial Servant (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Animate Object (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Conjure Animals (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Word of Recall (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Exaction (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Mind Tracker (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Spirit of Power (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Succor/Call (7th)`
+                    ],
+                    comment: 'Added reverse spell "Call"',
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'sun',
+            heading: 'Sun',
+            foreword: `**(Major: druids)**`,
+            entries: [
+                {
+                    page_number: '188',
+                    entry: [
+                        `Light/Darkness (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Sunscorch (1ist)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Continual Light/Continual Darkness (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Starshine (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Blessed Warmth (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Moonbeam (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Rainbow (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Sol's Searing Orb (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Sunray (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'thought',
+            heading: 'Thought',
+            foreword: `**(Major: Monks)**`,
+            entries: [
+                {
+                    page_number: '188',
+                    entry: [
+                        `Emotion Read (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Thought Capture (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Idea (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Mind Read (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Emotion Control (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Memory Read (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Telepathy (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Genius (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Mental Domination (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Modify Memory (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Rapport (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Solipsism (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Thought Broadcast (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Impregnable Mind (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Memory Wrack (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Mindshatter (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Thoughtwave (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Disbelief (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Group Mind (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Impervious Sanctitv of Mind (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Mind Tracker (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'time',
+            heading: 'Time',
+            foreword: `**(Minor: Monks)**`,
+            entries: [
+                {
+                    page_number: '188',
+                    entry: [
+                        `Know Age (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Know Time (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Hesitation (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Nap (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Accelerate Healing (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Choose Future (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Unfailing Premonition (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Age Plant (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Body Clock (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Age Object (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Othertime (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Repeat Action (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Time Pool (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Age Creature (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Reverse Time (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Skip Day (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Age Dragon (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'travel',
+            heading: 'Travel',
+            foreword: `**(Major: Shamans)**`,
+            entries: [
+                {
+                    page_number: '188',
+                    entry: [
+                        `Know Direction (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Aura of Comfort (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Lighten Load (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Create Campsite (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Helping Hand (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Know Customs (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Circle of Privacy (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Tree Steed (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Clear Path (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Easy March (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Monster Mount (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Hovering Road (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'war',
+            heading: 'War',
+            foreword: `**(Major: crusaders)**`,
+            entries: [
+                {
+                    page_number: '188',
+                    entry: [
+                        `Courage (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Morale (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Emotion Perception (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Rally (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Adaptation (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Caltrops (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Fortify (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Entrench (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Leadership/Doubt (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Tanglefoot/Selective Passage (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Disguise (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Illusory Artillery (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Gravity Variation (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Illusory Fortification (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Shadow Engine (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'wards',
+            heading: 'Wards',
+            foreword: `**(Major: Crusaders, shamans)**`,
+            entries: [
+                {
+                    page_number: '188',
+                    entry: [
+                        `Antivermin Barrier (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Weighty Chest (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Ethereal Barrier (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Frisky Chest (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Zone of Truth (2nd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Efficacious Monster Ward (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Invisibility Purge (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Squeaking Floor (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Thief's Lament (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Zone of Sweet Air (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Fire Purge (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Weather Stasis (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Barrier of Retention (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Elemental Forbiddance (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Grounding (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Shrieking Walls (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Undead Ward (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Crushing Walls (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Dragonbane (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Land of Stability (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Tentacle Walls (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        },
+        {
+            id: 'weather',
+            heading: 'Weather',
+            foreword: `**(Major: Druids)**`,
+            entries: [
+                {
+                    page_number: '188',
+                    entry: [
+                        `Faerie Fire (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Obscurement (1st)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Call Lightning (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Weather Prediction (3rd)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Control Temperature, 10' Radius (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Protection from Lightning (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Weather Stasis (4th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Control Winds (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Rainbow (5th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Weather Summoning (6th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '188',
+                    entry: [
+                        `Control Weather (7th)`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        }
+    ]
+})
