@@ -7,7 +7,7 @@ const SPELLS_AND_MAGIC = {
     title: "PLAYER’S OPTION™: Spells & Magic",
     shortTitle: 'S&M',
     id: 's-and-m',
-    sourceAttribute: SOURCE.SPELLS_AND_MAGiC,
+    sourceAttribute: SOURCE.SPELLS_AND_MAGIC,
     chapters: [],
 };
 SPELLS_AND_MAGIC.chapters.push({
@@ -9614,4 +9614,6 @@ SPELLS_AND_MAGIC.chapters.push({
             ]
         }
     ]
-})
+});
+
+module.exports = SPELLS_AND_MAGIC;
