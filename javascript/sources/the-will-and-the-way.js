@@ -253,7 +253,7 @@ THE_WILL_AND_THE_WAY.chapters.push({
                             entry: [
                                 `**Cause Decay:** This can be used against an opponent's weapons or armor by making a touch attack roll.`,
                             ],
-                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.PSIONICS]
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.PSIONICS, ATTRIBUTE.TOUCH_SPELLS]
                         },
                         {
                             page_number: '46',

@@ -817,7 +817,7 @@ DRAGON_MAGAZINES.push({
                 `Blinded creatures are unable to cast any spell that requires a target, but spells that can be cast on an area (such as ***fireball***) or delivered by touch (such as ***cure light wounds***) may still be used. Deafness can cause spells with verbal components to be miscast and fail. The failure chance is up to you, but it shouldn't exceed 20% (less for spells with short casting times). The cleric spell ***holy word*** has a deafness effect that causes spells to fail 50% of the time; this is due mostly to the extreme power of the holy word, not merely the deafness.`
             ],
             comment: `***Holy word*** deafness repeated in #256`,
-            attributes: [GAME_SYSTEM.FIRST_EDITION, ATTRIBUTE.BLINDNESS, ATTRIBUTE.DEAFNESS],
+            attributes: [GAME_SYSTEM.FIRST_EDITION, ATTRIBUTE.BLINDNESS, ATTRIBUTE.DEAFNESS, ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '9',
@@ -1808,7 +1808,7 @@ DRAGON_MAGAZINES.push({
                 `Blinded creatures are unable to cast any spell that requires a visible target (such as ***magic missile***). Spells that can be cast on an area (such as ***fireball***) or delivered by touch (such as ***cure light wounds***) are still usable.`,
                 `Deafness can cause spells with verbal components to be miscast and fail. The failure chance is up to the DM, but it shouldn't exceed 20% (less for spells with short casting times). A 2% cumulative failure chance per segment of spell-casting is suggested. The spell ***holy word*** has a deafening effect that causes spells to fail 50% of the time. This is due mostly to the extreme power of the ***holy word***, not merely the condition of deafness.`
             ],
-            attributes: [GAME_SYSTEM.FIRST_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.BLINDNESS, ATTRIBUTE.DEAFNESS],
+            attributes: [GAME_SYSTEM.FIRST_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.BLINDNESS, ATTRIBUTE.DEAFNESS, ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '7',
@@ -2120,7 +2120,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Some campaigns allow a caster to hold a spell "on hands" indefinitely, provided that the caster does not attempt to cast another spell. The spell "on hands" is discharged when the caster next touches someone or something. Some DMs rule that the spell remains only as long as the caster concentrates on touching a recipient—the spell is lost if the caster abandons the touch attempt for any reason.`
             ],
-            attributes: [GAME_SYSTEM.FIRST_EDITION],
+            attributes: [GAME_SYSTEM.FIRST_EDITION, ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '94',
@@ -4250,7 +4250,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `If you wish to assign a speed factor to a touch attack of any kind, I suggest you use the rule on page 94 of the ***PHB***, where a "natural" attacks speed factor depends on the attacker's size. For a man-sized creature, the speed factor is 3.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '63',
@@ -5491,7 +5491,7 @@ DRAGON_MAGAZINES.push({
                 `The caster is free to change the image's facing relative to himself just by concentrating for one round, which limits the caster to half movement and no attacks. Once the relationship changes, the image goes right on duplicating all the caster's actions, all the way down to spell-casting.`
             ],
             comment: 'The same answer is repeated in #227',
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '52',
@@ -6625,7 +6625,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `If you take the description literally, that's exactly what it means. In this interpretation, a ***spectral hand*** is strictly an instrument of combat and the magical channel between the caster and the ***hand*** can conduct only baneful magics. However, a DM could decide that "touch attack spells" means "touch-delivered spells." Game balance in your game probably won't suffer if you decide to let ***spectral hand*** work with all fourth level and lower spells with "touch" range.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '85-86',
@@ -7354,7 +7354,7 @@ DRAGON_MAGAZINES.push({
                 `***Wraithform*** does not prevent spellcasting or psionics of any kind, nor does it prevent attacks. All the caster's attacks, however, must be directed at targets on the Ethereal plane. Personal spells such as ***fly*** or ***infravision*** work normally on the caster. Attack spells such as ***magic missile*** or ***fireball*** work, too, but, only when cast at ethereal targets. The DM must decide about spells and psionic disciplines that fall in between. ***Clairvoyance***, for example, cannot cross planer boundaries and I'm inclined to suggest that a caster in ***wraithform*** can scry only ethereal locations. Likewise, ***fly*** spells can be cast, by touch, on creatures other than the caster, but the DM might rule that only ethereal creatures can be touched. (After all, a touch-delivered attack spell would have to be used against an ethereal target.)`,
                 `As "Sage Advice" has pointed out before, invisibility does not prohibit all spellcasting, only offensive spells.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.INVISIBILITY],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.INVISIBILITY, ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '44',
@@ -7403,7 +7403,7 @@ DRAGON_MAGAZINES.push({
             question: `I've been busy compiling a list of spells from various AD&D game products, and I've hit a snag. In several places, different books give different levels for the same spell, for example, ***dispel illusion*** is listed at third level in the original ***Player's Handbook*** and fourth level in ***Oriental Adventures***. Which should I use? Also there are a few spells that are so similar that I don't know which to use, for example ***mummy rot*** from ***The Complete Wizard's Handbook*** and ***mummy's touch*** from the FORGOTTEN REALMS® ***Adventures*** book.`,
             answer: [
                 `Generally speaking, you should go with the most recently published material. Other considerations sometimes take precedence, however. In the case of ***dispel illusion***, for example, you're dealing with a spell that has been written out of the current game. Illusionists in the original game got this spell as a third-level spell, and wu jen (who are generalists) got it as a fourth-level spell. In the current game, illusionists don't get Abjurations at all, so I recommend pegging ***dispel illusion*** at fourth level.`,
-                `If you're playing a FORGOTTEN REALMS campaign, you probably ought to use ***mummy's touch*** because it was created for FR campaigns. If you use another world, your decision depends on how nice you want to be to spell-casters. ***Mummy's touch*** is generally more powerful than ***mummy rot***, and is two levels lower to boot (magic on Toril tends to be potent). On the other hand, mummy' s touch has a save, and ***mummy rot*** does not (at least when the spell is used against a human, demihuman, or humanoid). You might want to compromise and use one spell or the other as a fourth-level spell.`
+                `If you're playing a FORGOTTEN REALMS campaign, you probably ought to use ***mummy's touch*** because it was created for FR campaigns. If you use another world, your decision depends on how nice you want to be to spell-casters. ***Mummy's touch*** is generally more powerful than ***mummy rot***, and is two levels lower to boot (magic on Toril tends to be potent). On the other hand, ***mummy's touch*** has a save, and ***mummy rot*** does not (at least when the spell is used against a human, demihuman, or humanoid). You might want to compromise and use one spell or the other as a fourth-level spell.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
@@ -8054,7 +8054,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `There's nothing mysterious or magical about touching a creature to deliver a spell, the caster completes the spell, then touches the target. A multi-classed caster is allowed to use the best available THAC0.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '89',
@@ -8525,7 +8525,7 @@ DRAGON_MAGAZINES.push({
                 `Generally, a touch-delivered spell remains active only during the round when it is cast (see ***DMG***, page 61). There are a few spells, such as ***dispel evil*** that remain active for a short time or until triggered. Check the description of the spell to be sure.`,
                 `It's safe to assume that a fairly firm touch on the recipient is required to complete a touch-delivered spell, so it's entirely reasonable to allow Strength bonuses or penalties to modify the touch attempt, but that's not official.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL, ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '96',
@@ -8565,7 +8565,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `***Stoneskin*** does not protect against magical attacks of any kind—even touch-delivered spells—or against special attacks that do not involve cuts, stabs, blows, or the like. ***Stoneskin*** prevents a giant snake or spider from injecting venom with its fangs, but it won't prevent green slime from dissolving the character or an undead creature from draining life energy.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.STONESKIN],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.STONESKIN, ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '96',
@@ -12259,7 +12259,7 @@ DRAGON_MAGAZINES.push({
                 `Any touch-delivered spell requires a successful attack roll against the target's normal armor class, including adjustments for armor worn. There's no law of physics that applies here, its just the way touch-delivered spells work. Allowing ***shocking grasp*** to ignore metallic armor sounds fine to me, but any adjustments for the target's shield, Dexterity, and defensive magic (including metal armor's enchantment) should still apply.`,
             ],
             comment: `This is using the core rules. ***PO: S&M*** page 120 have rules that allow you to bypass armor.`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '93',
@@ -13661,7 +13661,7 @@ DRAGON_MAGAZINES.push({
                 `Sometimes, however, a spell's statistics can settle the issue pretty well. Any spell with a range of "touch" can be cast for another's benefit. On the other hand, a spell with a range of "0" always affects the caster, and any powers the spell grants cannot be transferred elsewhere no matter what the spell's description might imply; the spell's area of effect might be large enough to affect multiple creatures, but if the range is 0 the spell always must be centered on the caster.`,
                 `Perhaps the statistics for the ***find familiar*** spell should read: Range: 0; Area of Effect: 1 creature within a radius of 1 mile per caster level.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.DISPEL_MAGIC, ATTRIBUTE.CHARM],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.DISPEL_MAGIC, ATTRIBUTE.CHARM, ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '12+14',
@@ -13681,7 +13681,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Yes. If the spell negates the basic damage from a hit, it negates any additional physical effects involving cuts, pokes, or impact from that hit. Touch-delivered spells are not negated, nor are magical effects, such as the electrical damage from a ***javelin of lightning*** (though the 1d6 hp physical damage from the javelin is). ***Stoneskin*** never negates damage that does not involve cutting, piercing, or striking. Damage from a flask of burning oil or damage from acid harms creatures protected by ***stoneskin***.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.STONESKIN],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.STONESKIN, ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '14',
@@ -14147,7 +14147,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `No. The attacker is "armed" with the spell or special ability.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL, ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '20+22',
@@ -16628,7 +16628,7 @@ DRAGON_MAGAZINES.push({
                 `Deafness of any kind causes any spell with a verbal component to fail at least 20% of the time. Some forms of magical deafness, such as ***holy word***, impose a higher spell failure chance.`
             ],
             comment: `***Holy word*** deafness repeated from #150. Sadly there is no mention of the initiative penalty for the priest spells ***cause blindness or deafness***. The +4 to saves for invisible creatures aligns with what is written in the ***improved invisibility*** spell.`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.BLINDNESS,ATTRIBUTE.DEAFNESS, ATTRIBUTE.SILENCE,ATTRIBUTE.INVISIBILITY],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.BLINDNESS,ATTRIBUTE.DEAFNESS, ATTRIBUTE.SILENCE,ATTRIBUTE.INVISIBILITY, ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '30',
@@ -17108,7 +17108,7 @@ DRAGON_MAGAZINES.push({
                 `I think it's OK to use a house rule that waives the "see the target" requirement for spells that are cast on some point in space rather than on a specific object or creature (such as ***dispel magic*** or ***fireball***), provided that the caster can specify the exact distance and direction from himself. For example, if it's a dark night and the caster is sleeping 30 feet southwest of his own front door, he can't just say, "I cast ***dispel magic*** on the front door." He must say, "I cast ***dispel magic*** centered on a point 30 feet directly northeast of me." The spell still fails if there is a solid object (such as the bedroom wall) between the Wizard and the front door. The Wizard could not use ***magic missile*** or ***charm person*** this way, because these spells must be targeted on creatures. For purposes of this rule, treat any constriction too small to admit a human as a solid object; for example, a character could not use this rule to toss a ***fireball*** through an arrow slit.`,
             ],
             comment: `A bit inconsistent with #220 that say you can throw a spell through an arrow slit.`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '24',
@@ -17245,7 +17245,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `According to Chapter 7 in the ***Player's Handbook***, the caster must be able to see the target point to cast any spell with a range other than "touch." If the caster is unable to see the target point for any reason, he cannot cast the spell. If the spell has "touch" range, the caster can use the spell against anything he can touch, whether he can see it or not. Although the rules don't specifically say so, it stands to reason that a caster can always use a spell with a range of "0" even if he can't see or touch anything. It also stands to reason that a character can cast any spell with a range of greater than "0" against anything he can touch whether he can see it or not.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.BLINDNESS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.BLINDNESS,ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '23',
