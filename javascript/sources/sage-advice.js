@@ -1952,7 +1952,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `A ***dispel magic*** spell automatically works on the caster's own spells; a die roll is required to determine its success on all other magics. The two ***globe of invulnerability*** spells can be dispelled; note also that they are visible. If any ***globe of invulnerability*** is dispelled, then all other magical effects in the ***dispel magic*** spell's area of effect are subject to its effects. If a ***globe of invulnerability*** is not dispelled, it protects all magic effects within its area of effect. There are some spells that cannot be dispelled; ***anti-magic shell*** and ***wall of force*** are two examples.`
             ],
-            attributes: [GAME_SYSTEM.FIRST_EDITION, ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.FIRST_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.DISPEL_MAGIC],
         },
         {
             page_number: '7',
