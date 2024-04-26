@@ -15262,7 +15262,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `In this case, "square feet" refers to the mansion's total floor space. The caster can create multiple stories, but the floor space in each counts toward the limit. You can assume any particular story's ceiling height cannot exceed half the area's longest dimension, or 10 feet, whichever is higher.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.DISPEL_MAGIC],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
 });
