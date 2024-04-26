@@ -16,6 +16,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
     heading: 'Spells and Magical Items',
     sections: [
         {
+            id: 'comments-spells-and-magical-items',
             heading: 'Additional Comments on Spells and Magical Items',
             foreword: `This section contains new and updated information for adjudicating magic use in your campaign. Items marked with a ✝ are from the *Tome of Magic*, spells marked with a ‡ from *The Complete Wizard's Handbook*, and all other spells and items are from the *Player's Handbook*. Some of the entries contain optional material, presented in a separate paragraph on a gray background.`,
             sections: [
@@ -1135,5 +1136,55 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
         }
     ]
 });
+DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
+    name: 'Chapter',
+    number: '6',
+    heading: 'True Dweomers',
+    sections: [
+        {
+            id: 'true-dweomers-in-play',
+            heading: 'True Dweomers in Play',
+            entries: [
+                {
+                    page_number: '134',
+                    entry: [
+                        `**Protective Devices:** Items such as *rings of protection* work normally against 10th-level spells. True dweomers cannot be stored or absorbed. Pale lavender and lavender and green *ioun stones* are ineffective against true dweomers, as are *rods of absorption* and the absorption powers of *staff of the magi.*`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '134',
+                    entry: [
+                        `**Dispel Effects:** The 3rd-level *dispel magic* spell is of limited se against 10th-level spells. To be effective, *dispel magic* must be directed solely against the true dweomer to be dispelled. If successful, the true dweomer is rendered nonoperational for 1d4 rounds. A *dispel magic* spell cannot disrupt a true dweomer whose area of effect is larger than the *dispel magic* spell's area of effect.`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.DISPEL_MAGIC]
+                },
+                {
+                    page_number: '135',
+                    entry: [
+                        `*Mordenkainen's disjunction* has a 1% chance per caster level of disjoining any true dweomer. If any portion of the enchantment is disjoined, the entire true dweomer is disjoined.`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '135',
+                    entry: [
+                        `A *wish* automatically dispels a true dweomer, but that is the only effect the *wish* has. A *limited wish* spell can temporarily neKate a true dweomer for 1d8 hours.`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+                {
+                    page_number: '135',
+                    entry: [
+                        `**Magical Barriers:** A dispel true dweomer instantly destroys any wall spell or magical barrier created by a 1st-9th level spell or magical device if it succeeds, including *wall of force, prismatic wall, prismatic sphere, antimagic shell,* and *the cube of force*`,
+                        `A destroy true dweomer eliminates a *wall of force, prismatic wall,* or *prismatic sphere* if its area of effect is large enough to encompass the whole spell effect.`,
+                        `If not destroyed or dispelled, any barrier that keeps out magic keeps out a true dweomer unless the true dweomer's area of effect is large enough to circumvent the barrier. For example, a flat *wall of force* cannot keep out a province-sized true dweomer. Spherical barriers cannot be circumvented in this manner.`
+                    ],
+                    attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL]
+                },
+            ]
+        }
+    ]
+})
 
 module.exports = DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS;
