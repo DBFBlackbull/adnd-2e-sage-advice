@@ -44,4 +44,9 @@ div(class="wrapper")
                 span(class='title') Shared Spell
                 br
                 span(class="entry") #{spell}
-                +attributes({attributes: [gameSystems.SECOND_EDITION, attributes.SPELL]}, sources.SHARED_SPELLS)
+                -
+                    let attrs = [gameSystems.SECOND_EDITION, attributes.SPELL];
+                    if (spell === 'Dispel Magic') {
+                        attrs.push(attributes.DISPEL_MAGIC);
+                    }
+                +attributes({attributes: attrs}, sources.SHARED_SPELLS)
