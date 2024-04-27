@@ -1155,7 +1155,7 @@ DUNGEON_MASTER_OPTION_HIGH_LEVEL_CAMPAIGNS.chapters.push({
                 {
                     page_number: '134',
                     entry: [
-                        `**Dispel Effects:** The 3rd-level *dispel magic* spell is of limited se against 10th-level spells. To be effective, *dispel magic* must be directed solely against the true dweomer to be dispelled. If successful, the true dweomer is rendered nonoperational for 1d4 rounds. A *dispel magic* spell cannot disrupt a true dweomer whose area of effect is larger than the *dispel magic* spell's area of effect.`
+                        `**Dispel Effects:** The 3rd-level *dispel magic* spell is of limited use against 10th-level spells. To be effective, *dispel magic* must be directed solely against the true dweomer to be dispelled. If successful, the true dweomer is rendered nonoperational for 1d4 rounds. A *dispel magic* spell cannot disrupt a true dweomer whose area of effect is larger than the *dispel magic* spell's area of effect.`
                     ],
                     attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.DISPEL_MAGIC]
                 },
