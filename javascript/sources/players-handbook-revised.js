@@ -220,7 +220,7 @@ PLAYERS_HANDBOOK.chapters.push({
 });
 PLAYERS_HANDBOOK.chapters.push({
     name: 'Appendix',
-    number: '6',
+    number: '2',
     heading: 'Notes on Spells',
     sections: [
         {
@@ -235,6 +235,124 @@ PLAYERS_HANDBOOK.chapters.push({
                     attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.BLINDNESS, ATTRIBUTE.TOUCH_SPELLS]
                 }
             ],
+        }
+    ]
+});
+PLAYERS_HANDBOOK.chapters.push({
+    name: 'Appendix',
+    number: '3',
+    heading: 'Wizard Spells',
+    sections: [
+        {
+            id: '8-level-spells',
+            heading: 'Eighth-Level Spells',
+            sections: [
+                {
+                    id: 'permanency',
+                    heading: 'Permanency',
+                    entries: [
+                        {
+                            page_number: '242',
+                            entry: [
+                                `**Permanency**`,
+                                `**(Alteration)**`,
+                                ``,
+                                `
+<table>
+<tr>
+    <td>Range: Special</td>
+    <td>Components: V, S</td>
+</tr>
+<tr>
+    <td>Duration: Permanent</td>
+    <td>Casting Time: 2 rds</td>
+</tr>
+<tr>
+    <td>Area of Effect: Special</td>
+    <td>Saving Throw: None</td>
+</tr>
+</table>`,
+                                `This spell affects the duration of certain other spells, making the duration permanent. The personal spells upon which a *permanency* is known to be effective are as follows:`,
+                                `
+<table>
+<tr>
+    <td>*comprehend languages*</td>
+    <td>*protection from evil*</td>
+</tr>
+<tr>
+    <td>*detect evil*</td>
+    <td>*protection from normal missiles read magic*</td>
+</tr>
+<tr>
+    <td>*detect invisibility*</td>
+    <td>*read magic*</td>
+</tr>
+<tr>
+    <td>*detect magic*</td>
+    <td>*tongues*</td>
+</tr>
+<tr>
+    <td>*infravision*</td>
+    <td>*unseen servant*</td>
+</tr>
+<tr>
+    <td>*protection from cantrips*</td>
+</tr>
+</table>`,
+                                `The wizard casts the desired spell and then follows it with the *permanency* spell. Each *permanency* spell lowers the wizard's Constitution by 1 point. The wizard cannot cast these spells upon other creatures. This application of *permanency* can be dispelled only by a wizard of greater level than the spellcaster was when he cast the spell.`,
+                                `In addition to personal use, the *permanency* spell can be used to make the following object/creature or area-effect spells permanent:`,
+                                `
+<table>
+<tr>
+    <td>*enlarge*</td>
+    <td>*prismaticsphere*</td>
+</tr>
+<tr>
+    <td>*fear*</td>
+    <td>*stinkingcloud*</td>
+</tr>
+<tr>
+    <td>*gust of wind*</td>
+    <td>*wall of fire*</td>
+</tr>
+<tr>
+    <td>*invisibility*</td>
+    <td>*wall of force*</td>
+</tr>
+<tr>
+    <td>*magic mouth*</td>
+    <td>*web*</td>
+</tr>
+</table>`,
+                                `Additionally, the following spells can be cast upon objects or areas only and rendered permanent:`,
+                                `
+<table>
+<tr>
+    <td>*alarm*</td>
+    <td>*wall of fire*</td>
+</tr>
+<tr>
+    <td>*audible glamer*</td>
+    <td>*distance distortion*</td>
+</tr>
+<tr>
+    <td>*dancing lights*</td>
+    <td>*teleport*</td>
+</tr>
+<tr>
+    <td>*solid fog*</td>
+</tr>
+</table>`,
+                                `These applications to other spells allow it to be cast simultaneously with any of the latter when no living creature is the target, but the entire spell complex then can be dispelled normally, and thus negated.`,
+                                `The *permanency* spell is also used in the fabrication of magical items (see the 6th-level spell *enchant an item*). At the DM's option, *permanency* might become unstable or fail after a long period of at least 1,000 years. Unstable effects might operate intermittently or fail altogether.`,
+                                `The DM may allow other selected spells to be made permanent. Researching this possible application of a spell costs as much time and money as independently researching the selected spell. If the DM has already determined that the application is not possible, the research automatically fails. Note that the wizard never learns what is possible except by the success or failure of his research.`
+                            ],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.DISPEL_MAGIC]
+                        },
+                    ]
+
+                }
+            ]
         }
     ]
 });

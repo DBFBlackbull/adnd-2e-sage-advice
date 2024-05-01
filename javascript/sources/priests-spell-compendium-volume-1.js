@@ -7,7 +7,7 @@ const PRIESTS_SPELL_COMPENDIUM_VOLUME_1 = {
     title: "Priest’s Spell Compendium Volume One",
     shortTitle: "PSC 1",
     id: 'psc-1',
-    sourceAttribute: SOURCE.PRIEST_SPELL_COMPENDIUM_1,
+    sourceAttribute: SOURCE.PRIEST_SPELL_COMPENDIUM,
     chapters: [],
 };
 PRIESTS_SPELL_COMPENDIUM_VOLUME_1.chapters.push({

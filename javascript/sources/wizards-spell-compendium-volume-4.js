@@ -7,7 +7,7 @@ const WIZARDS_SPELL_COMPENDIUM_VOLUME_4 = {
     title: "Wizard’s Spell Compendium Volume Four",
     shortTitle: "WSC 4",
     id: 'wsc-4',
-    sourceAttribute: SOURCE.WIZARD_SPELL_COMPENDIUM_4,
+    sourceAttribute: SOURCE.WIZARD_SPELL_COMPENDIUM,
     chapters: [],
 };
 WIZARDS_SPELL_COMPENDIUM_VOLUME_4.chapters.push({
