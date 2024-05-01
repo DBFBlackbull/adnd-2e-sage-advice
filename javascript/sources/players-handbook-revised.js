@@ -256,7 +256,6 @@ PLAYERS_HANDBOOK.chapters.push({
                             entry: [
                                 `**Permanency**`,
                                 `**(Alteration)**`,
-                                ``,
                                 `
 <table>
 <tr>

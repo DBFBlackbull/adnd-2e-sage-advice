@@ -35,7 +35,7 @@ WIZARDS_SPELL_COMPENDIUM_VOLUME_3.chapters.push({
                         `Area of Effect: Special`,
                         `Saving Throw: None`,
                         ``,
-                        `This spell affects the duration of certain other spells, making the duration permanent.The wizard can cast this spell in three different ways: on himself, on other creatures, and on an area.`,
+                        `This spell affects the duration of certain other spells, making the duration permanent. The wizard can cast this spell in three different ways: on himself, on other creatures, and on an area.`,
                         `• *On Himself:* The wizard casts the desired spell and then follows it with the *permanency* spell. Each such *permanency* spell lowers the wizard's Constitution by 1 point. This application of *permanency* can be dispelled only by a wizard of greater level than the spellcaster was when he cast the spell. The personal spells upon which a permanency is known to be effective are as follows :`,
                         `
 <table>
@@ -74,7 +74,7 @@ WIZARDS_SPELL_COMPENDIUM_VOLUME_3.chapters.push({
     <td>*protection from cantrips*</td>
 </tr>
 </table>`,
-                        `• *On a Creature:* This application can be dispelled only by a spellcaster of greater level than the wizard was when he cast the spell. The following can made permanent if cast on another creature:`,,
+                        `• *On a Creature:* This application can be dispelled only by a spellcaster of greater level than the wizard was when he cast the spell. The following can made permanent if cast on another creature:`,
                         `
 <table>
 <tr>
@@ -85,7 +85,7 @@ WIZARDS_SPELL_COMPENDIUM_VOLUME_3.chapters.push({
     <td>*invisibility*</td>
 </tr>
 </table>`,
-                        `• *On an Object or Area*: These applications to other spells allow a *permanency* to be cast simultaneously with any of the latter. The entire spell complex can be dispelled normally, and thus negated .The *permanency* spell can be used to make the following object or area-effect spells permanent:`,
+                        `• *On an Object or Area*: These applications to other spells allow a *permanency* to be cast simultaneously with any of the latter. The entire spell complex can be dispelled normally, and thus negated. The *permanency* spell can be used to make the following object or area-effect spells permanent:`,
                         `
 <table>
 <tr>
