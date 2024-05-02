@@ -2161,7 +2161,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `This answer is up to the DM, but only true clerics should get bonus spells. For example, creatures such as dragons that have the ability to cast clerical spells do not receive bonus spells due to high wisdom because they are not members of the cleric class. Generally, a creature's wisdom score falls into the same range as its intelligence score; see the introductory section of the ***Monstrous Compendium, Volume I***.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.MONSTER_ABILITY_SCORES],
         },
         {
             page_number: '6+86',
