@@ -16791,7 +16791,7 @@ DRAGON_MAGAZINES.push({
             question: `How many spells in a character's memory can be affected by the ***draincone*** spell? Also, once ***draincone*** drains a spell, is there any limitation on when the ***draincone*** caster can use the power boost the spell provides?`,
             answer: [
                 `A ***draincone*** affects only spells that have been cast already. This includes existing spell effects and spells that have been cast for a delayed effect, such as ***fire trap***, ***explosive runes***, ***glyph of warding***, and the like.`,
-                `The ***draincone*** caster can use the energy from a disrupted spell for one of her own spells only if she casts that spell immediately after the ***draincone*** destroys aspell effect.`
+                `The ***draincone*** caster can use the energy from a disrupted spell for one of her own spells only if she casts that spell immediately after the ***draincone*** destroys a spell effect.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
