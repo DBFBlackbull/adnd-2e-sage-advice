@@ -55,10 +55,6 @@ SPELLS_AND_MAGIC.chapters.push({
     <th>Priest Spells</th>
 </tr>
 <tr>
-    <td>chill touch</td>
-    <td>cause light wounds</td>
-</tr>
-<tr>
     <td>chill touch (1st)</td>
     <td>cause light wounds (1st)</td>
 </tr>
