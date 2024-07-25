@@ -17109,7 +17109,7 @@ DRAGON_MAGAZINES.push({
                 `I think it's OK to use a house rule that waives the "see the target" requirement for spells that are cast on some point in space rather than on a specific object or creature (such as ***dispel magic*** or ***fireball***), provided that the caster can specify the exact distance and direction from himself. For example, if it's a dark night and the caster is sleeping 30 feet southwest of his own front door, he can't just say, "I cast ***dispel magic*** on the front door." He must say, "I cast ***dispel magic*** centered on a point 30 feet directly northeast of me." The spell still fails if there is a solid object (such as the bedroom wall) between the Wizard and the front door. The Wizard could not use ***magic missile*** or ***charm person*** this way, because these spells must be targeted on creatures. For purposes of this rule, treat any constriction too small to admit a human as a solid object; for example, a character could not use this rule to toss a ***fireball*** through an arrow slit.`,
             ],
             comment: `A bit inconsistent with #220 that say you can throw a spell through an arrow slit.`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.TOUCH_SPELLS],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL, ATTRIBUTE.BLINDNESS,ATTRIBUTE.TOUCH_SPELLS],
         },
         {
             page_number: '24',
