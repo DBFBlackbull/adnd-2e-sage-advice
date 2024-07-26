@@ -186,6 +186,20 @@ SPELLS_AND_MAGIC.chapters.push({
 `
                             ],
                             attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.TOUCH_SPELLS]
+                        },
+                        {
+                            page_number: '121',
+                            entry: [
+                                `***PLAYER'S OPTION: Combat & Tactics:*** In the revised initiative system introduced in the *Combat & Tactics* book, spells that require attack rolls are cast as normal (i.e., on the fast, average, or slow phase, as appropriate for the casting time). After the spell is invoked, the caster may then make his attack for the round in any subsequent phase. For example, a wizard who casts *chill touch*, a fast spell, may then make a touch attack in the average, slow, or very slow phases. Note that the character still receives only one attack per round.`
+                            ],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.TOUCH_SPELLS]
+                        },
+                        {
+                            page_number: '121',
+                            entry: [
+                                `Even though the wizard will often be 'unarmed' when he uses a touch attack spell, he does *not* provoke an attack of opportunity since he's not attempting to initiate unarmed combat. All he needs to do is touch the subject, not land a full-force punch or wrestle with the fellow. However, a victim who is guarding will still be able to make his own attack before the wizard can deliver his touch-based attack.`
+                            ],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.TOUCH_SPELLS]
                         }
                     ]
                 }
