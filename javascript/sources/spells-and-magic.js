@@ -37,7 +37,7 @@ SPELLS_AND_MAGIC.chapters.push({
                                 `Some spells that use attack rolls but ignore the victim's armor appear in Table 41: Armor-Breaching Spells.`,
                                 `Spells that create physical attacks or emulate the effects of weapons include such enchantments as *ice knife, hovering skull, Mordenkainen's sword,* and *spiritual hammer*. Since these spells manifest as tangible weapons and are wielded in the same way, the subject is allowed the full benefit of his or her armor. See Table 42: Armor-Observing Spells.`
                             ],
-                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.TOUCH_SPELLS]
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.TOUCH_SPELLS,ATTRIBUTE.SPELL_ATTACK_ROLL]
                         },
                         {
                             page_number: '120',
@@ -125,7 +125,7 @@ SPELLS_AND_MAGIC.chapters.push({
 </table>
 `
                             ],
-                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.TOUCH_SPELLS]
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.TOUCH_SPELLS,ATTRIBUTE.SPELL_ATTACK_ROLL]
                         },
                         {
                             page_number: '120',
@@ -185,7 +185,7 @@ SPELLS_AND_MAGIC.chapters.push({
 </table>
 `
                             ],
-                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.TOUCH_SPELLS]
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL, ATTRIBUTE.TOUCH_SPELLS,ATTRIBUTE.SPELL_ATTACK_ROLL]
                         },
                         {
                             page_number: '121',

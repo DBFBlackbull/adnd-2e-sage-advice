@@ -56,7 +56,8 @@ const ATTRIBUTE = {
     STONESKIN: {id: "Stoneskin"},
     DOT: {id: "Continuing Damage"},
     MAGICAL_AGING: {id: "Magical aging"},
-    TOUCH_SPELLS: {id: "Touch spells", title: "Touch attack / Spells requiring attack roll"},
+    TOUCH_SPELLS: {id: "Touch spells", title: "Touch attack"},
+    SPELL_ATTACK_ROLL: {id: "Spells with Attack Rolls"},
 
     MORNING_STAR: {id: "Morningstar", title: "What is a morning star?"},
     PRONOUNCE_DROW: {id: 'Pronounce drow', title: 'How to pronouncing "drow"'},

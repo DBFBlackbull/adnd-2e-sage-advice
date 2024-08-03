@@ -3788,7 +3788,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `The caster need not hurl all the bolts on the round of casting, but unused bolts are lost when the spell's duration expires at the end of the round. The caster must make a to-hit roll for each bolt; range modifiers do not apply to the roll, but dexterity adjustments do. The DM might wish to allow an additional +2 to-hit bonus as in the ***Melf's minute meteors*** spell. The fiery bolts are a magical attack and can affect just about any creature. Note that the bolts inflict minor piercing damage (1d6) and fire damage (4d6, save for half); creatures that are immune to only one of these forms of damage still suffer the other form of damage if struck. If the caster directs one or more bolts at a magic-resistant creature, the creature makes one magic resistance roll for the volley; if it succeeds, the entire volley is negated. Bolts from multiple casters constitute separate volleys.`,
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.SPELL_ATTACK_ROLL],
         },
         {
             page_number: '99',
@@ -14612,7 +14612,7 @@ DRAGON_MAGAZINES.push({
                 `To determine speed factor, just use the speed factor of something similar to the "created" weapon. A ***spiritual hammer***, for example, has the same speed factor as a warhammer (4), a ***rainbow*** has the speed factor of a composite short bow (6), and a ***magic stone*** has the speed factor of a dart (2). If your campaign uses the optional rule that gives lower speed factors to magical weapons, any magical bonus that a created or enchanted weapon has reduces the speed factor. If the spell doesn't grant any combat bonus, speed factor is still reduced by 1; no weapon can have a speed factor of less than 1.`
             ],
             comment: `The sage is wrong that speed can never be less than 1. #227 saying speed can never be less that 0 is correct.`,
-            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
+            attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.SPELL_ATTACK_ROLL],
         },
         {
             page_number: '18',
