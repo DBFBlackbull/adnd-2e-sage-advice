@@ -15377,6 +15377,14 @@ DRAGON_MAGAZINES.push({
                 `In the standard AD&D rules, a giant's boulder-throwing attack is not an area attack, and a giant's boulder would not drain a ***stoneskin*** charge unless actually aimed at the ***stoneskin*** recipient. If you treat giant-hurled boulders as area effects in your campaign, however, the boulder will drain a ***stoneskin*** charge if the recipient is in the boulder's area of effect. Also, if you treat giant-hurled boulders as grenade-like missiles, and a boulder bounces onto a ***stoneskin*** recipient, the spell loses a charge and negates whatever damage the recipient might have suffered.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.STONESKIN],
+            comment: [
+                `The Sage is wrong about boulders not being grenadelike missiles. The PHB p. 131 and DMG p. 87 states:`,
+                `*Missile weapons are divided into two general categories... The second category includes all grenadelike missiles... Included in this group are small flasks of oil, acid, poison, holy water, potions, and **boulders**. Hurled boulders are included because they bounce and bound along after they hit, leaving a swath of destruction.*`,
+                ``,
+                `Furthermore, DMG p. 89 have a subheading:`,
+                `***Boulders as Missile Weapons***`,
+                `*Hurled boulders are handled using the grenade-like missiles rules, even though they do not burst.*`
+            ],
         },
         {
             page_number: '22',
