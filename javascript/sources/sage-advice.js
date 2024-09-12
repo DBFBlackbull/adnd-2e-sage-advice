@@ -15379,8 +15379,8 @@ DRAGON_MAGAZINES.push({
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.STONESKIN],
             comment: [
-                `The Sage is wrong about boulders not being grenadelike missiles. The PHB p. 131 and DMG p. 87 states:`,
-                `*Missile weapons are divided into two general categories... The second category includes all grenadelike missiles... Included in this group are small flasks of oil, acid, poison, holy water, potions, and **boulders**. Hurled boulders are included because they bounce and bound along after they hit, leaving a swath of destruction.*`,
+                `The Sage is incorrect when he says "if you treat giant-hurled boulders as grenade-like missiles," when the PHB p. 131 and DMG p. 87 states that you should always do so:`,
+                `*Missile weapons are divided into two general categories... The second category includes all grenade-like missiles... Included in this group are small flasks of oil, acid, poison, holy water, potions, and **boulders**. Hurled boulders are included because they bounce and bound along after they hit, leaving a swath of destruction.*`,
                 ``,
                 `Furthermore, DMG p. 89 have a subheading:`,
                 `***Boulders as Missile Weapons***`,
