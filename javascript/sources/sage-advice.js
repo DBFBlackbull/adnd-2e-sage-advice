@@ -4345,8 +4345,9 @@ DRAGON_MAGAZINES.push({
             page_number: '14',
             question: `Can a ***carpet of flying*** be used underwater?`,
             answer: [
-                `I can't think of any overwhelming reason why magical flight of any kind won't work under water, especially spells such as ***levitate*** and ***fly*** Some DMs, however, might rule that items such as ***brooms of flying*** and ***carpets of flying*** are too bulky or too dependent on an extraplanar connection to the plane of elemental Air to work while submerged. Alternately, the DM might rule that submarine movement is possible at one-half or one-third the aerial rate, due to increased resistance or other factors.`,
+                `I can't think of any overwhelming reason why magical flight of any kind won't work under water, especially spells such as ***levitate*** and ***fly***. Some DMs, however, might rule that items such as ***brooms of flying*** and ***carpets of flying*** are too bulky or too dependent on an extraplanar connection to the plane of elemental Air to work while submerged. Alternately, the DM might rule that submarine movement is possible at one-half or one-third the aerial rate, due to increased resistance or other factors.`,
             ],
+            comment: `Added a missing period "."`,
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
         {
