@@ -11540,8 +11540,9 @@ DRAGON_MAGAZINES.push({
             page_number: '48',
             question: `How many spellbook pages are required to include the reversed form of a spell?`,
             answer: [
-                `It depends on the spell. Reversible spells, such as ***knock***, ***locate object***, and ***stone to flesh*** require no extra spellbook space at all. A single spell entry does double duty, though the wizard still must decide which version he will memorize when studying spells for the day. Separate spells that are essentially reversed versions of each other, such as ***haste*** and ***slow***, must be recorded separately. In either case, a single spell requires a number of spellbook pages equal to the spell's level plus 0-5 (1d6-1) pages (see ***PHB***, page 63).`,
+                `It depends on the spell. Reversible spells, such as ***knock***, ***locate object***, and ***stone to flesh*** require no extra spellbook space at all. A single spell entry does double duty, though the wizard still must decide which version he will memorize when studying spells for the day. Separate spells that are essentially reversed versions of each other, such as ***haste*** and ***slow***, must be recorded separately. In either case, a single spell requires a number of spellbook pages equal to the spell's level plus 0-5 (1d6-1) pages (see ***DMG***, page 63).`,
             ],
+            comment: `Changed PHB to DMG. The page number is correct for the revised book. The Original DMG is page 42.`,
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
         {
