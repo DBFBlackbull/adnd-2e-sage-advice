@@ -8,6 +8,7 @@ const pugFolder = path.join(sourceFolder, 'pug');
 
 const {SOURCE, GAME_SYSTEM, ATTRIBUTE} = require(path.join(jsFolder, 'constants.js'));
 const phb1 = require(path.join(jsFolder, 'sources','players-handbook-1st-print.js'));
+const phb11 = require(path.join(jsFolder, 'sources','players-handbook-11th-print.js'));
 const phbr = require(path.join(jsFolder, 'sources','players-handbook-revised.js'));
 const dmg = require(path.join(jsFolder, 'sources','dungeon-master-guide.js'));
 const age = require(path.join(jsFolder, 'sources','arms-and-equipment-guide.js'));
@@ -33,6 +34,7 @@ let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {
     gameSystems: GAME_SYSTEM,
     attributes: ATTRIBUTE,
     phb1: phb1,
+    phb11: phb11,
     phbr: phbr,
     dmg: dmg,
     age: age,

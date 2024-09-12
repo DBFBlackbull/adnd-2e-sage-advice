@@ -13,7 +13,11 @@ mixin buttons(id)
 
 mixin book(book)
     div(class="wrapper")
-        h1 #{book.title} (Published #{book.publication_month} #{book.publication_year}, #{book.publication_print})
+        h1
+            | #{book.title} (Published #{book.publication_month} #{book.publication_year}
+            if book.publication_print
+                | , #{book.publication_print}
+            | )
         each chapter, _ in book.chapters
             if chapter.foreword
                 h3 !{formatInput(chapter.foreword)}
@@ -34,7 +38,11 @@ mixin entries(book, chapter, section, heading)
         - id = `${book.id}-${chapter.name}${chapter.number}-${section.id}-${index+1}`.toLowerCase().replaceAll(/:/g,'-')
         - if (id.includes('undefined')) {console.log(id)}
         p(id=id)
-            span(class="title") #{book.title} p. #{entry.page_number} #{heading} (#{book.publication_month} #{book.publication_year})
+            span(class="title")
+                | #{book.title} p. #{entry.page_number} #{heading} (#{book.publication_month} #{book.publication_year}
+                if book.publication_print
+                    | , #{book.publication_print}
+                | )
             +buttons(id)
             span(class="entry") !{formatInput(entry.entry, book.shortTitle, entry.page_number)}
             if entry.optional
