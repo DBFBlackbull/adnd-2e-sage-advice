@@ -8600,7 +8600,7 @@ DRAGON_MAGAZINES.push({
             page_number: '98',
             question: `How do the various fiends and planar races of Sigil manage to speak with each other? How do primes and planars speak to the residents of the planes they visit? For that matter, how do primes speak to the residents of other prime material worlds they visit?`,
             answer: [
-                `The Common tongue spoken by every AD&D player character is generally understood in Sigil. Common also is understandable throughout the planes and prime material worlds. Of course, each place has its own particular idioms that outsiders don't readily understand. (Planespeak, for example, takes a little getting used to.) I suppose that if your group really likes playing charades and has plenty of tongues spells at hand, you could designate different languages for each world, or even for different regions within each world. In any case, most fiends can telepathically communicate with all intelligent creatures.`,
+                `The Common tongue spoken by every AD&D player character is generally understood in Sigil. Common also is understandable throughout the planes and prime material worlds. Of course, each place has its own particular idioms that outsiders don't readily understand. (Planespeak, for example, takes a little getting used to.) I suppose that if your group really likes playing charades and has plenty of ***tongues*** spells at hand, you could designate different languages for each world, or even for different regions within each world. In any case, most fiends can telepathically communicate with all intelligent creatures.`,
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
