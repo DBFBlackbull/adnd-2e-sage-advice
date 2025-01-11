@@ -13815,7 +13815,11 @@ DRAGON_MAGAZINES.push({
             page_number: '16',
             question: `Does the ***know alignment*** spell work on sentient magical items, such as swords?`,
             answer: [
-                `Sure, both the wizard and priest versions of the ***know alignment*** spell work on both creatures and objects, so long as they actually have alignments and so long as no outside force interferes with the spell. A ***nondetection*** spell, for exampie, defeats ***know alignment*** spells.`,
+                `Sure, both the wizard and priest versions of the ***know alignment*** spell work on both creatures and objects, so long as they actually have alignments and so long as no outside force interferes with the spell. A ***nondetection*** spell, for example, defeats ***know alignment*** spells.`,
+            ],
+            comment: [
+                `The ***nondetection*** spell specifically says does not affect the ***know alignment*** spell, so the Sage is incorrect in his last statement.`,
+                `Fixed a "exampie" to "example" spelling error.`
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
