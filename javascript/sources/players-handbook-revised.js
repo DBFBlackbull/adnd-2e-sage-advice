@@ -305,7 +305,7 @@ PLAYERS_HANDBOOK.chapters.push({
 </tr>
 <tr>
     <td>*detect evil*</td>
-    <td>*protection from normal missiles read magic*</td>
+    <td>*protection from normal missiles*</td>
 </tr>
 <tr>
     <td>*detect invisibility*</td>
