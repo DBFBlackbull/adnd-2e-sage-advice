@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-document.addEventListener("load", function () {
+window.addEventListener("load", function () {
     const anchor = window.location.hash;
     if (!anchor) {
         return;
@@ -102,9 +102,7 @@ document.addEventListener("load", function () {
         return;
     }
 
-    setTimeout(() => {
-        target.scrollIntoView({ behavior: 'smooth' });
-    }, 1000)
+    target.scrollIntoView({ behavior: 'smooth' });
 })
 
 function hideForeword() {
