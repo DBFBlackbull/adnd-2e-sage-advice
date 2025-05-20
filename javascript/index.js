@@ -91,6 +91,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+document.addEventListener("load", function () {
+    const anchor = window.location.hash;
+    if (!anchor) {
+        return;
+    }
+
+    const target = document.querySelector(anchor);
+    if (!target) {
+        return;
+    }
+
+    target.scrollIntoView({ behavior: 'smooth' });
+})
+
 function hideForeword() {
     let main = document.getElementById('main');
     let headings = main.querySelectorAll('h1,h2,h3,h4');
