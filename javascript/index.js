@@ -102,7 +102,9 @@ document.addEventListener("load", function () {
         return;
     }
 
-    target.scrollIntoView({ behavior: 'smooth' });
+    setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth' });
+    }, 100)
 })
 
 function hideForeword() {
