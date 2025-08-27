@@ -11440,14 +11440,6 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
         },
         {
-            page_number: '46',
-            question: `The damage listed for wererats in the ***MONSTROUS COMPENDIUM®*** accessory is "by weapon"; how does a wererat infect victims with lycanthropy? Do wererats have a bite attack? If so, how much damage does it inflict?`,
-            answer: [
-                `Yes, wererats using weapons can inflict lycanthropy, but only when in their ratman form. Note that the ability to inflict lycanthropy through weapon attacks is (thus far) unique to wererats. Wererats have no bite when in ratman or human forms. When in giant rat form, however, a wererat's bite inflicts 1d3 points of damage, and bite attacks can inflict lycanthropy.`,
-            ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
-        },
-        {
             page_number: '46-47',
             question: `Page 86 of the ***Ruins of Undermountain II*** adventure makes a passing mention of rangers casting wizard spells, and in the book ***Shadows of Doom*** the ranger Sharantyr uses one of Elminster's wands. The ***PHB***, however, says rangers get priest spells. Which spells do rangers get?`,
             answer: [
@@ -12907,14 +12899,6 @@ DRAGON_MAGAZINES.push({
                 `Either method works, but most people I know roll once for each effect — that's the method I prefer.`,
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.DISPEL_MAGIC],
-        },
-        {
-            page_number: '92',
-            question: `The damage listed for wererats in the ***MONSTROUS COMPENDIUM®*** accessory is "by weapon"; how does a wererat infect victims with lycanthropy? Do wererats have a bite attack? If so, how much damage does it inflict?`,
-            answer: [
-                `Yes, wererats using weapons can inflict lycanthropy, but only when in their ratman form. Note that the ability to inflict lycanthropy through weapon attacks is (thus far) unique to wererats. Wererats have no bite when in ratman or human forms. When in giant rat form, however, a wererat's bite inflicts 1d3 points of damage, and bite attacks can inflict lycanthropy.`,
-            ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
         {
             page_number: '92',
