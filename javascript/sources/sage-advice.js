@@ -5937,17 +5937,17 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '92',
-            question: `The initial cost for the Teleport science is listed as "10 + ." However, there is no "10" cost on the teleport table.`,
+            question: `How does the Phobia Amplification devotion work on player characters?`,
             answer: [
-                `The first "20" in the table is a typo; Teleports of 10 yards or less cost 10 PSPs. Note that this change also applies to the Teleport Other science, whose initial cost should be listed as "10 +" as well.`,
+                `The same way it works on NPCs or monsters. Well-developed player characters probably will have a trait or personality quirk that can be turned into a full-blown phobia. If not, the Dungeon Master or player will have to supply one on the spot. If the power works and the victim's save fails, it is up to the player to decide what the PC will do. The DM should be on guard against reticent players who refuse to have their PCs act upon their fears. The instant the player declares an action that the DM feels is inappropriate for a person caught in the throes of abject terror, the DM should disallow the action and suggest another one. If the player is stubborn and holds up the game by not playing along, the DM should temporarily take control of the character.`,
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
         {
             page_number: '92',
-            question: `Can the Prolong devotion make a Ballistic Attack more powerful?`,
+            question: `The initial cost for the Teleport science is listed as "10 + ." However, there is no "10" cost on the teleport table.`,
             answer: [
-                `No. The Ballistic Attack devotion is a "single item" effect, which cannot be Prolonged (see Prolong power description, page 100).`,
+                `The first "20" in the table is a typo; Teleports of 10 yards or less cost 10 PSPs. Note that this change also applies to the Teleport Other science, whose initial cost should be listed as "10 +" as well.`,
             ],
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
