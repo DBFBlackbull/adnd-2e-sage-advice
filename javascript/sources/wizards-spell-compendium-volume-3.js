@@ -11,7 +11,7 @@ const WIZARDS_SPELL_COMPENDIUM_VOLUME_3 = {
     chapters: [],
 };
 WIZARDS_SPELL_COMPENDIUM_VOLUME_3.chapters.push({
-    name: 'P',
+    name: '',
     number: '',
     heading: 'P',
     sections: [

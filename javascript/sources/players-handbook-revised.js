@@ -249,8 +249,8 @@ PLAYERS_HANDBOOK.chapters.push({
     heading: 'Notes on Spells',
     sections: [
         {
-            id: '',
-            heading: '',
+            id: 'range',
+            heading: 'Range',
             entries: [
                 {
                     page_number: '168',

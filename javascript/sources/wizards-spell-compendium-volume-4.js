@@ -11,9 +11,9 @@ const WIZARDS_SPELL_COMPENDIUM_VOLUME_4 = {
     chapters: [],
 };
 WIZARDS_SPELL_COMPENDIUM_VOLUME_4.chapters.push({
-    name: 'Appendix',
+    name: 'Appendices',
     number: '',
-    heading: 'Appendices',
+    heading: 'Appendix 3: Lists',
     sections: [
         {
             id: 'errata',

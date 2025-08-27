@@ -14,6 +14,7 @@ include abstract/mixins.pug
         }
         return formatString(input, issue, question)
     }
+
     function formatString(s, issue, question) {
         s = handleAsterisks(s, issue, question)
         return s
@@ -80,6 +81,8 @@ body
         +book(phbr)
         +book(dmg)
         +book(age)
+        +book(fightersHandbook1)
+        +book(fightersHandbook11)
         +book(wizardsHandbook)
         +book(psionicsHandbook)
         +book(paladinsHandbook)

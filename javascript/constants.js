@@ -2,6 +2,7 @@ const SOURCE = {
     PHB: {id: "PHB", title: "Player’s Handbook"},
     DMG: {id: "DMG", title: "Dungeon Master Guide"},
     AEG: {id: "AEG", title: "Arms and Equipment Guide"},
+    FIGHTERS_HANDBOOK: {id: "Complete Fighters Handbook", title:"The Complete Fighter’s Handbook"},
     WIZARDS_HANDBOOK: {id: "Complete Wizards Handbook", title:"The Complete Wizard’s Handbook"},
     PSIONICS_HANDBOOK: {id: "Complete Psionics Handbook", title:"The Complete Psionics Handbook"},
     PALADINS_HANDBOOK: {id: "Complete Paladins Handbook", title:"The Complete Paladin’s Handbook"},
