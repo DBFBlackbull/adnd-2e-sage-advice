@@ -66,8 +66,51 @@ const ATTRIBUTE = {
     APRIL_FOOLS: {id: 'April Fools'},
 };
 
+const CURRENCY = {
+    CP: {id: 'cp', name: 'Copper pieces'},
+    SP: {id: 'sp', name: 'Silver pieces'},
+    EP: {id: 'ep', name: 'Electrum pieces'},
+    GP: {id: 'gp', name: 'Gold pieces'},
+    PP: {id: 'pp', name: 'Platinum pieces'},
+};
+
+const SIZE = {
+    T: {id: 'T', name: 'Tiny'},
+    S: {id: 'S', name: 'Small'},
+    M: {id: 'M', name: 'Medium'},
+    L: {id: 'L', name: 'Large'},
+    H: {id: 'H', name: 'Huge'},
+    G: {id: 'G', name: 'Gargantuan'},
+};
+
+const WEAPON_TYPE = {
+    B: {id: 'B', name: 'Bludgeoning'},
+    P: {id: 'P', name: 'Piercing'},
+    S: {id: 'S', name: 'Slashing'},
+};
+
+const HANDEDNESS = {
+    ONE_HANDED: {id: '1H', name: 'One-handed'},
+    TWO_HANDED: {id: '2H', name: 'Two-handed'},
+    BY_SIZE: {id: "By size", name: 'By size'},
+    LANCE: {id: 'Lance', name: 'Lance'},
+}
+
+const STRENGTH_BONUS = {
+    FULL: "Full",
+    LIMITED: "Limited",
+    BOW: "Bow",
+    NONE: "None",
+}
+
 module.exports = {
     SOURCE,
     GAME_SYSTEM,
     ATTRIBUTE,
+    CURRENCY,
+    SIZE,
+    WEAPON_TYPE,
+    ATTACK_MODES,
+    HANDEDNESS,
+    STRENGTH_BONUS,
 };

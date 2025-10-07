@@ -1,0 +1,2013 @@
+const {SOURCE, CURRENCY, SIZE, WEAPON_TYPE, HANDEDNESS, STRENGTH_BONUS} = require('../constants')
+
+class Range {
+    constructor(short, medium, long, extreme) {
+        this.short = short
+        this.medium = medium
+        this.long = long
+        this.extreme = extreme
+    }
+}
+
+class Damage {
+    constructor(small_medium, large)
+    {
+        this.small_medium = small_medium
+        this.large = large
+    }
+}
+
+class Cost {
+    constructor(amount, currency, quantity = 1) {
+        this.amount = amount
+        this.currency = currency
+        this.quantity = quantity
+    }
+}
+
+class Ammunition {
+    constructor(
+        {
+            name,
+            cost,
+            weight_lbs,
+            size,
+            type,
+            range,
+            damage,
+            pages,
+        }
+    ) {
+        this.name = name
+        this.cost = cost
+        this.weight_lbs = weight_lbs
+        this.size = size
+        this.type = type
+        this.range = range
+        this.damage = damage
+        this.pages = pages
+    }
+}
+
+class ProficiencyGroup {
+    constructor(tightGroup, boardGroup) {
+        this.tightGroup = tightGroup
+        this.boardGroup = boardGroup
+    }
+}
+
+class ImplementationVariables {
+    constructor(
+        {
+            proficiencyGroup,
+            attackInMelee,
+            strength,
+            handedness,
+        }
+    ) {
+        this.proficiencyGroup = proficiencyGroup
+        this.attackInMelee = attackInMelee
+        this.strength = strength
+        this.handedness = handedness
+    }
+}
+
+class Weapon {
+    constructor(
+        {
+            name,
+            sorting_group,
+            cost,
+            weight_lbs,
+            size,
+            type,
+            speed,
+            rate_of_fire,
+            range,
+            damage,
+            pages,
+            implementationVariables,
+            descriptions
+        }
+    ) {
+        this.name = name
+        this.sorting_group = sorting_group
+        this.cost = cost
+        this.weight_lbs = weight_lbs
+        this.size = size
+        this.type = type
+        this.speed = speed
+        this.rate_of_fire = rate_of_fire
+        this.range = range
+        this.damage = damage
+        this.pages = pages
+        this.implmentationVariables = implementationVariables
+        this.descriptions = descriptions
+    }
+}
+
+const WEAPONS = {}
+
+//#region PHB
+const PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE = [
+    {
+        pages: [95],
+        text: [`1 This weapon inflicts double damage against charging creatures of L or greater size.`]
+    }
+]
+const PHB_2_DISMOUNT_RIDER = [
+    {
+        pages: [95],
+        text: [`2 This weapon can dismount a rider on a successful hit.`]
+    }
+]
+const PHB_3_ALLOWED_BY_DM = [
+    {
+        pages: [95],
+        text: ["3 This weapon available only if allowed by DM. One charge costs 5 sp."]
+    },
+]
+const PHB_4_DOUBLE_DAMAGE_CHARGING_MOUNT = [
+    {
+        pages: [95],
+        text: [`4 This weapon inflicts double damage when used from the back of a charging mount.`]
+    }
+]
+const PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE = [
+    {
+        pages: [95],
+        text: [`5 This weapon inflicts double damage when firmly set to receive a charge.`]
+    }
+]
+
+WEAPONS.Arquebus = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Arquebus",
+        cost: new Cost(500, CURRENCY.GP),
+        weight_lbs: 10,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.P],
+        speed: 15,
+        rate_of_fire: "1/3",
+        range: new Range(50, 150, 210),
+        damage: new Damage("1d10", "1d10"),
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.NONE,
+                handedness: [HANDEDNESS.TWO_HANDED],
+            }
+        ),
+
+        descriptions: [
+            ...PHB_3_ALLOWED_BY_DM,
+            {
+                pages: [95],
+                text: [`Arquebuses (if allowed) double all range modifiers.`]
+            },
+            {
+                pages: [96],
+                text: [
+                    `Arquebus: This weapon may be disallowed by your DM and you must check with him before you purchase it. An arquebus is an early form of the musket (a small hand-held cannon, really), almost as dangerous to its user as it is to the target. To use an arquebus, you must have a supply of powder and shot and a piece of slow-burning match or cord. These items may or may not be commonly available. (Powder is treated as a magical item in these rules.) The weapon can be fired only once every three rounds, and then only if the character is not attacked while loading. When firing an arquebus, all penalties for range are doubled.`,
+                    `If the attack roll for the arquebus is a 1 or 2, the weapon backfires, causing 1d6 points of damage to the firer. It is also fouled and cannot be used again until it has been cleaned, which takes about 30 minutes. When an arquebus scores a hit, it normally does 1 to 9 points of damage on 1d10. When a 10 is rolled, the die is rolled again and this amount is added to 10. Each time a 10 is rolled, the die is rolled again and added to the previous total. Thus, in a rare instance, a single shot could inflict 37 points, for example, if three consecutive 10s were rolled, followed by a 7. The damage caused by an arquebus is never modified for a high Strength score.`
+                ]
+            }
+        ]
+    })
+}
+
+WEAPONS.Battle_axe = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Battle axe",
+        cost: new Cost(5, CURRENCY.GP),
+        weight_lbs: 7,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.S],
+        speed: 7,
+        damage: new Damage("1d8",  "1d8"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Blowgun = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Blowgun",
+        cost: new Cost(5, CURRENCY.GP),
+        weight_lbs: 2,
+        size: SIZE.L,
+        speed: 5,
+        rate_of_fire: "2/1",
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.NONE,
+                handedness: [HANDEDNESS.TWO_HANDED]
+            }
+        ),
+    }),
+
+    ammunition: {
+        Barbed_dart: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Barbed Dart",
+                cost: new Cost(1, CURRENCY.SP),
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.P],
+                range: new Range(10, 20, 30),
+                damage: new Damage("1d3",  "1d2",),
+
+                pages: [94, 95],
+            })
+        },
+        Needle: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Needle",
+                cost: new Cost(2, CURRENCY.CP),
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.P],
+                range: new Range(10, 20, 30),
+                damage: new Damage("1",  "1",),
+
+                pages: [94, 95]
+            })
+        }
+    }
+}
+
+const PHB_BOW_DESCRIPTION = [
+    {
+        pages: [96],
+        text: [
+            `Bows: Bows come in various shapes and sizes. The power of a bow is measured by its pull. The greater the pull, the more Strength needed to work the bow. Thus, it is possible for characters to have bows that grant them damage bonuses for high Strength (it is assumed the character has chosen a bow that has a greater pull). Likewise, characters with low Strengths suffer their usual penalties when using a bow (they are forced to use weaker bows or simply cannot draw back as far). The pull of a bow seldom prevents a character from using the weapon, only from gaining the full effect. The true test of a character’s Strength comes in stringing a bow—the bow of a strong hero may simply be un string able by a lesser man (as was Odysseus’s).`,
+            `Heavier pull bows are not normally any more expensive than standard bows. The exceptions to this are those bows that enable the fighter to gain bonuses for exceptional Strength (18/01 or greater). These bows must be custom crafted and cost three to five times the normal price. These bows are also difficult to string or use effectively for those without exceptional Strength. These characters must roll a successful bend bars/lift gates roll to string or use such weapons (again, think of the test of the suitors in Odysseus’s household).`
+        ]
+    }
+]
+
+const PHB_LONG_BOW_ARROW_DESCRIPTION = [
+    {
+        pages: [96],
+        text: [
+            `Arrows for long bows of all types are divided between lightweight flight arrows and heavier sheaf arrows. Flight arrows have longer ranges and are normally used in hunting. Sheaf arrows have a stronger metal head but a reduced range. They are often used in times of war.`
+        ]
+    }
+]
+
+WEAPONS.Short_bow = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Short bow",
+        sorting_group: "Bow",
+        cost: new Cost(30, CURRENCY.GP),
+        weight_lbs: 2,
+        size: SIZE.M,
+        speed: 7,
+        rate_of_fire: "2/1",
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.BOW,
+                handedness: [HANDEDNESS.TWO_HANDED]
+            }
+        ),
+
+        descriptions: PHB_BOW_DESCRIPTION
+    }),
+
+    ammunition: {
+        Flight_arrow: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Flight arrow",
+                cost: new Cost(3, CURRENCY.SP, 12),
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.P],
+                range: new Range(50, 100, 150),
+                damage: new Damage("1d6",  "1d6",),
+
+                pages: [94],
+            })
+        },
+    }
+}
+
+WEAPONS.Long_bow = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Long bow",
+        sorting_group: "Bow",
+        cost: new Cost(75, CURRENCY.GP),
+        weight_lbs: 3,
+        size: SIZE.L,
+        speed: 8,
+        rate_of_fire: "2/1",
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.BOW,
+                handedness: [HANDEDNESS.TWO_HANDED]
+            }
+        ),
+
+        descriptions: PHB_BOW_DESCRIPTION
+    }),
+
+    ammunition: {
+        Flight_arrow: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Flight arrow",
+                cost: new Cost(3, CURRENCY.SP, 12),
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.P],
+                range: new Range(70, 140, 210),
+                damage: new Damage("1d6",  "1d6",),
+
+                pages: [94, 95],
+
+                descriptions: PHB_LONG_BOW_ARROW_DESCRIPTION
+            }),
+        },
+        Sheaf_arrow: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Sheaf arrow",
+                cost: new Cost(3, CURRENCY.SP, 6),
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.P],
+                range: new Range(50, 100, 170),
+                damage: new Damage("1d8",  "1d8",),
+
+                pages: [94, 95],
+
+                descriptions: PHB_LONG_BOW_ARROW_DESCRIPTION
+            })
+        }
+    }
+}
+
+WEAPONS.Composite_short_bow = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Composite short bow",
+        sorting_group: "Bow",
+        cost: new Cost(75, CURRENCY.GP),
+        weight_lbs: 2,
+        size: SIZE.M,
+        speed: 6,
+        rate_of_fire: "2/1",
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.BOW,
+                handedness: [HANDEDNESS.TWO_HANDED]
+            }
+        ),
+
+        descriptions: PHB_BOW_DESCRIPTION
+    }),
+
+    ammunition: {
+        Flight_arrow: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Flight arrow",
+                cost: new Cost(3, CURRENCY.SP, 12),
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.P],
+                range: new Range(50, 100, 180),
+                damage: new Damage("1d6",  "1d6",),
+
+                pages: [94],
+            })
+        }
+    }
+}
+
+WEAPONS.Composite_long_bow = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Composite long bow",
+        sorting_group: "Bow",
+        cost: new Cost(100, CURRENCY.GP),
+        weight_lbs: 3,
+        size: SIZE.L,
+        speed: 7,
+        rate_of_fire: "2/1",
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.BOW,
+                handedness: [HANDEDNESS.TWO_HANDED]
+            }
+        ),
+
+        descriptions: PHB_BOW_DESCRIPTION
+    }),
+
+    ammunition: {
+        Flight_arrow: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Flight arrow",
+                cost: new Cost(3, CURRENCY.SP, 12),
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.P],
+                range: new Range(60, 120, 210),
+                damage: new Damage("1d6",  "1d6",),
+
+                pages: [94, 95],
+
+                descriptions: PHB_LONG_BOW_ARROW_DESCRIPTION
+            }),
+        },
+        Sheaf_arrow: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Sheaf arrow",
+                cost: new Cost(3, CURRENCY.SP, 6),
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.P],
+                range: new Range(40, 80, 170),
+                damage: new Damage("1d8",  "1d8",),
+
+                pages: [94, 95],
+
+                descriptions: PHB_LONG_BOW_ARROW_DESCRIPTION
+            })
+        }
+    }
+}
+
+WEAPONS.Club = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Club",
+        cost: new Cost(0, CURRENCY.GP),
+        weight_lbs: 3,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.B],
+        speed: 4,
+        rate_of_fire: "1",
+        range: new Range(10, 20, 30),
+        damage: new Damage("1d6",  "1d3"),
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                attackInMelee: true,
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Hand_crossbow = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Hand crossbow",
+        sorting_group: "Crossbow",
+        cost: new Cost(300, CURRENCY.GP),
+        weight_lbs: 3,
+        size: SIZE.S,
+        speed: 5,
+        rate_of_fire: "1",
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.NONE,
+                handedness: [HANDEDNESS.TWO_HANDED]
+            }
+        ),
+    }),
+
+    ammunition: {
+        Hand_quarrel: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Hand quarrel",
+                cost: new Cost(1, CURRENCY.GP),
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.P],
+                range: new Range(20, 40, 60),
+                damage: new Damage("1d3",  "1d2",),
+
+                pages: [94, 95],
+            })
+        }
+    }
+}
+
+WEAPONS.Light_crossbow = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Light crossbow",
+        sorting_group: "Crossbow",
+        cost: new Cost(35, CURRENCY.GP),
+        weight_lbs: 7,
+        size: SIZE.M,
+        speed: 7,
+        rate_of_fire: "1",
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.NONE,
+                handedness: [HANDEDNESS.TWO_HANDED]
+            }
+        ),
+    }),
+
+    ammunition: {
+        Light_quarrel: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Light quarrel",
+                cost: new Cost(1, CURRENCY.SP),
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.P],
+                range: new Range(60, 120, 180),
+                damage: new Damage("1d4",  "1d4",),
+                pages: [94, 95],
+            })
+        }
+    }
+}
+
+WEAPONS.Heavy_crossbow = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Heavy crossbow",
+        sorting_group: "Crossbow",
+        cost: new Cost(50, CURRENCY.GP),
+        weight_lbs: 14,
+        size: SIZE.M,
+        speed: 10,
+        rate_of_fire: "1/2",
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.NONE,
+                handedness: [HANDEDNESS.TWO_HANDED]
+            }
+        ),
+    }),
+
+    ammunition: {
+        Heavy_quarrel: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Heavy quarrel",
+                cost: new Cost(2, CURRENCY.SP),
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.P],
+                range: new Range(80, 160, 240),
+                damage: new Damage("1d4+1",  "1d6+1",),
+                pages: [94, 95],
+            })
+        }
+    }
+}
+
+WEAPONS.Dagger = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Dagger",
+        cost: new Cost(2, CURRENCY.GP),
+        weight_lbs: 1,
+        size: SIZE.S,
+        type: [WEAPON_TYPE.P],
+        speed: 2,
+        rate_of_fire: "2/1",
+        range: new Range(10, 20, 30),
+        damage: new Damage("1d4",  "1d3"),
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                attackInMelee: true,
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Dirk = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Dirk",
+        cost: new Cost(2, CURRENCY.GP),
+        weight_lbs: 1,
+        size: SIZE.S,
+        type: [WEAPON_TYPE.P],
+        speed: 2,
+        rate_of_fire: "2/1",
+        range: new Range(10, 20, 30),
+        damage: new Damage("1d4",  "1d3"),
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                attackInMelee: true,
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Dart = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Dart",
+        cost: new Cost(5, CURRENCY.SP),
+        weight_lbs: 0.5,
+        size: SIZE.S,
+        type: [WEAPON_TYPE.P],
+        speed: 2,
+        rate_of_fire: "3/1",
+        range: new Range(10, 20, 40),
+        damage: new Damage("1d3",  "1d2"),
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.TWO_HANDED]
+            }
+        ),
+    })
+}
+
+WEAPONS.Footmans_flail = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Footman's flail",
+        cost: new Cost(15, CURRENCY.GP),
+        weight_lbs: 15,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.B],
+        speed: 7,
+        damage: new Damage("1d6+1",  "2d4"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Footmans_mace = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Footman's mace",
+        cost: new Cost(8, CURRENCY.GP),
+        weight_lbs: 10,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.B],
+        speed: 7,
+        damage: new Damage("1d6+1",  "1d46"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Footmans_pick = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Footman's pick",
+        cost: new Cost(8, CURRENCY.GP),
+        weight_lbs: 6,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.P],
+        speed: 7,
+        damage: new Damage("1d6+1",  "2d4"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Hand_axe = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Hand axe",
+        cost: new Cost(1, CURRENCY.GP),
+        weight_lbs: 5,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.S],
+        speed: 4,
+        rate_of_fire: "1",
+        range: new Range(10, 20, 30),
+        damage: new Damage("1d6",  "1d4"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                attackInMelee: true,
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Throwing_axe = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Throwing axe",
+        cost: new Cost(1, CURRENCY.GP),
+        weight_lbs: 5,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.S],
+        speed: 4,
+        rate_of_fire: "1",
+        range: new Range(10, 20, 30),
+        damage: new Damage("1d6",  "1d4"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                attackInMelee: true,
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Harpoon = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Harpoon",
+        cost: new Cost(20, CURRENCY.GP),
+        weight_lbs: 6,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P],
+        speed: 7,
+        rate_of_fire: "1",
+        range: new Range(10, 20, 30),
+        damage: new Damage("2d4",  "2d6"),
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                attackInMelee: true,
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Horsemans_flail = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Horseman's flail",
+        cost: new Cost(8, CURRENCY.GP),
+        weight_lbs: 5,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.B],
+        speed: 6,
+        damage: new Damage("1d4+1",  "1d4+1"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Horsemans_mace = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Horseman's mace",
+        cost: new Cost(5, CURRENCY.GP),
+        weight_lbs: 6,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.B],
+        speed: 6,
+        damage: new Damage("1d6",  "1d4"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Horsemans_pick = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Horseman's pick",
+        cost: new Cost(7, CURRENCY.GP),
+        weight_lbs: 4,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.P],
+        speed: 5,
+        damage: new Damage("1d4+1",  "1d4"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Javelin = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Javelin",
+        cost: new Cost(5, CURRENCY.SP),
+        weight_lbs: 2,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.P],
+        speed: 4,
+        rate_of_fire: "1",
+        range: new Range(20, 40, 60,),
+        damage: new Damage("1d6",  "1d6"),
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                attackInMelee: true,
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Knife = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Knife",
+        cost: new Cost(5, CURRENCY.SP),
+        weight_lbs: 0.5,
+        size: SIZE.S,
+        type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+        speed: 2,
+        rate_of_fire: "2/1",
+        range: new Range(10, 20, 30,),
+        damage: new Damage("1d3",  "1d2"),
+        pages: [94, 95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                attackInMelee: true,
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+const PBH_LANCE_DESCRIPTION = {
+    pages: [96,97],
+    text: [
+        `Lance: The different lances are rated according to size and sturdiness. Each type can be used only if the rider is on the same type of horse or a greater one. A man on a light war horse could not use a heavy horse lance, if only because the impact would bowl him and the horse right over! Further- more, the heavy and jousting lances require that the rider is firmly in a saddle and using stirrups. The jousting lance is a heavy horse lance modified for use in tournaments, in which the desire is not to kill the opponent. The end of the lance is fitted with a special blunted tip intended to lessen the chance of wounds. Of course, good intentions often go awry, so there is still a chance of injury during a joust.`
+    ]
+}
+
+WEAPONS.Heavy_horse_lance = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Heavy horse lance",
+        sorting_group: "Lance",
+        cost: new Cost(15, CURRENCY.GP),
+        weight_lbs: 15,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P],
+        speed: 8,
+        damage: new Damage("1d8+1",  "3d6"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.LANCE]
+            }
+        ),
+
+        descriptions: [
+            ...PHB_4_DOUBLE_DAMAGE_CHARGING_MOUNT,
+            ...PBH_LANCE_DESCRIPTION,
+        ],
+    })
+}
+
+WEAPONS.Light_horse_lance = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Light horse lance",
+        sorting_group: "Lance",
+        cost: new Cost(6, CURRENCY.GP),
+        weight_lbs: 5,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P],
+        speed: 6,
+        damage: new Damage("1d6",  "1d8"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.LANCE]
+            }
+        ),
+
+        descriptions: [
+            ...PHB_4_DOUBLE_DAMAGE_CHARGING_MOUNT,
+            ...PBH_LANCE_DESCRIPTION,
+        ],
+    })
+}
+
+WEAPONS.Jousting_lance = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Jousting lance",
+        sorting_group: "Lance",
+        cost: new Cost(20, CURRENCY.GP),
+        weight_lbs: 20,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P],
+        speed: 10,
+        damage: new Damage("1d3-1",  "1d2-1"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.LANCE]
+            }
+        ),
+
+        descriptions: [
+            ...PHB_4_DOUBLE_DAMAGE_CHARGING_MOUNT,
+            ...PBH_LANCE_DESCRIPTION,
+        ],
+    })
+}
+
+WEAPONS.Medium_horse_lance = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Medium horse lance",
+        sorting_group: "Lance",
+        cost: new Cost(10, CURRENCY.GP),
+        weight_lbs: 10,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P],
+        speed: 7,
+        damage: new Damage("1d6+1",  "2d6"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.LANCE]
+            }
+        ),
+
+        descriptions: [
+            ...PHB_4_DOUBLE_DAMAGE_CHARGING_MOUNT,
+            ...PBH_LANCE_DESCRIPTION,
+        ],
+    })
+}
+
+WEAPONS.Mancatcher = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Mancatcher",
+        cost: new Cost(30, CURRENCY.GP),
+        weight_lbs: 8,
+        size: SIZE.L,
+        type: [],
+        speed: 7,
+        damage: new Damage(null,  null),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.NONE,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            ...PHB_2_DISMOUNT_RIDER,
+            {
+                pages: [97],
+                text: [
+                    `Mancatcher: This item is a highly specialized type of polearm designed to capture without killing a victim. It consists of a long pole with a spring-loaded set of sharpened jaws at the end. The victim is caught between the arms, which then snap shut. The mancatcher is effective only on man-sized creatures. The target is always treated as AC 10, modified for Dexterity. If a hit is scored, the character is caught. The caught victim loses all shield and Dexterity bonuses and can be pushed and pulled about. This causes an automatic 1d2 points of damage per round and gives a 25% chance of pulling the victim to the ground. The victim can escape on a successful bend bars/lift gates roll, although this results in 1d2 points more damage. A common tactic is to use the weapon to pull horsemen off their mounts, then pin them to the ground.`
+                ]
+            }
+        ]
+    })
+}
+
+WEAPONS.Morning_star = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Morning star",
+        cost: new Cost(10, CURRENCY.GP),
+        weight_lbs: 12,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
+        speed: 7,
+        damage: new Damage("2d4",  "1d6+1"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Awl_pike = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Awl pike",
+        sorting_group: "Polearm",
+        cost: new Cost(5, CURRENCY.GP),
+        weight_lbs: 12,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P],
+        speed: 13,
+        damage: new Damage("1d6",  "1d12"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            ...PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+            {
+                pages: [97, 98],
+                text: [`Awl Pike: Essentially this is a long spear 12 to 20 feet long ending in a spike point or tapered spear head. It was a popular weapon during the Renaissance. Since the pike stuck out in front, men could be packed side-by-side in dense formations, and several rows of men could fight. Large blocks of pikemen made formidable troops. However, once the pikemen engaged in close combat, they normally dropped their clumsy awl pikes and fought hand-to-hand with short swords.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Bardiche = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Bardiche",
+        sorting_group: "Polearm",
+        cost: new Cost(7, CURRENCY.GP),
+        weight_lbs: 12,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.S],
+        speed: 9,
+        damage: new Damage("2d4",  "2d6"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            {
+                pages: [98],
+                text: [`Bardiche: One of the simplest of polearms, the bardiche is an elongated battle axe. A large curving axe-head is mounted on the end of a shaft 5 to 8 feet long. It probably grew out of common peasant tools and was popular with them. One relative disadvantage is that the bardiche required more space to wield than a pike or a spear.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Bec_de_corbin = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Bec de corbin",
+        sorting_group: "Polearm",
+        cost: new Cost(8, CURRENCY.GP),
+        weight_lbs: 10,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
+        speed: 9,
+        damage: new Damage("1d8",  "1d6"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            {
+                pages: [98],
+                text: [`Bec de corbin: This was a highly specialized weapon of the upper classes during the Late Middle Ages and the early Renaissance. It is an early can-opener designed specifically to deal with plate armor. The pick or beak is made to punch through plate, while the hammer side can be used to give a stiff blow. The end is fitted with a short blade for dealing with unarmored or helpless foes. The weapon is about 8 feet long. Since the weapon relies on impact, a great deal of swinging space is needed.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Bill_guisarme = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Bill-guisarme",
+        sorting_group: "Polearm",
+        cost: new Cost(7, CURRENCY.GP),
+        weight_lbs: 15,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+        speed: 10,
+        damage: new Damage("2d4",  "1d10"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            {
+                pages: [98],
+                text: [`Bill-guisarme: A particularly bizarre-looking combination weapon, the bill-guisarme is an outgrowth of the common bill hook. Mounted on a 7 to 8-foot-long pole, it has a combination of a heavy cleaver blade, a jutting back spike, and a hook or spike on the end. Thus, it can be used in several different ways. Like most polearms, it requires lots of room to use.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Fauchard = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Fauchard",
+        sorting_group: "Polearm",
+        cost: new Cost(5, CURRENCY.GP),
+        weight_lbs: 7,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+        speed: 8,
+        damage: new Damage("1d6",  "1d8"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            {
+                pages: [98],
+                text: [`Fauchard: An outgrowth of the sickle and scythe, the fauchard is a long, inward curving blade mounted on a shaft 6 to 8 feet long. It can slash or thrust, although the inward curving point makes thrusting rather ineffective. Its advantage is that a peasant can easily convert his common scythe into this weapon of war.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Fauchard_fork = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Fauchard-fork",
+        sorting_group: "Polearm",
+        cost: new Cost(8, CURRENCY.GP),
+        weight_lbs: 9,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+        speed: 8,
+        damage: new Damage("1d8",  "1d10"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            {
+                pages: [98],
+                text: [`Fauchard: An outgrowth of the sickle and scythe, the fauchard is a long, inward curving blade mounted on a shaft 6 to 8 feet long. It can slash or thrust, although the inward curving point makes thrusting rather ineffective. Its advantage is that a peasant can easily convert his common scythe into this weapon of war.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Glaive = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Glaive",
+        sorting_group: "Polearm",
+        cost: new Cost(6, CURRENCY.GP),
+        weight_lbs: 8,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.S],
+        speed: 8,
+        damage: new Damage("1d6",  "1d10"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            ...PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE,
+            {
+                pages: [98],
+                text: [`Glaive: One of the most basic polearms, the glaive is a sin gle-edged blade mounted on an 8 to 10-foot-long shaft. While not the most efficient weapon, it is relatively easy to make and use. Normally the blade turns outward to increase the cutting area until it almost resembles a cleaver or axe.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Glaive_guisarme = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Glaive-guisarme",
+        sorting_group: "Polearm",
+        cost: new Cost(10, CURRENCY.GP),
+        weight_lbs: 10,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+        speed: 9,
+        damage: new Damage("2d4",  "2d6"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            ...PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE,
+            {
+                pages: [98],
+                text: [`Glaive-guisarme: Another combination weapon, this one takes the basic glaive and adds a spike or hook to the back of the blade. In theory, this increases the usefulness of the weapon although its actual application is somewhat questionable.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Guisarme = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Guisarme",
+        sorting_group: "Polearm",
+        cost: new Cost(5, CURRENCY.GP),
+        weight_lbs: 8,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.S],
+        speed: 8,
+        damage: new Damage("2d4",  "1d8"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            {
+                pages: [98],
+                text: [`Guisarme: Thought to have derived from a pruning hook, this is an elaborately curved heavy blade. While convenient and handy, it is not very effective.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Guisarme_voulge = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Guisarme-voulge",
+        sorting_group: "Polearm",
+        cost: new Cost(8, CURRENCY.GP),
+        weight_lbs: 15,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+        speed: 10,
+        damage: new Damage("2d4",  "2d4"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            {
+                pages: [98, 99],
+                text: [`Guisarme-voulge: This weapon has a modified axe blade mounted on an 8-foot-long shaft. The end of the blade tapers to a point for thrusting and a back spike is fitted for punching through armor. Sometimes this spike is replaced by a sharpened hook for dismounting riders.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Halberd = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Halberd",
+        sorting_group: "Polearm",
+        cost: new Cost(10, CURRENCY.GP),
+        weight_lbs: 15,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+        speed: 9,
+        damage: new Damage("1d10",  "2d6"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            {
+                pages: [99],
+                text: [`Halberd: After the awl pike and the bill, this was one of the most popular weapons of the Middle Ages. Fixed on a shaft 5 to 8 feet long is a large axe blade, angled for maximum impact. The end of the blade tapers to a long spear point or awl pike. On the back is a hook for attacking armor or dismounting riders. Originally intended to defeat cavalry, it is not tremendously successful in that role since it lacks the reach of the pike and needs considerable room to swing. It found new life against blocks of pikemen. Should the advance of the main attack stall, halberdiers issue out of the formation and attack the flanks of the enemy. The pikemen with their overlong weapons are nearly defenseless in such close combat.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Hook_fauchard = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Hook fauchard",
+        sorting_group: "Polearm",
+        cost: new Cost(10, CURRENCY.GP),
+        weight_lbs: 8,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+        speed: 9,
+        damage: new Damage("1d4",  "1d4"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            {
+                pages: [99],
+                text: [`Hook fauchard: This combination weapon is another attempted improvement to the fauchard. A back hook is fitted to the back of the blade, supposedly to dismount horsemen. Like the fauchard, this is not a tremendously successful weapon.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Lucern_hammer = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Lucern hammer",
+        sorting_group: "Polearm",
+        cost: new Cost(7, CURRENCY.GP),
+        weight_lbs: 15,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
+        speed: 9,
+        damage: new Damage("2d4",  "1d6"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            {
+                pages: [99],
+                text: [`Lucern hammer: This weapon is similar to the bec de corbin. Fitted with a shaft up to 10 feet long, it is usually found in the hands of the common soldier. Like the bec de corbin, its main purpose is to punch through armor. The end is fitted with the long point of an awl pike to hold off enemy cavalry.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Lucern_hammer = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Lucern hammer",
+        sorting_group: "Polearm",
+        cost: new Cost(7, CURRENCY.GP),
+        weight_lbs: 15,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
+        speed: 9,
+        damage: new Damage("2d4",  "1d6"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            ...PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+            {
+                pages: [99],
+                text: [`Lucern hammer: This weapon is similar to the bec de corbin. Fitted with a shaft up to 10 feet long, it is usually found in the hands of the common soldier. Like the bec de corbin, its main purpose is to punch through armor. The end is fitted with the long point of an awl pike to hold off enemy cavalry.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Military_fork = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Military fork",
+        sorting_group: "Polearm",
+        cost: new Cost(5, CURRENCY.GP),
+        weight_lbs: 7,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P],
+        speed: 7,
+        damage: new Damage("1d8",  "2d4"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            ...PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE,
+            {
+                pages: [99],
+                text: [`Military fork: This is one of the simplest modifications of a peasant’s tool since it is little more than a pitchfork fixed to a longer shaft. With tines strengthened and straightened, the military fork serves well. The need for cutting and cleaving eventually often results in combining the fork with other weapons.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Partisan = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Partisan",
+        sorting_group: "Polearm",
+        cost: new Cost(10, CURRENCY.GP),
+        weight_lbs: 8,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P],
+        speed: 9,
+        damage: new Damage("1d6",  "1d6+1"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            ...PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+            {
+                pages: [99],
+                text: [`Partisan: Shorter than the awl pike but longer than the spear, the partisan is a broad spear-head mounted on an 8-foot-long shaft. Two smaller blades project out from the base of the main blade, just to increase damage and trap weapons. Since it is a thrusting weapon, it can be used in closely packed formations.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Ranseur = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Ranseur",
+        sorting_group: "Polearm",
+        cost: new Cost(6, CURRENCY.GP),
+        weight_lbs: 7,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P],
+        speed: 8,
+        damage: new Damage("2d4",  "2d4"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            ...PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+            {
+                pages: [99],
+                text: [`Ranseur: Very much like the partisan, the ranseur differs in that the main blade is thinner and the projecting blades extended more like tines of a fork. These can trap a weapon and sometimes punch through armor.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Spetum = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Spetum",
+        sorting_group: "Polearm",
+        cost: new Cost(5, CURRENCY.GP),
+        weight_lbs: 7,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P],
+        speed: 8,
+        damage: new Damage("1d6+1",  "2d6"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            ...PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+            {
+                pages: [99],
+                text: [`Spetum: The spetum is a modification of the normal spear. The shaft increases to 8 to 10 feet and side blades are added. Some have blades that angle back, increasing the damage when pulling the weapon out of a wound. These blades can also trap and block weapons or catch and hold an opponent.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Voulge = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Voulge",
+        sorting_group: "Polearm",
+        cost: new Cost(5, CURRENCY.GP),
+        weight_lbs: 12,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.S],
+        speed: 10,
+        damage: new Damage("2d4",  "2d4"),
+        pages: [94],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            {
+                pages: [99],
+                text: [`Voulge: The voulge, like the bardiche, is a variation on the axe and the cleaver. The voulge is little more than a cleaver on the end of a long (7 to 8-foot) pole. It is a popular weapon, easy to make and simple to learn. It is also called the Lochaber axe.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Quarterstaff = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Quarterstaff",
+        weight_lbs: 4,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.B],
+        speed: 4,
+        damage: new Damage("1d6",  "1d6"),
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+    })
+}
+
+WEAPONS.Scourge = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Scourge",
+        cost: new Cost(1, CURRENCY.GP),
+        weight_lbs: 2,
+        size: SIZE.S,
+        speed: 5,
+        damage: new Damage("1d4",  "1d2"),
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            {
+                pages: [99],
+                text: [`Scourge: This wicked weapon is a short whip with several thongs or tails. Each thong is studded with metal barbs, resulting in a terrible lash. It is sometimes used as an instrument of execution.`]
+            }
+        ]
+    })
+}
+
+WEAPONS.Sickle = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Sickle",
+        cost: new Cost(6, CURRENCY.SP),
+        weight_lbs: 3,
+        size: SIZE.S,
+        type: [WEAPON_TYPE.S],
+        speed: 4,
+        damage: new Damage("1d4+1",  "1d4"),
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: []
+    })
+}
+
+WEAPONS.Sling = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Sling",
+        cost: new Cost(5, CURRENCY.CP),
+        weight_lbs: 0.1,
+        size: SIZE.S,
+        speed: 6,
+        rate_of_fire: "1",
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.TWO_HANDED]
+            }
+        ),
+
+        descriptions: []
+    }),
+
+    ammunition: {
+        Bullet: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Sling bullet",
+                cost: new Cost(1, CURRENCY.CP),
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.B],
+                range: new Range(50, 100, 200),
+                damage: new Damage("1d4+1",  "1d6+1"),
+                pages: [95],
+            })
+        },
+        Stone: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Sling stone",
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.B],
+                range: new Range(40, 80, 160),
+                damage: new Damage("1d4",  "1d4"),
+                pages: [95],
+            })
+        }
+    }
+}
+
+WEAPONS.Spear = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Spear",
+        cost: new Cost(8, CURRENCY.SP),
+        weight_lbs: 5,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.P],
+        speed: 6,
+        rate_of_fire: "1",
+        range: new Range(10, 20, 30),
+        damage: new Damage("1d6",  "1d8"),
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                attackInMelee: true,
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: []
+    })
+}
+
+WEAPONS.Staff_sling = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Staff sling",
+        cost: new Cost(2, CURRENCY.SP),
+        weight_lbs: 2,
+        size: SIZE.M,
+        speed: 11,
+        rate_of_fire: "2/1",
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [],
+    }),
+
+    ammunition: {
+        Bullet: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Staff sling bullet",
+                cost: new Cost(1, CURRENCY.CP),
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.B],
+                range: new Range(null, "30-60", 90),
+                damage: new Damage("1d4+1",  "1d6+1"),
+
+                comment: `No explicit ammunition damage is given for Staff sling in the PHB, so using the same as Sling.`
+            })
+        },
+        Stone: {
+            [SOURCE.PHB]: new Ammunition({
+                name: "Staff sling stone",
+                weight_lbs: 0.1,
+                size: SIZE.S,
+                type: [WEAPON_TYPE.B],
+                range: new Range(null, "30-60", 90),
+                damage: new Damage("1d4+1",  "1d6+1"),
+
+                comment: `No explicit ammunition damage is given for Staff sling in the PHB, so using the same as Sling.`
+            })
+        }
+    }
+}
+
+WEAPONS.Bastard_sword = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Bastard sword",
+        sorting_group: "Sword",
+        cost: new Cost(25, CURRENCY.GP),
+        weight_lbs: 10,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.S],
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        ),
+
+        descriptions: [
+            {
+                pages: [99],
+                text: [`Sword, Bastard: This sword is similar to a long sword in size and weight, but has a longer hilt. It can be used one- or two-handed. Use the speed factor and damage appropriate to the grip. If it is used two-handed, your character cannot employ a shield. Proficiency allows both uses.`]
+            }
+        ]
+    }),
+
+    grip: {
+        [HANDEDNESS.ONE_HANDED]: {
+            [SOURCE.PHB]: {
+                name: "One-handed",
+                speed: 6,
+                damage: new Damage("1d8",  "1d12"),
+            }
+        },
+        [HANDEDNESS.TWO_HANDED]: {
+            [SOURCE.PHB]: {
+                name: "Two-handed",
+                speed: 8,
+                damage: new Damage("2d4",  "2d8"),
+            }
+        }
+    }
+}
+
+WEAPONS.Broad_sword = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Broad sword",
+        sorting_group: "Sword",
+        cost: new Cost(10, CURRENCY.GP),
+        weight_lbs: 4,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.S],
+        speed: 5,
+        damage: new Damage("2d4",  "1d6+1"),
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        )
+    })
+}
+
+WEAPONS.Khopesh = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Khopesh",
+        sorting_group: "Sword",
+        cost: new Cost(10, CURRENCY.GP),
+        weight_lbs: 7,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.S],
+        speed: 8,
+        damage: new Damage("2d4",  "1d6"),
+        pages: [95],
+
+        descriptions: [
+            {
+                pages: [99],
+                text: [`Sword, Khopesh: This is an Egyptian weapon. A khopesh has about 6 inches of handle and quillons. Its blade is then straight from the quillons for about 2 feet. The blade becomes sickle-shaped at this point, being about 2 additional feet long but effectively extending the overall length of the sword by only 1 ½ feet. This makes the khopesh both heavy and unwieldy, difficult to employ properly, and slow to recover, particularly after a badly missed blow. Its sickle-like portion can snag an opponent or an opposing weapon.`]
+            }
+        ],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        )
+    })
+}
+
+WEAPONS.Long_sword = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Long sword",
+        sorting_group: "Sword",
+        cost: new Cost(15, CURRENCY.GP),
+        weight_lbs: 4,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.S],
+        speed: 5,
+        damage: new Damage("1d8",  "1d12"),
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        )
+    })
+}
+
+WEAPONS.Scimitar = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Scimitar",
+        sorting_group: "Sword",
+        cost: new Cost(15, CURRENCY.GP),
+        weight_lbs: 4,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.S],
+        speed: 5,
+        damage: new Damage("1d8",  "1d8"),
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        )
+    })
+}
+
+WEAPONS.Short_sword = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Short sword",
+        sorting_group: "Sword",
+        cost: new Cost(10, CURRENCY.GP),
+        weight_lbs: 3,
+        size: SIZE.S,
+        type: [WEAPON_TYPE.P],
+        speed: 3,
+        damage: new Damage("1d6",  "1d8"),
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        )
+    })
+}
+
+WEAPONS.Two_handed_sword = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Two-handed sword",
+        sorting_group: "Sword",
+        cost: new Cost(50, CURRENCY.GP),
+        weight_lbs: 15,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.S],
+        speed: 10,
+        damage: new Damage("1d10",  "3d6"),
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        )
+    })
+}
+
+WEAPONS.Trident = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Trident",
+        cost: new Cost(15, CURRENCY.GP),
+        weight_lbs: 5,
+        size: SIZE.L,
+        type: [WEAPON_TYPE.P],
+        speed: 7,
+        damage: new Damage("1d6+1",  "3d4"),
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        )
+    })
+}
+
+WEAPONS.Warhammer = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Warhammer",
+        cost: new Cost(2, CURRENCY.GP),
+        weight_lbs: 6,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.B],
+        speed: 4,
+        rate_of_fire: "1",
+        range: new Range(10, 20, 30),
+        damage: new Damage("1d4+1",  "1d4"),
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        )
+    })
+}
+
+WEAPONS.Whip = {
+    [SOURCE.PHB]: new Weapon({
+        name: "Whip",
+        cost: new Cost(1, CURRENCY.SP),
+        weight_lbs: 2,
+        size: SIZE.M,
+        speed: 8,
+        damage: new Damage("1d2",  "1"),
+        pages: [95],
+
+        implementationVariables: new ImplementationVariables(
+            {
+                strength: STRENGTH_BONUS.FULL,
+                handedness: [HANDEDNESS.BY_SIZE]
+            }
+        )
+    })
+}
+
+
+
+//#endregion PHB
