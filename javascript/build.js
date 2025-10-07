@@ -30,7 +30,7 @@ const psc1 = require(path.join(jsFolder, 'sources','priests-spell-compendium-vol
 const psc2 = require(path.join(jsFolder, 'sources','priests-spell-compendium-volume-2.js'));
 const psc3 = require(path.join(jsFolder, 'sources','priests-spell-compendium-volume-3.js'));
 
-let html = pug.renderFile(path.join(pugFolder, 'main.pug'), {
+let html = pug.renderFile(path.join(pugFolder, 'index', 'main.pug'), {
     pretty: true,
     sources: SOURCE,
     gameSystems: GAME_SYSTEM,

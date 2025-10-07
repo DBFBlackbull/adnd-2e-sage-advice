@@ -110,7 +110,6 @@ module.exports = {
     CURRENCY,
     SIZE,
     WEAPON_TYPE,
-    ATTACK_MODES,
     HANDEDNESS,
     STRENGTH_BONUS,
 };
