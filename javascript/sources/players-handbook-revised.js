@@ -211,7 +211,15 @@ PLAYERS_HANDBOOK.chapters.push({
                                 `Heavier pull bows are not normally any more expensive than standard bows. The exceptions to this are those bows that enable the fighter to gain bonuses for exceptional Strength (18/01 or greater). These bows must be custom crafted and cost three to five times the normal price. These bows are also difficult to string or use effectively for those without exceptional Strength. These characters must roll a successful bend bars/lift gates roll to string or use such weapons (again, think of the test of the suitors in Odysseus's household).`
                             ],
                             attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.WEAPON, ATTRIBUTE.BOWS_AND_STRENGTH]
-                        }
+                        },
+                        {
+                            page_number: '99',
+                            entry: [
+                                `**Sword, Bastard:** This sword is similar to a long sword in size and weight, but has a longer hilt. It can be used one- or two-handed. Use the speed factor and damage appropriate to the grip. If it is used two-handed, your character cannot employ a shield. Proficiency allows both uses.`
+                            ],
+                            comment: `Sage Advice #149 suggest you need two proficiency slots for bastard swords, while #150 indicates that only a single slot is needed. This clarifies the debate to one slot and thereby aligns with The Complete Fighter's Handbook that also indicates that only 1 proficiency slot is needed.`,
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.WEAPON]
+                        },
                     ]
                 }
             ],

@@ -57,5 +57,31 @@ PLAYERS_HANDBOOK.chapters.push({
         }
     ]
 });
+PLAYERS_HANDBOOK.chapters.push({
+    name: 'Chapter',
+    number: '6',
+    heading: 'Money and Equipment',
+    sections: [
+        {
+            id: 'equipment-descriptions',
+            heading: 'Equipment Descriptions',
+            sections: [
+                {
+                    id: 'weapons',
+                    heading: 'Weapons',
+                    entries: [
+                        {
+                            page_number: '75',
+                            entry: [
+                                `**Sword, Bastard:** This sword is similar to a long sword in size and weight, but has a longer hilt. It can be used one- or two-handed. Use the speed factor and damage appropriate to the grip. If it is used two-handed, your character cannot employ a shield.`
+                            ],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.WEAPON]
+                        }
+                    ],
+                },
+            ]
+        },
+    ]
+});
 
 module.exports = PLAYERS_HANDBOOK;

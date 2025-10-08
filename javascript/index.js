@@ -31,6 +31,7 @@ const SYNONYMS = [
     ['longbow', 'long bow'],
     ['shortbow', 'short bow'],
     ['polearm', 'pole arm'],
+    ['bastard sword', 'sword, bastard'],
 ];
 
 const QUERY_PARAM_VISIBILITY = 'visibility';
