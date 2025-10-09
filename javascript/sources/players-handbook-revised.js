@@ -217,7 +217,7 @@ PLAYERS_HANDBOOK.chapters.push({
                             entry: [
                                 `**Sword, Bastard:** This sword is similar to a long sword in size and weight, but has a longer hilt. It can be used one- or two-handed. Use the speed factor and damage appropriate to the grip. If it is used two-handed, your character cannot employ a shield. Proficiency allows both uses.`
                             ],
-                            comment: `Sage Advice #149 suggest you need two proficiency slots for bastard swords, The Complete Fighter's Handbook that also indicates that only 1 proficiency slot is needed. This clarifies the debate to one slot and thereby aligns with The Complete Fighter's Handbook.`,
+                            comment: `Sage Advice #149 suggest you need two proficiency slots for bastard swords, while The Complete Fighter's Handbook indicates that only one proficiency slot is needed. This clarifies the debate to one slot and thereby aligns with The Complete Fighter's Handbook.`,
                             attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.WEAPON]
                         },
                     ]
