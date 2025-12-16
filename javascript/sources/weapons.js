@@ -1,5 +1,29 @@
 const {SOURCE, CURRENCY, SIZE, WEAPON_TYPE, HANDEDNESS, STRENGTH_BONUS} = require('../constants')
 
+// const booksPriority = [
+//     {book: 'PHB', print: 'First Printing May 2013'},
+//     {book: 'The Complete Fighter's Handbook', print: '11th Printing, May 1996'},
+//     {book: 'The Complete Thief's Handbook', print: 'November 1993'},
+//     {book: 'The Complete Priest's Handbook', print: 'Seventh printing, October 1996'},
+//     {book: 'The Complete Wizard's Handbook', print: '10th printing, March 1996'},
+//     {book: 'The Complete Psionics Handbook', print: 'Ninth printing: October 1996'},
+//     {book: 'Tome of Magic', print: 'Seventh Printing: March, 1996'},
+//     {book: 'Arms and Equipment Guide', print: 'Fifth Printing: January 1994'},
+//     {book: 'The Complete Book of Dwarves', print: 'November 1993'},
+//     {book: 'The Complete Bard's Handbook', print: 'Fourth printing, November 1994'},
+//     {book: 'The Complete Book of Elves', print: ''},
+//     {book: 'The Complete Book of Humanoids', print: 'Sixth printing, March 1999'},
+//     {book: 'The Complete Ranger's Handbook', print: 'Fifth printing, July 1995'},
+//     {book: 'The Complete Paladin's Handbook', print: ''},
+//     {book: 'The Complete Druid's Handbook', print: ''},
+//     {book: 'The Complete Barbarian's Handbook', print: ''},
+//     {book: 'The Complete Book of Necromancers', print: ''},
+//     {book: 'The Complete Ninja's Handbook', print: '2nd printing, March 1996'},
+//     {book: 'Player's Option: Combat & Tactics', print: ''},
+//     {book: 'Player's Option: Skills & Powers', print: ''},
+//     {book: 'Player's Option: Spells & Magic', print: ''},
+// ];
+
 class Range {
     constructor(short, medium, long, extreme) {
         this.short = short
@@ -2011,3 +2035,7 @@ WEAPONS.Whip = {
 
 
 //#endregion PHB
+
+//#region Fighter's Handbook
+
+//#endregion Fighter's Handbook
