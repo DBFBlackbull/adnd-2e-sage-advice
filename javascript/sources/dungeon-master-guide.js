@@ -16,6 +16,26 @@ DUNGEON_MASTER_GUIDE.chapters.push({
     heading: 'Combat',
     sections: [
         {
+            id: 'the-attack-roll',
+            heading: 'The Attack roll',
+            sections: [
+                {
+                    id: 'modifiers-to-the-attack-roll',
+                    heading: 'Modifiers to the Attack Roll',
+                    entries: [
+                        {
+                            page_number: '74',
+                            entry: [
+                                `**Strength Modifiers:** A character’s Strength can modify the die roll, altering both the chance to hit and the damage caused. This modifier is always applied to melees and attacks with hurled missile weapons (a spear or an axe).`,
+                                `A positive Strength modifier can be applied to bows if the character has a special bow made for him, designed to take advantage of his high Strength. Characters with Strength penalties always suffer them when using a bow weapon. They simply are not able to draw back the bowstring far enough. Characters never have Strength modifiers when using crossbows—the power of the shot is imparted by a machine, not the player character.`,
+                            ],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.BOWS_AND_STRENGTH]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             id: 'missile-combat',
             heading: 'Missile Weapons in Combat',
             sections: [

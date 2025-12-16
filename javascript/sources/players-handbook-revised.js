@@ -24,7 +24,7 @@ PLAYERS_HANDBOOK.chapters.push({
                     entry: [
                         `**Hit Probability** adjustments are added to or subtracted from the attack roll rolled on 1d20 (one 20-sided die) during combat. A bonus (positive number) makes the opponent easier to hit; a penalty (negative number) makes him harder to hit.`
                     ],
-                    comment: 'The DMG explicitly tells that this bonus is also included for hurled weapons and bows.',
+                    comment: 'Chapter 9: Combat explicitly tells that this bonus is also included for hurled weapons and bows.',
                     attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.BOWS_AND_STRENGTH]
                 },
                 {
@@ -232,6 +232,26 @@ PLAYERS_HANDBOOK.chapters.push({
     heading: 'Combat',
     sections: [
         {
+            id: 'the-attack-roll',
+            heading: 'The Attack roll',
+            sections: [
+                {
+                    id: 'modifiers-to-the-attack-roll',
+                    heading: 'Modifiers to the Attack Roll',
+                    entries: [
+                        {
+                            page_number: '120',
+                            entry: [
+                                `**Strength Modifiers:** A character’s Strength can modify the die roll, altering both the chance to hit and the damage caused. This modifier is always applied to melees and attacks with hurled missile weapons (a spear or an axe).`,
+                                `A positive Strength modifier can be applied to bows if the character has a special bow made for him, designed to take advantage of his high Strength. Characters with Strength penalties always suffer them when using a bow weapon. They simply are not able to draw back the bowstring far enough. Characters never have Strength modifiers when using crossbows—the power of the shot is imparted by a machine, not the player character.`,
+                            ],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.BOWS_AND_STRENGTH]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             id: 'touch-spells-and-combat',
             heading: 'Touch Spells and Combat',
             entries: [
@@ -248,7 +268,28 @@ PLAYERS_HANDBOOK.chapters.push({
                     attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.TOUCH_SPELLS]
                 }
             ]
-        }
+        },
+        {
+            id: 'missile-combat',
+            heading: 'Missile Weapons in Combat',
+            sections: [
+                {
+                    id: 'ability-modifiers',
+                    heading: 'Ability Modifiers in Missile Combat',
+                    entries: [
+                        {
+                            page_number: '131-132',
+                            entry: [
+                                `Attack roll and damage modifiers for Strength are always used when an attack is made with a hurled weapon. Here the power of the character’s arm is a significant factor in the effectiveness of the attack.`,
+                                `When using a bow, the attack roll and damage Strength modifiers apply only if the character has a properly prepared bow (see Chapter 6: Money and Equipment). Characters never receive Strength bonuses when using crossbows or similar mechanical devices.`,
+                                `Dexterity modifiers to the attack roll are applied when making a missile attack with a hand-held weapon. Thus, a character adds his Dexterity modifier when using a bow, crossbow, or axe but not when firing a trebuchet or other siege engine.`
+                            ],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.BOWS_AND_STRENGTH],
+                        },
+                    ],
+                }
+            ],
+        },
     ]
 });
 PLAYERS_HANDBOOK.chapters.push({
