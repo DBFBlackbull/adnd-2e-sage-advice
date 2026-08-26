@@ -200,6 +200,8 @@ WEAPONS.Dart = {};
 WEAPONS.Footmans_flail = {};
 WEAPONS.Footmans_mace = {};
 WEAPONS.Footmans_pick = {};
+WEAPONS.Gaff_hook_attached = {};
+WEAPONS.Gaff_hook_held = {};
 WEAPONS.Hand_axe = {};
 WEAPONS.Throwing_axe = {};
 WEAPONS.Harpoon = {
@@ -217,13 +219,26 @@ WEAPONS.Javelin = {
         [HANDEDNESS.TWO_HANDED]: {},
     }
 };
+WEAPONS.Javelin_stone = {
+    grip: {
+        [HANDEDNESS.ONE_HANDED]: {},
+        [HANDEDNESS.TWO_HANDED]: {},
+    }
+};
 WEAPONS.Knife = {};
+WEAPONS.Knife_bone = {};
+WEAPONS.Knife_stone = {};
 WEAPONS.Heavy_horse_lance = {};
 WEAPONS.Light_horse_lance = {};
 WEAPONS.Jousting_lance = {};
 WEAPONS.Medium_horse_lance = {};
+WEAPONS.Main_gauche = {};
 WEAPONS.Mancatcher = {};
 WEAPONS.Morning_star = {};
+WEAPONS.Net = {};
+WEAPONS.Nunchaku = {};
+
+// Polearms
 WEAPONS.Awl_pike = {};
 WEAPONS.Bardiche = {};
 WEAPONS.Bec_de_corbin = {};
@@ -236,15 +251,21 @@ WEAPONS.Guisarme = {};
 WEAPONS.Guisarme_voulge = {};
 WEAPONS.Halberd = {};
 WEAPONS.Hook_fauchard = {};
+WEAPONS.Lasso = {};
 WEAPONS.Lucern_hammer = {};
 WEAPONS.Lucern_hammer = {};
 WEAPONS.Military_fork = {};
+WEAPONS.Naginata = {};
 WEAPONS.Partisan = {};
 WEAPONS.Ranseur = {};
 WEAPONS.Spetum = {};
+WEAPONS.Tetsubo = {};
 WEAPONS.Voulge = {};
+
 WEAPONS.Quarterstaff = {};
+WEAPONS.Sai = {};
 WEAPONS.Scourge = {};
+WEAPONS.Shuriken = {};
 WEAPONS.Sickle = {};
 WEAPONS.Sling = {
     ammunition: {
@@ -264,12 +285,21 @@ WEAPONS.Spear = {
         [HANDEDNESS.TWO_HANDED]: {},
     }
 };
+WEAPONS.Spear_stone = {
+    grip: {
+        [HANDEDNESS.ONE_HANDED]: {},
+        [HANDEDNESS.TWO_HANDED]: {},
+    }
+};
 WEAPONS.Long_spear = {
     grip: {
         [HANDEDNESS.ONE_HANDED]: {},
         [HANDEDNESS.TWO_HANDED]: {},
     }
 };
+WEAPONS.Stiletto = {};
+
+// Swords
 WEAPONS.Bastard_sword = {
     grip: {
         [HANDEDNESS.ONE_HANDED]: {},
@@ -277,11 +307,23 @@ WEAPONS.Bastard_sword = {
     }
 };
 WEAPONS.Broad_sword = {};
+WEAPONS.Cutlass = {};
+WEAPONS.Drusus = {};
+WEAPONS.Katana = {
+    grip: {
+        [HANDEDNESS.ONE_HANDED]: {},
+        [HANDEDNESS.TWO_HANDED]: {},
+    }
+};
 WEAPONS.Khopesh = {};
 WEAPONS.Long_sword = {};
+WEAPONS.Rapier = {};
+WEAPONS.Sabre = {};
 WEAPONS.Scimitar = {};
 WEAPONS.Short_sword = {};
 WEAPONS.Two_handed_sword = {};
+WEAPONS.Wakizashi = {};
+
 WEAPONS.Trident = {
     grip: {
         [HANDEDNESS.ONE_HANDED]: {},
@@ -2139,7 +2181,7 @@ WEAPONS.Long_spear[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     size: SIZE.L,
     type: [WEAPON_TYPE.P],
     speed: 8,
-    pages: [93],
+    pages: [93,95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -2190,7 +2232,7 @@ WEAPONS.Short_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK] =
                 cost: new Cost(3, CURRENCY.CP, 12),
                 weight_lbs: 0.1,
                 size: SIZE.M,
-                type: WEAPON_TYPE.P,
+                type: [WEAPON_TYPE.P],
                 damage: new Damage("1d4", "1d4"),
                 pages: [95],
 
@@ -2205,7 +2247,7 @@ WEAPONS.Belaying_pin[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     cost: new Cost(2, CURRENCY.CP),
     weight_lbs: 2,
     size: SIZE.S,
-    type: WEAPON_TYPE.B,
+    type: [WEAPON_TYPE.B],
     speed: 4,
     damage: new Damage("1d3", "1d3"),
     pages: [95],
@@ -2220,7 +2262,7 @@ WEAPONS.Bo_stick[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     cost: new Cost(2, CURRENCY.CP),
     weight_lbs: 4,
     size: SIZE.L,
-    type: WEAPON_TYPE.B,
+    type: [WEAPON_TYPE.B],
     speed: 4,
     damage: new Damage("1d6", "1d4"),
     pages: [95],
@@ -2235,9 +2277,9 @@ WEAPONS.Bolas[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 2,
     size: SIZE.M,
-    type: WEAPON_TYPE.B,
+    type: [WEAPON_TYPE.B],
     speed: 8,
-    rate_of_fire: 1,
+    rate_of_fire: "1",
     range: new Range(3, 6, 9),
     damage: new Damage("1d3", "1d2"),
     pages: [94, 95],
@@ -2252,7 +2294,7 @@ WEAPONS.Cestus[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     cost: new Cost(1, CURRENCY.GP),
     weight_lbs: 2,
     size: SIZE.S,
-    type: WEAPON_TYPE.S,
+    type: [WEAPON_TYPE.S],
     speed: 2,
     damage: new Damage("1d4", "1d3"),
     pages: [95],
@@ -2267,7 +2309,7 @@ WEAPONS.Chain[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 3,
     size: SIZE.L,
-    type: WEAPON_TYPE.B,
+    type: [WEAPON_TYPE.B],
     speed: 5,
     rate_of_fire: "*",
     range: new Range("1/2", 1, 2),
@@ -2275,8 +2317,9 @@ WEAPONS.Chain[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     pages: [94, 95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_CHAIN_LASSO_NET,
+        FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
         FIGHTERS_HANDBOOK_ASTRIX_ROF_SPECIAL,
+        FIGHTERS_HANDBOOK_CHAIN_LASSO_NET,
     ]
 })
 
@@ -2285,7 +2328,7 @@ WEAPONS.Dagger_bone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     cost: new Cost(1, CURRENCY.SP),
     weight_lbs: 1,
     size: SIZE.S,
-    type: WEAPON_TYPE.P,
+    type: [WEAPON_TYPE.P],
     speed: 2,
     rate_of_fire: "2/1",
     range: new Range(1, 2, 3),
@@ -2303,7 +2346,7 @@ WEAPONS.Dagger_stone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     cost: new Cost(2, CURRENCY.SP),
     weight_lbs: 1,
     size: SIZE.S,
-    type: WEAPON_TYPE.P,
+    type: [WEAPON_TYPE.P],
     speed: 2,
     rate_of_fire: "2/1",
     range: new Range(1, 2, 3),
@@ -2336,7 +2379,7 @@ WEAPONS.Daikyu.ammunition.Daikyu_arrow[SOURCE.FIGHTERS_HANDBOOK] = new Ammunitio
     cost: new Cost(3, CURRENCY.SP, 6),
     weight_lbs: 1,
     size: SIZE.M,
-    type: WEAPON_TYPE.P,
+    type: [WEAPON_TYPE.P],
     range: new Range(7, 14, 21),
     damage: new Damage("1d8", "1d6"),
     pages: [94, 95],
@@ -2345,4 +2388,371 @@ WEAPONS.Daikyu.ammunition.Daikyu_arrow[SOURCE.FIGHTERS_HANDBOOK] = new Ammunitio
         FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY
     ]
 })
+
+WEAPONS.Gaff_hook_attached[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Gaff/Hook Attached",
+    cost: new Cost(2, CURRENCY.GP),
+    weight_lbs: 2,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: 2,
+    damage: new Damage("1d4", "1d3"),
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+    ]
+})
+
+WEAPONS.Gaff_hook_held[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Gaff/Hook Held",
+    cost: new Cost(5, CURRENCY.CP),
+    weight_lbs: 2,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: 2,
+    damage: new Damage("1d4", "1d3"),
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+    ]
+})
+
+WEAPONS.Javelin_stone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Javelin, Stone",
+    cost: new Cost(5, CURRENCY.CP),
+    weight_lbs: 2,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P],
+    speed: 4,
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
+        FIGHTERS_HANDBOOK_STONE_WEAPONS,
+    ]
+})
+WEAPONS.Javelin_stone.grip[HANDEDNESS.ONE_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+    name: "One-handed",
+    rate_of_fire: "1",
+    range: new Range(2, 4, 6),
+    damage: new Damage("1d4", "1d4")
+}
+WEAPONS.Javelin_stone.grip[HANDEDNESS.TWO_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+    name: "Two-handed",
+    damage: new Damage("1d4+1", "1d6")
+}
+
+WEAPONS.Knife_bone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Knife Bone",
+    cost: new Cost(3, CURRENCY.CP),
+    weight_lbs: 0.5,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 2,
+    rate_of_fire: "2/1",
+    range: new Range(1, 2, 3),
+    damage: new Damage("1d2", "1d2"),
+    pages: [94, 95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        FIGHTERS_HANDBOOK_BONE_WEAPONS
+    ]
+})
+
+WEAPONS.Knife_stone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Knife Stone",
+    cost: new Cost(5, CURRENCY.CP),
+    weight_lbs: 0.5,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 2,
+    rate_of_fire: "2/1",
+    range: new Range(1, 2, 3),
+    damage: new Damage("1d2", "1d2"),
+    pages: [94, 95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        FIGHTERS_HANDBOOK_STONE_WEAPONS
+    ]
+})
+
+WEAPONS.Lasso[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Lasso",
+    cost: new Cost(5, CURRENCY.SP),
+    weight_lbs: 3,
+    size: SIZE.L,
+    speed: 10,
+    rate_of_fire: "*",
+    range: new Range(1, 2, 3),
+    pages: [94, 95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
+        FIGHTERS_HANDBOOK_ASTRIX_ROF_SPECIAL,
+        FIGHTERS_HANDBOOK_CHAIN_LASSO_NET,
+        // TODO write all the Lasso stuff
+    ]
+})
+
+WEAPONS.Main_gauche[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Main-gauche",
+    cost: new Cost(3, CURRENCY.GP),
+    weight_lbs: 2,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 2,
+    damage: new Damage("1d4", "1d3"),
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+    ]
+})
+
+WEAPONS.Net[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Net",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 10,
+    size: SIZE.M,
+    speed: 10,
+    rate_of_fire: "*",
+    range: new Range(1, 2, 3),
+    pages: [94, 95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
+        FIGHTERS_HANDBOOK_ASTRIX_ROF_SPECIAL,
+        FIGHTERS_HANDBOOK_CHAIN_LASSO_NET,
+    ]
+})
+
+WEAPONS.Nunchaku[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Nunchaku",
+    cost: new Cost(1, CURRENCY.GP),
+    weight_lbs: 3,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.B],
+    speed: 3,
+    damage: new Damage("1d6", "1d6"),
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+    ]
+})
+
+WEAPONS.Naginata[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Naginata",
+    sorting_group: "Polearm",
+    cost: new Cost(8, CURRENCY.GP),
+    weight_lbs: 10,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 7,
+    damage: new Damage("1d8", "1d10"),
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
+        FIGHTERS_HANDBOOK_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+    ]
+})
+
+WEAPONS.Tetsubo[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Tetsubo",
+    sorting_group: "Polearm",
+    cost: new Cost(2, CURRENCY.GP),
+    weight_lbs: 7,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.B],
+    speed: 7,
+    damage: new Damage("1d8", "1d8"),
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY
+    ]
+})
+
+WEAPONS.Sai[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Sai",
+    cost: new Cost(5, CURRENCY.SP),
+    weight_lbs: 2,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
+    speed: 2,
+    damage: new Damage("1d4", "1d2"),
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+    ]
+})
+
+WEAPONS.Shuriken[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Shuriken",
+    cost: new Cost(3, CURRENCY.SP),
+    weight_lbs: 1,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: 2,
+    rate_of_fire: "2/1",
+    range: new Range(2, 4, 6),
+    damage: new Damage("1d4", "1d4"),
+    pages: [94, 95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+    ]
+})
+
+WEAPONS.Spear_stone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Spear, Stone",
+    cost: new Cost(8, CURRENCY.CP),
+    weight_lbs: 5,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P],
+    speed: 6,
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
+        FIGHTERS_HANDBOOK_STONE_WEAPONS
+    ]
+})
+WEAPONS.Spear_stone.grip[HANDEDNESS.ONE_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+    name: "One-handed",
+    rate_of_fire: "1",
+    range: new Range(1, 2, 3),
+    damage: new Damage("1d4", "1d6")
+}
+WEAPONS.Spear_stone.grip[HANDEDNESS.TWO_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+    name: "Two-Handed",
+    damage: new Damage("1d6", "2d4")
+}
+
+WEAPONS.Stiletto[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Stiletto",
+    cost: new Cost(5, CURRENCY.SP),
+    weight_lbs: 0.5,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: 2,
+    rate_of_fire: "2/1",
+    range: new Range(1, 2, 3),
+    damage: new Damage("1d3", "1d2"),
+    pages: [94, 95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+    ]
+})
+
+WEAPONS.Cutlass[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Cutlass",
+    sorting_group: "Sword",
+    cost: new Cost(12, CURRENCY.GP),
+    weight_lbs: 4,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 5,
+    damage: new Damage("1d6", "1d8"),
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+    ]
+})
+
+WEAPONS.Drusus[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Drusus",
+    sorting_group: "Sword",
+    cost: new Cost(50, CURRENCY.GP),
+    weight_lbs: 3,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 3,
+    damage: new Damage("1d6+1", "1d8+1"),
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+    ]
+})
+
+WEAPONS.Katana[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Katana",
+    sorting_group: "Sword",
+    cost: new Cost(100, CURRENCY.GP),
+    weight_lbs: 6,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S, WEAPON_TYPE.P],
+    speed: 4,
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED
+    ]
+})
+WEAPONS.Katana.grip[HANDEDNESS.ONE_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+    name: "One-handed",
+    damage: new Damage("1d10", "1d12")
+}
+WEAPONS.Katana.grip[HANDEDNESS.TWO_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+    name: "Two-handed",
+    damage: new Damage("2d6", "2d6")
+}
+
+WEAPONS.Rapier[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Rapier",
+    sorting_group: "Sword",
+    cost: new Cost(15, CURRENCY.GP),
+    weight_lbs: 4,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P],
+    speed: 4,
+    damage: new Damage("1d6+1", "1d8+1"),
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+    ]
+})
+
+WEAPONS.Sabre[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Sabre",
+    sorting_group: "Sword",
+    cost: new Cost(17, CURRENCY.GP),
+    weight_lbs: 5,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 4,
+    damage: new Damage("1d6+1", "1d8+1"),
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+    ]
+})
+
+WEAPONS.Wakizashi[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+    name: "Wakizashi",
+    sorting_group: "Sword",
+    cost: new Cost(50, CURRENCY.GP),
+    weight_lbs: 3,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S, WEAPON_TYPE.P],
+    speed: 3,
+    damage: new Damage("1d8", "1d8"),
+    pages: [95],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_DOLLAR_ONE_HANDED_OPTIONALLY_TWO_HANDED
+    ]
+})
+
 //#endregion Fighter's Handbook
