@@ -32,21 +32,21 @@ const weapons = require(path.join(jsFolder, 'sources','weapons.js'));
 //     {book: 'Player's Option: Skills & Powers', print: ''},
 //     {book: 'Player's Option: Spells & Magic', print: ''},
 // ];
-const booksPriority = [
+const bookPriority = [
     SOURCE.PHB,
     SOURCE.FIGHTERS_HANDBOOK,
 ]
-
 for (const [weaponKey, weaponObj] of Object.entries(weapons)) {
-    let fileName = weaponKey.replaceAll("_", "-")
+    let fileName = weaponKey.replaceAll("_", "-").toLowerCase()
     fileName += '.html'
-
-    pug.renderFile(path.join(pugFolder, 'weapons-list', 'weapon.pug'), {
+    console.log("Building " + fileName)
+    let html = pug.renderFile(path.join(pugFolder, 'weapons-list', 'weapon.pug'), {
         pretty: true,
-        booksPriority: booksPriority,
-        weapon: weaponObj,
-    })
-    fs.writeFileSync(path.join(htmlFolder, 'weapons', fileName))
+        bookPriority: bookPriority,
+        weaponObj: weaponObj,
+    });
+
+    fs.writeFileSync(path.join(htmlFolder, 'weapons', fileName), html)
 }
 
 

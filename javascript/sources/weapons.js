@@ -214,8 +214,8 @@ WEAPONS.Hand_axe = {};
 WEAPONS.Throwing_axe = {};
 WEAPONS.Harpoon = {
     grip: {
-        [HANDEDNESS.ONE_HANDED]: {},
-        [HANDEDNESS.TWO_HANDED]: {},
+        [HANDEDNESS.ONE_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED.id]: {},
     }
 };
 WEAPONS.Horsemans_flail = {};
@@ -223,14 +223,14 @@ WEAPONS.Horsemans_mace = {};
 WEAPONS.Horsemans_pick = {};
 WEAPONS.Javelin = {
     grip: {
-        [HANDEDNESS.ONE_HANDED]: {},
-        [HANDEDNESS.TWO_HANDED]: {},
+        [HANDEDNESS.ONE_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED.id]: {},
     }
 };
 WEAPONS.Javelin_stone = {
     grip: {
-        [HANDEDNESS.ONE_HANDED]: {},
-        [HANDEDNESS.TWO_HANDED]: {},
+        [HANDEDNESS.ONE_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED.id]: {},
     }
 };
 WEAPONS.Knife = {};
@@ -289,20 +289,20 @@ WEAPONS.Staff_sling = {
 };
 WEAPONS.Spear = {
     grip: {
-        [HANDEDNESS.ONE_HANDED]: {},
-        [HANDEDNESS.TWO_HANDED]: {},
+        [HANDEDNESS.ONE_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED.id]: {},
     }
 };
 WEAPONS.Spear_stone = {
     grip: {
-        [HANDEDNESS.ONE_HANDED]: {},
-        [HANDEDNESS.TWO_HANDED]: {},
+        [HANDEDNESS.ONE_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED.id]: {},
     }
 };
 WEAPONS.Long_spear = {
     grip: {
-        [HANDEDNESS.ONE_HANDED]: {},
-        [HANDEDNESS.TWO_HANDED]: {},
+        [HANDEDNESS.ONE_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED.id]: {},
     }
 };
 WEAPONS.Stiletto = {};
@@ -310,8 +310,8 @@ WEAPONS.Stiletto = {};
 // Swords
 WEAPONS.Bastard_sword = {
     grip: {
-        [HANDEDNESS.ONE_HANDED]: {},
-        [HANDEDNESS.TWO_HANDED]: {},
+        [HANDEDNESS.ONE_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED.id]: {},
     }
 };
 WEAPONS.Broad_sword = {};
@@ -319,8 +319,8 @@ WEAPONS.Cutlass = {};
 WEAPONS.Drusus = {};
 WEAPONS.Katana = {
     grip: {
-        [HANDEDNESS.ONE_HANDED]: {},
-        [HANDEDNESS.TWO_HANDED]: {},
+        [HANDEDNESS.ONE_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED.id]: {},
     }
 };
 WEAPONS.Khopesh = {};
@@ -334,8 +334,8 @@ WEAPONS.Wakizashi = {};
 
 WEAPONS.Trident = {
     grip: {
-        [HANDEDNESS.ONE_HANDED]: {},
-        [HANDEDNESS.TWO_HANDED]: {},
+        [HANDEDNESS.ONE_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED.id]: {},
     }
 };
 WEAPONS.Warhammer = {};
@@ -363,7 +363,7 @@ const PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE = {
     text: [`5 This weapon inflicts double damage when firmly set to receive a charge.`]
 }
 
-WEAPONS.Arquebus[SOURCE.PHB] = new Weapon({
+WEAPONS.Arquebus[SOURCE.PHB.id] = new Weapon({
     name: "Arquebus",
     cost: new Cost(500, CURRENCY.GP),
     weight_lbs: 10,
@@ -378,7 +378,7 @@ WEAPONS.Arquebus[SOURCE.PHB] = new Weapon({
     implementationVariables: new ImplementationVariables(
         {
             strength: STRENGTH_BONUS.NONE,
-            handedness: [HANDEDNESS.TWO_HANDED],
+            handedness: [HANDEDNESS.TWO_HANDED.id],
         }
     ),
 
@@ -398,7 +398,7 @@ WEAPONS.Arquebus[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Battle_axe[SOURCE.PHB] = new Weapon({
+WEAPONS.Battle_axe[SOURCE.PHB.id] = new Weapon({
     name: "Battle axe",
     cost: new Cost(5, CURRENCY.GP),
     weight_lbs: 7,
@@ -416,7 +416,7 @@ WEAPONS.Battle_axe[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Blowgun[SOURCE.PHB] = new Weapon({
+WEAPONS.Blowgun[SOURCE.PHB.id] = new Weapon({
     name: "Blowgun",
     cost: new Cost(5, CURRENCY.GP),
     weight_lbs: 2,
@@ -428,11 +428,11 @@ WEAPONS.Blowgun[SOURCE.PHB] = new Weapon({
     implementationVariables: new ImplementationVariables(
         {
             strength: STRENGTH_BONUS.NONE,
-            handedness: [HANDEDNESS.TWO_HANDED]
+            handedness: [HANDEDNESS.TWO_HANDED.id]
         }
     ),
 })
-WEAPONS.Blowgun.ammunition.Barbed_dart[SOURCE.PHB] = new Ammunition({
+WEAPONS.Blowgun.ammunition.Barbed_dart[SOURCE.PHB.id] = new Ammunition({
     name: "Barbed Dart",
     cost: new Cost(1, CURRENCY.SP),
     weight_lbs: 0.1,
@@ -443,7 +443,7 @@ WEAPONS.Blowgun.ammunition.Barbed_dart[SOURCE.PHB] = new Ammunition({
 
     pages: [94, 95],
 })
-WEAPONS.Blowgun.ammunition.Needle[SOURCE.PHB] = new Ammunition({
+WEAPONS.Blowgun.ammunition.Needle[SOURCE.PHB.id] = new Ammunition({
     name: "Needle",
     cost: new Cost(2, CURRENCY.CP),
     weight_lbs: 0.1,
@@ -474,7 +474,7 @@ const PHB_LONG_BOW_ARROW_DESCRIPTION = [
     }
 ]
 
-WEAPONS.Short_bow[SOURCE.PHB] = new Weapon({
+WEAPONS.Short_bow[SOURCE.PHB.id] = new Weapon({
     name: "Short bow",
     sorting_group: "Bow",
     cost: new Cost(30, CURRENCY.GP),
@@ -487,7 +487,7 @@ WEAPONS.Short_bow[SOURCE.PHB] = new Weapon({
     implementationVariables: new ImplementationVariables(
         {
             strength: STRENGTH_BONUS.BOW,
-            handedness: [HANDEDNESS.TWO_HANDED]
+            handedness: [HANDEDNESS.TWO_HANDED.id]
         }
     ),
 
@@ -495,7 +495,7 @@ WEAPONS.Short_bow[SOURCE.PHB] = new Weapon({
         PHB_BOW_DESCRIPTION
     ]
 })
-WEAPONS.Short_bow.ammunition.Flight_arrow[SOURCE.PHB] = new Ammunition({
+WEAPONS.Short_bow.ammunition.Flight_arrow[SOURCE.PHB.id] = new Ammunition({
     name: "Flight arrow",
     cost: new Cost(3, CURRENCY.SP, 12),
     weight_lbs: 0.1,
@@ -506,7 +506,7 @@ WEAPONS.Short_bow.ammunition.Flight_arrow[SOURCE.PHB] = new Ammunition({
     pages: [94],
 })
 
-WEAPONS.Long_bow[SOURCE.PHB] = new Weapon({
+WEAPONS.Long_bow[SOURCE.PHB.id] = new Weapon({
     name: "Long bow",
     sorting_group: "Bow",
     cost: new Cost(75, CURRENCY.GP),
@@ -519,7 +519,7 @@ WEAPONS.Long_bow[SOURCE.PHB] = new Weapon({
     implementationVariables: new ImplementationVariables(
         {
             strength: STRENGTH_BONUS.BOW,
-            handedness: [HANDEDNESS.TWO_HANDED]
+            handedness: [HANDEDNESS.TWO_HANDED.id]
         }
     ),
 
@@ -528,7 +528,7 @@ WEAPONS.Long_bow[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Long_bow.ammunition.Flight_arrow[SOURCE.PHB] = new Ammunition({
+WEAPONS.Long_bow.ammunition.Flight_arrow[SOURCE.PHB.id] = new Ammunition({
     name: "Flight arrow",
     cost: new Cost(3, CURRENCY.SP, 12),
     weight_lbs: 0.1,
@@ -544,7 +544,7 @@ WEAPONS.Long_bow.ammunition.Flight_arrow[SOURCE.PHB] = new Ammunition({
     ]
 })
 
-WEAPONS.Long_bow.ammunition.Sheaf_arrow[SOURCE.PHB] = new Ammunition({
+WEAPONS.Long_bow.ammunition.Sheaf_arrow[SOURCE.PHB.id] = new Ammunition({
     name: "Sheaf arrow",
     cost: new Cost(3, CURRENCY.SP, 6),
     weight_lbs: 0.1,
@@ -560,7 +560,7 @@ WEAPONS.Long_bow.ammunition.Sheaf_arrow[SOURCE.PHB] = new Ammunition({
     ]
 })
 
-WEAPONS.Composite_short_bow[SOURCE.PHB] = new Weapon({
+WEAPONS.Composite_short_bow[SOURCE.PHB.id] = new Weapon({
     name: "Composite short bow",
     sorting_group: "Bow",
     cost: new Cost(75, CURRENCY.GP),
@@ -573,7 +573,7 @@ WEAPONS.Composite_short_bow[SOURCE.PHB] = new Weapon({
     implementationVariables: new ImplementationVariables(
         {
             strength: STRENGTH_BONUS.BOW,
-            handedness: [HANDEDNESS.TWO_HANDED]
+            handedness: [HANDEDNESS.TWO_HANDED.id]
         }
     ),
 
@@ -582,7 +582,7 @@ WEAPONS.Composite_short_bow[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Composite_short_bow.ammunition.Flight_arrow[SOURCE.PHB] = new Ammunition({
+WEAPONS.Composite_short_bow.ammunition.Flight_arrow[SOURCE.PHB.id] = new Ammunition({
     name: "Flight arrow",
     cost: new Cost(3, CURRENCY.SP, 12),
     weight_lbs: 0.1,
@@ -594,7 +594,7 @@ WEAPONS.Composite_short_bow.ammunition.Flight_arrow[SOURCE.PHB] = new Ammunition
     pages: [94],
 })
 
-WEAPONS.Composite_long_bow[SOURCE.PHB] = new Weapon({
+WEAPONS.Composite_long_bow[SOURCE.PHB.id] = new Weapon({
     name: "Composite long bow",
     sorting_group: "Bow",
     cost: new Cost(100, CURRENCY.GP),
@@ -607,7 +607,7 @@ WEAPONS.Composite_long_bow[SOURCE.PHB] = new Weapon({
     implementationVariables: new ImplementationVariables(
         {
             strength: STRENGTH_BONUS.BOW,
-            handedness: [HANDEDNESS.TWO_HANDED]
+            handedness: [HANDEDNESS.TWO_HANDED.id]
         }
     ),
 
@@ -616,7 +616,7 @@ WEAPONS.Composite_long_bow[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Composite_long_bow.ammunition.Flight_arrow[SOURCE.PHB] = new Ammunition({
+WEAPONS.Composite_long_bow.ammunition.Flight_arrow[SOURCE.PHB.id] = new Ammunition({
     name: "Flight arrow",
     cost: new Cost(3, CURRENCY.SP, 12),
     weight_lbs: 0.1,
@@ -631,7 +631,7 @@ WEAPONS.Composite_long_bow.ammunition.Flight_arrow[SOURCE.PHB] = new Ammunition(
         PHB_LONG_BOW_ARROW_DESCRIPTION
     ]
 })
-WEAPONS.Composite_long_bow.ammunition.Sheaf_arrow[SOURCE.PHB] = new Ammunition({
+WEAPONS.Composite_long_bow.ammunition.Sheaf_arrow[SOURCE.PHB.id] = new Ammunition({
     name: "Sheaf arrow",
     cost: new Cost(3, CURRENCY.SP, 6),
     weight_lbs: 0.1,
@@ -647,7 +647,7 @@ WEAPONS.Composite_long_bow.ammunition.Sheaf_arrow[SOURCE.PHB] = new Ammunition({
     ]
 })
 
-WEAPONS.Club[SOURCE.PHB] = new Weapon({
+WEAPONS.Club[SOURCE.PHB.id] = new Weapon({
     name: "Club",
     cost: new Cost(0, CURRENCY.GP),
     weight_lbs: 3,
@@ -668,7 +668,7 @@ WEAPONS.Club[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Hand_crossbow[SOURCE.PHB] = new Weapon({
+WEAPONS.Hand_crossbow[SOURCE.PHB.id] = new Weapon({
     name: "Hand crossbow",
     sorting_group: "Crossbow",
     cost: new Cost(300, CURRENCY.GP),
@@ -681,12 +681,12 @@ WEAPONS.Hand_crossbow[SOURCE.PHB] = new Weapon({
     implementationVariables: new ImplementationVariables(
         {
             strength: STRENGTH_BONUS.NONE,
-            handedness: [HANDEDNESS.TWO_HANDED]
+            handedness: [HANDEDNESS.TWO_HANDED.id]
         }
     ),
 })
 
-WEAPONS.Hand_crossbow.ammunition.Hand_quarrel[SOURCE.PHB] = new Ammunition({
+WEAPONS.Hand_crossbow.ammunition.Hand_quarrel[SOURCE.PHB.id] = new Ammunition({
     name: "Hand quarrel",
     cost: new Cost(1, CURRENCY.GP),
     weight_lbs: 0.1,
@@ -698,7 +698,7 @@ WEAPONS.Hand_crossbow.ammunition.Hand_quarrel[SOURCE.PHB] = new Ammunition({
     pages: [94, 95],
 })
 
-WEAPONS.Light_crossbow[SOURCE.PHB] = new Weapon({
+WEAPONS.Light_crossbow[SOURCE.PHB.id] = new Weapon({
     name: "Light crossbow",
     sorting_group: "Crossbow",
     cost: new Cost(35, CURRENCY.GP),
@@ -711,12 +711,12 @@ WEAPONS.Light_crossbow[SOURCE.PHB] = new Weapon({
     implementationVariables: new ImplementationVariables(
         {
             strength: STRENGTH_BONUS.NONE,
-            handedness: [HANDEDNESS.TWO_HANDED]
+            handedness: [HANDEDNESS.TWO_HANDED.id]
         }
     ),
 })
 
-WEAPONS.Light_crossbow.ammunition.Light_quarrel[SOURCE.PHB] = new Ammunition({
+WEAPONS.Light_crossbow.ammunition.Light_quarrel[SOURCE.PHB.id] = new Ammunition({
     name: "Light quarrel",
     cost: new Cost(1, CURRENCY.SP),
     weight_lbs: 0.1,
@@ -727,7 +727,7 @@ WEAPONS.Light_crossbow.ammunition.Light_quarrel[SOURCE.PHB] = new Ammunition({
     pages: [94, 95],
 })
 
-WEAPONS.Heavy_crossbow[SOURCE.PHB] = new Weapon({
+WEAPONS.Heavy_crossbow[SOURCE.PHB.id] = new Weapon({
     name: "Heavy crossbow",
     sorting_group: "Crossbow",
     cost: new Cost(50, CURRENCY.GP),
@@ -740,12 +740,12 @@ WEAPONS.Heavy_crossbow[SOURCE.PHB] = new Weapon({
     implementationVariables: new ImplementationVariables(
         {
             strength: STRENGTH_BONUS.NONE,
-            handedness: [HANDEDNESS.TWO_HANDED]
+            handedness: [HANDEDNESS.TWO_HANDED.id]
         }
     ),
 })
 
-WEAPONS.Heavy_crossbow.ammunition.Heavy_quarrel[SOURCE.PHB] = new Ammunition({
+WEAPONS.Heavy_crossbow.ammunition.Heavy_quarrel[SOURCE.PHB.id] = new Ammunition({
     name: "Heavy quarrel",
     cost: new Cost(2, CURRENCY.SP),
     weight_lbs: 0.1,
@@ -756,7 +756,7 @@ WEAPONS.Heavy_crossbow.ammunition.Heavy_quarrel[SOURCE.PHB] = new Ammunition({
     pages: [94, 95],
 })
 
-WEAPONS.Dagger[SOURCE.PHB] = new Weapon({
+WEAPONS.Dagger[SOURCE.PHB.id] = new Weapon({
     name: "Dagger",
     cost: new Cost(2, CURRENCY.GP),
     weight_lbs: 1,
@@ -777,7 +777,7 @@ WEAPONS.Dagger[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Dirk[SOURCE.PHB] = new Weapon({
+WEAPONS.Dirk[SOURCE.PHB.id] = new Weapon({
     name: "Dirk",
     cost: new Cost(2, CURRENCY.GP),
     weight_lbs: 1,
@@ -798,7 +798,7 @@ WEAPONS.Dirk[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Dart[SOURCE.PHB] = new Weapon({
+WEAPONS.Dart[SOURCE.PHB.id] = new Weapon({
     name: "Dart",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 0.5,
@@ -813,12 +813,12 @@ WEAPONS.Dart[SOURCE.PHB] = new Weapon({
     implementationVariables: new ImplementationVariables(
         {
             strength: STRENGTH_BONUS.FULL,
-            handedness: [HANDEDNESS.TWO_HANDED]
+            handedness: [HANDEDNESS.TWO_HANDED.id]
         }
     ),
 })
 
-WEAPONS.Footmans_flail[SOURCE.PHB] = new Weapon({
+WEAPONS.Footmans_flail[SOURCE.PHB.id] = new Weapon({
     name: "Footman's flail",
     cost: new Cost(15, CURRENCY.GP),
     weight_lbs: 15,
@@ -836,7 +836,7 @@ WEAPONS.Footmans_flail[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Footmans_mace[SOURCE.PHB] = new Weapon({
+WEAPONS.Footmans_mace[SOURCE.PHB.id] = new Weapon({
     name: "Footman's mace",
     cost: new Cost(8, CURRENCY.GP),
     weight_lbs: 10,
@@ -854,7 +854,7 @@ WEAPONS.Footmans_mace[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Footmans_pick[SOURCE.PHB] = new Weapon({
+WEAPONS.Footmans_pick[SOURCE.PHB.id] = new Weapon({
     name: "Footman's pick",
     cost: new Cost(8, CURRENCY.GP),
     weight_lbs: 6,
@@ -872,7 +872,7 @@ WEAPONS.Footmans_pick[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Hand_axe[SOURCE.PHB] = new Weapon({
+WEAPONS.Hand_axe[SOURCE.PHB.id] = new Weapon({
     name: "Hand axe",
     cost: new Cost(1, CURRENCY.GP),
     weight_lbs: 5,
@@ -893,7 +893,7 @@ WEAPONS.Hand_axe[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Throwing_axe[SOURCE.PHB] = new Weapon({
+WEAPONS.Throwing_axe[SOURCE.PHB.id] = new Weapon({
     name: "Throwing axe",
     cost: new Cost(1, CURRENCY.GP),
     weight_lbs: 5,
@@ -914,7 +914,7 @@ WEAPONS.Throwing_axe[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Harpoon[SOURCE.PHB] = new Weapon({
+WEAPONS.Harpoon[SOURCE.PHB.id] = new Weapon({
     name: "Harpoon",
     cost: new Cost(20, CURRENCY.GP),
     weight_lbs: 6,
@@ -935,7 +935,7 @@ WEAPONS.Harpoon[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Horsemans_flail[SOURCE.PHB] = new Weapon({
+WEAPONS.Horsemans_flail[SOURCE.PHB.id] = new Weapon({
     name: "Horseman's flail",
     cost: new Cost(8, CURRENCY.GP),
     weight_lbs: 5,
@@ -953,7 +953,7 @@ WEAPONS.Horsemans_flail[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Horsemans_mace[SOURCE.PHB] = new Weapon({
+WEAPONS.Horsemans_mace[SOURCE.PHB.id] = new Weapon({
     name: "Horseman's mace",
     cost: new Cost(5, CURRENCY.GP),
     weight_lbs: 6,
@@ -971,7 +971,7 @@ WEAPONS.Horsemans_mace[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Horsemans_pick[SOURCE.PHB] = new Weapon({
+WEAPONS.Horsemans_pick[SOURCE.PHB.id] = new Weapon({
     name: "Horseman's pick",
     cost: new Cost(7, CURRENCY.GP),
     weight_lbs: 4,
@@ -989,7 +989,7 @@ WEAPONS.Horsemans_pick[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Javelin[SOURCE.PHB] = new Weapon({
+WEAPONS.Javelin[SOURCE.PHB.id] = new Weapon({
     name: "Javelin",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 2,
@@ -1010,7 +1010,7 @@ WEAPONS.Javelin[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Knife[SOURCE.PHB] = new Weapon({
+WEAPONS.Knife[SOURCE.PHB.id] = new Weapon({
     name: "Knife",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 0.5,
@@ -1038,7 +1038,7 @@ const PBH_LANCE_DESCRIPTION = {
     ]
 }
 
-WEAPONS.Heavy_horse_lance[SOURCE.PHB] = new Weapon({
+WEAPONS.Heavy_horse_lance[SOURCE.PHB.id] = new Weapon({
     name: "Heavy horse lance",
     sorting_group: "Lance",
     cost: new Cost(15, CURRENCY.GP),
@@ -1062,7 +1062,7 @@ WEAPONS.Heavy_horse_lance[SOURCE.PHB] = new Weapon({
     ],
 })
 
-WEAPONS.Light_horse_lance[SOURCE.PHB] = new Weapon({
+WEAPONS.Light_horse_lance[SOURCE.PHB.id] = new Weapon({
     name: "Light horse lance",
     sorting_group: "Lance",
     cost: new Cost(6, CURRENCY.GP),
@@ -1086,7 +1086,7 @@ WEAPONS.Light_horse_lance[SOURCE.PHB] = new Weapon({
     ],
 })
 
-WEAPONS.Jousting_lance[SOURCE.PHB] = new Weapon({
+WEAPONS.Jousting_lance[SOURCE.PHB.id] = new Weapon({
     name: "Jousting lance",
     sorting_group: "Lance",
     cost: new Cost(20, CURRENCY.GP),
@@ -1110,7 +1110,7 @@ WEAPONS.Jousting_lance[SOURCE.PHB] = new Weapon({
     ],
 })
 
-WEAPONS.Medium_horse_lance[SOURCE.PHB] = new Weapon({
+WEAPONS.Medium_horse_lance[SOURCE.PHB.id] = new Weapon({
     name: "Medium horse lance",
     sorting_group: "Lance",
     cost: new Cost(10, CURRENCY.GP),
@@ -1134,7 +1134,7 @@ WEAPONS.Medium_horse_lance[SOURCE.PHB] = new Weapon({
     ],
 })
 
-WEAPONS.Mancatcher[SOURCE.PHB] = new Weapon({
+WEAPONS.Mancatcher[SOURCE.PHB.id] = new Weapon({
     name: "Mancatcher",
     cost: new Cost(30, CURRENCY.GP),
     weight_lbs: 8,
@@ -1162,7 +1162,7 @@ WEAPONS.Mancatcher[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Morning_star[SOURCE.PHB] = new Weapon({
+WEAPONS.Morning_star[SOURCE.PHB.id] = new Weapon({
     name: "Morning star",
     cost: new Cost(10, CURRENCY.GP),
     weight_lbs: 12,
@@ -1180,7 +1180,7 @@ WEAPONS.Morning_star[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Awl_pike[SOURCE.PHB] = new Weapon({
+WEAPONS.Awl_pike[SOURCE.PHB.id] = new Weapon({
     name: "Awl pike",
     sorting_group: "Polearm",
     cost: new Cost(5, CURRENCY.GP),
@@ -1207,7 +1207,7 @@ WEAPONS.Awl_pike[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Bardiche[SOURCE.PHB] = new Weapon({
+WEAPONS.Bardiche[SOURCE.PHB.id] = new Weapon({
     name: "Bardiche",
     sorting_group: "Polearm",
     cost: new Cost(7, CURRENCY.GP),
@@ -1233,7 +1233,7 @@ WEAPONS.Bardiche[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Bec_de_corbin[SOURCE.PHB] = new Weapon({
+WEAPONS.Bec_de_corbin[SOURCE.PHB.id] = new Weapon({
     name: "Bec de corbin",
     sorting_group: "Polearm",
     cost: new Cost(8, CURRENCY.GP),
@@ -1259,7 +1259,7 @@ WEAPONS.Bec_de_corbin[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Bill_guisarme[SOURCE.PHB] = new Weapon({
+WEAPONS.Bill_guisarme[SOURCE.PHB.id] = new Weapon({
     name: "Bill-guisarme",
     sorting_group: "Polearm",
     cost: new Cost(7, CURRENCY.GP),
@@ -1285,7 +1285,7 @@ WEAPONS.Bill_guisarme[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Fauchard[SOURCE.PHB] = new Weapon({
+WEAPONS.Fauchard[SOURCE.PHB.id] = new Weapon({
     name: "Fauchard",
     sorting_group: "Polearm",
     cost: new Cost(5, CURRENCY.GP),
@@ -1311,7 +1311,7 @@ WEAPONS.Fauchard[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Fauchard_fork[SOURCE.PHB] = new Weapon({
+WEAPONS.Fauchard_fork[SOURCE.PHB.id] = new Weapon({
     name: "Fauchard-fork",
     sorting_group: "Polearm",
     cost: new Cost(8, CURRENCY.GP),
@@ -1337,7 +1337,7 @@ WEAPONS.Fauchard_fork[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Glaive[SOURCE.PHB] = new Weapon({
+WEAPONS.Glaive[SOURCE.PHB.id] = new Weapon({
     name: "Glaive",
     sorting_group: "Polearm",
     cost: new Cost(6, CURRENCY.GP),
@@ -1364,7 +1364,7 @@ WEAPONS.Glaive[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Glaive_guisarme[SOURCE.PHB] = new Weapon({
+WEAPONS.Glaive_guisarme[SOURCE.PHB.id] = new Weapon({
     name: "Glaive-guisarme",
     sorting_group: "Polearm",
     cost: new Cost(10, CURRENCY.GP),
@@ -1391,7 +1391,7 @@ WEAPONS.Glaive_guisarme[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Guisarme[SOURCE.PHB] = new Weapon({
+WEAPONS.Guisarme[SOURCE.PHB.id] = new Weapon({
     name: "Guisarme",
     sorting_group: "Polearm",
     cost: new Cost(5, CURRENCY.GP),
@@ -1417,7 +1417,7 @@ WEAPONS.Guisarme[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Guisarme_voulge[SOURCE.PHB] = new Weapon({
+WEAPONS.Guisarme_voulge[SOURCE.PHB.id] = new Weapon({
     name: "Guisarme-voulge",
     sorting_group: "Polearm",
     cost: new Cost(8, CURRENCY.GP),
@@ -1443,7 +1443,7 @@ WEAPONS.Guisarme_voulge[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Halberd[SOURCE.PHB] = new Weapon({
+WEAPONS.Halberd[SOURCE.PHB.id] = new Weapon({
     name: "Halberd",
     sorting_group: "Polearm",
     cost: new Cost(10, CURRENCY.GP),
@@ -1469,7 +1469,7 @@ WEAPONS.Halberd[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Hook_fauchard[SOURCE.PHB] = new Weapon({
+WEAPONS.Hook_fauchard[SOURCE.PHB.id] = new Weapon({
     name: "Hook fauchard",
     sorting_group: "Polearm",
     cost: new Cost(10, CURRENCY.GP),
@@ -1495,7 +1495,7 @@ WEAPONS.Hook_fauchard[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Lucern_hammer[SOURCE.PHB] = new Weapon({
+WEAPONS.Lucern_hammer[SOURCE.PHB.id] = new Weapon({
     name: "Lucern hammer",
     sorting_group: "Polearm",
     cost: new Cost(7, CURRENCY.GP),
@@ -1521,7 +1521,7 @@ WEAPONS.Lucern_hammer[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Lucern_hammer[SOURCE.PHB] = new Weapon({
+WEAPONS.Lucern_hammer[SOURCE.PHB.id] = new Weapon({
     name: "Lucern hammer",
     sorting_group: "Polearm",
     cost: new Cost(7, CURRENCY.GP),
@@ -1548,7 +1548,7 @@ WEAPONS.Lucern_hammer[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Military_fork[SOURCE.PHB] = new Weapon({
+WEAPONS.Military_fork[SOURCE.PHB.id] = new Weapon({
     name: "Military fork",
     sorting_group: "Polearm",
     cost: new Cost(5, CURRENCY.GP),
@@ -1575,7 +1575,7 @@ WEAPONS.Military_fork[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Partisan[SOURCE.PHB] = new Weapon({
+WEAPONS.Partisan[SOURCE.PHB.id] = new Weapon({
     name: "Partisan",
     sorting_group: "Polearm",
     cost: new Cost(10, CURRENCY.GP),
@@ -1602,7 +1602,7 @@ WEAPONS.Partisan[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Ranseur[SOURCE.PHB] = new Weapon({
+WEAPONS.Ranseur[SOURCE.PHB.id] = new Weapon({
     name: "Ranseur",
     sorting_group: "Polearm",
     cost: new Cost(6, CURRENCY.GP),
@@ -1629,7 +1629,7 @@ WEAPONS.Ranseur[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Spetum[SOURCE.PHB] = new Weapon({
+WEAPONS.Spetum[SOURCE.PHB.id] = new Weapon({
     name: "Spetum",
     sorting_group: "Polearm",
     cost: new Cost(5, CURRENCY.GP),
@@ -1656,7 +1656,7 @@ WEAPONS.Spetum[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Voulge[SOURCE.PHB] = new Weapon({
+WEAPONS.Voulge[SOURCE.PHB.id] = new Weapon({
     name: "Voulge",
     sorting_group: "Polearm",
     cost: new Cost(5, CURRENCY.GP),
@@ -1682,7 +1682,7 @@ WEAPONS.Voulge[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Quarterstaff[SOURCE.PHB] = new Weapon({
+WEAPONS.Quarterstaff[SOURCE.PHB.id] = new Weapon({
     name: "Quarterstaff",
     weight_lbs: 4,
     size: SIZE.L,
@@ -1699,7 +1699,7 @@ WEAPONS.Quarterstaff[SOURCE.PHB] = new Weapon({
     ),
 })
 
-WEAPONS.Scourge[SOURCE.PHB] = new Weapon({
+WEAPONS.Scourge[SOURCE.PHB.id] = new Weapon({
     name: "Scourge",
     cost: new Cost(1, CURRENCY.GP),
     weight_lbs: 2,
@@ -1723,7 +1723,7 @@ WEAPONS.Scourge[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Sickle[SOURCE.PHB] = new Weapon({
+WEAPONS.Sickle[SOURCE.PHB.id] = new Weapon({
     name: "Sickle",
     cost: new Cost(6, CURRENCY.SP),
     weight_lbs: 3,
@@ -1743,7 +1743,7 @@ WEAPONS.Sickle[SOURCE.PHB] = new Weapon({
     descriptions: []
 })
 
-WEAPONS.Sling[SOURCE.PHB] = new Weapon({
+WEAPONS.Sling[SOURCE.PHB.id] = new Weapon({
     name: "Sling",
     cost: new Cost(5, CURRENCY.CP),
     weight_lbs: 0.1,
@@ -1755,14 +1755,14 @@ WEAPONS.Sling[SOURCE.PHB] = new Weapon({
     implementationVariables: new ImplementationVariables(
         {
             strength: STRENGTH_BONUS.FULL,
-            handedness: [HANDEDNESS.TWO_HANDED]
+            handedness: [HANDEDNESS.TWO_HANDED.id]
         }
     ),
 
     descriptions: []
 })
 
-WEAPONS.Sling.ammunition.Bullet[SOURCE.PHB] = new Ammunition({
+WEAPONS.Sling.ammunition.Bullet[SOURCE.PHB.id] = new Ammunition({
     name: "Sling bullet",
     cost: new Cost(1, CURRENCY.CP),
     weight_lbs: 0.1,
@@ -1772,7 +1772,7 @@ WEAPONS.Sling.ammunition.Bullet[SOURCE.PHB] = new Ammunition({
     damage: new Damage("1d4+1", "1d6+1"),
     pages: [95],
 })
-WEAPONS.Sling.ammunition.Stone[SOURCE.PHB] = new Ammunition({
+WEAPONS.Sling.ammunition.Stone[SOURCE.PHB.id] = new Ammunition({
     name: "Sling stone",
     weight_lbs: 0.1,
     size: SIZE.S,
@@ -1782,7 +1782,7 @@ WEAPONS.Sling.ammunition.Stone[SOURCE.PHB] = new Ammunition({
     pages: [95],
 })
 
-WEAPONS.Spear[SOURCE.PHB] = new Weapon({
+WEAPONS.Spear[SOURCE.PHB.id] = new Weapon({
     name: "Spear",
     cost: new Cost(8, CURRENCY.SP),
     weight_lbs: 5,
@@ -1805,7 +1805,7 @@ WEAPONS.Spear[SOURCE.PHB] = new Weapon({
     descriptions: []
 })
 
-WEAPONS.Staff_sling[SOURCE.PHB] = new Weapon({
+WEAPONS.Staff_sling[SOURCE.PHB.id] = new Weapon({
     name: "Staff sling",
     cost: new Cost(2, CURRENCY.SP),
     weight_lbs: 2,
@@ -1824,7 +1824,7 @@ WEAPONS.Staff_sling[SOURCE.PHB] = new Weapon({
     descriptions: [],
 })
 
-WEAPONS.Staff_sling.ammunition.Bullet[SOURCE.PHB] = new Ammunition({
+WEAPONS.Staff_sling.ammunition.Bullet[SOURCE.PHB.id] = new Ammunition({
     name: "Staff sling bullet",
     cost: new Cost(1, CURRENCY.CP),
     weight_lbs: 0.1,
@@ -1835,7 +1835,7 @@ WEAPONS.Staff_sling.ammunition.Bullet[SOURCE.PHB] = new Ammunition({
 
     comment: `No explicit ammunition damage is given for Staff sling in the PHB, so using the same as Sling.`
 })
-WEAPONS.Staff_sling.ammunition.Stone[SOURCE.PHB] = new Ammunition({
+WEAPONS.Staff_sling.ammunition.Stone[SOURCE.PHB.id] = new Ammunition({
     name: "Staff sling stone",
     weight_lbs: 0.1,
     size: SIZE.S,
@@ -1846,7 +1846,7 @@ WEAPONS.Staff_sling.ammunition.Stone[SOURCE.PHB] = new Ammunition({
     comment: `No explicit ammunition damage is given for Staff sling in the PHB, so using the same as Sling.`
 })
 
-WEAPONS.Bastard_sword[SOURCE.PHB] = new Weapon({
+WEAPONS.Bastard_sword[SOURCE.PHB.id] = new Weapon({
     name: "Bastard sword",
     sorting_group: "Sword",
     cost: new Cost(25, CURRENCY.GP),
@@ -1870,18 +1870,18 @@ WEAPONS.Bastard_sword[SOURCE.PHB] = new Weapon({
     ]
 })
 
-WEAPONS.Bastard_sword.grip[HANDEDNESS.ONE_HANDED][SOURCE.PHB] = {
+WEAPONS.Bastard_sword.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.PHB.id] = {
     name: "One-handed",
     speed: 6,
     damage: new Damage("1d8", "1d12"),
 }
-WEAPONS.Bastard_sword.grip[HANDEDNESS.TWO_HANDED][SOURCE.PHB] = {
+WEAPONS.Bastard_sword.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.PHB.id] = {
     name: "Two-handed",
     speed: 8,
     damage: new Damage("2d4", "2d8"),
 }
 
-WEAPONS.Broad_sword[SOURCE.PHB] = new Weapon({
+WEAPONS.Broad_sword[SOURCE.PHB.id] = new Weapon({
     name: "Broad sword",
     sorting_group: "Sword",
     cost: new Cost(10, CURRENCY.GP),
@@ -1900,7 +1900,7 @@ WEAPONS.Broad_sword[SOURCE.PHB] = new Weapon({
     )
 })
 
-WEAPONS.Khopesh[SOURCE.PHB] = new Weapon({
+WEAPONS.Khopesh[SOURCE.PHB.id] = new Weapon({
     name: "Khopesh",
     sorting_group: "Sword",
     cost: new Cost(10, CURRENCY.GP),
@@ -1926,7 +1926,7 @@ WEAPONS.Khopesh[SOURCE.PHB] = new Weapon({
     )
 })
 
-WEAPONS.Long_sword[SOURCE.PHB] = new Weapon({
+WEAPONS.Long_sword[SOURCE.PHB.id] = new Weapon({
     name: "Long sword",
     sorting_group: "Sword",
     cost: new Cost(15, CURRENCY.GP),
@@ -1945,7 +1945,7 @@ WEAPONS.Long_sword[SOURCE.PHB] = new Weapon({
     )
 })
 
-WEAPONS.Scimitar[SOURCE.PHB] = new Weapon({
+WEAPONS.Scimitar[SOURCE.PHB.id] = new Weapon({
     name: "Scimitar",
     sorting_group: "Sword",
     cost: new Cost(15, CURRENCY.GP),
@@ -1964,7 +1964,7 @@ WEAPONS.Scimitar[SOURCE.PHB] = new Weapon({
     )
 })
 
-WEAPONS.Short_sword[SOURCE.PHB] = new Weapon({
+WEAPONS.Short_sword[SOURCE.PHB.id] = new Weapon({
     name: "Short sword",
     sorting_group: "Sword",
     cost: new Cost(10, CURRENCY.GP),
@@ -1983,7 +1983,7 @@ WEAPONS.Short_sword[SOURCE.PHB] = new Weapon({
     )
 })
 
-WEAPONS.Two_handed_sword[SOURCE.PHB] = new Weapon({
+WEAPONS.Two_handed_sword[SOURCE.PHB.id] = new Weapon({
     name: "Two-handed sword",
     sorting_group: "Sword",
     cost: new Cost(50, CURRENCY.GP),
@@ -2002,7 +2002,7 @@ WEAPONS.Two_handed_sword[SOURCE.PHB] = new Weapon({
     )
 })
 
-WEAPONS.Trident[SOURCE.PHB] = new Weapon({
+WEAPONS.Trident[SOURCE.PHB.id] = new Weapon({
     name: "Trident",
     cost: new Cost(15, CURRENCY.GP),
     weight_lbs: 5,
@@ -2020,7 +2020,7 @@ WEAPONS.Trident[SOURCE.PHB] = new Weapon({
     )
 })
 
-WEAPONS.Warhammer[SOURCE.PHB] = new Weapon({
+WEAPONS.Warhammer[SOURCE.PHB.id] = new Weapon({
     name: "Warhammer",
     cost: new Cost(2, CURRENCY.GP),
     weight_lbs: 6,
@@ -2040,7 +2040,7 @@ WEAPONS.Warhammer[SOURCE.PHB] = new Weapon({
     )
 })
 
-WEAPONS.Whip[SOURCE.PHB] = new Weapon({
+WEAPONS.Whip[SOURCE.PHB.id] = new Weapon({
     name: "Whip",
     cost: new Cost(1, CURRENCY.SP),
     weight_lbs: 2,
@@ -2112,7 +2112,7 @@ const FIGHTERS_HANDBOOK_BONE_WEAPONS = {
 }
 
 
-WEAPONS.Harpoon[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Harpoon[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Harpoon",
     cost: new Cost(20, CURRENCY.GP),
     weight_lbs: 6,
@@ -2125,16 +2125,16 @@ WEAPONS.Harpoon[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
     ]
 })
-WEAPONS.Harpoon.grip[HANDEDNESS.ONE_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Harpoon.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
     damage: new Damage("1d4+1", "1d6+1")
 }
-WEAPONS.Harpoon.grip[HANDEDNESS.TWO_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Harpoon.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
     damage: new Damage("2d4", "2d6")
 }
 
-WEAPONS.Javelin[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Javelin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Javelin",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 2,
@@ -2147,16 +2147,16 @@ WEAPONS.Javelin[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
     ]
 })
-WEAPONS.Javelin.grip[HANDEDNESS.ONE_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Javelin.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
     damage: new Damage("1d4", "1d4")
 }
-WEAPONS.Javelin.grip[HANDEDNESS.TWO_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Javelin.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
     damage: new Damage("1d6", "1d6")
 }
 
-WEAPONS.Spear[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Spear",
     cost: new Cost(8, CURRENCY.SP),
     weight_lbs: 5,
@@ -2169,11 +2169,11 @@ WEAPONS.Spear[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
     ]
 })
-WEAPONS.Spear.grip[HANDEDNESS.ONE_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
     damage: new Damage("1d6", "1d8")
 }
-WEAPONS.Spear.grip[HANDEDNESS.TWO_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
     damage: new Damage("1d8+1", "2d6"),
 
@@ -2182,7 +2182,7 @@ WEAPONS.Spear.grip[HANDEDNESS.TWO_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
     ]
 }
 
-WEAPONS.Long_spear[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Long_spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Spear, Long",
     cost: new Cost(5, CURRENCY.GP),
     weight_lbs: 8,
@@ -2195,11 +2195,11 @@ WEAPONS.Long_spear[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
     ]
 })
-WEAPONS.Long_spear.grip[HANDEDNESS.ONE_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Long_spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
     damage: new Damage("1d8", "1d8+1")
 }
-WEAPONS.Long_spear.grip[HANDEDNESS.TWO_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Long_spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
     damage: new Damage("2d6", "3d6"),
 
@@ -2208,7 +2208,7 @@ WEAPONS.Long_spear.grip[HANDEDNESS.TWO_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
     ]
 }
 
-WEAPONS.Trident[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Trident[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Trident",
     cost: new Cost(15, CURRENCY.GP),
     weight_lbs: 5,
@@ -2221,21 +2221,21 @@ WEAPONS.Trident[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
     ]
 })
-WEAPONS.Trident.grip[HANDEDNESS.ONE_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Trident.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
     rate_of_fire: "1",
     range: new Range(0, 1, 2),
     damage: new Damage("1d6+1", "3d4")
 }
-WEAPONS.Trident.grip[HANDEDNESS.TWO_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Trident.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
     damage: new Damage("1d8+1", "3d4")
 }
 
-WEAPONS.Short_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK] =
-    WEAPONS.Long_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK] =
-        WEAPONS.Composite_short_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK] =
-            WEAPONS.Composite_long_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK] = new Ammunition({
+WEAPONS.Short_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK.id] =
+    WEAPONS.Long_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK.id] =
+        WEAPONS.Composite_short_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK.id] =
+            WEAPONS.Composite_long_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Ammunition({
                 name: "Arrows, Stone Flight",
                 cost: new Cost(3, CURRENCY.CP, 12),
                 weight_lbs: 0.1,
@@ -2250,7 +2250,7 @@ WEAPONS.Short_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK] =
                 ]
             })
 
-WEAPONS.Belaying_pin[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Belaying_pin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Belaying pin",
     cost: new Cost(2, CURRENCY.CP),
     weight_lbs: 2,
@@ -2265,7 +2265,7 @@ WEAPONS.Belaying_pin[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Bo_stick[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Bo_stick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Bo stick",
     cost: new Cost(2, CURRENCY.CP),
     weight_lbs: 4,
@@ -2280,7 +2280,7 @@ WEAPONS.Bo_stick[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Bolas[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Bolas[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Bolas",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 2,
@@ -2297,7 +2297,7 @@ WEAPONS.Bolas[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Cestus[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Cestus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Cestus",
     cost: new Cost(1, CURRENCY.GP),
     weight_lbs: 2,
@@ -2312,7 +2312,7 @@ WEAPONS.Cestus[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Chain[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Chain[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Chain",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 3,
@@ -2331,7 +2331,7 @@ WEAPONS.Chain[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Dagger_bone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Dagger_bone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Dagger Bone",
     cost: new Cost(1, CURRENCY.SP),
     weight_lbs: 1,
@@ -2349,7 +2349,7 @@ WEAPONS.Dagger_bone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Dagger_stone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Dagger_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Dagger Stone",
     cost: new Cost(2, CURRENCY.SP),
     weight_lbs: 1,
@@ -2367,7 +2367,7 @@ WEAPONS.Dagger_stone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Daikyu[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Daikyu[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Daikyu",
     cost: new Cost(100, CURRENCY.GP),
     weight_lbs: 3,
@@ -2382,7 +2382,7 @@ WEAPONS.Daikyu[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Daikyu.ammunition.Daikyu_arrow[SOURCE.FIGHTERS_HANDBOOK] = new Ammunition({
+WEAPONS.Daikyu.ammunition.Daikyu_arrow[SOURCE.FIGHTERS_HANDBOOK.id] = new Ammunition({
     name: "Daikyu arrow",
     cost: new Cost(3, CURRENCY.SP, 6),
     weight_lbs: 1,
@@ -2397,7 +2397,7 @@ WEAPONS.Daikyu.ammunition.Daikyu_arrow[SOURCE.FIGHTERS_HANDBOOK] = new Ammunitio
     ]
 })
 
-WEAPONS.Gaff_hook_attached[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Gaff_hook_attached[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Gaff/Hook Attached",
     cost: new Cost(2, CURRENCY.GP),
     weight_lbs: 2,
@@ -2412,7 +2412,7 @@ WEAPONS.Gaff_hook_attached[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Gaff_hook_held[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Gaff_hook_held[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Gaff/Hook Held",
     cost: new Cost(5, CURRENCY.CP),
     weight_lbs: 2,
@@ -2427,7 +2427,7 @@ WEAPONS.Gaff_hook_held[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Javelin_stone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Javelin_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Javelin, Stone",
     cost: new Cost(5, CURRENCY.CP),
     weight_lbs: 2,
@@ -2441,18 +2441,18 @@ WEAPONS.Javelin_stone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
         FIGHTERS_HANDBOOK_STONE_WEAPONS,
     ]
 })
-WEAPONS.Javelin_stone.grip[HANDEDNESS.ONE_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Javelin_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
     rate_of_fire: "1",
     range: new Range(2, 4, 6),
     damage: new Damage("1d4", "1d4")
 }
-WEAPONS.Javelin_stone.grip[HANDEDNESS.TWO_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Javelin_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
     damage: new Damage("1d4+1", "1d6")
 }
 
-WEAPONS.Knife_bone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Knife_bone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Knife Bone",
     cost: new Cost(3, CURRENCY.CP),
     weight_lbs: 0.5,
@@ -2470,7 +2470,7 @@ WEAPONS.Knife_bone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Knife_stone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Knife_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Knife Stone",
     cost: new Cost(5, CURRENCY.CP),
     weight_lbs: 0.5,
@@ -2488,7 +2488,7 @@ WEAPONS.Knife_stone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Lasso[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Lasso[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Lasso",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 3,
@@ -2506,7 +2506,7 @@ WEAPONS.Lasso[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Main_gauche[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Main_gauche[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Main-gauche",
     cost: new Cost(3, CURRENCY.GP),
     weight_lbs: 2,
@@ -2521,7 +2521,7 @@ WEAPONS.Main_gauche[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Net[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Net[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Net",
     cost: new Cost(5, CURRENCY.GP),
     weight_lbs: 10,
@@ -2538,7 +2538,7 @@ WEAPONS.Net[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Nunchaku[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Nunchaku[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Nunchaku",
     cost: new Cost(1, CURRENCY.GP),
     weight_lbs: 3,
@@ -2553,7 +2553,7 @@ WEAPONS.Nunchaku[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Naginata[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Naginata[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Naginata",
     sorting_group: "Polearm",
     cost: new Cost(8, CURRENCY.GP),
@@ -2570,7 +2570,7 @@ WEAPONS.Naginata[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Tetsubo[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Tetsubo[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Tetsubo",
     sorting_group: "Polearm",
     cost: new Cost(2, CURRENCY.GP),
@@ -2586,7 +2586,7 @@ WEAPONS.Tetsubo[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Sai[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Sai[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Sai",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 2,
@@ -2601,7 +2601,7 @@ WEAPONS.Sai[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Shuriken[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Shuriken[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Shuriken",
     cost: new Cost(3, CURRENCY.SP),
     weight_lbs: 1,
@@ -2618,7 +2618,7 @@ WEAPONS.Shuriken[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Spear_stone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Spear_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Spear, Stone",
     cost: new Cost(8, CURRENCY.CP),
     weight_lbs: 5,
@@ -2632,18 +2632,18 @@ WEAPONS.Spear_stone[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
         FIGHTERS_HANDBOOK_STONE_WEAPONS
     ]
 })
-WEAPONS.Spear_stone.grip[HANDEDNESS.ONE_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Spear_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
     rate_of_fire: "1",
     range: new Range(1, 2, 3),
     damage: new Damage("1d4", "1d6")
 }
-WEAPONS.Spear_stone.grip[HANDEDNESS.TWO_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Spear_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Handed",
     damage: new Damage("1d6", "2d4")
 }
 
-WEAPONS.Stiletto[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Stiletto[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Stiletto",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 0.5,
@@ -2660,7 +2660,7 @@ WEAPONS.Stiletto[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Cutlass[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Cutlass[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Cutlass",
     sorting_group: "Sword",
     cost: new Cost(12, CURRENCY.GP),
@@ -2676,7 +2676,7 @@ WEAPONS.Cutlass[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Drusus[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Drusus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Drusus",
     sorting_group: "Sword",
     cost: new Cost(50, CURRENCY.GP),
@@ -2692,7 +2692,7 @@ WEAPONS.Drusus[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Katana[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Katana[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Katana",
     sorting_group: "Sword",
     cost: new Cost(100, CURRENCY.GP),
@@ -2706,16 +2706,16 @@ WEAPONS.Katana[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED
     ]
 })
-WEAPONS.Katana.grip[HANDEDNESS.ONE_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Katana.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
     damage: new Damage("1d10", "1d12")
 }
-WEAPONS.Katana.grip[HANDEDNESS.TWO_HANDED][SOURCE.FIGHTERS_HANDBOOK] = {
+WEAPONS.Katana.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
     damage: new Damage("2d6", "2d6")
 }
 
-WEAPONS.Rapier[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Rapier[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Rapier",
     sorting_group: "Sword",
     cost: new Cost(15, CURRENCY.GP),
@@ -2731,7 +2731,7 @@ WEAPONS.Rapier[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Sabre[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Sabre[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Sabre",
     sorting_group: "Sword",
     cost: new Cost(17, CURRENCY.GP),
@@ -2747,7 +2747,7 @@ WEAPONS.Sabre[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
     ]
 })
 
-WEAPONS.Wakizashi[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
+WEAPONS.Wakizashi[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Wakizashi",
     sorting_group: "Sword",
     cost: new Cost(50, CURRENCY.GP),
@@ -2764,3 +2764,5 @@ WEAPONS.Wakizashi[SOURCE.FIGHTERS_HANDBOOK] = new Weapon({
 })
 
 //#endregion Fighter's Handbook
+
+module.exports = WEAPONS;
