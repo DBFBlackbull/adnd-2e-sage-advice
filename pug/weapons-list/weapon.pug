@@ -28,18 +28,20 @@ body
             th L
             th Sm-Med
             th Large
+        - let color
         each book in bookPriority
+            - color = colorFlip(color)
             - let indents = 0
             - let weapon = weaponObj[book.id]
             if weapon
-                +weaponRow(weapon, book, indents)
+                +weaponRow(weapon, book, color, indents)
             - indents = 1;
             each hand in handedness
                 - let grip = weaponObj.grip?.[hand.id]?.[book.id]
                 if grip
-                    +weaponRow(grip, book, indents)
+                    +weaponRow(grip, book, color, indents)
             if weaponObj.ammunition
                 each ammoType in weaponObj.ammunition
                     - let ammo = ammoType[book.id]
                     if ammo
-                        +weaponRow(ammo, book, indents)
+                        +weaponRow(ammo, book, color, indents)

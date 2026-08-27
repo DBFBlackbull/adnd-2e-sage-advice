@@ -75,9 +75,18 @@
         return damage.large
     }
 
-mixin weaponRow(obj, book, indents)
+    function colorFlip(color) {
+        if (color === '') {
+            return 'antiquewhite';
+        }
+
+        return '';
+    }
+
+mixin weaponRow(obj, book, color, indents)
     - let indent = '&emsp;'.repeat(indents)
-    tr
+    - let backgroundColor = `background: ${color};`
+    tr(style=backgroundColor)
         td !{indent + obj.name}
         td !{getCost(obj.cost)}
         td !{getProp(obj.weight_lbs)}
