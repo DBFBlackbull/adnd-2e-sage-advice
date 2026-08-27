@@ -29,40 +29,15 @@ body
             th Sm-Med
             th Large
         each book in bookPriority
+            - let indents = 0
             - let weapon = weaponObj[book.id]
             if weapon
-                tr
-                    td !{weapon.name}
-                    td !{getCost(weapon.cost)}
-                    td !{weapon.weight_lbs}
-                    td !{weapon.size.id}
-                    td !{getType(weapon.type)}
-                    td !{getProp(weapon.speed)}
-                    td !{getProp(weapon.melee_reach)}
-                    td !{getProp(weapon.rate_of_fire)}
-                    td !{getRangeShort(weapon.range)}
-                    td !{getRangeMedium(weapon.range)}
-                    td !{getRangeLong(weapon.range)}
-                    td !{getDamageSmallMedium(weapon.damage)}
-                    td !{getDamageLarge(weapon.damage)}
-                    td !{getProp(weapon.knockdown)}
-                    td !{book.title}
+                +weaponRow(weapon, book, indents)
+            - indents = 1;
             each hand in handedness
                 - let grip = weaponObj.grip?.[hand.id]?.[book.id]
                 if grip
-                    tr
-                        td &emsp;!{grip.name}
-                        td —
-                        td —
-                        td —
-                        td —
-                        td !{getProp(grip.speed)}
-                        td —
-                        td !{getProp(grip.rate_of_fire)}
-                        td !{getRangeShort(grip.range)}
-                        td !{getRangeMedium(grip.range)}
-                        td !{getRangeLong(grip.range)}
-                        td !{getDamageSmallMedium(grip.damage)}
-                        td !{getDamageLarge(grip.damage)}
-                        td !{getProp(grip.knockdown)}
-                        td !{book.title}
+                    +weaponRow(grip, book, indents)
+            - let ammo = weaponObj.ammunition?.[book.id]
+            if ammo
+                +weaponRow(ammo, book, indents)

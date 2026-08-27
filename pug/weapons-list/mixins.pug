@@ -19,6 +19,14 @@
         return displayString;
     }
 
+    function getSize(size) {
+        if (!size) {
+            return '—';
+        }
+
+        return size.id;
+    }
+
     function getType(type) {
         if (!type) {
             return '—';
@@ -66,3 +74,22 @@
 
         return damage.large
     }
+
+mixin weaponRow(obj, book, indents)
+    - let indent = '&emsp;'.repeat(indents)
+    tr
+        td !{indent + obj.name}
+        td !{getCost(obj.cost)}
+        td !{getProp(obj.weight_lbs)}
+        td !{getSize(obj.size)}
+        td !{getType(obj.type)}
+        td !{getProp(obj.speed)}
+        td !{getProp(obj.melee_reach)}
+        td !{getProp(obj.rate_of_fire)}
+        td !{getRangeShort(obj.range)}
+        td !{getRangeMedium(obj.range)}
+        td !{getRangeLong(obj.range)}
+        td !{getDamageSmallMedium(obj.damage)}
+        td !{getDamageLarge(obj.damage)}
+        td !{getProp(obj.knockdown)}
+        td !{book.title}
