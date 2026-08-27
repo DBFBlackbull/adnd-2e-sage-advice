@@ -38,6 +38,8 @@ body
                 - let grip = weaponObj.grip?.[hand.id]?.[book.id]
                 if grip
                     +weaponRow(grip, book, indents)
-            - let ammo = weaponObj.ammunition?.[book.id]
-            if ammo
-                +weaponRow(ammo, book, indents)
+            if weaponObj.ammunition
+                each ammoType in weaponObj.ammunition
+                    - let ammo = ammoType[book.id]
+                    if ammo
+                        +weaponRow(ammo, book, indents)
