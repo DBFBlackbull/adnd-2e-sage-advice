@@ -1,0 +1,68 @@
+-
+    function getCost(cost) {
+        if (!cost) {
+            return '—';
+        }
+
+        let displayString = `${cost.amount} ${cost.currency.id}`;
+        if (cost.amount) {
+            displayString += `/${cost.amount}`
+        }
+        return displayString;
+    }
+
+    function getType(type) {
+        if (!type) {
+            return '—';
+        }
+
+        return type.map(t => t.id).join('/')
+    }
+
+    function getRateOfFire(rateOfFire) {
+        if (!rateOfFire) {
+            return '—';
+        }
+
+        return rateOfFire
+    }
+
+    function getRangeShort(range) {
+        if (!range?.short) {
+            return '—'
+        }
+
+        return range.short
+    }
+
+    function getRangeMedium(range) {
+        if (!range?.medium) {
+            return '—'
+        }
+
+        return range.medium
+    }
+
+    function getRangeLong(range) {
+        if (!range?.long) {
+            return '—'
+        }
+
+        return range.long
+    }
+
+    function getDamageSmallMedium(damage) {
+        if (!damage?.small_medium) {
+            return '—';
+        }
+
+        return damage.small_medium
+    }
+
+    function getDamageLarge(damage) {
+        if (!damage?.large) {
+            return '—';
+        }
+
+        return damage.large
+    }

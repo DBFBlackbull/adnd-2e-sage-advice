@@ -46,14 +46,6 @@ class Cost {
         this.currency = currency
         this.quantity = quantity
     }
-
-    string() {
-        let displayString = `${this.amount} ${this.currency.id}`;
-        if (this.amount) {
-            displayString += `/${this.amount}`
-        }
-        return displayString;
-    }
 }
 
 class Ammunition {
