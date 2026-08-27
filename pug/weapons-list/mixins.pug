@@ -5,10 +5,18 @@
         }
 
         let displayString = `${cost.amount} ${cost.currency.id}`;
-        if (cost.amount) {
-            displayString += `/${cost.amount}`
+        if (cost.quantity && cost.quantity > 1) {
+            displayString += `/${cost.quantity}`
         }
         return displayString;
+    }
+
+    function getSpeed(speed) {
+        if (!speed) {
+            return '—';
+        }
+
+        return speed;
     }
 
     function getType(type) {

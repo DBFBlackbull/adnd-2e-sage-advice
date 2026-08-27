@@ -5,15 +5,12 @@ table {
     width: 100%;
 }
 
-tr.gray th {
-    background: lightgray;
-}
-
 th, td {
     padding: 2px;
 }
 
 th {
+    background: lightgray;
     vertical-align: bottom;
     position: sticky;
     top: 0;
