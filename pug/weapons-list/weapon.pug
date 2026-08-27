@@ -15,8 +15,8 @@ body
             th(rowspan="2") Speed
             th Melee
             th Missile
-            th(colspan="3") Range
-            th(colspan="2") Damage
+            th(colspan="3" class="center") Range
+            th(colspan="2" class="center") Damage
             th(rowspan="2") Knockdown
         tr
             th (lbs.)
@@ -36,11 +36,28 @@ body
                     td !{weapon.weight_lbs}
                     td !{weapon.size.id}
                     td !{getType(weapon.type)}
-                    td !{weapon.speed}
-                    td !{weapon.melee_reach}
-                    td !{getRateOfFire(weapon.rate_of_fire)}
+                    td !{getProp(weapon.speed)}
+                    td !{getProp(weapon.melee_reach)}
+                    td !{getProp(weapon.rate_of_fire)}
                     td !{getRangeShort(weapon.range)}
                     td !{getRangeMedium(weapon.range)}
                     td !{getRangeLong(weapon.range)}
                     td !{getDamageSmallMedium(weapon.damage)}
                     td !{getDamageLarge(weapon.damage)}
+            each hand in handedness
+                - let grip = weaponObj.grip?.[hand.id]?.[book.id]
+                if grip
+                    tr
+                        td &emsp;!{grip.name}
+                        td —
+                        td —
+                        td —
+                        td —
+                        td !{getProp(grip.speed)}
+                        td —
+                        td !{getProp(grip.rate_of_fire)}
+                        td !{getRangeShort(grip.range)}
+                        td !{getRangeMedium(grip.range)}
+                        td !{getRangeLong(grip.range)}
+                        td !{getDamageSmallMedium(grip.damage)}
+                        td !{getDamageLarge(grip.damage)}

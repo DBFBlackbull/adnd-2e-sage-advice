@@ -6,7 +6,7 @@ const jsFolder = path.join(sourceFolder, 'javascript');
 const htmlFolder = path.join(sourceFolder, 'html');
 const pugFolder = path.join(sourceFolder, 'pug');
 
-const {SOURCE} = require(path.join(jsFolder, 'constants.js'));
+const {SOURCE, HANDEDNESS} = require(path.join(jsFolder, 'constants.js'));
 const weapons = require(path.join(jsFolder, 'sources','weapons.js'));
 
 // const booksPriority = [
@@ -44,6 +44,7 @@ for (const [weaponKey, weaponObj] of Object.entries(weapons)) {
         pretty: true,
         bookPriority: bookPriority,
         weaponObj: weaponObj,
+        handedness: HANDEDNESS,
     });
 
     fs.writeFileSync(path.join(htmlFolder, 'weapons', fileName), html)

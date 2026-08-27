@@ -6,7 +6,7 @@ const jsFolder = path.join(sourceFolder, 'javascript');
 const htmlFolder = path.join(sourceFolder, 'html');
 const pugFolder = path.join(sourceFolder, 'pug');
 
-const {SOURCE, GAME_SYSTEM, ATTRIBUTE} = require(path.join(jsFolder, 'constants.js'));
+const {SOURCE, GAME_SYSTEM, ATTRIBUTE, } = require(path.join(jsFolder, 'constants.js'));
 const phb1 = require(path.join(jsFolder, 'sources','players-handbook-1st-print.js'));
 const phb11 = require(path.join(jsFolder, 'sources','players-handbook-11th-print.js'));
 const phbr = require(path.join(jsFolder, 'sources','players-handbook-revised.js'));

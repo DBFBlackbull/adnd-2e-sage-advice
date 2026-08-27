@@ -1,4 +1,12 @@
 -
+    function getProp(prop) {
+        if (!prop) {
+            return '—';
+        }
+
+        return prop;
+    }
+
     function getCost(cost) {
         if (!cost) {
             return '—';
@@ -11,28 +19,12 @@
         return displayString;
     }
 
-    function getSpeed(speed) {
-        if (!speed) {
-            return '—';
-        }
-
-        return speed;
-    }
-
     function getType(type) {
         if (!type) {
             return '—';
         }
 
         return type.map(t => t.id).join('/')
-    }
-
-    function getRateOfFire(rateOfFire) {
-        if (!rateOfFire) {
-            return '—';
-        }
-
-        return rateOfFire
     }
 
     function getRangeShort(range) {
