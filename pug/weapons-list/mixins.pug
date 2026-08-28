@@ -101,4 +101,11 @@ mixin weaponRow(obj, book, color, indents)
         td !{getDamageSmallMedium(obj.damage)}
         td !{getDamageLarge(obj.damage)}
         td !{getProp(obj.knockdown)}
-        td !{book.title}
+        -
+            if (!obj.pages) {
+                console.log("pages is missing")
+                console.log(obj)
+            }
+            let pages = obj.pages.join(', ')
+
+        td !{book.title + ' p. ' + pages}

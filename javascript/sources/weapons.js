@@ -1824,6 +1824,7 @@ WEAPONS.Staff_sling.ammunition.Bullet[SOURCE.PHB.id] = new Ammunition({
     type: [WEAPON_TYPE.B],
     range: new Range(null, "30-60", 90),
     damage: new Damage("1d4+1", "1d6+1"),
+    pages: [95],
 
     comment: `No explicit ammunition damage is given for Staff sling in the PHB, so using the same as Sling.`
 })
@@ -1834,6 +1835,7 @@ WEAPONS.Staff_sling.ammunition.Stone[SOURCE.PHB.id] = new Ammunition({
     type: [WEAPON_TYPE.B],
     range: new Range(null, "30-60", 90),
     damage: new Damage("1d4+1", "1d6+1"),
+    pages: [95],
 
     comment: `No explicit ammunition damage is given for Staff sling in the PHB, so using the same as Sling.`
 })
@@ -1866,11 +1868,13 @@ WEAPONS.Bastard_sword.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.PHB.id] = {
     name: "One-handed",
     speed: 6,
     damage: new Damage("1d8", "1d12"),
+    pages: [95],
 }
 WEAPONS.Bastard_sword.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.PHB.id] = {
     name: "Two-handed",
     speed: 8,
     damage: new Damage("2d4", "2d8"),
+    pages: [95],
 }
 
 WEAPONS.Broad_sword[SOURCE.PHB.id] = new Weapon({
@@ -2119,11 +2123,13 @@ WEAPONS.Harpoon[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 WEAPONS.Harpoon.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
-    damage: new Damage("1d4+1", "1d6+1")
+    damage: new Damage("1d4+1", "1d6+1"),
+    pages: [93, 94],
 }
 WEAPONS.Harpoon.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
-    damage: new Damage("2d4", "2d6")
+    damage: new Damage("2d4", "2d6"),
+    pages: [93],
 }
 
 WEAPONS.Javelin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -2141,11 +2147,13 @@ WEAPONS.Javelin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 WEAPONS.Javelin.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
-    damage: new Damage("1d4", "1d4")
+    damage: new Damage("1d4", "1d4"),
+    pages: [93],
 }
 WEAPONS.Javelin.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
-    damage: new Damage("1d6", "1d6")
+    damage: new Damage("1d6", "1d6"),
+    pages: [93],
 }
 
 WEAPONS.Spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -2163,11 +2171,13 @@ WEAPONS.Spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 WEAPONS.Spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
-    damage: new Damage("1d6", "1d8")
+    damage: new Damage("1d6", "1d8"),
+    pages: [93],
 }
 WEAPONS.Spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
     damage: new Damage("1d8+1", "2d6"),
+    pages: [93],
 
     descriptions: [
         FIGHTERS_HANDBOOK_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
@@ -2189,11 +2199,13 @@ WEAPONS.Long_spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 WEAPONS.Long_spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
-    damage: new Damage("1d8", "1d8+1")
+    damage: new Damage("1d8", "1d8+1"),
+    pages: [93,95],
 }
 WEAPONS.Long_spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
     damage: new Damage("2d6", "3d6"),
+    pages: [93,95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
@@ -2217,11 +2229,13 @@ WEAPONS.Trident.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
     rate_of_fire: "1",
     range: new Range(0, 1, 2),
-    damage: new Damage("1d6+1", "3d4")
+    damage: new Damage("1d6+1", "3d4"),
+    pages: [93, 94],
 }
 WEAPONS.Trident.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
-    damage: new Damage("1d8+1", "3d4")
+    damage: new Damage("1d8+1", "3d4"),
+    pages: [93],
 }
 
 WEAPONS.Short_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK.id] =
@@ -2437,11 +2451,13 @@ WEAPONS.Javelin_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id
     name: "One-handed",
     rate_of_fire: "1",
     range: new Range(2, 4, 6),
-    damage: new Damage("1d4", "1d4")
+    damage: new Damage("1d4", "1d4"),
+    pages: [94,95],
 }
 WEAPONS.Javelin_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
-    damage: new Damage("1d4+1", "1d6")
+    damage: new Damage("1d4+1", "1d6"),
+    pages: [95],
 }
 
 WEAPONS.Knife_bone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -2628,11 +2644,13 @@ WEAPONS.Spear_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] 
     name: "One-handed",
     rate_of_fire: "1",
     range: new Range(1, 2, 3),
-    damage: new Damage("1d4", "1d6")
+    damage: new Damage("1d4", "1d6"),
+    pages: [94, 95],
 }
 WEAPONS.Spear_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Handed",
-    damage: new Damage("1d6", "2d4")
+    damage: new Damage("1d6", "2d4"),
+    pages: [95],
 }
 
 WEAPONS.Stiletto[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -2700,11 +2718,13 @@ WEAPONS.Katana[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 WEAPONS.Katana.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
-    damage: new Damage("1d10", "1d12")
+    damage: new Damage("1d10", "1d12"),
+    pages: [95],
 }
 WEAPONS.Katana.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
-    damage: new Damage("2d6", "2d6")
+    damage: new Damage("2d6", "2d6"),
+    pages: [95],
 }
 
 WEAPONS.Rapier[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
