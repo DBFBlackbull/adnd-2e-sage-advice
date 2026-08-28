@@ -75,6 +75,14 @@
         return damage.large
     }
 
+    function getSource(pages, book) {
+        if (!pages) {
+            console.log("pages is missing")
+        }
+
+        return `${book.title} p. ${pages.join(', ')}`
+    }
+
     function colorFlip(color) {
         if (color === '') {
             return 'antiquewhite';
@@ -101,11 +109,4 @@ mixin weaponRow(obj, book, color, indents)
         td !{getDamageSmallMedium(obj.damage)}
         td !{getDamageLarge(obj.damage)}
         td !{getProp(obj.knockdown)}
-        -
-            if (!obj.pages) {
-                console.log("pages is missing")
-                console.log(obj)
-            }
-            let pages = obj.pages.join(', ')
-
-        td !{book.title + ' p. ' + pages}
+        td !{getSource(obj.pages, book)}
