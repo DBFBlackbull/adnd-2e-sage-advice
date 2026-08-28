@@ -1834,7 +1834,7 @@ WEAPONS.Staff_sling.ammunition.Stone[SOURCE.PHB.id] = new Ammunition({
     size: SIZE.S,
     type: [WEAPON_TYPE.B],
     range: new Range(null, "30-60", 90),
-    damage: new Damage("1d4+1", "1d6+1"),
+    damage: new Damage("1d4", "1d6"),
     pages: [95],
 
     comment: `No explicit ammunition damage is given for Staff sling in the PHB, so using the same as Sling.`
