@@ -494,7 +494,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Any weapon that can be set vs. a charge does double damage when so employed.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.WEAPON],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.WEAPON, ATTRIBUTE.RECEIVE_CHARGE],
         },
         {
             page_number: '10',
@@ -1463,7 +1463,7 @@ DRAGON_MAGAZINES.push({
             answer: [
                 `Those polearms marked with a "#" and all spears do double damage when set vs. a charge. Polearms marked with a "&ast;" do double damage vs. charging opponents that are larger than man size.`
             ],
-            attributes: [GAME_SYSTEM.SECOND_EDITION],
+            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.RECEIVE_CHARGE],
         },
         {
             page_number: '8',

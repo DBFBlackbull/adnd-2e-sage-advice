@@ -35,6 +35,7 @@ const ATTRIBUTE = {
     GNOME_BASTARD_SWORD: {id: "Gnome Bastard sword", title: "Gnomes with Bastard sword"},
     RANGED_IN_MELEE: {id: "Ranged in melee", title: "Ranged weapons in melee combat"},
     TWO_WEAPONS_STRENGTH: {id: "Two weapons Strength", title: 'Two weapons and Strength bonus'},
+    RECEIVE_CHARGE: {id: "Receive charge", title: "Receive charge and double damage"},
     BOWS_AND_STRENGTH: {id: "Bows and Strength", title: "Bows and Strength bonus"},
     WIZARD_ELVEN_CHAIN: {id: 'Wizard in Elven chain mail'},
     WIZARD_ARMOR: {id: 'Wizard in metal armor'},

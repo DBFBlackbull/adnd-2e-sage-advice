@@ -252,6 +252,25 @@ PLAYERS_HANDBOOK.chapters.push({
             ]
         },
         {
+            id: 'movement-in-combat',
+            heading: 'Movement in Combat',
+            sections: [
+                {
+                    id: 'charging-an-opponent',
+                    heading: 'Charging an Opponent',
+                    entries: [
+                        {
+                            page_number: '128',
+                            entry: [
+                                `... Finally, if the defender is using a spear or polearm weapon and sets it against the charge (bracing the butt against a stone or his foot), he inflicts double damage on a successful hit.`,
+                            ],
+                            attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.RECEIVE_CHARGE]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             id: 'touch-spells-and-combat',
             heading: 'Touch Spells and Combat',
             entries: [
