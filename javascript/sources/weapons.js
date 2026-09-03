@@ -365,7 +365,7 @@ WEAPONS.Arquebus[SOURCE.PHB.id] = new Weapon({
         {
             pages: [96],
             text: [
-                `Arquebus: This weapon may be disallowed by your DM and you must check with him before you purchase it. An arquebus is an early form of the musket (a small hand-held cannon, really), almost as dangerous to its user as it is to the target. To use an arquebus, you must have a supply of powder and shot and a piece of slow-burning match or cord. These items may or may not be commonly available. (Powder is treated as a magical item in these rules.) The weapon can be fired only once every three rounds, and then only if the character is not attacked while loading. When firing an arquebus, all penalties for range are doubled.`,
+                `**Arquebus:** This weapon may be disallowed by your DM and you must check with him before you purchase it. An arquebus is an early form of the musket (a small hand-held cannon, really), almost as dangerous to its user as it is to the target. To use an arquebus, you must have a supply of powder and shot and a piece of slow-burning match or cord. These items may or may not be commonly available. (Powder is treated as a magical item in these rules.) The weapon can be fired only once every three rounds, and then only if the character is not attacked while loading. When firing an arquebus, all penalties for range are doubled.`,
                 `If the attack roll for the arquebus is a 1 or 2, the weapon backfires, causing 1d6 points of damage to the firer. It is also fouled and cannot be used again until it has been cleaned, which takes about 30 minutes. When an arquebus scores a hit, it normally does 1 to 9 points of damage on 1d10. When a 10 is rolled, the die is rolled again and this amount is added to 10. Each time a 10 is rolled, the die is rolled again and added to the previous total. Thus, in a rare instance, a single shot could inflict 37 points, for example, if three consecutive 10s were rolled, followed by a 7. The damage caused by an arquebus is never modified for a high Strength score.`
             ]
         }
@@ -432,10 +432,18 @@ WEAPONS.Blowgun.ammunition.Needle[SOURCE.PHB.id] = new Ammunition({
 const PHB_BOW_DESCRIPTION = {
     pages: [96],
     text: [
-        `Bows: Bows come in various shapes and sizes. The power of a bow is measured by its pull. The greater the pull, the more Strength needed to work the bow. Thus, it is possible for characters to have bows that grant them damage bonuses for high Strength (it is assumed the character has chosen a bow that has a greater pull). Likewise, characters with low Strengths suffer their usual penalties when using a bow (they are forced to use weaker bows or simply cannot draw back as far). The pull of a bow seldom prevents a character from using the weapon, only from gaining the full effect. The true test of a character’s Strength comes in stringing a bow—the bow of a strong hero may simply be un string able by a lesser man (as was Odysseus’s).`,
+        `**Bows:** Bows come in various shapes and sizes. The power of a bow is measured by its pull. The greater the pull, the more Strength needed to work the bow. Thus, it is possible for characters to have bows that grant them damage bonuses for high Strength (it is assumed the character has chosen a bow that has a greater pull). Likewise, characters with low Strengths suffer their usual penalties when using a bow (they are forced to use weaker bows or simply cannot draw back as far). The pull of a bow seldom prevents a character from using the weapon, only from gaining the full effect. The true test of a character’s Strength comes in stringing a bow—the bow of a strong hero may simply be un string able by a lesser man (as was Odysseus’s).`,
         `Heavier pull bows are not normally any more expensive than standard bows. The exceptions to this are those bows that enable the fighter to gain bonuses for exceptional Strength (18/01 or greater). These bows must be custom crafted and cost three to five times the normal price. These bows are also difficult to string or use effectively for those without exceptional Strength. These characters must roll a successful bend bars/lift gates roll to string or use such weapons (again, think of the test of the suitors in Odysseus’s household).`
     ]
 }
+
+const PHB_CROSSBOW_DESCRIPTION = {
+    pages: [96],
+    text: [
+        `**Crossbow:** Strength bonuses or penalties do not apply to crossbows, since these are purely mechanical devices. The hand crossbow is easily held in one hand and cocked with the other. The light crossbow, also called latches, must be braced against an object to be cocked with a lever mounted on the stock. The heavy crossbow, also called arbalest, has a powerful pull and must be cocked with a cranequin (a simple winch or lever) that comes with the weapon. One foot is placed in a stirrup at the end of the crossbow while the cranequin is worked. All crossbows fire quarrels or bolts and the correct size must be used with each weapon.`
+    ]
+}
+
 
 const PHB_LONG_BOW_ARROW_DESCRIPTION = {
     pages: [96],
@@ -648,6 +656,10 @@ WEAPONS.Hand_crossbow[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     pages: [94, 95],
 
+    descriptions: [
+        PHB_CROSSBOW_DESCRIPTION
+    ],
+
     implementationVariables: new ImplementationVariables(
         {
             strength: STRENGTH_BONUS.NONE,
@@ -678,6 +690,10 @@ WEAPONS.Light_crossbow[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     pages: [94, 95],
 
+    descriptions: [
+        PHB_CROSSBOW_DESCRIPTION
+    ],
+
     implementationVariables: new ImplementationVariables(
         {
             strength: STRENGTH_BONUS.NONE,
@@ -706,6 +722,10 @@ WEAPONS.Heavy_crossbow[SOURCE.PHB.id] = new Weapon({
     speed: 10,
     rate_of_fire: "1/2",
     pages: [94, 95],
+
+    descriptions: [
+        PHB_CROSSBOW_DESCRIPTION
+    ],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1004,7 +1024,7 @@ WEAPONS.Knife[SOURCE.PHB.id] = new Weapon({
 const PBH_LANCE_DESCRIPTION = {
     pages: [96, 97],
     text: [
-        `Lance: The different lances are rated according to size and sturdiness. Each type can be used only if the rider is on the same type of horse or a greater one. A man on a light war horse could not use a heavy horse lance, if only because the impact would bowl him and the horse right over! Further- more, the heavy and jousting lances require that the rider is firmly in a saddle and using stirrups. The jousting lance is a heavy horse lance modified for use in tournaments, in which the desire is not to kill the opponent. The end of the lance is fitted with a special blunted tip intended to lessen the chance of wounds. Of course, good intentions often go awry, so there is still a chance of injury during a joust.`
+        `**Lance:** The different lances are rated according to size and sturdiness. Each type can be used only if the rider is on the same type of horse or a greater one. A man on a light war horse could not use a heavy horse lance, if only because the impact would bowl him and the horse right over! Further- more, the heavy and jousting lances require that the rider is firmly in a saddle and using stirrups. The jousting lance is a heavy horse lance modified for use in tournaments, in which the desire is not to kill the opponent. The end of the lance is fitted with a special blunted tip intended to lessen the chance of wounds. Of course, good intentions often go awry, so there is still a chance of injury during a joust.`
     ]
 }
 
@@ -1131,7 +1151,7 @@ WEAPONS.Mancatcher[SOURCE.PHB.id] = new Weapon({
         {
             pages: [97],
             text: [
-                `Mancatcher: This item is a highly specialized type of polearm designed to capture without killing a victim. It consists of a long pole with a spring-loaded set of sharpened jaws at the end. The victim is caught between the arms, which then snap shut. The mancatcher is effective only on man-sized creatures. The target is always treated as AC 10, modified for Dexterity. If a hit is scored, the character is caught. The caught victim loses all shield and Dexterity bonuses and can be pushed and pulled about. This causes an automatic 1d2 points of damage per round and gives a 25% chance of pulling the victim to the ground. The victim can escape on a successful bend bars/lift gates roll, although this results in 1d2 points more damage. A common tactic is to use the weapon to pull horsemen off their mounts, then pin them to the ground.`
+                `**Mancatcher:** This item is a highly specialized type of polearm designed to capture without killing a victim. It consists of a long pole with a spring-loaded set of sharpened jaws at the end. The victim is caught between the arms, which then snap shut. The mancatcher is effective only on man-sized creatures. The target is always treated as AC 10, modified for Dexterity. If a hit is scored, the character is caught. The caught victim loses all shield and Dexterity bonuses and can be pushed and pulled about. This causes an automatic 1d2 points of damage per round and gives a 25% chance of pulling the victim to the ground. The victim can escape on a successful bend bars/lift gates roll, although this results in 1d2 points more damage. A common tactic is to use the weapon to pull horsemen off their mounts, then pin them to the ground.`
             ]
         }
     ]
@@ -1178,7 +1198,7 @@ WEAPONS.Awl_pike[SOURCE.PHB.id] = new Weapon({
         PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE,
         {
             pages: [97, 98],
-            text: [`Awl Pike: Essentially this is a long spear 12 to 20 feet long ending in a spike point or tapered spear head. It was a popular weapon during the Renaissance. Since the pike stuck out in front, men could be packed side-by-side in dense formations, and several rows of men could fight. Large blocks of pikemen made formidable troops. However, once the pikemen engaged in close combat, they normally dropped their clumsy awl pikes and fought hand-to-hand with short swords.`]
+            text: [`**Awl Pike:** Essentially this is a long spear 12 to 20 feet long ending in a spike point or tapered spear head. It was a popular weapon during the Renaissance. Since the pike stuck out in front, men could be packed side-by-side in dense formations, and several rows of men could fight. Large blocks of pikemen made formidable troops. However, once the pikemen engaged in close combat, they normally dropped their clumsy awl pikes and fought hand-to-hand with short swords.`]
         }
     ]
 })
@@ -1204,7 +1224,7 @@ WEAPONS.Bardiche[SOURCE.PHB.id] = new Weapon({
     descriptions: [
         {
             pages: [98],
-            text: [`Bardiche: One of the simplest of polearms, the bardiche is an elongated battle axe. A large curving axe-head is mounted on the end of a shaft 5 to 8 feet long. It probably grew out of common peasant tools and was popular with them. One relative disadvantage is that the bardiche required more space to wield than a pike or a spear.`]
+            text: [`**Bardiche:** One of the simplest of polearms, the bardiche is an elongated battle axe. A large curving axe-head is mounted on the end of a shaft 5 to 8 feet long. It probably grew out of common peasant tools and was popular with them. One relative disadvantage is that the bardiche required more space to wield than a pike or a spear.`]
         }
     ]
 })
@@ -1230,7 +1250,7 @@ WEAPONS.Bec_de_corbin[SOURCE.PHB.id] = new Weapon({
     descriptions: [
         {
             pages: [98],
-            text: [`Bec de corbin: This was a highly specialized weapon of the upper classes during the Late Middle Ages and the early Renaissance. It is an early can-opener designed specifically to deal with plate armor. The pick or beak is made to punch through plate, while the hammer side can be used to give a stiff blow. The end is fitted with a short blade for dealing with unarmored or helpless foes. The weapon is about 8 feet long. Since the weapon relies on impact, a great deal of swinging space is needed.`]
+            text: [`**Bec de corbin:** This was a highly specialized weapon of the upper classes during the Late Middle Ages and the early Renaissance. It is an early can-opener designed specifically to deal with plate armor. The pick or beak is made to punch through plate, while the hammer side can be used to give a stiff blow. The end is fitted with a short blade for dealing with unarmored or helpless foes. The weapon is about 8 feet long. Since the weapon relies on impact, a great deal of swinging space is needed.`]
         }
     ]
 })
@@ -1256,7 +1276,7 @@ WEAPONS.Bill_guisarme[SOURCE.PHB.id] = new Weapon({
     descriptions: [
         {
             pages: [98],
-            text: [`Bill-guisarme: A particularly bizarre-looking combination weapon, the bill-guisarme is an outgrowth of the common bill hook. Mounted on a 7 to 8-foot-long pole, it has a combination of a heavy cleaver blade, a jutting back spike, and a hook or spike on the end. Thus, it can be used in several different ways. Like most polearms, it requires lots of room to use.`]
+            text: [`**Bill-guisarme:** A particularly bizarre-looking combination weapon, the bill-guisarme is an outgrowth of the common bill hook. Mounted on a 7 to 8-foot-long pole, it has a combination of a heavy cleaver blade, a jutting back spike, and a hook or spike on the end. Thus, it can be used in several different ways. Like most polearms, it requires lots of room to use.`]
         }
     ]
 })
@@ -1282,7 +1302,7 @@ WEAPONS.Fauchard[SOURCE.PHB.id] = new Weapon({
     descriptions: [
         {
             pages: [98],
-            text: [`Fauchard: An outgrowth of the sickle and scythe, the fauchard is a long, inward curving blade mounted on a shaft 6 to 8 feet long. It can slash or thrust, although the inward curving point makes thrusting rather ineffective. Its advantage is that a peasant can easily convert his common scythe into this weapon of war.`]
+            text: [`**Fauchard:** An outgrowth of the sickle and scythe, the fauchard is a long, inward curving blade mounted on a shaft 6 to 8 feet long. It can slash or thrust, although the inward curving point makes thrusting rather ineffective. Its advantage is that a peasant can easily convert his common scythe into this weapon of war.`]
         }
     ]
 })
@@ -1308,7 +1328,7 @@ WEAPONS.Fauchard_fork[SOURCE.PHB.id] = new Weapon({
     descriptions: [
         {
             pages: [98],
-            text: [`Fauchard: An outgrowth of the sickle and scythe, the fauchard is a long, inward curving blade mounted on a shaft 6 to 8 feet long. It can slash or thrust, although the inward curving point makes thrusting rather ineffective. Its advantage is that a peasant can easily convert his common scythe into this weapon of war.`]
+            text: [`**Fauchard:** An outgrowth of the sickle and scythe, the fauchard is a long, inward curving blade mounted on a shaft 6 to 8 feet long. It can slash or thrust, although the inward curving point makes thrusting rather ineffective. Its advantage is that a peasant can easily convert his common scythe into this weapon of war.`]
         }
     ]
 })
@@ -1336,7 +1356,7 @@ WEAPONS.Glaive[SOURCE.PHB.id] = new Weapon({
         PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE,
         {
             pages: [98],
-            text: [`Glaive: One of the most basic polearms, the glaive is a sin gle-edged blade mounted on an 8 to 10-foot-long shaft. While not the most efficient weapon, it is relatively easy to make and use. Normally the blade turns outward to increase the cutting area until it almost resembles a cleaver or axe.`]
+            text: [`**Glaive:** One of the most basic polearms, the glaive is a sin gle-edged blade mounted on an 8 to 10-foot-long shaft. While not the most efficient weapon, it is relatively easy to make and use. Normally the blade turns outward to increase the cutting area until it almost resembles a cleaver or axe.`]
         }
     ]
 })
@@ -1364,7 +1384,7 @@ WEAPONS.Glaive_guisarme[SOURCE.PHB.id] = new Weapon({
         PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE,
         {
             pages: [98],
-            text: [`Glaive-guisarme: Another combination weapon, this one takes the basic glaive and adds a spike or hook to the back of the blade. In theory, this increases the usefulness of the weapon although its actual application is somewhat questionable.`]
+            text: [`**Glaive-guisarme:** Another combination weapon, this one takes the basic glaive and adds a spike or hook to the back of the blade. In theory, this increases the usefulness of the weapon although its actual application is somewhat questionable.`]
         }
     ]
 })
@@ -1390,7 +1410,7 @@ WEAPONS.Guisarme[SOURCE.PHB.id] = new Weapon({
     descriptions: [
         {
             pages: [98],
-            text: [`Guisarme: Thought to have derived from a pruning hook, this is an elaborately curved heavy blade. While convenient and handy, it is not very effective.`]
+            text: [`**Guisarme:** Thought to have derived from a pruning hook, this is an elaborately curved heavy blade. While convenient and handy, it is not very effective.`]
         }
     ]
 })
@@ -1416,7 +1436,7 @@ WEAPONS.Guisarme_voulge[SOURCE.PHB.id] = new Weapon({
     descriptions: [
         {
             pages: [98, 99],
-            text: [`Guisarme-voulge: This weapon has a modified axe blade mounted on an 8-foot-long shaft. The end of the blade tapers to a point for thrusting and a back spike is fitted for punching through armor. Sometimes this spike is replaced by a sharpened hook for dismounting riders.`]
+            text: [`**Guisarme-voulge:** This weapon has a modified axe blade mounted on an 8-foot-long shaft. The end of the blade tapers to a point for thrusting and a back spike is fitted for punching through armor. Sometimes this spike is replaced by a sharpened hook for dismounting riders.`]
         }
     ]
 })
@@ -1442,7 +1462,7 @@ WEAPONS.Halberd[SOURCE.PHB.id] = new Weapon({
     descriptions: [
         {
             pages: [99],
-            text: [`Halberd: After the awl pike and the bill, this was one of the most popular weapons of the Middle Ages. Fixed on a shaft 5 to 8 feet long is a large axe blade, angled for maximum impact. The end of the blade tapers to a long spear point or awl pike. On the back is a hook for attacking armor or dismounting riders. Originally intended to defeat cavalry, it is not tremendously successful in that role since it lacks the reach of the pike and needs considerable room to swing. It found new life against blocks of pikemen. Should the advance of the main attack stall, halberdiers issue out of the formation and attack the flanks of the enemy. The pikemen with their overlong weapons are nearly defenseless in such close combat.`]
+            text: [`**Halberd:** After the awl pike and the bill, this was one of the most popular weapons of the Middle Ages. Fixed on a shaft 5 to 8 feet long is a large axe blade, angled for maximum impact. The end of the blade tapers to a long spear point or awl pike. On the back is a hook for attacking armor or dismounting riders. Originally intended to defeat cavalry, it is not tremendously successful in that role since it lacks the reach of the pike and needs considerable room to swing. It found new life against blocks of pikemen. Should the advance of the main attack stall, halberdiers issue out of the formation and attack the flanks of the enemy. The pikemen with their overlong weapons are nearly defenseless in such close combat.`]
         }
     ]
 })
@@ -1468,7 +1488,7 @@ WEAPONS.Hook_fauchard[SOURCE.PHB.id] = new Weapon({
     descriptions: [
         {
             pages: [99],
-            text: [`Hook fauchard: This combination weapon is another attempted improvement to the fauchard. A back hook is fitted to the back of the blade, supposedly to dismount horsemen. Like the fauchard, this is not a tremendously successful weapon.`]
+            text: [`**Hook fauchard:** This combination weapon is another attempted improvement to the fauchard. A back hook is fitted to the back of the blade, supposedly to dismount horsemen. Like the fauchard, this is not a tremendously successful weapon.`]
         }
     ]
 })
@@ -1496,7 +1516,7 @@ WEAPONS.Lucern_hammer[SOURCE.PHB.id] = new Weapon({
         PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE,
         {
             pages: [99],
-            text: [`Lucern hammer: This weapon is similar to the bec de corbin. Fitted with a shaft up to 10 feet long, it is usually found in the hands of the common soldier. Like the bec de corbin, its main purpose is to punch through armor. The end is fitted with the long point of an awl pike to hold off enemy cavalry.`]
+            text: [`**Lucern hammer:** This weapon is similar to the bec de corbin. Fitted with a shaft up to 10 feet long, it is usually found in the hands of the common soldier. Like the bec de corbin, its main purpose is to punch through armor. The end is fitted with the long point of an awl pike to hold off enemy cavalry.`]
         }
     ]
 })
@@ -1524,7 +1544,7 @@ WEAPONS.Military_fork[SOURCE.PHB.id] = new Weapon({
         PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE,
         {
             pages: [99],
-            text: [`Military fork: This is one of the simplest modifications of a peasant’s tool since it is little more than a pitchfork fixed to a longer shaft. With tines strengthened and straightened, the military fork serves well. The need for cutting and cleaving eventually often results in combining the fork with other weapons.`]
+            text: [`**Military fork:** This is one of the simplest modifications of a peasant’s tool since it is little more than a pitchfork fixed to a longer shaft. With tines strengthened and straightened, the military fork serves well. The need for cutting and cleaving eventually often results in combining the fork with other weapons.`]
         }
     ]
 })
@@ -1552,7 +1572,7 @@ WEAPONS.Partisan[SOURCE.PHB.id] = new Weapon({
         PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE,
         {
             pages: [99],
-            text: [`Partisan: Shorter than the awl pike but longer than the spear, the partisan is a broad spear-head mounted on an 8-foot-long shaft. Two smaller blades project out from the base of the main blade, just to increase damage and trap weapons. Since it is a thrusting weapon, it can be used in closely packed formations.`]
+            text: [`**Partisan:** Shorter than the awl pike but longer than the spear, the partisan is a broad spear-head mounted on an 8-foot-long shaft. Two smaller blades project out from the base of the main blade, just to increase damage and trap weapons. Since it is a thrusting weapon, it can be used in closely packed formations.`]
         }
     ]
 })
@@ -1580,7 +1600,7 @@ WEAPONS.Ranseur[SOURCE.PHB.id] = new Weapon({
         PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE,
         {
             pages: [99],
-            text: [`Ranseur: Very much like the partisan, the ranseur differs in that the main blade is thinner and the projecting blades extended more like tines of a fork. These can trap a weapon and sometimes punch through armor.`]
+            text: [`**Ranseur:** Very much like the partisan, the ranseur differs in that the main blade is thinner and the projecting blades extended more like tines of a fork. These can trap a weapon and sometimes punch through armor.`]
         }
     ]
 })
@@ -1608,7 +1628,7 @@ WEAPONS.Spetum[SOURCE.PHB.id] = new Weapon({
         PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE,
         {
             pages: [99],
-            text: [`Spetum: The spetum is a modification of the normal spear. The shaft increases to 8 to 10 feet and side blades are added. Some have blades that angle back, increasing the damage when pulling the weapon out of a wound. These blades can also trap and block weapons or catch and hold an opponent.`]
+            text: [`**Spetum:** The spetum is a modification of the normal spear. The shaft increases to 8 to 10 feet and side blades are added. Some have blades that angle back, increasing the damage when pulling the weapon out of a wound. These blades can also trap and block weapons or catch and hold an opponent.`]
         }
     ]
 })
@@ -1634,7 +1654,7 @@ WEAPONS.Voulge[SOURCE.PHB.id] = new Weapon({
     descriptions: [
         {
             pages: [99],
-            text: [`Voulge: The voulge, like the bardiche, is a variation on the axe and the cleaver. The voulge is little more than a cleaver on the end of a long (7 to 8-foot) pole. It is a popular weapon, easy to make and simple to learn. It is also called the Lochaber axe.`]
+            text: [`**Voulge:** The voulge, like the bardiche, is a variation on the axe and the cleaver. The voulge is little more than a cleaver on the end of a long (7 to 8-foot) pole. It is a popular weapon, easy to make and simple to learn. It is also called the Lochaber axe.`]
         }
     ]
 })
@@ -1675,7 +1695,7 @@ WEAPONS.Scourge[SOURCE.PHB.id] = new Weapon({
     descriptions: [
         {
             pages: [99],
-            text: [`Scourge: This wicked weapon is a short whip with several thongs or tails. Each thong is studded with metal barbs, resulting in a terrible lash. It is sometimes used as an instrument of execution.`]
+            text: [`**Scourge:** This wicked weapon is a short whip with several thongs or tails. Each thong is studded with metal barbs, resulting in a terrible lash. It is sometimes used as an instrument of execution.`]
         }
     ]
 })
@@ -1824,7 +1844,7 @@ WEAPONS.Bastard_sword[SOURCE.PHB.id] = new Weapon({
     descriptions: [
         {
             pages: [99],
-            text: [`Sword, Bastard: This sword is similar to a long sword in size and weight, but has a longer hilt. It can be used one- or two-handed. Use the speed factor and damage appropriate to the grip. If it is used two-handed, your character cannot employ a shield. Proficiency allows both uses.`]
+            text: [`**Sword, Bastard:** This sword is similar to a long sword in size and weight, but has a longer hilt. It can be used one- or two-handed. Use the speed factor and damage appropriate to the grip. If it is used two-handed, your character cannot employ a shield. Proficiency allows both uses.`]
         }
     ]
 })
@@ -1875,7 +1895,7 @@ WEAPONS.Khopesh[SOURCE.PHB.id] = new Weapon({
     descriptions: [
         {
             pages: [99],
-            text: [`Sword, Khopesh: This is an Egyptian weapon. A khopesh has about 6 inches of handle and quillons. Its blade is then straight from the quillons for about 2 feet. The blade becomes sickle-shaped at this point, being about 2 additional feet long but effectively extending the overall length of the sword by only 1 ½ feet. This makes the khopesh both heavy and unwieldy, difficult to employ properly, and slow to recover, particularly after a badly missed blow. Its sickle-like portion can snag an opponent or an opposing weapon.`]
+            text: [`**Sword, Khopesh:** This is an Egyptian weapon. A khopesh has about 6 inches of handle and quillons. Its blade is then straight from the quillons for about 2 feet. The blade becomes sickle-shaped at this point, being about 2 additional feet long but effectively extending the overall length of the sword by only 1 ½ feet. This makes the khopesh both heavy and unwieldy, difficult to employ properly, and slow to recover, particularly after a badly missed blow. Its sickle-like portion can snag an opponent or an opposing weapon.`]
         }
     ],
 
