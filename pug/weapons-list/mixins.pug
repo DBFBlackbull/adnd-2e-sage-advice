@@ -95,7 +95,8 @@ mixin weaponRow(obj, book, color, indents)
     - let indent = '&emsp;'.repeat(indents)
     - let backgroundColor = `background: ${color};`
     tr(style=backgroundColor)
-        td !{indent + obj.name}
+        - let footnoteMarker = obj.footnote_marker ? ` ${obj.footnote_marker}` : ""
+        td !{indent + obj.name + footnoteMarker}
         td !{getCost(obj.cost)}
         td !{getProp(obj.weight_lbs)}
         td !{getSize(obj.size)}

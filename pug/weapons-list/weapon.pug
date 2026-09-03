@@ -63,5 +63,11 @@ body
         if weaponObj.ammunition
             each ammoType in weaponObj.ammunition
                 - let ammo = ammoType[book.id]
-                if ammo && ammo.descriptions
-                    +descriptionEntries(ammo.descriptions, book)
+                if ammo
+                    if ammo.descriptions
+                        +descriptionEntries(ammo.descriptions, book)
+                    if ammo.comment
+                        span(class="comment")
+                            strong
+                                em Comment:
+                            |  !{formatInput(ammo.comment, book.shortTitle, "")}

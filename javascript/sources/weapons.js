@@ -36,6 +36,7 @@ class Ammunition {
             damage,
             pages,
             descriptions,
+            comment,
         }
     ) {
         this.name = name
@@ -47,6 +48,7 @@ class Ammunition {
         this.damage = damage
         this.pages = pages
         this.descriptions = descriptions
+        this.comment = comment
     }
 }
 
@@ -77,6 +79,7 @@ class Weapon {
     constructor(
         {
             name,
+            footnote_marker,
             sorting_group,
             cost,
             weight_lbs,
@@ -88,10 +91,12 @@ class Weapon {
             damage,
             pages,
             implementationVariables,
-            descriptions
+            descriptions,
+            comment
         }
     ) {
         this.name = name
+        this.footnote_marker = footnote_marker
         this.sorting_group = sorting_group
         this.cost = cost
         this.weight_lbs = weight_lbs
@@ -104,6 +109,7 @@ class Weapon {
         this.pages = pages
         this.implmentationVariables = implementationVariables
         this.descriptions = descriptions
+        this.comment = comment
     }
 }
 
@@ -229,7 +235,6 @@ WEAPONS.Halberd = {};
 WEAPONS.Hook_fauchard = {};
 WEAPONS.Lasso = {};
 WEAPONS.Lucern_hammer = {};
-WEAPONS.Lucern_hammer = {};
 WEAPONS.Military_fork = {};
 WEAPONS.Naginata = {};
 WEAPONS.Partisan = {};
@@ -312,27 +317,28 @@ WEAPONS.Whip = {};
 //#region PHB
 const PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE = {
     pages: [95],
-    text: [`1 This weapon inflicts double damage against charging creatures of L or greater size.`]
+    text: [`¹ This weapon inflicts double damage against charging creatures of L or greater size.`]
 }
 const PHB_2_DISMOUNT_RIDER = {
     pages: [95],
-    text: [`2 This weapon can dismount a rider on a successful hit.`]
+    text: [`² This weapon can dismount a rider on a successful hit.`]
 }
 const PHB_3_ALLOWED_BY_DM = {
     pages: [95],
-    text: ["3 This weapon available only if allowed by DM. One charge costs 5 sp."]
+    text: ["³ This weapon available only if allowed by DM. One charge costs 5 sp."]
 }
 const PHB_4_DOUBLE_DAMAGE_CHARGING_MOUNT = {
     pages: [95],
-    text: [`4 This weapon inflicts double damage when used from the back of a charging mount.`]
+    text: [`⁴ This weapon inflicts double damage when used from the back of a charging mount.`]
 }
 const PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE = {
     pages: [95],
-    text: [`5 This weapon inflicts double damage when firmly set to receive a charge.`]
+    text: [`⁵ This weapon inflicts double damage when firmly set to receive a charge.`]
 }
 
 WEAPONS.Arquebus[SOURCE.PHB.id] = new Weapon({
     name: "Arquebus",
+    footnote_marker: "³",
     cost: new Cost(500, CURRENCY.GP),
     weight_lbs: 10,
     size: SIZE.M,
@@ -1004,6 +1010,7 @@ const PBH_LANCE_DESCRIPTION = {
 
 WEAPONS.Heavy_horse_lance[SOURCE.PHB.id] = new Weapon({
     name: "Heavy horse lance",
+    footnote_marker: "⁴",
     sorting_group: "Lance",
     cost: new Cost(15, CURRENCY.GP),
     weight_lbs: 15,
@@ -1028,6 +1035,7 @@ WEAPONS.Heavy_horse_lance[SOURCE.PHB.id] = new Weapon({
 
 WEAPONS.Light_horse_lance[SOURCE.PHB.id] = new Weapon({
     name: "Light horse lance",
+    footnote_marker: "⁴",
     sorting_group: "Lance",
     cost: new Cost(6, CURRENCY.GP),
     weight_lbs: 5,
@@ -1052,6 +1060,7 @@ WEAPONS.Light_horse_lance[SOURCE.PHB.id] = new Weapon({
 
 WEAPONS.Jousting_lance[SOURCE.PHB.id] = new Weapon({
     name: "Jousting lance",
+    footnote_marker: "⁴",
     sorting_group: "Lance",
     cost: new Cost(20, CURRENCY.GP),
     weight_lbs: 20,
@@ -1076,6 +1085,7 @@ WEAPONS.Jousting_lance[SOURCE.PHB.id] = new Weapon({
 
 WEAPONS.Medium_horse_lance[SOURCE.PHB.id] = new Weapon({
     name: "Medium horse lance",
+    footnote_marker: "⁴",
     sorting_group: "Lance",
     cost: new Cost(10, CURRENCY.GP),
     weight_lbs: 10,
@@ -1100,6 +1110,7 @@ WEAPONS.Medium_horse_lance[SOURCE.PHB.id] = new Weapon({
 
 WEAPONS.Mancatcher[SOURCE.PHB.id] = new Weapon({
     name: "Mancatcher",
+    footnote_marker: "²",
     cost: new Cost(30, CURRENCY.GP),
     weight_lbs: 8,
     size: SIZE.L,
@@ -1146,6 +1157,7 @@ WEAPONS.Morning_star[SOURCE.PHB.id] = new Weapon({
 
 WEAPONS.Awl_pike[SOURCE.PHB.id] = new Weapon({
     name: "Awl pike",
+    footnote_marker: "⁵",
     sorting_group: "Polearm",
     cost: new Cost(5, CURRENCY.GP),
     weight_lbs: 12,
@@ -1303,6 +1315,7 @@ WEAPONS.Fauchard_fork[SOURCE.PHB.id] = new Weapon({
 
 WEAPONS.Glaive[SOURCE.PHB.id] = new Weapon({
     name: "Glaive",
+    footnote_marker: "¹",
     sorting_group: "Polearm",
     cost: new Cost(6, CURRENCY.GP),
     weight_lbs: 8,
@@ -1330,6 +1343,7 @@ WEAPONS.Glaive[SOURCE.PHB.id] = new Weapon({
 
 WEAPONS.Glaive_guisarme[SOURCE.PHB.id] = new Weapon({
     name: "Glaive-guisarme",
+    footnote_marker: "¹",
     sorting_group: "Polearm",
     cost: new Cost(10, CURRENCY.GP),
     weight_lbs: 10,
@@ -1461,32 +1475,7 @@ WEAPONS.Hook_fauchard[SOURCE.PHB.id] = new Weapon({
 
 WEAPONS.Lucern_hammer[SOURCE.PHB.id] = new Weapon({
     name: "Lucern hammer",
-    sorting_group: "Polearm",
-    cost: new Cost(7, CURRENCY.GP),
-    weight_lbs: 15,
-    size: SIZE.L,
-    type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
-    speed: 9,
-    damage: new Damage("2d4", "1d6"),
-    pages: [94],
-
-    implementationVariables: new ImplementationVariables(
-        {
-            strength: STRENGTH_BONUS.FULL,
-            handedness: [HANDEDNESS.BY_SIZE]
-        }
-    ),
-
-    descriptions: [
-        {
-            pages: [99],
-            text: [`Lucern hammer: This weapon is similar to the bec de corbin. Fitted with a shaft up to 10 feet long, it is usually found in the hands of the common soldier. Like the bec de corbin, its main purpose is to punch through armor. The end is fitted with the long point of an awl pike to hold off enemy cavalry.`]
-        }
-    ]
-})
-
-WEAPONS.Lucern_hammer[SOURCE.PHB.id] = new Weapon({
-    name: "Lucern hammer",
+    footnote_marker: "⁵",
     sorting_group: "Polearm",
     cost: new Cost(7, CURRENCY.GP),
     weight_lbs: 15,
@@ -1514,6 +1503,7 @@ WEAPONS.Lucern_hammer[SOURCE.PHB.id] = new Weapon({
 
 WEAPONS.Military_fork[SOURCE.PHB.id] = new Weapon({
     name: "Military fork",
+    footnote_marker: "¹",
     sorting_group: "Polearm",
     cost: new Cost(5, CURRENCY.GP),
     weight_lbs: 7,
@@ -1541,6 +1531,7 @@ WEAPONS.Military_fork[SOURCE.PHB.id] = new Weapon({
 
 WEAPONS.Partisan[SOURCE.PHB.id] = new Weapon({
     name: "Partisan",
+    footnote_marker: "⁵",
     sorting_group: "Polearm",
     cost: new Cost(10, CURRENCY.GP),
     weight_lbs: 8,
@@ -1568,6 +1559,7 @@ WEAPONS.Partisan[SOURCE.PHB.id] = new Weapon({
 
 WEAPONS.Ranseur[SOURCE.PHB.id] = new Weapon({
     name: "Ranseur",
+    footnote_marker: "⁵",
     sorting_group: "Polearm",
     cost: new Cost(6, CURRENCY.GP),
     weight_lbs: 7,
@@ -1595,6 +1587,7 @@ WEAPONS.Ranseur[SOURCE.PHB.id] = new Weapon({
 
 WEAPONS.Spetum[SOURCE.PHB.id] = new Weapon({
     name: "Spetum",
+    footnote_marker: "⁵",
     sorting_group: "Polearm",
     cost: new Cost(5, CURRENCY.GP),
     weight_lbs: 7,
@@ -2115,7 +2108,9 @@ WEAPONS.Javelin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
-    ]
+    ],
+
+    comment: `No explicit range is given in the Fighter's Handbook. So it is assumed the same range as the PHB is used.`
 })
 WEAPONS.Javelin.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
