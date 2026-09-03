@@ -110,3 +110,18 @@ mixin weaponRow(obj, book, color, indents)
         td !{getDamageLarge(obj.damage)}
         td !{getProp(obj.knockdown)}
         td !{getSource(obj.pages, book)}
+
+mixin descriptionEntries(descriptions, book)
+    each entry in descriptions
+        p
+            span(class="title") #{book.title} p. #{entry.pages.join(', ')}
+            br
+            span(class="entry") !{formatInput(entry.text, book.shortTitle, entry.pages)}
+            if entry.optional
+                br
+                span(class="optional") &emsp;!{formatInput(entry.optional, book.shortTitle, entry.pages)}
+            if entry.comment
+                span(class="comment")
+                    strong
+                        em Comment:
+                    |  !{formatInput(entry.comment, book.shortTitle, entry.pages)}

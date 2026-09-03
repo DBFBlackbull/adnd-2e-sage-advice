@@ -1,29 +1,5 @@
 const {SOURCE, CURRENCY, SIZE, WEAPON_TYPE, HANDEDNESS, STRENGTH_BONUS} = require('../constants')
 
-// const booksPriority = [
-//     {book: 'PHB', print: 'First Printing May 2013'},
-//     {book: 'The Complete Fighter's Handbook', print: '11th Printing, May 1996'},
-//     {book: 'The Complete Thief's Handbook', print: 'November 1993'},
-//     {book: 'The Complete Priest's Handbook', print: 'Seventh printing, October 1996'},
-//     {book: 'The Complete Wizard's Handbook', print: '10th printing, March 1996'},
-//     {book: 'The Complete Psionics Handbook', print: 'Ninth printing: October 1996'},
-//     {book: 'Tome of Magic', print: 'Seventh Printing: March, 1996'},
-//     {book: 'Arms and Equipment Guide', print: 'Fifth Printing: January 1994'},
-//     {book: 'The Complete Book of Dwarves', print: 'November 1993'},
-//     {book: 'The Complete Bard's Handbook', print: 'Fourth printing, November 1994'},
-//     {book: 'The Complete Book of Elves', print: ''},
-//     {book: 'The Complete Book of Humanoids', print: 'Sixth printing, March 1999'},
-//     {book: 'The Complete Ranger's Handbook', print: 'Fifth printing, July 1995'},
-//     {book: 'The Complete Paladin's Handbook', print: ''},
-//     {book: 'The Complete Druid's Handbook', print: ''},
-//     {book: 'The Complete Barbarian's Handbook', print: ''},
-//     {book: 'The Complete Book of Necromancers', print: ''},
-//     {book: 'The Complete Ninja's Handbook', print: '2nd printing, March 1996'},
-//     {book: 'Player's Option: Combat & Tactics', print: ''},
-//     {book: 'Player's Option: Skills & Powers', print: ''},
-//     {book: 'Player's Option: Spells & Magic', print: ''},
-// ];
-
 class Range {
     constructor(short, medium, long, extreme) {
         this.short = short
@@ -447,24 +423,20 @@ WEAPONS.Blowgun.ammunition.Needle[SOURCE.PHB.id] = new Ammunition({
     pages: [94, 95]
 })
 
-const PHB_BOW_DESCRIPTION = [
-    {
-        pages: [96],
-        text: [
-            `Bows: Bows come in various shapes and sizes. The power of a bow is measured by its pull. The greater the pull, the more Strength needed to work the bow. Thus, it is possible for characters to have bows that grant them damage bonuses for high Strength (it is assumed the character has chosen a bow that has a greater pull). Likewise, characters with low Strengths suffer their usual penalties when using a bow (they are forced to use weaker bows or simply cannot draw back as far). The pull of a bow seldom prevents a character from using the weapon, only from gaining the full effect. The true test of a character’s Strength comes in stringing a bow—the bow of a strong hero may simply be un string able by a lesser man (as was Odysseus’s).`,
-            `Heavier pull bows are not normally any more expensive than standard bows. The exceptions to this are those bows that enable the fighter to gain bonuses for exceptional Strength (18/01 or greater). These bows must be custom crafted and cost three to five times the normal price. These bows are also difficult to string or use effectively for those without exceptional Strength. These characters must roll a successful bend bars/lift gates roll to string or use such weapons (again, think of the test of the suitors in Odysseus’s household).`
-        ]
-    }
-]
+const PHB_BOW_DESCRIPTION = {
+    pages: [96],
+    text: [
+        `Bows: Bows come in various shapes and sizes. The power of a bow is measured by its pull. The greater the pull, the more Strength needed to work the bow. Thus, it is possible for characters to have bows that grant them damage bonuses for high Strength (it is assumed the character has chosen a bow that has a greater pull). Likewise, characters with low Strengths suffer their usual penalties when using a bow (they are forced to use weaker bows or simply cannot draw back as far). The pull of a bow seldom prevents a character from using the weapon, only from gaining the full effect. The true test of a character’s Strength comes in stringing a bow—the bow of a strong hero may simply be un string able by a lesser man (as was Odysseus’s).`,
+        `Heavier pull bows are not normally any more expensive than standard bows. The exceptions to this are those bows that enable the fighter to gain bonuses for exceptional Strength (18/01 or greater). These bows must be custom crafted and cost three to five times the normal price. These bows are also difficult to string or use effectively for those without exceptional Strength. These characters must roll a successful bend bars/lift gates roll to string or use such weapons (again, think of the test of the suitors in Odysseus’s household).`
+    ]
+}
 
-const PHB_LONG_BOW_ARROW_DESCRIPTION = [
-    {
-        pages: [96],
-        text: [
-            `Arrows for long bows of all types are divided between lightweight flight arrows and heavier sheaf arrows. Flight arrows have longer ranges and are normally used in hunting. Sheaf arrows have a stronger metal head but a reduced range. They are often used in times of war.`
-        ]
-    }
-]
+const PHB_LONG_BOW_ARROW_DESCRIPTION = {
+    pages: [96],
+    text: [
+        `Arrows for long bows of all types are divided between lightweight flight arrows and heavier sheaf arrows. Flight arrows have longer ranges and are normally used in hunting. Sheaf arrows have a stronger metal head but a reduced range. They are often used in times of war.`
+    ]
+}
 
 WEAPONS.Short_bow[SOURCE.PHB.id] = new Weapon({
     name: "Short bow",
