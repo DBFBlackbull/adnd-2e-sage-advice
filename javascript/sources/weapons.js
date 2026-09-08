@@ -28,6 +28,7 @@ class Ammunition {
     constructor(
         {
             name,
+            footnote_marker,
             cost,
             weight_lbs,
             size,
@@ -40,6 +41,7 @@ class Ammunition {
         }
     ) {
         this.name = name
+        this.footnote_marker = footnote_marker
         this.cost = cost
         this.weight_lbs = weight_lbs
         this.size = size
@@ -2095,6 +2097,7 @@ const FIGHTERS_HANDBOOK_BONE_WEAPONS = {
 
 WEAPONS.Harpoon[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Harpoon",
+    footnote_marker: "%",
     cost: new Cost(20, CURRENCY.GP),
     weight_lbs: 6,
     size: SIZE.L,
@@ -2119,6 +2122,7 @@ WEAPONS.Harpoon.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
 
 WEAPONS.Javelin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Javelin",
+    footnote_marker: "%",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 2,
     size: SIZE.M,
@@ -2145,6 +2149,7 @@ WEAPONS.Javelin.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
 
 WEAPONS.Spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Spear",
+    footnote_marker: "%",
     cost: new Cost(8, CURRENCY.SP),
     weight_lbs: 5,
     size: SIZE.M,
@@ -2163,6 +2168,7 @@ WEAPONS.Spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
 }
 WEAPONS.Spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
+    footnote_marker: "#",
     damage: new Damage("1d8+1", "2d6"),
     pages: [93],
 
@@ -2173,6 +2179,7 @@ WEAPONS.Spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
 
 WEAPONS.Long_spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Spear, Long",
+    footnote_marker: "%",
     cost: new Cost(5, CURRENCY.GP),
     weight_lbs: 8,
     size: SIZE.L,
@@ -2191,6 +2198,7 @@ WEAPONS.Long_spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] =
 }
 WEAPONS.Long_spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
+    footnote_marker: "#",
     damage: new Damage("2d6", "3d6"),
     pages: [93,95],
 
@@ -2201,6 +2209,7 @@ WEAPONS.Long_spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] =
 
 WEAPONS.Trident[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Trident",
+    footnote_marker: "%",
     cost: new Cost(15, CURRENCY.GP),
     weight_lbs: 5,
     size: SIZE.L,
@@ -2230,6 +2239,7 @@ WEAPONS.Short_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK.id] =
         WEAPONS.Composite_short_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK.id] =
             WEAPONS.Composite_long_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Ammunition({
                 name: "Arrows, Stone Flight",
+                footnote_marker: "&",
                 cost: new Cost(3, CURRENCY.CP, 12),
                 weight_lbs: 0.1,
                 size: SIZE.M,
@@ -2245,6 +2255,7 @@ WEAPONS.Short_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK.id] =
 
 WEAPONS.Belaying_pin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Belaying pin",
+    footnote_marker: "!",
     cost: new Cost(2, CURRENCY.CP),
     weight_lbs: 2,
     size: SIZE.S,
@@ -2260,6 +2271,7 @@ WEAPONS.Belaying_pin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Bo_stick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Bo stick",
+    footnote_marker: "&",
     cost: new Cost(2, CURRENCY.CP),
     weight_lbs: 4,
     size: SIZE.L,
@@ -2275,6 +2287,7 @@ WEAPONS.Bo_stick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Bolas[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Bolas",
+    footnote_marker: "!",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 2,
     size: SIZE.M,
@@ -2292,6 +2305,7 @@ WEAPONS.Bolas[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Cestus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Cestus",
+    footnote_marker: "!",
     cost: new Cost(1, CURRENCY.GP),
     weight_lbs: 2,
     size: SIZE.S,
@@ -2307,6 +2321,7 @@ WEAPONS.Cestus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Chain[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Chain",
+    footnote_marker: "&",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 3,
     size: SIZE.L,
@@ -2326,6 +2341,7 @@ WEAPONS.Chain[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Dagger_bone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Dagger Bone",
+    footnote_marker: "!",
     cost: new Cost(1, CURRENCY.SP),
     weight_lbs: 1,
     size: SIZE.S,
@@ -2344,6 +2360,7 @@ WEAPONS.Dagger_bone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Dagger_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Dagger Stone",
+    footnote_marker: "!",
     cost: new Cost(2, CURRENCY.SP),
     weight_lbs: 1,
     size: SIZE.S,
@@ -2362,12 +2379,12 @@ WEAPONS.Dagger_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Daikyu[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Daikyu",
+    footnote_marker: "&",
     cost: new Cost(100, CURRENCY.GP),
     weight_lbs: 3,
     size: SIZE.L,
     speed: 7,
     rate_of_fire: "2/1",
-    range: new Range(7, 14, 21),
     pages: [94, 95],
 
     descriptions: [
@@ -2377,6 +2394,7 @@ WEAPONS.Daikyu[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Daikyu.ammunition.Daikyu_arrow[SOURCE.FIGHTERS_HANDBOOK.id] = new Ammunition({
     name: "Daikyu arrow",
+    footnote_marker: "&",
     cost: new Cost(3, CURRENCY.SP, 6),
     weight_lbs: 1,
     size: SIZE.M,
@@ -2391,7 +2409,8 @@ WEAPONS.Daikyu.ammunition.Daikyu_arrow[SOURCE.FIGHTERS_HANDBOOK.id] = new Ammuni
 })
 
 WEAPONS.Gaff_hook_attached[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
-    name: "Gaff/Hook Attached",
+    name: "Gaff/hook Attached",
+    footnote_marker: "!",
     cost: new Cost(2, CURRENCY.GP),
     weight_lbs: 2,
     size: SIZE.S,
@@ -2406,7 +2425,8 @@ WEAPONS.Gaff_hook_attached[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 
 WEAPONS.Gaff_hook_held[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
-    name: "Gaff/Hook Held",
+    name: "Gaff/hook Held",
+    footnote_marker: "!",
     cost: new Cost(5, CURRENCY.CP),
     weight_lbs: 2,
     size: SIZE.S,
@@ -2422,6 +2442,7 @@ WEAPONS.Gaff_hook_held[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Javelin_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Javelin, Stone",
+    footnote_marker: "%",
     cost: new Cost(5, CURRENCY.CP),
     weight_lbs: 2,
     size: SIZE.M,
@@ -2449,6 +2470,7 @@ WEAPONS.Javelin_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id
 
 WEAPONS.Knife_bone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Knife Bone",
+    footnote_marker: "!",
     cost: new Cost(3, CURRENCY.CP),
     weight_lbs: 0.5,
     size: SIZE.S,
@@ -2467,6 +2489,7 @@ WEAPONS.Knife_bone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Knife_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Knife Stone",
+    footnote_marker: "!",
     cost: new Cost(5, CURRENCY.CP),
     weight_lbs: 0.5,
     size: SIZE.S,
@@ -2485,6 +2508,7 @@ WEAPONS.Knife_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Lasso[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Lasso",
+    footnote_marker: "&",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 3,
     size: SIZE.L,
@@ -2503,6 +2527,7 @@ WEAPONS.Lasso[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Main_gauche[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Main-gauche",
+    footnote_marker: "!",
     cost: new Cost(3, CURRENCY.GP),
     weight_lbs: 2,
     size: SIZE.S,
@@ -2518,6 +2543,7 @@ WEAPONS.Main_gauche[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Net[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Net",
+    footnote_marker: "&",
     cost: new Cost(5, CURRENCY.GP),
     weight_lbs: 10,
     size: SIZE.M,
@@ -2535,6 +2561,7 @@ WEAPONS.Net[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Nunchaku[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Nunchaku",
+    footnote_marker: "!",
     cost: new Cost(1, CURRENCY.GP),
     weight_lbs: 3,
     size: SIZE.M,
@@ -2550,6 +2577,7 @@ WEAPONS.Nunchaku[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Naginata[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Naginata",
+    footnote_marker: "&#",
     sorting_group: "Polearm",
     cost: new Cost(8, CURRENCY.GP),
     weight_lbs: 10,
@@ -2567,6 +2595,7 @@ WEAPONS.Naginata[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Tetsubo[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Tetsubo",
+    footnote_marker: "&",
     sorting_group: "Polearm",
     cost: new Cost(2, CURRENCY.GP),
     weight_lbs: 7,
@@ -2583,6 +2612,7 @@ WEAPONS.Tetsubo[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Sai[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Sai",
+    footnote_marker: "!",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 2,
     size: SIZE.S,
@@ -2598,6 +2628,7 @@ WEAPONS.Sai[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Shuriken[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Shuriken",
+    footnote_marker: "!",
     cost: new Cost(3, CURRENCY.SP),
     weight_lbs: 1,
     size: SIZE.S,
@@ -2615,6 +2646,7 @@ WEAPONS.Shuriken[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Spear_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Spear, Stone",
+    footnote_marker: "%",
     cost: new Cost(8, CURRENCY.CP),
     weight_lbs: 5,
     size: SIZE.M,
@@ -2642,6 +2674,7 @@ WEAPONS.Spear_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] 
 
 WEAPONS.Stiletto[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Stiletto",
+    footnote_marker: "!",
     cost: new Cost(5, CURRENCY.SP),
     weight_lbs: 0.5,
     size: SIZE.S,
@@ -2659,6 +2692,7 @@ WEAPONS.Stiletto[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Cutlass[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Cutlass",
+    footnote_marker: "!",
     sorting_group: "Sword",
     cost: new Cost(12, CURRENCY.GP),
     weight_lbs: 4,
@@ -2675,6 +2709,7 @@ WEAPONS.Cutlass[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Drusus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Drusus",
+    footnote_marker: "!",
     sorting_group: "Sword",
     cost: new Cost(50, CURRENCY.GP),
     weight_lbs: 3,
@@ -2691,6 +2726,7 @@ WEAPONS.Drusus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Katana[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Katana",
+    footnote_marker: "%",
     sorting_group: "Sword",
     cost: new Cost(100, CURRENCY.GP),
     weight_lbs: 6,
@@ -2716,6 +2752,7 @@ WEAPONS.Katana.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
 
 WEAPONS.Rapier[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Rapier",
+    footnote_marker: "!",
     sorting_group: "Sword",
     cost: new Cost(15, CURRENCY.GP),
     weight_lbs: 4,
@@ -2732,6 +2769,7 @@ WEAPONS.Rapier[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Sabre[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Sabre",
+    footnote_marker: "!",
     sorting_group: "Sword",
     cost: new Cost(17, CURRENCY.GP),
     weight_lbs: 5,
@@ -2748,6 +2786,7 @@ WEAPONS.Sabre[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 
 WEAPONS.Wakizashi[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Wakizashi",
+    footnote_marker: "$",
     sorting_group: "Sword",
     cost: new Cost(50, CURRENCY.GP),
     weight_lbs: 3,
