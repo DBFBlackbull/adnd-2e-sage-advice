@@ -46,11 +46,12 @@ body
                     - let ammo = ammoType[book.id]
                     if ammo
                         +weaponRow(ammo, book, color, indents)
+    - let usedEntries = {}
     each book in bookPriority
         - let weapon = weaponObj[book.id]
         if weapon
             if weapon.descriptions
-                +descriptionEntries(weapon.descriptions, book)
+                +descriptionEntries(weapon.descriptions, book, usedEntries)
             if weapon.comment
                 span(class="comment")
                     strong
@@ -59,13 +60,13 @@ body
         each hand in handedness
             - let grip = weaponObj.grip?.[hand.id]?.[book.id]
             if grip && grip.descriptions
-                +descriptionEntries(grip.descriptions, book)
+                +descriptionEntries(grip.descriptions, book, usedEntries)
         if weaponObj.ammunition
             each ammoType in weaponObj.ammunition
                 - let ammo = ammoType[book.id]
                 if ammo
                     if ammo.descriptions
-                        +descriptionEntries(ammo.descriptions, book)
+                        +descriptionEntries(ammo.descriptions, book, usedEntries)
                     if ammo.comment
                         span(class="comment")
                             strong

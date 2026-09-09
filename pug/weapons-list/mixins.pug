@@ -112,12 +112,15 @@ mixin weaponRow(obj, book, color, indents)
         td !{getProp(obj.knockdown)}
         td !{getSource(obj.pages, book)}
 
-mixin descriptionEntries(descriptions, book)
+mixin descriptionEntries(descriptions, book, usedEntries)
     each entry in descriptions
+        if usedEntries[entry.text.toString()]
+            - continue
         p
             span(class="title") #{book.title} p. #{entry.pages.join(', ')}
             br
             span(class="entry") !{formatInput(entry.text, book.shortTitle, entry.pages)}
+            - usedEntries[entry.text.toString()] = true
             if entry.optional
                 br
                 span(class="optional") &emsp;!{formatInput(entry.optional, book.shortTitle, entry.pages)}
