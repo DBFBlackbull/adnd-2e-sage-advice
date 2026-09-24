@@ -119,13 +119,13 @@ mixin descriptionEntries(descriptions, book, usedEntries)
         p
             span(class="title") #{book.title} p. #{entry.pages.join(', ')}
             br
-            span(class="entry") !{formatInput(entry.text, book.shortTitle, entry.pages)}
+            span(class="entry") !{formatInput(entry.text, book.id, entry.pages)}
             - usedEntries[entry.text.toString()] = true
             if entry.optional
                 br
-                span(class="optional") &emsp;!{formatInput(entry.optional, book.shortTitle, entry.pages)}
+                span(class="optional") &emsp;!{formatInput(entry.optional, book.id, entry.pages)}
             if entry.comment
                 span(class="comment")
                     strong
                         em Comment:
-                    |  !{formatInput(entry.comment, book.shortTitle, entry.pages)}
+                    |  !{formatInput(entry.comment, book.id, entry.pages)}

@@ -179,7 +179,6 @@ WEAPONS.Heavy_crossbow = {
 WEAPONS.Dagger = {};
 WEAPONS.Dagger_bone = {};
 WEAPONS.Dagger_stone = {};
-WEAPONS.Dirk = {};
 WEAPONS.Dart = {};
 WEAPONS.Footmans_flail = {};
 WEAPONS.Footmans_mace = {};
@@ -316,7 +315,29 @@ WEAPONS.Trident = {
 WEAPONS.Warhammer = {};
 WEAPONS.Whip = {};
 
+for (const [key, weapon] of Object.entries(WEAPONS))
+    Object.defineProperty(weapon, 'id', {value: key, enumerable: false})
+
+const PROFICIENCIES = {
+    Single: {},
+    Related: {},
+    Tight_Group: {},
+    Broad_Group: {},
+};
+
 //#region PHB
+const Related_Weapons = [
+    [WEAPONS.Hand_axe.id, WEAPONS.Throwing_axe.id, WEAPONS.Battle_axe.id],
+    [WEAPONS.Short_bow.id, WEAPONS.Long_bow.id, WEAPONS.Composite_short_bow.id, WEAPONS.Composite_long_bow.id],
+    [WEAPONS.Dagger.id, WEAPONS.Knife.id],
+    [WEAPONS.Glaive.id, WEAPONS.Halberd.id, WEAPONS.Bardiche.id, WEAPONS.Voulge.id, WEAPONS.Guisarme.id, WEAPONS.Glaive_guisarme.id, WEAPONS.Guisarme_voulge.id],
+    [WEAPONS.Harpoon.id, WEAPONS.Spear.id, WEAPONS.Trident.id, WEAPONS.Javelin.id],
+    [WEAPONS.Footmans_mace.id, WEAPONS.Horsemans_mace.id, WEAPONS.Morning_star.id, WEAPONS.Footmans_flail.id, WEAPONS.Horsemans_flail.id, WEAPONS.Warhammer.id, WEAPONS.Club.id],
+    [WEAPONS.Military_fork.id, WEAPONS.Ranseur.id, WEAPONS.Spetum.id, WEAPONS.Partisan.id],
+    [WEAPONS.Scimitar.id, WEAPONS.Bastard_sword.id, WEAPONS.Long_sword.id, WEAPONS.Broad_sword.id],
+    [WEAPONS.Sling.id, WEAPONS.Staff_sling.id]
+]
+
 const PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE = {
     pages: [95],
     text: [`¹ This weapon inflicts double damage against charging creatures of L or greater size.`]
@@ -749,28 +770,7 @@ WEAPONS.Heavy_crossbow.ammunition.Heavy_quarrel[SOURCE.PHB.id] = new Ammunition(
 })
 
 WEAPONS.Dagger[SOURCE.PHB.id] = new Weapon({
-    name: "Dagger",
-    cost: new Cost(2, CURRENCY.GP),
-    weight_lbs: 1,
-    size: SIZE.S,
-    type: [WEAPON_TYPE.P],
-    speed: 2,
-    rate_of_fire: "2/1",
-    range: new Range(10, 20, 30),
-    damage: new Damage("1d4", "1d3"),
-    pages: [94, 95],
-
-    implementationVariables: new ImplementationVariables(
-        {
-            attackInMelee: true,
-            strength: STRENGTH_BONUS.FULL,
-            handedness: [HANDEDNESS.BY_SIZE]
-        }
-    ),
-})
-
-WEAPONS.Dirk[SOURCE.PHB.id] = new Weapon({
-    name: "Dirk",
+    name: "Dagger/Dirk",
     cost: new Cost(2, CURRENCY.GP),
     weight_lbs: 1,
     size: SIZE.S,
@@ -2265,7 +2265,16 @@ WEAPONS.Belaying_pin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        {
+            pages: [100],
+            text: [
+                `**Belaying Pin**`,
+                `The belaying pin is a short rod of wood or metal. It's inserted in a hole bored through the ship's rail, and ship's ropes are made fast (tied) to it. It can also be yanked free and brought in violent contact with enemies; in a pirate fight, anyone who loses a weapon or starts out without one ends up with a belaying pin in his hand.`,
+                `Weapon proficiency with Belaying Pin is related to clubs and maces; if you have proficiency with club or maces, you take only a -1 when using a belaying pin you don't have proficiency for. Weapon specialization with belaying pin gives the usual benefits.`,
+                `Belaying pins are very available on any ship; you can get any number of them at a seaside town or city, especially at a ship builder's, a warehouse, or a business that supplies ships.`
+            ]
+        }
     ]
 })
 
@@ -2281,7 +2290,16 @@ WEAPONS.Bo_stick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY
+        FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
+        {
+            pages: [100,101],
+            text: [
+                `**Bo Stick**`,
+                `The bo stick is an ordinary hardwood staff, the height of a man or slightly taller.`,
+                `Bo stick shares a proficiency with Quarterstaff. If you can use one, you can use the other. (This doesn't mean that the two styles are identical; an oriental bo stick fighter looks very different in combat than a western quarterstaff combatant. But if they traded weapons, they'd be just as good with the other guy's weapon ... each in his own style.) Weapon specialization in bo stick gives you the usual advantages.`,
+                `Bo sticks are common everywhere; any 6' or 7' hardwood walking staff is a bo staff. To use it as such, however, you have to have the bo stick/quarterstaff weapon proficiency. The primary difference between the weapons, and the reason the quarterstaff does more damage against Large monster, is that the combat quarterstaff has iron-shod, even lead-weighted ends. (A quarterstaff which does not have these features should do damage identical to the bo stick.)`
+            ]
+        }
     ]
 })
 
@@ -2299,7 +2317,20 @@ WEAPONS.Bolas[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [94, 95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        {
+            pages: [96],
+            text: [
+                `**Bolas**`,
+                `The bolas are three balls attached to ropes or cords about a yard in length; the other ends of the cords are tied together in a knot. The wielder of the bolas whirls them by the knot and throws them at a target; if they hit, they wrap around the target, with the balls smashing painfully into the target as they connect. Once they have wrapped themselves around a target, it takes the victim one full round and a successful ability check vs. Strength to get them free. (If the character fails his Strength check, he does not get the bolas free this round.)`,
+                `This weapon does only a little damage, but it is especially useful if you are using the Hit Locations rules from the *Combat Rules* chapter.`,
+                `If the attacker makes a Called Shot to the target's Legs (he doesn't have to specify which; if the attack hits, it hits both), and successfully attacks, the bolas wrap themselves tightly around his legs. He can no longer run or walk until he gets them free. He must make a Dexterity check just to avoid falling down. In fact, if he was moving when the attack was made, he suffers a -3 penalty to his Dexterity.`,
+                `If the attacker makes a Called Shot to the target's Arms (again, he doesn't have to specify; both will be hit) and successfully attacks, the bolas wrap themselves tightly around his arms and torso. He cannot wield his weapon and does not get the AC bonus of his shield until he gets himself free. His roll to free himself is at a -2 penalty to his Strength ability score because he has no leverage.`,
+                `If the attacker makes a Called Shot to the target's Head, the bolas wrap themselves around the target's neck and begin strangling him. (This does not work if the character was wearing a Closed-Faced Helm or a Great Helm, described later this chapter.) The bolas do the listed damage on the round they hit. Thereafter, on each successive round where they begin the round still on the victim's throat, they do 1d3 hp of damage from strangulation. The damage stops when they are removed or when the target is dead.`,
+                `Weapon proficiency with the Bolas is not related to any other weapon proficiency. Specialization grants the usual benefits. In case of a Called Shot to the target's head, the damage bonus only applies to the initial hit; it is not added to the subsequent rounds of strangulation.`,
+                `Any leatherworker or weaponsmith can make a set of bolas... but he must have exact measurements for the cords and exact weights for the balls to do it right. Simply hearing such a weapon described, the craftsman can make something like it... but unless he makes hit craftsman ability check by 3 or better, the weapon he makes will be proportioned wrong and will be at a -4 to hit.`
+            ]
+        }
     ]
 })
 
@@ -2315,7 +2346,18 @@ WEAPONS.Cestus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        {
+            pages: [96],
+            text: [
+                `**Cestus**`,
+                `The cestus is a glovelike weapon, studded with sharp spikes and edges on the back of the glove and across the knuckles. Gladiators fighting with the cestus usually wea two, one on each hand (the plural is cesti); here, it pays for a gladiator to have Cestus Weapon Specialization, Two-Weapon Style Specialization, and/or Punching Specialization.`,
+                `Cestus combat is very popular with arena crowds because it is extremely bloody and up-close. Also, because the weapons do comparatively little damage, the fighters tend to last a long time in combat.`,
+                `When wearing a cestus or two cesti, a character my still make a Grab maneuver with the hand the cestus is on. This attack will be at a -2 to hit for clumsiness and a -2 to the attacker's Strength (for purposes of holding on) likewise.`,
+                `Cestus, because it is simply a bonus to punching-type attacks, does not require weapon proficiency; anyone can use cesti with no proficiency penalty. Therefore, Specialization with Cestus costs only weapon proficiency slot.`,
+                `In a culture where there is gladiatorial combat, cesti are readily available from weaponsmiths, but they are not exported, as they're such a basic weapon the market is not very good. Any foreign weaponsmith who has cesti described to him can make perfectly functional cesti; the first two cesti he makes will be at twice the listed cost, and subsequent ones will be at the listed cost.`
+            ]
+        }
     ]
 })
 
@@ -2336,6 +2378,17 @@ WEAPONS.Chain[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
         FIGHTERS_HANDBOOK_ASTRIX_ROF_SPECIAL,
         FIGHTERS_HANDBOOK_CHAIN_LASSO_NET,
+        {
+            pages: [101],
+            text: [
+                `**Chain**`,
+                `This weapon is a 6' to 10' length of chain with weight at both ends. In combat, it's whirled very fast, the weighted end inflicting the damage on the target.`,
+                `The chain combines some of the useful traits of melee weapons and the lasso. You can attack with it for normal Called Shots, Disarm, Parry, and Strike/Thrust maneuvers. Additionally, you can perform three of the lasso's five special functions: Pull/Trip by striking at the target's legs, Dismount a Rider, and Snag a Rider's Head.`,
+                `The chain is easy to conceal, and (at least in western lands) is not usually recognized as a weapon until wielded as one.`,
+                `The chain requires its own weapon proficiency, which is not related to any other weapon. Weapon specialization confers the usual bonuses.`,
+                `Chains are to be found in any civilization with the technological skill to make them (this includes most *AD&D®* campaign settings), but the technique of fighting with them is mostly an eastern-culture development. A character would have to study with a practitioner of the technique, and be able to spend a weapon proficiency slot, in order to learn how to use the weapon.`
+            ]
+        }
     ]
 })
 
@@ -2388,7 +2441,18 @@ WEAPONS.Daikyu[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [94, 95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY
+        FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
+        {
+            pages: [101],
+            text: [
+                `**Daikyu**`,
+                `The daikyu is the great samurai longbow. It's 7' long (hence it size designation as L). Its hand-grip is not in the center of the weapon; it's located closer to the bottom, so the daikyu can be fired from horseback and from kneeling positions.`,
+                `As with the other bows, the daikyu can be used to perform the Called Shot, Disarm, Hold Attack, and Strike/Thrust (i.e., shoot) maneuvers.`,
+                `The daikyu and katana are the two principal weapons of the samurai.`,
+                `The daikyu requires its own weapons proficiency. It is related to, but not identical to, other bow proficiencies. Weapon specialization confers the usual benefits.`,
+                `The daikyu is not exported from eastern nations. However, it is a simple task, if you are in such a nation, to commission the making of one. A western bowyer would have to have studied in the east to make one.`
+            ]
+        }
     ]
 })
 
@@ -2408,6 +2472,15 @@ WEAPONS.Daikyu.ammunition.Daikyu_arrow[SOURCE.FIGHTERS_HANDBOOK.id] = new Ammuni
     ]
 })
 
+const FIGHTERS_HANDBOOK_GAFF_HOOK_DESCRIPTION = {
+    pages: [100],
+    text: [
+        `**Gaff/Hook**`,
+        `The gaff is a metal hook with a wooden or metal crossbar at the base; it's held in one hand, the hook protruding between the middle and ring fingers, and normally used to hook and land fish.`,
+        `However, like the belaying pin, it's in ready supply onboard a ship. Also, many pirates who lose a hand have a cup with a gaff on it attached to the stump, and so always have a weapon "on hand"—one that can't be dropped or Disarmed.`,
+        `Proficiency with the gaff is not related to any other proficiency. Specialization grants the usual benefits.`
+    ]
+}
 WEAPONS.Gaff_hook_attached[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Gaff/hook Attached",
     footnote_marker: "!",
@@ -2420,7 +2493,8 @@ WEAPONS.Gaff_hook_attached[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        FIGHTERS_HANDBOOK_GAFF_HOOK_DESCRIPTION
     ]
 })
 
@@ -2436,7 +2510,8 @@ WEAPONS.Gaff_hook_held[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        FIGHTERS_HANDBOOK_GAFF_HOOK_DESCRIPTION
     ]
 })
 
@@ -2521,7 +2596,30 @@ WEAPONS.Lasso[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
         FIGHTERS_HANDBOOK_ASTRIX_ROF_SPECIAL,
         FIGHTERS_HANDBOOK_CHAIN_LASSO_NET,
-        // TODO write all the Lasso stuff
+        {
+            pages: [98,99],
+            text: [
+                `**Lasso**`,
+                `The lasso, or lariat, is a length of rope with a loop at the end; the wielder holds the slack in his off-hand, twirls the lasso in his other hand, and hurls the loop at his target. on a successful hit, the lariat settles over the target, giving the wielder the chance to dismount him, pull him to the ground, trip him, etc.`,
+                `In other words, when you attack someone with a lasso, you must declare what you're trying to accomplish with the attack.`,
+                `If you're trying to trip him, you're trying to make the loop settle about his legs. This requires a Called Shot at the legs as per the Hit Locations section of the *Combat Rules* chapter.`,
+                `If you hit, he must make a Dexterity ability roll, with the usual modifiers for the Pull/Trip maneuver; if he fails, he falls, and if he succeeds, he's able to jump out of your loop before it closes.`,
+                `If you're trying to pin his arms to his sides, you're trying to make the loop settle about his torso and arms. This requires a Called Shot at the arms as per the Hit Locations section of the *Combat Rules* chapter.`,
+                `If you hit, he must make a Strength ability roll, again with the usual modifiers for Pull/Trip. If he succeeds, he shrugs the loop off before you can pull it taut. If he fails, you can pull the loop taut. Both of his arms are pinned, as in the Pin maneuver. The target gets to struggle each round, also as per the Pin maneuver rules. Each additional lasso that hits the target to pin him gives him a -4 to his Strength ability for purposes of his struggling. When his Strength reaches 0, he has no chances of escaping.`,
+                `If you're trying to dismount a rider, you're trying to make the loop settle about his torso—and then brace yourself for the impact (when his mount's movement reaches the end of your rope, both of you and he are going to be jarred). This doesn't require a Called Shot: You must merely hit your target normally.`,
+                `If you hit, both you and the unfortunate rider must now make Strength ability rolls. If he rolls his better than you roll yours, the lasso is torn from your hands and you take 1d2 damage. If you roll yours better than he rolls his, you yank him from his saddle and he takes 1d3 from impact with the lasso and the earth. If you both make your roll by the same amount, then both results occur; the lasso is yanked from your hands, doing 1d2 to you, and he's yanked from his horse, taking 1d3. (Incidentally, if you've had time to tie your rope to an absolute stationary object, like a boulder, you don't have to roll against your Strength ability; you win this contest unless your target rolls a 1, in which case the rope breaks and he can ride off laughing.)`,
+                `If you're trying to lasso a target's head (for example, when you're up in a tree and your target is an unsuspecting guard walking below), this is a Called Shot to his Head as per the usual rules.`,
+                `If, after the modifiers, you still hit, you can yank for 1d3 damage (plus your Strength bonus). On subsequent rounds, you can yank for 1 point of damage each (plus your Strength bonus). But if you're in a position to hoist your target up in the air (for instance, if you're up on a tree-branch, lasso your victim, and then drop off the branch on the other side, holding onto the rope to hoist your victim up), you do your victim 1d4 points of strangulation damage per round (Strength bonus does not apply to this). If he can get his knife free and cut himself loose, that's good for him; if not, it's good for you. While strangling, a victim cannot shout or raise the alarm.`,
+                `If you're trying to drop your loop around the head of a mounted rider... well, it's difficult, but possible. Make it as a standard Called Shot to the head.`,
+                `If you hit, you must again make your Strength ability check. If he wins it, he takes 1d4 damage from the impact of the lasso around his neck going taut... but the lasso is still yanked from your hands, doing 1d2 to you, and he can ride off. If you win it, he takes 2d6 damage from the impact, and another 1d3 from hitting the ground, and he's dismounted. If you both make it by an equal amount, he takes 1d4, is dismounted and takes an additional 1d3, and you take 1d2 from the lasso being yanked out of your hands. (If, in this example, you've had time to tie the other end of your lasso to an absolutely stationary object, you target still gets his roll. On a 1, the rope breaks and he takes 1d4 damage. Otherwise, he's automatically dismounted and takes 3d6 damage.`,
+                `Such a maneuver, hard as it is to set up, could easily break someone's neck, killing him instantly.)`,
+                `In the chart above, the lasso was listed as a large weapon because of the amount of space it takes to twirl and wield it.`,
+                `You cannot perform a Parry or Disarm with the lasso, or use it as a melee weapon for Pin—only at range.`,
+                `Lasso requires its own weapon proficiency, which is not related to any other weapon proficiency. Weapon specialization gives you the normal +1 to hit with the lasso and +2 damage on all damaging effects of the lasso (strangulation after the initial hit is still only 1d4, not 1d4 + 2).`,
+                `Cultures with gladiators are not the only ones which comes up with the lasso. Civilizations which depend heavily on herd-beasts often have the lasso as a weapon. In some cultures, the lasso is a favorite weapon of assassins. It's up to the DM to determine if the lasso is a weapon of the player-characters' culture.`,
+                `If it is not, a PC need only train with someone who has proficiency with the weapon (and the PC must have a free weapon proficiency slot) in order to learn how to make and use the lasso.`
+            ]
+        }
     ]
 })
 
@@ -2537,7 +2635,16 @@ WEAPONS.Main_gauche[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        {
+            pages: [104],
+            text: [
+                `**Main-gauche**`,
+                `The main-gauche is a large-bladed dagger with a basket hilt (see the description of Cutlass, above) and large quillions. Though it is a stabbing weapon, it's primarily a defensive weapon wielded in the left-hand in two weapon technique (or two-weapon style specialization).`,
+                `When used by someone with Main-gauche weapon proficiency, the weapon confers a +1 bonus to hit with the Disarm and Parry maneuvers. Because of its cutlass-like basket hilt, the main-gauche, too works like an iron gauntlet if the wielder wishes to punch someone with the hilt rather than slash with the blade.`,
+                `Main-gauche proficiency is related to, but not identical to dagger proficiency. Specialization confers the usual benefits.`
+            ]
+        }
     ]
 })
 
@@ -2556,6 +2663,20 @@ WEAPONS.Net[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
         FIGHTERS_HANDBOOK_ASTRIX_ROF_SPECIAL,
         FIGHTERS_HANDBOOK_CHAIN_LASSO_NET,
+        {
+            pages: [99],
+            text: [
+                `**Net**`,
+                `The gladiators' net consists of a small (8' to 12' diameter) circle net with weights around the edge and a trailing rope used for control. Customarily, it is folded in such a manner that it will twirl open when thrown; the gladiator throws it with one hand, keeping a grip on the trailing rope with the other.`,
+                `If the gladiator makes his roll to hit, he has a Pin maneuver on his target (see the rules for Pin maneuver from the *Combat Rules* chapter). All the notes on Pin apply here, except one: the netted character may not make any sort of attack on the netter until he's won a Strength ability check and thrown the net off.`,
+                `On the round after the gladiator has netted his opponent, he has a choice of what he wants to do.`,
+                `He can hold onto the trailing rope with his off-hand (in order to maintain the Pin), pull out another weapon with his free hand, and attack his pray with that weapon. Eventually, his pray will probably win a Strength ability check and shrug that net off; in the meantime, the gladiator may get several rounds of unreturned attack on him.`,
+                `Alternatively, he can try to improve his hold on the target. By continuing to loop the trailing rope around his victim, he can improve the capture until the victim has no chance of escape. To do this, he must make an ordinary roll to-hi against his victim's AC each round. On each successful hit, the victim loses 4 points of effective Strength for purposes of breaking free of the net. If the victim wins a Strength ability check against his captor before his Strength drops to 0, he breaks free (and his Strength is normal for all other purposes). If he fails, and his Strength is brought down to 0, he is hopelessly enmeshed in the net and cannot get out until his captor lets him.`,
+                `When a gladiator throws a net and misses, it is open and unfolded. That doesn't mean he can no longer fight with it... but it is not as accurate, because it's not folded right. Each subsequent roll to hit with the unfolded net is at a -3 to hit.`,
+                `Weapon proficiency with the net also gives you the ability to fold the net properly, and to make fighting-nets. Weapon Specialization gives you the normal +1 to hit; since it cannot give you a +2 to damage (the net doing no damage), you get that +2 as a bonus to your Strength when you're making Strength ability checks against netted prey.`,
+                `Cultures with gladiatorial combat do export such weapons, and the knowledge of their use (gladiators do demonstrations and exhibitions in foreign capitals all the time). Also, cultures with no knowledge of gladiatorial combat independently develop the net weapon skill; at the DM's discretion, any character with the Savage warrior kit, the Hunter secondary skill or Hunting nonweapon proficiency, or any good rationale could spend a weapon proficiency slot to learn the use of the net.`
+            ]
+        }
     ]
 })
 
@@ -2571,7 +2692,17 @@ WEAPONS.Nunchaku[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        {
+            pages: [102],
+            text: [
+                `**Nunchaku**`,
+                `The nunchaku consists of two lengths of hard wood connected by a short length of chain or rope.`,
+                `The weapon can be used to perform Called Shots, Disarm, Parry, and Strike/Thrust maneuvers.`,
+                `Nunchaku requires its own proficiency, which is not related to any other weapons proficiency (including flails). Weapon specialization confers the usual benefits. Masters of the weapon often have weapon specialization in nunchaku and Style Specialization in Two-Weapons Style, giving them the ability to fight effectively with nunchaku in either hand. The only way to acquire this proficiency is to study with someone who already has the proficiency, and to have a proficiency slot available to spend on nunchaku.`,
+                `Nunchaku are readily available in oriental ports, and such weapons are exported; western collectors are quite enthusiastic about them, even if these collectors usually cannot use them.`
+            ]
+        }
     ]
 })
 
@@ -2590,6 +2721,15 @@ WEAPONS.Naginata[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     descriptions: [
         FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
         FIGHTERS_HANDBOOK_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+        {
+            pages: [101,102],
+            text: [
+                `**Naginata**`,
+                `This is a polearm, a 6' to 8' shaft with a curved, sword-like blade at the end. It's the favored weapon of the female fighters of the orient, but they are not limited to it, nor is it limited to them.`,
+                `Naginata proficiency is related to all other polearms. Weapon specialization confers the usual benefits.`,
+                `Naginatas are readily available in oriental ports, and such weapons are readily exported, if the DM says there is a market for them.`
+            ]
+        }
     ]
 })
 
@@ -2606,7 +2746,16 @@ WEAPONS.Tetsubo[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY
+        FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
+        {
+            pages: [102],
+            text: [
+                `**Tetsubo**`,
+                `The tetsubo is a long walking-staff, its upper end shod with studded iron strips.`,
+                `Its weapon proficiency is related to other polearms; specialization confers the usual benefits.`,
+                `Tetsubos can be had in oriental markets, but non are exported because it is a relatively simple weapon to make.`
+            ]
+        }
     ]
 })
 
@@ -2622,7 +2771,18 @@ WEAPONS.Sai[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        {
+            pages: [102],
+            text: [
+                `**Sai**`,
+                `This is a short, defensive weapon, consisting of a metal bar with a hilt, and oversized upward-curving quillions. When used by someone with proficiency in the weapon, sai confer a +1 to hit bonus when using the Pin and Disarm maneuvers.`,
+                `In the chart at the start of this chapter, the Sai is listed as having two types of damage: P (piercing) and B (bludgeoning). That's not quite right; the normal sai is only a Bludgeoning-damage weapon. However, certain warriors prefer for it to be a sharp stabbing weapon, so the damage may be Piercing instead. A sai may only have one type of damage, not both.`,
+                `Sai requires its own proficiency, which is not related to any other. Weapon specialization confers the usual benefits. To learn the proficiency, one must study with someone who has it, and the character must have a weapon proficiency slot to spend.`,
+                `Many warriors proficient in the sai take Style Specialization in Two-Weapon technique and utilize twin sai in combat.`,
+                `Sai are readily available in oriental ports, and are exported.`
+            ]
+        }
     ]
 })
 
@@ -2640,7 +2800,16 @@ WEAPONS.Shuriken[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [94, 95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        {
+            pages: [102],
+            text: [
+                `**Shuriken**`,
+                `Shuriken, often called throwing stars, are small thrown weapons. They do as much damage as a thrown dagger, and are considerably more concealable. Ornamental shuriken can often be worn as jewelry and not recognized as weapons, and a pocketful of shuriken weigh no more than many other single weapons.`,
+                `However, shuriken require their own weapon proficiency, which is not related to any other. Weapon specialization confers the usual benefits. To learn shuriken proficiency, one must study with someone who has it, and must have a weapon proficiency slot to spend.`,
+                `Shuriken are available in oriental ports, but must occidental collectors don't know how to use them.`
+            ]
+        }
     ]
 })
 
@@ -2686,7 +2855,15 @@ WEAPONS.Stiletto[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [94, 95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        {
+            pages: [104],
+            text: [
+                `**Stiletto**`,
+                `The stiletto is a type of narrow-bladed knife, sharp only at the point. Its most unusual trait is that it confers a +2 (non-magical) bonus to hit against certain armor types: Plate mail (bronze and normal), ring mail, and chain mail. (This is because of its narrow point and blade slip in more readily through any sort of armor that is not solid metal or overlapping plates of metal.)`,
+                `It otherwise behaves like any other knife, and Knife weapon proficiency is exactly the same as Stiletto weapon proficiency: If you know one, you know the other equally well, at no additional cost in proficiency slots.`
+            ]
+        }
     ]
 })
 
@@ -2703,7 +2880,17 @@ WEAPONS.Cutlass[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        {
+            pages: [100],
+            text: [
+                `**Cutlass**`,
+                `The cutlass is a short, heavy sword, sharp along only one edge, with a heavy basket hilt (a protective cup) around the hilt to protect the hand.`,
+                `The cutlass' basket hilt provides the following benefits: it gives the wielder a +1 to hit with Parry maneuver; and it works just the same as an iron gauntlet if the wielder wishes to punch someone with the hilt rather than slash with the blade. (See the Player's Handbook, pages 97-98. Bare-hand attacks do 1d2 damage, plus strength bonus, and the other effects of punching from the chart on page 97; metal gauntlets and other hand-protection makes that 1d3 plus strength bonus and punching effects. Note: An enchanted cutlass, say a *cutlass +1*, does not confer the +1 to hit and damage with these basket-hilt punches... only with blade attacks.)`,
+                `Proficiency with Cutlass is related to proficiency with short sword, dagger/dirk, knife/stiletto, and main-gauche. Weapon Specialization with Cutlass is normal, except that you also get +1 to hit and +2 damage with those basket-hilt punches.`,
+                `In a campaign with pirates, cutlasses are common and readily available in any port community; they are much less common inland.`
+            ]
+        }
     ]
 })
 
@@ -2720,7 +2907,19 @@ WEAPONS.Drusus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        {
+            pages: [96,98],
+            text: [
+                `**Drusus**`,
+                `The Drusus is a Gladius (short sword) of Exceptional quality (as per the types of weapon quality described in the *Character Creation* chapter of this rule book). It looks just like an ordinary gladius; only be testing the sharpness of the blade can someone tell the difference. The Drusus has been forged so that the metal is better-tempered and holds an edge better, and then sharpened until it has a razorlike edge.`,
+                `Because of this, it does +1 damage and confers a non-magical +1 to hit over the normal gladius. (This means the wielding character gets a +1 to hit when using the weapon, but the weapon does not give him the ability to hit monsters which require magical weapons to affect.)`,
+                `The Drusus also has a disadvantage. In order to keep its keen edge, it must be regularly sharpened with a lot more attention and time than an ordinary weapon requires. After any day in which the Drusus has been fought with (even one attack!), someone with either the Armorer or Weaponsmithing nonweapon proficiency, must sharpen the blade for half an hour... or, on the next day, it will act as an ordinary short sword (losing its to-hit and damage bonus) until it is so sharpened.`,
+                `Exposure to high heat (a smith's forge, dragon's breath, lava, etc.) will ruin the temper on a Drusus, turning it into an ordinary short sword and forever destroying its to-hit and damage bonus.`,
+                `The Drusus uses the same weapon proficiency as the short sword. If a character can use a short sword, he can use a Drusus with equal proficiency. Weapon specialization with one does transfer to the other.`,
+                `In cultures where there are gladiators, any weaponsmith with a weaponsmithing ability check of 14 or better can make a Drusus for the cost shown. These weapons are seldom exported, as local demand is high for the few made. A foreign weaponsmith could not make on merely if it were described to him; he would have to study with a local weaponsmith. Having done so, he could make the weapon.`
+            ]
+        }
     ]
 })
 
@@ -2736,7 +2935,17 @@ WEAPONS.Katana[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED
+        FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
+        {
+            pages: [101],
+            text: [
+                `**Katana**`,
+                `The katana is the samurai's sword. It's a medium-length, slightly curved blade with no quillions (only a small, circular guard) and a hilt suitable for one-handed and two-handed use. The blade is sharpened only along one edge and at the tip, but it is sharpened to a razor's edge. It is forged with a special technique known only in the east, where layers of steel and iron are sandwiched, heated, folded, stretched, re-folded, stretched, re-folded, on and on until the blade consists of microscopically thin layers of alternating metals, providing strength, resilience, and the ability to hold a remarkable edge. This is why the katana has the excellent speed and damage listed for the weapon.`,
+                `The katana requires its own weapon proficiency, which is related to the bastard sword/long blades group. Weapon specialization confers the usual benefits.`,
+                `Katanas are very personal; a samurai is dishonored if he loses his, and so very few are lost. This means that it is very hard to get one in the west, other than by taking it from it owner... a difficult task. In the east, a character might be willing to commission one from a weaponsmith, for the listed price... if he gets a good reaction roll from the NPC. (An ordinary weaponsmith could not make one. The blade-making technique requires study in the east and the learning of a specialized individual weaponsmithing nonweapon proficiency.)`,
+                `Also, a hero who does a favor or performs a mission for an eastern lord might be awarded a matched set of katana and wakizashi, if he's very lucky; this would be a high honor.`
+            ]
+        }
     ]
 })
 WEAPONS.Katana.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
@@ -2763,7 +2972,16 @@ WEAPONS.Rapier[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        {
+            pages: [104],
+            text: [
+                `**Rapier**`,
+                `The rapier is a long-bladed, one-handed sword, normally sharp only at the point. It's a thrusting weapon, wielded with lightning-like thrusts and lunges. Swashbucklers often learn Two-Weapon Style Specialization and use rapier with rapier, with main-gauche, with short sword, or with dagger, stiletto, or knife. It's also occasionally used with buckler.`,
+                `Rapier requires its own proficiency, which is related to sabre proficiency—not long sword and its related weapons. Weapon specialization confers the usual benefits.`,
+                `You can have a rapier made with a basket hilt. This adds 2 gp to the cost, +1 lb. to the weight, and confers the normal basket-hilt benefits: +1 to hit with Parry maneuver, and the iron-gauntlet benefit for Punching.`
+            ]
+        }
     ]
 })
 
@@ -2780,7 +2998,16 @@ WEAPONS.Sabre[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY
+        FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
+        {
+            pages: [104],
+            text: [
+                `**Sabre**`,
+                `The sabre is a light slashing weapon. Its practitioners commonly use only sabre, and often take Single-Weapon Style Specialization and Sabre Weapon Specialization. They are very deadly with their blades and may be inordinately proud of the facial scars they accumulate (and deal out).`,
+                `Sabre requires its own proficiency, which is related to rapier proficiency.`,
+                `Sabres, like cutlasses and main-gauches, are made with a basket hilt. This confers the normal basket-hilt benefits: +1 to hit with Parry maneuver, and the iron-gauntlet benefit for Punching.`
+            ]
+        }
     ]
 })
 
@@ -2797,7 +3024,16 @@ WEAPONS.Wakizashi[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     pages: [95],
 
     descriptions: [
-        FIGHTERS_HANDBOOK_DOLLAR_ONE_HANDED_OPTIONALLY_TWO_HANDED
+        FIGHTERS_HANDBOOK_DOLLAR_ONE_HANDED_OPTIONALLY_TWO_HANDED,
+        {
+            pages: [102],
+            text: [
+                `**Wakizashi**`,
+                `The wakizashi is the short-sword companion of the katana. Its blade is forged the same way, and the weapon looks like a shorter version of the katana. It is often part of a matched set with the katana, and is of almost equal importance as the katana to the samurai. Only samurai can wear both katana and wakizashi`,
+                `Wakizashi proficiency is related to short sword. Specialization confers the usual benefits. Many samurai fight with the katana in one hand and wakizashi in the other, in two-weapons technique, and some learn the two-weapon style specialization to further improve their ability with this style.`,
+                `Wakizashis are as hard to come by as katanas.`
+            ]
+        }
     ]
 })
 
