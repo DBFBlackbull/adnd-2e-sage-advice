@@ -24,6 +24,15 @@ class Cost {
     }
 }
 
+class Proficiencies {
+    constructor(single, related, tight, broad) {
+        this.single = single
+        this.related = related
+        this.tight = tight // related / tight / familiar
+        this.broad = broad
+    }
+}
+
 class Ammunition {
     constructor(
         {
@@ -51,13 +60,6 @@ class Ammunition {
         this.pages = pages
         this.descriptions = descriptions
         this.comment = comment
-    }
-}
-
-class ProficiencyGroup {
-    constructor(tightGroup, boardGroup) {
-        this.tightGroup = tightGroup
-        this.boardGroup = boardGroup
     }
 }
 
@@ -91,6 +93,7 @@ class Weapon {
             rate_of_fire,
             range,
             damage,
+            proficiencies,
             pages,
             implementationVariables,
             descriptions,
@@ -108,6 +111,7 @@ class Weapon {
         this.rate_of_fire = rate_of_fire
         this.range = range
         this.damage = damage
+        this.proficiencies = proficiencies
         this.pages = pages
         this.implmentationVariables = implementationVariables
         this.descriptions = descriptions
@@ -186,7 +190,7 @@ WEAPONS.Footmans_pick = {};
 WEAPONS.Gaff_hook_attached = {};
 WEAPONS.Gaff_hook_held = {};
 WEAPONS.Hand_axe = {};
-WEAPONS.Throwing_axe = {};
+//WEAPONS.Throwing_axe = {};
 WEAPONS.Harpoon = {
     grip: {
         [HANDEDNESS.ONE_HANDED.id]: {},
@@ -318,25 +322,88 @@ WEAPONS.Whip = {};
 for (const [key, weapon] of Object.entries(WEAPONS))
     Object.defineProperty(weapon, 'id', {value: key, enumerable: false})
 
-const PROFICIENCIES = {
-    Single: {},
-    Related: {},
-    Tight_Group: {},
-    Broad_Group: {},
-};
+const PROFICIENCIES = {};
+
+/*
+* Tight groups FHB
+*
+* Axes
+* Bows
+* Clubbing Weapons
+* Crossbows
+* Fencing Blades
+* Flails
+* Lances
+* Long Blades
+* Medium Blades
+* Picks
+* Polearms
+* Short Blades
+* Slings
+* Spears
+* Whips
+* */
+
+/*
+* Broad Groups FHB
+*
+* Blades
+* Cleaving/Crushing Weapons
+* Pole Weapons:
+* Small Throwing Weapons
+* */
+
+/*
+* Tight groups C&T
+* Axes
+* Picks
+* Hammers
+* Unrelated-1
+* Bows
+* Maces
+* Clubs
+* Flails
+* Crossbows
+* Daggers & Knives
+* Lances
+* Spear-like polearms
+* Poleaxes
+* Bills
+* Glaives
+* Beaked
+* Unrelated-2
+* Spears
+* Javelins
+* Unrelated-3
+* Ancient
+* Roman
+* Middle Eastern
+* Oriental
+* Short
+* Medium
+* Large
+* Fencing weapons
+* Chain & Rope
+* Martial Arts Weapons
+* Hand match
+* Matchlocks
+* Wheellocks
+* Snaplocks and Flintlocks
+* */
 
 //#region PHB
-const Related_Weapons = [
-    [WEAPONS.Hand_axe.id, WEAPONS.Throwing_axe.id, WEAPONS.Battle_axe.id],
-    [WEAPONS.Short_bow.id, WEAPONS.Long_bow.id, WEAPONS.Composite_short_bow.id, WEAPONS.Composite_long_bow.id],
-    [WEAPONS.Dagger.id, WEAPONS.Knife.id],
-    [WEAPONS.Glaive.id, WEAPONS.Halberd.id, WEAPONS.Bardiche.id, WEAPONS.Voulge.id, WEAPONS.Guisarme.id, WEAPONS.Glaive_guisarme.id, WEAPONS.Guisarme_voulge.id],
-    [WEAPONS.Harpoon.id, WEAPONS.Spear.id, WEAPONS.Trident.id, WEAPONS.Javelin.id],
-    [WEAPONS.Footmans_mace.id, WEAPONS.Horsemans_mace.id, WEAPONS.Morning_star.id, WEAPONS.Footmans_flail.id, WEAPONS.Horsemans_flail.id, WEAPONS.Warhammer.id, WEAPONS.Club.id],
-    [WEAPONS.Military_fork.id, WEAPONS.Ranseur.id, WEAPONS.Spetum.id, WEAPONS.Partisan.id],
-    [WEAPONS.Scimitar.id, WEAPONS.Bastard_sword.id, WEAPONS.Long_sword.id, WEAPONS.Broad_sword.id],
-    [WEAPONS.Sling.id, WEAPONS.Staff_sling.id]
-]
+PROFICIENCIES.PHB = {
+    AXES: ["hand axe", "battle axe"],
+    BOWS: ["short bow", "long bow", "composite bow"],
+    CROSSBOWS: ["heavy and light crossbows"],
+    DAGGERS: ["dagger", "knife"],
+    GLAIVE: ["glaive", "halberd", "bardiche", "voulge", "guisarme", "glaive-guisarme", "glaive-voulge"],
+    SPEARS: ["harpoon", "spear", "triden", "javelin"],
+    MACES: ["footman's mace", "horseman's mace", "morning star", "flail", "hammer", "club"],
+    POLEARMS: ["military fork", "ranseur", "spetum", "partisan"],
+    SWORDS: ["scimitar", "bastard sword", "long sword", "broad sword"],
+    SLINGS: ["sling", "staff sling"],
+}
 
 const PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE = {
     pages: [95],
@@ -359,6 +426,11 @@ const PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE = {
     text: [`⁵ This weapon inflicts double damage when firmly set to receive a charge.`]
 }
 
+const PHB_RELATED_WEAPONS = {
+    pages: [73],
+    text: [`Specific decisions about which weapons are related are left to the DM. Some likely categories are:`]
+}
+
 WEAPONS.Arquebus[SOURCE.PHB.id] = new Weapon({
     name: "Arquebus",
     footnote_marker: "³",
@@ -370,6 +442,7 @@ WEAPONS.Arquebus[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1/3",
     range: new Range(50, 150, 210),
     damage: new Damage("1d10", "1d10"),
+    proficiencies: new Proficiencies("Arquebus"),
     pages: [94, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -403,7 +476,12 @@ WEAPONS.Battle_axe[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 7,
     damage: new Damage("1d8", "1d8"),
-    pages: [94],
+    proficiencies: new Proficiencies("Battle axe", PROFICIENCIES.PHB.AXES),
+    pages: [73, 94],
+
+    descriptions: [
+        PHB_RELATED_WEAPONS
+    ],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -420,6 +498,7 @@ WEAPONS.Blowgun[SOURCE.PHB.id] = new Weapon({
     size: SIZE.L,
     speed: 5,
     rate_of_fire: "2/1",
+    proficiencies: new Proficiencies("Blowgun"),
     pages: [94, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -483,7 +562,8 @@ WEAPONS.Short_bow[SOURCE.PHB.id] = new Weapon({
     size: SIZE.M,
     speed: 7,
     rate_of_fire: "2/1",
-    pages: [94, 95],
+    proficiencies: new Proficiencies("Short bow", PROFICIENCIES.PHB.BOWS),
+    pages: [73, 94, 95],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -493,6 +573,7 @@ WEAPONS.Short_bow[SOURCE.PHB.id] = new Weapon({
     ),
 
     descriptions: [
+        PHB_RELATED_WEAPONS,
         PHB_BOW_DESCRIPTION
     ]
 })
@@ -515,7 +596,8 @@ WEAPONS.Long_bow[SOURCE.PHB.id] = new Weapon({
     size: SIZE.L,
     speed: 8,
     rate_of_fire: "2/1",
-    pages: [94, 95],
+    proficiencies: new Proficiencies("Long bow", PROFICIENCIES.PHB.BOWS),
+    pages: [73, 94, 95],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -525,6 +607,7 @@ WEAPONS.Long_bow[SOURCE.PHB.id] = new Weapon({
     ),
 
     descriptions: [
+        PHB_RELATED_WEAPONS,
         PHB_BOW_DESCRIPTION
     ]
 })
@@ -569,7 +652,8 @@ WEAPONS.Composite_short_bow[SOURCE.PHB.id] = new Weapon({
     size: SIZE.M,
     speed: 6,
     rate_of_fire: "2/1",
-    pages: [94, 95],
+    proficiencies: new Proficiencies("Composite short bow", PROFICIENCIES.PHB.BOWS),
+    pages: [73, 94, 95],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -579,6 +663,7 @@ WEAPONS.Composite_short_bow[SOURCE.PHB.id] = new Weapon({
     ),
 
     descriptions: [
+        PHB_RELATED_WEAPONS,
         PHB_BOW_DESCRIPTION
     ]
 })
@@ -603,7 +688,8 @@ WEAPONS.Composite_long_bow[SOURCE.PHB.id] = new Weapon({
     size: SIZE.L,
     speed: 7,
     rate_of_fire: "2/1",
-    pages: [94, 95],
+    proficiencies: new Proficiencies("Composite long bow", PROFICIENCIES.PHB.BOWS),
+    pages: [73, 94, 95],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -613,6 +699,7 @@ WEAPONS.Composite_long_bow[SOURCE.PHB.id] = new Weapon({
     ),
 
     descriptions: [
+        PHB_RELATED_WEAPONS,
         PHB_BOW_DESCRIPTION
     ]
 })
@@ -625,7 +712,6 @@ WEAPONS.Composite_long_bow.ammunition.Flight_arrow[SOURCE.PHB.id] = new Ammuniti
     type: [WEAPON_TYPE.P],
     range: new Range(60, 120, 210),
     damage: new Damage("1d6", "1d6",),
-
     pages: [94, 95],
 
     descriptions: [
@@ -658,7 +744,12 @@ WEAPONS.Club[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     range: new Range(10, 20, 30),
     damage: new Damage("1d6", "1d3"),
-    pages: [94, 95],
+    proficiencies: new Proficiencies("Club", PROFICIENCIES.PHB.MACES),
+    pages: [73, 94, 95],
+
+    descriptions: [
+        PHB_RELATED_WEAPONS
+    ],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -677,6 +768,7 @@ WEAPONS.Hand_crossbow[SOURCE.PHB.id] = new Weapon({
     size: SIZE.S,
     speed: 5,
     rate_of_fire: "1",
+    proficiencies: new Proficiencies("Hand crossbow"),
     pages: [94, 95],
 
     descriptions: [
@@ -711,9 +803,11 @@ WEAPONS.Light_crossbow[SOURCE.PHB.id] = new Weapon({
     size: SIZE.M,
     speed: 7,
     rate_of_fire: "1",
-    pages: [94, 95],
+    proficiencies: new Proficiencies("Light crossbow", PROFICIENCIES.PHB.CROSSBOWS),
+    pages: [73, 94, 95],
 
     descriptions: [
+        PHB_RELATED_WEAPONS,
         PHB_CROSSBOW_DESCRIPTION
     ],
 
@@ -744,9 +838,11 @@ WEAPONS.Heavy_crossbow[SOURCE.PHB.id] = new Weapon({
     size: SIZE.M,
     speed: 10,
     rate_of_fire: "1/2",
-    pages: [94, 95],
+    pages: [73, 94, 95],
+    proficiencies: new Proficiencies("Heavy crossbow", PROFICIENCIES.PHB.CROSSBOWS),
 
     descriptions: [
+        PHB_RELATED_WEAPONS,
         PHB_CROSSBOW_DESCRIPTION
     ],
 
@@ -779,7 +875,10 @@ WEAPONS.Dagger[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "2/1",
     range: new Range(10, 20, 30),
     damage: new Damage("1d4", "1d3"),
-    pages: [94, 95],
+    proficiencies: new Proficiencies("Dagger/Dirk", PROFICIENCIES.PHB.DAGGERS),
+    pages: [73, 94, 95],
+
+    descriptions: [PHB_RELATED_WEAPONS],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -800,6 +899,7 @@ WEAPONS.Dart[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "3/1",
     range: new Range(10, 20, 40),
     damage: new Damage("1d3", "1d2"),
+    proficiencies: new Proficiencies("Dart"),
     pages: [94, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -818,7 +918,12 @@ WEAPONS.Footmans_flail[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 7,
     damage: new Damage("1d6+1", "2d4"),
-    pages: [94],
+    proficiencies: new Proficiencies("Footman's flail", PROFICIENCIES.PHB.MACES),
+    pages: [73, 94],
+
+    descriptions: [
+        PHB_RELATED_WEAPONS
+    ],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -836,7 +941,12 @@ WEAPONS.Footmans_mace[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 7,
     damage: new Damage("1d6+1", "1d46"),
-    pages: [94],
+    proficiencies: new Proficiencies("Footman's mace", PROFICIENCIES.PHB.MACES),
+    pages: [73, 94],
+
+    descriptions: [
+        PHB_RELATED_WEAPONS
+    ],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -854,6 +964,7 @@ WEAPONS.Footmans_pick[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 7,
     damage: new Damage("1d6+1", "2d4"),
+    proficiencies: new Proficiencies("Footman's pick"),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -865,7 +976,7 @@ WEAPONS.Footmans_pick[SOURCE.PHB.id] = new Weapon({
 })
 
 WEAPONS.Hand_axe[SOURCE.PHB.id] = new Weapon({
-    name: "Hand axe",
+    name: "Hand or throwing axe",
     cost: new Cost(1, CURRENCY.GP),
     weight_lbs: 5,
     size: SIZE.M,
@@ -874,28 +985,12 @@ WEAPONS.Hand_axe[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     range: new Range(10, 20, 30),
     damage: new Damage("1d6", "1d4"),
-    pages: [94],
+    proficiencies: new Proficiencies("Hand axe", PROFICIENCIES.PHB.AXES),
+    pages: [73, 94],
 
-    implementationVariables: new ImplementationVariables(
-        {
-            attackInMelee: true,
-            strength: STRENGTH_BONUS.FULL,
-            handedness: [HANDEDNESS.BY_SIZE]
-        }
-    ),
-})
-
-WEAPONS.Throwing_axe[SOURCE.PHB.id] = new Weapon({
-    name: "Throwing axe",
-    cost: new Cost(1, CURRENCY.GP),
-    weight_lbs: 5,
-    size: SIZE.M,
-    type: [WEAPON_TYPE.S],
-    speed: 4,
-    rate_of_fire: "1",
-    range: new Range(10, 20, 30),
-    damage: new Damage("1d6", "1d4"),
-    pages: [94],
+    descriptions: [
+        PHB_RELATED_WEAPONS
+    ],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -916,7 +1011,12 @@ WEAPONS.Harpoon[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     range: new Range(10, 20, 30),
     damage: new Damage("2d4", "2d6"),
-    pages: [94, 95],
+    proficiencies: new Proficiencies("Harpoon", PROFICIENCIES.PHB.SPEARS),
+    pages: [73, 94, 95],
+
+    descriptions: [
+        PHB_RELATED_WEAPONS
+    ],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -935,7 +1035,12 @@ WEAPONS.Horsemans_flail[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 6,
     damage: new Damage("1d4+1", "1d4+1"),
-    pages: [94],
+    proficiencies: new Proficiencies("Horseman's flail", PROFICIENCIES.PHB.MACES),
+    pages: [73, 94],
+
+    descriptions: [
+        PHB_RELATED_WEAPONS
+    ],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -953,7 +1058,12 @@ WEAPONS.Horsemans_mace[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 6,
     damage: new Damage("1d6", "1d4"),
-    pages: [94],
+    proficiencies: new Proficiencies("Horseman's mace", PROFICIENCIES.PHB.MACES),
+    pages: [73, 94],
+
+    descriptions: [
+        PHB_RELATED_WEAPONS
+    ],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -971,7 +1081,12 @@ WEAPONS.Horsemans_pick[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 5,
     damage: new Damage("1d4+1", "1d4"),
-    pages: [94],
+    proficiencies: new Proficiencies("Horseman's pick", PROFICIENCIES.PHB.MACES),
+    pages: [73, 94],
+
+    descriptions: [
+        PHB_RELATED_WEAPONS
+    ],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -991,7 +1106,12 @@ WEAPONS.Javelin[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     range: new Range(20, 40, 60,),
     damage: new Damage("1d6", "1d6"),
-    pages: [94, 95],
+    proficiencies: new Proficiencies("Javelin", PROFICIENCIES.PHB.SPEARS),
+    pages: [73, 94, 95],
+
+    descriptions: [
+        PHB_RELATED_WEAPONS
+    ],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1012,7 +1132,12 @@ WEAPONS.Knife[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "2/1",
     range: new Range(10, 20, 30,),
     damage: new Damage("1d3", "1d2"),
-    pages: [94, 95],
+    proficiencies: new Proficiencies("Knife", PROFICIENCIES.PHB.DAGGERS),
+    pages: [73, 94, 95],
+
+    descriptions: [
+        PHB_RELATED_WEAPONS
+    ],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1040,6 +1165,7 @@ WEAPONS.Heavy_horse_lance[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 8,
     damage: new Damage("1d8+1", "3d6"),
+    proficiencies: new Proficiencies("Heavy horse lance"),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1065,6 +1191,7 @@ WEAPONS.Light_horse_lance[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 6,
     damage: new Damage("1d6", "1d8"),
+    proficiencies: new Proficiencies("Light horse lance"),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1090,6 +1217,7 @@ WEAPONS.Jousting_lance[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 10,
     damage: new Damage("1d3-1", "1d2-1"),
+    proficiencies: new Proficiencies("Jousting lance"),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1115,6 +1243,7 @@ WEAPONS.Medium_horse_lance[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 7,
     damage: new Damage("1d6+1", "2d6"),
+    proficiencies: new Proficiencies("Medium horse lance"),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1139,6 +1268,7 @@ WEAPONS.Mancatcher[SOURCE.PHB.id] = new Weapon({
     type: [],
     speed: 7,
     damage: new Damage(null, null),
+    proficiencies: new Proficiencies("Mancatcher"),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1167,7 +1297,10 @@ WEAPONS.Morning_star[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
     speed: 7,
     damage: new Damage("2d4", "1d6+1"),
-    pages: [94],
+    proficiencies: new Proficiencies("Morning star", PROFICIENCIES.PHB.MACES),
+    pages: [73, 94],
+
+    descriptions: [PHB_RELATED_WEAPONS],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1187,6 +1320,7 @@ WEAPONS.Awl_pike[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 13,
     damage: new Damage("1d6", "1d12"),
+    proficiencies: new Proficiencies("Awl pike"),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1214,7 +1348,8 @@ WEAPONS.Bardiche[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 9,
     damage: new Damage("2d4", "2d6"),
-    pages: [94],
+    proficiencies: new Proficiencies("Bardiche", PROFICIENCIES.PHB.GLAIVE),
+    pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1224,6 +1359,7 @@ WEAPONS.Bardiche[SOURCE.PHB.id] = new Weapon({
     ),
 
     descriptions: [
+        PHB_RELATED_WEAPONS,
         {
             pages: [98],
             text: [`**Bardiche:** One of the simplest of polearms, the bardiche is an elongated battle axe. A large curving axe-head is mounted on the end of a shaft 5 to 8 feet long. It probably grew out of common peasant tools and was popular with them. One relative disadvantage is that the bardiche required more space to wield than a pike or a spear.`]
@@ -1240,6 +1376,7 @@ WEAPONS.Bec_de_corbin[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
     speed: 9,
     damage: new Damage("1d8", "1d6"),
+    proficiencies: new Proficiencies("Bec de corbin"),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1266,6 +1403,7 @@ WEAPONS.Bill_guisarme[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 10,
     damage: new Damage("2d4", "1d10"),
+    proficiencies: new Proficiencies("Bill-guisarme"),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1292,6 +1430,7 @@ WEAPONS.Fauchard[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 8,
     damage: new Damage("1d6", "1d8"),
+    proficiencies: new Proficiencies("Fauchard"),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1318,6 +1457,7 @@ WEAPONS.Fauchard_fork[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 8,
     damage: new Damage("1d8", "1d10"),
+    proficiencies: new Proficiencies("Fauchard-fork"),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1345,7 +1485,8 @@ WEAPONS.Glaive[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 8,
     damage: new Damage("1d6", "1d10"),
-    pages: [94],
+    proficiencies: new Proficiencies("Glaive", PROFICIENCIES.PHB.GLAIVE),
+    pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1356,6 +1497,7 @@ WEAPONS.Glaive[SOURCE.PHB.id] = new Weapon({
 
     descriptions: [
         PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE,
+        PHB_RELATED_WEAPONS,
         {
             pages: [98],
             text: [`**Glaive:** One of the most basic polearms, the glaive is a sin gle-edged blade mounted on an 8 to 10-foot-long shaft. While not the most efficient weapon, it is relatively easy to make and use. Normally the blade turns outward to increase the cutting area until it almost resembles a cleaver or axe.`]
@@ -1373,7 +1515,8 @@ WEAPONS.Glaive_guisarme[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 9,
     damage: new Damage("2d4", "2d6"),
-    pages: [94],
+    proficiencies: new Proficiencies("Glaive-guisarme", PROFICIENCIES.PHB.GLAIVE),
+    pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1384,6 +1527,7 @@ WEAPONS.Glaive_guisarme[SOURCE.PHB.id] = new Weapon({
 
     descriptions: [
         PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE,
+        PHB_RELATED_WEAPONS,
         {
             pages: [98],
             text: [`**Glaive-guisarme:** Another combination weapon, this one takes the basic glaive and adds a spike or hook to the back of the blade. In theory, this increases the usefulness of the weapon although its actual application is somewhat questionable.`]
@@ -1400,7 +1544,8 @@ WEAPONS.Guisarme[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 8,
     damage: new Damage("2d4", "1d8"),
-    pages: [94],
+    proficiencies: new Proficiencies("Guisarme", PROFICIENCIES.PHB.GLAIVE),
+    pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1410,6 +1555,7 @@ WEAPONS.Guisarme[SOURCE.PHB.id] = new Weapon({
     ),
 
     descriptions: [
+        PHB_RELATED_WEAPONS,
         {
             pages: [98],
             text: [`**Guisarme:** Thought to have derived from a pruning hook, this is an elaborately curved heavy blade. While convenient and handy, it is not very effective.`]
@@ -1426,7 +1572,8 @@ WEAPONS.Guisarme_voulge[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 10,
     damage: new Damage("2d4", "2d4"),
-    pages: [94],
+    proficiencies: new Proficiencies("Guisarme-voulge", PROFICIENCIES.PHB.GLAIVE),
+    pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1436,6 +1583,7 @@ WEAPONS.Guisarme_voulge[SOURCE.PHB.id] = new Weapon({
     ),
 
     descriptions: [
+        PHB_RELATED_WEAPONS,
         {
             pages: [98, 99],
             text: [`**Guisarme-voulge:** This weapon has a modified axe blade mounted on an 8-foot-long shaft. The end of the blade tapers to a point for thrusting and a back spike is fitted for punching through armor. Sometimes this spike is replaced by a sharpened hook for dismounting riders.`]
@@ -1452,7 +1600,8 @@ WEAPONS.Halberd[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 9,
     damage: new Damage("1d10", "2d6"),
-    pages: [94],
+    proficiencies: new Proficiencies("Halberd", PROFICIENCIES.PHB.GLAIVE),
+    pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1462,6 +1611,7 @@ WEAPONS.Halberd[SOURCE.PHB.id] = new Weapon({
     ),
 
     descriptions: [
+        PHB_RELATED_WEAPONS,
         {
             pages: [99],
             text: [`**Halberd:** After the awl pike and the bill, this was one of the most popular weapons of the Middle Ages. Fixed on a shaft 5 to 8 feet long is a large axe blade, angled for maximum impact. The end of the blade tapers to a long spear point or awl pike. On the back is a hook for attacking armor or dismounting riders. Originally intended to defeat cavalry, it is not tremendously successful in that role since it lacks the reach of the pike and needs considerable room to swing. It found new life against blocks of pikemen. Should the advance of the main attack stall, halberdiers issue out of the formation and attack the flanks of the enemy. The pikemen with their overlong weapons are nearly defenseless in such close combat.`]
@@ -1478,6 +1628,7 @@ WEAPONS.Hook_fauchard[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 9,
     damage: new Damage("1d4", "1d4"),
+    proficiencies: new Proficiencies("Hook fauchard"),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1505,6 +1656,7 @@ WEAPONS.Lucern_hammer[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
     speed: 9,
     damage: new Damage("2d4", "1d6"),
+    proficiencies: new Proficiencies("Lucern hammer"),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1533,7 +1685,8 @@ WEAPONS.Military_fork[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 7,
     damage: new Damage("1d8", "2d4"),
-    pages: [94],
+    proficiencies: new Proficiencies("Military fork", PROFICIENCIES.PHB.POLEARMS),
+    pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1544,6 +1697,7 @@ WEAPONS.Military_fork[SOURCE.PHB.id] = new Weapon({
 
     descriptions: [
         PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE,
+        PHB_RELATED_WEAPONS,
         {
             pages: [99],
             text: [`**Military fork:** This is one of the simplest modifications of a peasant’s tool since it is little more than a pitchfork fixed to a longer shaft. With tines strengthened and straightened, the military fork serves well. The need for cutting and cleaving eventually often results in combining the fork with other weapons.`]
@@ -1561,7 +1715,8 @@ WEAPONS.Partisan[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 9,
     damage: new Damage("1d6", "1d6+1"),
-    pages: [94],
+    proficiencies: new Proficiencies("Partisan", PROFICIENCIES.PHB.POLEARMS),
+    pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1572,6 +1727,7 @@ WEAPONS.Partisan[SOURCE.PHB.id] = new Weapon({
 
     descriptions: [
         PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+        PHB_RELATED_WEAPONS,
         {
             pages: [99],
             text: [`**Partisan:** Shorter than the awl pike but longer than the spear, the partisan is a broad spear-head mounted on an 8-foot-long shaft. Two smaller blades project out from the base of the main blade, just to increase damage and trap weapons. Since it is a thrusting weapon, it can be used in closely packed formations.`]
@@ -1589,7 +1745,8 @@ WEAPONS.Ranseur[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 8,
     damage: new Damage("2d4", "2d4"),
-    pages: [94],
+    proficiencies: new Proficiencies("Ranseur", PROFICIENCIES.PHB.POLEARMS),
+    pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1600,6 +1757,7 @@ WEAPONS.Ranseur[SOURCE.PHB.id] = new Weapon({
 
     descriptions: [
         PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+        PHB_RELATED_WEAPONS,
         {
             pages: [99],
             text: [`**Ranseur:** Very much like the partisan, the ranseur differs in that the main blade is thinner and the projecting blades extended more like tines of a fork. These can trap a weapon and sometimes punch through armor.`]
@@ -1617,7 +1775,8 @@ WEAPONS.Spetum[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 8,
     damage: new Damage("1d6+1", "2d6"),
-    pages: [94],
+    proficiencies: new Proficiencies("Spetum", PROFICIENCIES.PHB.POLEARMS),
+    pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1628,6 +1787,7 @@ WEAPONS.Spetum[SOURCE.PHB.id] = new Weapon({
 
     descriptions: [
         PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+        PHB_RELATED_WEAPONS,
         {
             pages: [99],
             text: [`**Spetum:** The spetum is a modification of the normal spear. The shaft increases to 8 to 10 feet and side blades are added. Some have blades that angle back, increasing the damage when pulling the weapon out of a wound. These blades can also trap and block weapons or catch and hold an opponent.`]
@@ -1644,7 +1804,8 @@ WEAPONS.Voulge[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 10,
     damage: new Damage("2d4", "2d4"),
-    pages: [94],
+    proficiencies: new Proficiencies("Voulge", PROFICIENCIES.PHB.GLAIVE),
+    pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1654,6 +1815,7 @@ WEAPONS.Voulge[SOURCE.PHB.id] = new Weapon({
     ),
 
     descriptions: [
+        PHB_RELATED_WEAPONS,
         {
             pages: [99],
             text: [`**Voulge:** The voulge, like the bardiche, is a variation on the axe and the cleaver. The voulge is little more than a cleaver on the end of a long (7 to 8-foot) pole. It is a popular weapon, easy to make and simple to learn. It is also called the Lochaber axe.`]
@@ -1668,6 +1830,7 @@ WEAPONS.Quarterstaff[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 4,
     damage: new Damage("1d6", "1d6"),
+    proficiencies: new Proficiencies("Quarterstaff"),
     pages: [95],
 
     implementationVariables: new ImplementationVariables(
@@ -1685,6 +1848,7 @@ WEAPONS.Scourge[SOURCE.PHB.id] = new Weapon({
     size: SIZE.S,
     speed: 5,
     damage: new Damage("1d4", "1d2"),
+    proficiencies: new Proficiencies("Scourge"),
     pages: [95],
 
     implementationVariables: new ImplementationVariables(
@@ -1710,6 +1874,7 @@ WEAPONS.Sickle[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 4,
     damage: new Damage("1d4+1", "1d4"),
+    proficiencies: new Proficiencies("Sickle"),
     pages: [95],
 
     implementationVariables: new ImplementationVariables(
@@ -1729,7 +1894,8 @@ WEAPONS.Sling[SOURCE.PHB.id] = new Weapon({
     size: SIZE.S,
     speed: 6,
     rate_of_fire: "1",
-    pages: [95],
+    proficiencies: new Proficiencies("Sling", PROFICIENCIES.PHB.SLINGS),
+    pages: [73, 95],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1738,7 +1904,7 @@ WEAPONS.Sling[SOURCE.PHB.id] = new Weapon({
         }
     ),
 
-    descriptions: []
+    descriptions: [PHB_RELATED_WEAPONS]
 })
 
 WEAPONS.Sling.ammunition.Bullet[SOURCE.PHB.id] = new Ammunition({
@@ -1771,7 +1937,8 @@ WEAPONS.Spear[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     range: new Range(10, 20, 30),
     damage: new Damage("1d6", "1d8"),
-    pages: [95],
+    proficiencies: new Proficiencies("Spear", PROFICIENCIES.PHB.SPEARS),
+    pages: [73, 95],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1781,7 +1948,7 @@ WEAPONS.Spear[SOURCE.PHB.id] = new Weapon({
         }
     ),
 
-    descriptions: []
+    descriptions: [PHB_RELATED_WEAPONS]
 })
 
 WEAPONS.Staff_sling[SOURCE.PHB.id] = new Weapon({
@@ -1791,7 +1958,8 @@ WEAPONS.Staff_sling[SOURCE.PHB.id] = new Weapon({
     size: SIZE.M,
     speed: 11,
     rate_of_fire: "2/1",
-    pages: [95],
+    proficiencies: new Proficiencies("Staff sling", PROFICIENCIES.PHB.SLINGS),
+    pages: [73, 95],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1800,7 +1968,7 @@ WEAPONS.Staff_sling[SOURCE.PHB.id] = new Weapon({
         }
     ),
 
-    descriptions: [],
+    descriptions: [PHB_RELATED_WEAPONS],
 })
 
 WEAPONS.Staff_sling.ammunition.Bullet[SOURCE.PHB.id] = new Ammunition({
@@ -1834,7 +2002,8 @@ WEAPONS.Bastard_sword[SOURCE.PHB.id] = new Weapon({
     weight_lbs: 10,
     size: SIZE.M,
     type: [WEAPON_TYPE.S],
-    pages: [95],
+    proficiencies: new Proficiencies("Bastard sword", PROFICIENCIES.PHB.SWORDS),
+    pages: [73, 95],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1844,6 +2013,7 @@ WEAPONS.Bastard_sword[SOURCE.PHB.id] = new Weapon({
     ),
 
     descriptions: [
+        PHB_RELATED_WEAPONS,
         {
             pages: [99],
             text: [`**Sword, Bastard:** This sword is similar to a long sword in size and weight, but has a longer hilt. It can be used one- or two-handed. Use the speed factor and damage appropriate to the grip. If it is used two-handed, your character cannot employ a shield. Proficiency allows both uses.`]
@@ -1873,7 +2043,10 @@ WEAPONS.Broad_sword[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 5,
     damage: new Damage("2d4", "1d6+1"),
-    pages: [95],
+    proficiencies: new Proficiencies("Broad sword", PROFICIENCIES.PHB.SWORDS),
+    pages: [73, 95],
+
+    descriptions: [PHB_RELATED_WEAPONS],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1892,6 +2065,7 @@ WEAPONS.Khopesh[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 8,
     damage: new Damage("2d4", "1d6"),
+    proficiencies: new Proficiencies("Khopesh"),
     pages: [95],
 
     descriptions: [
@@ -1918,7 +2092,10 @@ WEAPONS.Long_sword[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 5,
     damage: new Damage("1d8", "1d12"),
-    pages: [95],
+    proficiencies: new Proficiencies("Long sword", PROFICIENCIES.PHB.SWORDS),
+    pages: [73, 95],
+
+    descriptions: [PHB_RELATED_WEAPONS],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1937,7 +2114,10 @@ WEAPONS.Scimitar[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 5,
     damage: new Damage("1d8", "1d8"),
-    pages: [95],
+    proficiencies: new Proficiencies("Scimitar", PROFICIENCIES.PHB.SWORDS),
+    pages: [73, 95],
+
+    descriptions: [PHB_RELATED_WEAPONS],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -1956,6 +2136,7 @@ WEAPONS.Short_sword[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 3,
     damage: new Damage("1d6", "1d8"),
+    proficiencies: new Proficiencies("Short sword"),
     pages: [95],
 
     implementationVariables: new ImplementationVariables(
@@ -1975,6 +2156,7 @@ WEAPONS.Two_handed_sword[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 10,
     damage: new Damage("1d10", "3d6"),
+    proficiencies: new Proficiencies("Two-handed sword"),
     pages: [95],
 
     implementationVariables: new ImplementationVariables(
@@ -1993,7 +2175,10 @@ WEAPONS.Trident[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 7,
     damage: new Damage("1d6+1", "3d4"),
-    pages: [95],
+    proficiencies: new Proficiencies("Trident", PROFICIENCIES.PHB.SPEARS),
+    pages: [73, 95],
+
+    descriptions: [PHB_RELATED_WEAPONS],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -2013,7 +2198,10 @@ WEAPONS.Warhammer[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     range: new Range(10, 20, 30),
     damage: new Damage("1d4+1", "1d4"),
-    pages: [95],
+    proficiencies: new Proficiencies("Warhammer", PROFICIENCIES.PHB.MACES),
+    pages: [73, 95],
+
+    descriptions: [PHB_RELATED_WEAPONS],
 
     implementationVariables: new ImplementationVariables(
         {
@@ -2030,6 +2218,7 @@ WEAPONS.Whip[SOURCE.PHB.id] = new Weapon({
     size: SIZE.M,
     speed: 8,
     damage: new Damage("1d2", "1"),
+    proficiencies: new Proficiencies("Whip"),
     pages: [95],
 
     implementationVariables: new ImplementationVariables(
@@ -2040,9 +2229,22 @@ WEAPONS.Whip[SOURCE.PHB.id] = new Weapon({
     )
 })
 
+for (const [key, weapon] of Object.entries(WEAPONS)) {
+    let bookWeapon = weapon[SOURCE.PHB.id];
+    if (!bookWeapon) {
+        continue
+    }
+
+    Object.defineProperty(bookWeapon, 'proficiencies', {value: { single: weapon.name }, enumerable: false})
+}
+
 //#endregion PHB
 
 //#region Fighter's Handbook
+PROFICIENCIES.FIGHTERS = {
+
+}
+
 const FIGHTERS_HANDBOOK_CHAIN_LASSO_NET = {
     pages: [94],
     text: [`The chain, lasso and net are included in the table above because their use, in combat, is much like a missile weapon. They have ranges related to the length of the chain, the lasso or the net's trailing rope.`]
@@ -2103,6 +2305,7 @@ WEAPONS.Harpoon[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     size: SIZE.L,
     type: [WEAPON_TYPE.P],
     speed: 7,
+    proficiencies: new Proficiencies(),
     pages: [93],
 
     descriptions: [
