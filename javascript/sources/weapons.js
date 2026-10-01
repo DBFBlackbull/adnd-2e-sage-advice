@@ -113,7 +113,7 @@ class Weapon {
         this.damage = damage
         this.proficiencies = proficiencies
         this.pages = pages
-        this.implmentationVariables = implementationVariables
+        // this.implmentationVariables = implementationVariables
         this.descriptions = descriptions
         this.comment = comment
     }
@@ -2228,15 +2228,6 @@ WEAPONS.Whip[SOURCE.PHB.id] = new Weapon({
         }
     )
 })
-
-for (const [key, weapon] of Object.entries(WEAPONS)) {
-    let bookWeapon = weapon[SOURCE.PHB.id];
-    if (!bookWeapon) {
-        continue
-    }
-
-    Object.defineProperty(bookWeapon, 'proficiencies', {value: { single: weapon.name }, enumerable: false})
-}
 
 //#endregion PHB
 

@@ -19,6 +19,7 @@ body
             th(colspan="3" class="center") Range
             th(colspan="2" class="center") Damage
             th(rowspan="2") Knockdown
+            th(colspan=3 class="center") Weapon Proficiency
             th(rowspan="2") Source
         tr
             th (lbs.)
@@ -29,6 +30,9 @@ body
             th L
             th Sm-Med
             th Large
+            th Single
+            th Related / Familiar / Tight Group
+            th Broad Group
         - let color
         each book in bookPriority
             - color = colorFlip(color)

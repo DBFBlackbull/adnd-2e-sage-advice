@@ -75,6 +75,34 @@
         return damage.large
     }
 
+    function getSingleProf(proficiencies) {
+        if (!proficiencies?.single) {
+            return '—';
+        }
+
+        return proficiencies.single
+    }
+
+    function getTightGroupProf(proficiencies) {
+        if (proficiencies?.related) {
+            return proficiencies.related.join(", ");
+        }
+
+        if (proficiencies?.tight) {
+            return proficiencies.tight;
+        }
+
+        return '—';
+    }
+
+    function getBroadGroupProf(proficiencies) {
+        if (!proficiencies?.broad) {
+            return '—';
+        }
+
+        return proficiencies.broad
+    }
+
     function getSource(pages, book) {
         if (!pages) {
             console.log("pages is missing")
@@ -110,6 +138,9 @@ mixin weaponRow(obj, book, color, indents)
         td !{getDamageSmallMedium(obj.damage)}
         td !{getDamageLarge(obj.damage)}
         td !{getProp(obj.knockdown)}
+        td !{getSingleProf(obj.proficiencies)}
+        td !{getTightGroupProf(obj.proficiencies)}
+        td !{getBroadGroupProf(obj.proficiencies)}
         td !{getSource(obj.pages, book)}
 
 mixin descriptionEntries(descriptions, book, usedEntries)
