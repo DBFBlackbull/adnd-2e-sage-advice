@@ -89,7 +89,7 @@
         }
 
         if (proficiencies?.tight) {
-            return proficiencies.tight;
+            return proficiencies.tight.map(t => t.name).join(", ");
         }
 
         return '—';
@@ -100,7 +100,7 @@
             return '—';
         }
 
-        return proficiencies.broad
+        return proficiencies.broad.map(b => b.name).join(", ");
     }
 
     function getSource(pages, book) {
@@ -123,6 +123,7 @@ mixin weaponRow(obj, book, color, indents)
     - let indent = '&emsp;'.repeat(indents)
     - let backgroundColor = `background: ${color};`
     tr(style=backgroundColor)
+        - if (!obj.name) { console.log(`${book.id} ${obj.id} is missing name`) }
         - let footnoteMarker = obj.footnote_marker ? ` ${obj.footnote_marker}` : ""
         td !{indent + obj.name + footnoteMarker}
         td !{getCost(obj.cost)}

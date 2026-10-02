@@ -25,7 +25,7 @@ class Cost {
 }
 
 class Proficiencies {
-    constructor(single, related, tight, broad) {
+    constructor({single, related, tight, broad}) {
         this.single = single
         this.related = related
         this.tight = tight // related / tight / familiar
@@ -325,35 +325,6 @@ for (const [key, weapon] of Object.entries(WEAPONS))
 const PROFICIENCIES = {};
 
 /*
-* Tight groups FHB
-*
-* Axes
-* Bows
-* Clubbing Weapons
-* Crossbows
-* Fencing Blades
-* Flails
-* Lances
-* Long Blades
-* Medium Blades
-* Picks
-* Polearms
-* Short Blades
-* Slings
-* Spears
-* Whips
-* */
-
-/*
-* Broad Groups FHB
-*
-* Blades
-* Cleaving/Crushing Weapons
-* Pole Weapons:
-* Small Throwing Weapons
-* */
-
-/*
 * Tight groups C&T
 * Axes
 * Picks
@@ -397,13 +368,14 @@ PROFICIENCIES.PHB = {
     BOWS: ["short bow", "long bow", "composite bow"],
     CROSSBOWS: ["heavy and light crossbows"],
     DAGGERS: ["dagger", "knife"],
-    GLAIVE: ["glaive", "halberd", "bardiche", "voulge", "guisarme", "glaive-guisarme", "glaive-voulge"],
-    SPEARS: ["harpoon", "spear", "triden", "javelin"],
+    GLAIVES: ["glaive", "halberd", "bardiche", "voulge", "guisarme", "glaive-guisarme", "glaive-voulge"],
+    SPEARS: ["harpoon", "spear", "trident", "javelin"],
     MACES: ["footman's mace", "horseman's mace", "morning star", "flail", "hammer", "club"],
     POLEARMS: ["military fork", "ranseur", "spetum", "partisan"],
     SWORDS: ["scimitar", "bastard sword", "long sword", "broad sword"],
     SLINGS: ["sling", "staff sling"],
 }
+
 
 const PHB_1_DOUBLE_DAMAGE_AGAINST_L_CHARGE = {
     pages: [95],
@@ -442,7 +414,7 @@ WEAPONS.Arquebus[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1/3",
     range: new Range(50, 150, 210),
     damage: new Damage("1d10", "1d10"),
-    proficiencies: new Proficiencies("Arquebus"),
+    proficiencies: new Proficiencies({single: "Arquebus"}),
     pages: [94, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -476,7 +448,7 @@ WEAPONS.Battle_axe[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 7,
     damage: new Damage("1d8", "1d8"),
-    proficiencies: new Proficiencies("Battle axe", PROFICIENCIES.PHB.AXES),
+    proficiencies: new Proficiencies({single: "Battle axe", related: PROFICIENCIES.PHB.AXES}),
     pages: [73, 94],
 
     descriptions: [
@@ -498,7 +470,7 @@ WEAPONS.Blowgun[SOURCE.PHB.id] = new Weapon({
     size: SIZE.L,
     speed: 5,
     rate_of_fire: "2/1",
-    proficiencies: new Proficiencies("Blowgun"),
+    proficiencies: new Proficiencies({single: "Blowgun"}),
     pages: [94, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -562,7 +534,7 @@ WEAPONS.Short_bow[SOURCE.PHB.id] = new Weapon({
     size: SIZE.M,
     speed: 7,
     rate_of_fire: "2/1",
-    proficiencies: new Proficiencies("Short bow", PROFICIENCIES.PHB.BOWS),
+    proficiencies: new Proficiencies({single: "Short bow", related: PROFICIENCIES.PHB.BOWS}),
     pages: [73, 94, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -596,7 +568,7 @@ WEAPONS.Long_bow[SOURCE.PHB.id] = new Weapon({
     size: SIZE.L,
     speed: 8,
     rate_of_fire: "2/1",
-    proficiencies: new Proficiencies("Long bow", PROFICIENCIES.PHB.BOWS),
+    proficiencies: new Proficiencies({single: "Long bow", related: PROFICIENCIES.PHB.BOWS}),
     pages: [73, 94, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -652,7 +624,7 @@ WEAPONS.Composite_short_bow[SOURCE.PHB.id] = new Weapon({
     size: SIZE.M,
     speed: 6,
     rate_of_fire: "2/1",
-    proficiencies: new Proficiencies("Composite short bow", PROFICIENCIES.PHB.BOWS),
+    proficiencies: new Proficiencies({single: "Composite short bow", related: PROFICIENCIES.PHB.BOWS}),
     pages: [73, 94, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -688,7 +660,7 @@ WEAPONS.Composite_long_bow[SOURCE.PHB.id] = new Weapon({
     size: SIZE.L,
     speed: 7,
     rate_of_fire: "2/1",
-    proficiencies: new Proficiencies("Composite long bow", PROFICIENCIES.PHB.BOWS),
+    proficiencies: new Proficiencies({single: "Composite long bow", related: PROFICIENCIES.PHB.BOWS}),
     pages: [73, 94, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -744,7 +716,7 @@ WEAPONS.Club[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     range: new Range(10, 20, 30),
     damage: new Damage("1d6", "1d3"),
-    proficiencies: new Proficiencies("Club", PROFICIENCIES.PHB.MACES),
+    proficiencies: new Proficiencies({single: "Club", related: PROFICIENCIES.PHB.MACES}),
     pages: [73, 94, 95],
 
     descriptions: [
@@ -768,7 +740,7 @@ WEAPONS.Hand_crossbow[SOURCE.PHB.id] = new Weapon({
     size: SIZE.S,
     speed: 5,
     rate_of_fire: "1",
-    proficiencies: new Proficiencies("Hand crossbow"),
+    proficiencies: new Proficiencies({single: "Hand crossbow"}),
     pages: [94, 95],
 
     descriptions: [
@@ -803,7 +775,7 @@ WEAPONS.Light_crossbow[SOURCE.PHB.id] = new Weapon({
     size: SIZE.M,
     speed: 7,
     rate_of_fire: "1",
-    proficiencies: new Proficiencies("Light crossbow", PROFICIENCIES.PHB.CROSSBOWS),
+    proficiencies: new Proficiencies({single: "Light crossbow", related: PROFICIENCIES.PHB.CROSSBOWS}),
     pages: [73, 94, 95],
 
     descriptions: [
@@ -839,7 +811,7 @@ WEAPONS.Heavy_crossbow[SOURCE.PHB.id] = new Weapon({
     speed: 10,
     rate_of_fire: "1/2",
     pages: [73, 94, 95],
-    proficiencies: new Proficiencies("Heavy crossbow", PROFICIENCIES.PHB.CROSSBOWS),
+    proficiencies: new Proficiencies({single: "Heavy crossbow", related: PROFICIENCIES.PHB.CROSSBOWS}),
 
     descriptions: [
         PHB_RELATED_WEAPONS,
@@ -875,7 +847,7 @@ WEAPONS.Dagger[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "2/1",
     range: new Range(10, 20, 30),
     damage: new Damage("1d4", "1d3"),
-    proficiencies: new Proficiencies("Dagger/Dirk", PROFICIENCIES.PHB.DAGGERS),
+    proficiencies: new Proficiencies({single: "Dagger/Dirk", related: PROFICIENCIES.PHB.DAGGERS}),
     pages: [73, 94, 95],
 
     descriptions: [PHB_RELATED_WEAPONS],
@@ -899,7 +871,7 @@ WEAPONS.Dart[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "3/1",
     range: new Range(10, 20, 40),
     damage: new Damage("1d3", "1d2"),
-    proficiencies: new Proficiencies("Dart"),
+    proficiencies: new Proficiencies({single: "Dart"}),
     pages: [94, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -918,7 +890,7 @@ WEAPONS.Footmans_flail[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 7,
     damage: new Damage("1d6+1", "2d4"),
-    proficiencies: new Proficiencies("Footman's flail", PROFICIENCIES.PHB.MACES),
+    proficiencies: new Proficiencies({single: "Footman's flail", related: PROFICIENCIES.PHB.MACES}),
     pages: [73, 94],
 
     descriptions: [
@@ -941,7 +913,7 @@ WEAPONS.Footmans_mace[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 7,
     damage: new Damage("1d6+1", "1d46"),
-    proficiencies: new Proficiencies("Footman's mace", PROFICIENCIES.PHB.MACES),
+    proficiencies: new Proficiencies({single: "Footman's mace", related: PROFICIENCIES.PHB.MACES}),
     pages: [73, 94],
 
     descriptions: [
@@ -964,7 +936,7 @@ WEAPONS.Footmans_pick[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 7,
     damage: new Damage("1d6+1", "2d4"),
-    proficiencies: new Proficiencies("Footman's pick"),
+    proficiencies: new Proficiencies({single: "Footman's pick"}),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -985,7 +957,7 @@ WEAPONS.Hand_axe[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     range: new Range(10, 20, 30),
     damage: new Damage("1d6", "1d4"),
-    proficiencies: new Proficiencies("Hand axe", PROFICIENCIES.PHB.AXES),
+    proficiencies: new Proficiencies({single: "Hand axe", related: PROFICIENCIES.PHB.AXES}),
     pages: [73, 94],
 
     descriptions: [
@@ -1011,7 +983,7 @@ WEAPONS.Harpoon[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     range: new Range(10, 20, 30),
     damage: new Damage("2d4", "2d6"),
-    proficiencies: new Proficiencies("Harpoon", PROFICIENCIES.PHB.SPEARS),
+    proficiencies: new Proficiencies({single: "Harpoon", related: PROFICIENCIES.PHB.SPEARS}),
     pages: [73, 94, 95],
 
     descriptions: [
@@ -1035,7 +1007,7 @@ WEAPONS.Horsemans_flail[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 6,
     damage: new Damage("1d4+1", "1d4+1"),
-    proficiencies: new Proficiencies("Horseman's flail", PROFICIENCIES.PHB.MACES),
+    proficiencies: new Proficiencies({single: "Horseman's flail", related: PROFICIENCIES.PHB.MACES}),
     pages: [73, 94],
 
     descriptions: [
@@ -1058,7 +1030,7 @@ WEAPONS.Horsemans_mace[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 6,
     damage: new Damage("1d6", "1d4"),
-    proficiencies: new Proficiencies("Horseman's mace", PROFICIENCIES.PHB.MACES),
+    proficiencies: new Proficiencies({single: "Horseman's mace", related: PROFICIENCIES.PHB.MACES}),
     pages: [73, 94],
 
     descriptions: [
@@ -1081,7 +1053,7 @@ WEAPONS.Horsemans_pick[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 5,
     damage: new Damage("1d4+1", "1d4"),
-    proficiencies: new Proficiencies("Horseman's pick", PROFICIENCIES.PHB.MACES),
+    proficiencies: new Proficiencies({single: "Horseman's pick", related: PROFICIENCIES.PHB.MACES}),
     pages: [73, 94],
 
     descriptions: [
@@ -1106,7 +1078,7 @@ WEAPONS.Javelin[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     range: new Range(20, 40, 60,),
     damage: new Damage("1d6", "1d6"),
-    proficiencies: new Proficiencies("Javelin", PROFICIENCIES.PHB.SPEARS),
+    proficiencies: new Proficiencies({single: "Javelin", related: PROFICIENCIES.PHB.SPEARS}),
     pages: [73, 94, 95],
 
     descriptions: [
@@ -1132,7 +1104,7 @@ WEAPONS.Knife[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "2/1",
     range: new Range(10, 20, 30,),
     damage: new Damage("1d3", "1d2"),
-    proficiencies: new Proficiencies("Knife", PROFICIENCIES.PHB.DAGGERS),
+    proficiencies: new Proficiencies({single: "Knife", related: PROFICIENCIES.PHB.DAGGERS}),
     pages: [73, 94, 95],
 
     descriptions: [
@@ -1165,7 +1137,7 @@ WEAPONS.Heavy_horse_lance[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 8,
     damage: new Damage("1d8+1", "3d6"),
-    proficiencies: new Proficiencies("Heavy horse lance"),
+    proficiencies: new Proficiencies({single: "Heavy horse lance"}),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1191,7 +1163,7 @@ WEAPONS.Light_horse_lance[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 6,
     damage: new Damage("1d6", "1d8"),
-    proficiencies: new Proficiencies("Light horse lance"),
+    proficiencies: new Proficiencies({single: "Light horse lance"}),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1217,7 +1189,7 @@ WEAPONS.Jousting_lance[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 10,
     damage: new Damage("1d3-1", "1d2-1"),
-    proficiencies: new Proficiencies("Jousting lance"),
+    proficiencies: new Proficiencies({single: "Jousting lance"}),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1243,7 +1215,7 @@ WEAPONS.Medium_horse_lance[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 7,
     damage: new Damage("1d6+1", "2d6"),
-    proficiencies: new Proficiencies("Medium horse lance"),
+    proficiencies: new Proficiencies({single: "Medium horse lance"}),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1268,7 +1240,7 @@ WEAPONS.Mancatcher[SOURCE.PHB.id] = new Weapon({
     type: [],
     speed: 7,
     damage: new Damage(null, null),
-    proficiencies: new Proficiencies("Mancatcher"),
+    proficiencies: new Proficiencies({single: "Mancatcher"}),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1297,7 +1269,7 @@ WEAPONS.Morning_star[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
     speed: 7,
     damage: new Damage("2d4", "1d6+1"),
-    proficiencies: new Proficiencies("Morning star", PROFICIENCIES.PHB.MACES),
+    proficiencies: new Proficiencies({single: "Morning star", related: PROFICIENCIES.PHB.MACES}),
     pages: [73, 94],
 
     descriptions: [PHB_RELATED_WEAPONS],
@@ -1320,7 +1292,7 @@ WEAPONS.Awl_pike[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 13,
     damage: new Damage("1d6", "1d12"),
-    proficiencies: new Proficiencies("Awl pike"),
+    proficiencies: new Proficiencies({single: "Awl pike"}),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1348,7 +1320,7 @@ WEAPONS.Bardiche[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 9,
     damage: new Damage("2d4", "2d6"),
-    proficiencies: new Proficiencies("Bardiche", PROFICIENCIES.PHB.GLAIVE),
+    proficiencies: new Proficiencies({single: "Bardiche", related: PROFICIENCIES.PHB.GLAIVES}),
     pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
@@ -1376,7 +1348,7 @@ WEAPONS.Bec_de_corbin[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
     speed: 9,
     damage: new Damage("1d8", "1d6"),
-    proficiencies: new Proficiencies("Bec de corbin"),
+    proficiencies: new Proficiencies({single: "Bec de corbin"}),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1403,7 +1375,7 @@ WEAPONS.Bill_guisarme[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 10,
     damage: new Damage("2d4", "1d10"),
-    proficiencies: new Proficiencies("Bill-guisarme"),
+    proficiencies: new Proficiencies({single: "Bill-guisarme"}),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1430,7 +1402,7 @@ WEAPONS.Fauchard[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 8,
     damage: new Damage("1d6", "1d8"),
-    proficiencies: new Proficiencies("Fauchard"),
+    proficiencies: new Proficiencies({single: "Fauchard"}),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1457,7 +1429,7 @@ WEAPONS.Fauchard_fork[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 8,
     damage: new Damage("1d8", "1d10"),
-    proficiencies: new Proficiencies("Fauchard-fork"),
+    proficiencies: new Proficiencies({single: "Fauchard-fork"}),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1485,7 +1457,7 @@ WEAPONS.Glaive[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 8,
     damage: new Damage("1d6", "1d10"),
-    proficiencies: new Proficiencies("Glaive", PROFICIENCIES.PHB.GLAIVE),
+    proficiencies: new Proficiencies({single: "Glaive", related: PROFICIENCIES.PHB.GLAIVES}),
     pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
@@ -1515,7 +1487,7 @@ WEAPONS.Glaive_guisarme[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 9,
     damage: new Damage("2d4", "2d6"),
-    proficiencies: new Proficiencies("Glaive-guisarme", PROFICIENCIES.PHB.GLAIVE),
+    proficiencies: new Proficiencies({single: "Glaive-guisarme", related: PROFICIENCIES.PHB.GLAIVES}),
     pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
@@ -1544,7 +1516,7 @@ WEAPONS.Guisarme[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 8,
     damage: new Damage("2d4", "1d8"),
-    proficiencies: new Proficiencies("Guisarme", PROFICIENCIES.PHB.GLAIVE),
+    proficiencies: new Proficiencies({single: "Guisarme", related: PROFICIENCIES.PHB.GLAIVES}),
     pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
@@ -1572,7 +1544,7 @@ WEAPONS.Guisarme_voulge[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 10,
     damage: new Damage("2d4", "2d4"),
-    proficiencies: new Proficiencies("Guisarme-voulge", PROFICIENCIES.PHB.GLAIVE),
+    proficiencies: new Proficiencies({single: "Guisarme-voulge", related: PROFICIENCIES.PHB.GLAIVES}),
     pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
@@ -1600,7 +1572,7 @@ WEAPONS.Halberd[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 9,
     damage: new Damage("1d10", "2d6"),
-    proficiencies: new Proficiencies("Halberd", PROFICIENCIES.PHB.GLAIVE),
+    proficiencies: new Proficiencies({single: "Halberd", related: PROFICIENCIES.PHB.GLAIVES}),
     pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
@@ -1628,7 +1600,7 @@ WEAPONS.Hook_fauchard[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 9,
     damage: new Damage("1d4", "1d4"),
-    proficiencies: new Proficiencies("Hook fauchard"),
+    proficiencies: new Proficiencies({single: "Hook fauchard"}),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1656,7 +1628,7 @@ WEAPONS.Lucern_hammer[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
     speed: 9,
     damage: new Damage("2d4", "1d6"),
-    proficiencies: new Proficiencies("Lucern hammer"),
+    proficiencies: new Proficiencies({single: "Lucern hammer"}),
     pages: [94],
 
     implementationVariables: new ImplementationVariables(
@@ -1685,7 +1657,7 @@ WEAPONS.Military_fork[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 7,
     damage: new Damage("1d8", "2d4"),
-    proficiencies: new Proficiencies("Military fork", PROFICIENCIES.PHB.POLEARMS),
+    proficiencies: new Proficiencies({single: "Military fork", related: PROFICIENCIES.PHB.POLEARMS}),
     pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
@@ -1715,7 +1687,7 @@ WEAPONS.Partisan[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 9,
     damage: new Damage("1d6", "1d6+1"),
-    proficiencies: new Proficiencies("Partisan", PROFICIENCIES.PHB.POLEARMS),
+    proficiencies: new Proficiencies({single: "Partisan", related: PROFICIENCIES.PHB.POLEARMS}),
     pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
@@ -1745,7 +1717,7 @@ WEAPONS.Ranseur[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 8,
     damage: new Damage("2d4", "2d4"),
-    proficiencies: new Proficiencies("Ranseur", PROFICIENCIES.PHB.POLEARMS),
+    proficiencies: new Proficiencies({single: "Ranseur", related: PROFICIENCIES.PHB.POLEARMS}),
     pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
@@ -1775,7 +1747,7 @@ WEAPONS.Spetum[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 8,
     damage: new Damage("1d6+1", "2d6"),
-    proficiencies: new Proficiencies("Spetum", PROFICIENCIES.PHB.POLEARMS),
+    proficiencies: new Proficiencies({single: "Spetum", related: PROFICIENCIES.PHB.POLEARMS}),
     pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
@@ -1804,7 +1776,7 @@ WEAPONS.Voulge[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 10,
     damage: new Damage("2d4", "2d4"),
-    proficiencies: new Proficiencies("Voulge", PROFICIENCIES.PHB.GLAIVE),
+    proficiencies: new Proficiencies({single: "Voulge", related: PROFICIENCIES.PHB.GLAIVES}),
     pages: [73, 94],
 
     implementationVariables: new ImplementationVariables(
@@ -1830,7 +1802,7 @@ WEAPONS.Quarterstaff[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 4,
     damage: new Damage("1d6", "1d6"),
-    proficiencies: new Proficiencies("Quarterstaff"),
+    proficiencies: new Proficiencies({single: "Quarterstaff"}),
     pages: [95],
 
     implementationVariables: new ImplementationVariables(
@@ -1848,7 +1820,7 @@ WEAPONS.Scourge[SOURCE.PHB.id] = new Weapon({
     size: SIZE.S,
     speed: 5,
     damage: new Damage("1d4", "1d2"),
-    proficiencies: new Proficiencies("Scourge"),
+    proficiencies: new Proficiencies({single: "Scourge"}),
     pages: [95],
 
     implementationVariables: new ImplementationVariables(
@@ -1874,7 +1846,7 @@ WEAPONS.Sickle[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 4,
     damage: new Damage("1d4+1", "1d4"),
-    proficiencies: new Proficiencies("Sickle"),
+    proficiencies: new Proficiencies({single: "Sickle"}),
     pages: [95],
 
     implementationVariables: new ImplementationVariables(
@@ -1894,7 +1866,7 @@ WEAPONS.Sling[SOURCE.PHB.id] = new Weapon({
     size: SIZE.S,
     speed: 6,
     rate_of_fire: "1",
-    proficiencies: new Proficiencies("Sling", PROFICIENCIES.PHB.SLINGS),
+    proficiencies: new Proficiencies({single: "Sling", related: PROFICIENCIES.PHB.SLINGS}),
     pages: [73, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -1937,7 +1909,7 @@ WEAPONS.Spear[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     range: new Range(10, 20, 30),
     damage: new Damage("1d6", "1d8"),
-    proficiencies: new Proficiencies("Spear", PROFICIENCIES.PHB.SPEARS),
+    proficiencies: new Proficiencies({single: "Spear", related: PROFICIENCIES.PHB.SPEARS}),
     pages: [73, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -1958,7 +1930,7 @@ WEAPONS.Staff_sling[SOURCE.PHB.id] = new Weapon({
     size: SIZE.M,
     speed: 11,
     rate_of_fire: "2/1",
-    proficiencies: new Proficiencies("Staff sling", PROFICIENCIES.PHB.SLINGS),
+    proficiencies: new Proficiencies({single: "Staff sling", related: PROFICIENCIES.PHB.SLINGS}),
     pages: [73, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -2002,7 +1974,7 @@ WEAPONS.Bastard_sword[SOURCE.PHB.id] = new Weapon({
     weight_lbs: 10,
     size: SIZE.M,
     type: [WEAPON_TYPE.S],
-    proficiencies: new Proficiencies("Bastard sword", PROFICIENCIES.PHB.SWORDS),
+    proficiencies: new Proficiencies({single: "Bastard sword", related: PROFICIENCIES.PHB.SWORDS}),
     pages: [73, 95],
 
     implementationVariables: new ImplementationVariables(
@@ -2043,7 +2015,7 @@ WEAPONS.Broad_sword[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 5,
     damage: new Damage("2d4", "1d6+1"),
-    proficiencies: new Proficiencies("Broad sword", PROFICIENCIES.PHB.SWORDS),
+    proficiencies: new Proficiencies({single: "Broad sword", related: PROFICIENCIES.PHB.SWORDS}),
     pages: [73, 95],
 
     descriptions: [PHB_RELATED_WEAPONS],
@@ -2065,7 +2037,7 @@ WEAPONS.Khopesh[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 8,
     damage: new Damage("2d4", "1d6"),
-    proficiencies: new Proficiencies("Khopesh"),
+    proficiencies: new Proficiencies({single: "Khopesh"}),
     pages: [95],
 
     descriptions: [
@@ -2092,7 +2064,7 @@ WEAPONS.Long_sword[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 5,
     damage: new Damage("1d8", "1d12"),
-    proficiencies: new Proficiencies("Long sword", PROFICIENCIES.PHB.SWORDS),
+    proficiencies: new Proficiencies({single: "Long sword", related: PROFICIENCIES.PHB.SWORDS}),
     pages: [73, 95],
 
     descriptions: [PHB_RELATED_WEAPONS],
@@ -2114,7 +2086,7 @@ WEAPONS.Scimitar[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 5,
     damage: new Damage("1d8", "1d8"),
-    proficiencies: new Proficiencies("Scimitar", PROFICIENCIES.PHB.SWORDS),
+    proficiencies: new Proficiencies({single: "Scimitar", related: PROFICIENCIES.PHB.SWORDS}),
     pages: [73, 95],
 
     descriptions: [PHB_RELATED_WEAPONS],
@@ -2136,7 +2108,7 @@ WEAPONS.Short_sword[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 3,
     damage: new Damage("1d6", "1d8"),
-    proficiencies: new Proficiencies("Short sword"),
+    proficiencies: new Proficiencies({single: "Short sword"}),
     pages: [95],
 
     implementationVariables: new ImplementationVariables(
@@ -2156,7 +2128,7 @@ WEAPONS.Two_handed_sword[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 10,
     damage: new Damage("1d10", "3d6"),
-    proficiencies: new Proficiencies("Two-handed sword"),
+    proficiencies: new Proficiencies({single: "Two-handed sword"}),
     pages: [95],
 
     implementationVariables: new ImplementationVariables(
@@ -2175,7 +2147,7 @@ WEAPONS.Trident[SOURCE.PHB.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 7,
     damage: new Damage("1d6+1", "3d4"),
-    proficiencies: new Proficiencies("Trident", PROFICIENCIES.PHB.SPEARS),
+    proficiencies: new Proficiencies({single: "Trident", related: PROFICIENCIES.PHB.SPEARS}),
     pages: [73, 95],
 
     descriptions: [PHB_RELATED_WEAPONS],
@@ -2198,7 +2170,7 @@ WEAPONS.Warhammer[SOURCE.PHB.id] = new Weapon({
     rate_of_fire: "1",
     range: new Range(10, 20, 30),
     damage: new Damage("1d4+1", "1d4"),
-    proficiencies: new Proficiencies("Warhammer", PROFICIENCIES.PHB.MACES),
+    proficiencies: new Proficiencies({single: "Warhammer", related: PROFICIENCIES.PHB.MACES}),
     pages: [73, 95],
 
     descriptions: [PHB_RELATED_WEAPONS],
@@ -2218,7 +2190,7 @@ WEAPONS.Whip[SOURCE.PHB.id] = new Weapon({
     size: SIZE.M,
     speed: 8,
     damage: new Damage("1d2", "1"),
-    proficiencies: new Proficiencies("Whip"),
+    proficiencies: new Proficiencies({single: "Whip"}),
     pages: [95],
 
     implementationVariables: new ImplementationVariables(
@@ -2233,7 +2205,86 @@ WEAPONS.Whip[SOURCE.PHB.id] = new Weapon({
 
 //#region Fighter's Handbook
 PROFICIENCIES.FIGHTERS = {
-
+    TIGHT: {
+        AXES: {
+            name: "Axes",
+            weapons: ["Battle axe", "Hand/throwing axe"]
+        },
+        BOWS: {
+            name: "Bows",
+            weapons: ["Composite long bow", "Composite short bow", "Daikyu", "Long bow", "Short bow"]
+        },
+        CLUBBING: {
+            name: "Clubbing Weapons",
+            weapons: ["Belaying pin", "Club", "Footman's mace", "Horseman's mace", "Morning Star", "Warhammer"],
+        },
+        CROSSBOWS: {
+            name: "Crossbows",
+            weapon: ["Hand crossbow", "Heavy crossbow", "Light crossbow"]
+        },
+        FENCING_BLADES: {
+            name: "Fencing Blades",
+            weapons: ["Dagger/Drik", "Knife/Stiletto", "Main-gauche", "Rapier", "Sabre"]
+        },
+        FLAILS: {
+            name: "Flails",
+            weapons: ["Footman's flail", "Horseman's flail"]
+        },
+        LANCES: {
+            name: "Lances",
+            weapons: ["Heavy horse lance", "Light horse lance", "Jousting lance", "Medium horse lance"]
+        },
+        LONG_BLADES: {
+            name: "Long Blades",
+            weapons: ["Bastard sword", "Katana", "Long sword", "Scimitar", "Two-handed sword"]
+        },
+        MEDIUM_BLADES: {
+            name: "Medium Blades",
+            weapons: ["Cutlass", "Khopesh", "Wakizashi"]
+        },
+        PICKS: {
+            name: "Picks",
+            weapons: ["Footman's pick", "Horseman's pick"]
+        },
+        POLEARMS: {
+            name: "Polearms",
+            weapons: ["Awl pike", "Bardiche", "Bar de corbin", "Bill-guisarme", "Fauchard", "Fauchard-fork", "Glaive", "Glaive-guisarme", "Guisarme", "Guisarme-voulge", "Halberd", "Hook fauchard", "Lucern hammer", "Mancatcher", "Military fork", "Naginata", "Partisan", "Ranseur", "Spetum", "Tetsubo", "Voulge"]
+        },
+        SHORT_BLADES: {
+            name: "Short Blades",
+            weapons: ["Dagger/Dirk", "Knife/Stiletto", "Main-gauche", "Short sword/Drusus"]
+        },
+        SLINGS: {
+            name: "Slings",
+            weapons: ["Sling", "Staff Sling"]
+        },
+        SPEARS: {
+            name: "Spears",
+            weapons: ["Harpoon", "Javelin", "Long Spear", "Spear", "Trident"]
+        },
+        WHIPS: {
+            name: "Whips",
+            weapons: ["Scourge", "Whip"]
+        }
+    },
+    BROAD: {
+        BLADES: {
+            name: "Blades",
+            weapons: ["Bastard sword", "Cutlass", "Dagger/Dirk", "Katana", "Khopesh", "Knife/Stiletto", "Long sword", "Main-gauche", "Rapier", "Sabre", "Scimitar", "Short sword/Drusus", "Two-handed sword", "Wakizashi"]
+        },
+        CLEAVING_CRUSHING: {
+            name: "Cleaving/Crushing Weapons",
+            weapons: ["Battle axe", "Belaying Pin", "Club", "Footman's mace", "Footman's pick", "Hand/throwing axe", "Horseman's mace", "Horseman's pick", "Morning star", "Warhammer"]
+        },
+        POLE_WEAPONS: {
+            name: "Pole Weapons",
+            weapons: ["Awl pike", "Bardiche", "Bar de corbin", "Bill-guisarme", "Fauchard-fork", "Glaive", "Glaive-guisarme", "Guisarme", "Guisarme-voulge", "Halberd", "Harpoon", "Hook fauchard", "Javelin", "Lucern hammer", "Long Spear", "Mancatcher", "Military fork", "Naginata", "Partisan", "Ranseur", "Spear", "Spetum", "Tetsubo", "Trident", "Voulge"]
+        },
+        SMALL_THROWING: {
+            name: "Small Throwing Weapons",
+            weapons: ["Dagger/Dirk", "Dart", "Hand/throwing axe", "Knife/stiletto", "Shuriken"]
+        }
+    }
 }
 
 const FIGHTERS_HANDBOOK_CHAIN_LASSO_NET = {
@@ -2296,8 +2347,12 @@ WEAPONS.Harpoon[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     size: SIZE.L,
     type: [WEAPON_TYPE.P],
     speed: 7,
-    proficiencies: new Proficiencies(),
-    pages: [93],
+    proficiencies: new Proficiencies({
+        single: "Harpoon",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.SPEARS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59,60,93],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -2322,7 +2377,12 @@ WEAPONS.Javelin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     size: SIZE.M,
     type: [WEAPON_TYPE.P],
     speed: 4,
-    pages: [93],
+    proficiencies: new Proficiencies({
+        single: "Javelin",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.SPEARS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59,60,93],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -2349,7 +2409,12 @@ WEAPONS.Spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     size: SIZE.M,
     type: [WEAPON_TYPE.P],
     speed: 6,
-    pages: [93],
+    proficiencies: new Proficiencies({
+        single: "Spear",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.SPEARS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59,60,93],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -2379,7 +2444,12 @@ WEAPONS.Long_spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     size: SIZE.L,
     type: [WEAPON_TYPE.P],
     speed: 8,
-    pages: [93,95],
+    proficiencies: new Proficiencies({
+        single: "Long Spear",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.SPEARS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59,60,93,95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -2409,7 +2479,12 @@ WEAPONS.Trident[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     size: SIZE.L,
     type: [WEAPON_TYPE.P],
     speed: 7,
-    pages: [93],
+    proficiencies: new Proficiencies({
+        single: "Trident",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.SPEARS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59,60,93],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -2456,7 +2531,12 @@ WEAPONS.Belaying_pin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 4,
     damage: new Damage("1d3", "1d3"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Belaying pin",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.CLUBBING],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.CLEAVING_CRUSHING]
+    }),
+    pages: [59,60,95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -2481,7 +2561,10 @@ WEAPONS.Bo_stick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 4,
     damage: new Damage("1d6", "1d4"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Quarterstaff/Bo stick",
+    }),
+    pages: [60, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
@@ -2508,7 +2591,10 @@ WEAPONS.Bolas[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     rate_of_fire: "1",
     range: new Range(3, 6, 9),
     damage: new Damage("1d3", "1d2"),
-    pages: [94, 95],
+    proficiencies: new Proficiencies({
+        single: "Bolas",
+    }),
+    pages: [60, 94, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -2537,9 +2623,16 @@ WEAPONS.Cestus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 2,
     damage: new Damage("1d4", "1d3"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "No Proficiency",
+    }),
+    pages: [60, 95],
 
     descriptions: [
+        {
+            pages: [60],
+            text: [`**Special Note:** The Cestus doesn't require any Proficiency. It enhances punching damage, and everyone knows how to punch.`]
+        },
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
         {
             pages: [96],
@@ -2566,7 +2659,10 @@ WEAPONS.Chain[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     rate_of_fire: "*",
     range: new Range("1/2", 1, 2),
     damage: new Damage("1d4+1", "1d4"),
-    pages: [94, 95],
+    proficiencies: new Proficiencies({
+        single: "Chain",
+    }),
+    pages: [60, 94, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
@@ -2586,6 +2682,16 @@ WEAPONS.Chain[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     ]
 })
 
+WEAPONS.Dagger[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Dagger/Dirk",
+    proficiencies: new Proficiencies({
+        single: "Dagger/Dirk",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.FENCING_BLADES, PROFICIENCIES.FIGHTERS.TIGHT.SHORT_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES, PROFICIENCIES.FIGHTERS.BROAD.SMALL_THROWING]
+    }),
+    pages: [59]
+})
+
 WEAPONS.Dagger_bone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Dagger Bone",
     footnote_marker: "!",
@@ -2597,7 +2703,12 @@ WEAPONS.Dagger_bone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     rate_of_fire: "2/1",
     range: new Range(1, 2, 3),
     damage: new Damage("1d2", "1d2"),
-    pages: [94, 95],
+    proficiencies: new Proficiencies({
+        single: "Dagger/Dirk",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.FENCING_BLADES, PROFICIENCIES.FIGHTERS.TIGHT.SHORT_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES, PROFICIENCIES.FIGHTERS.BROAD.SMALL_THROWING]
+    }),
+    pages: [59, 60, 94, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -2616,7 +2727,12 @@ WEAPONS.Dagger_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     rate_of_fire: "2/1",
     range: new Range(1, 2, 3),
     damage: new Damage("1d3", "1d2"),
-    pages: [94, 95],
+    proficiencies: new Proficiencies({
+        single: "Dagger/Dirk",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.FENCING_BLADES, PROFICIENCIES.FIGHTERS.TIGHT.SHORT_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES, PROFICIENCIES.FIGHTERS.BROAD.SMALL_THROWING]
+    }),
+    pages: [59, 60, 94, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -2632,7 +2748,11 @@ WEAPONS.Daikyu[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     size: SIZE.L,
     speed: 7,
     rate_of_fire: "2/1",
-    pages: [94, 95],
+    proficiencies: new Proficiencies({
+        single: "Daikyu",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.BOWS],
+    }),
+    pages: [59, 94, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
@@ -2684,7 +2804,10 @@ WEAPONS.Gaff_hook_attached[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 2,
     damage: new Damage("1d4", "1d3"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Gaff/hook",
+    }),
+    pages: [60, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -2701,7 +2824,10 @@ WEAPONS.Gaff_hook_held[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 2,
     damage: new Damage("1d4", "1d3"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Gaff/hook",
+    }),
+    pages: [60, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -2717,7 +2843,12 @@ WEAPONS.Javelin_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     size: SIZE.M,
     type: [WEAPON_TYPE.P],
     speed: 4,
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Javelin",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.SPEARS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60,95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -2737,6 +2868,16 @@ WEAPONS.Javelin_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id
     pages: [95],
 }
 
+WEAPONS.Knife[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Knife",
+    proficiencies: new Proficiencies({
+        single: "Knife/Stiletto",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.FENCING_BLADES, PROFICIENCIES.FIGHTERS.TIGHT.SHORT_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES, PROFICIENCIES.FIGHTERS.BROAD.SMALL_THROWING]
+    }),
+    pages: [59,60]
+})
+
 WEAPONS.Knife_bone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Knife Bone",
     footnote_marker: "!",
@@ -2748,7 +2889,12 @@ WEAPONS.Knife_bone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     rate_of_fire: "2/1",
     range: new Range(1, 2, 3),
     damage: new Damage("1d2", "1d2"),
-    pages: [94, 95],
+    proficiencies: new Proficiencies({
+        single: "Knife/Stiletto",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.FENCING_BLADES, PROFICIENCIES.FIGHTERS.TIGHT.SHORT_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES, PROFICIENCIES.FIGHTERS.BROAD.SMALL_THROWING]
+    }),
+    pages: [59,60,94, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -2767,7 +2913,12 @@ WEAPONS.Knife_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     rate_of_fire: "2/1",
     range: new Range(1, 2, 3),
     damage: new Damage("1d2", "1d2"),
-    pages: [94, 95],
+    proficiencies: new Proficiencies({
+        single: "Knife/Stiletto",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.FENCING_BLADES, PROFICIENCIES.FIGHTERS.TIGHT.SHORT_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES, PROFICIENCIES.FIGHTERS.BROAD.SMALL_THROWING]
+    }),
+    pages: [59,60,94, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -2784,7 +2935,10 @@ WEAPONS.Lasso[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     speed: 10,
     rate_of_fire: "*",
     range: new Range(1, 2, 3),
-    pages: [94, 95],
+    proficiencies: new Proficiencies({
+        single: "Lasso",
+    }),
+    pages: [60, 94, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
@@ -2826,7 +2980,12 @@ WEAPONS.Main_gauche[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
     speed: 2,
     damage: new Damage("1d4", "1d3"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Main-gauche",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.FENCING_BLADES, PROFICIENCIES.FIGHTERS.TIGHT.SHORT_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES]
+    }),
+    pages: [59, 60, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -2851,7 +3010,10 @@ WEAPONS.Net[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     speed: 10,
     rate_of_fire: "*",
     range: new Range(1, 2, 3),
-    pages: [94, 95],
+    proficiencies: new Proficiencies({
+        single: "Net",
+    }),
+    pages: [60, 94, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
@@ -2883,7 +3045,10 @@ WEAPONS.Nunchaku[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 3,
     damage: new Damage("1d6", "1d6"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Nunchaku",
+    }),
+    pages: [60, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -2910,7 +3075,12 @@ WEAPONS.Naginata[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 7,
     damage: new Damage("1d8", "1d10"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Naginata",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
@@ -2937,6 +3107,11 @@ WEAPONS.Tetsubo[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.B],
     speed: 7,
     damage: new Damage("1d8", "1d8"),
+    proficiencies: new Proficiencies({
+        single: "Tetsubo",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
     pages: [95],
 
     descriptions: [
@@ -2962,7 +3137,10 @@ WEAPONS.Sai[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
     speed: 2,
     damage: new Damage("1d4", "1d2"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Sai",
+    }),
+    pages: [60, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -2991,7 +3169,11 @@ WEAPONS.Shuriken[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     rate_of_fire: "2/1",
     range: new Range(2, 4, 6),
     damage: new Damage("1d4", "1d4"),
-    pages: [94, 95],
+    proficiencies: new Proficiencies({
+        single: "Shuriken",
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.SMALL_THROWING]
+    }),
+    pages: [60, 94, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -3015,7 +3197,12 @@ WEAPONS.Spear_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     size: SIZE.M,
     type: [WEAPON_TYPE.P],
     speed: 6,
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Spear",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.SPEARS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -3046,7 +3233,12 @@ WEAPONS.Stiletto[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     rate_of_fire: "2/1",
     range: new Range(1, 2, 3),
     damage: new Damage("1d3", "1d2"),
-    pages: [94, 95],
+    proficiencies: new Proficiencies({
+        single: "Knife/Stiletto",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.FENCING_BLADES, PROFICIENCIES.FIGHTERS.TIGHT.SHORT_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES, PROFICIENCIES.FIGHTERS.BROAD.SMALL_THROWING]
+    }),
+    pages: [59, 60, 94, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -3071,7 +3263,12 @@ WEAPONS.Cutlass[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 5,
     damage: new Damage("1d6", "1d8"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Cutlass",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.MEDIUM_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES]
+    }),
+    pages: [59, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -3088,6 +3285,16 @@ WEAPONS.Cutlass[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     ]
 })
 
+WEAPONS.Short_sword[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Short sword",
+    proficiencies: new Proficiencies({
+        single: "Short sword/Drusus",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.SHORT_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES]
+    }),
+    pages: [59]
+})
+
 WEAPONS.Drusus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Drusus",
     footnote_marker: "!",
@@ -3098,7 +3305,12 @@ WEAPONS.Drusus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 3,
     damage: new Damage("1d6+1", "1d8+1"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Short sword/Drusus",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.SHORT_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES]
+    }),
+    pages: [59, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -3126,7 +3338,12 @@ WEAPONS.Katana[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     size: SIZE.M,
     type: [WEAPON_TYPE.S, WEAPON_TYPE.P],
     speed: 4,
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Katana",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.LONG_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES]
+    }),
+    pages: [59, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -3163,7 +3380,12 @@ WEAPONS.Rapier[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.P],
     speed: 4,
     damage: new Damage("1d6+1", "1d8+1"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Rapier",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.FENCING_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES]
+    }),
+    pages: [59, 60, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -3189,7 +3411,12 @@ WEAPONS.Sabre[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 4,
     damage: new Damage("1d6+1", "1d8+1"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Sabre",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.FENCING_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES]
+    }),
+    pages: [59, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -3215,7 +3442,12 @@ WEAPONS.Wakizashi[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.S, WEAPON_TYPE.P],
     speed: 3,
     damage: new Damage("1d8", "1d8"),
-    pages: [95],
+    proficiencies: new Proficiencies({
+        single: "Wakizashi",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.MEDIUM_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES]
+    }),
+    pages: [59, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_DOLLAR_ONE_HANDED_OPTIONALLY_TWO_HANDED,
@@ -3229,6 +3461,524 @@ WEAPONS.Wakizashi[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
             ]
         }
     ]
+})
+
+// Catchup from PHB weapons
+
+WEAPONS.Arquebus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Arquebus",
+    proficiencies: new Proficiencies({
+        single: "Arquebus",
+    }),
+    pages: [60]
+})
+
+WEAPONS.Awl_pike[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Awl pike",
+    proficiencies: new Proficiencies({
+        single: "Awl pike",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Bardiche[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Bardiche",
+    proficiencies: new Proficiencies({
+        single: "Bardiche",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Bastard_sword[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Bastard sword",
+    proficiencies: new Proficiencies({
+        single: "Bastard sword",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.LONG_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES]
+    }),
+    pages: [59]
+})
+
+WEAPONS.Battle_axe[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Battle axe",
+    proficiencies: new Proficiencies({
+        single: "Battle axe",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.AXES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.CLEAVING_CRUSHING]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Bec_de_corbin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Bec de corbin",
+    proficiencies: new Proficiencies({
+        single: "Bec de corbin",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Bill_guisarme[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Bill-guisarme",
+    proficiencies: new Proficiencies({
+        single: "Bill-guisarme",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Blowgun[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Blowgun",
+    proficiencies: new Proficiencies({
+        single: "Blowgun",
+    }),
+    pages: [60]
+})
+
+WEAPONS.Club[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Club",
+    proficiencies: new Proficiencies({
+        single: "Club",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.CLUBBING],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.CLEAVING_CRUSHING]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Composite_long_bow[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Composite long bow",
+    proficiencies: new Proficiencies({
+        single: "Composite long bow",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.BOWS],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Composite_short_bow[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Composite short bow",
+    proficiencies: new Proficiencies({
+        single: "Composite short bow",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.BOWS],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Long_bow[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Long bow",
+    proficiencies: new Proficiencies({
+        single: "Long bow",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.BOWS],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Short_bow[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Short bow",
+    proficiencies: new Proficiencies({
+        single: "Short bow",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.BOWS],
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Dart[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Dart",
+    proficiencies: new Proficiencies({
+        single: "Dart",
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.SMALL_THROWING]
+    }),
+    pages: [60]
+})
+
+WEAPONS.Fauchard[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Fauchard",
+    proficiencies: new Proficiencies({
+        single: "Fauchard",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Fauchard_fork[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Fauchard-fork",
+    proficiencies: new Proficiencies({
+        single: "Fauchard-fork",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Footmans_flail[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Footman's flail",
+    proficiencies: new Proficiencies({
+        single: "Footman's flail",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.FLAILS],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Horsemans_flail[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Horseman's flail",
+    proficiencies: new Proficiencies({
+        single: "Horseman's flail",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.FLAILS],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Footmans_mace[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Footman's mace",
+    proficiencies: new Proficiencies({
+        single: "Footman's mace",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.CLUBBING],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.CLEAVING_CRUSHING]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Horsemans_mace[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Horseman's mace",
+    proficiencies: new Proficiencies({
+        single: "Horseman's mace",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.CLUBBING],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.CLEAVING_CRUSHING]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Footmans_pick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Footman's pick",
+    proficiencies: new Proficiencies({
+        single: "Footman's pick",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.PICKS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.CLEAVING_CRUSHING]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Horsemans_pick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Horseman's pick",
+    proficiencies: new Proficiencies({
+        single: "Horseman's pick",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.PICKS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.CLEAVING_CRUSHING]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Glaive[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Glaive",
+    proficiencies: new Proficiencies({
+        single: "Glaive",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Glaive_guisarme[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Glaive-guisarme",
+    proficiencies: new Proficiencies({
+        single: "Glaive-guisarme",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Guisarme[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Guisarme",
+    proficiencies: new Proficiencies({
+        single: "Guisarme",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Guisarme_voulge[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Guisarme-voulge",
+    proficiencies: new Proficiencies({
+        single: "Guisarme-voulge",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Halberd[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Halberd",
+    proficiencies: new Proficiencies({
+        single: "Halberd",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Hand_axe[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Hand/throwing axe",
+    proficiencies: new Proficiencies({
+        single: "Hand/throwing axe",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.AXES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.CLEAVING_CRUSHING, PROFICIENCIES.FIGHTERS.BROAD.SMALL_THROWING]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Hand_crossbow[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Hand crossbow",
+    proficiencies: new Proficiencies({
+        single: "Hand crossbow",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.CROSSBOWS],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Heavy_crossbow[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Heavy crossbow",
+    proficiencies: new Proficiencies({
+        single: "Heavy crossbow",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.CROSSBOWS],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Light_crossbow[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Light crossbow",
+    proficiencies: new Proficiencies({
+        single: "Light crossbow",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.CROSSBOWS],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Heavy_horse_lance[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Heavy horse lance",
+    proficiencies: new Proficiencies({
+        single: "Heavy horse lance",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.LANCES],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Medium_horse_lance[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Medium horse lance",
+    proficiencies: new Proficiencies({
+        single: "Medium horse lance",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.LANCES],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Light_horse_lance[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Light horse lance",
+    proficiencies: new Proficiencies({
+        single: "Light horse lance",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.LANCES],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Jousting_lance[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Jousting lance",
+    proficiencies: new Proficiencies({
+        single: "Jousting lance",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.LANCES],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Hook_fauchard[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Hook fauchard",
+    proficiencies: new Proficiencies({
+        single: "Hook fauchard",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Khopesh[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Khopesh",
+    proficiencies: new Proficiencies({
+        single: "Khopesh",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.MEDIUM_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES]
+    }),
+    pages: [59]
+})
+
+WEAPONS.Long_sword[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Long sword",
+    proficiencies: new Proficiencies({
+        single: "Long sword",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.LONG_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES]
+    }),
+    pages: [59]
+})
+
+WEAPONS.Lucern_hammer[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Lucern hammer",
+    proficiencies: new Proficiencies({
+        single: "Lucern hammer",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Mancatcher[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Mancatcher",
+    proficiencies: new Proficiencies({
+        single: "Mancatcher",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Military_fork[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Military fork",
+    proficiencies: new Proficiencies({
+        single: "Military fork",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Morning_star[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Morning star",
+    proficiencies: new Proficiencies({
+        single: "Morning star",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.CLUBBING],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.CLEAVING_CRUSHING]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Partisan[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Partisan",
+    proficiencies: new Proficiencies({
+        single: "Partisan",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Quarterstaff[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Quarterstaff",
+    proficiencies: new Proficiencies({
+        single: "Quarterstaff/Bo stick",
+    }),
+    pages: [60]
+})
+
+WEAPONS.Ranseur[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Ranseur",
+    proficiencies: new Proficiencies({
+        single: "Ranseur",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Scimitar[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Scimitar",
+    proficiencies: new Proficiencies({
+        single: "Scimitar",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.LONG_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES]
+    }),
+    pages: [59]
+})
+
+WEAPONS.Scourge[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Scourge",
+    proficiencies: new Proficiencies({
+        single: "Scourge",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.WHIPS],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Whip[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Whip",
+    proficiencies: new Proficiencies({
+        single: "Whip",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.WHIPS],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Sling[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Sling",
+    proficiencies: new Proficiencies({
+        single: "Sling",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.SLINGS],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Staff_sling[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Staff Sling",
+    proficiencies: new Proficiencies({
+        single: "Staff Sling",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.SLINGS],
+    }),
+    pages: [59]
+})
+
+WEAPONS.Spetum[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Spetum",
+    proficiencies: new Proficiencies({
+        single: "Spetum",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Two_handed_sword[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Two-handed sword",
+    proficiencies: new Proficiencies({
+        single: "Two-handed sword",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.LONG_BLADES],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES]
+    }),
+    pages: [59]
+})
+
+WEAPONS.Voulge[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Voulge",
+    proficiencies: new Proficiencies({
+        single: "Voulge",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.POLEARMS],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
+    }),
+    pages: [59, 60]
+})
+
+WEAPONS.Warhammer[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
+    name: "Warhammer",
+    proficiencies: new Proficiencies({
+        single: "Warhammer",
+        tight: [PROFICIENCIES.FIGHTERS.TIGHT.CLUBBING],
+        broad: [PROFICIENCIES.FIGHTERS.BROAD.CLEAVING_CRUSHING]
+    }),
+    pages: [59, 60]
 })
 
 //#endregion Fighter's Handbook
