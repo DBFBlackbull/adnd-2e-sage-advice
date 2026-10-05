@@ -121,7 +121,11 @@ class Weapon {
 
 const WEAPONS = {};
 WEAPONS.Arquebus = {};
-WEAPONS.Battle_axe = {};
+WEAPONS.Battle_axe = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 WEAPONS.Belaying_pin = {};
 WEAPONS.Blowgun = {
     ammunition: {
@@ -159,7 +163,11 @@ WEAPONS.Composite_long_bow = {
 };
 WEAPONS.Cestus = {};
 WEAPONS.Chain = {};
-WEAPONS.Club = {};
+WEAPONS.Club = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 WEAPONS.Daikyu = {
     ammunition: {
         Daikyu_arrow: {},
@@ -184,9 +192,17 @@ WEAPONS.Dagger = {};
 WEAPONS.Dagger_bone = {};
 WEAPONS.Dagger_stone = {};
 WEAPONS.Dart = {};
-WEAPONS.Footmans_flail = {};
+WEAPONS.Footmans_flail = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 WEAPONS.Footmans_mace = {};
-WEAPONS.Footmans_pick = {};
+WEAPONS.Footmans_pick = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 WEAPONS.Gaff_hook_attached = {};
 WEAPONS.Gaff_hook_held = {};
 WEAPONS.Hand_axe = {};
@@ -197,9 +213,21 @@ WEAPONS.Harpoon = {
         [HANDEDNESS.TWO_HANDED.id]: {},
     }
 };
-WEAPONS.Horsemans_flail = {};
-WEAPONS.Horsemans_mace = {};
-WEAPONS.Horsemans_pick = {};
+WEAPONS.Horsemans_flail = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Horsemans_mace = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Horsemans_pick = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 WEAPONS.Javelin = {
     grip: {
         [HANDEDNESS.ONE_HANDED.id]: {},
@@ -221,7 +249,11 @@ WEAPONS.Jousting_lance = {};
 WEAPONS.Medium_horse_lance = {};
 WEAPONS.Main_gauche = {};
 WEAPONS.Mancatcher = {};
-WEAPONS.Morning_star = {};
+WEAPONS.Morning_star = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 WEAPONS.Net = {};
 WEAPONS.Nunchaku = {};
 
@@ -302,7 +334,11 @@ WEAPONS.Katana = {
     }
 };
 WEAPONS.Khopesh = {};
-WEAPONS.Long_sword = {};
+WEAPONS.Long_sword = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 WEAPONS.Rapier = {};
 WEAPONS.Sabre = {};
 WEAPONS.Scimitar = {};
@@ -316,7 +352,11 @@ WEAPONS.Trident = {
         [HANDEDNESS.TWO_HANDED.id]: {},
     }
 };
-WEAPONS.Warhammer = {};
+WEAPONS.Warhammer = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 WEAPONS.Whip = {};
 
 for (const [key, weapon] of Object.entries(WEAPONS))
@@ -3512,6 +3552,11 @@ WEAPONS.Battle_axe[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Battle_axe.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    damage: new Damage("1d8+1", "1d8+1"),
+    pages: [63]
+}
 
 WEAPONS.Bec_de_corbin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Bec de corbin",
@@ -3550,6 +3595,11 @@ WEAPONS.Club[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Club.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    damage: new Damage("1d6+1", "1d3+1"),
+    pages: [63]
+}
 
 WEAPONS.Composite_long_bow[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Composite long bow",
@@ -3624,6 +3674,11 @@ WEAPONS.Footmans_flail[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59]
 })
+WEAPONS.Footmans_flail.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    damage: new Damage("1d6+2", "2d4+1"),
+    pages: [63]
+}
 
 WEAPONS.Horsemans_flail[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Horseman's flail",
@@ -3633,6 +3688,11 @@ WEAPONS.Horsemans_flail[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59]
 })
+WEAPONS.Horsemans_flail.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    damage: new Damage("1d4+2", "1d4+2"),
+    pages: [63]
+}
 
 WEAPONS.Footmans_mace[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Footman's mace",
@@ -3653,6 +3713,11 @@ WEAPONS.Horsemans_mace[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Horsemans_mace.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    damage: new Damage("1d6+1", "1d4+1"),
+    pages: [63]
+}
 
 WEAPONS.Footmans_pick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Footman's pick",
@@ -3663,6 +3728,11 @@ WEAPONS.Footmans_pick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Footmans_pick.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    damage: new Damage("1d6+2", "2d4+1"),
+    pages: [63]
+}
 
 WEAPONS.Horsemans_pick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Horseman's pick",
@@ -3673,6 +3743,11 @@ WEAPONS.Horsemans_pick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Horsemans_pick.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    damage: new Damage("1d4+2", "1d4+1"),
+    pages: [63]
+}
 
 WEAPONS.Glaive[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Glaive",
@@ -3826,6 +3901,11 @@ WEAPONS.Long_sword[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59]
 })
+WEAPONS.Long_sword.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    damage: new Damage("1d8+1", "1d12+1"),
+    pages: [63]
+}
 
 WEAPONS.Lucern_hammer[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Lucern hammer",
@@ -3866,6 +3946,11 @@ WEAPONS.Morning_star[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Morning_star.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    damage: new Damage("2d4+1", "1d6+1"),
+    pages: [63]
+}
 
 WEAPONS.Partisan[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Partisan",
@@ -3980,6 +4065,11 @@ WEAPONS.Warhammer[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Warhammer.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    damage: new Damage("1d4+2", "1d4+1"),
+    pages: [63]
+}
 
 //#endregion Fighter's Handbook
 

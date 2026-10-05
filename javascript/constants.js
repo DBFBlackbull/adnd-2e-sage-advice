@@ -93,6 +93,7 @@ const WEAPON_TYPE = {
 const HANDEDNESS = {
     ONE_HANDED: {id: '1H', name: 'One-handed'},
     TWO_HANDED: {id: '2H', name: 'Two-handed'},
+    TWO_HANDED_SPECIALIZATION: {id: '2H-spec', name: 'Two-Hander Style Specialization'},
     BY_SIZE: {id: "By size", name: 'By size'},
     LANCE: {id: 'Lance', name: 'Lance'},
 }
