@@ -133,7 +133,11 @@ WEAPONS.Blowgun = {
         Needle: {},
     }
 };
-WEAPONS.Bo_stick = {};
+WEAPONS.Bo_stick = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 WEAPONS.Bolas = {};
 WEAPONS.Short_bow = {
     ammunition: {
@@ -211,6 +215,7 @@ WEAPONS.Harpoon = {
     grip: {
         [HANDEDNESS.ONE_HANDED.id]: {},
         [HANDEDNESS.TWO_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
     }
 };
 WEAPONS.Horsemans_flail = {
@@ -232,12 +237,14 @@ WEAPONS.Javelin = {
     grip: {
         [HANDEDNESS.ONE_HANDED.id]: {},
         [HANDEDNESS.TWO_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
     }
 };
 WEAPONS.Javelin_stone = {
     grip: {
         [HANDEDNESS.ONE_HANDED.id]: {},
         [HANDEDNESS.TWO_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
     }
 };
 WEAPONS.Knife = {};
@@ -248,7 +255,11 @@ WEAPONS.Light_horse_lance = {};
 WEAPONS.Jousting_lance = {};
 WEAPONS.Medium_horse_lance = {};
 WEAPONS.Main_gauche = {};
-WEAPONS.Mancatcher = {};
+WEAPONS.Mancatcher = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 WEAPONS.Morning_star = {
     grip: {
         [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
@@ -258,29 +269,113 @@ WEAPONS.Net = {};
 WEAPONS.Nunchaku = {};
 
 // Polearms
-WEAPONS.Awl_pike = {};
-WEAPONS.Bardiche = {};
-WEAPONS.Bec_de_corbin = {};
-WEAPONS.Bill_guisarme = {};
-WEAPONS.Fauchard = {};
-WEAPONS.Fauchard_fork = {};
-WEAPONS.Glaive = {};
-WEAPONS.Glaive_guisarme = {};
-WEAPONS.Guisarme = {};
-WEAPONS.Guisarme_voulge = {};
-WEAPONS.Halberd = {};
-WEAPONS.Hook_fauchard = {};
+WEAPONS.Awl_pike = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Bardiche = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Bec_de_corbin = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Bill_guisarme = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Fauchard = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Fauchard_fork = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Glaive = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Glaive_guisarme = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Guisarme = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Guisarme_voulge = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Halberd = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Hook_fauchard = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 WEAPONS.Lasso = {};
-WEAPONS.Lucern_hammer = {};
-WEAPONS.Military_fork = {};
-WEAPONS.Naginata = {};
-WEAPONS.Partisan = {};
-WEAPONS.Ranseur = {};
-WEAPONS.Spetum = {};
-WEAPONS.Tetsubo = {};
-WEAPONS.Voulge = {};
+WEAPONS.Lucern_hammer = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Military_fork = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Naginata = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Partisan = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Ranseur = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Spetum = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Tetsubo = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
+WEAPONS.Voulge = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 
-WEAPONS.Quarterstaff = {};
+WEAPONS.Quarterstaff = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 WEAPONS.Sai = {};
 WEAPONS.Scourge = {};
 WEAPONS.Shuriken = {};
@@ -301,18 +396,21 @@ WEAPONS.Spear = {
     grip: {
         [HANDEDNESS.ONE_HANDED.id]: {},
         [HANDEDNESS.TWO_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
     }
 };
 WEAPONS.Spear_stone = {
     grip: {
         [HANDEDNESS.ONE_HANDED.id]: {},
         [HANDEDNESS.TWO_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
     }
 };
 WEAPONS.Long_spear = {
     grip: {
         [HANDEDNESS.ONE_HANDED.id]: {},
         [HANDEDNESS.TWO_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
     }
 };
 WEAPONS.Stiletto = {};
@@ -322,6 +420,7 @@ WEAPONS.Bastard_sword = {
     grip: {
         [HANDEDNESS.ONE_HANDED.id]: {},
         [HANDEDNESS.TWO_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
     }
 };
 WEAPONS.Broad_sword = {};
@@ -331,6 +430,7 @@ WEAPONS.Katana = {
     grip: {
         [HANDEDNESS.ONE_HANDED.id]: {},
         [HANDEDNESS.TWO_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
     }
 };
 WEAPONS.Khopesh = {};
@@ -343,13 +443,18 @@ WEAPONS.Rapier = {};
 WEAPONS.Sabre = {};
 WEAPONS.Scimitar = {};
 WEAPONS.Short_sword = {};
-WEAPONS.Two_handed_sword = {};
+WEAPONS.Two_handed_sword = {
+    grip: {
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
+    }
+};
 WEAPONS.Wakizashi = {};
 
 WEAPONS.Trident = {
     grip: {
         [HANDEDNESS.ONE_HANDED.id]: {},
         [HANDEDNESS.TWO_HANDED.id]: {},
+        [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
     }
 };
 WEAPONS.Warhammer = {
@@ -363,44 +468,6 @@ for (const [key, weapon] of Object.entries(WEAPONS))
     Object.defineProperty(weapon, 'id', {value: key, enumerable: false})
 
 const PROFICIENCIES = {};
-
-/*
-* Tight groups C&T
-* Axes
-* Picks
-* Hammers
-* Unrelated-1
-* Bows
-* Maces
-* Clubs
-* Flails
-* Crossbows
-* Daggers & Knives
-* Lances
-* Spear-like polearms
-* Poleaxes
-* Bills
-* Glaives
-* Beaked
-* Unrelated-2
-* Spears
-* Javelins
-* Unrelated-3
-* Ancient
-* Roman
-* Middle Eastern
-* Oriental
-* Short
-* Medium
-* Large
-* Fencing weapons
-* Chain & Rope
-* Martial Arts Weapons
-* Hand match
-* Matchlocks
-* Wheellocks
-* Snaplocks and Flintlocks
-* */
 
 //#region PHB
 PROFICIENCIES.PHB = {
@@ -2400,13 +2467,21 @@ WEAPONS.Harpoon[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 WEAPONS.Harpoon.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
+    speed: 7,
     damage: new Damage("1d4+1", "1d6+1"),
     pages: [93, 94],
 }
 WEAPONS.Harpoon.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
+    speed: 7,
     damage: new Damage("2d4", "2d6"),
     pages: [93],
+}
+WEAPONS.Harpoon.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 4,
+    //damage: new Damage("2d4", "2d6"),
+    pages: [63],
 }
 
 WEAPONS.Javelin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -2432,13 +2507,21 @@ WEAPONS.Javelin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 WEAPONS.Javelin.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
+    speed: 4,
     damage: new Damage("1d4", "1d4"),
     pages: [93],
 }
 WEAPONS.Javelin.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
+    speed: 4,
     damage: new Damage("1d6", "1d6"),
     pages: [93],
+}
+WEAPONS.Javelin.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 1,
+    //damage: new Damage("1d6", "1d6"),
+    pages: [63],
 }
 
 WEAPONS.Spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -2462,18 +2545,26 @@ WEAPONS.Spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 WEAPONS.Spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
+    speed: 6,
     damage: new Damage("1d6", "1d8"),
     pages: [93],
 }
 WEAPONS.Spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
     footnote_marker: "#",
+    speed: 6,
     damage: new Damage("1d8+1", "2d6"),
     pages: [93],
 
     descriptions: [
         FIGHTERS_HANDBOOK_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
     ]
+}
+WEAPONS.Spear.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 3,
+    // damage: new Damage("1d8+1", "2d6"),
+    pages: [63],
 }
 
 WEAPONS.Long_spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -2497,18 +2588,26 @@ WEAPONS.Long_spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 WEAPONS.Long_spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
+    speed: 8,
     damage: new Damage("1d8", "1d8+1"),
     pages: [93,95],
 }
 WEAPONS.Long_spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
     footnote_marker: "#",
+    speed: 8,
     damage: new Damage("2d6", "3d6"),
     pages: [93,95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
     ]
+}
+WEAPONS.Long_spear.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 5,
+    // damage: new Damage("2d6", "3d6"),
+    pages: [63],
 }
 
 WEAPONS.Trident[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -2532,6 +2631,7 @@ WEAPONS.Trident[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 WEAPONS.Trident.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
+    speed: 7,
     rate_of_fire: "1",
     range: new Range(0, 1, 2),
     damage: new Damage("1d6+1", "3d4"),
@@ -2539,8 +2639,15 @@ WEAPONS.Trident.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
 }
 WEAPONS.Trident.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
+    speed: 7,
     damage: new Damage("1d8+1", "3d4"),
     pages: [93],
+}
+WEAPONS.Trident.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 4,
+    // damage: new Damage("1d8+1", "3d4"),
+    pages: [63],
 }
 
 WEAPONS.Short_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK.id] =
@@ -2619,6 +2726,12 @@ WEAPONS.Bo_stick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         }
     ]
 })
+WEAPONS.Bo_stick.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 1,
+    // damage: new Damage("1d6", "1d4"),
+    pages: [63]
+}
 
 WEAPONS.Bolas[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Bolas",
@@ -2897,6 +3010,7 @@ WEAPONS.Javelin_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 WEAPONS.Javelin_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
+    speed: 4,
     rate_of_fire: "1",
     range: new Range(2, 4, 6),
     damage: new Damage("1d4", "1d4"),
@@ -2904,8 +3018,15 @@ WEAPONS.Javelin_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id
 }
 WEAPONS.Javelin_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
+    speed: 4,
     damage: new Damage("1d4+1", "1d6"),
     pages: [95],
+}
+WEAPONS.Javelin_stone.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 1,
+    // damage: new Damage("1d4+1", "1d6"),
+    pages: [63],
 }
 
 WEAPONS.Knife[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3136,6 +3257,12 @@ WEAPONS.Naginata[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         }
     ]
 })
+WEAPONS.Naginata.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 4,
+    // damage: new Damage("1d8", "1d10"),
+    pages: [63],
+}
 
 WEAPONS.Tetsubo[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Tetsubo",
@@ -3167,6 +3294,12 @@ WEAPONS.Tetsubo[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         }
     ]
 })
+WEAPONS.Tetsubo.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 4,
+    // damage: new Damage("1d8", "1d8"),
+    pages: [63],
+}
 
 WEAPONS.Sai[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Sai",
@@ -3251,6 +3384,7 @@ WEAPONS.Spear_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 WEAPONS.Spear_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
+    speed: 6,
     rate_of_fire: "1",
     range: new Range(1, 2, 3),
     damage: new Damage("1d4", "1d6"),
@@ -3258,8 +3392,15 @@ WEAPONS.Spear_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] 
 }
 WEAPONS.Spear_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Handed",
+    speed: 6,
     damage: new Damage("1d6", "2d4"),
     pages: [95],
+}
+WEAPONS.Spear_stone.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 3,
+    // damage: new Damage("1d6", "2d4"),
+    pages: [63],
 }
 
 WEAPONS.Stiletto[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3401,13 +3542,21 @@ WEAPONS.Katana[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 WEAPONS.Katana.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "One-handed",
+    speed: 4,
     damage: new Damage("1d10", "1d12"),
     pages: [95],
 }
 WEAPONS.Katana.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
+    speed: 4,
     damage: new Damage("2d6", "2d6"),
     pages: [95],
+}
+WEAPONS.Katana.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 1,
+    // damage: new Damage("2d6", "2d6"),
+    pages: [63],
 }
 
 WEAPONS.Rapier[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3522,6 +3671,11 @@ WEAPONS.Awl_pike[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Awl_pike.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 10,
+    pages: [63],
+}
 
 WEAPONS.Bardiche[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Bardiche",
@@ -3532,6 +3686,11 @@ WEAPONS.Bardiche[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Bardiche.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 6,
+    pages: [63],
+}
 
 WEAPONS.Bastard_sword[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Bastard sword",
@@ -3567,6 +3726,11 @@ WEAPONS.Bec_de_corbin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Bec_de_corbin.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 6,
+    pages: [63],
+}
 
 WEAPONS.Bill_guisarme[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Bill-guisarme",
@@ -3577,6 +3741,11 @@ WEAPONS.Bill_guisarme[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Bill_guisarme.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 7,
+    pages: [63],
+}
 
 WEAPONS.Blowgun[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Blowgun",
@@ -3655,6 +3824,11 @@ WEAPONS.Fauchard[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Fauchard.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 5,
+    pages: [63],
+}
 
 WEAPONS.Fauchard_fork[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Fauchard-fork",
@@ -3665,6 +3839,11 @@ WEAPONS.Fauchard_fork[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Fauchard_fork.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 5,
+    pages: [63],
+}
 
 WEAPONS.Footmans_flail[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Footman's flail",
@@ -3758,6 +3937,11 @@ WEAPONS.Glaive[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Glaive.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 5,
+    pages: [63],
+}
 
 WEAPONS.Glaive_guisarme[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Glaive-guisarme",
@@ -3768,6 +3952,11 @@ WEAPONS.Glaive_guisarme[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Glaive_guisarme.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 6,
+    pages: [63],
+}
 
 WEAPONS.Guisarme[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Guisarme",
@@ -3778,6 +3967,11 @@ WEAPONS.Guisarme[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Guisarme.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 5,
+    pages: [63],
+}
 
 WEAPONS.Guisarme_voulge[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Guisarme-voulge",
@@ -3788,6 +3982,11 @@ WEAPONS.Guisarme_voulge[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Guisarme_voulge.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 7,
+    pages: [63],
+}
 
 WEAPONS.Halberd[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Halberd",
@@ -3798,6 +3997,11 @@ WEAPONS.Halberd[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Halberd.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 6,
+    pages: [63],
+}
 
 WEAPONS.Hand_axe[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Hand/throwing axe",
@@ -3881,6 +4085,11 @@ WEAPONS.Hook_fauchard[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Hook_fauchard.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 6,
+    pages: [63],
+}
 
 WEAPONS.Khopesh[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Khopesh",
@@ -3916,6 +4125,11 @@ WEAPONS.Lucern_hammer[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Lucern_hammer.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 6,
+    pages: [63],
+}
 
 WEAPONS.Mancatcher[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Mancatcher",
@@ -3926,6 +4140,11 @@ WEAPONS.Mancatcher[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Mancatcher.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 4,
+    pages: [63],
+}
 
 WEAPONS.Military_fork[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Military fork",
@@ -3936,6 +4155,11 @@ WEAPONS.Military_fork[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Military_fork.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 4,
+    pages: [63],
+}
 
 WEAPONS.Morning_star[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Morning star",
@@ -3961,6 +4185,11 @@ WEAPONS.Partisan[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Partisan.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 6,
+    pages: [63],
+}
 
 WEAPONS.Quarterstaff[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Quarterstaff",
@@ -3969,6 +4198,11 @@ WEAPONS.Quarterstaff[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [60]
 })
+WEAPONS.Quarterstaff.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 1,
+    pages: [63],
+}
 
 WEAPONS.Ranseur[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Ranseur",
@@ -3979,6 +4213,11 @@ WEAPONS.Ranseur[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Ranseur.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 5,
+    pages: [63],
+}
 
 WEAPONS.Scimitar[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Scimitar",
@@ -4035,6 +4274,11 @@ WEAPONS.Spetum[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Spetum.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 5,
+    pages: [63],
+}
 
 WEAPONS.Two_handed_sword[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Two-handed sword",
@@ -4045,6 +4289,11 @@ WEAPONS.Two_handed_sword[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59]
 })
+WEAPONS.Two_handed_sword.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 7,
+    pages: [63],
+}
 
 WEAPONS.Voulge[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Voulge",
@@ -4055,6 +4304,11 @@ WEAPONS.Voulge[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59, 60]
 })
+WEAPONS.Voulge.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 7,
+    pages: [63],
+}
 
 WEAPONS.Warhammer[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Warhammer",
