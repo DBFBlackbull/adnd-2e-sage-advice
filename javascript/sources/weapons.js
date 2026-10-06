@@ -2445,6 +2445,12 @@ const FIGHTERS_HANDBOOK_BONE_WEAPONS = {
     ]
 }
 
+const FIGHTERS_HANDBOOK_ONE_HAND_THROW = {
+    pages: [94],
+    text: [
+        `The Harpoon, Javelin, Spear, and Trident can all be thrown, but the thrown weapon damage is always the one-handed damage, never the two-handed damage.`
+    ]
+}
 
 WEAPONS.Harpoon[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Harpoon",
@@ -2470,6 +2476,8 @@ WEAPONS.Harpoon.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     speed: 7,
     damage: new Damage("1d4+1", "1d6+1"),
     pages: [93, 94],
+
+    descriptions: [FIGHTERS_HANDBOOK_ONE_HAND_THROW]
 }
 WEAPONS.Harpoon.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
@@ -2510,6 +2518,8 @@ WEAPONS.Javelin.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     speed: 4,
     damage: new Damage("1d4", "1d4"),
     pages: [93],
+
+    descriptions: [FIGHTERS_HANDBOOK_ONE_HAND_THROW]
 }
 WEAPONS.Javelin.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
@@ -2548,6 +2558,10 @@ WEAPONS.Spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     speed: 6,
     damage: new Damage("1d6", "1d8"),
     pages: [93],
+
+    descriptions: [
+        FIGHTERS_HANDBOOK_ONE_HAND_THROW
+    ]
 }
 WEAPONS.Spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
@@ -2636,6 +2650,8 @@ WEAPONS.Trident.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     range: new Range(0, 1, 2),
     damage: new Damage("1d6+1", "3d4"),
     pages: [93, 94],
+
+    descriptions: [FIGHTERS_HANDBOOK_ONE_HAND_THROW]
 }
 WEAPONS.Trident.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
@@ -3015,6 +3031,8 @@ WEAPONS.Javelin_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id
     range: new Range(2, 4, 6),
     damage: new Damage("1d4", "1d4"),
     pages: [94,95],
+
+    descriptions: [FIGHTERS_HANDBOOK_ONE_HAND_THROW]
 }
 WEAPONS.Javelin_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
@@ -3389,6 +3407,8 @@ WEAPONS.Spear_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] 
     range: new Range(1, 2, 3),
     damage: new Damage("1d4", "1d6"),
     pages: [94, 95],
+
+    descriptions: [FIGHTERS_HANDBOOK_ONE_HAND_THROW]
 }
 WEAPONS.Spear_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Handed",
@@ -3701,6 +3721,11 @@ WEAPONS.Bastard_sword[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     }),
     pages: [59]
 })
+WEAPONS.Bastard_sword.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
+    name: "Two-Hander Style Specialization",
+    speed: 5,
+    pages: [63],
+}
 
 WEAPONS.Battle_axe[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Battle axe",
