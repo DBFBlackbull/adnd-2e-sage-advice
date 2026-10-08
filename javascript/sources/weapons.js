@@ -1,4 +1,4 @@
-const {SOURCE, CURRENCY, SIZE, WEAPON_TYPE, HANDEDNESS, STRENGTH_BONUS} = require('../constants')
+const {SOURCE, CURRENCY, SIZE, WEAPON_TYPE, HANDEDNESS, STRENGTH_BONUS, SAGE_ADVICE} = require('../constants')
 
 class Range {
     constructor(short, medium, long, extreme) {
@@ -4494,6 +4494,31 @@ WEAPONS.Scythe[SOURCE.PRIESTS_HANDBOOK.id] = new Weapon({
             ]
         }
     ]
+})
+//#endregion
+
+//#region SageAdvice158
+WEAPONS.Scythe[SAGE_ADVICE.ISSUE_158.id] = new Weapon({
+    name: "Scythe",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 7,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 10,
+    damage: new Damage("2d4", "1dG"),
+    proficiencies: new Proficiencies({single: "Scythe"}),
+    pages: [71],
+
+    descriptions: [
+        {
+            pages: [71],
+            text: [
+                `... In a character's hands, a scythe makes a cumbersome weapon at best. I suggest the following statistics: cost 5 gp; weight 7 lbs.; size L; type P/S (the blade has both a curved cutting edge and a sharp point); speed factor 10; damage 2d4 (S-M)/1dG (L).`
+            ]
+        }
+    ],
+
+    comment: `The release of this magazine comes only one month after the release of *The Complete Priest's Handbook*. It is very likely that the question for this Sage Advice was posted and answered well before the *Priest's Handbook* was released, or that Skip Williams was not aware of of the statistics of the book. The Sage Advice really says "1dG", clearly a typo.`
 })
 //#endregion
 

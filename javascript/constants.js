@@ -19,6 +19,10 @@ const SOURCE = {
     SHARED_SPELLS: {id: 'Shared spell'}
 }
 
+const SAGE_ADVICE = {
+    ISSUE_158: {id: "Sage Advice #158", title: "Dragon Magazine #158: Sage Advice"}, // June 1990
+}
+
 const GAME_SYSTEM = {
     FIRST_EDITION: {id: '1E'},
     SECOND_EDITION: {id: '2E'},
@@ -108,6 +112,7 @@ const STRENGTH_BONUS = {
 
 module.exports = {
     SOURCE,
+    SAGE_ADVICE,
     GAME_SYSTEM,
     ATTRIBUTE,
     CURRENCY,

@@ -6,7 +6,7 @@ const jsFolder = path.join(sourceFolder, 'javascript');
 const htmlFolder = path.join(sourceFolder, 'html');
 const pugFolder = path.join(sourceFolder, 'pug');
 
-const {SOURCE, HANDEDNESS} = require(path.join(jsFolder, 'constants.js'));
+const {SOURCE, SAGE_ADVICE, HANDEDNESS} = require(path.join(jsFolder, 'constants.js'));
 const weapons = require(path.join(jsFolder, 'sources','weapons.js'));
 
 // const booksPriority = [
@@ -36,7 +36,7 @@ const bookPriority = [
     SOURCE.PHB, // 1989 April
     SOURCE.FIGHTERS_HANDBOOK, // 1989 December
     SOURCE.PRIESTS_HANDBOOK, // 1990 May
-    {id: "Sage Advice 158", title: "Sage Advice #158"}, // June 1990
+    SAGE_ADVICE.ISSUE_158, // 1990 June
     SOURCE.WIZARDS_HANDBOOK // 1990 June
 ]
 for (const [weaponKey, weaponObj] of Object.entries(weapons)) {
