@@ -33,8 +33,11 @@ const weapons = require(path.join(jsFolder, 'sources','weapons.js'));
 //     {book: 'Player's Option: Spells & Magic', print: ''},
 // ];
 const bookPriority = [
-    SOURCE.PHB,
-    SOURCE.FIGHTERS_HANDBOOK,
+    SOURCE.PHB, // 1989 April
+    SOURCE.FIGHTERS_HANDBOOK, // 1989 December
+    SOURCE.PRIESTS_HANDBOOK, // 1990 May
+    {id: "Sage Advice 158", title: "Sage Advice #158"}, // June 1990
+    SOURCE.WIZARDS_HANDBOOK // 1990 June
 ]
 for (const [weaponKey, weaponObj] of Object.entries(weapons)) {
     let fileName = weaponKey.replaceAll("_", "-").toLowerCase()

@@ -127,6 +127,7 @@ WEAPONS.Battle_axe = {
     }
 };
 WEAPONS.Belaying_pin = {};
+WEAPONS.Bill = {};
 WEAPONS.Blowgun = {
     ammunition: {
         Barbed_dart: {},
@@ -254,6 +255,7 @@ WEAPONS.Heavy_horse_lance = {};
 WEAPONS.Light_horse_lance = {};
 WEAPONS.Jousting_lance = {};
 WEAPONS.Medium_horse_lance = {};
+WEAPONS.Maul = {};
 WEAPONS.Main_gauche = {};
 WEAPONS.Mancatcher = {
     grip: {
@@ -378,6 +380,7 @@ WEAPONS.Quarterstaff = {
 };
 WEAPONS.Sai = {};
 WEAPONS.Scourge = {};
+WEAPONS.Scythe = {};
 WEAPONS.Shuriken = {};
 WEAPONS.Sickle = {};
 WEAPONS.Sling = {
@@ -4351,5 +4354,147 @@ WEAPONS.Warhammer.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_
 }
 
 //#endregion Fighter's Handbook
+
+//#region Priest's Handbook
+const PRIESTS_HANDBOOK_FULL_STAR_ONE_HANDED = {
+    pages: [124],
+    text: [
+        `✬ This weapon is intended for one-handed use, and may not be used two-handed. In the case of nunchaku, two-handed flourishes are common, but blows are struck with one hand only at a time.`
+    ]
+}
+
+const PRIESTS_HANDBOOK_EMPTY_STAR_TWO_HANDED = {
+    pages: [124],
+    text: [`⭐︎ This weapon is intended for two-handed use only.`]
+}
+
+WEAPONS.Bill[SOURCE.PRIESTS_HANDBOOK.id] = new Weapon({
+    name: "Bill",
+    footnote_marker: "✬",
+    cost: new Cost(5, CURRENCY.CP),
+    weight_lbs: 2,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: 2,
+    damage: new Damage("1d4", "1d3"),
+    proficiencies: new Proficiencies({single: "Bill"}),
+    pages: [124],
+
+    descriptions: [
+        PRIESTS_HANDBOOK_FULL_STAR_ONE_HANDED,
+        {
+            pages: [124],
+            text: [`The **Bill** is a short hook on a short cross-handle, and is a weapon derived from the sort of hook used to spear and haul in fish or to carry sides of meat around.`]
+        }
+    ]
+});
+
+WEAPONS.Lasso[SOURCE.PRIESTS_HANDBOOK.id] = new Weapon({
+    name: "Lasso",
+    footnote_marker: "⭐︎",
+    cost: new Cost(5, CURRENCY.SP),
+    weight_lbs: 3,
+    size: SIZE.L,
+    speed: 10,
+    proficiencies: new Proficiencies({single: "Lasso"}),
+    pages: [124],
+
+    descriptions: [
+        PRIESTS_HANDBOOK_EMPTY_STAR_TWO_HANDED,
+        {
+            pages: [124],
+            text: [`The **Lasso** is a rope with a loop at the end; it's thrown at targets, and on a successful hit the loop settles around the target. The wielder can then pull the rope taut and seriously inconvenience his target. Extensive rules for the lasso appear in the *The Complete Fighter's Handbook*.`]
+        }
+    ]
+});
+
+WEAPONS.Maul[SOURCE.PRIESTS_HANDBOOK.id] = new Weapon({
+    name: "Maul",
+    footnote_marker: "⭐︎",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 10,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.B],
+    speed: 9,
+    damage: new Damage("2d4", "1d10"),
+    proficiencies: new Proficiencies({single: "Maul"}),
+    pages: [124],
+
+    descriptions: [
+        PRIESTS_HANDBOOK_EMPTY_STAR_TWO_HANDED,
+        {
+            pages: [124],
+            text: `The **Maul** is a polearm with a heavy bludgeoning head at the end. It is therefore a Bludgeoning weapon, and is appropriate for the use of clerics and specific priests who aren't allowed to use bladed weapons. When a priesthood allows the use of polearms, this includes the maul (and the mancatcher, for that matter); but when maul alone is listed, the priest cannot use the other polearms.`
+        }
+    ]
+});
+
+WEAPONS.Net[SOURCE.PRIESTS_HANDBOOK.id] = new Weapon({
+    name: "Net",
+    footnote_marker: "⭐︎",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 10,
+    size: SIZE.M,
+    speed: 10,
+    proficiencies: new Proficiencies({single: "Net"}),
+    pages: [124],
+
+    descriptions: [
+        PRIESTS_HANDBOOK_EMPTY_STAR_TWO_HANDED,
+        {
+            pages: [124],
+            text: [
+                `The **Net** is a weighted combat net on the end of a rope. Like the lasso, it is thrown to spread over a target; if it hits, it can be pulled closed, and the trailing rope used to pull the victim around. Also like the lasso, extensive rules for this weapon's use appear in *The Complete Fighter's Handbook*.`
+            ]
+        }
+    ]
+})
+
+WEAPONS.Nunchaku[SOURCE.PRIESTS_HANDBOOK.id] = new Weapon({
+    name: "Nunchaku",
+    footnote_marker: "✬",
+    cost: new Cost(1, CURRENCY.GP),
+    weight_lbs: 3,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.B],
+    speed: 3,
+    damage: new Damage("1d6", "1d6"),
+    proficiencies: new Proficiencies({single: "Nunchaku"}),
+    pages: [124],
+
+    descriptions: [
+        PRIESTS_HANDBOOK_FULL_STAR_ONE_HANDED,
+        {
+            pages: [124],
+            text: [
+                `The **Nunchaku** is an oriental weapon and only suitable for oriental-based campaigns. It consists of two wooden handles connected by a short chain or short length of cord. It was originally derived from an agricultural implement, which is why so many priests of nature-oriented gods can use it.`
+            ]
+        }
+    ]
+});
+
+WEAPONS.Scythe[SOURCE.PRIESTS_HANDBOOK.id] = new Weapon({
+    name: "Scythe",
+    footnote_marker: "⭐︎",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 8,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 8,
+    damage: new Damage("1d6+1", "1d8"),
+    proficiencies: new Proficiencies({single: "Scythe"}),
+    pages: [124],
+
+    descriptions: [
+        PRIESTS_HANDBOOK_EMPTY_STAR_TWO_HANDED,
+        {
+            pages: [124],
+            text: [
+                `The **Scythe** is a large, curving blade that is sharp only on the underside of the blade (the concave edge); the blade is attached to a twisted pole some 5-6' in length. The wielder uses the weapon two-handed. The scythe is a harvesting tool used by farmers to cut down their grain; as a weapon, it is symbolic of gods of agriculture, time, and death.`
+            ]
+        }
+    ]
+})
+//#endregion
 
 module.exports = WEAPONS;

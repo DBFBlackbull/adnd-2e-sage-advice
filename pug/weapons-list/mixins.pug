@@ -32,7 +32,11 @@
             return '—';
         }
 
-        return type.map(t => t.id).join('/')
+        if (Array.isArray(type)) {
+            return type.map(t => t.id).join('/')
+        }
+
+        return type.id
     }
 
     function getRangeShort(range) {
