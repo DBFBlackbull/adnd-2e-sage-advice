@@ -139,6 +139,7 @@ WEAPONS.Bo_stick = {
         [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
     }
 };
+WEAPONS.Boku_toh = {};
 WEAPONS.Bolas = {};
 WEAPONS.Short_bow = {
     ammunition: {
@@ -248,6 +249,7 @@ WEAPONS.Javelin_stone = {
         [HANDEDNESS.TWO_HANDED_SPECIALIZATION.id]: {}
     }
 };
+WEAPONS.Jitte = {};
 WEAPONS.Knife = {};
 WEAPONS.Knife_bone = {};
 WEAPONS.Knife_stone = {};
@@ -4519,6 +4521,85 @@ WEAPONS.Scythe[SAGE_ADVICE.ISSUE_158.id] = new Weapon({
     ],
 
     comment: `The release of this magazine comes only one month after the release of *The Complete Priest's Handbook*. It is very likely that the question for this Sage Advice was posted and answered well before the *Priest's Handbook* was released, or that Skip Williams was not aware of of the statistics of the book. The Sage Advice really says "1dG", clearly a typo.`
+})
+//#endregion
+
+//#region Wizard's Handbook
+WEAPONS.Bo_stick[SOURCE.WIZARDS_HANDBOOK.id] = new Weapon({
+    name: "Bo stick",
+    cost: new Cost(2, CURRENCY.CP),
+    weight_lbs: 4,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.B],
+    speed: 3,
+    damage: new Damage("1-6", "1-4"),
+    proficiencies: new Proficiencies({single: "Bo stick"}),
+    pages: [48],
+
+    descriptions: [
+        {
+            pages: [48],
+            text: [`Bo stick: A staff of hard wood that is very difficult to break and is normally 6-7 feet in length.`]
+        }
+    ]
+})
+
+WEAPONS.Boku_toh[SOURCE.WIZARDS_HANDBOOK.id] = new Weapon({
+    name: "Boku-toh",
+    cost: new Cost(6, CURRENCY.CP),
+    weight_lbs: 3,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.B],
+    speed: 4,
+    damage: new Damage("1-4", "1-2"),
+    proficiencies: new Proficiencies({single: "Boku-toh"}),
+    pages: [48],
+
+    descriptions: [
+        {
+            pages: [48],
+            text: [`Boku-toh: A wooden replica of a short sword, usually used for practice since it cannot cut or slash. Used aggressively, it can cause bludgeoning damage..`]
+        }
+    ]
+});
+
+WEAPONS.Jitte[SOURCE.WIZARDS_HANDBOOK.id] = new Weapon({
+    name: "Jitte",
+    cost: new Cost(10, CURRENCY.CP),
+    weight_lbs: 2,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.B],
+    speed: 2,
+    damage: new Damage("1-4", "1-2"),
+    proficiencies: new Proficiencies({single: "Jitte"}),
+    pages: [48],
+
+    descriptions: [
+        {
+            pages: [48],
+            text: [`Jitte: A tapered iron bar with a short hook near the handle. Although the hook is not sharp enough to cut or pierce, the jitte can be used to strike blows.`]
+        }
+    ]
+})
+
+WEAPONS.Shuriken[SOURCE.WIZARDS_HANDBOOK.id] = new Weapon({
+    name: "Shuriken",
+    cost: new Cost(10, CURRENCY.SP),
+    weight_lbs: 0.1,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    rate_of_fire: "2/1",
+    range: new Range(5, 10, 20),
+    damage: new Damage("1-6", "1-4"),
+    proficiencies: new Proficiencies({single: "Shuriken"}),
+    pages: [48],
+
+    descriptions: [
+        {
+            pages: [48],
+            text: [`Shuriken: A small throwing weapon in the shape of a star with needle-like projections. They are thrown by hand and easily concealed in folds of clothing. A shuriken has a fire rate of 2, a short range of 5 yards, a medium range of 10 yards, and a long range of 20 yards.`]
+        }
+    ]
 })
 //#endregion
 
