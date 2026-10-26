@@ -35,9 +35,9 @@ body
             th Broad Group
         - let color
         each book in bookPriority
-            - color = colorFlip(color)
             - let indents = 0
             - let weapon = weaponObj[book.id]
+            - color = colorFlip(color)
             if weapon
                 +weaponRow(weapon, book, color, indents)
             - indents = 1;
@@ -76,3 +76,11 @@ body
                             strong
                                 em Comment:
                             |  !{formatInput(ammo.comment, book.shortTitle, "")}
+    each book in bookPriority
+        - let weapon = weaponObj[book.id]
+        if weapon && weapon.images
+            each imgObj in weapon.images
+                p
+                    span(class="title") #{book.title} p. #{imgObj.pages.join(', ')}
+                    br
+                    img(src="../../img/weapons/"+imgObj.image, alt="")

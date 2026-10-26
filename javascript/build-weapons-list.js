@@ -37,7 +37,8 @@ const bookPriority = [
     SOURCE.FIGHTERS_HANDBOOK, // 1989 December
     SOURCE.PRIESTS_HANDBOOK, // 1990 May
     SAGE_ADVICE.ISSUE_158, // 1990 June
-    SOURCE.WIZARDS_HANDBOOK // 1990 June
+    SOURCE.WIZARDS_HANDBOOK, // 1990 June
+    SOURCE.AEG, // 1991 July
 ]
 for (const [weaponKey, weaponObj] of Object.entries(weapons)) {
     let fileName = weaponKey.replaceAll("_", "-").toLowerCase()

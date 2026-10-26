@@ -46,6 +46,7 @@ class Ammunition {
             damage,
             pages,
             descriptions,
+            images,
             comment,
         }
     ) {
@@ -59,6 +60,7 @@ class Ammunition {
         this.damage = damage
         this.pages = pages
         this.descriptions = descriptions
+        this.images = images
         this.comment = comment
     }
 }
@@ -97,6 +99,7 @@ class Weapon {
             pages,
             implementationVariables,
             descriptions,
+            images,
             comment
         }
     ) {
@@ -115,6 +118,7 @@ class Weapon {
         this.pages = pages
         // this.implmentationVariables = implementationVariables
         this.descriptions = descriptions
+        this.images = images
         this.comment = comment
     }
 }
@@ -513,6 +517,11 @@ const PHB_5_DOUBLE_DAMAGE_RECEIVE_CHARGE = {
 const PHB_RELATED_WEAPONS = {
     pages: [73],
     text: [`Specific decisions about which weapons are related are left to the DM. Some likely categories are:`]
+}
+
+const PHB_IMAGE_POLEARM_SPEAR = {
+    pages: [98],
+    image: 'phb_polearm_spear.png'
 }
 
 WEAPONS.Arquebus[SOURCE.PHB.id] = new Weapon({
@@ -1448,6 +1457,10 @@ WEAPONS.Bardiche[SOURCE.PHB.id] = new Weapon({
             pages: [98],
             text: [`**Bardiche:** One of the simplest of polearms, the bardiche is an elongated battle axe. A large curving axe-head is mounted on the end of a shaft 5 to 8 feet long. It probably grew out of common peasant tools and was popular with them. One relative disadvantage is that the bardiche required more space to wield than a pike or a spear.`]
         }
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
     ]
 })
 
@@ -1475,6 +1488,10 @@ WEAPONS.Bec_de_corbin[SOURCE.PHB.id] = new Weapon({
             pages: [98],
             text: [`**Bec de corbin:** This was a highly specialized weapon of the upper classes during the Late Middle Ages and the early Renaissance. It is an early can-opener designed specifically to deal with plate armor. The pick or beak is made to punch through plate, while the hammer side can be used to give a stiff blow. The end is fitted with a short blade for dealing with unarmored or helpless foes. The weapon is about 8 feet long. Since the weapon relies on impact, a great deal of swinging space is needed.`]
         }
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
     ]
 })
 
@@ -1556,6 +1573,10 @@ WEAPONS.Fauchard_fork[SOURCE.PHB.id] = new Weapon({
             pages: [98],
             text: [`**Fauchard:** An outgrowth of the sickle and scythe, the fauchard is a long, inward curving blade mounted on a shaft 6 to 8 feet long. It can slash or thrust, although the inward curving point makes thrusting rather ineffective. Its advantage is that a peasant can easily convert his common scythe into this weapon of war.`]
         }
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
     ]
 })
 
@@ -1586,6 +1607,10 @@ WEAPONS.Glaive[SOURCE.PHB.id] = new Weapon({
             pages: [98],
             text: [`**Glaive:** One of the most basic polearms, the glaive is a sin gle-edged blade mounted on an 8 to 10-foot-long shaft. While not the most efficient weapon, it is relatively easy to make and use. Normally the blade turns outward to increase the cutting area until it almost resembles a cleaver or axe.`]
         }
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
     ]
 })
 
@@ -1644,6 +1669,10 @@ WEAPONS.Guisarme[SOURCE.PHB.id] = new Weapon({
             pages: [98],
             text: [`**Guisarme:** Thought to have derived from a pruning hook, this is an elaborately curved heavy blade. While convenient and handy, it is not very effective.`]
         }
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
     ]
 })
 
@@ -1700,6 +1729,10 @@ WEAPONS.Halberd[SOURCE.PHB.id] = new Weapon({
             pages: [99],
             text: [`**Halberd:** After the awl pike and the bill, this was one of the most popular weapons of the Middle Ages. Fixed on a shaft 5 to 8 feet long is a large axe blade, angled for maximum impact. The end of the blade tapers to a long spear point or awl pike. On the back is a hook for attacking armor or dismounting riders. Originally intended to defeat cavalry, it is not tremendously successful in that role since it lacks the reach of the pike and needs considerable room to swing. It found new life against blocks of pikemen. Should the advance of the main attack stall, halberdiers issue out of the formation and attack the flanks of the enemy. The pikemen with their overlong weapons are nearly defenseless in such close combat.`]
         }
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
     ]
 })
 
@@ -1756,6 +1789,10 @@ WEAPONS.Lucern_hammer[SOURCE.PHB.id] = new Weapon({
             pages: [99],
             text: [`**Lucern hammer:** This weapon is similar to the bec de corbin. Fitted with a shaft up to 10 feet long, it is usually found in the hands of the common soldier. Like the bec de corbin, its main purpose is to punch through armor. The end is fitted with the long point of an awl pike to hold off enemy cavalry.`]
         }
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
     ]
 })
 
@@ -1786,6 +1823,10 @@ WEAPONS.Military_fork[SOURCE.PHB.id] = new Weapon({
             pages: [99],
             text: [`**Military fork:** This is one of the simplest modifications of a peasant’s tool since it is little more than a pitchfork fixed to a longer shaft. With tines strengthened and straightened, the military fork serves well. The need for cutting and cleaving eventually often results in combining the fork with other weapons.`]
         }
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
     ]
 })
 
@@ -1816,6 +1857,10 @@ WEAPONS.Partisan[SOURCE.PHB.id] = new Weapon({
             pages: [99],
             text: [`**Partisan:** Shorter than the awl pike but longer than the spear, the partisan is a broad spear-head mounted on an 8-foot-long shaft. Two smaller blades project out from the base of the main blade, just to increase damage and trap weapons. Since it is a thrusting weapon, it can be used in closely packed formations.`]
         }
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
     ]
 })
 
@@ -1846,6 +1891,10 @@ WEAPONS.Ranseur[SOURCE.PHB.id] = new Weapon({
             pages: [99],
             text: [`**Ranseur:** Very much like the partisan, the ranseur differs in that the main blade is thinner and the projecting blades extended more like tines of a fork. These can trap a weapon and sometimes punch through armor.`]
         }
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
     ]
 })
 
@@ -1876,6 +1925,10 @@ WEAPONS.Spetum[SOURCE.PHB.id] = new Weapon({
             pages: [99],
             text: [`**Spetum:** The spetum is a modification of the normal spear. The shaft increases to 8 to 10 feet and side blades are added. Some have blades that angle back, increasing the damage when pulling the weapon out of a wound. These blades can also trap and block weapons or catch and hold an opponent.`]
         }
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
     ]
 })
 
@@ -1904,6 +1957,10 @@ WEAPONS.Voulge[SOURCE.PHB.id] = new Weapon({
             pages: [99],
             text: [`**Voulge:** The voulge, like the bardiche, is a variation on the axe and the cleaver. The voulge is little more than a cleaver on the end of a long (7 to 8-foot) pole. It is a popular weapon, easy to make and simple to learn. It is also called the Lochaber axe.`]
         }
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
     ]
 })
 
@@ -2032,7 +2089,13 @@ WEAPONS.Spear[SOURCE.PHB.id] = new Weapon({
         }
     ),
 
-    descriptions: [PHB_RELATED_WEAPONS]
+    descriptions: [
+        PHB_RELATED_WEAPONS
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
+    ]
 })
 
 WEAPONS.Staff_sling[SOURCE.PHB.id] = new Weapon({
