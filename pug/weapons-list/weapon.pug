@@ -37,8 +37,8 @@ body
         each book in bookPriority
             - let indents = 0
             - let weapon = weaponObj[book.id]
-            - color = colorFlip(color)
             if weapon
+                - color = colorFlip(color)
                 +weaponRow(weapon, book, color, indents)
             - indents = 1;
             each hand in handedness
