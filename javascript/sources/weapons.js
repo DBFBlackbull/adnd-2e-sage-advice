@@ -171,6 +171,7 @@ WEAPONS.Composite_long_bow = {
         Sheaf_arrow: {},
     }
 };
+WEAPONS.Caltrop = {};
 WEAPONS.Cestus = {};
 WEAPONS.Chain = {};
 WEAPONS.Club = {
@@ -829,7 +830,6 @@ WEAPONS.Composite_long_bow.ammunition.Sheaf_arrow[SOURCE.PHB.id] = new Ammunitio
 
 WEAPONS.Club[SOURCE.PHB.id] = new Weapon({
     name: "Club",
-    cost: new Cost(0, CURRENCY.GP),
     weight_lbs: 3,
     size: SIZE.M,
     type: [WEAPON_TYPE.B],
@@ -2860,9 +2860,7 @@ WEAPONS.Cestus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     type: [WEAPON_TYPE.S],
     speed: 2,
     damage: new Damage("1d4", "1d3"),
-    proficiencies: new Proficiencies({
-        single: "No Proficiency",
-    }),
+    proficiencies: new Proficiencies({single: "No Proficiency",}),
     pages: [60, 95],
 
     descriptions: [
@@ -4666,4 +4664,347 @@ WEAPONS.Shuriken[SOURCE.WIZARDS_HANDBOOK.id] = new Weapon({
 })
 //#endregion
 
+//#region Arms and Equipment
+WEAPONS.Arquebus[SOURCE.AEG.id] = new Weapon({
+    name: "Arquebus",
+    footnote_marker: "***",
+    cost: new Cost(500, CURRENCY.GP),
+    weight_lbs: 10,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P],
+    speed: 15,
+    damage: new Damage("1d10", "1d10"),
+    proficiencies: new Proficiencies({single: "Arquebus"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+
+WEAPONS.Battle_axe[SOURCE.AEG.id] = new Weapon({
+    name: "Battle Axe",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 7,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 7,
+    damage: new Damage("1d8", "1d8"),
+    proficiencies: new Proficiencies({single: "Battle Axe"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+
+WEAPONS.Belaying_pin[SOURCE.AEG.id] = new Weapon({
+    name: "Belaying pin",
+    cost: new Cost(2, CURRENCY.CP),
+    weight_lbs: 2,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.B],
+    speed: 4,
+    damage: new Damage("1d3", "1d3"),
+    proficiencies: new Proficiencies({single: "Belaying pin"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+
+WEAPONS.Blowgun[SOURCE.AEG.id] = new Weapon({
+    name: "Blowgun",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 2,
+    size: SIZE.L,
+    speed: 5,
+    proficiencies: new Proficiencies({single: "Blowgun"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+WEAPONS.Blowgun.ammunition.Barbed_dart[SOURCE.AEG.id] = new Ammunition({
+    name: "Barbed Dart",
+    cost: new Cost(1, CURRENCY.SP),
+    weight_lbs: 0.1,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    damage: new Damage("1d3", "1d3"),
+    pages: [108],
+
+    descriptions: []
+})
+WEAPONS.Blowgun.ammunition.Needle[SOURCE.AEG.id] = new Ammunition({
+    name: "Needle",
+    cost: new Cost(2, CURRENCY.CP),
+    weight_lbs: 0.1,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    damage: new Damage("1", "1"),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Bolas[SOURCE.AEG.id] = new Weapon({
+    name: "Bolas",
+    cost: new Cost(5, CURRENCY.SP),
+    weight_lbs: 2,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.B],
+    speed: 8,
+    damage: new Damage("1d3", "1d2"),
+    proficiencies: new Proficiencies({single: "Bolas"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+
+WEAPONS.Composite_long_bow[SOURCE.AEG.id] = new Weapon({
+    name: "Composite long bow",
+    sorting_group: "Bow",
+    cost: new Cost(100, CURRENCY.GP),
+    weight_lbs: 3,
+    size: SIZE.L,
+    speed: 7,
+    proficiencies: new Proficiencies({single: "Composite long bow"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+
+WEAPONS.Composite_short_bow[SOURCE.AEG.id] = new Weapon({
+    name: "Composite short bow",
+    sorting_group: "Bow",
+    cost: new Cost(75, CURRENCY.GP),
+    weight_lbs: 2,
+    size: SIZE.M,
+    speed: 6,
+    proficiencies: new Proficiencies({single: "Composite short bow"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+
+WEAPONS.Long_bow[SOURCE.AEG.id] = new Weapon({
+    name: "Long bow",
+    sorting_group: "Bow",
+    cost: new Cost(75, CURRENCY.GP),
+    weight_lbs: 3,
+    size: SIZE.L,
+    speed: 8,
+    proficiencies: new Proficiencies({single: "Long bow"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+
+WEAPONS.Short_bow[SOURCE.AEG.id] = new Weapon({
+    name: "Short bow",
+    sorting_group: "Bow",
+    cost: new Cost(30, CURRENCY.GP),
+    weight_lbs: 2,
+    size: SIZE.M,
+    speed: 7,
+    proficiencies: new Proficiencies({single: "Short bow"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+
+WEAPONS.Short_bow.ammunition.Flight_arrow[SOURCE.AEG.id] =
+    WEAPONS.Long_bow.ammunition.Flight_arrow[SOURCE.AEG.id] =
+        WEAPONS.Composite_short_bow.ammunition.Flight_arrow[SOURCE.AEG.id] =
+            WEAPONS.Composite_long_bow.ammunition.Flight_arrow[SOURCE.AEG.id] = new Ammunition({
+                name: "Flight arrow",
+                cost: new Cost(3, CURRENCY.SP, 12),
+                weight_lbs: 0.1,
+                size: SIZE.M,
+                type: [WEAPON_TYPE.P],
+                damage: new Damage("1d6", "1d6"),
+                pages: [108],
+
+                descriptions: []
+            })
+WEAPONS.Short_bow.ammunition.Flight_arrow_stone[SOURCE.AEG.id] =
+    WEAPONS.Long_bow.ammunition.Flight_arrow_stone[SOURCE.AEG.id] =
+        WEAPONS.Composite_short_bow.ammunition.Flight_arrow_stone[SOURCE.AEG.id] =
+            WEAPONS.Composite_long_bow.ammunition.Flight_arrow_stone[SOURCE.AEG.id] = new Ammunition({
+                name: "Stone arrow, flight",
+                cost: new Cost(3, CURRENCY.CP, 12),
+                weight_lbs: 0.1,
+                size: SIZE.M,
+                type: [WEAPON_TYPE.P],
+                damage: new Damage("1d4", "1d4"),
+                pages: [108],
+
+                descriptions: []
+            })
+WEAPONS.Long_bow.ammunition.Sheaf_arrow[SOURCE.AEG.id] =
+    WEAPONS.Composite_long_bow.ammunition.Sheaf_arrow[SOURCE.AEG.id] = new Ammunition({
+        name: "Sheaf arrow",
+        cost: new Cost(3, CURRENCY.SP, 6),
+        weight_lbs: 0.1,
+        size: SIZE.M,
+        type: [WEAPON_TYPE.P],
+        damage: new Damage("1d8", "1d8"),
+        pages: [108],
+
+        descriptions: []
+    })
+
+WEAPONS.Caltrop[SOURCE.AEG.id] = new Weapon({
+    name: "Caltrop",
+    cost: new Cost(2, CURRENCY.SP),
+    weight_lbs: 0.5,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: "n/a",
+    damage: new Damage("1", "1d2"),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+
+WEAPONS.Cestus[SOURCE.AEG.id] = new Weapon({
+    name: "Cestus",
+    cost: new Cost(1, CURRENCY.GP),
+    weight_lbs: 2,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.S],
+    speed: 2,
+    damage: new Damage("1d4", "1d3"),
+    proficiencies: new Proficiencies({single: "No Proficiency"}),
+    pages: [63,108],
+
+    descriptions: [
+
+    ]
+})
+
+WEAPONS.Chain[SOURCE.AEG.id] = new Weapon({
+    name: "Chain",
+    cost: new Cost(5, CURRENCY.SP),
+    weight_lbs: 3,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.B],
+    speed: 5,
+    damage: new Damage("1d4+1", "1d4"),
+    proficiencies: new Proficiencies({single: "Chain"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+
+WEAPONS.Club[SOURCE.AEG.id] = new Weapon({
+    name: "Club",
+    weight_lbs: 3,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.B],
+    speed: 4,
+    damage: new Damage("1d6", "1d3"),
+    proficiencies: new Proficiencies({single: "Club"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+
+WEAPONS.Hand_crossbow[SOURCE.AEG.id] = new Weapon({
+    name: "Hand crossbow",
+    sorting_group: "Crossbow",
+    cost: new Cost(300, CURRENCY.GP),
+    weight_lbs: 3,
+    size: SIZE.S,
+    speed: 5,
+    proficiencies: new Proficiencies({single: "Hand crossbow"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+WEAPONS.Hand_crossbow.ammunition.Hand_quarrel[SOURCE.AEG.id] = new Ammunition({
+    name: "Hand quarrel",
+    cost: new Cost(1, CURRENCY.GP),
+    weight_lbs: 0.1,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    damage: new Damage("1d3", "1d2"),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Heavy_crossbow[SOURCE.AEG.id] = new Weapon({
+    name: "Heavy crossbow",
+    sorting_group: "Crossbow",
+    cost: new Cost(50, CURRENCY.GP),
+    weight_lbs: 14,
+    size: SIZE.M,
+    speed: 10,
+    proficiencies: new Proficiencies({single: "Heavy crossbow"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+WEAPONS.Heavy_crossbow.ammunition.Heavy_quarrel[SOURCE.AEG.id] = new Ammunition({
+    name: "Heavy quarrel",
+    cost: new Cost(2, CURRENCY.SP),
+    weight_lbs: 0.1,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    damage: new Damage("1d4+1", "1d6+1"),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Light_crossbow[SOURCE.AEG.id] = new Weapon({
+    name: "Light crossbow",
+    sorting_group: "Crossbow",
+    cost: new Cost(35, CURRENCY.GP),
+    weight_lbs: 7,
+    size: SIZE.S,
+    speed: 7,
+    proficiencies: new Proficiencies({single: "Light crossbow"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+WEAPONS.Light_crossbow.ammunition.Light_quarrel[SOURCE.AEG.id] = new Ammunition({
+    name: "Light quarrel",
+    cost: new Cost(1, CURRENCY.SP),
+    weight_lbs: 0.1,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P],
+    damage: new Damage("1d4", "1d4"),
+    pages: [108],
+
+    descriptions: []
+})
+//#endregion
 module.exports = WEAPONS;
