@@ -437,8 +437,10 @@ WEAPONS.Bastard_sword = {
     }
 };
 WEAPONS.Broad_sword = {};
+WEAPONS.Claymore = {};
 WEAPONS.Cutlass = {};
 WEAPONS.Drusus = {};
+WEAPONS.Falchion = {};
 WEAPONS.Katana = {
     grip: {
         [HANDEDNESS.ONE_HANDED.id]: {},
@@ -2213,7 +2215,7 @@ WEAPONS.Khopesh[SOURCE.PHB.id] = new Weapon({
     weight_lbs: 7,
     size: SIZE.M,
     type: [WEAPON_TYPE.S],
-    speed: 8,
+    speed: 9,
     damage: new Damage("2d4", "1d6"),
     proficiencies: new Proficiencies({single: "Khopesh"}),
     pages: [95],
@@ -5882,7 +5884,7 @@ WEAPONS.Staff_sling[SOURCE.AEG.id] = new Weapon({
     size: SIZE.M,
     speed: 11,
     proficiencies: new Proficiencies({single: "Staff sling"}),
-    pages: [108],
+    pages: [109],
 
     descriptions: [
 
@@ -5907,11 +5909,224 @@ WEAPONS.Stiletto[SOURCE.AEG.id] = new Weapon({
     speed: 2,
     damage: new Damage("1d3", "1d2"),
     proficiencies: new Proficiencies({single: "Stiletto"}),
-    pages: [108],
+    pages: [109],
 
     descriptions: [
 
     ]
+})
+
+WEAPONS.Bastard_sword[SOURCE.AEG.id] = new Weapon({
+    name: "Bastard sword",
+    sorting_group: "Sword",
+    proficiencies: new Proficiencies({single: "Bastard sword"}),
+    pages: [109],
+
+    descriptions: [
+
+    ]
+})
+WEAPONS.Bastard_sword.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "One-handed",
+    cost: new Cost(25, CURRENCY.GP),
+    weight_lbs: 10,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 6,
+    damage: new Damage("1d8", "1d12"),
+    pages: [109]
+})
+WEAPONS.Bastard_sword.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "Two-handed",
+    cost: new Cost(25, CURRENCY.GP),
+    weight_lbs: 10,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 8,
+    damage: new Damage("2d4", "2d8"),
+    pages: [109]
+})
+
+WEAPONS.Broad_sword[SOURCE.AEG.id] = new Weapon({
+    name: "Broad sword",
+    sorting_group: "Sword",
+    cost: new Cost(10, CURRENCY.GP),
+    weight_lbs: 4,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 5,
+    damage: new Damage("2d4", "1d6+1"),
+    proficiencies: new Proficiencies({single: "Broad sword"}),
+    pages: [109],
+
+    descriptions: []
+})
+
+WEAPONS.Claymore[SOURCE.AEG.id] = new Weapon({
+    name: "Claymore",
+    sorting_group: "Sword",
+    cost: new Cost(25, CURRENCY.GP),
+    weight_lbs: 10,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 8,
+    damage: new Damage("2d4", "2d8"),
+    proficiencies: new Proficiencies({single: "Claymore"}),
+    pages: [109],
+
+    descriptions: []
+})
+
+WEAPONS.Cutlass[SOURCE.AEG.id] = new Weapon({
+    name: "Cutlass",
+    sorting_group: "Sword",
+    cost: new Cost(12, CURRENCY.GP),
+    weight_lbs: 4,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 5,
+    damage: new Damage("1d6", "1d8"),
+    proficiencies: new Proficiencies({single: "Cutlass"}),
+    pages: [109],
+
+    descriptions: []
+})
+
+WEAPONS.Drusus[SOURCE.AEG.id] = new Weapon({
+    name: "Drusus",
+    sorting_group: "Sword",
+    cost: new Cost(50, CURRENCY.GP),
+    weight_lbs: 3,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 3,
+    damage: new Damage("1d6+1", "1d8+1"),
+    proficiencies: new Proficiencies({single: "Drusus"}),
+    pages: [109],
+
+    descriptions: []
+})
+
+WEAPONS.Falchion[SOURCE.AEG.id] = new Weapon({
+    name: "Falchion",
+    sorting_group: "Sword",
+    cost: new Cost(17, CURRENCY.GP),
+    weight_lbs: 8,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 5,
+    damage: new Damage("1d6+1", "2d4"),
+    proficiencies: new Proficiencies({single: "Falchion"}),
+    pages: [109],
+
+    descriptions: []
+})
+
+WEAPONS.Khopesh[SOURCE.AEG.id] = new Weapon({
+    name: "Khopesh",
+    sorting_group: "Sword",
+    cost: new Cost(10, CURRENCY.GP),
+    weight_lbs: 7,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 9,
+    damage: new Damage("2d4", "1d6"),
+    proficiencies: new Proficiencies({single: "Khopesh"}),
+    pages: [109],
+
+    descriptions: []
+})
+
+WEAPONS.Long_sword[SOURCE.AEG.id] = new Weapon({
+    name: "Long sword",
+    sorting_group: "Sword",
+    cost: new Cost(15, CURRENCY.GP),
+    weight_lbs: 4,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 5,
+    damage: new Damage("1d8", "1d12"),
+    proficiencies: new Proficiencies({single: "Long sword"}),
+    pages: [109],
+
+    descriptions: []
+})
+
+WEAPONS.Rapier[SOURCE.AEG.id] = new Weapon({
+    name: "Rapier",
+    sorting_group: "Sword",
+    cost: new Cost(15, CURRENCY.GP),
+    weight_lbs: 4,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P],
+    speed: 4,
+    damage: new Damage("1d6+1", "1d8+1"),
+    proficiencies: new Proficiencies({single: "Rapier"}),
+    pages: [109],
+
+    descriptions: []
+})
+
+WEAPONS.Sabre[SOURCE.AEG.id] = new Weapon({
+    name: "Sabre",
+    sorting_group: "Sword",
+    cost: new Cost(17, CURRENCY.GP),
+    weight_lbs: 5,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 4,
+    damage: new Damage("1d6+1", "1d8+1"),
+    proficiencies: new Proficiencies({single: "Sabre"}),
+    pages: [109],
+
+    descriptions: []
+})
+
+WEAPONS.Scimitar[SOURCE.AEG.id] = new Weapon({
+    name: "Scimitar",
+    sorting_group: "Sword",
+    cost: new Cost(15, CURRENCY.GP),
+    weight_lbs: 4,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 5,
+    damage: new Damage("1d8", "1d8"),
+    proficiencies: new Proficiencies({single: "Scimitar"}),
+    pages: [109],
+
+    descriptions: []
+})
+
+WEAPONS.Short_sword[SOURCE.AEG.id] = new Weapon({
+    name: "Short sword",
+    sorting_group: "Sword",
+    cost: new Cost(10, CURRENCY.GP),
+    weight_lbs: 3,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P],
+    speed: 3,
+    damage: new Damage("1d6", "1d8"),
+    proficiencies: new Proficiencies({single: "Short sword"}),
+    pages: [109],
+
+    descriptions: [],
+
+    comment: `Size M looks incorrect. Short swords are an offhand weapon.`
+})
+
+WEAPONS.Two_handed_sword[SOURCE.AEG.id] = new Weapon({
+    name: "Two-handed sword",
+    sorting_group: "Sword",
+    cost: new Cost(50, CURRENCY.GP),
+    weight_lbs: 15,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.S],
+    speed: 10,
+    damage: new Damage("1d10", "3d6"),
+    proficiencies: new Proficiencies({single: "Two-handed sword"}),
+    pages: [109],
+
+    descriptions: []
 })
 //#endregion
 module.exports = WEAPONS;
