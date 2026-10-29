@@ -401,6 +401,7 @@ WEAPONS.Sling = {
 WEAPONS.Staff_sling = {
     ammunition: {
         Bullet: {},
+        Stinkpot: {},
         Stone: {},
     }
 };
@@ -5871,5 +5872,29 @@ WEAPONS.Spear_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.AEG.id] = new Weapon({
 
     descriptions: []
 })
+
+WEAPONS.Staff_sling[SOURCE.AEG.id] = new Weapon({
+    name: "Staff sling",
+    cost: new Cost(2, CURRENCY.SP),
+    weight_lbs: 2,
+    size: SIZE.M,
+    speed: 11,
+    proficiencies: new Proficiencies({single: "Staff sling"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
+WEAPONS.Staff_sling.ammunition.Stinkpot[SOURCE.AEG.id] = new Ammunition({
+    name: "Stinkpot",
+    cost: new Cost(1, CURRENCY.SP),
+    weight_lbs: 2,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.B],
+    damage: new Damage("1d3", "1d3"),
+    pages: [109],
+})
+
 //#endregion
 module.exports = WEAPONS;
