@@ -5898,5 +5898,20 @@ WEAPONS.Staff_sling.ammunition.Stinkpot[SOURCE.AEG.id] = new Ammunition({
     pages: [109],
 })
 
+WEAPONS.Stiletto[SOURCE.AEG.id] = new Weapon({
+    name: "Stiletto",
+    cost: new Cost(5, CURRENCY.SP),
+    weight_lbs: 0.5,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: 2,
+    damage: new Damage("1d3", "1d2"),
+    proficiencies: new Proficiencies({single: "Stiletto"}),
+    pages: [108],
+
+    descriptions: [
+
+    ]
+})
 //#endregion
 module.exports = WEAPONS;
