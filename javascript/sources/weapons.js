@@ -4993,7 +4993,9 @@ WEAPONS.Light_crossbow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Light crossbow"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [],
+
+    comment: `Size of Light Crossbow and Light quarrel looks to be swapped.`
 })
 WEAPONS.Light_crossbow.ammunition.Light_quarrel[SOURCE.AEG.id] = new Ammunition({
     name: "Light quarrel",
