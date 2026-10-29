@@ -5191,7 +5191,7 @@ WEAPONS.Javelin[SOURCE.AEG.id] = new Weapon({
 
     descriptions: [],
 
-    comment: `Size L looks like a type as a weapon intended to be thrown should generally be size M (a one-handed weapon).`
+    comment: `Size L looks like a typo as a weapon intended to be thrown should generally be size M (a one-handed weapon).`
 })
 WEAPONS.Javelin.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.AEG.id] = new Weapon({
     name: "One-handed",

@@ -152,11 +152,11 @@ mixin descriptionEntries(descriptions, book, usedEntries)
     each entry in descriptions
         if usedEntries[entry.text.toString()]
             - continue
+        - usedEntries[entry.text.toString()] = true
         p
             span(class="title") #{book.title} p. #{entry.pages.join(', ')}
             br
             span(class="entry") !{formatInput(entry.text, book.id, entry.pages)}
-            - usedEntries[entry.text.toString()] = true
             if entry.optional
                 br
                 span(class="optional") &emsp;!{formatInput(entry.optional, book.id, entry.pages)}
@@ -165,3 +165,14 @@ mixin descriptionEntries(descriptions, book, usedEntries)
                     strong
                         em Comment:
                     |  !{formatInput(entry.comment, book.id, entry.pages)}
+
+mixin comments(obj, book, usedEntries)
+    if usedEntries[obj.comment]
+        - return
+    - usedEntries[obj.comment] = true
+    span(class="title") #{book.title} p. #{obj.pages.join(', ')}
+    br
+    span(class="comment")
+        strong
+            em Comment:
+        |  !{formatInput(obj.comment, book.shortTitle, obj.pages)}

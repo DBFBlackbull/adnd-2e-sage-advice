@@ -57,10 +57,7 @@ body
             if weapon.descriptions
                 +descriptionEntries(weapon.descriptions, book, usedEntries)
             if weapon.comment
-                span(class="comment")
-                    strong
-                        em Comment:
-                    |  !{formatInput(weapon.comment, book.shortTitle, "")}
+                +comments(weapon, book, usedEntries)
         each hand in handedness
             - let grip = weaponObj.grip?.[hand.id]?.[book.id]
             if grip && grip.descriptions
@@ -72,10 +69,7 @@ body
                     if ammo.descriptions
                         +descriptionEntries(ammo.descriptions, book, usedEntries)
                     if ammo.comment
-                        span(class="comment")
-                            strong
-                                em Comment:
-                            |  !{formatInput(ammo.comment, book.shortTitle, "")}
+                        +comments(ammo, book, usedEntries)
     each book in bookPriority
         - let weapon = weaponObj[book.id]
         if weapon && weapon.images
