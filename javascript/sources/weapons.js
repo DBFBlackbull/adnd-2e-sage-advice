@@ -6128,5 +6128,62 @@ WEAPONS.Two_handed_sword[SOURCE.AEG.id] = new Weapon({
 
     descriptions: []
 })
+
+WEAPONS.Trident[SOURCE.AEG.id] = new Weapon({
+    name: "Trident",
+    proficiencies: new Proficiencies({single: "Trident"}),
+    pages: [109],
+
+    descriptions: [
+
+    ]
+})
+WEAPONS.Trident.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "One-handed",
+    cost: new Cost(15, CURRENCY.GP),
+    weight_lbs: 5,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 7,
+    damage: new Damage("1d6+1", "3d4"),
+    pages: [109]
+})
+WEAPONS.Trident.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "Two-handed",
+    cost: new Cost(15, CURRENCY.GP),
+    weight_lbs: 5,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 7,
+    damage: new Damage("1d8+1", "3d4"),
+    pages: [109]
+})
+
+WEAPONS.Warhammer[SOURCE.AEG.id] = new Weapon({
+    name: "War hammer",
+    cost: new Cost(2, CURRENCY.GP),
+    weight_lbs: 6,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.B],
+    speed: 4,
+    damage: new Damage("1d4+1", "1d4"),
+    proficiencies: new Proficiencies({single: "War hammer"}),
+    pages: [109],
+
+    descriptions: []
+})
+
+WEAPONS.Whip[SOURCE.AEG.id] = new Weapon({
+    name: "Whip",
+    cost: new Cost(1, CURRENCY.SP),
+    weight_lbs: 2,
+    size: SIZE.M,
+    speed: 8,
+    damage: new Damage("1d2", "1"),
+    proficiencies: new Proficiencies({single: "Whip"}),
+    pages: [109],
+
+    descriptions: []
+})
 //#endregion
 module.exports = WEAPONS;
