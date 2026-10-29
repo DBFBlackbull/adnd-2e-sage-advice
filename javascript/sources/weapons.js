@@ -201,6 +201,7 @@ WEAPONS.Heavy_crossbow = {
 };
 WEAPONS.Dagger = {};
 WEAPONS.Dagger_bone = {};
+WEAPONS.Dagger_parrying = {};
 WEAPONS.Dagger_stone = {};
 WEAPONS.Dart = {};
 WEAPONS.Footmans_flail = {
@@ -386,6 +387,7 @@ WEAPONS.Quarterstaff = {
     }
 };
 WEAPONS.Sai = {};
+WEAPONS.Sap = {};
 WEAPONS.Scourge = {};
 WEAPONS.Scythe = {};
 WEAPONS.Shuriken = {};
@@ -2469,7 +2471,7 @@ const FIGHTERS_HANDBOOK_CHAIN_LASSO_NET = {
 
 const FIGHTERS_HANDBOOK_ASTRIX_ROF_SPECIAL = {
     pages: [94],
-    text: [`The "*" means the weapon doesn't precisely have a rate of fire; it may be used as often as the character's level (and perhaps specialization) dictates for a melee weapon.`]
+    text: [`The "&ast;" means the weapon doesn't precisely have a rate of fire; it may be used as often as the character's level (and perhaps specialization) dictates for a melee weapon.`]
 }
 
 const FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY = {
@@ -2533,7 +2535,7 @@ WEAPONS.Harpoon[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         tight: [PROFICIENCIES.FIGHTERS.TIGHT.SPEARS],
         broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
     }),
-    pages: [59,60,93],
+    pages: [59, 60, 93],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -2573,7 +2575,7 @@ WEAPONS.Javelin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         tight: [PROFICIENCIES.FIGHTERS.TIGHT.SPEARS],
         broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
     }),
-    pages: [59,60,93],
+    pages: [59, 60, 93],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -2615,7 +2617,7 @@ WEAPONS.Spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         tight: [PROFICIENCIES.FIGHTERS.TIGHT.SPEARS],
         broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
     }),
-    pages: [59,60,93],
+    pages: [59, 60, 93],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -2662,7 +2664,7 @@ WEAPONS.Long_spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         tight: [PROFICIENCIES.FIGHTERS.TIGHT.SPEARS],
         broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
     }),
-    pages: [59,60,93,95],
+    pages: [59, 60, 93, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -2672,14 +2674,14 @@ WEAPONS.Long_spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] =
     name: "One-handed",
     speed: 8,
     damage: new Damage("1d8", "1d8+1"),
-    pages: [93,95],
+    pages: [93, 95],
 }
 WEAPONS.Long_spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-handed",
     footnote_marker: "#",
     speed: 8,
     damage: new Damage("2d6", "3d6"),
-    pages: [93,95],
+    pages: [93, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
@@ -2705,7 +2707,7 @@ WEAPONS.Trident[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         tight: [PROFICIENCIES.FIGHTERS.TIGHT.SPEARS],
         broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
     }),
-    pages: [59,60,93],
+    pages: [59, 60, 93],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -2767,7 +2769,7 @@ WEAPONS.Belaying_pin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         tight: [PROFICIENCIES.FIGHTERS.TIGHT.CLUBBING],
         broad: [PROFICIENCIES.FIGHTERS.BROAD.CLEAVING_CRUSHING]
     }),
-    pages: [59,60,95],
+    pages: [59, 60, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -2800,7 +2802,7 @@ WEAPONS.Bo_stick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     descriptions: [
         FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
         {
-            pages: [100,101],
+            pages: [100, 101],
             text: [
                 `**Bo Stick**`,
                 `The bo stick is an ordinary hardwood staff, the height of a man or slightly taller.`,
@@ -3031,8 +3033,9 @@ const FIGHTERS_HANDBOOK_GAFF_HOOK_DESCRIPTION = {
     ]
 }
 WEAPONS.Gaff_hook_attached[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
-    name: "Gaff/hook Attached",
+    name: "Attached",
     footnote_marker: "!",
+    sorting_group: "Gaff/hook",
     cost: new Cost(2, CURRENCY.GP),
     weight_lbs: 2,
     size: SIZE.S,
@@ -3051,8 +3054,9 @@ WEAPONS.Gaff_hook_attached[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 })
 
 WEAPONS.Gaff_hook_held[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
-    name: "Gaff/hook Held",
+    name: "Held",
     footnote_marker: "!",
+    sorting_group: "Gaff/hook",
     cost: new Cost(5, CURRENCY.CP),
     weight_lbs: 2,
     size: SIZE.S,
@@ -3083,7 +3087,7 @@ WEAPONS.Javelin_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         tight: [PROFICIENCIES.FIGHTERS.TIGHT.SPEARS],
         broad: [PROFICIENCIES.FIGHTERS.BROAD.POLE_WEAPONS]
     }),
-    pages: [59, 60,95],
+    pages: [59, 60, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_PERCENTAGE_ONE_OR_TWO_HANDED,
@@ -3096,7 +3100,7 @@ WEAPONS.Javelin_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.FIGHTERS_HANDBOOK.id
     rate_of_fire: "1",
     range: new Range(2, 4, 6),
     damage: new Damage("1d4", "1d4"),
-    pages: [94,95],
+    pages: [94, 95],
 
     descriptions: [FIGHTERS_HANDBOOK_ONE_HAND_THROW]
 }
@@ -3120,7 +3124,7 @@ WEAPONS.Knife[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         tight: [PROFICIENCIES.FIGHTERS.TIGHT.FENCING_BLADES, PROFICIENCIES.FIGHTERS.TIGHT.SHORT_BLADES],
         broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES, PROFICIENCIES.FIGHTERS.BROAD.SMALL_THROWING]
     }),
-    pages: [59,60]
+    pages: [59, 60]
 })
 
 WEAPONS.Knife_bone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3139,7 +3143,7 @@ WEAPONS.Knife_bone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         tight: [PROFICIENCIES.FIGHTERS.TIGHT.FENCING_BLADES, PROFICIENCIES.FIGHTERS.TIGHT.SHORT_BLADES],
         broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES, PROFICIENCIES.FIGHTERS.BROAD.SMALL_THROWING]
     }),
-    pages: [59,60,94, 95],
+    pages: [59, 60, 94, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -3163,7 +3167,7 @@ WEAPONS.Knife_stone[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         tight: [PROFICIENCIES.FIGHTERS.TIGHT.FENCING_BLADES, PROFICIENCIES.FIGHTERS.TIGHT.SHORT_BLADES],
         broad: [PROFICIENCIES.FIGHTERS.BROAD.BLADES, PROFICIENCIES.FIGHTERS.BROAD.SMALL_THROWING]
     }),
-    pages: [59,60,94, 95],
+    pages: [59, 60, 94, 95],
 
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
@@ -3190,7 +3194,7 @@ WEAPONS.Lasso[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         FIGHTERS_HANDBOOK_ASTRIX_ROF_SPECIAL,
         FIGHTERS_HANDBOOK_CHAIN_LASSO_NET,
         {
-            pages: [98,99],
+            pages: [98, 99],
             text: [
                 `**Lasso**`,
                 `The lasso, or lariat, is a length of rope with a loop at the end; the wielder holds the slack in his off-hand, twirls the lasso in his other hand, and hurls the loop at his target. on a successful hit, the lariat settles over the target, giving the wielder the chance to dismount him, pull him to the ground, trip him, etc.`,
@@ -3331,7 +3335,7 @@ WEAPONS.Naginata[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
         FIGHTERS_HANDBOOK_AMPERSAND_TWO_HANDED_ONLY,
         FIGHTERS_HANDBOOK_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE,
         {
-            pages: [101,102],
+            pages: [101, 102],
             text: [
                 `**Naginata**`,
                 `This is a polearm, a 6' to 8' shaft with a curved, sword-like blade at the end. It's the favored weapon of the female fighters of the orient, but they are not limited to it, nor is it limited to them.`,
@@ -3582,7 +3586,7 @@ WEAPONS.Drusus[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     descriptions: [
         FIGHTERS_HANDBOOK_EXCLAMATION_ONE_HANDED_ONLY,
         {
-            pages: [96,98],
+            pages: [96, 98],
             text: [
                 `**Drusus**`,
                 `The Drusus is a Gladius (short sword) of Exceptional quality (as per the types of weapon quality described in the *Character Creation* chapter of this rule book). It looks just like an ordinary gladius; only be testing the sharpness of the blade can someone tell the difference. The Drusus has been forged so that the metal is better-tempered and holds an edge better, and then sharpened until it has a razorlike edge.`,
@@ -4665,6 +4669,31 @@ WEAPONS.Shuriken[SOURCE.WIZARDS_HANDBOOK.id] = new Weapon({
 //#endregion
 
 //#region Arms and Equipment
+const AEG_ASTERISK_DOUBLE_DAMAGE_AGAINST_L_CHARGE = {
+    pages: [109],
+    text: [`&ast; This weapon inflicts double damage against charging creatures of L or greater size.`]
+}
+
+const AEG_2xASTERISK_DISMOUNT_RIDER = {
+    pages: [109],
+    text: [`&ast;&ast; This weapon can dismount a rider on a successful hit.`]
+}
+
+const AEG_3xASTERISK_ALLOWED_BY_DM = {
+    pages: [109],
+    text: [`&ast;&ast;&ast; This weapon available only if allowed by the DM.`]
+}
+
+const AEG_AT_DOUBLE_DAMAGE_CHARGING_MOUNT = {
+    pages: [109],
+    text: [`@ This weapon inflicts double damage when used from the back of a charging mount.`]
+}
+
+const AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE = {
+    pages: [109],
+    text: [`# This weapon inflicts double damage when firmly set to receive a charge.`]
+}
+
 WEAPONS.Arquebus[SOURCE.AEG.id] = new Weapon({
     name: "Arquebus",
     footnote_marker: "***",
@@ -4678,7 +4707,7 @@ WEAPONS.Arquebus[SOURCE.AEG.id] = new Weapon({
     pages: [108],
 
     descriptions: [
-
+        AEG_3xASTERISK_ALLOWED_BY_DM
     ]
 })
 
@@ -4693,9 +4722,7 @@ WEAPONS.Battle_axe[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Battle Axe"}),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 
 WEAPONS.Belaying_pin[SOURCE.AEG.id] = new Weapon({
@@ -4709,9 +4736,7 @@ WEAPONS.Belaying_pin[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Belaying pin"}),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 
 WEAPONS.Blowgun[SOURCE.AEG.id] = new Weapon({
@@ -4723,9 +4748,7 @@ WEAPONS.Blowgun[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Blowgun"}),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 WEAPONS.Blowgun.ammunition.Barbed_dart[SOURCE.AEG.id] = new Ammunition({
     name: "Barbed Dart",
@@ -4761,9 +4784,7 @@ WEAPONS.Bolas[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Bolas"}),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 
 WEAPONS.Composite_long_bow[SOURCE.AEG.id] = new Weapon({
@@ -4776,9 +4797,7 @@ WEAPONS.Composite_long_bow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Composite long bow"}),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 
 WEAPONS.Composite_short_bow[SOURCE.AEG.id] = new Weapon({
@@ -4791,9 +4810,7 @@ WEAPONS.Composite_short_bow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Composite short bow"}),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 
 WEAPONS.Long_bow[SOURCE.AEG.id] = new Weapon({
@@ -4806,9 +4823,7 @@ WEAPONS.Long_bow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Long bow"}),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 
 WEAPONS.Short_bow[SOURCE.AEG.id] = new Weapon({
@@ -4821,9 +4836,7 @@ WEAPONS.Short_bow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Short bow"}),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 
 WEAPONS.Short_bow.ammunition.Flight_arrow[SOURCE.AEG.id] =
@@ -4877,9 +4890,7 @@ WEAPONS.Caltrop[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1", "1d2"),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 
 WEAPONS.Cestus[SOURCE.AEG.id] = new Weapon({
@@ -4891,11 +4902,9 @@ WEAPONS.Cestus[SOURCE.AEG.id] = new Weapon({
     speed: 2,
     damage: new Damage("1d4", "1d3"),
     proficiencies: new Proficiencies({single: "No Proficiency"}),
-    pages: [63,108],
+    pages: [63, 108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 
 WEAPONS.Chain[SOURCE.AEG.id] = new Weapon({
@@ -4909,9 +4918,7 @@ WEAPONS.Chain[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Chain"}),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 
 WEAPONS.Club[SOURCE.AEG.id] = new Weapon({
@@ -4924,9 +4931,7 @@ WEAPONS.Club[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Club"}),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 
 WEAPONS.Hand_crossbow[SOURCE.AEG.id] = new Weapon({
@@ -4939,9 +4944,7 @@ WEAPONS.Hand_crossbow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Hand crossbow"}),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 WEAPONS.Hand_crossbow.ammunition.Hand_quarrel[SOURCE.AEG.id] = new Ammunition({
     name: "Hand quarrel",
@@ -4965,9 +4968,7 @@ WEAPONS.Heavy_crossbow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Heavy crossbow"}),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 WEAPONS.Heavy_crossbow.ammunition.Heavy_quarrel[SOURCE.AEG.id] = new Ammunition({
     name: "Heavy quarrel",
@@ -4991,9 +4992,7 @@ WEAPONS.Light_crossbow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Light crossbow"}),
     pages: [108],
 
-    descriptions: [
-
-    ]
+    descriptions: []
 })
 WEAPONS.Light_crossbow.ammunition.Light_quarrel[SOURCE.AEG.id] = new Ammunition({
     name: "Light quarrel",
@@ -5003,6 +5002,872 @@ WEAPONS.Light_crossbow.ammunition.Light_quarrel[SOURCE.AEG.id] = new Ammunition(
     type: [WEAPON_TYPE.P],
     damage: new Damage("1d4", "1d4"),
     pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Dagger[SOURCE.AEG.id] = new Weapon({
+    name: "Dagger or dirk",
+    cost: new Cost(2, CURRENCY.GP),
+    weight_lbs: 1,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: 2,
+    damage: new Damage("1d4", "1d3"),
+    proficiencies: new Proficiencies({single: "Dagger or dirk"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Dagger_bone[SOURCE.AEG.id] = new Weapon({
+    name: "Bone dagger",
+    sorting_group: "Dagger or dirk",
+    cost: new Cost(1, CURRENCY.SP),
+    weight_lbs: 1,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: 2,
+    damage: new Damage("1d2", "1d2"),
+    proficiencies: new Proficiencies({single: "Dagger or dirk"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Dagger_parrying[SOURCE.AEG.id] = new Weapon({
+    name: "Parrying dagger",
+    sorting_group: "Dagger or dirk",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 1,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: 2,
+    damage: new Damage("1d3", "1d3"),
+    proficiencies: new Proficiencies({single: "Parrying dagger"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Dagger_stone[SOURCE.AEG.id] = new Weapon({
+    name: "Stone dagger",
+    sorting_group: "Dagger or dirk",
+    cost: new Cost(2, CURRENCY.SP),
+    weight_lbs: 1,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: 2,
+    damage: new Damage("1d3", "1d2"),
+    proficiencies: new Proficiencies({single: "Dagger or dirk"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Dart[SOURCE.AEG.id] = new Weapon({
+    name: "Dart",
+    cost: new Cost(5, CURRENCY.SP),
+    weight_lbs: 0.5,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: 2,
+    damage: new Damage("1d3", "1d2"),
+    proficiencies: new Proficiencies({single: "Dart"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Footmans_flail[SOURCE.AEG.id] = new Weapon({
+    name: "Flail, Footman's",
+    cost: new Cost(15, CURRENCY.GP),
+    weight_lbs: 15,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.B],
+    speed: 7,
+    damage: new Damage("1d6+1", "2d4"),
+    proficiencies: new Proficiencies({single: "Footman's Flail"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Horsemans_flail[SOURCE.AEG.id] = new Weapon({
+    name: "Flail, Horseman's",
+    cost: new Cost(8, CURRENCY.GP),
+    weight_lbs: 5,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.B],
+    speed: 6,
+    damage: new Damage("1d4+1", "1d4+1"),
+    proficiencies: new Proficiencies({single: "Horseman's Flail"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Gaff_hook_attached[SOURCE.AEG.id] = new Weapon({
+    name: "Attached",
+    sorting_group: "Gaff/Hook",
+    cost: new Cost(2, CURRENCY.GP),
+    weight_lbs: 2,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: 2,
+    damage: new Damage("1d4", "1d3"),
+    proficiencies: new Proficiencies({single: "Gaff/Hook"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Gaff_hook_held[SOURCE.AEG.id] = new Weapon({
+    name: "Held",
+    sorting_group: "Gaff/Hook",
+    cost: new Cost(5, CURRENCY.CP),
+    weight_lbs: 2,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P],
+    speed: 2,
+    damage: new Damage("1d4", "1d3"),
+    proficiencies: new Proficiencies({single: "Gaff/Hook"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Hand_axe[SOURCE.AEG.id] = new Weapon({
+    name: "Hand/Throwing axe",
+    cost: new Cost(1, CURRENCY.GP),
+    weight_lbs: 5,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.S],
+    speed: 4,
+    damage: new Damage("1d6", "1d4"),
+    proficiencies: new Proficiencies({single: "Hand/Throwing axe"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Harpoon[SOURCE.AEG.id] = new Weapon({
+    name: "Harpoon",
+    proficiencies: new Proficiencies({single: "Harpoon"}),
+    pages: [108],
+
+    descriptions: []
+})
+WEAPONS.Harpoon.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "One-handed",
+    cost: new Cost(20, CURRENCY.GP),
+    weight_lbs: 6,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 7,
+    damage: new Damage("1d4+1", "1d6+1"),
+    pages: [108],
+})
+WEAPONS.Harpoon.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "Two-handed",
+    cost: new Cost(20, CURRENCY.GP),
+    weight_lbs: 6,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 7,
+    damage: new Damage("2d4", "2d6"),
+    pages: [108],
+})
+
+WEAPONS.Javelin[SOURCE.AEG.id] = new Weapon({
+    name: "Javelin",
+    proficiencies: new Proficiencies({single: "Javelin"}),
+    pages: [108],
+
+    descriptions: [],
+
+    comment: `Size L looks like a type as a weapon intended to be thrown should generally be size M (a one-handed weapon).`
+})
+WEAPONS.Javelin.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "One-handed",
+    cost: new Cost(5, CURRENCY.SP),
+    weight_lbs: 2,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 4,
+    damage: new Damage("1d4", "1d4"),
+    pages: [108],
+})
+WEAPONS.Javelin.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "Two-handed",
+    cost: new Cost(5, CURRENCY.SP),
+    weight_lbs: 2,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 4,
+    damage: new Damage("1d6", "1d6"),
+    pages: [108],
+})
+
+WEAPONS.Javelin_stone[SOURCE.AEG.id] = new Weapon({
+    name: "Javelin, Stone",
+    proficiencies: new Proficiencies({single: "Javelin"}),
+    pages: [108],
+
+    descriptions: []
+})
+WEAPONS.Javelin_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "One-handed",
+    cost: new Cost(5, CURRENCY.CP),
+    weight_lbs: 2,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P],
+    speed: 4,
+    damage: new Damage("1d4", "1d4"),
+    pages: [108],
+})
+WEAPONS.Javelin_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "Two-handed",
+    cost: new Cost(5, CURRENCY.CP),
+    weight_lbs: 2,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P],
+    speed: 4,
+    damage: new Damage("1d4+1", "1d6"),
+    pages: [108],
+})
+
+WEAPONS.Knife[SOURCE.AEG.id] = new Weapon({
+    name: "Knife",
+    cost: new Cost(5, CURRENCY.SP),
+    weight_lbs: 0.5,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 2,
+    damage: new Damage("1d3", "1d2"),
+    proficiencies: new Proficiencies({single: "Knife"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Knife_bone[SOURCE.AEG.id] = new Weapon({
+    name: "Bone knife",
+    sorting_group: "Knife",
+    cost: new Cost(3, CURRENCY.CP),
+    weight_lbs: 0.5,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 2,
+    damage: new Damage("1d2", "1d2"),
+    proficiencies: new Proficiencies({single: "Knife"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Knife_stone[SOURCE.AEG.id] = new Weapon({
+    name: "Stone knife",
+    sorting_group: "Knife",
+    cost: new Cost(5, CURRENCY.CP),
+    weight_lbs: 0.5,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 2,
+    damage: new Damage("1d2", "1d2"),
+    proficiencies: new Proficiencies({single: "Knife"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Heavy_horse_lance[SOURCE.AEG.id] = new Weapon({
+    name: "Heavy horse lance",
+    footnote_marker: "@",
+    sorting_group: "Lance",
+    cost: new Cost(15, CURRENCY.GP),
+    weight_lbs: 15,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 8,
+    damage: new Damage("1d8+1", "3d6"),
+    proficiencies: new Proficiencies({single: "Heavy horse lance"}),
+    pages: [108],
+
+    descriptions: [
+        AEG_AT_DOUBLE_DAMAGE_CHARGING_MOUNT
+    ]
+})
+
+WEAPONS.Jousting_lance[SOURCE.AEG.id] = new Weapon({
+    name: "Jousting lance",
+    footnote_marker: "@",
+    sorting_group: "Lance",
+    cost: new Cost(20, CURRENCY.GP),
+    weight_lbs: 20,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 10,
+    damage: new Damage("1d3-1", "1d2-1"),
+    proficiencies: new Proficiencies({single: "Jousting lance"}),
+    pages: [108],
+
+    descriptions: [
+        AEG_AT_DOUBLE_DAMAGE_CHARGING_MOUNT
+    ]
+})
+
+WEAPONS.Light_horse_lance[SOURCE.AEG.id] = new Weapon({
+    name: "Light horse lance",
+    footnote_marker: "@",
+    sorting_group: "Lance",
+    cost: new Cost(6, CURRENCY.GP),
+    weight_lbs: 5,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 6,
+    damage: new Damage("1d6", "1d8"),
+    proficiencies: new Proficiencies({single: "Light horse lance"}),
+    pages: [108],
+
+    descriptions: [
+        AEG_AT_DOUBLE_DAMAGE_CHARGING_MOUNT
+    ]
+})
+
+WEAPONS.Medium_horse_lance[SOURCE.AEG.id] = new Weapon({
+    name: "Medium horse lance",
+    footnote_marker: "@",
+    sorting_group: "Lance",
+    cost: new Cost(10, CURRENCY.GP),
+    weight_lbs: 10,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 7,
+    damage: new Damage("1d6+1", "2d6"),
+    proficiencies: new Proficiencies({single: "Medium horse lance"}),
+    pages: [108],
+
+    descriptions: [
+        AEG_AT_DOUBLE_DAMAGE_CHARGING_MOUNT
+    ]
+})
+
+WEAPONS.Lasso[SOURCE.AEG.id] = new Weapon({
+    name: "Lasso",
+    cost: new Cost(5, CURRENCY.SP),
+    weight_lbs: 3,
+    size: SIZE.L,
+    speed: 10,
+    proficiencies: new Proficiencies({single: "Lasso"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Main_gauche[SOURCE.AEG.id] = new Weapon({
+    name: "Main-Gauche",
+    cost: new Cost(3, CURRENCY.GP),
+    weight_lbs: 2,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 2,
+    damage: new Damage("1d4", "1d3"),
+    proficiencies: new Proficiencies({single: "Main-Gauche"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Mancatcher[SOURCE.AEG.id] = new Weapon({
+    name: "Mancatcher",
+    footnote_marker: "**",
+    cost: new Cost(30, CURRENCY.GP),
+    weight_lbs: 8,
+    size: SIZE.L,
+    speed: 7,
+    proficiencies: new Proficiencies({single: "Mancatcher"}),
+    pages: [108],
+
+    descriptions: [
+        AEG_2xASTERISK_DISMOUNT_RIDER
+    ]
+})
+
+WEAPONS.Morning_star[SOURCE.AEG.id] = new Weapon({
+    name: "Morning star",
+    cost: new Cost(10, CURRENCY.GP),
+    weight_lbs: 12,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
+    speed: 7,
+    damage: new Damage("2d4", "1d6+1"),
+    proficiencies: new Proficiencies({single: "Morning star"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Net[SOURCE.AEG.id] = new Weapon({
+    name: "Net",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 10,
+    size: SIZE.M,
+    speed: 10,
+    proficiencies: new Proficiencies({single: "Net"}),
+    pages: [108],
+
+    descriptions: []
+})
+
+WEAPONS.Awl_pike[SOURCE.AEG.id] = new Weapon({
+    name: "Awl pike",
+    footnote_marker: "#",
+    sorting_group: "Polearm",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 12,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 13,
+    damage: new Damage("1d6", "1d12"),
+    proficiencies: new Proficiencies({single: "Awl pike"}),
+    pages: [108],
+
+    descriptions: [
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+    ]
+})
+
+WEAPONS.Bardiche[SOURCE.AEG.id] = new Weapon({
+    name: "Bardiche",
+    sorting_group: "Polearm",
+    cost: new Cost(7, CURRENCY.GP),
+    weight_lbs: 12,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.S],
+    speed: 9,
+    damage: new Damage("2d4", "2d6"),
+    proficiencies: new Proficiencies({single: "Bardiche"}),
+    pages: [109],
+
+    descriptions: []
+})
+
+WEAPONS.Bec_de_corbin[SOURCE.AEG.id] = new Weapon({
+    name: "Bec de corbin",
+    sorting_group: "Polearm",
+    cost: new Cost(8, CURRENCY.GP),
+    weight_lbs: 10,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
+    speed: 9,
+    damage: new Damage("1d8", "1d6"),
+    proficiencies: new Proficiencies({single: "Bec de corbin"}),
+    pages: [109],
+    descriptions: []
+})
+
+WEAPONS.Bill_guisarme[SOURCE.AEG.id] = new Weapon({
+    name: "Bill-guisarme",
+    sorting_group: "Polearm",
+    cost: new Cost(7, CURRENCY.GP),
+    weight_lbs: 15,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 10,
+    damage: new Damage("2d4", "1d10"),
+    proficiencies: new Proficiencies({single: "Bill-guisarme"}),
+    pages: [109],
+    descriptions: []
+})
+
+WEAPONS.Fauchard[SOURCE.AEG.id] = new Weapon({
+    name: "Fauchard",
+    sorting_group: "Polearm",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 7,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
+    speed: 8,
+    damage: new Damage("1d6", "1d8"),
+    proficiencies: new Proficiencies({single: "Fauchard"}),
+    pages: [109],
+    descriptions: []
+})
+
+WEAPONS.Fauchard_fork[SOURCE.AEG.id] = new Weapon({
+    name: "Fauchard-fork",
+    sorting_group: "Polearm",
+    cost: new Cost(8, CURRENCY.GP),
+    weight_lbs: 9,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 8,
+    damage: new Damage("1d8", "1d10"),
+    proficiencies: new Proficiencies({single: "Fauchard-fork"}),
+    pages: [109],
+    descriptions: []
+})
+
+WEAPONS.Glaive[SOURCE.AEG.id] = new Weapon({
+    name: "Glaive",
+    footnote_marker: "*",
+    sorting_group: "Polearm",
+    cost: new Cost(6, CURRENCY.GP),
+    weight_lbs: 8,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.B],
+    speed: 8,
+    damage: new Damage("1d6", "1d10"),
+    proficiencies: new Proficiencies({single: "Glaive"}),
+    pages: [109],
+    descriptions: [
+        AEG_ASTERISK_DOUBLE_DAMAGE_AGAINST_L_CHARGE
+    ]
+})
+
+WEAPONS.Glaive_guisarme[SOURCE.AEG.id] = new Weapon({
+    name: "Glaive-guisarme",
+    footnote_marker: "*",
+    sorting_group: "Polearm",
+    cost: new Cost(10, CURRENCY.GP),
+    weight_lbs: 10,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
+    speed: 9,
+    damage: new Damage("2d4", "2d6"),
+    proficiencies: new Proficiencies({single: "Glaive-guisarme"}),
+    pages: [109],
+    descriptions: [
+        AEG_ASTERISK_DOUBLE_DAMAGE_AGAINST_L_CHARGE
+    ]
+})
+
+WEAPONS.Guisarme[SOURCE.AEG.id] = new Weapon({
+    name: "Guisarme",
+    sorting_group: "Polearm",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 8,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.S],
+    speed: 8,
+    damage: new Damage("2d4", "1d8"),
+    proficiencies: new Proficiencies({single: "Guisarme"}),
+    pages: [109],
+    descriptions: []
+})
+
+WEAPONS.Guisarme_voulge[SOURCE.AEG.id] = new Weapon({
+    name: "Guisarme-voulge",
+    sorting_group: "Polearm",
+    cost: new Cost(8, CURRENCY.GP),
+    weight_lbs: 15,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 10,
+    damage: new Damage("2d4", "2d4"),
+    proficiencies: new Proficiencies({single: "Guisarme-voulge"}),
+    pages: [109],
+    descriptions: []
+})
+
+WEAPONS.Halberd[SOURCE.AEG.id] = new Weapon({
+    name: "Halberd",
+    sorting_group: "Polearm",
+    cost: new Cost(10, CURRENCY.GP),
+    weight_lbs: 15,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 9,
+    damage: new Damage("1d10", "2d6"),
+    proficiencies: new Proficiencies({single: "Halberd"}),
+    pages: [109],
+    descriptions: []
+})
+
+WEAPONS.Hook_fauchard[SOURCE.AEG.id] = new Weapon({
+    name: "Hook fauchard",
+    sorting_group: "Polearm",
+    cost: new Cost(10, CURRENCY.GP),
+    weight_lbs: 8,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.S],
+    speed: 9,
+    damage: new Damage("1d4", "1d4"),
+    proficiencies: new Proficiencies({single: "Hook fauchard"}),
+    pages: [109],
+    descriptions: []
+})
+
+WEAPONS.Lucern_hammer[SOURCE.AEG.id] = new Weapon({
+    name: "Lucern hammer",
+    footnote_marker: "#",
+    sorting_group: "Polearm",
+    cost: new Cost(7, CURRENCY.GP),
+    weight_lbs: 15,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P, WEAPON_TYPE.B],
+    speed: 9,
+    damage: new Damage("2d4", "1d6"),
+    proficiencies: new Proficiencies({single: "Lucern hammer"}),
+    pages: [109],
+    descriptions: [
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+    ]
+})
+
+WEAPONS.Military_fork[SOURCE.AEG.id] = new Weapon({
+    name: "Military fork",
+    footnote_marker: "*",
+    sorting_group: "Polearm",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 7,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 7,
+    damage: new Damage("1d8", "2d4"),
+    proficiencies: new Proficiencies({single: "Military fork"}),
+    pages: [109],
+    descriptions: [
+        AEG_ASTERISK_DOUBLE_DAMAGE_AGAINST_L_CHARGE
+    ]
+})
+
+WEAPONS.Partisan[SOURCE.AEG.id] = new Weapon({
+    name: "Partisan",
+    footnote_marker: "#",
+    sorting_group: "Polearm",
+    cost: new Cost(10, CURRENCY.GP),
+    weight_lbs: 8,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 9,
+    damage: new Damage("1d6", "1d6+1"),
+    proficiencies: new Proficiencies({single: "Partisan"}),
+    pages: [109],
+    descriptions: [
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+    ]
+})
+
+WEAPONS.Ranseur[SOURCE.AEG.id] = new Weapon({
+    name: "Ranseur",
+    footnote_marker: "#",
+    sorting_group: "Polearm",
+    cost: new Cost(6, CURRENCY.GP),
+    weight_lbs: 7,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 8,
+    damage: new Damage("2d4", "2d4"),
+    proficiencies: new Proficiencies({single: "Ranseur"}),
+    pages: [109],
+    descriptions: [
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+    ]
+})
+
+WEAPONS.Spetum[SOURCE.AEG.id] = new Weapon({
+    name: "Spetum",
+    footnote_marker: "#",
+    sorting_group: "Polearm",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 7,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 8,
+    damage: new Damage("1d6+1", "2d6"),
+    proficiencies: new Proficiencies({single: "Spetum"}),
+    pages: [109],
+    descriptions: [
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+    ]
+})
+
+WEAPONS.Voulge[SOURCE.AEG.id] = new Weapon({
+    name: "Voulge",
+    footnote_marker: "#",
+    sorting_group: "Polearm",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 12,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.S],
+    speed: 10,
+    damage: new Damage("2d4", "2d4"),
+    proficiencies: new Proficiencies({single: "Voulge"}),
+    pages: [109],
+    descriptions: [
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+    ]
+})
+
+WEAPONS.Quarterstaff[SOURCE.AEG.id] = new Weapon({
+    name: "Quarterstaff",
+    weight_lbs: 4,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.B],
+    speed: 4,
+    damage: new Damage("1d6", "1d6"),
+    proficiencies: new Proficiencies({single: "Quarterstaff"}),
+    pages: [109],
+    descriptions: []
+})
+
+WEAPONS.Sap[SOURCE.AEG.id] = new Weapon({
+    name: "Sap",
+    cost: new Cost(1, CURRENCY.GP),
+    weight_lbs: 0.1,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.B],
+    speed: 2,
+    damage: new Damage("1d2", "1d2"),
+    proficiencies: new Proficiencies({single: "Sap"}),
+    pages: [109],
+    descriptions: []
+})
+
+WEAPONS.Scourge[SOURCE.AEG.id] = new Weapon({
+    name: "Scourge",
+    cost: new Cost(1, CURRENCY.GP),
+    weight_lbs: 2,
+    size: SIZE.S,
+    speed: 5,
+    damage: new Damage("1d4", "1d2"),
+    proficiencies: new Proficiencies({single: "Scourge"}),
+    pages: [109],
+    descriptions: []
+})
+
+WEAPONS.Sickle[SOURCE.AEG.id] = new Weapon({
+    name: "Sickle",
+    cost: new Cost(6, CURRENCY.SP),
+    weight_lbs: 3,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.S],
+    speed: 4,
+    damage: new Damage("1d4+1", "1d4"),
+    proficiencies: new Proficiencies({single: "Sickle"}),
+    pages: [109],
+    descriptions: []
+})
+
+WEAPONS.Sling[SOURCE.AEG.id] = new Weapon({
+    name: "Sling",
+    cost: new Cost(5, CURRENCY.CP),
+    weight_lbs: 0.1,
+    size: SIZE.S,
+    speed: 6,
+    proficiencies: new Proficiencies({single: "Sling"}),
+    pages: [109],
+    descriptions: []
+})
+WEAPONS.Sling.ammunition.Bullet[SOURCE.AEG.id] = new Ammunition({
+    name: "Sling bullet",
+    cost: new Cost(1, CURRENCY.CP),
+    weight_lbs: 0.5,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.B],
+    damage: new Damage("1d4+1", "1d6+1"),
+    pages: [109],
+})
+WEAPONS.Sling.ammunition.Stone[SOURCE.AEG.id] = new Ammunition({
+    name: "Sling stone",
+    weight_lbs: 0.5,
+    size: SIZE.S,
+    type: [WEAPON_TYPE.B],
+    damage: new Damage("1d4", "1d4"),
+    pages: [109],
+})
+
+WEAPONS.Spear[SOURCE.AEG.id] = new Weapon({
+    name: "Spear",
+    proficiencies: new Proficiencies({single: "Spear"}),
+    pages: [109],
+    descriptions: []
+})
+WEAPONS.Spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "One-handed",
+    cost: new Cost(8, CURRENCY.SP),
+    weight_lbs: 5,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P],
+    speed: 6,
+    damage: new Damage("1d6", "1d8"),
+    pages: [109],
+})
+WEAPONS.Spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "Two-handed",
+    footnote_marker: "#",
+    cost: new Cost(8, CURRENCY.SP),
+    weight_lbs: 5,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P],
+    speed: 6,
+    damage: new Damage("1d8+1", "2d6"),
+    pages: [109],
+
+    descriptions: [
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+    ]
+})
+
+WEAPONS.Long_spear[SOURCE.AEG.id] = new Weapon({
+    name: "Spear, long",
+    proficiencies: new Proficiencies({single: "Long spear"}),
+    pages: [109],
+    descriptions: []
+})
+WEAPONS.Long_spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "One-handed",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 8,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 8,
+    damage: new Damage("1d8", "1d8+1"),
+    pages: [109],
+})
+WEAPONS.Long_spear.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "Two-handed",
+    footnote_marker: "#",
+    cost: new Cost(5, CURRENCY.GP),
+    weight_lbs: 8,
+    size: SIZE.L,
+    type: [WEAPON_TYPE.P],
+    speed: 8,
+    damage: new Damage("2d6", "3d6"),
+    pages: [109],
+
+    descriptions: [
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+    ]
+})
+
+WEAPONS.Spear_stone[SOURCE.AEG.id] = new Weapon({
+    name: "Spear, stone",
+    proficiencies: new Proficiencies({single: "Spear"}),
+    pages: [109],
+    descriptions: []
+})
+WEAPONS.Spear_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "One-handed",
+    cost: new Cost(8, CURRENCY.CP),
+    weight_lbs: 5,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P],
+    speed: 6,
+    damage: new Damage("1d4", "1d6"),
+    pages: [109],
+})
+WEAPONS.Spear_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.AEG.id] = new Weapon({
+    name: "Two-handed",
+    cost: new Cost(8, CURRENCY.CP),
+    weight_lbs: 5,
+    size: SIZE.M,
+    type: [WEAPON_TYPE.P],
+    speed: 6,
+    damage: new Damage("1d6", "2d4"),
+    pages: [109],
 
     descriptions: []
 })
