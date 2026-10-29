@@ -19159,7 +19159,7 @@ DRAGON_MAGAZINES.push({
         },
         {
             page_number: '116',
-            question: `***Gauntlets of dexterity*** give a nonthief a 45% chance to Pick Pockets and a 37% chance to Open Locks. If the character has a high Dexterity score, does he or she enjoy Dexterity bonuses to the Pick Pockets and Open Locks? What happens if a bard dons the ******loves?`,
+            question: `***Gauntlets of dexterity*** give a nonthief a 45% chance to Pick Pockets and a 37% chance to Open Locks. If the character has a high Dexterity score, does he or she enjoy Dexterity bonuses to the Pick Pockets and Open Locks? What happens if a bard dons the ***gloves***?`,
             answer: [
                 `If a character gains the Pick Pockets and Open Locks ability from a pair of ***gauntlets of dexterity***, the character gains no Dexterity bonuses to those thief skills. Bards who don the gauntlets gain +10% to their Pick Pockets scores, just as thieves do, and gain Open Locks at 37%, with no Dexterity bonuses applicable.`
             ],
