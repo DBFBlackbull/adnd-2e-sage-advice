@@ -5255,6 +5255,12 @@ WEAPONS.Club[SOURCE.AEG.id] = new Weapon({
                 `*“Druids favor clubs, since they can cast* shillelagh * spells on the wood. Carrying a weapon made of wood, an organic, natural material, is preferable to using iron, since many self-respecting druids will use metal weapons only as a last resort.”*`,
                 `*— Archdruid Heather Rose*`
             ]
+        },
+        {
+            pages: [65],
+            text: [
+                `The versatility of the club is shown in the Bayeux Tapestry, which depicts squads of Saxons wielding clubs as both melee weapons and missile weapons. Some cultures decorate their clubs or even carve the club heads into representation of the creatures they expect to hunt.`
+            ]
         }
     ]
 })
