@@ -5191,7 +5191,25 @@ WEAPONS.Cestus[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "No Proficiency"}),
     pages: [63, 108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [63],
+            text: [
+                `**Cestus**`,
+                `The cestus is a leather glove that has spikes and razor edges on the back and across the knuckles. Other form of cesti are loaded with led or other heavy filler in order to give a punch more force. The weapon is mainly used as gladiator weapon in the arenas of sport.`,
+                `The damage caused by the cestus (1d4 vs. small and medium creatures; 1d3 to large) *replaces* the damage caused by a punch. Although this may seem to be a disadvantage, remember that punching damage is temporary while damage from the cestus is permanent until healed. There is no proficiency in the cestus, though a warrior can spend a proficiency slot and specialize in it.`
+            ]
+        },
+        {
+            pages: [63],
+            text: [
+                `*“A cestus isn't a true weapon of battle. It's just a cruel way to add damage to a fighter's punch. A cestus is a good weapon only if you like to punch opponents.*`,
+                `*“But since most combatants inside and outside the arena have missile weapons, spells, long melee weapons such as spears, polearms, and swords, or benefits due to size, a fighter using a cestus may find himself badly chewed up, if not dead, before closing in enough to use the weapon. And using a cestus in tavern brawls will probably accomplish little more than calling the city guard's wrath on the owner of the cestus.*`,
+                `*“The cestus is just a dramatic device meant to draw blood and make a contest look more terrible. Few monsters will care about the drama produced by cestus if the glove is used in real combat.”*`,
+                `*— Tisha, Swordswoman Extraordinary*`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Chain[SOURCE.AEG.id] = new Weapon({
@@ -5218,7 +5236,27 @@ WEAPONS.Club[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Club"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [63, 65],
+            text: [
+                `**Club**`,
+                `Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankin first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.`,
+                `The club is the ancestor of the mace, since warriors eventually fitted their clubs with spikes and metal heads in order to increase their deadliness.`,
+                `As centuries passed, cultures began embracing civilization and advanced technology. They looked down on the club as a primitive tool and a barbarian weapon. Peasants often arm themselves with clubs, sometimes adpating them by adding iron spikes, resulting in the morningstar.`,
+                `Centaurs are often seen wielding clubs, since sylvan settings have ample wood for fashioning such weapons. Ogres also use clubs, since the weapon does not require brains to use or make.`
+            ]
+        },
+        {
+            pages: [65],
+            text: [
+                `*“Despite the lowly status of the club, it is a useful proficiency. A stout tree branch, a wooden chair leg, or a metal rod all may be considered clubs, and all can be found most anywhere. When an adventurer is without a weapon, knowing how to wield a common stick may save his life*`,
+                `*“Clubs are common among adventurers. City guards who do not intend to shed blood use clubs in law enforcement, thieves who wish merely to steal a purse carry them, and humble peasants or street urchins who cannot afford a sword may wield a stout piece of wood. If anyone anticipates a life filled with tavern brawls, proficiency with the club is a must.*`,
+                `*“Druids favor clubs, since they can cast* shillelagh * spells on the wood. Carrying a weapon made of wood, an organic, natural material, is preferable to using iron, since many self-respecting druids will use metal weapons only as a last resort.”*`,
+                `*— Archdruid Heather Rose*`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Hand_crossbow[SOURCE.AEG.id] = new Weapon({
