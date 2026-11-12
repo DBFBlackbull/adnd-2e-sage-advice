@@ -633,8 +633,8 @@ WEAPONS.Blowgun.ammunition.Needle[SOURCE.PHB.id] = new Ammunition({
 const PHB_BOW_DESCRIPTION = {
     pages: [96],
     text: [
-        `**Bows:** Bows come in various shapes and sizes. The power of a bow is measured by its pull. The greater the pull, the more Strength needed to work the bow. Thus, it is possible for characters to have bows that grant them damage bonuses for high Strength (it is assumed the character has chosen a bow that has a greater pull). Likewise, characters with low Strengths suffer their usual penalties when using a bow (they are forced to use weaker bows or simply cannot draw back as far). The pull of a bow seldom prevents a character from using the weapon, only from gaining the full effect. The true test of a character’s Strength comes in stringing a bow—the bow of a strong hero may simply be un string able by a lesser man (as was Odysseus’s).`,
-        `Heavier pull bows are not normally any more expensive than standard bows. The exceptions to this are those bows that enable the fighter to gain bonuses for exceptional Strength (18/01 or greater). These bows must be custom crafted and cost three to five times the normal price. These bows are also difficult to string or use effectively for those without exceptional Strength. These characters must roll a successful bend bars/lift gates roll to string or use such weapons (again, think of the test of the suitors in Odysseus’s household).`
+        `**Bows:** Bows come in various shapes and sizes. The power of a bow is measured by its pull. The greater the pull, the more Strength needed to work the bow. Thus, it is possible for characters to have bows that grant them damage bonuses for high Strength (it is assumed the character has chosen a bow that has a greater pull). Likewise, characters with low Strengths suffer their usual penalties when using a bow (they are forced to use weaker bows or simply cannot draw back as far). The pull of a bow seldom prevents a character from using the weapon, only from gaining the full effect. The true test of a character's Strength comes in stringing a bow—the bow of a strong hero may simply be un string able by a lesser man (as was Odysseus's).`,
+        `Heavier pull bows are not normally any more expensive than standard bows. The exceptions to this are those bows that enable the fighter to gain bonuses for exceptional Strength (18/01 or greater). These bows must be custom crafted and cost three to five times the normal price. These bows are also difficult to string or use effectively for those without exceptional Strength. These characters must roll a successful bend bars/lift gates roll to string or use such weapons (again, think of the test of the suitors in Odysseus's household).`
     ]
 }
 
@@ -1826,7 +1826,7 @@ WEAPONS.Military_fork[SOURCE.PHB.id] = new Weapon({
         PHB_RELATED_WEAPONS,
         {
             pages: [99],
-            text: [`**Military fork:** This is one of the simplest modifications of a peasant’s tool since it is little more than a pitchfork fixed to a longer shaft. With tines strengthened and straightened, the military fork serves well. The need for cutting and cleaving eventually often results in combining the fork with other weapons.`]
+            text: [`**Military fork:** This is one of the simplest modifications of a peasant's tool since it is little more than a pitchfork fixed to a longer shaft. With tines strengthened and straightened, the military fork serves well. The need for cutting and cleaving eventually often results in combining the fork with other weapons.`]
         }
     ],
 
@@ -4705,12 +4705,44 @@ WEAPONS.Arquebus[SOURCE.AEG.id] = new Weapon({
     size: SIZE.M,
     type: [WEAPON_TYPE.P],
     speed: 15,
+    rate_of_fire: "1/3",
     damage: new Damage("1d10", "1d10"),
     proficiencies: new Proficiencies({single: "Arquebus"}),
-    pages: [108],
+    pages: [53, 108],
 
     descriptions: [
-        AEG_3xASTERISK_ALLOWED_BY_DM
+        AEG_3xASTERISK_ALLOWED_BY_DM,
+        {
+            pages: [53,54],
+            text: [
+                `**Arquebus**`,
+                `The arquebus is a musket used by cultures just learning the technology of guns. It is a two-handed weapon, fired like a rifle except that the arms absorb the recoil, not the shoulders, since the weapon does not rest on the latter. The gun is also called a “hackbut.”`,
+                `Years after its development, the term “arquebus” expanded to include handguns of the same era, and eventually the word lost its original meaning and was used instead to describe small handguns used by cavalry. In term of AD&D® game campaigns, the arquebus refers to the large, two-handed primitive gun with a smooth bore barrel as opposed to a rifled barrel. Hence, the gun is technically not a rifle. This form of arquebus often has a hooklike projection on the underside of its barrel.`,
+                `The arquebus was developed in order to give the average infantry the use of smoke powder, whose destructive potential is only newly recognized in many areas.`,
+                `The musket arquebus is loaded by pouring smoke powder from a flask or horn into the muzzle and firmly packing it with a piece of paper. The projectile, an iron ball, is rammed in after this. Once the barrel is ready, the pan is filled with smoke powder, the pan's cover is closed, and a burning slow-match (a piece of cloth or paper rolled into a fuse) is placed in the mechanism called the serpentine (the curved piece of metal where the trigger would someday be on a modern rifle). Pressure on the metal plate releases the serpentine into the pan, and BOOM!`,
+                `Since this weapon involves smoke powder, DMs may forbid its use. Players should check with their DM as to weather it is allowed in the campaign.`,
+                `Smoke powder is considered a magical item. The historical arquebus required two types of gunpowder, a finer variety for pan loading and a coarse variety for muzzle loading. Each type was carried in a separate container. If the DM desired, the gunner may require the two different powder types in order to operate the arquebus.`,
+                `The arquebus is a very dangerous instrument, nearly as dangerous to the user as to the target. In order to reload, the gunner has to hold the smoldering slow-match in his left hand while reloading with his right. A slow-match burn for eight rounds.`,
+                `An arquebus can be fired only once every three rounds providing the character is not being attacked while loading. Treat the gunner the same as a spellcaster casting a very long spell. When firing an arquebus, all range penalties are doubled.`,
+                `If an arquebus attack roll is a 1 or 2, the gun backfires, inflicting 1d6 points of damage to the gunner. It is also fouled and cannot be used until cleaned, a process which takes at least 30 minutes (and relative peace).`,
+                `When an arquebus scores a hit, it does 1-9 points of damage on 1d10. If a 10 is rolled, the die is rolled again and this amount is added to the 10. Each time a 10 is rolled, the die is rolled again and added to the total.`,
+                `There is no Strength modifiers to an arquebus' damage.`,
+                `If the arquebus' smoke powder is exposed to water, the powder is ruined.`
+            ]
+        },
+        {
+            pages: [54],
+            text: [
+                `*“As far as many folk are concerned, smoke powder and magic don't mix! Sure, the arquebus is a newfangled weapon, but not all new things are necessarily better! With an arquebus, the firer has to take time to reload, unless he wants to have someone tag along and supply him with an extra arquebus, already loaded, in order to keep up a steady rate of fire. Oh, certainly that can be done—or the more intelligent adventurer will go out and get himself a long bow which fires arrows quicker than an arquebus can throw shot, and has comparable range! As far as can be determined, the arquebus is good for making god-awful noise that will either scare the Nine Hells out of any enemy, or possibly anger the target into attacking with even more ferocity.”*`,
+                `*— Grymwand, Professional Mercenary*`
+            ]
+        },
+        {
+            pages: [54],
+            text: [
+                `The arquebus gets its name from the German Hakenbuchse, meaning “gun with a hook.”`
+            ]
+        }
     ]
 })
 
@@ -4725,7 +4757,40 @@ WEAPONS.Battle_axe[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Battle Axe"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [54,55],
+            text: [
+                `**Battle Axe**`,
+                `Contrary to popular artwork, the most common version of the battle axe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battle axes are also called broad axes.`,
+                `The battle axe is a footman's weapon, giving these soldiers a longer reach and a fighting chance against mounted opponents. Its long handle allows the wielder to put considerable force into his swing. Despite the shaft length, a battle axe is a one-handed weapon.`,
+                `The typical dwarven battle axe is a double bladed weapon, usually with a spiked top. Dwarves favor these weapons since the long handles compensate somewhat for the shorter dwarven stature, especially against large humanoid opponents. They are often wielded with two hands. In many dwarven cultures, the battle axe is a symbol of dwarven might.`,
+                `A thrust with the spiked head of a battle axe inflicts 1d3 hit points of damage.`,
+                `Dwarves are not the only race that favors the battle axe. Gnolls often are encountered with battle axes. Troglodytes use a stone version of the battle axe, with all of the disadvantages of stone weapons (i.e., prone to chipping and shattering).`,
+                `Two-handed battle axes have the same statistics as the bardiche. They are called “great axes.”`
+            ],
+        },
+        {
+            pages: [55,56],
+            text: [
+                `*“Though the battle axe is a one-handed weapon, its longer handle, which gives it good momentum, is not a good horseman's weapon, as the wielder has to put a lot of his weight into the swing, something hard to do from a saddle. It is also useless as a missile weapon. Still, its damage is respectable, and it looks nasty, especially the dwarven styles. A battle axe is good for the foot soldier or adventurer who needs to strike at a large creature or at someone on horseback.*`,
+                `*“Battle axes are good for their percussive and cutting effects against armor. If adventurers want to use a battle axe and still gain some measure of protection, it is wise to fight alongside a companion who is armored with a sword and shield. The companion acts as the axe-wielder's defense while the latter is busy chopping away. This is a good exercise in teamwork, which may keep both adventurers alive much longer.*`,
+                `*“As for dwarves, out center of gravity is low enough that we can swing a battle axe and not topple over from the momentum. It is a fine weapon for heaving the legs of a giant out under him. and it is a weapon that lets us put all of out weight into the swing.”*`,
+                `*— Dagalor Goldenbeard, of the Dwarven Clan Goldenbeard*`
+            ]
+        },
+        {
+            pages: [56],
+            text: [
+                `The battle axe has the distinction of being one of the oldest tools and weapons of man. The first battle axe dates back about 35,000 years, when weaponers began attaching the blade to long wooden handles. The double-bladed battle axe was born in Egypt during the Bronze Age, but the design did not gain widespread acceptance.`,
+                `During the Greco-Roman times, the battle axe was seen as a barbarian weapon used by the Franks, Celts, Lombards, and Vikings.`,
+                `The earliest modern battle axes were a Danish weapon of the ninth century. These weapons did not have double-bladed heads, but were still two-handed weapons. The Danes often decorated these axe heads with carvings. Some shafts reached six feet in length, which caused great structural strain on the point immediately below the axe-head.`,
+                `English knights of the 14th century adopted the battle axe as a favored weapon in foot combat. Its long handle afforded a great reach, and allowed for a great amount of force to be focused in the blow.`,
+                `Naval crews used battle axes as boarding weapons until the tactic of boarding parties become obsolete.`,
+                `The dwarven battle axe design is based on actual design by the Swiss, who called their version the mordaxt.`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Belaying_pin[SOURCE.AEG.id] = new Weapon({
@@ -4735,11 +4800,27 @@ WEAPONS.Belaying_pin[SOURCE.AEG.id] = new Weapon({
     size: SIZE.S,
     type: [WEAPON_TYPE.B],
     speed: 4,
+    rate_of_fire: "2/1",
     damage: new Damage("1d3", "1d3"),
     proficiencies: new Proficiencies({single: "Belaying pin"}),
-    pages: [108],
+    pages: [57,108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [56,57],
+            text: [
+                `**Belaying Pin**`,
+                `Not intended as an actual weapon, the belaying oin is a wooden or metal rod that is inserted in holes bored through a ship's rail. Ship's ropes are secured to these belaying pins. The pins are usually found in rows bringing a series of ropes together to one location. The pins mkay be pulled out and used as a melee weapon, more often that not during boarding actions at sea when no other weapon are in reach.`
+            ]
+        },
+        {
+            pages: [57],
+            text: [
+                `*“When a bloke is at sea, unarmed and surrounded by degenerate pirates, a belaying pin makes a fine on-the-spot weapon, even though its primary function is to hold hope, not bash heads. No warrior in his right mind would bother to specialize in or stock up on belaying pins!”*`,
+                `*— Captain Ar, of the Galleon Flameburst*`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Blowgun[SOURCE.AEG.id] = new Weapon({
@@ -4751,7 +4832,33 @@ WEAPONS.Blowgun[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Blowgun"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [57],
+            text: [
+                `**Blowgun**`,
+                `Blowguns are long, hollow tubes composed of wood or metal, ranging from four to seven feet in length. They are used to fire darts, needles, and pellets. The weapons date back to primitive times, when they were used mostly for hunting.`,
+                `Blowguns may have had a part in the invention of guns, since the blowgun demonstrated that one end of a tube needs to be closed off in order for the propelling force to shoot the missile in the proper direction.`,
+                `Tribes still exist, especially primitive people in tropical jungle cultures, that use the blowgun. In most cases, these tribes are not advanced in terms of inventions, especially weapons of war. Some tribes use stands to brace their blowguns. If a stand is used the firer gains a +1 bonus to his attack rolls.`,
+                `The grippli have been known to use blowguns on rare occasions.`
+            ]
+        },
+        {
+            pages: [57],
+            text: [
+                `*“Though the blowgun has poor range, it is a quiet weapon which may be fired twice per round. Desperate adventurers who find themselves weaponless may make blowguns out of local flora, such as reeds, if they are resourceful.*`,
+                `*“Blowguns can also be used as makeshift breathing tubes if adventurers are crossing or hiding in a body of water*`,
+                `*“Being virtually noiseless, the blowgun is a good weapon for use in infiltrating a stronghold. Darts dipped in a sleep drug may knock out sentries quickly, and this may be an ideal arrangement for someone who wishes to avoid causing excessive bloodshed. It is certainly better suited for that sort of work than combat on the field, since the blowgun is a very fragile weapon.”*`,
+                `*— Cedric D'Abalone, Sage*`
+            ]
+        },
+        {
+            pages: [57],
+            text: [
+                `**Blowgun Pellets:** Most blowgun pellets are of hardened clay, and are used for hunting. A solid hit from a pellet can stun a small bird.`
+            ]
+        }
+    ]
 })
 WEAPONS.Blowgun.ammunition.Barbed_dart[SOURCE.AEG.id] = new Ammunition({
     name: "Barbed Dart",
@@ -4762,7 +4869,14 @@ WEAPONS.Blowgun.ammunition.Barbed_dart[SOURCE.AEG.id] = new Ammunition({
     damage: new Damage("1d3", "1d3"),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [57],
+            text: [
+                `**Blowgun Darts:** The blowgun dart is a small arrow with a was of cotton or other plant fibers instead of fletching. This allows for a build-up of pressure from the user's wind. The fibers make a better seal in the tube, allowing more force to gather behind it. A blowgun dart is not the same as a regular dart, and the latter cannot be shot out of a blowgun.`,
+            ]
+        }
+    ]
 })
 WEAPONS.Blowgun.ammunition.Needle[SOURCE.AEG.id] = new Ammunition({
     name: "Needle",
@@ -4773,7 +4887,14 @@ WEAPONS.Blowgun.ammunition.Needle[SOURCE.AEG.id] = new Ammunition({
     damage: new Damage("1", "1"),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [57],
+            text: [
+                `**Needles:** Needles are sometimes used to deliver a poison, often a paralytic poison such as curare. Needles do less damage than other blowgun missile, but this is not a disadvantage, since their function is to carry the poison to the target, not to cause damage.`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Bolas[SOURCE.AEG.id] = new Weapon({
@@ -4787,8 +4908,109 @@ WEAPONS.Bolas[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Bolas"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [57, 58],
+            text: [
+                `**Bolas**`,
+                `The bola is a missile of prehistoric origins. Currently, it is still used by arctic tribes and by savages who dwell on temperate plains. The main function of the bola is to provide a hunter with a good missile weapon that will catch the pray off guard and entangle it so as to make escape impossible.`,
+                `The bola is basically a leather strap or straps with weights fastened to the ends, although there are many variations to the design. Arctic bolas are generally used for hunting birds. The bola may have four, six, or ten weights made of walrus ivory or bone. The weights are egg-shaped, spherical, or carved into the likeness of animals. All of the straps or cords join together to make a sort of handle. The thrower grasps the handle, jerks back back the strand to straighten them, whirls the bolas over his head, and releases them. Each bola strand is about 28 inches long and each weight is about two inches in diameter.`,
+                `Two-ball bolas are called somais; triple-ball bolas are achicos.`,
+                `Temperate plains bolas are usually twice as large and consist of a single leather thong with a leather-covered stone at each end. Often a second cord is fastened in the center of the first cord with a small weight attached at the end. This weight is held by the thrower. This version of the bola can bring down a man-sized target. When a bola hits, the victim is held fast and must take a round to make a Strength check in order to get free. Failure means the bolas are still holding.`,
+                `If an attacker makes a Called Shot to the target's legs and succeeds, the bolas wrap themselves tightly around the victim's legs and prevent further movement. The target must make a Dexterity check in order not to fall down, incurring a -3 penalty if the victim was moving when the bolas hit.`,
+                `If the attacker succeeds in a Called Shot to the victim's arms, the bolas wrap themselves tightly around the torso, preventing the victim from using a weapon or employing the protection of his shield until he frees himself. Strength checks are made at -2 penalty due to lack of leverage.`,
+                `A successful Called Shot to the victim's head wraps the bolas around his neck, strangling him (unless the character is wearing a great helm or closed-faced helm). The bolas cause normal damage on the round in which they hit, then an additional 1d3 hit points of strangulation damage every round the bolas are still in place.`
+            ]
+        },
+        {
+            pages: [58],
+            text: [
+                `*“This is a good weapon to trip someone up, in case ya wanna take an opponent alive. But ya gotta make sure ya got enough room to give the bola a good swing. Bolas only work outside or in huge rooms. They work good if yer on horseback.”*`,
+                `*— Brakhan, Bounty Hunter*`
+            ]
+        }
+    ]
 })
+
+const AEG_SHORT_BOW = {
+    pages: [58,59],
+    text: [
+        `**Short Bow**`,
+        `Short bows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a long bow. Short bow staves are about 5½ feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to length. The former resulted in what i now called the long bow.`,
+        `Bows fell into decline with the spread of handguns. It was reasoned that while a wounded or weakened soldier might lack the strength to pull a bow, he could still pull a trigger. In fantasy settings, there is no danger of the bow being replaced so quickly.`,
+        `Short bows can fire only short bow arrows (identical to flight arrows for game terms).`
+    ]
+}
+
+const AEG_LONG_BOW = {
+    pages: [59],
+    text: [
+        `**Long Bow**`,
+        `The long bow is similar to the short bow, except that the staff is about as high as the archer, usually 6 to 6½ feet. It has better range than the short now, and can fire both flight and sheaf arrows.`
+    ]
+}
+
+const AEG_COMPOSITE_BOW = {
+    pages: [59],
+    text: [
+        `**Composite Bows**`,
+        `Composite bows are long bows or short bows whose staves are made from more than one type of material. This gives greater flexibility, and thus better range. These were developed after the normal long bow.`,
+        `The second material that makes up a long bow may be anything from another type of wood to bone, sinew or metal. The different materials are usually glued together.`
+    ]
+}
+
+const AEG_BOW_STRENGTH_BONUS = {
+    pages: [59],
+    text: [
+        `An adventurer who wishes to gain a damage bonus from high Strength when wielding a bow must purchase specially crafted bows. Such a bow costs the normal price for a bow *plus the normal price again for every bonus point desired*. Thus, a warrior with 17 Strength who wants a long bow (base cost 75 gp) that gives him his +1 bonus to damage rolls would have to pay a total of 150 gp. The same fighter with 18/00 Strength (+6 bonus to damage) would pay 525 gp. These bows can be strung and drawn only by characters of that Strength or higher. Others attempting this must make a successful bend bars/lift gates roll.`,
+        `Most archers protect their wrist from the snap of the bowstring by fastening a piece of horn, bone, or leather to them. Such an item is known as a bracer.`
+    ]
+}
+
+const AEG_BOW_INTERVIEW = {
+    pages: [59],
+    text: [
+        `*“In our times, bows still are preferable to the primitive firearms or even the crossbows offered. A high rate of fire, low noise, and good range makes the bow a better choice than the other missile weapons.*`,
+        `*“Centaurs favor bows, usually composite bows adapted to enable them to take advantage of their Strength. Elves in particular are adept at making and using bows, of both the long and short varieties. Exactly how the elves happen to be so good at archery is up for debate. Some say elves are trained to shoot beginning in childhood. Others say that their skills are no different than those of humans, but the uncanny, keen elven senses enable the fair folk to anticipate the target's location at the time of the arrow's impact.*`,
+        `*“Whatever the reason, no one argues that the elves exhibit clear evidence of the superiority of the bow as the best missile weapon available to the aspiring adventurer.*`,
+        `*“Bows are not without their faults. Bowstrings must be kept dry, the staff must not be allowed to crack, and certain amount of strength is required to string and pull a bow. Still, even a short bow is a good thing to have when a warrior wants to inflict damage on someone from a long distance!*`,
+        `*“A short bow can fire only flight arrows, while the long bow can fire any type of arrows. However, the short bow is easier to carry and is good for the fighter who relies primarily on a melee weapon but wishes to have a respectable missile weapon.”*`,
+        `*— Lady Adriennedar Ironedge, Ranger of Hawkhaven*`
+    ]
+}
+
+const AEG_BOW_HISTORY = {
+    pages: [59,60],
+    text: [
+        `Bows were used extensively for war by the Egyptians, Babylonians, Jews, and other peoples of the eastern Mediterranean world. In ancient Greece and Rome, bows were used mainly for hunting.`,
+        `The Huns were the deadliest archers of all the invading barbarian peoples who attacked Rome. Charlemagne made the bow a mandatory weapon for the “civilized” armies.`,
+        `At the Battle of Hastings in 1066, many historians claim that the Normans, led by William the Conqueror, beat the enemy by unleashing a rain of arrows on them. Some speculate that Harold died from an arrow through his eye. The bow used was five feet long.`,
+        `The English, learning from the lessons of Hastings, continued to refine and adapt their bows, making the staff longer and longer, copying the Welsh long bow. This became known as the English long bow within England.`,
+        `The long bow proved very effective, especially in the British victories aat Crecy and Agincourt. In the former, British archers outshot their Genoese counterparts who where using crossbows. Just as the Italians and French gained reputations as excellent crossbowmen, the English gained a reputation for archery. In the time of Henry VIII, English law required all males to learn the use of a long bow bvy the time they reached their teens.`,
+        `Europeans bows were most often made of ash or yew wood. Short bows were called Continental bows, while long bows were sometimes called Welsh bows.`,
+        `An example of the potency of the long bow can be found in a particular historical incident. An arrow fired by a Welsh bowman is reported to have pierced a knight's leg armor, his leg, the armor on the other side of the leg, the knight's saddle, and to have finally lodged in the horse, pinning the knight to his mount.`,
+        `Medieval archers did not always use quivers, but rather kept their arrows tied in bunches and secured to their belts by loops. Mounted archers used quivers that were attached to the saddle.`,
+        `Bows were used as late as 1807, when Russian irregulars harassed Napoleon's armies, and in World War II, when detachments of American archers were used in special actions in Asia.`,
+        `Even today, certain African pygmy tribes and indigenous folk of the Amazon use bows.`
+    ]
+}
+
+const AEG_ARROW_GENERAL = {
+    pages: [60,61],
+    text: [
+        `**Arrows**`,
+        `In general, arrows range in length from 20 to 40 inches. The feathers, or fletching, of the arrow consist of two or more feathers set coaxially to the shaft. This gives the arrow its aerodynamic lift. If the feathers are instead set diagonally, the arrows rotates in flight. Goose feathers and parrot feathers are used most often in fletching, though pressed paper and leather are sometimes used.`
+    ]
+}
+
+const AEG_ARROW_INCENDIARY = {
+    pages: [61],
+    text: [
+        `**Incendiary Arrow**`,
+        `An incendiary arrow is any arrow type (except bone or stone) with a wad of hemp soaked in a bituminous substance (such as tar) placed just beneath the head. The hemp is lit before the arrow is fired.`,
+        `In addition to its normal damage, the arrow causes one additional hit point of fire damage on the round of impact unless the target makes a saving throw vs. death magic. At the DM's option, flaming arrows may ignite combustible materials contacting it.`
+    ]
+}
 
 WEAPONS.Composite_long_bow[SOURCE.AEG.id] = new Weapon({
     name: "Composite long bow",
@@ -4800,7 +5022,13 @@ WEAPONS.Composite_long_bow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Composite long bow"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_LONG_BOW,
+        AEG_COMPOSITE_BOW,
+        AEG_BOW_STRENGTH_BONUS,
+        AEG_BOW_INTERVIEW,
+        AEG_BOW_HISTORY
+    ]
 })
 
 WEAPONS.Composite_short_bow[SOURCE.AEG.id] = new Weapon({
@@ -4813,7 +5041,13 @@ WEAPONS.Composite_short_bow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Composite short bow"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_SHORT_BOW,
+        AEG_COMPOSITE_BOW,
+        AEG_BOW_STRENGTH_BONUS,
+        AEG_BOW_INTERVIEW,
+        AEG_BOW_HISTORY
+    ]
 })
 
 WEAPONS.Long_bow[SOURCE.AEG.id] = new Weapon({
@@ -4826,7 +5060,12 @@ WEAPONS.Long_bow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Long bow"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_LONG_BOW,
+        AEG_BOW_STRENGTH_BONUS,
+        AEG_BOW_INTERVIEW,
+        AEG_BOW_HISTORY
+    ]
 })
 
 WEAPONS.Short_bow[SOURCE.AEG.id] = new Weapon({
@@ -4839,7 +5078,12 @@ WEAPONS.Short_bow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Short bow"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_SHORT_BOW,
+        AEG_BOW_STRENGTH_BONUS,
+        AEG_BOW_INTERVIEW,
+        AEG_BOW_HISTORY
+    ]
 })
 
 WEAPONS.Short_bow.ammunition.Flight_arrow[SOURCE.AEG.id] =
@@ -4854,7 +5098,17 @@ WEAPONS.Short_bow.ammunition.Flight_arrow[SOURCE.AEG.id] =
                 damage: new Damage("1d6", "1d6"),
                 pages: [108],
 
-                descriptions: []
+                descriptions: [
+                    AEG_ARROW_GENERAL,
+                    {
+                        pages: [61],
+                        text: [
+                            `**Flight Arrow**`,
+                            `The flight arrow, as its name implies, is built for distance. These are lightweight arrows and are often used for hunting. Most of these arrows are made of ash or birch and are 30 to 40 inches long.`
+                        ]
+                    },
+                    AEG_ARROW_INCENDIARY
+                ]
             })
 WEAPONS.Short_bow.ammunition.Flight_arrow_stone[SOURCE.AEG.id] =
     WEAPONS.Long_bow.ammunition.Flight_arrow_stone[SOURCE.AEG.id] =
@@ -4868,7 +5122,16 @@ WEAPONS.Short_bow.ammunition.Flight_arrow_stone[SOURCE.AEG.id] =
                 damage: new Damage("1d4", "1d4"),
                 pages: [108],
 
-                descriptions: []
+                descriptions: [
+                    AEG_ARROW_GENERAL,
+                    {
+                        pages: [61, 62],
+                        text: [
+                            `**Stone Arrow**`,
+                            `Stone arrow are considered flight arrows for game purposes, except that the stone arrowheads cause less damage and have a tendency to shatter if they impact armor or similarly hard surfaces. If a stone arrow hits any object made of metal, stone, or harder substance, it has a 20% chance of surviving the hit without damage to the arrow. If a die roll does not indicate success, the arrow is still allowed a saving throw vs. crushing blow with a +4 bonus using the figures for Rock Crystal. Failure indicates that the arrow shatters.`
+                        ]
+                    },
+                ]
             })
 WEAPONS.Long_bow.ammunition.Sheaf_arrow[SOURCE.AEG.id] =
     WEAPONS.Composite_long_bow.ammunition.Sheaf_arrow[SOURCE.AEG.id] = new Ammunition({
@@ -4880,7 +5143,17 @@ WEAPONS.Long_bow.ammunition.Sheaf_arrow[SOURCE.AEG.id] =
         damage: new Damage("1d8", "1d8"),
         pages: [108],
 
-        descriptions: []
+        descriptions: [
+            AEG_ARROW_GENERAL,
+            {
+                pages: [61],
+                text: [
+                    `**Sheaf Arrow**`,
+                    `Sheaf arrows, also known as war arrows, are heavier arrows with less range than flight arrows, but cause more damage. The arrowheads are steel and quite sharp. Sheaf arrows are used in warfare and can be fired only by long bows. These arrows range in length from 20 to 27 inches.`
+                ]
+            },
+            AEG_ARROW_INCENDIARY
+        ]
     })
 
 WEAPONS.Caltrop[SOURCE.AEG.id] = new Weapon({
@@ -4893,7 +5166,18 @@ WEAPONS.Caltrop[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1", "1d2"),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [62],
+            text: [
+                `**Caltrop**`,
+                `A caltrop is a metal ball bristling with metal spikes or prongs. When a caltrop is left on the ground, there is always at least one spike standing more or less upright, ready to pierce the foot of the unwary`,
+                `In order to be effective, at least 10 caltrops must be dropped in an area of 25 square feet (a 5' ✕ 5' square). Each character entering the area must make a saving throw vs. paralyzation. Failure means that the pursuer has stepped on a caltrop, suffering 1d4 hit points of damage. The character will be able to move at only one-half his normal rate until the caltrop is dislodged from his foot. The victim must also make a second saving throw vs. paralyzation, with failure indicating that the character is lame for 24 hours (unless magically healed), and can move at only one-third his normal movement rate. In any case, the victim must spend one round removing the caltrop from his foot.`,
+                `If half the number of caltrops are dropped in an area (5 in a 25 square foot area), the first save is made with a +4 bonus. For every five *extra* caltrops over the required 10 dropped in a 25 square foot area, the saving throw is made at a -2, up to a maximum penalty of -6. A new saving throw must be made for each five-foot section entered in which caltrops have been dropped.`,
+                `Characters moving at less than one-third their normal movement rate through an area of caltrops need not make a saving throw. They are moving slowly enough to avoid the caltrops (although they must be able to see the terrain in order to do so).`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Cestus[SOURCE.AEG.id] = new Weapon({
