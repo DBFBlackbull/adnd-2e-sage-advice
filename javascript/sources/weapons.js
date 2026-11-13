@@ -4932,6 +4932,14 @@ WEAPONS.Bolas[SOURCE.AEG.id] = new Weapon({
     ]
 })
 
+const AEG_BOW = {
+    pages: [58],
+    text: [
+        `**Bow**`,
+        `In one form or another, bows have been used since the early days of man. They represented a great step in man's ability to cause damage, since the attacker was at a considerable range from the target, not within reach of the enemy's claws or melee weapons. The first bows were long, slender rods (also called staves) with string of animal tendon or plant fiber.`
+    ]
+}
+
 const AEG_SHORT_BOW = {
     pages: [58,59],
     text: [
@@ -5023,6 +5031,7 @@ WEAPONS.Composite_long_bow[SOURCE.AEG.id] = new Weapon({
     pages: [108],
 
     descriptions: [
+        AEG_BOW,
         AEG_LONG_BOW,
         AEG_COMPOSITE_BOW,
         AEG_BOW_STRENGTH_BONUS,
@@ -5042,6 +5051,7 @@ WEAPONS.Composite_short_bow[SOURCE.AEG.id] = new Weapon({
     pages: [108],
 
     descriptions: [
+        AEG_BOW,
         AEG_SHORT_BOW,
         AEG_COMPOSITE_BOW,
         AEG_BOW_STRENGTH_BONUS,
@@ -5061,6 +5071,7 @@ WEAPONS.Long_bow[SOURCE.AEG.id] = new Weapon({
     pages: [108],
 
     descriptions: [
+        AEG_BOW,
         AEG_LONG_BOW,
         AEG_BOW_STRENGTH_BONUS,
         AEG_BOW_INTERVIEW,
@@ -5079,6 +5090,7 @@ WEAPONS.Short_bow[SOURCE.AEG.id] = new Weapon({
     pages: [108],
 
     descriptions: [
+        AEG_BOW,
         AEG_SHORT_BOW,
         AEG_BOW_STRENGTH_BONUS,
         AEG_BOW_INTERVIEW,
