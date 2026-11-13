@@ -5277,6 +5277,49 @@ WEAPONS.Club[SOURCE.AEG.id] = new Weapon({
     ]
 })
 
+const AEG_CROSSBOW_LIGHT_HEAVY = {
+    pages: [65,66],
+    text: [
+        `**Crossbow, Light and Heavy**`,
+        `A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt).`,
+        `Crossbows are loaded by pulling the string back until it locks into a nut fitted on the tiller. A man's strength is enough to pull the bow to the locking position, although heavier crossbows with more powerful bows require a mechanical aid. The most effective of these devices is the windlass, a series of pulleys and crank handles fitted at the crossbow's stock. For crossbows that do not have the windlass, a stirrup is fitted on the front of the crossbow. When resetting the bow, the firer places his foot in the stirrup in order to keep the bow off the ground while he is pulling the string up to the locking position.`,
+        `The main differences between the light and heavy crossbows are the size of the quarrel and the presence of stirrup, which is found only on the heavy crossbow. Heavy and light crossbows are more correctly referred to as two-foot and one-foot crossbows, respectively. This term refers to the length of the quarrels.`,
+        `The one-foot crossbow is made with a steel tiller and is quite rugged. It may be easily concealed beneath flowing garments such as cloaks or robes. It is frowned upon by the more lawful civilized cities.`,
+        `Although bows cannot be used under water, the crossbow can, since the tension produced by the weapon overcomes the water resistance. Underwater races such as the locathah, mermen and tritons use crossbows of both heavy and light varieties.`
+    ]
+}
+
+const AEG_CROSSBOW_INTERVIEW = {
+    pages: [66],
+    text: [
+        `*“Apparently, the drow couldn't care less about the hand crossbow's reputation, since they favor this weapon in all encounters. Derro also use hand crossbows, probably a habit they picked up from their fellow subterranean dwellers, the drow.*`,
+        `*“Of all the crossbows, light crossbows were the first to be developed. Their rate of fire and range are their main advantages. But damage potential is less than that of a bow and arrow.*`,
+        `*“Heavy crossbows have better range and damage potential, but they can fire only once every other round. If a warrior does not kill his opponent with the first shot, he may not get another chance.*`,
+        `*“It would be foolish to dismiss the crossbow completely. Heavy and light crossbows have better range than their respective bow counterparts, the long and short bows. The best tactic when using a crossbow is to assemble a line of people, all armed with these weapons, who unleash a devastating volley at an enemy.*`,
+        `*“Hand crossbows are easily concealed, have an adequate rate of fire, and good range for such a small weapon. On the other hand, damage potential is worse than that of a dagger, and the weapon may be banned in some lawful kingdoms or cities. Some societies, such as the drow, place poison on their bolts in order to immobilize and opponent.”*`,
+        `*— Emryl Aelorthas, Professional Bowyer*`
+    ]
+}
+
+const AEG_CROSSBOW_QUARRELS = {
+    pages: [66],
+    text: [
+        `**Quarrels**`,
+        `Quarrels or bolts are the ammunition fired by crossbows regardless of the weapon's size. Crossbows are rated as one-footers or two-footers, according to the bolt's length. Quarrels are shaped like arrows, but the shafts are shorter and thicker. The quarrel heads used for warfare are conical or pyramid-shaped iron heads.`
+    ]
+}
+
+const AEG_CROSSBOW_HISTORY = {
+    pages: [66,67],
+    text: [
+        `European crossbows have existed since the 4th century AD and at first were used primarily for hunting. By 1000 AD, crossbows had been adopted for warfare. Use began to wane upon the advent of the English long bow, for despite the fact that the crossbow was a more powerful weapon with better range and was easier to use in close quarters, the rate of fire of a bow was a huge psychological advantage. The most talented makers and users of the crossbow were the Italians, whose Genoese mercenary crossbowmen were the best in the world.`,
+        `Although heavy and light crossbows enjoyed a favorable reputation among military commanders, these weapons suffered a bad reputation. The crossbow was so lethal that Pope Innocent II banned its use in 1139 AD. The edict was later changed, however, so the crusaders could use it against Moslems.`,
+        `Light crossbows were considered unethical weapons,a nd were often banned between the 16th and 18th centuries. The light crossbow was primarily used as a hunting weapon.`,
+        `The crossbow was originally developed in China, culminating in a sturdy, reliable model during the Han Dynasty, circa 206 BC. This particular crossbow model, some scholars believe, was seen as early as about 36 BC by about 100 Roman soldiers who were taken prisoner in Central Asier. Such experiences or the trade routes eventually opened passed the concept of the crossbow from East to West.`,
+        `Initially, the European crossbow was made with a wooden stave. This construction, however, does not give optimum power to the bolt's flight. Bt the end of the 11th century, it is believed that many crossbow staves were made of composite construction, usually horn and sinew in conjunction with wood (usually yew). This method of crossbowmaking came from Saracens, and the Saracen influence in southern Europe explains why the area became well known for crossbow manufacturing and use.`
+    ]
+}
+
 WEAPONS.Hand_crossbow[SOURCE.AEG.id] = new Weapon({
     name: "Hand crossbow",
     sorting_group: "Crossbow",
@@ -5287,7 +5330,17 @@ WEAPONS.Hand_crossbow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Hand crossbow"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [66],
+            text: [
+                `**Crossbow, Hand**`,
+                `The deadly little bow is a pistol-sized weapon made with a steel tiller. It is more easily concealed than the light crossbow and its use is considered unethical in civilized society. Hand crossbows have a reloading mechanism built into the tiller.`
+            ]
+        },
+        AEG_CROSSBOW_INTERVIEW,
+        AEG_CROSSBOW_HISTORY
+    ]
 })
 WEAPONS.Hand_crossbow.ammunition.Hand_quarrel[SOURCE.AEG.id] = new Ammunition({
     name: "Hand quarrel",
@@ -5298,7 +5351,9 @@ WEAPONS.Hand_crossbow.ammunition.Hand_quarrel[SOURCE.AEG.id] = new Ammunition({
     damage: new Damage("1d3", "1d2"),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_CROSSBOW_QUARRELS
+    ]
 })
 
 WEAPONS.Heavy_crossbow[SOURCE.AEG.id] = new Weapon({
@@ -5311,7 +5366,11 @@ WEAPONS.Heavy_crossbow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Heavy crossbow"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_CROSSBOW_LIGHT_HEAVY,
+        AEG_CROSSBOW_INTERVIEW,
+        AEG_CROSSBOW_HISTORY
+    ]
 })
 WEAPONS.Heavy_crossbow.ammunition.Heavy_quarrel[SOURCE.AEG.id] = new Ammunition({
     name: "Heavy quarrel",
@@ -5322,7 +5381,9 @@ WEAPONS.Heavy_crossbow.ammunition.Heavy_quarrel[SOURCE.AEG.id] = new Ammunition(
     damage: new Damage("1d4+1", "1d6+1"),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_CROSSBOW_QUARRELS
+    ]
 })
 
 WEAPONS.Light_crossbow[SOURCE.AEG.id] = new Weapon({
@@ -5335,7 +5396,11 @@ WEAPONS.Light_crossbow[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Light crossbow"}),
     pages: [108],
 
-    descriptions: [],
+    descriptions: [
+        AEG_CROSSBOW_LIGHT_HEAVY,
+        AEG_CROSSBOW_INTERVIEW,
+        AEG_CROSSBOW_HISTORY
+    ],
 
     comment: `Size of Light Crossbow and Light quarrel looks to be swapped.`
 })
@@ -5348,7 +5413,9 @@ WEAPONS.Light_crossbow.ammunition.Light_quarrel[SOURCE.AEG.id] = new Ammunition(
     damage: new Damage("1d4", "1d4"),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_CROSSBOW_QUARRELS
+    ]
 })
 
 WEAPONS.Dagger[SOURCE.AEG.id] = new Weapon({
