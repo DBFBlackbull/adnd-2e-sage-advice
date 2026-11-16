@@ -5583,6 +5583,34 @@ WEAPONS.Dart[SOURCE.AEG.id] = new Weapon({
     ]
 })
 
+const AEG_FLAIL_GENERAL = {
+    pages: [70],
+    text: [
+        `**Flail**`,
+        `The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon was originally used as a tool for threshing grain. Weather a flail is used by a foot soldier or a horseman, the principle is the same.`,
+        `Rumors tell that the flinds' flindbars are in fact a variation of the flail. This has not been substantiated, and the flinds have no wish to cooperate in the research.`
+    ]
+}
+
+const AEG_FLAIL_INTERVIEW = {
+    pages: [70],
+    text: [
+        `*“In the adventurer's world, a flail can be used by warriors or priests, especially if the latter is not allowed edged weapons. The footman's flail causes more damage, since the longer pole enables the wielder to make a stronger swing. This is a good weapon to use in subduing someone, or even for a disarming maneuver. Bear in mind that the footman's flail is a two-handed weapon, whereas the horseman's flail is one-handed.*`,
+        `*“There is certainly no problem in a footman using a horseman's fail, although it is not a good habit. A foot soldier would be better off with a different blunt weapon that can cause more damage or have more versatility, such as a warhammer.”*`,
+        `*— Brother George, Cleric*`
+    ],
+    comment: `If the designers wanted the footman's flail to be a two-handed weapon it should have been the size L, so that it would follow the weapon size rules laid out in the PHB p. 96. The Fighter's handbook specifically points out that certain one-handed weapons can be used two-handed for more damage when using Two-Hander Style Specialization. This implies that the footman's flail is a one-handed weapon.`
+}
+
+const AEG_FLAIL_HISTORY= {
+    pages: [71],
+    text: [
+        `The followers of Peter the Hermit who fought in the Crusades in the 11th and 12th centuries used flails, placing spikes on the short flail heads. This adaptation gave rise to other modifications, such as replacing the second bar with two or more iron palls attached by chains.`,
+        `Footman's flail were used mostly in the 13th and 14th centuries by foot soldiers, especially peasant troops, while the horseman's version enjoyed use by cavalry troops during the same time period.`,
+        `Flails were used as late as the 1920's by Polish peasants against Soviet troops.`
+    ]
+}
+
 WEAPONS.Footmans_flail[SOURCE.AEG.id] = new Weapon({
     name: "Flail, Footman's",
     cost: new Cost(15, CURRENCY.GP),
@@ -5594,7 +5622,18 @@ WEAPONS.Footmans_flail[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Footman's Flail"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_FLAIL_GENERAL,
+        {
+            pages: [71],
+            text: [
+                `**Footman's Flail**`,
+                `The footman's flail has a handle approximately four feet in length. It otherwise conforms to the above description.`
+            ]
+        },
+        AEG_FLAIL_INTERVIEW,
+        AEG_FLAIL_HISTORY
+    ]
 })
 
 WEAPONS.Horsemans_flail[SOURCE.AEG.id] = new Weapon({
@@ -5608,7 +5647,18 @@ WEAPONS.Horsemans_flail[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Horseman's Flail"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_FLAIL_GENERAL,
+        {
+            pages: [71],
+            text: [
+                `**Horseman's Flail**`,
+                `The horseman's version ofn the flail has a two-foot-long handle. The horseman already has a good positional advantage, sitting atop a horse, and consequently does not need the greater reach afforded by the long handle of the footman's flail. This is a one-handed weapon.`
+            ]
+        },
+        AEG_FLAIL_INTERVIEW,
+        AEG_FLAIL_HISTORY
+    ]
 })
 
 WEAPONS.Gaff_hook_attached[SOURCE.AEG.id] = new Weapon({
