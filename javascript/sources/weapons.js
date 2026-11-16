@@ -5523,7 +5523,8 @@ WEAPONS.Dagger_parrying[SOURCE.AEG.id] = new Weapon({
                 `This specialized type of dagger is used in conjunction with a sword. It is used to catch or break an opponent's sword. Some versions of this dagger are equipped with spring blades that split intro three blades at the push of a button. When such a dagger is employed in this fashion, it cannot be thrown successfully`,
                 `Most parrying daggers have long, straight or curved quillons, and a tough side ring that extends perpendicular to the blade in order to protect the user's fingers,`,
                 `Unlike the main-gauche, the parrying dagger is made for a specific purpose, to deflect or break an opponent's weapon. The main-gauche, while also good for parrying, is less of a weapon-breaker.`
-            ]
+            ],
+            comment: `The Parrying dagger has all these descriptions for parrying or weapon breaking, but has no mechanics described for how this is resolved. Unlike the Main-gauche, which is described to give +1 to certain maneuvers.`
         }
     ]
 })
