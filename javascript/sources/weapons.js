@@ -5418,6 +5418,37 @@ WEAPONS.Light_crossbow.ammunition.Light_quarrel[SOURCE.AEG.id] = new Ammunition(
     ]
 })
 
+const AEG_DAGGER_GENERAL =         {
+    pages: [67, 68],
+    text: [
+        `**Dagger**`,
+        `The typical dagger has a pointed, usually double-edged blade, as opposed to a knife, which has a single edge and is a bit shorter than the dagger.`,
+        `The dagger is one of man's oldest weapons. The first dagger were most likely hand-held spearheads used by cavemen, made of bone or stone. Bone daggers are made from the bones of large animals such as reindeer and bison, with one end sharpened and then handle carved to resemble the animal from which the bone came. Such daggers are relatively fragile, and stone replaced bone when early man discovered how to work with stone.`,
+        `Stone daggers are more difficult to make due to the composition of stone. Most stone daggers are made of flint, hard stone that can be worked easily. The flint is chipped until the proper shape is achieved, usually that of the broad leaf, then it is sometimes lashed to a wooden handle. This sort of stone dagger has a major weak point: the place where the blade is attached to the handle. Primitive tribes know that the best stone dagger is made from a single piece of stone with the dagger's handle consisting of a straight section of stone. The handle is then wrapped in hide for a good grip. The average stone dagger measures 12 inches long.`,
+        `When man began working with copper and bronze, the technique of making a dagger's handle and blade from a single piece of material remained. Blade length increased up to 24 inches long, and when the length exceeded this, a new weapon, the short sword, was born.`,
+        `Some weaponsmiths have turned dagger making into an art form, decorating the handles, crossguards, and even the blades with beautiful carvings. Some daggers are decorated with carved scenes derived from a culture's mythology.`
+    ]
+}
+
+const AEG_DAGGER_HISTORY = {
+    pages: [68],
+    text: [
+        `With the advent of swords, the dagger was relegated to the role of back-up weapon. In fact, the average Roman soldier did not carry a dagger, but his Teutonic barbarian enemy used them. As the barbarian's influence swept over Europe, the dagger was given new life.`,
+        `Daggers with steel blades became necessary in order to penetrate armor. Although knights carried daggers, they were considered a weapon of last resort`,
+        `The modern handshake derived from a habit used by bodyguards. They would take the hand of anyone visiting the king and shake his arm, hoping to dislodge any dagger concealed in the visitor's sleeve.`
+    ]
+}
+
+const AEG_DAGGER_INTERVIEW = {
+    pages: [69],
+    text: [
+        `*“A dagger is great because it's easy to conceal, it's good in close-fighting or as a backup weapon, and it's shape allows it to be hurled. It has only a few problems—it's a short weapon, with neither the reach nor the damage potential of a sword.*`,
+        `*“A dagger makes a handy tool as well. Soldiers and adventurers use their daggers as eating utensils. Owning a sharp blade that is easily carried make life easier (just try drawing a long sword to cut some bread or a piece of rope!).*`,
+        `*“My favorite advantage of a dagger is that when you rely on stealth, you can use a dagger to dispatch a foe and draw less attention than resorting to a sword, in which case you might as well yell out your intentions. This is one reason why those of us who attack out enemies indiretly savor the dagger and usually carry at least two.”*`,
+        `*— Jasmine, Halfling Thief*`
+    ]
+}
+
 WEAPONS.Dagger[SOURCE.AEG.id] = new Weapon({
     name: "Dagger or dirk",
     cost: new Cost(2, CURRENCY.GP),
@@ -5429,7 +5460,25 @@ WEAPONS.Dagger[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Dagger or dirk"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_DAGGER_GENERAL,
+        AEG_DAGGER_HISTORY,
+        {
+            pages: [68],
+            text: [
+                `**Dagger, Dirk**`,
+                `A dirk has qualities of both the dagger and the knife. While useful as a weapon, it was designed for a variety of uses. It is a version of the ballock knife (or “kidney dagger”). The dirk has two round, symmetrical globes at the base of the handle, where the handle meets the blade. The grip itself emerges from between the globes and is fared at the top. The blade is often made from a large shard of a sword blade. The dirk is a single-edged, grooved weapon with a back edge near the point. It usually features a decorative notch at the bade.`,
+                `Most dirks have a special scabbard that has two small pockets in the front, one for a knife and one for a fork, used by warriors in the field as an early mess kit.`
+            ]
+        },
+        {
+            pages: [68],
+            text: [
+                `The dirk is a Scottish weapon, carried by Highlanders, making its appearance in the late 17th century. The grip is usually leather, ivy root, or ivory. In the late 18th century, the dirk was sometimes mounted in silver or gold. Though normally considered a civilian weapon, the dirk was produced as a military blade when Scottish men were incorporated into Britain's regular army.`
+            ]
+        },
+        AEG_DAGGER_INTERVIEW
+    ]
 })
 
 WEAPONS.Dagger_bone[SOURCE.AEG.id] = new Weapon({
@@ -5444,7 +5493,11 @@ WEAPONS.Dagger_bone[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Dagger or dirk"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_DAGGER_GENERAL,
+        AEG_DAGGER_HISTORY,
+        AEG_DAGGER_INTERVIEW
+    ]
 })
 
 WEAPONS.Dagger_parrying[SOURCE.AEG.id] = new Weapon({
@@ -5459,7 +5512,20 @@ WEAPONS.Dagger_parrying[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Parrying dagger"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_DAGGER_GENERAL,
+        AEG_DAGGER_HISTORY,
+        AEG_DAGGER_INTERVIEW,
+        {
+            pages: [69],
+            text: [
+                `**Dagger, Parrying**`,
+                `This specialized type of dagger is used in conjunction with a sword. It is used to catch or break an opponent's sword. Some versions of this dagger are equipped with spring blades that split intro three blades at the push of a button. When such a dagger is employed in this fashion, it cannot be thrown successfully`,
+                `Most parrying daggers have long, straight or curved quillons, and a tough side ring that extends perpendicular to the blade in order to protect the user's fingers,`,
+                `Unlike the main-gauche, the parrying dagger is made for a specific purpose, to deflect or break an opponent's weapon. The main-gauche, while also good for parrying, is less of a weapon-breaker.`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Dagger_stone[SOURCE.AEG.id] = new Weapon({
@@ -5474,7 +5540,11 @@ WEAPONS.Dagger_stone[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Dagger or dirk"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_DAGGER_GENERAL,
+        AEG_DAGGER_HISTORY,
+        AEG_DAGGER_INTERVIEW
+    ]
 })
 
 WEAPONS.Dart[SOURCE.AEG.id] = new Weapon({
@@ -5488,7 +5558,9 @@ WEAPONS.Dart[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Dart"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+
+    ]
 })
 
 WEAPONS.Footmans_flail[SOURCE.AEG.id] = new Weapon({
