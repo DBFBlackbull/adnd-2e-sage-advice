@@ -5661,6 +5661,24 @@ WEAPONS.Horsemans_flail[SOURCE.AEG.id] = new Weapon({
     ]
 })
 
+const AEG_GAFF_HOOK_GENERAL = {
+    pages: [72],
+    text: [
+        `**Gaff/Hook**`,
+        `The gaff or hook is actually a tool used to hook and land fish. It is commonly found where fishing boats are encountered, and the hooks are in plentiful supply, affording the disarmed adventurer a weapon of last resort.`,
+        `The gaff consists of a metal hook with a wooden or metal crossbar at the base. A one-handed tool, the hook protrudes from between the middle and ring fingers.`,
+        `Some sailors who have lost a hand have a cup with a gaff hook attached to the stump, guaranteeing that they are never without a weapon.`
+    ]
+}
+
+const AEG_GAFF_HOOK_INTERVIEW = {
+    pages: [72],
+    text: [
+        `*“Ya don't often see adventurers whacking away with gaffs. To them, it's only a tool. But more often than not, dock workers, press gangs, priates, and sailors have a pretty good swing with those hooks.”*`,
+        `*— Rych the Seeker, Harbormaster*`
+    ]
+}
+
 WEAPONS.Gaff_hook_attached[SOURCE.AEG.id] = new Weapon({
     name: "Attached",
     sorting_group: "Gaff/Hook",
@@ -5673,7 +5691,10 @@ WEAPONS.Gaff_hook_attached[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Gaff/Hook"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_GAFF_HOOK_GENERAL,
+        AEG_GAFF_HOOK_INTERVIEW
+    ]
 })
 
 WEAPONS.Gaff_hook_held[SOURCE.AEG.id] = new Weapon({
@@ -5688,7 +5709,10 @@ WEAPONS.Gaff_hook_held[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Gaff/Hook"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_GAFF_HOOK_GENERAL,
+        AEG_GAFF_HOOK_INTERVIEW
+    ]
 })
 
 WEAPONS.Hand_axe[SOURCE.AEG.id] = new Weapon({
@@ -5702,7 +5726,25 @@ WEAPONS.Hand_axe[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Hand/Throwing axe"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [72,73],
+            text: [
+                `**Hand or Throwing Axe**`,
+                `The hand axe or throwing axe is also known as the hatchet. The axe blade has a sharp steel tip, counterbalanced by a pointed fluke. The short handle has a point on the bottom and the head may have a spike on top.`,
+                `This weapon is often used by barbarian tribes. Some hand axes are carried on the saddles of knights and horsemen, who respect this weapon after seeing barbarians wield the axes effectively.`,
+                `Despite this acceptance by civilized folk, the throwing axe is often relegated to backup weapon status since the creation of the battleaxe, whose longer handle gives the wielder greater force in the swing. The maximum length of the hand axe's handle is about 18 inches, not very great, though better than a dagger's reach in hand-to-hand combat. The throwing axe's last advantage, its ability to be hurled, was eclipsed with the advent of better bows such as the long bow.`,
+                `Short races such as gnomes make good use of hand axes. The gnomes' traditional enemies, the kobolds, also use hand axes. The weapon's size is small enough to be wielded properly, and it can be hurled as a last resort. Dwarves, of course, are far more interested in the heavier battleaxe.`
+            ]
+        },
+        {
+            pages: [73],
+            text: [
+                `*“The throwing axe is a good backup weapon for an adventurer. It can be used in melee combat or as a missile weapon, although with mediocre range. The weapon is also useful as a general tool, especially to outdoor types such as rangers, who often need a good tool to hack away at undergrowth in order to blaze a trail.”*`,
+                `*— Dalraun Ironedge, Ranger*`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Harpoon[SOURCE.AEG.id] = new Weapon({
@@ -5710,7 +5752,22 @@ WEAPONS.Harpoon[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Harpoon"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [73],
+            text: [
+                `**Harpoon**`,
+                `The harpoon is a hunting weapon, which, in times of duress, may be used for defense. Its development by primeval man was for hunting marine ma,,als and large fish.`,
+                `The first harpoons were merely pointed sticks. Later, these became sticks with a sharp head of horn or bone. The heads often had hooks cut into them for increased damage and to hold the harpoon fast in the beast's flesh. The head was then fitted or attached to the end of the shaft, secured by animal sinews.`,
+                `Metal harpoon heads evolved later, most with pointed or barbed heads. These heads are usually detachable from the shaft, but are connected to the thrower by a cord attached between the point and the barb.`,
+                `When a hunter throws the harpoon and hits an animal, he follows the victim as best he can, playing out as much rope as needed until the beast tires and dies.`,
+                `Some creatures may be of sufficient intelligence to try to free themselves from the harpoon. If the target has Intelligence of 2 or greater and some means of dislodging the hook or breaking the line, it is allowed a saving throw vs. poison. Success means the victim is freed. Failure means the harpoon is still attached, the victim takes another hit point of damage, and is drawn 10' closer to the harpoon's wielder. The victim is pulled towards the wielder *only* if a concentrated attempt is made and the victim is of a size and weight that makes this possible (e.g., a harpooned whale cannot be hauled in by a fighter with 13 Strength).`,
+                `Certain primitive jungle tribes traditionally use harpoons to hunt wild boar. kuo-toa, the aquatic subterranean fish-men, favor the harpoon with as many nasty barbs on the weapon as possible.`,
+                `Harpoons may be used one- or two-handed, and there is no change in speed factor for using it one way or the other. This is a definite advantage. On the other hand, the harpoon has a poor throwing range, and damage potential is less when it is used one-handed, much like a bastard sword. The harpoon is a common weapon in coastal areas, but its primary function is not as a weapon against an intelligent opponent.`,
+                `Adventurers on ships may experiment with fitting harpoons onto ballista launchers, if the DM permits. This may be especially handy if the PCs are hunting some sea creature that they must haul back to port.`
+            ]
+        }
+    ]
 })
 WEAPONS.Harpoon.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.AEG.id] = new Weapon({
     name: "One-handed",
