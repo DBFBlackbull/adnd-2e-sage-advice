@@ -5976,7 +5976,33 @@ const AEG_KNIFE_GENERAL = {
     pages: [74, 75],
     text: [
         `**Knife**`,
-        `A knife consists of a single-edged, pointed blade with a handle mounted asymmetrically. It is an early weapon, used even by primitive tribes. In these cultures, a knife is little more than a flint blade with one or tow cutting edges.`
+        `A knife consists of a single-edged, pointed blade with a handle mounted asymmetrically. It is an early weapon, used even by primitive tribes. In these cultures, a knife is little more than a flint blade with one or two cutting edges.`,
+        `Bone knifes are little more than a sharpened piece of bone, often decorated in the same way as daggers. Like other bone weapons, bone knives are apt to shatter.`,
+        `True knives appeared when man began using alloys such as bronze. A knife was cast from a single piece of bronze, with a single straight edge or slightly curved blade. The curvature is often accentuated near the point.`,
+        `When man began using iron, knifes handles went through a change. The malleability of iron made it easy to create and keep a sharp edge, while also enabling the maker to extend the blade into the flat tang, which was then covered with sidepieces of wood, bone, or horn. This made the handles easier to decorate. In primitive civilizations, knives are used as an all-purpose tool, on the hunting grounds, and as a tool of sacrifice.`,
+        `Different forms of knives may be found among the different peoples who depend heavily on this useful tool. Small knives are made from domestic uses, longer knives for hunting and war.`,
+        `Small knives exhibit their own evolution, resulting in the common man's small knife with a four-inch blade and a plain handle of bone or horn. The more influential citizen may have a knife with a handle of rock crystal or other stone, enclosed in a precious metal. Despite the great value of these knives, they are not as effective in combat as the larger knives (-1 to attack and damage rolls).`,
+        `Non-domestic knives, or outdoor knives, have stronger blades and sharper points. They are carried in their own sheaths, or in the scabbard of a larger weapon, such as a sword, creating a specialized set.`,
+        `In some areas, knife makers are prohibited from selling knives with leaf-shaped blades. Such decrees are an effort to prevent such knives from being carried casually. The leaf shape cause a large, gaping wound that bleeds heavily.`
+    ]
+}
+
+const AEG_KNIFE_INTERVIEW = {
+    pages: [75],
+    text: [
+        `*“Though it seems as if a dagger and a knife are very much alike, there are important differences. A knife is lighter than a dagger. Its shape does not allow it to be thrown as easily, which explains why the lighter knife has the same throwing range as a dagger. The knife causes only slightly less damage than the dagger. Both weapons have the same rate of fire. The dagger is less of a tool and more a weapon, while it can be argued that the reverse applies to the knife.*`,
+        `*“An adventurer of high station way wish to have a knife and a sword of similar design, both housed in one scabbard. Such a thing is certainly considered a status symbol (definitely a mixed blessing).*`,
+        `*“A big advantage of knives is that they are found everywhere. Cooks, trappers, and hunters are but three occupations that justify carrying a knife.”*`,
+        `*— Peripim Furfoot, Halfling Adventurer and Profession Cook*`
+    ]
+}
+
+const AEG_KNIFE_HISTORY = {
+    pages: [75, 76],
+    text: [
+        `Knife handles historically exhibited wide variations in materials and workmanship. Cast silver knife handles were popular in the 16th century, inlaid mother-of-pearl was in vogue in the 17th century, porcelain handles were popular in the 18th century, and carved ivory and bone with fine silver plates was the trend in the 19th century.`,
+        `Nations or cultural groups created knives that suited their particular style or customs. A common knife in southern Europe, for instance, had a blade that folded toward the handle, with the cutting edge housed in a special groove. In Spain, these were called the Navaja, and in Italy the Serramancio. We know them today as clasp knives or jackknives.`,
+        `By far the most famous knife of the past two centuries was a heavy, single-edged, sharply pointed blade with a small handle with wooden sidepieces. The knife was designed for melee combat. This knife was much in use in the American West, and was named for it creator: Colonel James Bowie.`
     ]
 }
 
@@ -5991,7 +6017,11 @@ WEAPONS.Knife[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Knife"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_KNIFE_GENERAL,
+        AEG_KNIFE_INTERVIEW,
+        AEG_KNIFE_HISTORY
+    ]
 })
 
 WEAPONS.Knife_bone[SOURCE.AEG.id] = new Weapon({
@@ -6006,7 +6036,11 @@ WEAPONS.Knife_bone[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Knife"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_KNIFE_GENERAL,
+        AEG_KNIFE_INTERVIEW,
+        AEG_KNIFE_HISTORY
+    ]
 })
 
 WEAPONS.Knife_stone[SOURCE.AEG.id] = new Weapon({
@@ -6021,8 +6055,48 @@ WEAPONS.Knife_stone[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Knife"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        AEG_KNIFE_GENERAL,
+        AEG_KNIFE_INTERVIEW,
+        AEG_KNIFE_HISTORY
+    ]
 })
+
+const AEG_LANCE_GENERAL = {
+    pages: [76],
+    text: [
+        `**Lance**`,
+        `The term “lance” originally referred to spears wielded by footmen and cavalry. It eventually referred only to cavalry spears.`,
+        `Lance design varies between cultures and eras. Generally, the lance is a long shaft of tough wood, usually ash, with an iron head in the shape of a laurel or willow leaf, with cutting edges and a sharp point meant to penetrate armor.`,
+        `Lances are meant to be gripped close to the bottom, putting a great distance between the wielder and his target. As a rule, the lance is aimed diagonally above the horse's neck. The opponents face each other with their left sides oncoming.`,
+        `Along with almost any variety of sword, the lance is considered the best offensive weapon for mounted soldiers. Some knights carry a small fabric pennant affixed just below the lance head. These pennants are either triangular or square, and carry the colors or symbols of the knight's family or liege.`,
+        `In parades, lances are held vertically, with the butt set in a stirrup or on the horseman's right thigh. On a march, the lance is held across the shoulder, across the saddlebow, or horizontally alongside the horse.`,
+        `Through evolution, weaponsmiths sought to increase the damage caused by the lance by making them heavier.`,
+        `One of the biggest problems with using a lance is the jarring impact on the user. In order to address this problem, a thick leather ring called a graper is fitted to the shaft just behind the wielder's hand. This acts as a stop against the armpit, halting the lance's rearward motion upon impact.`,
+        `Another important part of a lance is a rest. The rest is a small, sometimes folding bracket fixed to the right side if the knight's breastplate armor. The graper is leaned against this rest when the lance is in use. The rest enables the knight to get the maximum push from his lance, inflicting the most damage.`,
+        `The difference between the light, medium, and heavy, lances stems from the length (10' for a light, 12' for a medium, and 14' for a heavy), and weight (five pounds, ten pounds, and fifteen pounds for light, medium, and heavy respectively).`,
+        `Each lance type can be used only if the rider is on a horse of corresponding type or greater. Thus, a knight on a heavy warhorse can use any lance, while the scout on a light warhorse is limited to the light lance.`,
+        `Locathah riding on the backs of giant eels use light lances.`
+    ]
+}
+
+const AEG_LANCE_INTERVIEW = {
+    pages: [76, 77],
+    text: [
+        `*“Light lances can be used as a polearm by adventurers who do not relish combat on horseback, preferring instead to meet the enemy on foot. It can be hard to wield a heavy lance in a forest, so a medium lance may be a good compromise.*`,
+        `*“Lances are best used as a mounted weapon. When used from the back of a charging mount, it inflicts double damage.*`,
+        `*“Nothing is more awe-inspiring than a mounted knight, wielding her lance and charging a dragon. Of such things legends are made, and no mounted warrior worth his salt should be without his lance, especially a paladin. I know I have mine!”*`,
+        `*— Maura Smallwood, Paladin*`
+    ]
+}
+
+const AEG_LANCE_HISTORY = {
+    pages: [77],
+    text: [
+        `The lance's history can be traced to the Middle East, and was widely used by Greco-Roman horsemen.`,
+        `Though rendered obsolescent in 1600 by the advent of firearms, lances were still used by light cavalry until the 19th century, with many European armies maintaining use of the lance in the Russian Civil War and World War I. Two of the most well-known uses of the lance in the 20th century were the Polish lancers' charges against German armor in 1939, and the Italian charges against the Russians in 1942.`
+    ]
+}
 
 WEAPONS.Heavy_horse_lance[SOURCE.AEG.id] = new Weapon({
     name: "Heavy horse lance",
@@ -6038,7 +6112,10 @@ WEAPONS.Heavy_horse_lance[SOURCE.AEG.id] = new Weapon({
     pages: [108],
 
     descriptions: [
-        AEG_AT_DOUBLE_DAMAGE_CHARGING_MOUNT
+        AEG_AT_DOUBLE_DAMAGE_CHARGING_MOUNT,
+        AEG_LANCE_GENERAL,
+        AEG_LANCE_INTERVIEW,
+        AEG_LANCE_HISTORY
     ]
 })
 
@@ -6056,7 +6133,17 @@ WEAPONS.Jousting_lance[SOURCE.AEG.id] = new Weapon({
     pages: [108],
 
     descriptions: [
-        AEG_AT_DOUBLE_DAMAGE_CHARGING_MOUNT
+        AEG_AT_DOUBLE_DAMAGE_CHARGING_MOUNT,
+        AEG_LANCE_GENERAL,
+        {
+            pages: [76, 77],
+            text: [
+                `**Jousting Lance**`,
+                `Jousting lances, used in “jousts of peace,” are the heaviest lances, weighing 20 pounds and measuring at least 13 feet long. These lances are fitted with a three pronged head in order to prevent armor penetration. The prongs are short, blunt projections that emerge from the headpiece, as opposed to a sharp point. This lance is also known as a “courtesy lance.” In a full tilt, a joust of war, the head is blunt and may actually cause fatalities.`,
+            ]
+        },
+        AEG_LANCE_INTERVIEW,
+        AEG_LANCE_HISTORY
     ]
 })
 
@@ -6074,7 +6161,10 @@ WEAPONS.Light_horse_lance[SOURCE.AEG.id] = new Weapon({
     pages: [108],
 
     descriptions: [
-        AEG_AT_DOUBLE_DAMAGE_CHARGING_MOUNT
+        AEG_AT_DOUBLE_DAMAGE_CHARGING_MOUNT,
+        AEG_LANCE_GENERAL,
+        AEG_LANCE_INTERVIEW,
+        AEG_LANCE_HISTORY
     ]
 })
 
@@ -6092,7 +6182,10 @@ WEAPONS.Medium_horse_lance[SOURCE.AEG.id] = new Weapon({
     pages: [108],
 
     descriptions: [
-        AEG_AT_DOUBLE_DAMAGE_CHARGING_MOUNT
+        AEG_AT_DOUBLE_DAMAGE_CHARGING_MOUNT,
+        AEG_LANCE_GENERAL,
+        AEG_LANCE_INTERVIEW,
+        AEG_LANCE_HISTORY
     ]
 })
 
