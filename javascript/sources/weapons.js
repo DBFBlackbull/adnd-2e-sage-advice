@@ -2525,6 +2525,28 @@ const FIGHTERS_HANDBOOK_ONE_HAND_THROW = {
     ]
 }
 
+const FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED = {
+    pages: [63],
+    text: [
+        `**Two-Hander Style - Style Specialization**`,
+        `You can, by devoting a weapon proficiency to it, take a Style Specialization with Two-Hander Style.`,
+        `Style Specialization with Two-Hander Style gives you a very specific benefit: When you're using a weapon two-handed, that weapon's Speed Factor is reduced by 3.`,
+        `For example, a fighter with Two-Hander Style Specialization and wielding a Bastard Sword can wield his weapon faster in two-handed style than in one-handed style. Used in one hand, the Bastard Sword has a Speed Factor of 6. In two hands (normally), it has a Speed Factor of 8. But used in two hands by someone with Two-Hander Style Specialization, it has a Speed Factor of (8-3) 5.`,
+        `This is because when a fighter wields such a weapon with both hands on the hilt, he has more leverage on the blade and can move it faster. That's what Style Specialization in Two-Hander Style will do for the character: It teaches him how to use the weapon much faster and more aggressively than someone with less specialized training in the weapon.`
+    ]
+}
+
+const FIGHTERS_HANDBOOK_2H_STYLE_SPEC_ONE_HANDER = {
+    pages: [63],
+    text: [
+        `**Two-Hander Style - One-Handed Weapons Used Two-Handed**`,
+        `Some players don't realize that many other one-handed weapons can also be used two-handed. Since these weapons don't do anymore damage two-handed, there usually isn't much reason to use this way; however, with Style Specialization in Two-Hander Style, now there's a reason.`,
+        `If you specialize in Two-Hander Style and then use a one-handed weapon in two hands, you also get a bonus of +1 to damage. Thus, if you take Two-Hander Style Specialization, when using a long sword two-handed, you do 1d8+1 damage instead of the base 1d8 (or 1d12+1 vs. large targets, instead of the base 1d12).`,
+        `The one-handed weapons which can be used two-handed in this fashion include: Battle axe, Club, Footman's flail, Footman's pick, Horseman's flail, Horseman's mace, Horseman's pick, Morning star, Longsword, Warhammer.`
+    ],
+    comment: `It seems inconsistent that Footman's mace is not on the list when all 3 Horseman's weapons are on the list.`
+}
+
 WEAPONS.Harpoon[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
     name: "Harpoon",
     footnote_marker: "%",
@@ -2563,6 +2585,8 @@ WEAPONS.Harpoon.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HA
     speed: 4,
     //damage: new Damage("2d4", "2d6"),
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Javelin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -2605,6 +2629,8 @@ WEAPONS.Javelin.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HA
     speed: 1,
     //damage: new Damage("1d6", "1d6"),
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -2652,6 +2678,8 @@ WEAPONS.Spear.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HAND
     speed: 3,
     // damage: new Damage("1d8+1", "2d6"),
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Long_spear[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -2695,6 +2723,8 @@ WEAPONS.Long_spear.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS
     speed: 5,
     // damage: new Damage("2d6", "3d6"),
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Trident[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -2737,6 +2767,8 @@ WEAPONS.Trident.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HA
     speed: 4,
     // damage: new Damage("1d8+1", "3d4"),
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Short_bow.ammunition.Flight_arrow_stone[SOURCE.FIGHTERS_HANDBOOK.id] =
@@ -2819,7 +2851,9 @@ WEAPONS.Bo_stick.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_H
     name: "Two-Hander Style Specialization",
     speed: 1,
     // damage: new Damage("1d6", "1d4"),
-    pages: [63]
+    pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Bolas[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3118,6 +3152,8 @@ WEAPONS.Javelin_stone.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHT
     speed: 1,
     // damage: new Damage("1d4+1", "1d6"),
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Knife[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3353,6 +3389,8 @@ WEAPONS.Naginata.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_H
     speed: 4,
     // damage: new Damage("1d8", "1d10"),
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Tetsubo[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3390,6 +3428,8 @@ WEAPONS.Tetsubo.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HA
     speed: 4,
     // damage: new Damage("1d8", "1d8"),
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Sai[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3494,6 +3534,8 @@ WEAPONS.Spear_stone.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTER
     speed: 3,
     // damage: new Damage("1d6", "2d4"),
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Stiletto[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3650,6 +3692,8 @@ WEAPONS.Katana.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HAN
     speed: 1,
     // damage: new Damage("2d6", "2d6"),
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Rapier[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3768,6 +3812,8 @@ WEAPONS.Awl_pike.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_H
     name: "Two-Hander Style Specialization",
     speed: 10,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Bardiche[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3783,6 +3829,8 @@ WEAPONS.Bardiche.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_H
     name: "Two-Hander Style Specialization",
     speed: 6,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Bastard_sword[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3798,6 +3846,8 @@ WEAPONS.Bastard_sword.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHT
     name: "Two-Hander Style Specialization",
     speed: 5,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Battle_axe[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3812,7 +3862,9 @@ WEAPONS.Battle_axe[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 WEAPONS.Battle_axe.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Hander Style Specialization",
     damage: new Damage("1d8+1", "1d8+1"),
-    pages: [63]
+    pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_ONE_HANDER]
 }
 
 WEAPONS.Bec_de_corbin[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3828,6 +3880,8 @@ WEAPONS.Bec_de_corbin.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHT
     name: "Two-Hander Style Specialization",
     speed: 6,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Bill_guisarme[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3843,6 +3897,8 @@ WEAPONS.Bill_guisarme.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHT
     name: "Two-Hander Style Specialization",
     speed: 7,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Blowgun[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3865,7 +3921,9 @@ WEAPONS.Club[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 WEAPONS.Club.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Hander Style Specialization",
     damage: new Damage("1d6+1", "1d3+1"),
-    pages: [63]
+    pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_ONE_HANDER]
 }
 
 WEAPONS.Composite_long_bow[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3926,6 +3984,8 @@ WEAPONS.Fauchard.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_H
     name: "Two-Hander Style Specialization",
     speed: 5,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Fauchard_fork[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3941,6 +4001,8 @@ WEAPONS.Fauchard_fork.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHT
     name: "Two-Hander Style Specialization",
     speed: 5,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Footmans_flail[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3954,7 +4016,9 @@ WEAPONS.Footmans_flail[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 WEAPONS.Footmans_flail.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Hander Style Specialization",
     damage: new Damage("1d6+2", "2d4+1"),
-    pages: [63]
+    pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_ONE_HANDER]
 }
 
 WEAPONS.Horsemans_flail[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3968,7 +4032,9 @@ WEAPONS.Horsemans_flail[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 WEAPONS.Horsemans_flail.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Hander Style Specialization",
     damage: new Damage("1d4+2", "1d4+2"),
-    pages: [63]
+    pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_ONE_HANDER]
 }
 
 WEAPONS.Footmans_mace[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -3993,7 +4059,9 @@ WEAPONS.Horsemans_mace[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 WEAPONS.Horsemans_mace.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Hander Style Specialization",
     damage: new Damage("1d6+1", "1d4+1"),
-    pages: [63]
+    pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_ONE_HANDER]
 }
 
 WEAPONS.Footmans_pick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4008,7 +4076,9 @@ WEAPONS.Footmans_pick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 WEAPONS.Footmans_pick.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Hander Style Specialization",
     damage: new Damage("1d6+2", "2d4+1"),
-    pages: [63]
+    pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_ONE_HANDER]
 }
 
 WEAPONS.Horsemans_pick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4023,7 +4093,9 @@ WEAPONS.Horsemans_pick[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 WEAPONS.Horsemans_pick.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Hander Style Specialization",
     damage: new Damage("1d4+2", "1d4+1"),
-    pages: [63]
+    pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_ONE_HANDER]
 }
 
 WEAPONS.Glaive[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4039,6 +4111,8 @@ WEAPONS.Glaive.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HAN
     name: "Two-Hander Style Specialization",
     speed: 5,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Glaive_guisarme[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4054,6 +4128,8 @@ WEAPONS.Glaive_guisarme.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIG
     name: "Two-Hander Style Specialization",
     speed: 6,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Guisarme[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4069,6 +4145,8 @@ WEAPONS.Guisarme.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_H
     name: "Two-Hander Style Specialization",
     speed: 5,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Guisarme_voulge[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4084,6 +4162,8 @@ WEAPONS.Guisarme_voulge.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIG
     name: "Two-Hander Style Specialization",
     speed: 7,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Halberd[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4099,6 +4179,8 @@ WEAPONS.Halberd.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HA
     name: "Two-Hander Style Specialization",
     speed: 6,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Hand_axe[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4187,6 +4269,8 @@ WEAPONS.Hook_fauchard.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHT
     name: "Two-Hander Style Specialization",
     speed: 6,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Khopesh[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4211,7 +4295,9 @@ WEAPONS.Long_sword[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 WEAPONS.Long_sword.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Hander Style Specialization",
     damage: new Damage("1d8+1", "1d12+1"),
-    pages: [63]
+    pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_ONE_HANDER]
 }
 
 WEAPONS.Lucern_hammer[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4227,6 +4313,8 @@ WEAPONS.Lucern_hammer.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHT
     name: "Two-Hander Style Specialization",
     speed: 6,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Mancatcher[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4242,6 +4330,8 @@ WEAPONS.Mancatcher.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS
     name: "Two-Hander Style Specialization",
     speed: 4,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Military_fork[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4257,6 +4347,8 @@ WEAPONS.Military_fork.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHT
     name: "Two-Hander Style Specialization",
     speed: 4,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Morning_star[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4271,7 +4363,9 @@ WEAPONS.Morning_star[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 WEAPONS.Morning_star.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Hander Style Specialization",
     damage: new Damage("2d4+1", "1d6+1"),
-    pages: [63]
+    pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_ONE_HANDER]
 }
 
 WEAPONS.Partisan[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4287,6 +4381,8 @@ WEAPONS.Partisan.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_H
     name: "Two-Hander Style Specialization",
     speed: 6,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Quarterstaff[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4300,6 +4396,8 @@ WEAPONS.Quarterstaff.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTE
     name: "Two-Hander Style Specialization",
     speed: 1,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Ranseur[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4315,6 +4413,8 @@ WEAPONS.Ranseur.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HA
     name: "Two-Hander Style Specialization",
     speed: 5,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Scimitar[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4376,6 +4476,8 @@ WEAPONS.Spetum.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HAN
     name: "Two-Hander Style Specialization",
     speed: 5,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Two_handed_sword[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4391,6 +4493,8 @@ WEAPONS.Two_handed_sword.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FI
     name: "Two-Hander Style Specialization",
     speed: 7,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Voulge[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4406,6 +4510,8 @@ WEAPONS.Voulge.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HAN
     name: "Two-Hander Style Specialization",
     speed: 7,
     pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_SPEED]
 }
 
 WEAPONS.Warhammer[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
@@ -4420,7 +4526,9 @@ WEAPONS.Warhammer[SOURCE.FIGHTERS_HANDBOOK.id] = new Weapon({
 WEAPONS.Warhammer.grip[HANDEDNESS.TWO_HANDED_SPECIALIZATION.id][SOURCE.FIGHTERS_HANDBOOK.id] = {
     name: "Two-Hander Style Specialization",
     damage: new Damage("1d4+2", "1d4+1"),
-    pages: [63]
+    pages: [63],
+
+    descriptions: [FIGHTERS_HANDBOOK_2H_STYLE_SPEC_ONE_HANDER]
 }
 
 //#endregion Fighter's Handbook
@@ -5863,6 +5971,14 @@ WEAPONS.Javelin_stone.grip[HANDEDNESS.TWO_HANDED.id][SOURCE.AEG.id] = new Weapon
     damage: new Damage("1d4+1", "1d6"),
     pages: [108],
 })
+
+const AEG_KNIFE_GENERAL = {
+    pages: [74, 75],
+    text: [
+        `**Knife**`,
+        `A knife consists of a single-edged, pointed blade with a handle mounted asymmetrically. It is an early weapon, used even by primitive tribes. In these cultures, a knife is little more than a flint blade with one or tow cutting edges.`
+    ]
+}
 
 WEAPONS.Knife[SOURCE.AEG.id] = new Weapon({
     name: "Knife",
