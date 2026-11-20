@@ -1363,9 +1363,7 @@ WEAPONS.Mancatcher[SOURCE.PHB.id] = new Weapon({
     cost: new Cost(30, CURRENCY.GP),
     weight_lbs: 8,
     size: SIZE.L,
-    type: [],
     speed: 7,
-    damage: new Damage(null, null),
     proficiencies: new Proficiencies({single: "Mancatcher"}),
     pages: [94],
 
@@ -1382,9 +1380,10 @@ WEAPONS.Mancatcher[SOURCE.PHB.id] = new Weapon({
             pages: [97],
             text: [
                 `**Mancatcher:** This item is a highly specialized type of polearm designed to capture without killing a victim. It consists of a long pole with a spring-loaded set of sharpened jaws at the end. The victim is caught between the arms, which then snap shut. The mancatcher is effective only on man-sized creatures. The target is always treated as AC 10, modified for Dexterity. If a hit is scored, the character is caught. The caught victim loses all shield and Dexterity bonuses and can be pushed and pulled about. This causes an automatic 1d2 points of damage per round and gives a 25% chance of pulling the victim to the ground. The victim can escape on a successful bend bars/lift gates roll, although this results in 1d2 points more damage. A common tactic is to use the weapon to pull horsemen off their mounts, then pin them to the ground.`
-            ]
+            ],
+            comment: `Annoying that mancatcher is listed as dealing no damage, when the description says it deals 1d2 damage. Now it might be at the end of the round and not on hit technically, but it would be nice to have this information up front.`
         }
-    ]
+    ],
 })
 
 WEAPONS.Morning_star[SOURCE.PHB.id] = new Weapon({
