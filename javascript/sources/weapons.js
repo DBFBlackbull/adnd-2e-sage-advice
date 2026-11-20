@@ -6198,8 +6198,97 @@ WEAPONS.Lasso[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Lasso"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [77, 78],
+            text: [
+                `**Lasso**`,
+                `A lasso is a length of rope with a loop at the end, tied with a knot that enables the loop to be tightened. The wielder twirls the lasso and throws the loop at the intended target. If it hits, the lasso has encircled the target, enabling the attacker to dismount the victim, make him fall, pin him, strangle him, etc. The wielder must specify exactly what he wants the lasso to accomplish before making his attack roll.`,
+                `A successful hit does not cause damage to the target, but incidental damage can occur from the results of certain actions performed with the lasso, such as making someone fall or strangling a victim.`,
+                `The many tricks which can be performed with a lasso are outlined in the Equipment Chapter of the *The Complete Fighter's Handbook.*`,
+                `A lasso may be severed by 2 hit points of cutting damage. A victim's Strength can break a lasso, using the character's Bend Bars/Lift Gates roll. Only one attempt can be made on any one lasso.`,
+                `Lassos are also called lariats. Characters can take lasso as a weapon proficiency, but they should remember that the Rope Use nonweapon proficiency gives a +2 bonus to hit with a lasso.`
+            ]
+        },
+        {
+            pages: [78],
+            text: [
+                `*“Lasso? What sort of heroic weapon is a lasso? What is a warrior going to do, tie up his victim and make him die of embarrassment? Bah! If a warrior is so keen on using a length of hemp rope, let him learn Rope Use. That way, not only is there a better chance at hitting a victim with a lasso than if he were proficient with the lasso as a weapon, but the adventurer will also pick up many more tricks, rather than wasting time trying to become expert at throwing silly loops of rope! Lassos, indeed!”*`,
+                `*— Kedar the Dark, Warrior of Adauntlynn*`
+            ]
+        }
+    ]
 })
+
+const AEG_MACE_GENERAL = {
+    pages: [78],
+    text: [
+        `**Mace**`,
+        `The mace is a direct descendant of the basic club, being nothing more than a wooden club with a stone or iron head mounted on the end. The head design varies, with some being spiked, others flanged, and still others with pyramidical knobs.`,
+        `The mace has existed since man began working with metal. The first maces were made in order to give the club wielder more power in his swing.`,
+        `High-level priests, knights, and even paladins may have a personalized, decorated mace that serves primarily as a symbol of rank.`,
+        `Since the mace is a weapon that requires very little in the way of specialized training, it is favored weapon among goblins.`
+    ]
+}
+
+const AEG_MACE_INTERVIEW = {
+    pages: [79],
+    text: [
+        `*“Maces are a step up from the basic club, and are a good weapon especially for priests who cannot use edged weapons. Adventurers may find that the horseman's mace is actually a good secondary weapon for a footman, though the reverse is certainly not true!*`,
+        `*“A mace is especially made for crushing things, especially helmets and armor.”*`
+    ]
+}
+
+const AEG_MACE_HISTORY = {
+    pages: [79,80],
+    text: [
+        `The Romans armed their allied auxiliaries with bronze-headed maces, although they never used maces themselves.`,
+        `Two styles of mace head patterns emerged before the 14th century. The first was a ferrule from which extended knot or node-shaped pieces, and the second was a geometrically designed head with vanes (conical or diamond-shaped flanges).`,
+        `Gothic influence in the 14th century made maces more decorative, a trend which ended in the 16th century, when maces were given a more military form. Eastern European maces, especially those from Poland and Hungary, had onion-shaped heads, an idea taken from the Turkish maces. Maces were used as a weapon up until the 18th century.`,
+        `During the Middle Ages, arming oneself with a mace took on significance among nobles and army commanders. The mace became a preferred weapon among wealthy or illustrious users, and it became symbolic of power, wealth, and renown. These maces were shaped or decorated in a manner that represented the wielder. This, the owner of a mace became recognized as a person of prominence and rank, with the number of ribs and flanges on the mace indicating the owner's status`
+    ]
+}
+
+WEAPONS.Footmans_mace[SOURCE.AEG.id] = new Weapon({
+    name: "Footman's Mace",
+    pages: [],
+
+    descriptions: [
+        AEG_MACE_GENERAL,
+        {
+            pages: [78,79],
+            text: [
+                `**Footman's Mace**`,
+                `Footman's maces originated as heavy wooden truncheons, about two and a half feet in length and covered with iron studs. As time went by, flanged heads similar to the horseman's mace were used instead. This mace is a two-handed weapon.`,
+                `There are two different types of footman's maces: an emergency weapon made from materials at hand and thrown together by a blacksmith, and the maces made by professional weaponsmiths for troops. In order to reflect the difference between the two types, the homemade mace should be given a -1 penalty to attack and damage rolls.`,
+                `The hasty, emergency maces are usually a wooden handle with any sort of metal head attached.`
+            ],
+            comment: `Footman's mace is a size M weapon, and is therefore considered a one-handed weapon by the PHB rules. Trying to redefine it as a two-handed weapon is the same trend seen on the Footman's flail. If the designers wanted it to be a two-handed weapon they should make it size L and put it under the polearms. Only thing speaking towards making footman's mace a two-handed weapon is that it is not included in the *Fighter's handbook* section about using one-handed weapon in two-handed, though I think this omission is an error.`
+        },
+        AEG_MACE_INTERVIEW,
+        AEG_MACE_HISTORY
+    ]
+})
+
+WEAPONS.Horsemans_mace[SOURCE.AEG.id] = new Weapon({
+    name: "Horseman's Mace",
+    pages: [],
+
+    descriptions: [
+        AEG_MACE_GENERAL,
+        {
+            pages: [78,79],
+            text: [
+                `**Horseman's Mace**`,
+                `The first horseman's maces were a wooden handle, about 18 inches long, with a leather wrist strap at the bottom of the handle so the weapon would not be dropped, and a metal head. As time progressed, knights preferred to have maces made entirely of metal.`,
+                `The horseman's mace became an important weapon to the knight. Knights usually keep a mace slung over a hook on the saddlebow. Not surprisingly, an alternate name for the horseman's mace is the knight's mace. This type of mace is a one-handed weapon.`
+            ],
+        },
+        AEG_MACE_INTERVIEW,
+        AEG_MACE_HISTORY
+    ]
+})
+
 
 WEAPONS.Main_gauche[SOURCE.AEG.id] = new Weapon({
     name: "Main-Gauche",
