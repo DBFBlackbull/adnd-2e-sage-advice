@@ -6086,7 +6086,8 @@ const AEG_LANCE_INTERVIEW = {
         `*“Lances are best used as a mounted weapon. When used from the back of a charging mount, it inflicts double damage.*`,
         `*“Nothing is more awe-inspiring than a mounted knight, wielding her lance and charging a dragon. Of such things legends are made, and no mounted warrior worth his salt should be without his lance, especially a paladin. I know I have mine!”*`,
         `*— Maura Smallwood, Paladin*`
-    ]
+    ],
+    comment: `Allowing the usage of lances when not on horseback is a good change. This makes the weapon a viable pick as a weapon proficiency for campaigns that focus on dungeons, and see little mounted combat. The mounted double damage then become a situational bonus instead of the only reason to use the weapon.`
 }
 
 const AEG_LANCE_HISTORY = {
