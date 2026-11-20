@@ -6301,7 +6301,25 @@ WEAPONS.Main_gauche[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Main-Gauche"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [80],
+            text: [
+                `**Main-Gauche**`,
+                `The main-gauche (French for “left hand”) is a large dagger with a basket hilt. Since most swordsmen use their right hand to wield a sword, this dagger is meant for the left hand, wielded as a defensive weapon when a warrior is using the two-handed fighting technique. The main-gauche is also called a “left-hand dagger.”`,
+                `The heavy basket of the main-gauche is the equivalent of an iron gauntlet for the purpose of hand-to-hand combat.`,
+                `Fighters proficient with main-gauche gain a +1 bonus to hit with Disarm and Parry maneuvers. More information on fighting styles and maneuvers can be found in *The Complete Fighter's Handbook* in the Combat chapter.`
+            ],
+            comment: `The "two-handed fighting technique" is clearly suppose to be the "two weapon fighting technique", as the warrior is using two weapons in this scenario.`
+        },
+        {
+            pages: [80, 81],
+            text: [
+                `*“A main-gauche causes the same damage as a normal dagger, but the former is designed especially for defense. It's important not to confuse the main-gauche with the parrying dagger. The latter has a different design, including longer quillons and sometimes a triple blade. A parrying dagger also has a greater likelihood of breaking an opponent's weapon. A main-gauche offers better protection to the user's hand. In any case, it is quite a sight to see a warrior using a sword in one hand and a main-gauche in the other.”*`,
+                `*—Mendrill Halfelven, Bard*`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Mancatcher[SOURCE.AEG.id] = new Weapon({
@@ -6315,7 +6333,25 @@ WEAPONS.Mancatcher[SOURCE.AEG.id] = new Weapon({
     pages: [108],
 
     descriptions: [
-        AEG_2xASTERISK_DISMOUNT_RIDER
+        AEG_2xASTERISK_DISMOUNT_RIDER,
+        {
+            pages: [81],
+            text: [
+                `**Mancatcher**`,
+                `A mancatcher is a polearm with a special function: to capture an opponent without killing him. The weapon consists of a long pole with a set of spring-loaded, sharpened jaws at the end. The victim is caught between the jaws, which then snap shut.`,
+                `The target, regardless of armor and other defensive devices (magical or otherwise), is treated as AC 10, though appropriate Dexterity bonuses are allowed. If a hit is scored, the opponent is caught, losing shield and Dexterity bonuses. In addition, the victim can be pushed and pulled around at the whim of the mancatcher's wielder.`,
+                `While caught in the mancatcher, the victim suffers 1d2 hit points of damage per round. There is a 25% chance that the trapped character will fall to the ground.`,
+                `The victim may attempt to escape the grip of a mancatcher by making a successful bend bars/lift gates roll, but he suffers an extra 1d2 points of damage while breaking away.`
+            ]
+        },
+        {
+            pages: [81,82],
+            text: [
+                `*“Mancatchers are good for pulling horsemen off their mounts and pinning them to the ground, but the weapon is only good on man-sized opponents. Smaller creatures like goblins and kobolds can just slip on through, and the larger creatures don't have the right frame, though why anyone would want to capture any of these disgusting things alive is beyond me.*`,
+                `*“Mancatchers are used often by that foul, subterranean race of fish-men, the kuo-toa. Some adventurers who may have suffered the depredations of the kuo-toa and who see a character wielding a mancatcher may get a bit upset. Often it's best to steer clear of weapons that remind certain people of certain races, unless of course, someone is* really *good with the weapon in question!”*`,
+                `*— Troxel the Inpredictable*`
+            ]
+        }
     ]
 })
 
