@@ -9,11 +9,14 @@ th, td {
     padding: 2px;
 }
 
-th {
+thead {
     background: lightgray;
-    vertical-align: bottom;
     position: sticky;
     top: 0;
+}
+
+th {
+    vertical-align: bottom;
 }
 
 .title{
