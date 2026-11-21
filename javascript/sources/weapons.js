@@ -6429,6 +6429,58 @@ WEAPONS.Net[SOURCE.AEG.id] = new Weapon({
     ]
 })
 
+const AEG_PICK_GENERAL = {
+    pages: [83],
+    text: [
+        `**Pick, Military**`,
+        `The medieval military pick was a specialized weapon. It probably originated from the common mining tool. As armor grew heavier, the pick's form and function were soon adapted to a specialized role. This role was to penetrate the heavier armor types, from chain mail up through full plate armor. The military pick was a modification of a weapon called the *martel-de-fer*, a type of war hammer that had a hammerhead balanced by a thick, curved piercing fluke or “crow's beak.”`,
+        `The military pick generally consists of a heavy piercing fluke mounted on a haft. The weapon might have either one or two flukes, and the haft might be spiked.`,
+        `The weapon is popular with knights and the heavy foot soldiers of certain mercenary companies. Dwarves and gnomes are also fond of the weapon, and deep gnomes (svirfneblin) in particular use great numbers of them.`,
+    ]
+}
+
+const AEG_PICK_INTERVIEW = {
+    pages: [84],
+    text: [
+        `*“Races who particularly enjoy mining, such as gnomes, svirfneblin, and dwarves, can be found with these weapons. They usually know how to use a pick both as a tool and as a weapon, though they will first use normal weapons if given the chance. Sometimes they have to wield these as weapons against another race known for its subterranean diggings, and who also use the pick as a weapon: the duergar.”*`,
+        `*— Nahac the Gnome Sage*`
+    ]
+}
+
+WEAPONS.Footmans_pick[SOURCE.AEG.id] = new Weapon({
+    name: "Footman's Pick",
+    pages: [],
+
+    descriptions: [
+        AEG_PICK_GENERAL,
+        {
+            pages: [84],
+            text: [
+                `**Footman's Pick**`,
+                `The footman's version of this weapon has a longer haft (up to 5'), enabling it to be wielded with two hands. The weapon weights about six pounds and can be swing with great penetrating force.`
+            ]
+        },
+        AEG_PICK_INTERVIEW
+    ]
+})
+
+WEAPONS.Horsemans_pick[SOURCE.AEG.id] = new Weapon({
+    name: "Horseman's Pick",
+    pages: [],
+
+    descriptions: [
+        AEG_PICK_GENERAL,
+        {
+            pages: [84],
+            text: [
+                `**Horseman's Pick**`,
+                `The horseman's pick is lighter (about 4 pounds) and has a shortened haft (about two feet), making it easier to wield from horseback. It is commonly used by knights and heavy mercenary horsemen, who face more heavily armored opponents. The deep gnomes' weapon is also of the lighter variety.`
+            ]
+        },
+        AEG_PICK_INTERVIEW
+    ]
+})
+
 WEAPONS.Awl_pike[SOURCE.AEG.id] = new Weapon({
     name: "Awl pike",
     footnote_marker: "#",
