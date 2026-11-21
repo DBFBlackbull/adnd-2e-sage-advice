@@ -6366,7 +6366,33 @@ WEAPONS.Morning_star[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Morning star"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [82],
+            text: [
+                `**Morning Star**`,
+                `The morning star is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morning stars have an overall length of about four feet. Some such weapons have a round, oval, or cylindrical shaped head studded with spikes. Extending from most morning star heads, regardless of design, is a long point for thrusting.`,
+                `The weapon is designed to allow the wielder to inflict greater damage with his swing. The weighted, spiked head adds to this ability significantly.`,
+                `Long-handled morning stars are used by foot soldiers, while the short-handled version are used by horsemen. It is a very popular weapon due to its effectiveness and its simplicity of production.`,
+                `The morning star traces its ancestry to the mace, which in turn traces its lineage back to the club.`,
+                `Hobgoblins, a race that takes great delight in inflicting pain, often use morning stars. Troglodytes use stone morning stars.`
+            ]
+        },
+        {
+            pages: [82],
+            text: [
+                `*“Morning stars are clubs with a real nasty attitude. They can cause as much damage to a man as a longsword, probably because of them spikes. I hear tell that the morning star is called a bludgeoning weapon as well as a piercing weapon, but tell me, have you ever seen a sharp spike hit someone at high speeds and have that called bludgeoning?”*`,
+                `*— Suriel, Cleric of Tyr*`
+            ]
+        },
+        {
+            pages: [82,83],
+            text: [
+                `The morning star was derived from the Swiss Morgenstern (literally: “morning star”), and was used during the 16th and 17th centuries, especially in England. The weapon has the perverse nickname of “holy water sprinkler.”`,
+                `The morning star was popular from the Middle Ages to the late 17th century, though its use continued among peasants and poor urban militiaman and gangs up to the 19th century.`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Net[SOURCE.AEG.id] = new Weapon({
@@ -6378,7 +6404,29 @@ WEAPONS.Net[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Net"}),
     pages: [108],
 
-    descriptions: []
+    descriptions: [
+        {
+            pages: [83],
+            text: [
+                `**Net**`,
+                `The net is a tool that has been used as a weapon since the days when emerging civilizations held gladiatorial arena combat. This version of the net is an eight- to twelve-foot diameter circular net with weights around the edges and a trailing rope used to guide the net and pull it away. It is usually folded in such a way that it twirls open when thrown. It is tossed with one hand, with the attacker holding onto the guide rope with the other hand.`,
+                `A successful hit with this weapon means that the victim is netted and must try to break free by making a Strength check once per round until successful. The netted victim cannot make any sort of attack until the net has been shaken off.`,
+                `On the round after the victim is netted, the attacker has several options for his next action, including using another weapon to strike the entangled victim. The victim loses his Dexterity and shield bonuses to armor class until he is freed.`,
+                `The attacker may improve his grip on the victim by looping the trailing rope around the netted character. This requires a normal attack roll for success, and the victim loses 4 points of effective Strength (for determining success of freeing oneself from the net) per successful round of attack. If the victim's Strength is reduced to zero, he is hopelessly tangled and cannot escape unless helped by someone outside the net.`,
+                `If a warrior throws a net and misses, it is open and unfolded. It may still be thrown but it is no longer folded correctly and is consequently an unwieldy weapon. Attackers suffer a -3 penalty to hit when throwing an unfolded net.`,
+                `A properly folded net allows the attacker to perform Disarm, Parry, and Pin maneuvers. Such attacks are at a -3 to hit if the net is unfolded.`,
+                `Certain underwater races, such as nixies and sahuagin, use nets not only for fishing, but also as a combat weapon, usually when they wish to take a victim alive.`,
+            ]
+        },
+        {
+            pages: [83],
+            text: [
+                `*“This weapon is rather unusual, but it can be quite effective. Imagine, a weapon which, if it hits, will immobilize an opponent in just one round. Of course, such a weapon is not very effective on larger than man-sized or exceptionally strong creatures (such as an ogre), though it may buy a wounded adventurer some time, since a successful hit means that the victim must abandon plans for attacking and concentrate instead on getting out of the net.*`,
+                `*“Characters who can set snares and traps ought to consider the net when making their little traps. It could come in handy for defense or in a hasty retreat.”*`,
+                `*— Bramm Po, Illusionist*`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Awl_pike[SOURCE.AEG.id] = new Weapon({
