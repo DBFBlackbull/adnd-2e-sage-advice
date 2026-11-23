@@ -116,17 +116,16 @@
     }
 
     function colorFlip(color) {
-        if (color === '') {
+        if (!color) {
             return 'antiquewhite';
         }
 
-        return '';
+        return null;
     }
 
 mixin weaponRow(obj, book, color, indents)
     - let indent = '&emsp;'.repeat(indents)
-    - let backgroundColor = `background: ${color};`
-    tr(style=backgroundColor)
+    tr(style=color ? `background: ${color};` : false)
         - if (!obj.name) { console.log(`${book.id} ${obj.id} is missing name`) }
         - let footnoteMarker = obj.footnote_marker ? ` ${obj.footnote_marker}` : ""
         td !{indent + obj.name + footnoteMarker}
