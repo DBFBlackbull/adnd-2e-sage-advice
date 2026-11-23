@@ -6481,6 +6481,31 @@ WEAPONS.Horsemans_pick[SOURCE.AEG.id] = new Weapon({
     ]
 })
 
+const AEG_POLEARM_GENERAL = {
+    pages: [84],
+    text: [
+        `**Polearms**`,
+        `Also called staff weapons, polearms are defined as hafted weapons—edged weapons mounted on a short handle or on a longer shaft wielded with two hands. The shafts are usually made of wood, though metal shafts sometimes exists.`,
+        `An alternative term for polearm is pollaxe, which is used to describe t
+        any weapon which has a metal head in a combination of axe, beak, or hammer, mounted on a pole ranging four to six feet in length. Poll is the contemporary word for a steel head mounted on a staff, and the term should not be confused with “poleaxe.”`,
+        `Though descriptions of the various polearm types follow, there are certain characteristics common with all pole weapons, as outlined here.`,
+        `Polearms are easy to make and are used often by peasants and common foot soldiers. The polearm is a great equalizer for these troops, who often must fight armored men on horseback. A polearm gives the wielder a long reach without exposing himself to the swing of a sword. Setting polearms to receive a charge grants the wielder an initiative bonus.`,
+        `A primary use of the polearm is to allow warriors in the second rank to attack over the shoulders of the front rank. Often times, a fighter with a hand weapon and shield will team up with one using a pole arm, and they will fight as a coordinated unit.`,
+        `Polearms that have special attachments to topple mounted targets have a base 20% chance of success.`,
+        `Special optional rules for implementing polearm tactics may be found in the Combat chapter in *The Complete Fighter's Handbook*.`,
+        `Gnolls and hobgoblins make it a point to carry polearms often. A band of such creatures encountered carrying polearms will be knowledgeable in polearm tactics. Orcs favor halberds, pikes, and glaives.`,
+        `While the Master Weapons Chart at the end of this chapter shows which polearms cause extra damage when set to receive a charge, any polearm can be used to receive a charge regardless of whether is causes extra damage.`
+    ]
+}
+
+const AEG_POLEARM_INTERVIEW_1 = {
+
+}
+
+const AEG_POLEARM_INTERVIEW_2 = {
+
+}
+
 WEAPONS.Awl_pike[SOURCE.AEG.id] = new Weapon({
     name: "Awl pike",
     footnote_marker: "#",
