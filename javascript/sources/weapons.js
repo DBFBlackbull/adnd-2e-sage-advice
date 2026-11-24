@@ -1550,6 +1550,10 @@ WEAPONS.Fauchard[SOURCE.PHB.id] = new Weapon({
             pages: [98],
             text: [`**Fauchard:** An outgrowth of the sickle and scythe, the fauchard is a long, inward curving blade mounted on a shaft 6 to 8 feet long. It can slash or thrust, although the inward curving point makes thrusting rather ineffective. Its advantage is that a peasant can easily convert his common scythe into this weapon of war.`]
         }
+    ],
+
+    images: [
+        PHB_IMAGE_POLEARM_SPEAR
     ]
 })
 
@@ -1578,10 +1582,6 @@ WEAPONS.Fauchard_fork[SOURCE.PHB.id] = new Weapon({
             text: [`**Fauchard:** An outgrowth of the sickle and scythe, the fauchard is a long, inward curving blade mounted on a shaft 6 to 8 feet long. It can slash or thrust, although the inward curving point makes thrusting rather ineffective. Its advantage is that a peasant can easily convert his common scythe into this weapon of war.`]
         }
     ],
-
-    images: [
-        PHB_IMAGE_POLEARM_SPEAR
-    ]
 })
 
 WEAPONS.Glaive[SOURCE.PHB.id] = new Weapon({
@@ -4804,6 +4804,11 @@ const AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE = {
     text: [`# This weapon inflicts double damage when firmly set to receive a charge.`]
 }
 
+const AEG_ATTRIBUTE = {
+    INTERVIEW: "interview",
+    HISTORY: "history"
+}
+
 WEAPONS.Arquebus[SOURCE.AEG.id] = new Weapon({
     name: "Arquebus",
     footnote_marker: "***",
@@ -4842,13 +4847,15 @@ WEAPONS.Arquebus[SOURCE.AEG.id] = new Weapon({
             text: [
                 `*“As far as many folk are concerned, smoke powder and magic don't mix! Sure, the arquebus is a newfangled weapon, but not all new things are necessarily better! With an arquebus, the firer has to take time to reload, unless he wants to have someone tag along and supply him with an extra arquebus, already loaded, in order to keep up a steady rate of fire. Oh, certainly that can be done—or the more intelligent adventurer will go out and get himself a long bow which fires arrows quicker than an arquebus can throw shot, and has comparable range! As far as can be determined, the arquebus is good for making god-awful noise that will either scare the Nine Hells out of any enemy, or possibly anger the target into attacking with even more ferocity.”*`,
                 `*— Grymwand, Professional Mercenary*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         },
         {
             pages: [54],
             text: [
                 `The arquebus gets its name from the German Hakenbuchse, meaning “gun with a hook.”`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
         }
     ]
 })
@@ -4884,7 +4891,8 @@ WEAPONS.Battle_axe[SOURCE.AEG.id] = new Weapon({
                 `*“Battle axes are good for their percussive and cutting effects against armor. If adventurers want to use a battle axe and still gain some measure of protection, it is wise to fight alongside a companion who is armored with a sword and shield. The companion acts as the axe-wielder's defense while the latter is busy chopping away. This is a good exercise in teamwork, which may keep both adventurers alive much longer.*`,
                 `*“As for dwarves, out center of gravity is low enough that we can swing a battle axe and not topple over from the momentum. It is a fine weapon for heaving the legs of a giant out under him. and it is a weapon that lets us put all of out weight into the swing.”*`,
                 `*— Dagalor Goldenbeard, of the Dwarven Clan Goldenbeard*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         },
         {
             pages: [56],
@@ -4895,7 +4903,8 @@ WEAPONS.Battle_axe[SOURCE.AEG.id] = new Weapon({
                 `English knights of the 14th century adopted the battle axe as a favored weapon in foot combat. Its long handle afforded a great reach, and allowed for a great amount of force to be focused in the blow.`,
                 `Naval crews used battle axes as boarding weapons until the tactic of boarding parties become obsolete.`,
                 `The dwarven battle axe design is based on actual design by the Swiss, who called their version the mordaxt.`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
         }
     ]
 })
@@ -4925,7 +4934,8 @@ WEAPONS.Belaying_pin[SOURCE.AEG.id] = new Weapon({
             text: [
                 `*“When a bloke is at sea, unarmed and surrounded by degenerate pirates, a belaying pin makes a fine on-the-spot weapon, even though its primary function is to hold hope, not bash heads. No warrior in his right mind would bother to specialize in or stock up on belaying pins!”*`,
                 `*— Captain Ar, of the Galleon Flameburst*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         }
     ]
 })
@@ -4957,7 +4967,8 @@ WEAPONS.Blowgun[SOURCE.AEG.id] = new Weapon({
                 `*“Blowguns can also be used as makeshift breathing tubes if adventurers are crossing or hiding in a body of water*`,
                 `*“Being virtually noiseless, the blowgun is a good weapon for use in infiltrating a stronghold. Darts dipped in a sleep drug may knock out sentries quickly, and this may be an ideal arrangement for someone who wishes to avoid causing excessive bloodshed. It is certainly better suited for that sort of work than combat on the field, since the blowgun is a very fragile weapon.”*`,
                 `*— Cedric D'Abalone, Sage*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         },
         {
             pages: [57],
@@ -5034,7 +5045,8 @@ WEAPONS.Bolas[SOURCE.AEG.id] = new Weapon({
             text: [
                 `*“This is a good weapon to trip someone up, in case ya wanna take an opponent alive. But ya gotta make sure ya got enough room to give the bola a good swing. Bolas only work outside or in huge rooms. They work good if yer on horseback.”*`,
                 `*— Brakhan, Bounty Hunter*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         }
     ]
 })
@@ -5091,7 +5103,8 @@ const AEG_BOW_INTERVIEW = {
         `*“Bows are not without their faults. Bowstrings must be kept dry, the staff must not be allowed to crack, and certain amount of strength is required to string and pull a bow. Still, even a short bow is a good thing to have when a warrior wants to inflict damage on someone from a long distance!*`,
         `*“A short bow can fire only flight arrows, while the long bow can fire any type of arrows. However, the short bow is easier to carry and is good for the fighter who relies primarily on a melee weapon but wishes to have a respectable missile weapon.”*`,
         `*— Lady Adriennedar Ironedge, Ranger of Hawkhaven*`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.INTERVIEW]
 }
 
 const AEG_BOW_HISTORY = {
@@ -5107,7 +5120,8 @@ const AEG_BOW_HISTORY = {
         `Medieval archers did not always use quivers, but rather kept their arrows tied in bunches and secured to their belts by loops. Mounted archers used quivers that were attached to the saddle.`,
         `Bows were used as late as 1807, when Russian irregulars harassed Napoleon's armies, and in World War II, when detachments of American archers were used in special actions in Asia.`,
         `Even today, certain African pygmy tribes and indigenous folk of the Amazon use bows.`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.HISTORY]
 }
 
 const AEG_ARROW_GENERAL = {
@@ -5326,7 +5340,8 @@ WEAPONS.Cestus[SOURCE.AEG.id] = new Weapon({
                 `*“But since most combatants inside and outside the arena have missile weapons, spells, long melee weapons such as spears, polearms, and swords, or benefits due to size, a fighter using a cestus may find himself badly chewed up, if not dead, before closing in enough to use the weapon. And using a cestus in tavern brawls will probably accomplish little more than calling the city guard's wrath on the owner of the cestus.*`,
                 `*“The cestus is just a dramatic device meant to draw blood and make a contest look more terrible. Few monsters will care about the drama produced by cestus if the glove is used in real combat.”*`,
                 `*— Tisha, Swordswoman Extraordinary*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         }
     ]
 })
@@ -5373,13 +5388,15 @@ WEAPONS.Club[SOURCE.AEG.id] = new Weapon({
                 `*“Clubs are common among adventurers. City guards who do not intend to shed blood use clubs in law enforcement, thieves who wish merely to steal a purse carry them, and humble peasants or street urchins who cannot afford a sword may wield a stout piece of wood. If anyone anticipates a life filled with tavern brawls, proficiency with the club is a must.*`,
                 `*“Druids favor clubs, since they can cast* shillelagh * spells on the wood. Carrying a weapon made of wood, an organic, natural material, is preferable to using iron, since many self-respecting druids will use metal weapons only as a last resort.”*`,
                 `*— Archdruid Heather Rose*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         },
         {
             pages: [65],
             text: [
                 `The versatility of the club is shown in the Bayeux Tapestry, which depicts squads of Saxons wielding clubs as both melee weapons and missile weapons. Some cultures decorate their clubs or even carve the club heads into representation of the creatures they expect to hunt.`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
         }
     ]
 })
@@ -5405,7 +5422,8 @@ const AEG_CROSSBOW_INTERVIEW = {
         `*“It would be foolish to dismiss the crossbow completely. Heavy and light crossbows have better range than their respective bow counterparts, the long and short bows. The best tactic when using a crossbow is to assemble a line of people, all armed with these weapons, who unleash a devastating volley at an enemy.*`,
         `*“Hand crossbows are easily concealed, have an adequate rate of fire, and good range for such a small weapon. On the other hand, damage potential is worse than that of a dagger, and the weapon may be banned in some lawful kingdoms or cities. Some societies, such as the drow, place poison on their bolts in order to immobilize and opponent.”*`,
         `*— Emryl Aelorthas, Professional Bowyer*`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.INTERVIEW]
 }
 
 const AEG_CROSSBOW_QUARRELS = {
@@ -5424,7 +5442,8 @@ const AEG_CROSSBOW_HISTORY = {
         `Light crossbows were considered unethical weapons,a nd were often banned between the 16th and 18th centuries. The light crossbow was primarily used as a hunting weapon.`,
         `The crossbow was originally developed in China, culminating in a sturdy, reliable model during the Han Dynasty, circa 206 BC. This particular crossbow model, some scholars believe, was seen as early as about 36 BC by about 100 Roman soldiers who were taken prisoner in Central Asier. Such experiences or the trade routes eventually opened passed the concept of the crossbow from East to West.`,
         `Initially, the European crossbow was made with a wooden stave. This construction, however, does not give optimum power to the bolt's flight. Bt the end of the 11th century, it is believed that many crossbow staves were made of composite construction, usually horn and sinew in conjunction with wood (usually yew). This method of crossbowmaking came from Saracens, and the Saracen influence in southern Europe explains why the area became well known for crossbow manufacturing and use.`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.HISTORY]
 }
 
 WEAPONS.Hand_crossbow[SOURCE.AEG.id] = new Weapon({
@@ -5543,7 +5562,8 @@ const AEG_DAGGER_HISTORY = {
         `With the advent of swords, the dagger was relegated to the role of back-up weapon. In fact, the average Roman soldier did not carry a dagger, but his Teutonic barbarian enemy used them. As the barbarian's influence swept over Europe, the dagger was given new life.`,
         `Daggers with steel blades became necessary in order to penetrate armor. Although knights carried daggers, they were considered a weapon of last resort`,
         `The modern handshake derived from a habit used by bodyguards. They would take the hand of anyone visiting the king and shake his arm, hoping to dislodge any dagger concealed in the visitor's sleeve.`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.HISTORY]
 }
 
 const AEG_DAGGER_INTERVIEW = {
@@ -5553,7 +5573,8 @@ const AEG_DAGGER_INTERVIEW = {
         `*“A dagger makes a handy tool as well. Soldiers and adventurers use their daggers as eating utensils. Owning a sharp blade that is easily carried make life easier (just try drawing a long sword to cut some bread or a piece of rope!).*`,
         `*“My favorite advantage of a dagger is that when you rely on stealth, you can use a dagger to dispatch a foe and draw less attention than resorting to a sword, in which case you might as well yell out your intentions. This is one reason why those of us who attack out enemies indiretly savor the dagger and usually carry at least two.”*`,
         `*— Jasmine, Halfling Thief*`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.INTERVIEW]
 }
 
 WEAPONS.Dagger[SOURCE.AEG.id] = new Weapon({
@@ -5685,6 +5706,7 @@ WEAPONS.Dart[SOURCE.AEG.id] = new Weapon({
                 `*“A dart is a good weapon to throw at a spellcaster. As long as one dart hits a spellcaster, the latter's spell is ruined, regardless of the damage caused. Of course, this is why many spellcasters carry darts. Most are nimble enough to use them effectively, and if they are unable to cast a spell, but see an enemy spellcaster about to cast, a dart can ruin the spell. It helps to be a sharp-eyed, quick-thinking, nimble, handsome fellow such as myself”*`,
                 `*— Malraz Alizar the Magnificent, Illusionist Without Peer*`
             ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW],
             comment: `Using multiple attacks to ruin spellcasting strongly depends on the rules used. The PHB p. 126-127 stats that *"true multiple attacks—using the same weapon more than once—... Everyone involved in the combat completes one action before the second (or subsequent) attack rolls are made."*. This procedure completely negates the described usefulness of multiple attacks with darts, unless the spell in question takes a full round to cast, in which case it only finished at the end of the round.`
         }
     ]
@@ -5706,6 +5728,7 @@ const AEG_FLAIL_INTERVIEW = {
         `*“There is certainly no problem in a footman using a horseman's fail, although it is not a good habit. A foot soldier would be better off with a different blunt weapon that can cause more damage or have more versatility, such as a warhammer.”*`,
         `*— Brother George, Cleric*`
     ],
+    attribute: [AEG_ATTRIBUTE.INTERVIEW],
     comment: `If the designers wanted the footman's flail to be a two-handed weapon it should have been the size L, so that it would follow the weapon size rules laid out in the PHB p. 96. The Fighter's handbook specifically points out that certain one-handed weapons can be used two-handed for more damage when using Two-Hander Style Specialization. This implies that the footman's flail is a one-handed weapon.`
 }
 
@@ -5715,7 +5738,8 @@ const AEG_FLAIL_HISTORY= {
         `The followers of Peter the Hermit who fought in the Crusades in the 11th and 12th centuries used flails, placing spikes on the short flail heads. This adaptation gave rise to other modifications, such as replacing the second bar with two or more iron palls attached by chains.`,
         `Footman's flail were used mostly in the 13th and 14th centuries by foot soldiers, especially peasant troops, while the horseman's version enjoyed use by cavalry troops during the same time period.`,
         `Flails were used as late as the 1920's by Polish peasants against Soviet troops.`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.HISTORY]
 }
 
 WEAPONS.Footmans_flail[SOURCE.AEG.id] = new Weapon({
@@ -5783,7 +5807,8 @@ const AEG_GAFF_HOOK_INTERVIEW = {
     text: [
         `*“Ya don't often see adventurers whacking away with gaffs. To them, it's only a tool. But more often than not, dock workers, press gangs, priates, and sailors have a pretty good swing with those hooks.”*`,
         `*— Rych the Seeker, Harbormaster*`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.INTERVIEW]
 }
 
 WEAPONS.Gaff_hook_attached[SOURCE.AEG.id] = new Weapon({
@@ -5849,7 +5874,8 @@ WEAPONS.Hand_axe[SOURCE.AEG.id] = new Weapon({
             text: [
                 `*“The throwing axe is a good backup weapon for an adventurer. It can be used in melee combat or as a missile weapon, although with mediocre range. The weapon is also useful as a general tool, especially to outdoor types such as rangers, who often need a good tool to hack away at undergrowth in order to blaze a trail.”*`,
                 `*— Dalraun Ironedge, Ranger*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         }
     ]
 })
@@ -5993,7 +6019,8 @@ const AEG_KNIFE_INTERVIEW = {
         `*“An adventurer of high station way wish to have a knife and a sword of similar design, both housed in one scabbard. Such a thing is certainly considered a status symbol (definitely a mixed blessing).*`,
         `*“A big advantage of knives is that they are found everywhere. Cooks, trappers, and hunters are but three occupations that justify carrying a knife.”*`,
         `*— Peripim Furfoot, Halfling Adventurer and Profession Cook*`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.INTERVIEW]
 }
 
 const AEG_KNIFE_HISTORY = {
@@ -6002,7 +6029,8 @@ const AEG_KNIFE_HISTORY = {
         `Knife handles historically exhibited wide variations in materials and workmanship. Cast silver knife handles were popular in the 16th century, inlaid mother-of-pearl was in vogue in the 17th century, porcelain handles were popular in the 18th century, and carved ivory and bone with fine silver plates was the trend in the 19th century.`,
         `Nations or cultural groups created knives that suited their particular style or customs. A common knife in southern Europe, for instance, had a blade that folded toward the handle, with the cutting edge housed in a special groove. In Spain, these were called the Navaja, and in Italy the Serramancio. We know them today as clasp knives or jackknives.`,
         `By far the most famous knife of the past two centuries was a heavy, single-edged, sharply pointed blade with a small handle with wooden sidepieces. The knife was designed for melee combat. This knife was much in use in the American West, and was named for it creator: Colonel James Bowie.`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.HISTORY]
 }
 
 WEAPONS.Knife[SOURCE.AEG.id] = new Weapon({
@@ -6087,6 +6115,7 @@ const AEG_LANCE_INTERVIEW = {
         `*“Nothing is more awe-inspiring than a mounted knight, wielding her lance and charging a dragon. Of such things legends are made, and no mounted warrior worth his salt should be without his lance, especially a paladin. I know I have mine!”*`,
         `*— Maura Smallwood, Paladin*`
     ],
+    attribute: [AEG_ATTRIBUTE.INTERVIEW],
     comment: `Allowing the usage of lances when not on horseback is a good change. This makes the weapon a viable pick as a weapon proficiency for campaigns that focus on dungeons, and see little mounted combat. The mounted double damage then become a situational bonus instead of the only reason to use the weapon.`
 }
 
@@ -6095,7 +6124,8 @@ const AEG_LANCE_HISTORY = {
     text: [
         `The lance's history can be traced to the Middle East, and was widely used by Greco-Roman horsemen.`,
         `Though rendered obsolescent in 1600 by the advent of firearms, lances were still used by light cavalry until the 19th century, with many European armies maintaining use of the lance in the Russian Civil War and World War I. Two of the most well-known uses of the lance in the 20th century were the Polish lancers' charges against German armor in 1939, and the Italian charges against the Russians in 1942.`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.HISTORY]
 }
 
 WEAPONS.Heavy_horse_lance[SOURCE.AEG.id] = new Weapon({
@@ -6215,7 +6245,8 @@ WEAPONS.Lasso[SOURCE.AEG.id] = new Weapon({
             text: [
                 `*“Lasso? What sort of heroic weapon is a lasso? What is a warrior going to do, tie up his victim and make him die of embarrassment? Bah! If a warrior is so keen on using a length of hemp rope, let him learn Rope Use. That way, not only is there a better chance at hitting a victim with a lasso than if he were proficient with the lasso as a weapon, but the adventurer will also pick up many more tricks, rather than wasting time trying to become expert at throwing silly loops of rope! Lassos, indeed!”*`,
                 `*— Kedar the Dark, Warrior of Adauntlynn*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         }
     ]
 })
@@ -6236,7 +6267,8 @@ const AEG_MACE_INTERVIEW = {
     text: [
         `*“Maces are a step up from the basic club, and are a good weapon especially for priests who cannot use edged weapons. Adventurers may find that the horseman's mace is actually a good secondary weapon for a footman, though the reverse is certainly not true!*`,
         `*“A mace is especially made for crushing things, especially helmets and armor.”*`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.INTERVIEW]
 }
 
 const AEG_MACE_HISTORY = {
@@ -6246,7 +6278,8 @@ const AEG_MACE_HISTORY = {
         `Two styles of mace head patterns emerged before the 14th century. The first was a ferrule from which extended knot or node-shaped pieces, and the second was a geometrically designed head with vanes (conical or diamond-shaped flanges).`,
         `Gothic influence in the 14th century made maces more decorative, a trend which ended in the 16th century, when maces were given a more military form. Eastern European maces, especially those from Poland and Hungary, had onion-shaped heads, an idea taken from the Turkish maces. Maces were used as a weapon up until the 18th century.`,
         `During the Middle Ages, arming oneself with a mace took on significance among nobles and army commanders. The mace became a preferred weapon among wealthy or illustrious users, and it became symbolic of power, wealth, and renown. These maces were shaped or decorated in a manner that represented the wielder. This, the owner of a mace became recognized as a person of prominence and rank, with the number of ribs and flanges on the mace indicating the owner's status`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.HISTORY]
 }
 
 WEAPONS.Footmans_mace[SOURCE.AEG.id] = new Weapon({
@@ -6317,7 +6350,8 @@ WEAPONS.Main_gauche[SOURCE.AEG.id] = new Weapon({
             text: [
                 `*“A main-gauche causes the same damage as a normal dagger, but the former is designed especially for defense. It's important not to confuse the main-gauche with the parrying dagger. The latter has a different design, including longer quillons and sometimes a triple blade. A parrying dagger also has a greater likelihood of breaking an opponent's weapon. A main-gauche offers better protection to the user's hand. In any case, it is quite a sight to see a warrior using a sword in one hand and a main-gauche in the other.”*`,
                 `*—Mendrill Halfelven, Bard*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         }
     ]
 })
@@ -6350,7 +6384,8 @@ WEAPONS.Mancatcher[SOURCE.AEG.id] = new Weapon({
                 `*“Mancatchers are good for pulling horsemen off their mounts and pinning them to the ground, but the weapon is only good on man-sized opponents. Smaller creatures like goblins and kobolds can just slip on through, and the larger creatures don't have the right frame, though why anyone would want to capture any of these disgusting things alive is beyond me.*`,
                 `*“Mancatchers are used often by that foul, subterranean race of fish-men, the kuo-toa. Some adventurers who may have suffered the depredations of the kuo-toa and who see a character wielding a mancatcher may get a bit upset. Often it's best to steer clear of weapons that remind certain people of certain races, unless of course, someone is* really *good with the weapon in question!”*`,
                 `*— Troxel the Inpredictable*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         }
     ]
 })
@@ -6383,14 +6418,16 @@ WEAPONS.Morning_star[SOURCE.AEG.id] = new Weapon({
             text: [
                 `*“Morning stars are clubs with a real nasty attitude. They can cause as much damage to a man as a longsword, probably because of them spikes. I hear tell that the morning star is called a bludgeoning weapon as well as a piercing weapon, but tell me, have you ever seen a sharp spike hit someone at high speeds and have that called bludgeoning?”*`,
                 `*— Suriel, Cleric of Tyr*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         },
         {
             pages: [82,83],
             text: [
                 `The morning star was derived from the Swiss Morgenstern (literally: “morning star”), and was used during the 16th and 17th centuries, especially in England. The weapon has the perverse nickname of “holy water sprinkler.”`,
                 `The morning star was popular from the Middle Ages to the late 17th century, though its use continued among peasants and poor urban militiaman and gangs up to the 19th century.`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
         }
     ]
 })
@@ -6424,7 +6461,8 @@ WEAPONS.Net[SOURCE.AEG.id] = new Weapon({
                 `*“This weapon is rather unusual, but it can be quite effective. Imagine, a weapon which, if it hits, will immobilize an opponent in just one round. Of course, such a weapon is not very effective on larger than man-sized or exceptionally strong creatures (such as an ogre), though it may buy a wounded adventurer some time, since a successful hit means that the victim must abandon plans for attacking and concentrate instead on getting out of the net.*`,
                 `*“Characters who can set snares and traps ought to consider the net when making their little traps. It could come in handy for defense or in a hasty retreat.”*`,
                 `*— Bramm Po, Illusionist*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         }
     ]
 })
@@ -6444,7 +6482,8 @@ const AEG_PICK_INTERVIEW = {
     text: [
         `*“Races who particularly enjoy mining, such as gnomes, svirfneblin, and dwarves, can be found with these weapons. They usually know how to use a pick both as a tool and as a weapon, though they will first use normal weapons if given the chance. Sometimes they have to wield these as weapons against another race known for its subterranean diggings, and who also use the pick as a weapon: the duergar.”*`,
         `*— Nahac the Gnome Sage*`
-    ]
+    ],
+    attribute: [AEG_ATTRIBUTE.INTERVIEW]
 }
 
 WEAPONS.Footmans_pick[SOURCE.AEG.id] = new Weapon({
@@ -6499,11 +6538,27 @@ const AEG_POLEARM_GENERAL = {
 }
 
 const AEG_POLEARM_INTERVIEW_1 = {
-
+    pages: [84,85],
+    text: [
+        `***The Real Way To Use A Polearm***`,
+        `*“Alright, listen up, for I am only going to say this once. I grow weary of seeing groups of bumbling amateurs running around with polearms, each person with a different type. One uses his halberd, another uses a pike, still another has a guisarme-voulge, and he cannot even pronounce it, let alone us it! This is ridiculous. If you are going to use a polearm, use it correctly! Here's how.*`,,
+        `*“First of all, for the gods' sake, try to get some idea of where your group is going. Are you going to the jungle or a dense forest? You are? Then why buy a polearm, you fool!? You will have no room to wield it, and more often than not you'll wind up poking your comrade's eye out. Make sure that the terrain suits the weapon.*`,
+        `*“Next, once you know that the destination justifies a polearm, each person should get the same type of polearm. The weapons vary in the speed with which they can be swung and the amount of space needed to wield the things. Different polearms complicate what should be a simple operation.*`,
+        `*“When you see an enemy charging at you, have all the polearm bearers line up in the front row, with weapons set to receive the charge. In order to set for a charge, the wielder should stand sideways, leaning forward so the left shoulder faces the oncoming foe. The polearm should be set at an angle, with the head pointing away from the ground, facing up at the enemy. The end of the handle should rest against the instep of the right foot. Both hands hold the pole firmly. You are now ready to receive a charge.*`,
+        `*“Once the enemy impales himself on the blades, you cannot just pull out the staff weapon and begin hitting the creature. Your non-polearm-wielding comrades behind you should begin throwing spells, hurling missiles, spears, whatever, at the impaled foes. Try your best to keep the enemy on the blade, and out of your reach.*`,
+        `*“Now that's the way to use a polearm! It is a team effort that needs to be practiced often. Remember this, and perhaps it will save your life!”*`,
+        `*— Fiona the Ranger, Daughter of Dierdre*`
+    ],
+    attribute: [AEG_ATTRIBUTE.INTERVIEW]
 }
 
 const AEG_POLEARM_INTERVIEW_2 = {
-
+    pages: [88],
+    text: [
+        `*“Taken as en entire weapon group, polearms are useful weapon especially in an outdoor setting. Their advantages include a good reach, excellent defensive capability, and the ability to knock opponents off their mounts. Among the drawbacks of polearms as a whole are the amount of room needed to wield them, their diminished usefulness in close-quarters melee, their overall slowness, and their encumbrance. Also, with so many polearm types to choose from, it is unlikely that a group of adventurers all have the same weapon or that everyone in the group will want a polearm of any sort in the first place. Polearms are more effective if several people have them; a single adventurer wielding a halberd is not going to stop a row of four charging orcs. Remember the advice given earlier and try to co-ordinate polearm choices before going off to adventure.”*`,
+        `*— Fiona, Daughter of Dierdre*`
+    ],
+    attribute: [AEG_ATTRIBUTE.INTERVIEW]
 }
 
 WEAPONS.Awl_pike[SOURCE.AEG.id] = new Weapon({
@@ -6520,7 +6575,24 @@ WEAPONS.Awl_pike[SOURCE.AEG.id] = new Weapon({
     pages: [108],
 
     descriptions: [
-        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [85],
+            text: [
+                `**Awl Pike**`,
+                `Also known just as a “pike” and a Morris pike (corruption of Moorish), this is an infantry spear ranging 16 to 22 feet in length. Awl heads are usually leaf- or lozenge-shaped. The pole is made of strong wood, such as ash. Many pike heads are made with two tongues of steel, nailed down the sides of the shaft in order to prevent the head from getting hacked off. The grip is often bound with cloth and the butt capped in steel to prevent the shaft from splitting. The awl pike has the dubious distinction of being the slowest polearm available. Add to this its mediocre damage against man-sized opponents and one is left with a weapon of questionable value, except when used en mass on the battlefield.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+        {
+            pages: [89],
+            text: [
+                `The sarisa, a Macedonian infantry spear, was the ancestor of the pike. The Swiss rediscovered the idea of mounting a spear head on a very long pole, and it became so popular that they adopted the pike as their national weapon in the 15th century. Their prowess with the pike, not only as a defensive weapon but as an offensive one, prompted other European nations to adopt it. The pike remained in use until the end of the 17th century, when muskets and bayonets made the long spears obsolete.`,
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
+        }
     ]
 })
 
@@ -6536,7 +6608,27 @@ WEAPONS.Bardiche[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Bardiche"}),
     pages: [109],
 
-    descriptions: []
+    descriptions: [
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [85],
+            text: [
+                `**Bardiche**`,
+                `The word bardiche is the corrupted spelling of berdysh. The berdysh (Russian term) is in effect an elongated battleaxe with a large, narrow, curved axe head measuring 24 to 32 inches long, mounted on a pole five to eight feet long.`,
+                `The upper part of the head can be used for thrusting, while the lower part is in the form of a langet. A langet is an iron strap used to increase the strength of the head and protect the most exposed part of the weapon from blows.`,
+                `Berdysh require more room to wield than a pike or a spear, but the weapon has a unique function: it can be used as a gun rest. The smaller berdysh have two rings for attaching to a shoulder strap. This arrangement is popular among horsemen.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+        {
+            pages: [89],
+            text: [
+                `The berdysh were created by the Russians and used by Muscovite infantry during the 16th and 17th centuries. They were also used in Scandinavia and eastern Europe.`,
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
+        }
+    ]
 })
 
 WEAPONS.Bec_de_corbin[SOURCE.AEG.id] = new Weapon({
@@ -6550,7 +6642,26 @@ WEAPONS.Bec_de_corbin[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1d8", "1d6"),
     proficiencies: new Proficiencies({single: "Bec de corbin"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [85],
+            text: [
+                `**Bec de Corbin**`,
+                `Also called the bec de faucon, the names mean “crow's beak” and “falcon's beak” respectively. This pole weapon has a hook much like a bird's beak and is ideal for cutting open armor like some great can opener. The weapon also has a hammer or axe side that delivers a solid hit. This is a highly specialized weapon, designed for the purpose of cutting armor then striking the now unarmored victim with the other side of the weapon. The pole shaft is eight feet long.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+        {
+            pages: [89],
+            text: [
+                `The bec de corbin (and faucon) was used by the upper classes during the Late Middle Ages and early Renaissance. The terms are French, but the weapons were so named by English writers!`,
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
+        }
+    ]
 })
 
 WEAPONS.Bill_guisarme[SOURCE.AEG.id] = new Weapon({
@@ -6564,7 +6675,26 @@ WEAPONS.Bill_guisarme[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("2d4", "1d10"),
     proficiencies: new Proficiencies({single: "Bill-guisarme"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [85],
+            text: [
+                `**Bill-Guisarme**`,
+                `Also known simply as a “bill,” this weapon is derived from an agricultural tool, the bill hook. Throughout its years of use, the bill's head went through many changes. Its most common head form is a sharp spike with a sturdy hook whose inside and outside edges were sharpened, and a cutting blade reminiscent of a cleaver. The pole length ranges around eight feet.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+        {
+            pages: [89],
+            text: [
+                `The bill was a popular weapon with the English, and, along with the halberd, remained in use longer than all other polearms, well into the early 17th century. The English bills had a shorter shaft length, usually around four feet, and were rather tough.`,
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
+        }
+    ]
 })
 
 WEAPONS.Fauchard[SOURCE.AEG.id] = new Weapon({
@@ -6578,7 +6708,21 @@ WEAPONS.Fauchard[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1d6", "1d8"),
     proficiencies: new Proficiencies({single: "Fauchard"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [86],
+            text: [
+                `**Fauchard**`,
+                `Developed from the common agricultural sickle or scythe, the fauchard consists of a long, curving blade with a large, pointed head and a *fluke* (a small, curved hook found on many polearms). The head is mounted on a wooden pole about eight feet long. Peasants can often change scythes into fauchards.`,
+                `The fauchard is classified as a glaive. It is not very good as a thrusting weapon, but is used mainly as a slashing weapon. It fulfils the need for a weapon that puts some distance between the wielder and his enemy.`,
+                `Since the fauchard is not an instrument designed foremost as a weapon but rather a farming tool adapted for war, it is inefficient as a weapon of war, being rather bulky and needing a large area to be used properly.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+    ]
 })
 
 WEAPONS.Fauchard_fork[SOURCE.AEG.id] = new Weapon({
@@ -6592,8 +6736,28 @@ WEAPONS.Fauchard_fork[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1d8", "1d10"),
     proficiencies: new Proficiencies({single: "Fauchard-fork"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [86],
+            text: [
+                `**Fauchard-Fork**`,
+                `This term denotes a fauchard with the fluke attached. The fluke was added in order to improve the weapon's thrusting capability, but the effort was fruitless. It is still a bulky weapon, requiring much space to be wielded effectively.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+    ]
 })
+
+const AEG_POLEARM_GLAIVE_HISTORY = {
+    pages: [89],
+    text: [
+        `The glaive (derived from the Latin *gladius*, meaning “sword”) blade increased in size over the years until it was big enough to have a nation's or ruler's coat of arms engraved upon it. It was often carried in parades. Glaives were introduced in the 14th century and favored by the French. The blade is said to resemble a large bread knife. The 16th century Italians and Germans favored the glaive as a palace guard weapon.`,
+    ],
+    attribute: [AEG_ATTRIBUTE.HISTORY]
+}
 
 WEAPONS.Glaive[SOURCE.AEG.id] = new Weapon({
     name: "Glaive",
@@ -6608,7 +6772,18 @@ WEAPONS.Glaive[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Glaive"}),
     pages: [109],
     descriptions: [
-        AEG_ASTERISK_DOUBLE_DAMAGE_AGAINST_L_CHARGE
+        AEG_ASTERISK_DOUBLE_DAMAGE_AGAINST_L_CHARGE,
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [86],
+            text: [
+                `**Glaive**`,
+                `The glaive is a pole weapon with a large head shaped like a knife or sword mounted on an eight- to ten-foot long shaft. The blade usually turns outward in order to increase the cutting area. Some glaives are fitted with flukes. Overall, the glaive's damage potential is not spectacular, but its long reach makes up for this. It effectively takes a normal sword blade and gives it a great reach.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+        AEG_POLEARM_GLAIVE_HISTORY
     ]
 })
 
@@ -6625,9 +6800,28 @@ WEAPONS.Glaive_guisarme[SOURCE.AEG.id] = new Weapon({
     proficiencies: new Proficiencies({single: "Glaive-guisarme"}),
     pages: [109],
     descriptions: [
-        AEG_ASTERISK_DOUBLE_DAMAGE_AGAINST_L_CHARGE
+        AEG_ASTERISK_DOUBLE_DAMAGE_AGAINST_L_CHARGE,
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [86],
+            text: [
+                `**Glaive-Guisarme**`,
+                `This term describes a glaive with a fluke mounted on the back of the blade. It is slower and heavier than a glaive, and its potential damage is nothing noteworthy.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+        AEG_POLEARM_GLAIVE_HISTORY
     ]
 })
+
+const AEG_POLEARM_GUISARME_HISTORY = {
+    pages: [89],
+    text: [
+        `The guisarme was used extensively between the 12th and 17th centuries.`,
+    ],
+    attribute: [AEG_ATTRIBUTE.HISTORY]
+}
 
 WEAPONS.Guisarme[SOURCE.AEG.id] = new Weapon({
     name: "Guisarme",
@@ -6640,7 +6834,20 @@ WEAPONS.Guisarme[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("2d4", "1d8"),
     proficiencies: new Proficiencies({single: "Guisarme"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [86],
+            text: [
+                `**Guisarme**`,
+                `Also called the gisarme or the giserne, the guisarme is an elaborately curved blade, much like the crescent blade of an axe, attached to a six-foot long staff. Thrusting spikes are often attached to the top of the shaft. The guisarme is suppose to have come from the farmer's pruning hook. The weapon may have contributed to the development of the berdysh and the halberd.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+        AEG_POLEARM_GUISARME_HISTORY
+    ]
 })
 
 WEAPONS.Guisarme_voulge[SOURCE.AEG.id] = new Weapon({
@@ -6654,7 +6861,20 @@ WEAPONS.Guisarme_voulge[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("2d4", "2d4"),
     proficiencies: new Proficiencies({single: "Guisarme-voulge"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [86],
+            text: [
+                `**Guisarme-Voulge**`,
+                `This term describes the guisarme in its later stages, with a curved axe-head. It features a back spike, the fluke, for punching through armor, and the blade's end tapers for thrusting attacks. Often, the fluke is replaced with a sharp hook for use in dismounting riders. It is a slower weapon than the plain guisarme but causes comparable damage.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+        AEG_POLEARM_GUISARME_HISTORY
+    ]
 })
 
 WEAPONS.Halberd[SOURCE.AEG.id] = new Weapon({
@@ -6668,7 +6888,29 @@ WEAPONS.Halberd[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1d10", "2d6"),
     proficiencies: new Proficiencies({single: "Halberd"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [86],
+            text: [
+                `**Halberd**`,
+                `By far the oldest and most often used polearm, the halberd consists of a cleaverlike axe blade mounted on a staff averaging six feet in length. The axe blade is balanced at the rear with a fluke, and surmounted by a sharp spike, usually of quadrangular design. The fluke is sometimes replaced by a hook used to dismount cavalry. A halberd can be best described as a cross between a spear and an axe.`,
+                `Though a halberd's main function is to dismount cavalry, it may also be employed as a thrusting and a cutting weapon. It is not a fast weapon, even compared to other polearms. Still, it does more damage to a man-sized opponent than all other polearms.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+        {
+            pages: [89,90],
+            text: [
+                `Halberds were introduced sometime between the 6th and the 9th centuries AD, when foot soldiers of Northern europe mounted their swords, called scramasax, on poles. The Swiss refined this weapon and wielded it with devastating skill. In fact, halberds were known to split a man's head from pate to jaw, armor notwithstanding! The halberd got its name during the first primitive versions made by the Swiss.`,
+                `The word *halberd* comes from the German word *halm* (staff) and *barte* (axe).`,
+                `Primitive halberds had a wide blade with a straight cutting edge. The staff fit through two sockets in the back of the blade. This design was probably inspired by the guisarme. By the end of the 15th century, the halberd was modified in order to increase its effectiveness. This is the halberd type most often referred to when using the term. The primitive halberds were soon referred to as the *Swiss vouge* (voulge). Like most polearms, the halberd fell into decline with the introduction of firearms.`,
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
+        }
+    ]
 })
 
 WEAPONS.Hook_fauchard[SOURCE.AEG.id] = new Weapon({
@@ -6682,7 +6924,19 @@ WEAPONS.Hook_fauchard[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1d4", "1d4"),
     proficiencies: new Proficiencies({single: "Hook fauchard"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [86,87],
+            text: [
+                `**Hook-Fauchard**`,
+                `Like the fauchard-fork, the hook-fauchard is another attempt to improve the fauchard. This weapon has a hook fitted on the blade's back. The hook is used to dismount cavalry. Like its predecessors, it was not a very effective weapon. Its damage potential is horrible compared to the fauchards that it was supposed to improve upon, and it is slower than the original fauchard.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+    ]
 })
 
 WEAPONS.Lucern_hammer[SOURCE.AEG.id] = new Weapon({
@@ -6697,8 +6951,26 @@ WEAPONS.Lucern_hammer[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("2d4", "1d6"),
     proficiencies: new Proficiencies({single: "Lucern hammer"}),
     pages: [109],
+
     descriptions: [
-        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [87],
+            text: [
+                `**Lucern Hammer**`,
+                `The lucern hammer is a hammerhead with a spike at its rear, mounted on a long pole, reaching as much as ten feet in length. In some cases, the end is fitted with a spike to keep enemy soldiers at bay. It is one of the heavier pole weapons and is rather slow. The entire weapon is usually made of steel, including the pole, and often it is decorated with carvings and precious metal gilding.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+        {
+            pages: [90],
+            text: [
+                `Confusion often exists whether a lucern hammer is a hammer. It is safe to say yes, it is a hammer, and is alternatively called a war hammer. A short-handled version of the lucern hammer was used by mounted troops as early as the mid-13th century. It is longer than the weapon most adventurers call a war hammer and is used mainly by massed units on the battlefield. The lucern hammer gets its name from the Swiss city of Lucerne, whose armories were well-stocked with the weapon, so much so that scolars named them after the city.`,
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
+        }
     ]
 })
 
@@ -6714,8 +6986,27 @@ WEAPONS.Military_fork[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1d8", "2d4"),
     proficiencies: new Proficiencies({single: "Military fork"}),
     pages: [109],
+
     descriptions: [
-        AEG_ASTERISK_DOUBLE_DAMAGE_AGAINST_L_CHARGE
+        AEG_ASTERISK_DOUBLE_DAMAGE_AGAINST_L_CHARGE,
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [87],
+            text: [
+                `**Military Fork**`,
+                `The military fork is the warrior's version of a simple agricultural farming tool. The head consists of two parallel spikes, often fitted with hooks for pulling horsemen off their mounts. Certain versions of the fork have a blade mounted just below the spikes. The wooden staff is about seven feet long.`,
+                `Forks are useful not only as thrusting weapons, but as tools for climbing the defender's ramparts, setting up ladders, and hoisting baskets of supplies.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+        {
+            pages: [90],
+            text: [
+                `Military forks are descended from farmer's pitchforks, though the former's spikes were straight as opposed to the curved spikes of the latter. This weapon appeared frequently during the Crusades and peasant revolts from the 15th to 19th centuries. In 1920. Polish peasants used forks to fight off Soviet troops attacking Warsaw.`,
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
+        }
     ]
 })
 
@@ -6731,8 +7022,27 @@ WEAPONS.Partisan[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1d6", "1d6+1"),
     proficiencies: new Proficiencies({single: "Partisan"}),
     pages: [109],
+
     descriptions: [
-        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [87],
+            text: [
+                `**Partisan**`,
+                `The partisan (alternatively spelled “partizan”) is a staff weapon consisting of a long, tapering double-edged spear blade with two diagonally-set flukes at the base. The shaft is about eight feet long. The partisan's flukes may be used to catch and break opponents' weapons, as well as to inflict extra damage. Partisan heads are large enough to allow engraving and ornamentation.`
+            ],
+            comment: `More weapon breaker description without an actual rule for it.`
+        },
+        AEG_POLEARM_INTERVIEW_2,
+        {
+            pages: [90],
+            text: [
+                `Partisans are derivative of the langdebeve, a broad-bladed spear. The name *partisan* came from the people who wielded it, the partisans, in the late 15th century France and Italy. After its retirement as a weapon of war, partisans continued to be used as ceremonial weapons in royal courts. In fact, the Swiss Guards of the Vatican and the Yeomen of the Guard at the Tower of London still use partisans at state occasions or when in full dress.`,
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
+        }
     ]
 })
 
@@ -6748,8 +7058,20 @@ WEAPONS.Ranseur[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("2d4", "2d4"),
     proficiencies: new Proficiencies({single: "Ranseur"}),
     pages: [109],
+
     descriptions: [
-        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [87,88],
+            text: [
+                `**Ranseur**`,
+                `Also known as the rancoon and the rawcon, the ranseur resembles a partisan, except that the ranseur's flukes are longer, resulting in a three-pronged head. The flukes are, however, shorter than the middle blade. Partisans are sturdier than ranseurs. The three prongs are large enough to puncture armor or trap a weapon and disarm the opponent (considered a Called Shot, -4 to hit, see Combat chapter of *The Complete Fighter's Handbook*).`
+            ],
+            comment: `Actual rules for a description!`
+        },
+        AEG_POLEARM_INTERVIEW_2,
     ]
 })
 
@@ -6765,8 +7087,19 @@ WEAPONS.Spetum[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1d6+1", "2d6"),
     proficiencies: new Proficiencies({single: "Spetum"}),
     pages: [109],
+
     descriptions: [
-        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [88],
+            text: [
+                `**Spetum**`,
+                `Spetums are similar to ranseurs, except that the side blades sometimes angle backward, increasing the damage when the blade is pulled out of a wound. When the weapon is pulled out of a victim, he suffers an additional 1d2 hit points of damage due to the side blades. The spetum's shaft is eight feet long.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
     ]
 })
 
@@ -6782,8 +7115,26 @@ WEAPONS.Voulge[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("2d4", "2d4"),
     proficiencies: new Proficiencies({single: "Voulge"}),
     pages: [109],
+
     descriptions: [
-        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE
+        AEG_HASHTAG_DOUBLE_DAMAGE_RECEIVE_CHARGE,
+        AEG_POLEARM_GENERAL,
+        AEG_POLEARM_INTERVIEW_1,
+        {
+            pages: [88],
+            text: [
+                `**Voulge**`,
+                `Also called the vouge and the Lochabar axe, this weapon is a large, long blade, narrowing to a spike at the top, with a hook-shaped fluke at the blade's rear. The staff is eight feet long. Though it is a simple weapon to make, this advantage is offset by the fact that it is one of the slowest polearms available.`
+            ]
+        },
+        AEG_POLEARM_INTERVIEW_2,
+        {
+            pages: [90],
+            text: [
+                `The term *voulge* has been used to describe many types of polearms, thus its true meaning is obscure. A number of texts associate the voulge with the English bill, the French glaive, and the Swiss vouge, the latter of which is the accepted voulge form. The lochaber axe is a Scottish polearm used in the 16th to 18th centuries, most likely descended from the gisarme.`
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
+        }
     ]
 })
 
