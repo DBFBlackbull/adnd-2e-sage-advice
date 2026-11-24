@@ -7147,7 +7147,26 @@ WEAPONS.Quarterstaff[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1d6", "1d6"),
     proficiencies: new Proficiencies({single: "Quarterstaff"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        {
+            pages: [90],
+            text: [
+                `**Quarterstaff**`,
+                `The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length. High quality quarterstaves are made of stout oak and are shod with metal at both ends. The quarterstaff must be wielded with both hands.`
+            ]
+        },
+        {
+            pages: [90],
+            text: [
+                `*“Such a simple weapon, yet so popular. Any class of adventurer, be he an armored warrior, spell thrower, cutpurse, or man of faith, can use a quarterstaff. The staff is also a fine practice weapon, especially in place of two-handed weapons such as two-hand swords or polearms. The staff is held in the middle with the left hand, while the right hand holds on at one-quarter of the whole staff's length from the end.*`,
+                `*“Quarterstaves are popular among the kenku, the mysterious, Oriental, birdlike humanoids. This blunt weapon is usually used to knock out an opponent as opposed to killing him.*`,
+                `*“Wizards may decorate their staves, even cast spell on them in order to make the weapons look magical. It may fool someone into thinking that a simple wooden staff is in fact a staff of the magi.”*`,
+                `*— Albertus, Battle Mage*`
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
+        }
+    ]
 })
 
 WEAPONS.Sap[SOURCE.AEG.id] = new Weapon({
@@ -7160,7 +7179,26 @@ WEAPONS.Sap[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1d2", "1d2"),
     proficiencies: new Proficiencies({single: "Sap"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        {
+            pages: [91],
+            text: [
+                `**Sap**`,
+                `Alternatively called a blackjack, the sap is a small leather abg filled with sand, lead shot, coins, or other weighted materials. It is used to quietly knock out a victim by administering a blow to the head or back of the neck. Thus, the sap has no effect on helmeted targets. If the sap strikes any other part of the body, the damage is halved and there is no other effect.`,
+                `Of the damage caused by the sap attack, 25% is actual physical damage, and the other 75% is temporary damage that wars off in 1d6 turns.`,
+                `In order to effectively use the sap, the attacking character makes a Called Shot at -8 to hit. If a hit is scored, damage is determined normally. The attacker then has a 5% chance per hit point of damage to knock out the victim, up to a maximum of 40%. This maneuver works only against targets that are man-sized or smaller.`,
+                `When sapping maneuver is performed on a sleeping or magically held victim, the maneuver automatically hits, but the chance of knockout increases to 10% per hit point of damage, to a maximum of 80%.`
+            ]
+        },
+        {
+            pages: [91],
+            text: [
+                `*“A sap is more suited to an urban environment than to the great outdoors or dungeon crawl. It is a weapon favored by thieves looking to cosh someone on the head and take his purse. If a party of adventurers is infiltrating a stronghold in order to capture someone, however, a sap may come in handy.”*`,
+                `*— Kyrian Darkstar, the Infiltrator*`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Scourge[SOURCE.AEG.id] = new Weapon({
@@ -7172,7 +7210,40 @@ WEAPONS.Scourge[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1d4", "1d2"),
     proficiencies: new Proficiencies({single: "Scourge"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        {
+            pages: [91],
+            text: [
+                `**Scourge**`,
+                `The scourge is a short whip with several leather tails or thongs. Each thong has metal barbs, broken glass, or any other sharp fragments attached along its length. A similar device, the cat-o-nine-tails, is a nine-tailed whip with knots tied in each thong.`,
+                `The scourge is not so much a weapon as it is a means of inflicting great pain. Still, it causes damage and can be used as a weapon.`,
+                `The only creatures known to wield scourges with any sort of consistency are the Balor Tanar'ri, chaotic evil denizens of the Abyss. Thus should give the idea of the type of creature who wields such an instrument.`
+            ]
+        },
+        {
+            pages: [91],
+            text: [
+                `*“A scourge? Why would any self-respecting adventurer want one? Those dreaded things are most associated with torture, not combat. No one raises an eye when an adventurer walks into town with a sword; a man has to protect himself, and, times being what they are, no one will begrudge an adventurer's right to carry a sword. But carrying a scourge will probably mark someone as a follower of some cruel, torturing deity, or at the very least, as an evil person. Any adventurer with a shred of decency will avoid the scourge and get something that will put an enemy out of its misery, not prolong it!”*`,
+                `*— Strang of Tempus*`
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
+        },
+        {
+            pages: [92],
+            text: [
+                `*“How odd. Personally, I find the scourge to be of great value in temple worship. It is also a great motivator.”*`,
+                `*— Leeahn, Priestess of Loviatar, Mistress of Pain*`
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
+        },
+        {
+            pages: [92],
+            text: [
+                `The scourge is truly a monument to man's ability to cause suffering. When a scourge hits a victim, the thongs curl around the trunk and limbs, with the barbs digging into the flesh. The torturer then pulls the scourge away, ripping even more of the victim's skin. In ancient Rome, certain soldiers were trained with the scourge to cause the maximum amount of pain without killing the victim. Roman citizens were exempt from scourging, while subject people were not.`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Sickle[SOURCE.AEG.id] = new Weapon({
@@ -7185,7 +7256,18 @@ WEAPONS.Sickle[SOURCE.AEG.id] = new Weapon({
     damage: new Damage("1d4+1", "1d4"),
     proficiencies: new Proficiencies({single: "Sickle"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        {
+            pages: [92],
+            text: [
+                `**Sickle**`,
+                `The sickle is a farming implement consisting of a crescent-shaped blade mounted on a short handle. It is used in combat primarily by peasants or adventurers who have no weapon and are forced to make do with whatever they can find. Most farms have sickles, which are used for cutting weeds, grass, and grains.`,
+                `Druids favor the sickle due to its strong association with agriculture. Golden sickles are used to harvest mistletoe as components for druid spells.`,
+                `As weapon, the sickle is as effective as a dagger, but is slower overall.`
+            ]
+        }
+    ]
 })
 
 WEAPONS.Sling[SOURCE.AEG.id] = new Weapon({
