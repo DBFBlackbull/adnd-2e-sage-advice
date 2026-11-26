@@ -1,19 +1,19 @@
 div(class="wrapper")
-    each magazine, _ in dragonMagazines
+    each magazine, issue_number in dragonMagazines
         div(class="content sage-advice")
-            h2 Sage Advice ##{magazine.issue_number}, #{magazine.publication_month} #{magazine.publication_year}
-            h3 !{formatInput(magazine.foreword, magazine.issue_number, 'foreword')}
+            h2 Sage Advice ##{issue_number}, #{magazine.publication_month} #{magazine.publication_year}
+            h3 !{formatInput(magazine.foreword, issue_number, 'foreword')}
             each advice, index in magazine.sage_advice
                 - let questionNumber = index + 1
-                - let id = `sage-advice-${magazine.issue_number}-${questionNumber}`
-                // - console.log(`Sage Advice #${magazine.issue_number} p. ${advice.page_number}, Question: ${questionNumber}`)
+                - let id = `sage-advice-${issue_number}-${questionNumber}`
+                // - console.log(`Sage Advice #${issue_number} p. ${advice.page_number}, Question: ${questionNumber}`)
                 p(id=id)
-                    span(class='title') Sage Advice ##{magazine.issue_number} p. #{advice.page_number} (#{magazine.publication_month} #{magazine.publication_year}), Question: #{questionNumber}
+                    span(class='title') Sage Advice ##{issue_number} p. #{advice.page_number} (#{magazine.publication_month} #{magazine.publication_year}), Question: #{questionNumber}
                     +buttons(id)
                     span(class="question")
-                        strong !{formatInput(advice.question, magazine.issue_number, questionNumber)}
+                        strong !{formatInput(advice.question, issue_number, questionNumber)}
                     br
-                    span(class="answer") &emsp;!{formatInput(advice.answer, magazine.issue_number, questionNumber)}
+                    span(class="answer") &emsp;!{formatInput(advice.answer, issue_number, questionNumber)}
                     if advice.image
                         if Array.isArray(advice.image)
                             each img, _ in advice.image
@@ -26,7 +26,7 @@ div(class="wrapper")
                         span(class="comment")
                             strong
                                 em Comment:
-                            |  !{formatInput(advice.comment, magazine.issue_number, questionNumber)}
+                            |  !{formatInput(advice.comment, issue_number, questionNumber)}
                     +attributes(advice, sources.SAGE_ADVICE)
             if magazine.epilogue
-                h3 !{formatInput(magazine.epilogue, magazine.issue_number, 'epilogue')}
+                h3 !{formatInput(magazine.epilogue, issue_number, 'epilogue')}

@@ -17,9 +17,8 @@ const {_, GAME_SYSTEM ,ATTRIBUTE} = require('../constants')
 // polymorph possibilities
 // other stuff where I have added a comment
 
-const DRAGON_MAGAZINES = [];
-DRAGON_MAGAZINES.push({
-    issue_number: '142',
+const DRAGON_MAGAZINES = {};
+DRAGON_MAGAZINES[142] = {
     publication_year: '1989',
     publication_month: 'February',
     foreword: `This month, "Sage Advice" covers a potpourri of questions on various exotic topics related to the AD&D® game — from tarrasques to spaceships, and from psionics to the sizes of bags and boxes.`,
@@ -194,9 +193,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.FIRST_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '148',
+};
+DRAGON_MAGAZINES[148] = {
     publication_year: '1989',
     publication_month: 'August',
     foreword: `And now, for a special edition of Sage Advice! The AD&D® 2nd Edition game has arrived, and the sage is here with an in-depth look at the 2nd Edition ***Player's Handbook***. All page numbers herein refer to the 2nd Edition text alone, unless otherwise stated.`,
@@ -432,9 +430,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
     ],
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '149',
+};
+DRAGON_MAGAZINES[149] = {
     publication_year: '1989',
     publication_month: 'September',
     foreword: `We present part two of our special edition of "Sage Advice" (continued from DRAGON issue #148), with an in-depth look at the AD&D® 2nd Edition ***Player's Handbook***. All page numbers herein refer to the 2nd Edition text alone, unless otherwise stated.`,
@@ -757,9 +754,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '150',
+};
+DRAGON_MAGAZINES[150] = {
     publication_year: '1989',
     publication_month: 'October',
     foreword: [
@@ -1101,9 +1097,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.FIRST_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '151',
+};
+DRAGON_MAGAZINES[151] = {
     publication_year: '1989',
     publication_month: 'November',
     foreword: `This month, "Sage Advice" looks at the AD&D® Oriental Adventures volume. Page numbers cited herein refer to that game volume by David "Zeb" Cook.`,
@@ -1450,9 +1445,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.FIRST_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '152',
+};
+DRAGON_MAGAZINES[152] = {
     publication_year: '1989',
     publication_month: 'December',
     foreword: `The sage makes another tour of the AD&D® 2nd Edition game, focusing on the new ***Player's Handbook (PHB)*** and ***Dungeon Master's Guide (DMG)***.`,
@@ -1755,9 +1749,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.SPELL],
         },
     ],
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '153',
+};
+DRAGON_MAGAZINES[153] = {
     publication_year: '1990',
     publication_month: 'January',
     foreword: `The spells for clerics and druids in the AD&D® 1st Edition game are explored in this column. All references to the ***Dungeon Masters Guide*** and ***Players Handbook*** in this article are to the 1st Edition versions of those volumes. In all cases, the information in the AD&D 2nd Edition volumes takes precedence where there is a contradiction between those rules and this column.`,
@@ -1908,9 +1901,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.FIRST_EDITION, ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '154',
+};
+DRAGON_MAGAZINES[154] = {
     publication_year: '1990',
     publication_month: 'February',
     foreword: `The spells and abilities of magic-users and illusionists in the AD&D® 1st Edition game are explored this month. All references to the ***Dungeon Masters Guide*** and ***Players Handbook*** in this article are to the 1st Edition versions of those volumes. In all cases, the information in the AD&D 2nd Edition volumes takes precedence where there is a contradiction between those rules and this column.`,
@@ -2140,9 +2132,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.FIRST_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '155',
+};
+DRAGON_MAGAZINES[155] = {
     publication_year: '1990',
     publication_month: 'March',
     foreword: `This month, "Sage Advice" looks at what ails the denizens of the AD&D® 2nd Edition Monstrous Compendium, then offers more advice on the AD&D 2nd (and 1st) Edition rules.`,
@@ -2377,9 +2368,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.FIRST_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '156',
+};
+DRAGON_MAGAZINES[156] = {
     publication_year: '1990',
     publication_month: 'April',
     foreword: [
@@ -2516,9 +2506,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.FIRST_EDITION,GAME_SYSTEM.SECOND_EDITION],
         },
     ],
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '157',
+};
+DRAGON_MAGAZINES[157] = {
     publication_year: '1990',
     publication_month: 'May',
     foreword: `This month, the sage continues his tour of the AD&D® 2nd Edition game, with special attention on the 2nd Edition ***Player's Handbook (PHB)***.`,
@@ -2640,9 +2629,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '158',
+};
+DRAGON_MAGAZINES[158] = {
     publication_year: '1990',
     publication_month: 'June',
     foreword: `This month, the sage continues his tour of the AD&D® 2nd Edition game. ***DMG*** is the 2nd Edition ***Dungeon Master's Guide***, and ***PHB*** is the 2nd Edition ***Player's Handbook (PHB)***.`,
@@ -2767,9 +2755,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '159',
+};
+DRAGON_MAGAZINES[159] = {
     publication_year: '1990',
     publication_month: 'July',
     foreword: `Once again, the sage tours the AD&D® 2nd Edition game, with some scenic stops in unusual areas. ***DMG*** is the 2nd Edition ***Dungeon Master's Guide***.`,
@@ -2835,9 +2822,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '160',
+};
+DRAGON_MAGAZINES[160] = {
     publication_year: '1990',
     publication_month: 'August',
     foreword: `This edition of "Sage Advice" looks at the major fantasy settings for the AD&D® game. Note that some of the older materials for these settings were designed for the AD&D 1st Edition game (e.g., ***DRAGONLANCE® Adventures***, herein known as ***DLA***).`,
@@ -3013,9 +2999,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.FIRST_EDITION,GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '161',
+};
+DRAGON_MAGAZINES[161] = {
     publication_year: '1990',
     publication_month: 'September',
     foreword: `This edition of "Sage Advice" continues to examine the major fantasy settings for the AD&D® game. Krynn and Oerth were covered last month; this month we visit Abeir-Toril.`,
@@ -3221,9 +3206,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.FIRST_EDITION,GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '162',
+};
+DRAGON_MAGAZINES[162] = {
     publication_year: '1990',
     publication_month: 'October',
     foreword: `Once again, the sage looks back to reconsider some old advice. Page numbers refer to rulebooks for the AD&D® 2nd Edition game.`,
@@ -3277,9 +3261,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '163',
+};
+DRAGON_MAGAZINES[163] = {
     publication_year: '1990',
     publication_month: 'November',
     foreword: `This month, the sage considers a few magical enigmas. Page numbers refer to the AD&D® 2nd Edition game books unless otherwise stated (one question refers to the D&D® Immortals set).`,
@@ -3345,9 +3328,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '164',
+};
+DRAGON_MAGAZINES[164] = {
     publication_year: '1990',
     publication_month: 'December',
     foreword: `This month, the sage takes another quick spin around the AD&D® 2nd Edition game. All rule book references are taken from the 2nd Edition versions.`,
@@ -3409,9 +3391,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '165',
+};
+DRAGON_MAGAZINES[165] = {
     publication_year: '1991',
     publication_month: 'January',
     foreword: `This month, "Sage Advice" splits some hairs regarding spell-casting and combat in the 2nd Edition AD&D® game and examines a few other fantastic mysteries.`,
@@ -3518,9 +3499,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.FIRST_EDITION,GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '166',
+};
+DRAGON_MAGAZINES[166] = {
     publication_year: '1991',
     publication_month: 'February',
     foreword: `This month, the sage considers a few problems that have stymied AD&D® game referees and players. All page references herein refer to the AD&D 2nd Edition volumes.`,
@@ -3582,9 +3562,8 @@ DRAGON_MAGAZINES.push({
             attributes: [],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '167',
+};
+DRAGON_MAGAZINES[167] = {
     publication_year: '1991',
     publication_month: 'March',
     foreword: `This month, the sage considers a few problems that have stymied AD&D® game referees and players. All page references herein *refer* to the AD&D 2nd Edition volumes.`,
@@ -3647,9 +3626,8 @@ DRAGON_MAGAZINES.push({
             attributes: [],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '168',
+};
+DRAGON_MAGAZINES[168] = {
     publication_year: '1991',
     publication_month: 'April',
     foreword: `This issue, the Sage continues his look at spells in the AD&D® 2nd Edition game, then turns his attention to the often sticky subject of character alignment.`,
@@ -3717,9 +3695,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '169',
+};
+DRAGON_MAGAZINES[169] = {
     publication_year: '1991',
     publication_month: 'May',
     foreword: `This month, the sage looks at the theory and practice behind the skills, spells, and equipment in the AD&D® 2nd Edition game.`,
@@ -3857,9 +3834,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '170',
+};
+DRAGON_MAGAZINES[170] = {
     publication_year: '1991',
     publication_month: 'June',
     foreword: `This month, the sage again looks at the theory and practice behind the spells in the AD&D® 2nd Edition game—among other things.`,
@@ -3914,9 +3890,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '171',
+};
+DRAGON_MAGAZINES[171] = {
     publication_year: '1991',
     publication_month: 'July',
     foreword: `This month, the sage shares more insights on the workings of spells in the AD&D® 2nd Edition game and takes a look into the realms of siege warfare, psionics, and the AD&D SPELLJAMMER™ setting.`,
@@ -4083,9 +4058,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '172',
+};
+DRAGON_MAGAZINES[172] = {
     publication_year: '1991',
     publication_month: 'July',
     foreword: `Join the sage this month as he looks at spells and magical items in the AD&D® 2nd Edition game.`,
@@ -4183,9 +4157,8 @@ DRAGON_MAGAZINES.push({
         },
 
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '173',
+};
+DRAGON_MAGAZINES[173] = {
     publication_year: '1991',
     publication_month: 'September',
     foreword: `This month, the sage shares more insights into the workings of the gods in the AD&D® 2nd Edition game—and the workings of more mundane beings, such as player characters and monsters.`,
@@ -4310,9 +4283,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '174',
+};
+DRAGON_MAGAZINES[174] = {
     publication_year: '1991',
     publication_month: 'October',
     foreword: `This month, the sage takes a short look at some enchanted items from the AD&D® 2nd Edition game.`,
@@ -4370,9 +4342,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '175',
+};
+DRAGON_MAGAZINES[175] = {
     publication_year: '1991',
     publication_month: 'November',
     foreword: `Join the sage as he turns his attention to a few problems confronting Dungeon Masters and their AD&D® 2nd Edition campaigns.`,
@@ -4568,9 +4539,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '176',
+};
+DRAGON_MAGAZINES[176] = {
     publication_year: '1991',
     publication_month: 'December',
     foreword: `Join the sage as he takes a quick look at psionics in the AD&D® 2nd Edition game, considers some hard facts about illusions, and splits a few magical hairs.`,
@@ -4629,9 +4599,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '177',
+};
+DRAGON_MAGAZINES[177] = {
     publication_year: '1992',
     publication_month: 'January',
     foreword: `Join the sage this month as he tours the planet Athas, the world of the new DARK SUN® campaign setting. The Rules Book and Wanderer's Journal are found within the DARK SUN boxed set. A second DARK SUN "Sage Advice" column will appear next month.`,
@@ -4733,9 +4702,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '178',
+};
+DRAGON_MAGAZINES[178] = {
     publication_year: '1992',
     publication_month: 'February',
     foreword: `Join the sage for the second in his two-part travelogue on Athas, the world of the new DARK SUN™ campaign setting. The Rules Book and the Wanderer's Journal are found in the DARK SUN boxed set.`,
@@ -4888,9 +4856,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.FIRST_EDITION,GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.INVISIBILITY],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '179',
+};
+DRAGON_MAGAZINES[179] = {
     publication_year: '1992',
     publication_month: 'March',
     foreword: `The sage joins our exploration of magical treasures this month with a look at some magical spells and items from the AD&D® game. Page references refer to the AD&D 2nd Edition game's volumes.`,
@@ -4989,9 +4956,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '180',
+};
+DRAGON_MAGAZINES[180] = {
     publication_year: '1992',
     publication_month: 'April',
     foreword: `What's the most unusual question the sage has ever been asked? It might be here in this month's column on the AD&D® game. Just in case any readers are wondering, I have reason to suspect the sincerity of only one of the following questions, and that's because I know the two guys who sent it in. The rest are as legitimate as any other question "Sage Advice" gets. First, two questions get "re-saged"; then we'll try to make some sense out of the prattle.`,
@@ -5079,9 +5045,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '181',
+};
+DRAGON_MAGAZINES[181] = {
     publication_year: '1992',
     publication_month: 'May',
     foreword: `This month, we continue our look at some of the more unusual-and controversial-questions that our sage has received.`,
@@ -5130,9 +5095,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '182',
+};
+DRAGON_MAGAZINES[182] = {
     publication_year: '1992',
     publication_month: 'June',
     foreword: `This month, our sage addresses more AD&D® DARK SUN™ campaign questions, then "re-sages" two past questions.`,
@@ -5402,9 +5366,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '183',
+};
+DRAGON_MAGAZINES[183] = {
     publication_year: '1992',
     publication_month: 'July',
     foreword: `This month, the sage explores the limits of a powerful AD&D® game magical item, takes an in-depth look at magic resistance, and considers a few complaints from a dissatisfied reader.`,
@@ -5477,9 +5440,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '184',
+};
+DRAGON_MAGAZINES[184] = {
     publication_year: '1992',
     publication_month: 'August',
     foreword: `This month, the sage clarifies a few items before venturing into the untold reaches of optional material for the AD&D® 2nd Edition game.`,
@@ -5590,9 +5552,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '185',
+};
+DRAGON_MAGAZINES[185] = {
     publication_year: '1992',
     publication_month: 'September',
     foreword: `This month, the sage continues exploring the untold reaches of optional material for the AD&D® 2nd Edition game.`,
@@ -5750,9 +5711,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '186',
+};
+DRAGON_MAGAZINES[186] = {
     publication_year: '1992',
     publication_month: 'October',
     foreword: `The sage continues exploring the untold reaches of optional material for the AD&D® 2nd Edition game. This month, we have a short look at psionic powers. Unless otherwise stated, page numbers refer to ***The Complete Psionics Handbook***.`,
@@ -5848,9 +5808,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '187',
+};
+DRAGON_MAGAZINES[187] = {
     publication_year: '1992',
     publication_month: 'November',
     foreword: `The sage ponders more psychic conundrums this month. Unless otherwise stated, all page references refer to the AD&D® ***Complete Psionics Handbook***.`,
@@ -5912,9 +5871,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '188',
+};
+DRAGON_MAGAZINES[188] = {
     publication_year: '1992',
     publication_month: 'December',
     foreword: `The sage temporarily concludes his exploration of psychic mysteries this month. Unless otherwise stated, all page references refer to ***The Complete Psionics Handbook***.`,
@@ -6029,9 +5987,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '189',
+};
+DRAGON_MAGAZINES[189] = {
     publication_year: '1993',
     publication_month: 'January',
     foreword: `This month, the sage answers your questions about one of TSR, Inc.'s newer products, the ***Dragon Kings*** rules supplement for the DARK SUN™ campaign setting, plus one bonus question on world-specific vs. generic adventures.`,
@@ -6147,9 +6104,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '190',
+};
+DRAGON_MAGAZINES[190] = {
     publication_year: '1993',
     publication_month: 'February',
     foreword: `This month, our sage continues to focus on questions about some of TSR's newer products.`,
@@ -6283,9 +6239,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '191',
+};
+DRAGON_MAGAZINES[191] = {
     publication_year: '1993',
     publication_month: 'March',
     foreword: `This month, the sage considers your comments about "Sage Advice" itself, then looks at some questions that defy classification.`,
@@ -6356,9 +6311,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '192',
+};
+DRAGON_MAGAZINES[192] = {
     publication_year: '1993',
     publication_month: 'April',
     foreword: `This month, our sage pauses for his annual look at questions that are just a tad unusual. One hundred percent of the questions presented here were submitted—in writing—by the readership of this magazine (you know who you are). The questions have been edited only to improve readability.`,
@@ -6586,9 +6540,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '193',
+};
+DRAGON_MAGAZINES[193] = {
     publication_year: '1993',
     publication_month: 'May',
     foreword: `This month, the sage looks at the ins and outs of combat in the AD&D® game, briefly considers a few matters from the D&D® game, and weighs the prospects for aspiring gaming professionals.`,
@@ -6727,9 +6680,8 @@ DRAGON_MAGAZINES.push({
             attributes: [],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '194',
+};
+DRAGON_MAGAZINES[194] = {
     publication_year: '1993',
     publication_month: 'June',
     foreword: `This month, "Sage Advice" looks at a potpourri of topics, all straight out of the mailbag. This particular batch of letters contained a lot of questions about the various settings for the AD&D® game, so this particular column has a theme in spite of itself. We start with the case of the missing maps....`,
@@ -6834,9 +6786,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '195',
+};
+DRAGON_MAGAZINES[195] = {
     publication_year: '1993',
     publication_month: 'July',
     foreword: `This month, the sage takes a brief look back at the original AD&D® game, turns his eye to DRAGON Magazine itself, and considers the problem of incurable wounds and other magical complexities.`,
@@ -6897,9 +6848,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '196',
+};
+DRAGON_MAGAZINES[196] = {
     publication_year: '1993',
     publication_month: 'August',
     foreword: `This month, the sage again digs into his mailbag and pulls out a random assortment of letters. This group contained questions on a number of AD&D® campaign worlds, so join our sage on his tour. Our first stop is in the Domains of Dread.`,
@@ -6956,9 +6906,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '197',
+};
+DRAGON_MAGAZINES[197] = {
     publication_year: '1993',
     publication_month: 'September',
     foreword: `This month, the sage turns the spotlight on himself, then considers a few questions straight out of the mailbag.`,
@@ -7033,9 +6982,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.PANTHEON],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '198',
+};
+DRAGON_MAGAZINES[198] = {
     publication_year: '1993',
     publication_month: 'October',
     foreword: `This month the sage's mailbag held questions about proficiencies and various divinely inspired powers.`,
@@ -7103,9 +7051,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.PANTHEON],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '199',
+};
+DRAGON_MAGAZINES[199] = {
     publication_year: '1993',
     publication_month: 'November',
     foreword: `This month, the sage looks at shields for lizard men, considers several things elvish, and ponders the fighting and spell-casting abilities of dragons.`,
@@ -7161,9 +7108,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '200',
+};
+DRAGON_MAGAZINES[200] = {
     publication_year: '1993',
     publication_month: 'December',
     foreword: `This month, the sage takes a long look at magic, magical items, and spell-casters in the AD&D® game. In addition, one question and the "Pantheon of the Month" that was cut for space reasons from "Sage Advice" in DRAGON issue #199 are also presented here.`,
@@ -7342,9 +7288,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.PANTHEON],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '201',
+};
+DRAGON_MAGAZINES[201] = {
     publication_year: '1994',
     publication_month: 'January',
     foreword: `This month, the sage continues his look at magic in the AD&D® and D&D® games.`,
@@ -7484,9 +7429,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.PANTHEON],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '202',
+};
+DRAGON_MAGAZINES[202] = {
     publication_year: '1994',
     publication_month: 'February',
     foreword: `This month, the sage takes a look at various optional rules for the AD&D® 2nd Edition game and considers a few miscellaneous reader queries.`,
@@ -7607,9 +7551,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.PANTHEON],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '203',
+};
+DRAGON_MAGAZINES[203] = {
     publication_year: '1994',
     publication_month: 'March',
     foreword: `This month, the sage takes a close, but careful look at *prismatic* effects and other magic in the AD&D® 2nd Edition game, and considers other problems facing referees.`,
@@ -7698,9 +7641,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.PANTHEON],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '204',
+};
+DRAGON_MAGAZINES[204] = {
     publication_year: '1994',
     publication_month: 'April',
     foreword: `This month, the sage looks at some of the more unusual—and memorable— questions from the past year. As always, 100% of the questions were submitted in writing by the readership and have been edited only to improve readability.`,
@@ -7814,9 +7756,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.PANTHEON],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '205',
+};
+DRAGON_MAGAZINES[205] = {
     publication_year: '1994',
     publication_month: 'May',
     foreword: `This month, the sage answers a few questions about ***The Complete Book of Humanoids (CBH)***. (The answers given here are official.) The sage also considers a few magical particulars, revisits psionics, corrects an error, and provides some missing maps.`,
@@ -7968,9 +7909,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.PANTHEON],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '206',
+};
+DRAGON_MAGAZINES[206] = {
     publication_year: '1994',
     publication_month: 'June',
     foreword: `This month, the sage looks at spells in the AD&D® game.`,
@@ -8169,9 +8109,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.PANTHEON],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '207',
+};
+DRAGON_MAGAZINES[207] = {
     publication_year: '1994',
     publication_month: 'July',
     foreword: `This month, the sage considers a few more questions about magical effects in the AD&D® game, and turns his attention to liches and other undead.`,
@@ -8299,9 +8238,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '208',
+};
+DRAGON_MAGAZINES[208] = {
     publication_year: '1994',
     publication_month: 'August',
     foreword: `This month, the sage delves into several different AD&D® game worlds and considers some follow-up questions to the April Fool's column in issue #204.`,
@@ -8424,9 +8362,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.APRIL_FOOLS],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '209',
+};
+DRAGON_MAGAZINES[209] = {
     publication_year: '1994',
     publication_month: 'September',
     foreword: `This month, the sage looks into particulars on various settings for the AD&D® game, considers the limitations of ***crystal balls*** and considers a few fine points from the new SPELLFIRE™ game.`,
@@ -8514,9 +8451,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '210',
+};
+DRAGON_MAGAZINES[210] = {
     publication_year: '1994',
     publication_month: 'October',
     foreword: `This month, the sage considers particular spells and character abilities in the AD&D® game, gives similar consideration to the PLANESCAPE™ setting, and continues his look at the SPELLFIRE™ game.`,
@@ -8613,9 +8549,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '211',
+};
+DRAGON_MAGAZINES[211] = {
     publication_year: '1994',
     publication_month: 'November',
     foreword: `This month, the sage visits battlefields and the COUNCIL OF WYRMS™ setting. The sage also continues his look at the SPELLFIRE™ game.`,
@@ -8683,9 +8618,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.PANTHEON],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '212',
+};
+DRAGON_MAGAZINES[212] = {
     publication_year: '1994',
     publication_month: 'December',
     foreword: `This month, the sage examines a few spells, magical items, and psionic powers from the AD&D® 2nd Edition game and continues his look at the SPELLFIRE™ game.`,
@@ -8758,9 +8692,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '213',
+};
+DRAGON_MAGAZINES[213] = {
     publication_year: '1995',
     publication_month: 'January',
     foreword: `This month, the sage looks at more magical enigmas in the AD&D® game and continues his examination of the SPELLFIRE game.`,
@@ -8842,9 +8775,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '214',
+};
+DRAGON_MAGAZINES[214] = {
     publication_year: '1995',
     publication_month: 'February',
     foreword: `This month, the sage examines a few particulars about the AD&D® 2nd Edition game, including initiative rules, backstabs, and spells. The sage also fields more SPELLFIRE™ game questions.`,
@@ -8958,9 +8890,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.WEAPON,ATTRIBUTE.GNOME_BASTARD_SWORD],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '215',
+};
+DRAGON_MAGAZINES[215] = {
     publication_year: '1995',
     publication_month: 'March',
     foreword: `This month, the sage considers a mix of questions straight out of the mailbag.`,
@@ -9035,9 +8966,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '216',
+};
+DRAGON_MAGAZINES[216] = {
     publication_year: '1995',
     publication_month: 'April',
     foreword: `This month, the sage takes a look at optional materials and settings for the AD&D® game and considers a few AD&D game basics before moving on to a quick look at the SPELLFIRE™ game.`,
@@ -9126,9 +9056,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '217',
+};
+DRAGON_MAGAZINES[217] = {
     publication_year: '1995',
     publication_month: 'May',
     foreword: `This month, our sage unravels mysteries from all corners of the AD&D® game multiverse, from how ***amulets of life protection*** really work to where deities live.`,
@@ -9289,9 +9218,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '218',
+};
+DRAGON_MAGAZINES[218] = {
     publication_year: '1995',
     publication_month: 'June',
     foreword: `This month, "Sage Advice" looks at optional expansions to the AD&D® game and considers a few other questions from the mailbag.`,
@@ -9451,9 +9379,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '219',
+};
+DRAGON_MAGAZINES[219] = {
     publication_year: '1995',
     publication_month: 'July',
     foreword: `This month, "Sage Advice" explores various optional rules for the AD&D® game.`,
@@ -9586,9 +9513,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '220',
+};
+DRAGON_MAGAZINES[220] = {
     publication_year: '1995',
     publication_month: 'August',
     foreword: `This month, "Sage Advice" looks at magic and optional rules in the AD&D® game. Unless otherwise stated, page references are for AD&D game rulebooks printed after April, 1995.`,
@@ -9736,9 +9662,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '221',
+};
+DRAGON_MAGAZINES[221] = {
     publication_year: '1995',
     publication_month: 'September',
     foreword: `This month, "Sage Advice" considers armor for rogues, samovars, and a few magical mysteries. Unless otherwise stated, page references are for AD&D® game rulebooks printed after April, 1995.`,
@@ -9920,9 +9845,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '222',
+};
+DRAGON_MAGAZINES[222] = {
     publication_year: '1995',
     publication_month: 'October',
     foreword: `This month, the sage armors up and takes a crack at question about the new ***PLAYER's OPTION™: Combat and Tactics*** book. All page references are for the ***Combat and Tactics*** book (***C&T***).`,
@@ -10121,9 +10045,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '223',
+};
+DRAGON_MAGAZINES[223] = {
     publication_year: '1995',
     publication_month: 'November',
     foreword: `Join the sage in a look at the new ***Player's Option™: Skills and Powers*** book. unless otherwise noted, page and table references are for the ***Skills and Powers*** book (***S&P***). The sage also examines a few other issues straight from the mailbag.`,
@@ -10646,9 +10569,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '224',
+};
+DRAGON_MAGAZINES[224] = {
     publication_year: '1995',
     publication_month: 'December',
     foreword: `This month the sage pays a brief visit to Krynn, explores optional material for the AD&D® game, and stops to offer advice to a player who's encountered the worst monsters of all.`,
@@ -10793,9 +10715,8 @@ DRAGON_MAGAZINES.push({
             attributes: [],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '225',
+};
+DRAGON_MAGAZINES[225] = {
     publication_year: '1996',
     publication_month: 'January',
     foreword: `This month, the Sage considers the powers and limitations of a few spells from the AD&D® 2nd Edition game.`,
@@ -10936,9 +10857,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.D30],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '226',
+};
+DRAGON_MAGAZINES[226] = {
     publication_year: '1996',
     publication_month: 'February',
     foreword: `This month, the Sage visits the newly revised DARK SUN® setting and considers some optional rules and spells, including yet another look at the dreaded ***stoneskin*** spell.`,
@@ -11378,9 +11298,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '227',
+};
+DRAGON_MAGAZINES[227] = {
     publication_year: '1996',
     publication_month: 'March',
     foreword: `This month, the Sage handles a variety of questions straight out of the mailbag. The sage reveals how wererats pass on lycanthropy, re-examines a question from previous column, and offers a few suggestions about character aging.`,
@@ -11560,9 +11479,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '228',
+};
+DRAGON_MAGAZINES[228] = {
     publication_year: '1996',
     publication_month: 'April',
     foreword: `This month, the Sage takes a long look at spells for the AD&D® game and, in honor of April Fool's Day, considers some questions that are just a tad odd.`,
@@ -11738,9 +11656,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.APRIL_FOOLS],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '229',
+};
+DRAGON_MAGAZINES[229] = {
     publication_year: '1996',
     publication_month: 'May',
     foreword: `Join the Sage for a look into the inner workings of a few spells from the AD&D® 2nd Edition game and the particulars of some optional rules.`,
@@ -11860,9 +11777,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '230',
+};
+DRAGON_MAGAZINES[230] = {
     publication_year: '1996',
     publication_month: 'January',
     foreword: `This month, the Sage looks at spells, magical items, and optional rules for the AD&D® game. The sage also pauses to explain some of his own recent advice.`,
@@ -11999,9 +11915,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '231',
+};
+DRAGON_MAGAZINES[231] = {
     publication_year: '1996',
     publication_month: 'July',
     foreword: `Join the Sage this month as he reveals a method for creating psionicist PCs with the rules presented in the ***PLAYER'S OPTION™: Skills & Powers*** book and considers a few magical oddities from the AD&D® game.`,
@@ -12192,9 +12107,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '232',
+};
+DRAGON_MAGAZINES[232] = {
     publication_year: '1996',
     publication_month: 'August',
     foreword: `This month, the Sage lays down the law about personal replies, considers the finer points of backstabbing, and looks at a few optional rules and spell effects for the AD&D® game.`,
@@ -12307,9 +12221,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '233',
+};
+DRAGON_MAGAZINES[233] = {
     publication_year: '1996',
     publication_month: 'September',
     foreword: `This month, the Sage looks at the new ***PLAYER'S OPTION™: Spells & Magic*** tome and other optional rules for the AD&D® game.`,
@@ -12470,9 +12383,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '234',
+};
+DRAGON_MAGAZINES[234] = {
     publication_year: '1996',
     publication_month: 'October',
     foreword: `This month, the Sage considers questions about magical items for the AD&D® game, pauses to count pummeling attacks, and responds to a critic.`,
@@ -12658,9 +12570,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.APRIL_FOOLS],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '235',
+};
+DRAGON_MAGAZINES[235] = {
     publication_year: '1996',
     publication_month: 'November',
     foreword: `This month, "Sage Advice" considers the physical demands of long bows, puts some mental energy into questions of psionics, and peers into a few magical mysteries.`,
@@ -12869,16 +12780,14 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.INVISIBILITY,ATTRIBUTE.DISPEL_MAGIC],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '236',
+};
+DRAGON_MAGAZINES[236] = {
     publication_year: '1996',
     publication_month: 'December',
     foreword: `This month, "Sage Advice" pays a visit to war-torn Krynn for a study of the new ***SAGA™*** dramatic adventure game.`,
     sage_advice: []
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '237',
+};
+DRAGON_MAGAZINES[237] = {
     publication_year: '1997',
     publication_month: 'January',
     foreword: `This month, the Sage answers questions straight from the mailbag. The AD&D® game's wall of force spell proved popular this time around. Readers also sought advice about several other magical effects.`,
@@ -13004,9 +12913,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS, ATTRIBUTE.DUAL_CLASS_IN_GROUP],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '238',
+};
+DRAGON_MAGAZINES[238] = {
     publication_year: '1997',
     publication_month: 'August',
     foreword: `Join the Sage for his traditional April look at the year's most unusual questions. All questions were submitted on paper or e-mail by readers. No gamers were harmed during the production of this month's column.`,
@@ -13160,9 +13068,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.APRIL_FOOLS],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '239',
+};
+DRAGON_MAGAZINES[239] = {
     publication_year: '1997',
     publication_month: 'September',
     foreword: `This month, the Sage considers optional abilities for PCs in the AD&D® game.`,
@@ -13616,9 +13523,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '240',
+};
+DRAGON_MAGAZINES[240] = {
     publication_year: '1997',
     publication_month: 'October',
     foreword: `The Sage takes a brief look at abilities for AD&D game rogues before delving into the game particulars of various magical effects.`,
@@ -13730,9 +13636,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '241',
+};
+DRAGON_MAGAZINES[241] = {
     publication_year: '1997',
     publication_month: 'November',
     foreword: `This month, the Sage considers some queries taken straight from the mailbag.`,
@@ -13827,9 +13732,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '242',
+};
+DRAGON_MAGAZINES[242] = {
     publication_year: '1997',
     publication_month: 'December',
     foreword: `This month, the Sage ponders the capabilities of polymorphed creatures, elven resistance to spells, and other troublesome questions from the AD&D® game.`,
@@ -13939,9 +13843,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '243',
+};
+DRAGON_MAGAZINES[243] = {
     publication_year: '1998',
     publication_month: 'January',
     foreword: `THE SAGE ANSWERS QUESTION'S straight from the mailbox this month. Optional rules for the AD&D® game proved popular (the Sage has a few of his own to suggest). The Sage also revisits the effects of ***wall of force*** spells on divination spells.`,
@@ -14370,9 +14273,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION, ATTRIBUTE.WEAPON],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '244',
+};
+DRAGON_MAGAZINES[244] = {
     publication_year: '1998',
     publication_month: 'February',
     foreword: `THIS MONTH'S QUESTIONS, all straight from the mailbag, have the sage delving into the workings of spells and proficiencies from the AD&D® game.`,
@@ -14467,9 +14369,8 @@ Saving Throw: None or neg.`,
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '245',
+};
+DRAGON_MAGAZINES[245] = {
     publication_year: '1998',
     publication_month: 'March',
     foreword: `THIS MONTH, THE SAGE PAUSES to elaborate on some old advice before discussing a few spells, magical items, and other topics.`,
@@ -14641,9 +14542,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '246',
+};
+DRAGON_MAGAZINES[246] = {
     publication_year: '1998',
     publication_month: 'April',
     foreword: `Join the Sage this month for his annual April look at the year's most offbeat questions.`,
@@ -14798,9 +14698,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.DISPEL_MAGIC],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '247',
+};
+DRAGON_MAGAZINES[247] = {
     publication_year: '1998',
     publication_month: 'May',
     foreword: `This month, the sage offers advice about spells from the AD&D® game.`,
@@ -14943,9 +14842,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '248',
+};
+DRAGON_MAGAZINES[248] = {
     publication_year: '1998',
     publication_month: 'June',
     foreword: `This month, the Sage elaborates on character and creature abilities in the AD&D® game.`,
@@ -15081,9 +14979,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '249',
+};
+DRAGON_MAGAZINES[249] = {
     publication_year: '1998',
     publication_month: 'July',
     foreword: `This month, the Sage ponders a few peculiarities, both magical and mundane, from the AD&D® game.`,
@@ -15258,9 +15155,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '250',
+};
+DRAGON_MAGAZINES[250] = {
     publication_year: '1998',
     publication_month: 'August',
     foreword: `This month, the Sage ponders questions about spells and magical items from the AD&D® game, including the ever irksome ***stoneskin*** spell.`,
@@ -15444,9 +15340,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.STONESKIN],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '251',
+};
+DRAGON_MAGAZINES[251] = {
     publication_year: '1998',
     publication_month: 'September',
     foreword: `This month, the Sage tackles questions peculiar to the AD&D® game's various worlds and optional rule books, and considers a few oddities from the core AD&D rules.`,
@@ -15727,9 +15622,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.FIRST_EDITION, GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '252',
+};
+DRAGON_MAGAZINES[252] = {
     publication_year: '1998',
     publication_month: 'October',
     foreword: `This month, the Sage unravels some knotty magical problems for AD&D® game players.`,
@@ -15934,9 +15828,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '253',
+};
+DRAGON_MAGAZINES[253] = {
     publication_year: '1998',
     publication_month: 'November',
     foreword: `This month, the Sage tackles diverse subjects from, the AD&D® game.`,
@@ -16132,9 +16025,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '254',
+};
+DRAGON_MAGAZINES[254] = {
     publication_year: '1998',
     publication_month: 'December',
     foreword: `This month, the Sage considers some ins and outs of the AD&D® game's ***magic jar*** spell, then probes some mysteries arising from a few magical items and optional rules.`,
@@ -16327,9 +16219,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.RACE],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '255',
+};
+DRAGON_MAGAZINES[255] = {
     publication_year: '1999',
     publication_month: 'January',
     foreword: `The Sage considers diverse topics this month, from breathing and spellcasting underwater to what characters can accomplish with called shots. The Sage also takes a brief side trip to the universe of the ALTERNITY® game.`,
@@ -16471,9 +16362,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '256',
+};
+DRAGON_MAGAZINES[256] = {
     publication_year: '1999',
     publication_month: 'February',
     foreword: `This month, the Sage revisits some old advice, offers fresh advice on followers and various spells from the AD&D® game, then takes another side trip into the ALTERNITY® game universe.`,
@@ -16650,9 +16540,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '257',
+};
+DRAGON_MAGAZINES[257] = {
     publication_year: '1999',
     publication_month: 'March',
     foreword: `This month, the Sage makes a brief stop to examine some AD&D® game mechanics before moving on to consider the workings of various spells and magical items. This month's excursion also includes a trip to the MARVEL SUPER HEROES™ Adventure Game.`,
@@ -16808,9 +16697,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '258',
+};
+DRAGON_MAGAZINES[258] = {
     publication_year: '1999',
     publication_month: 'April',
     foreword: `In a salute to April Fools everywhere, the Sage presents his annual look at the oddest questions received during the past year.`,
@@ -17006,9 +16894,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.APRIL_FOOLS],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '259',
+};
+DRAGON_MAGAZINES[259] = {
     publication_year: '1999',
     publication_month: 'May',
     foreword: `This month, The Sage examines a variety of optional rules for the AD&D® game and explores a few seldom visited corners of the core rules.`,
@@ -17195,9 +17082,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '260',
+};
+DRAGON_MAGAZINES[260] = {
     publication_year: '1999',
     publication_month: 'June',
     foreword: `This month, the Sage pauses to explain some recent advice, then goes on to consider character abilities in the AD&D® game. The Sage also takes a look at dwarven rune magic from the FORGOTTEN REALMS® setting.`,
@@ -17391,9 +17277,8 @@ Saving Throw: Special`,
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '261',
+};
+DRAGON_MAGAZINES[261] = {
     publication_year: '1999',
     publication_month: 'July',
     foreword: `This month, the Sage looks into spells and magical effects from the AD&D® game.`,
@@ -17589,9 +17474,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '262',
+};
+DRAGON_MAGAZINES[262] = {
     publication_year: '1999',
     publication_month: 'August',
     foreword: `This month, the Sage ponders sundry AD&D® game questions straight from the mailbag and makes a side trip into the universe of the ALTERNITY® game.`,
@@ -17761,9 +17645,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.TURN_UNDEAD],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '263',
+};
+DRAGON_MAGAZINES[263] = {
     publication_year: '1999',
     publication_month: 'September',
     foreword: `This month, the Sage examines a potpourri of questions about the AD&D® game, including a string of queries about specialty priests from the FORGOTTEN REALMs® setting.`,
@@ -18049,9 +17932,8 @@ DRAGON_MAGAZINES.push({
             attributes: [],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '264',
+};
+DRAGON_MAGAZINES[264] = {
     publication_year: '1999',
     publication_month: 'October',
     foreword: `This month, the Sage looks into monsters, spells, and various optional rules for the AD&D® game.`,
@@ -18311,9 +18193,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '265',
+};
+DRAGON_MAGAZINES[265] = {
     publication_year: '1999',
     publication_month: 'November',
     foreword: `This month, the Sage considers questions about optional rules for the AD&D® game and winds up with a long look at (and through) the ***wall of force*** spell.`,
@@ -18529,9 +18410,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '266',
+};
+DRAGON_MAGAZINES[266] = {
     publication_year: '1999',
     publication_month: 'December',
     foreword: `This month, the Sage looks at magic and other extraordinary powers in the ADED® game, then takes a side trip into the universe of the ALTERNITY® game.`,
@@ -18792,9 +18672,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '267',
+};
+DRAGON_MAGAZINES[267] = {
     publication_year: '2000',
     publication_month: 'January',
     foreword: `This month, the Sage considers the use and (abuse) of spells, proficiencies, and character abilities in the AD&D® game and warps up with a look at familiars.`,
@@ -18954,9 +18833,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '268',
+};
+DRAGON_MAGAZINES[268] = {
     publication_year: '2000',
     publication_month: 'February',
     foreword: `This month, the sage explores various magical details of the AD&D® game.`,
@@ -19190,9 +19068,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '269',
+};
+DRAGON_MAGAZINES[269] = {
     publication_year: '2000',
     publication_month: 'March',
     foreword: `This month, the Sage considers various optional rules for the AD&D® game and looks into few magical particulars.`,
@@ -19449,9 +19326,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '270',
+};
+DRAGON_MAGAZINES[270] = {
     publication_year: '2000',
     publication_month: 'April',
     foreword: `It's April and time once again to look at some of the Sage's more unusual, offbeat, or just plain entertaining mail (including another installment of the continuing saga of the ***stoneskin*** spell). All questions were submitted in writing or via email by readers.`,
@@ -19563,9 +19439,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '271',
+};
+DRAGON_MAGAZINES[271] = {
     publication_year: '2000',
     publication_month: 'May',
     foreword: `This month the Sage takes a long look at vampires (without staring one in the eye, of course), then moves on to examine the powers of other creatures in the AD&D® game.`,
@@ -19765,9 +19640,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.CLASS],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '272',
+};
+DRAGON_MAGAZINES[272] = {
     publication_year: '2000',
     publication_month: 'June',
     foreword: `This month the Sage considers an assortment of questions from the AD&D® game, all straight from the mailbag, and takes a side trip to the universe of the ALTERNITY® game.`,
@@ -19922,9 +19796,8 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.PRONOUNCE_FLIND],
         },
     ]
-});
-DRAGON_MAGAZINES.push({
-    issue_number: '273',
+};
+DRAGON_MAGAZINES[273] = {
     publication_year: '2000',
     publication_month: 'July',
     foreword: `This month, the sage considers the gritty problem of petrification and other arcane mysteries of the AD&D® game.`,
@@ -20131,6 +20004,6 @@ DRAGON_MAGAZINES.push({
             attributes: [GAME_SYSTEM.SECOND_EDITION,ATTRIBUTE.SPELL,ATTRIBUTE.CHARM],
         },
     ]
-});
+};
 
 module.exports = DRAGON_MAGAZINES;
