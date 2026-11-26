@@ -7196,7 +7196,8 @@ WEAPONS.Sap[SOURCE.AEG.id] = new Weapon({
             text: [
                 `*“A sap is more suited to an urban environment than to the great outdoors or dungeon crawl. It is a weapon favored by thieves looking to cosh someone on the head and take his purse. If a party of adventurers is infiltrating a stronghold in order to capture someone, however, a sap may come in handy.”*`,
                 `*— Kyrian Darkstar, the Infiltrator*`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
         }
     ]
 })
@@ -7241,7 +7242,8 @@ WEAPONS.Scourge[SOURCE.AEG.id] = new Weapon({
             pages: [92],
             text: [
                 `The scourge is truly a monument to man's ability to cause suffering. When a scourge hits a victim, the thongs curl around the trunk and limbs, with the barbs digging into the flesh. The torturer then pulls the scourge away, ripping even more of the victim's skin. In ancient Rome, certain soldiers were trained with the scourge to cause the maximum amount of pain without killing the victim. Roman citizens were exempt from scourging, while subject people were not.`
-            ]
+            ],
+            attribute: [AEG_ATTRIBUTE.HISTORY]
         }
     ]
 })
@@ -7278,7 +7280,34 @@ WEAPONS.Sling[SOURCE.AEG.id] = new Weapon({
     speed: 6,
     proficiencies: new Proficiencies({single: "Sling"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        {
+            pages: [92,93],
+            text: [
+                `**Sling**`,
+                `Slings have existed since the binning of recorded history. The basic sling consists of a leather or fabric strap with a pouch for holding the missile. The weapon is held by both ends of the strap and twirled around the wielder's head. When top speed is attained, the missile is launched by releasing one of the strap's ends.`,
+                `The sling is a cheap weapon and is easy to make. Thus, it is common among peasants, especially since it makes a good hunting weapon.`,
+                `The sling's missile is either a smooth, rounded stone or a ball of lead. While stones are easier to find (most shallow streams have an abundance of smooth stones), the lead bullet causes more damage and flies farther than the stone.`,
+                `A sling's projectile is capable of producing severe bruising or even broken bones against a man or his mount. Against armor, however, the sling loses most of its effectiveness.`,
+                `Halflings are known to be quite good at using the sling, and it is a common weapon among members of that race.`
+            ]
+        },
+        {
+            pages: [93],
+            text: [
+                `*“Slings are a fine missile weapon for thieves, since the weapon is easily concealed and quiet. Actually, it is not a bad proficiency for anyone to pick up, since making a sling and finding ammunition is easy. The sling's missile have a good range. If using a sling out-of-doors, one never lacks for ammunition, though lead bullets fly father and cause more damage.”*`,
+                `*— Ariane, Professional Cutpurse*`
+            ],
+            attribute: [AEG_ATTRIBUTE.INTERVIEW]
+        },
+        {
+            pages: [93],
+            text: [
+                `Slings were heavily used by the peoples living around the Mediterranean basin. The Romans did not assign slings to their soldiers, but allowed their auxiliary troops to use them. The sling was used during the Middle Ages, and slingers are depicted on the Bayeux Tapestry, not as soldiers, but as hunters.`
+            ]
+        }
+    ]
 })
 WEAPONS.Sling.ammunition.Bullet[SOURCE.AEG.id] = new Ammunition({
     name: "Sling bullet",
@@ -7298,11 +7327,43 @@ WEAPONS.Sling.ammunition.Stone[SOURCE.AEG.id] = new Ammunition({
     pages: [109],
 })
 
+const AEG_SPEAR_GENERAL = {
+    pages: [93,94],
+    text: [
+        `**Spear**`,
+        `One of man's earliest weapons, dating back to the most primitive of times, the first spears were simply wooden poles or sticks sharpened at one end. When fire was discovered and mastered, spear points were hardened by charring. As man became more adept at using tools, spears were either fitted with a stone head or the point was reinforced with splints of stone or bone.`,
+        `When man mastered metals, spear heads were made from iron and steel. Having reached this end, weaponers began experimenting with different types of spear heads, thus leading to the development of certain polearm types such as the ranseur.`,
+        `Spear shafts are usually made from yew or ash, since these woods are both flexible and strong. The shafts range five to eleven feet in length. In melee, spears may be used either one or two handed, with more damage inflicted if used in the latter mode. Spears 10 feet or longer cannot be wielded with one hand.`,
+        `Though spears are normally used for thrusting, they can also be thrown. Special devices exist for hurling spears. These devices are variously shaped pieces of wood, horn, or bone with hooks, hollows, or grooves meant to house the spear butt. When using one of these throwers, the spear's throwing range is doubled. The cost of a spear thrower is 1 gold piece. The thrower weighs two pounds.`,
+        `A character wielding a spear gains an attack bonus for high Dexterity and a damage bonus for high Strength.`
+    ],
+    comment: `High Dexterity makes sense when throwing the spear, but for melee attack bonus should stay on Strength. 2E does not have "Finesse" weapons, like 5E, and introducing a single special case makes combat more complicated.`
+}
+
+const AEG_SPEAR_HISTORY = {
+    pages: [94],
+    text: [
+        `Spears have existed since the Paleolithic era, some 500,000 years ago. Horsemen of 20,000 BC began using them as missile weapons, complete with the hurling devices explained earlier.`,
+        `The Greeks were fond of large formations of spearmen in their armies.`,
+        `The Franks began producing what we know as the spear. These spears had long, leaf-shaped blades and two triangular “wings” set just below the head. These wings prevented the spear from penetrating too far into a victim (and consequently making it harder to pull out), and enabled the spear carrier to parry more easily with his weapon.`,
+        `In the 14th century, spears used by horsemen evolved into the lance. Long spears in the 15th century developed into the pike.`
+    ],
+    attribute: [AEG_ATTRIBUTE.HISTORY],
+    comment: [
+        `Spear to Lance damage numbers makes decent sense.`,
+        `Long spear developed into the (awl) pike does not match game mechanics. A Long spear two-handed deals 2d6 damage, Awl pike deals 1d6 damage against S/M. Against L creatures, Long spear deals 3d6 vs. Awl pike's 1d12. It does not sound like a development for the better.`
+    ]
+}
+
 WEAPONS.Spear[SOURCE.AEG.id] = new Weapon({
     name: "Spear",
     proficiencies: new Proficiencies({single: "Spear"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        AEG_SPEAR_GENERAL,
+        AEG_SPEAR_HISTORY
+    ]
 })
 WEAPONS.Spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.AEG.id] = new Weapon({
     name: "One-handed",
@@ -7334,7 +7395,19 @@ WEAPONS.Long_spear[SOURCE.AEG.id] = new Weapon({
     name: "Spear, long",
     proficiencies: new Proficiencies({single: "Long spear"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        {
+            pages: [94],
+            text: [
+                `**Long Spear**`,
+                `A long spear is like a normal spear, except that its shaft ranges 12 to 13 feet in length and cannot be thrown.`,
+                `Orcs and ogres use spears often in battle. They are simple weapons for simple-minded creatures.`
+            ],
+            comment: `Interesting that the Spear description says that spears longer than 10 feet cannot be used one-handed, and here is a Long Spear being 12 to 13 feet, having statistics for being used one-handed.`
+        },
+        AEG_SPEAR_HISTORY
+    ]
 })
 WEAPONS.Long_spear.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.AEG.id] = new Weapon({
     name: "One-handed",
@@ -7366,7 +7439,11 @@ WEAPONS.Spear_stone[SOURCE.AEG.id] = new Weapon({
     name: "Spear, stone",
     proficiencies: new Proficiencies({single: "Spear"}),
     pages: [109],
-    descriptions: []
+
+    descriptions: [
+        AEG_SPEAR_GENERAL,
+        AEG_SPEAR_HISTORY
+    ]
 })
 WEAPONS.Spear_stone.grip[HANDEDNESS.ONE_HANDED.id][SOURCE.AEG.id] = new Weapon({
     name: "One-handed",
