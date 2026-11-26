@@ -6,7 +6,7 @@ div(class="wrapper")
             each advice, index in magazine.sage_advice
                 - let questionNumber = index + 1
                 - let id = `sage-advice-${issue_number}-${questionNumber}`
-                // - console.log(`Sage Advice #${issue_number} p. ${advice.page_number}, Question: ${questionNumber}`)
+                //- console.log(`Sage Advice #${issue_number} p. ${advice.page_number}, Question: ${questionNumber}`)
                 p(id=id)
                     span(class='title') Sage Advice ##{issue_number} p. #{advice.page_number} (#{magazine.publication_month} #{magazine.publication_year}), Question: #{questionNumber}
                     +buttons(id)
